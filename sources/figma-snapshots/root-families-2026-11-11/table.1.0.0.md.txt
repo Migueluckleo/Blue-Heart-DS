@@ -1,0 +1,424 @@
+---
+{
+  "schema_version": 1,
+  "id": "TABLE-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-046"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/tables-request.json",
+      "sha256": "0479e407345996c71007ef5663f9fda4cfd3492647e8ed7686265d4527fec091"
+    },
+    {
+      "id": "SRC-CHOICES",
+      "path": "evidence/authorization/tables-choices.json",
+      "sha256": "2b2702b0bd0c2d268f9134d42aa8b8712a8a507d74f881cdd21ba8d74139e71a"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/tables-pilot/source/capture-manifest.json",
+      "sha256": "ebc3b137a2632ade6c49bc2e387011b85c3241453a171e9453e01bc0b1df2665"
+    },
+    {
+      "id": "SRC-MODEL",
+      "path": "evidence/tables-pilot/source/table-component-contract.yaml",
+      "sha256": "7bf0ea06cf07b4052d389479628252cc2512ee6a3c17ece91a4534ae9764233b"
+    },
+    {
+      "id": "SRC-PLAN",
+      "path": "evidence/tables-pilot/build-plan.json",
+      "sha256": "f856b080ab4d547252f364b4a631abedd3bd847e0b6a04b191d7723b33bbb1ab"
+    },
+    {
+      "id": "SRC-MINIMUM",
+      "path": "evidence/tables-pilot/token-minimum.json",
+      "sha256": "dabdc2ee4e15adc19107b4ddcf37c84d7ab33136eda444446c50a608aa3b850a"
+    },
+    {
+      "id": "SRC-AUDIT",
+      "path": "evidence/tables-pilot/reverse-dependencies.json",
+      "sha256": "4379dac08ac474e9b7b045acb941d4686b8d822d9fa748f5a45305237c26224a"
+    },
+    {
+      "id": "SRC-CONTRAST",
+      "path": "evidence/tables-pilot/source/contrast.json",
+      "sha256": "cf68434c93a18fbc4be2a195a7d382eee4b470655fc06b84e6ab8ddf9c67e428"
+    },
+    {
+      "id": "SRC-PHOSPHOR",
+      "path": "evidence/tables-pilot/source/official-phosphor.json",
+      "sha256": "6bec8424ce572fe98c75a175bccb82a828b22adbc0708054a837fe7452050c9d"
+    },
+    {
+      "id": "SRC-BASELINE",
+      "path": "evidence/tables-pilot/baseline/manifest.json",
+      "sha256": "43ac76c07c0a05c918810c5ed0fc53f945b536b425577bdbf397bdae4a3ead2c"
+    },
+    {
+      "id": "SRC-NATIVE",
+      "path": "evidence/tables-pilot/native-adaptations.json",
+      "sha256": "074d28d6d2727150f946597b4515e3f560c6f37189e5584c03d7525666c57549"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "table.color-bg-container-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table.color-stroke-container-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table.border-container-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table.radius-container",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table.spacing-scrollbar-inset",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table.size-scrollbar-track",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table.size-scrollbar-thumb",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table.radius-scrollbar",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table.color-bg-scrollbar-thumb-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "TABLE-CELL-001",
+      "version": "1.0.0",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "PAGINATION-001",
+      "version": "1.0.0",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ANATOMY con receta seleccionada,registro nativo y QA del alcance table."
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API con receta seleccionada,registro nativo y QA del alcance table."
+      ]
+    },
+    {
+      "id": "REQ-VIEWPORT",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-NATIVE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-VIEWPORT con receta seleccionada,registro nativo y QA del alcance table."
+      ]
+    },
+    {
+      "id": "REQ-SCROLLBARS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-NATIVE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-SCROLLBARS con receta seleccionada,registro nativo y QA del alcance table."
+      ]
+    },
+    {
+      "id": "REQ-COMPOSITION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-COMPOSITION con receta seleccionada,registro nativo y QA del alcance table."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-THEME con receta seleccionada,registro nativo y QA del alcance table."
+      ]
+    },
+    {
+      "id": "REQ-CONSUMER",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-NATIVE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-CONSUMER con receta seleccionada,registro nativo y QA del alcance table."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS con receta seleccionada,registro nativo y QA del alcance table."
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-DEPENDENCIES con receta seleccionada,registro nativo y QA del alcance table."
+      ]
+    },
+    {
+      "id": "REQ-HOST",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-HOST con receta seleccionada,registro nativo y QA del alcance table."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-NATIVE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA con receta seleccionada,registro nativo y QA del alcance table."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Root",
+      "Viewport",
+      "Rows Slot",
+      "Conditional scrollbars",
+      "Official Pagination"
+    ],
+    "composition": "Versioned official children; private helpers remain owned by this contract.",
+    "accessibility": "Host implements semantics,keyboard,accessible names,live data and touch targets. Source contrast exceptions are explicit; no global AA certification."
+  }
+}
+---
+# TABLE-001 ·1.0.0
+
+### REQ-ANATOMY
+
+Un principal Table en la página Table. Root vertical contiene área de viewport,barra horizontal condicional y Pagination oficial. El área contiene Rows Slot nativo y barra vertical condicional. Nueve filas iniciales incluyen una cabecera y ocho filas de cuerpo,con doce columnas; son contenido de muestra. Construir Cell y helpers antes del contenedor. Se elimina solo de esta nueva composición el Cell decorativo que rellenaba la cabecera de la barra vertical fuente; el indicador cubre el viewport entero.
+
+### REQ-API
+
+Exponer Rows SLOT,Show horizontal scrollbar y Show vertical scrollbar. Rows contiene primero una fila de cabecera y después0..n filas de cuerpo; minChildren1,maxChildren null,preferredValues sin restricción de componentes porque las filas son frames editables. No inventar máximo8 ni simular Slot con un frame. Los hijos son Cell oficiales en filas Auto Layout; texto,estados,controles,orden y cantidad se editan desde la instancia sin cambiar principales. Las operaciones de estructura rehidratan handles/IDs antes de seguir. La receta valida primera fila header y alineación de columnas; el límite nativo solo cuenta hijos.
+
+### REQ-VIEWPORT
+
+Habilitar desplazamiento nativo por elección humana. Rows es viewport FILL con clipsContent true y overflow BOTH configurado en el principal; el contenido excedente usa filas de ancho de contenido, no se comprime para ocultar overflow. La cabecera pertenece al contenido y desplaza con él; no prometer cabecera congelada ni columnas fijas. Ancho1711 y alto de viewport360 son iniciales de muestra controlados por el host. El principal Root es horizontal FIXED y vertical HUG; para controlar el alto del viewport en una instancia, fit fija el alto total y pone el área en FILL; filas HUG derivan su alto de Cell. Restaurar gap0 observado entre área y barra aunque el valor guardado fuente diga10. El host define anchos de columnas y una columna flexible coherente en todas las filas.
+
+### REQ-SCROLLBARS
+
+Solo se incorporan helpers privados medium/default vertical y horizontal,track16,thumb8,inset4 y radiusfull,con tokens de Table. No adoptar la familia pública Scrollbar completa ni modificar Dropdown/consumidores previos. Mostrar barras únicamente cuando haya desborde y el host las permita. La receta fit recalcula viewport,content bounds,visibilidad y longitud inicial proporcional del thumb después de cambios de contenido,ancho o alto; resolver ambas orientaciones conjuntamente. El thumb inicia al principio, no se arrastra ni sigue continuamente la posición al desplazar. El contenido sí puede desplazarse nativamente. No introducir variables por porcentaje,posición o longitud calculada. Un principal privado __Table/Scrollbar thumb y dos Slots privados1..1 permiten reemplazar el indicador por una instancia vinculada de longitud derivada; no exponerlos como familia pública ni contarlos como tokens nuevos.
+
+### REQ-COMPOSITION
+
+Consumir TABLE-CELL-0011.0.0 y PAGINATION-0011.0.0. La muestra conserva108 Cell oficiales en nueve filas; el número es ejemplo. Pagination default incluye once ítems e Input2.0.1 small/filled con20 como muestra de filas por página; Badge es transitivo. Mantener API y estilos de Pagination/Input; no reconstruir sus controles ni copiar sus tokens. Columnas,orden de páginas,extremos,Range y filas por página se coordinan desde el host. No se implementan ordenamiento,seleccionar todo ni paginación de datos por existir los dibujos.
+
+### REQ-THEME
+
+Root blanco,borde y Scrollbar son invariantes según sus aliases. Cell y Pagination heredan el modo component del host y preservan sus vectores propios; no imponer que toda la tabla cambie de marca. El borde y thumb discretos no acreditan contraste interactivo universal. Conservar las limitaciones cromáticas del hijo Cell aceptadas por el responsable y las de componentes transitivos.
+
+### REQ-CONSUMER
+
+La guía de consumo selecciona contratos/hash/versión y la receta con31+10 firmas,pares icono/texto y referencias de hijos. Confirmar las ediciones estructurales de Rows en una llamada antes de ajustar geometría en otra; la rehidratación dentro del mismo lote no siempre resuelve IDs virtuales. fit-instance se aplica a instancias vinculadas y se reejecuta tras editar Rows o viewport; no es un proceso persistente que observe automáticamente Figma. Validar menos y más filas que la muestra,header sin cuerpo,reordenación,inserción/retirada y anchos homogéneos de columnas. La reproducción distingue scroll real en Figma,interacciones oficiales de Checkbox/Toggle y navegación ficticia de muestra; no confundirlas con captura,filtrado o servicios reales.
+
+### REQ-TOKENS
+
+Aplicar BH-P07 a la receta seleccionada: una variable por firma completa de tipo, unidad, scope y aliases en cuatro modos. Los41 tokens nuevos viven bajo table/ de component; no crear colecciones por pieza. Primitive y semantic conservan scopes vacíos. El corte6.18.0 conserva1099 tokens y agrega31 de Cell y10 del contenedor:1140 totales,170 primitivas,131 semánticos y839 de componente. No añade Foundations ni colores. El nombre lógico/CSS, figmaName, WEB e ID/key permanecen diferenciados. No convertir anchos de columnas,1695/1711,360,posición de thumb o número de filas en tokens de muestra.
+
+### REQ-DEPENDENCIES
+
+Resolver hijos por identidad y versión exactas antes de consumirlos. Mantener instancias oficiales y sus variables, estilos y API. La auditoría previa abarcó25 páginas y7659 instancias: cero consumidores o principales anteriores de Table/Cell/Capture cell/Cell icon, cero sustituciones y cero referencias irresolubles. Los15 usos directos/transitivos de Scrollbar privados previos continúan bajo sus propietarios; no sustituir small por medium ni declarar creada la familia pública. Las referencias inversas son evidencia, no dependencias normativas circulares.
+
+### REQ-HOST
+
+El host define datos, columnas,selección de filas,confirmaciones,ordenamiento,filtros,paginación real,captura/validación,persistencia y servicios. Figma acredita solo la edición y reproducción ejecutadas con datos de muestra. Semántica table/headers/scope, nombres accesibles, navegación por teclado, anuncios de selección/errores y área táctil pertenecen a la implementación posterior. Mantener40px de fila visual fuente; no declarar target44 ni AA global. React,HTML,Next.js,Tailwind,TypeScript de producto,Graphify y releases oficiales no se habilitan por este encargo.
+
+### REQ-QA
+
+Comparar contrato,receta y destino por combinación real y cuatro temas. Verificar aliases,scopes,WEB,bindings,estilos,fuentes,ellipsis,visibilidad y swaps desde instancias comprometidas. Probar hijos,contenido corto/largo,ancho reducido,Slots y cambios de cantidad/orden manteniendo vínculos. Tolerancias previas:geometría0.05px,color0.000001 y precisión float32; identidades y aliases exactos. Comparar el baseline de1099 variables sin sobreescribir cambios concurrentes. Conservar capturas y reproducción visible separadas de infraestructura y de revisión independiente no ejecutada. Si el contexto completo excede presupuesto, consumir todos los requisitos del padre con referencias tipadas y los propietarios hijos completos; no elevar presupuesto ni omitir reglas.

@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": "specs_components_buttons_usage_amendment_v1_0_1_hierarchy",
+      "label": "Jerarquía de acciones y navegación en Buttons",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/buttons.usage.amendment.v1.0.1.md",
+      "source_location": "L22",
+      "rationale": "Primary completa el objetivo, Secondary acompaña, Text reduce énfasis, Link navega y Danger reserva la acción destructiva."
+    },
+    {
+      "id": "specs_components_buttons_usage_amendment_v1_0_1_busy",
+      "label": "Guardado con Loader y bloqueo de duplicados",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/buttons.usage.amendment.v1.0.1.md",
+      "source_location": "L34",
+      "rationale": "La espera comunicada pertenece a una acción que ya se inició. El anfitrión determina el resultado y recuperación."
+    },
+    {
+      "id": "specs_components_loader_usage_amendment_v1_0_1_indeterminate",
+      "label": "Loader junto a la región con espera indeterminada",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/loader.usage.amendment.v1.0.1.md",
+      "source_location": "L20",
+      "rationale": "El progreso medible requiere progreso determinado y el error debe tener su propio tratamiento."
+    },
+    {
+      "id": "specs_components_loader_usage_amendment_v1_0_1_host",
+      "label": "Anuncio de espera gestionado por el anfitrión",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/loader.usage.amendment.v1.0.1.md",
+      "source_location": "L31",
+      "rationale": "Loader independiente puede anunciar; el Loader de Button ocupado es decorativo."
+    },
+    {
+      "id": "qa_implementations_buttons_loader_usage_v1_0_1_review_readback",
+      "label": "Lectura de doce descripciones, enlaces e IDs preservados",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/buttons-loader.usage.v1.0.1.review.md",
+      "source_location": "L3",
+      "rationale": "Verificación exacta por set. La reproducción nativa se conserva como no ejecutada."
+    },
+    {
+      "id": "qa_contracts_buttons_loader_usage_v1_0_1_review_review",
+      "label": "QA documental de guías v1.0.1",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/contracts/buttons-loader.usage.v1.0.1.review.md",
+      "source_location": "L3",
+      "rationale": "Los referentes orientan la semántica. Se conserva la matriz del contrato base."
+    },
+    {
+      "id": "registry_contracts_guide_release",
+      "label": "Enmiendas semánticas de Buttons y Loader",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L13",
+      "rationale": "La ficha consume la guía vigente, mientras la implementación conserva v1.0.0."
+    },
+    {
+      "id": "registry_decisions_root_scope",
+      "label": "Enriquecimiento semántico y continuidad de familias de la raíz",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/decisions.md",
+      "source_location": "L39",
+      "rationale": "Referentes oficiales orientan el uso. El alcance conserva el maestro por familias y publicación en HOLD."
+    },
+    {
+      "id": "registry_qa_usage_qa",
+      "label": "QA de Description y fichas Buttons Loader",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L13",
+      "rationale": "La evidencia separa metadatos de la comprobación previa de implementación."
+    }
+  ],
+  "edges": [
+    {
+      "source": "registry_contracts_guide_release",
+      "target": "specs_components_buttons_usage_amendment_v1_0_1_hierarchy",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_contracts_guide_release",
+      "target": "specs_components_loader_usage_amendment_v1_0_1_indeterminate",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L13",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": null,
+  "output_tokens": null,
+  "usage_status": "UNAVAILABLE"
+}

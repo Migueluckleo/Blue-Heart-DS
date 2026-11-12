@@ -1,0 +1,58 @@
+/** TABLE-001@1.0.0. One-shot consumer recipe. Fonts must be loaded by caller.
+ * Reacquires handles after structural edits. Native scroll belongs to the main.
+ * allow flags are host inputs; they are not inferred from previous visibility.
+ */
+async function fitTableInstance(tableId, options={}) {
+ figma.skipInvisibleInstanceChildren=false;
+ const fresh=()=>figma.getNodeByIdAsync(tableId);
+ let root=await fresh();if(!root||!['COMPONENT','INSTANCE'].includes(root.type))throw Error('Linked Table required');
+ const get=n=>({area:n.children.find(c=>c.name==='Viewport'),rows:n.findAllWithCriteria({types:['SLOT']}).find(c=>c.name==='Rows'),h:n.children.find(c=>c.name==='Horizontal scrollbar'),v:n.findAllWithCriteria({types:['INSTANCE']}).find(c=>c.name==='Vertical scrollbar')});
+ let {area,rows,h,v}=get(root);if(!area||!rows||!h||!v)throw Error('Table anatomy mismatch');
+ if(!rows.children.length||rows.children[0].type!=='FRAME'||rows.children[0].children.some(c=>c.type!=='INSTANCE'||c.componentProperties.item?.value!=='header'))throw Error('Rows must start with an official header row');
+ const columnWidths=options.columnWidths??[56,120,130,120,140,210,150,150,234,170,79,136],flex=options.flexColumn??5;
+ if(columnWidths.some(x=>!Number.isFinite(x)||x<=0)||!Number.isInteger(flex)||flex<0||flex>=columnWidths.length)throw Error('Invalid column geometry');
+ const viewportHeight=options.viewportHeight??area.height;
+ const contentHeight=rows.children.reduce((s,r)=>s+r.height,0),minimumWidth=columnWidths.reduce((s,w)=>s+w,0);
+ const allowH=options.allowHorizontal!==false,allowV=options.allowVertical!==false;
+ let horizontal=false,vertical=false;
+ // Horizontal indicator sits below the explicit viewport;vertical consumes16px.
+ for(let i=0;i<3;i++){const available=root.width-(vertical?16:0);horizontal=allowH&&minimumWidth>available+.05;vertical=allowV&&contentHeight>viewportHeight+.05;}
+ const api=root.type==='COMPONENT'?root.componentPropertyDefinitions:root.componentProperties;
+ const key=name=>Object.keys(api).find(k=>k.split('#')[0]===name);const flags={[key('Show horizontal scrollbar')]:horizontal,[key('Show vertical scrollbar')]:vertical};
+ if(root.type==='INSTANCE')root.setProperties(flags);else for(const[k,value]of Object.entries(flags))root.editComponentProperty(k,{defaultValue:value});
+ root=await fresh();({area,rows,h,v}=get(root));
+ if(root.type==='INSTANCE'){
+  const footer=root.children.find(n=>n.name==='Pagination');root.resize(root.width,viewportHeight+(horizontal?16:0)+footer.height);root.layoutSizingVertical='FIXED';area.layoutSizingVertical='FILL';
+ }else{area.resize(root.width,viewportHeight);area.layoutSizingVertical='FIXED';}
+ area.layoutSizingHorizontal='FILL';
+ const available=root.width-(vertical?16:0),contentWidth=Math.max(available,minimumWidth),widths=columnWidths.slice();widths[flex]+=contentWidth-minimumWidth;
+ for(let rowIndex=0;rowIndex<rows.children.length;rowIndex++){
+  root=await fresh();rows=get(root).rows;const row=rows.children[rowIndex];
+  if(row.type!=='FRAME'||row.children.length!==widths.length)throw Error('Rows need aligned frame columns');
+  if(Math.abs(row.width-contentWidth)>.05)row.resize(contentWidth,row.height);
+  if(row.layoutSizingHorizontal!=='FIXED')row.layoutSizingHorizontal='FIXED';
+  if(row.layoutSizingVertical!=='HUG')row.layoutSizingVertical='HUG';
+  root=await fresh();rows=get(root).rows;
+  for(let i=0;i<widths.length;i++){
+   const cell=rows.children[rowIndex].children[i];
+   if(Math.abs(cell.width-widths[i])>.05||Math.abs(cell.height-40)>.05){cell.resize(widths[i],40);root=await fresh();rows=get(root).rows;}
+   const current=rows.children[rowIndex].children[i];if(current.layoutSizingHorizontal!=='FIXED')current.layoutSizingHorizontal='FIXED';
+  }
+ }
+ root=await fresh();({area,rows,h,v}=get(root));
+ rows.resize(available,viewportHeight);rows.layoutSizingHorizontal='FILL';rows.layoutSizingVertical='FILL';
+ h.resize(root.width,16);h.layoutSizingHorizontal='FILL';v.resize(16,viewportHeight);v.layoutSizingVertical='FILL';
+ const thickness=(await figma.variables.getLocalVariablesAsync()).find(v=>v.name==='table/size/scrollbar-thumb');if(!thickness)throw Error('Table thumb variable missing');
+ const removedNodeIds=[];
+ for(const[bar,axis,view,content]of [[h,'horizontal',available,contentWidth],[v,'vertical',viewportHeight,contentHeight]]){
+  const slot=bar.children.find(n=>n.type==='SLOT');if(!slot||slot.children.length!==1)throw Error('Private Thumb Slot required');
+  const thumbMain=await slot.children[0].getMainComponentAsync(),len=Math.max(8,((axis==='horizontal'?root.width:viewportHeight)-8)*Math.min(1,view/Math.max(1,content)));
+  const thumb=thumbMain.createInstance();thumb.name='Thumb';thumb.resize(axis==='horizontal'?len:8,axis==='vertical'?len:8);
+  thumb.setBoundVariable(axis==='horizontal'?'height':'width',thickness);removedNodeIds.push(slot.children[0].id);
+  slot.children[0].remove();slot.appendChild(thumb);
+ }
+ root=await fresh();({area,rows,h,v}=get(root));
+ const thumbs=[h,v].map(b=>b.children.find(c=>c.type==='SLOT').children[0]);
+ const mutated=[root.id,area.id,rows.id,h.id,v.id,...rows.children.flatMap(r=>[r.id,...r.children.map(c=>c.id)]),...thumbs.map(t=>t.id)];
+ return{tableId,rows:rows.children.length,columns:widths.length,columnWidths:widths,contentWidth,contentHeight,viewportWidth:rows.width,viewportHeight:rows.height,horizontal,vertical,rootWidth:root.width,rootHeight:root.height,createdNodeIds:thumbs.map(t=>t.id),removedNodeIds,mutatedNodeIds:mutated};
+}

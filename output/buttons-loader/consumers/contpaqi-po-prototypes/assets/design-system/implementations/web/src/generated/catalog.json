@@ -1,0 +1,54 @@
+[
+  {
+    "id": "BUTTON-001",
+    "slug": "buttons",
+    "name": "Buttons",
+    "module": "button",
+    "exports": [
+      "Button"
+    ],
+    "category": "acción",
+    "notes": "Activa una acción local y usa Terminar demo para salir de loading.",
+    "base": "specs/components/buttons.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Label, visibilidad y swaps son propiedades acotadas"
+    },
+    "qa": "qa/implementations/buttons-loader.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/buttons.contract.v1.0.0.md": "f10c3428203f6d083bfa1a67175609ad3890e6ee8826e9121175159cec909b70"
+    },
+    "api": "export type ButtonVariant = typeof buttonVariants[number];\n\nexport type ButtonSize = typeof buttonSizes[number];\n\nexport type ButtonInteraction = 'default' | 'hover' | 'pressed' | 'focus';\n\nexport interface ButtonIcon {\n  /** Official Phosphor icon export. */\n  component: Icon;\n  weight?: 'thin' | 'light' | 'regular' | 'bold' | 'fill' | 'duotone';\n}\n\nexport interface ButtonCommonProps {\n  size?: ButtonSize;\n  label?: string;\n  loadingLabel?: string;\n  loading?: boolean;\n  disabled?: boolean;\n  showLeftIcon?: boolean;\n  showRightIcon?: boolean;\n  leftIcon?: ButtonIcon;\n  rightIcon?: ButtonIcon;\n  describedBy?: string;\n  id?: string;\n  className?: string;\n  /** For an isolated catalogue specimen. */\n  previewState?: ButtonInteraction;\n}\n\nexport type ButtonProps = ButtonCommonProps & (\n  | {variant?: ButtonVariant; href?: never; type?: 'button' | 'submit' | 'reset'; onClick?: (event: MouseEvent<HTMLButtonElement>) => void}\n  | {variant: 'link'; href: string; type?: never; onClick?: (event: MouseEvent<HTMLAnchorElement>) => void}\n);\n",
+    "example": "'use client';\n\nimport { useState } from 'react';\nimport { Button, buttonSizes, buttonVariants, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function ButtonsExample() {\n  const [busy, setBusy] = useState(false);\n  const [activations, setActivations] = useState(0);\n  return (\n    <div className=\"my-4 space-y-4\">\n      <div className=\"flex flex-wrap items-center gap-4\">\n        <Button id=\"demo-primary\" label=\"Guardar cambios\" loadingLabel=\"Guardando…\" loading={busy}\n          showLeftIcon onClick={() => {setActivations(count => count + 1); setBusy(true);}}/>\n        <Button id=\"demo-reset\" variant=\"secondary\" label=\"Terminar demo\" onClick={() => setBusy(false)}/>\n        <Button id=\"demo-disabled\" variant=\"danger\" label=\"Eliminar\" disabled describedBy=\"demo-disabled-note\"/>\n        <Button id=\"demo-link\" variant=\"link\" label=\"Ver indicador\" href=\"#loader-example\"/>\n      </div>\n      <p id=\"demo-disabled-note\">Selecciona un elemento para eliminar.</p>\n      <p role=\"status\" id=\"demo-activations\">Activaciones locales: {activations}</p>\n      <details>\n        <summary>Matriz de 90 variantes</summary>\n        {buttonVariants.map(variant => (\n          <div key={variant} className=\"my-3 overflow-auto\">\n            <h3 className=\"mb-2 font-medium\">{variant}</h3>\n            {buttonSizes.map(size => <div key={size} className=\"mb-3 flex w-max gap-4 p-1\">\n              {states.map(state => <div key={state} className=\"space-y-1\">\n                <p className=\"text-xs\">{size} · {state}</p>\n                <Button variant={variant} size={size} disabled={state === 'disabled'} loading={state === 'loading'}\n                  previewState={state !== 'disabled' && state !== 'loading' ? state : undefined}/>\n              </div>)}\n            </div>)}\n          </div>\n        ))}\n      </details>\n    </div>\n  );\n}\n",
+    "defaults": [
+      "Button: props: ButtonProps"
+    ]
+  },
+  {
+    "id": "LOADER-001",
+    "slug": "loader",
+    "name": "Loader",
+    "module": "loader",
+    "exports": [
+      "Loader"
+    ],
+    "category": "estado",
+    "notes": "Indicador indeterminado con tamaños y roles observados.",
+    "base": "specs/components/loader.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Riel, arco y fases constituyen composición fija"
+    },
+    "qa": "qa/implementations/buttons-loader.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/loader.contract.v1.0.0.md": "b6bc0b64db1ebaefef508c2070add1d0f312d2e5b4cc20960b7d859b6bed0d55"
+    },
+    "api": "export type LoaderSize = typeof loaderSizes[number];\n\nexport type LoaderColor = typeof loaderColors[number];\n\nexport interface LoaderProps {\n  size?: LoaderSize;\n  color?: LoaderColor;\n  /** Set when this instance provides the host's status announcement. */\n  label?: string;\n  className?: string;\n}",
+    "example": "'use client';\n\nimport { useState } from 'react';\nimport { Button, buttonSizes, buttonVariants, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function LoaderExample() {\n  return (\n    <div id=\"loader-example\" className=\"my-4 space-y-4\">\n      <Loader size=\"small\" label=\"Cargando archivos…\"/>\n      <details>\n        <summary>Matriz de 24 variantes</summary>\n        {loaderSizes.map(size => <div className=\"my-3 flex flex-wrap items-center gap-4\" key={size}>\n          <span className=\"w-28\">{size}</span>\n          {loaderColors.map(color => <span key={color} className={color === 'on-color' ? 'bg-slate-900 p-2 text-white' : 'p-2'}>\n            <Loader size={size} color={color}/>\n            <span className=\"ml-2\">{color}</span>\n          </span>)}\n        </div>)}\n      </details>\n    </div>\n  );\n}\n",
+    "defaults": [
+      "Loader: {size = 'extra-small', color = 'brand', label, className}: LoaderProps"
+    ]
+  }
+]

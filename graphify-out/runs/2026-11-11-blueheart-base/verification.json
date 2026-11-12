@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-11-blueheart-base",
+  "status": "PASS",
+  "errors": [],
+  "corpus_files": 107,
+  "represented_files": 107,
+  "graph_nodes": 747,
+  "graph_edges": 1873,
+  "protected_data": {},
+  "source_link_limitations": [],
+  "scoped_path_smoke_tests": [
+    {
+      "from": "protocols/05-SELF-DOCUMENTATION-AND-TRACEABILITY.md",
+      "to": "references/EFFICIENT-CLOSURE.md",
+      "path": [
+        "protocols_05_self_documentation_and_traceability_artifact_md",
+        "references_efficient_closure_artifact_md"
+      ]
+    },
+    {
+      "from": "protocols/07-WEB-COMPONENTS-AND-TECHNICAL-DOCUMENTATION.md",
+      "to": "implementations/web/README.md",
+      "path": [
+        "protocols_07_web_components_and_technical_documentation_artifact_md",
+        "implementations_web_readme_artifact_md"
+      ]
+    },
+    {
+      "from": "AGENTS.md",
+      "to": "protocols/SLOTS-REVIEW-AND-IMPLEMENTATION.md",
+      "path": [
+        "agents_artifact_md",
+        "protocols_slots_review_and_implementation_artifact_md"
+      ]
+    }
+  ],
+  "reference_only_missing_paths": [
+    "@playwright/test"
+  ],
+  "output_sha256": {
+    "graph.json": "aa7cc5e03b6a49483e32ea3bd415048ed45e12774653e21a5113d89c706f9d5d",
+    "graph.html": "43635ca88f84e91f38333ea52245d5600687cd3595ede97ab1c1ca93abdac690",
+    "GRAPH_REPORT.md": "cc860adc909fbed5a790e8e3d0a17861394f74a07e4d9d312b6e49123233e1ad"
+  },
+  "scope": "Graph freshness, file coverage and integrity only; no live Figma revalidation"
+}

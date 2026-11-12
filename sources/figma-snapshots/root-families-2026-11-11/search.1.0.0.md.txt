@@ -1,0 +1,500 @@
+---
+{
+  "schema_version": 1,
+  "id": "SEARCH-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-040"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/search-request.json",
+      "sha256": "31d645c281ac909439e00ce56ef6fb8438c7378233f11636b75ad2d47a64a9de"
+    },
+    {
+      "id": "SRC-CHOICE",
+      "path": "evidence/authorization/search-api-choice.json",
+      "sha256": "79ffd71fd3312e74362695da875f5550d9fe9340ea100bbcef2a1f53ffe9c73d"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/search-pilot/source/capture-manifest.json",
+      "sha256": "6581afb4752ebec45bbb9e2fa9c8c6ee664e27e37c62badc8b6f0634980a80b0"
+    },
+    {
+      "id": "SRC-MODEL",
+      "path": "evidence/search-pilot/source/search-component-contract.yaml",
+      "sha256": "fedce0bfd4e171b19db846b929277e94444ce9ea40c8eaabbdef1573294958b2"
+    },
+    {
+      "id": "SRC-PLAN",
+      "path": "evidence/search-pilot/build-plan.json",
+      "sha256": "ba5572771b29030c7c07dd41d749028157a84ccfd5d72dabbaff3aeafa2d3749"
+    },
+    {
+      "id": "SRC-AUDIT",
+      "path": "evidence/search-pilot/reverse-dependencies.json",
+      "sha256": "4585059f8343994e35eac91fb1b32fd03ddda94fcbebae814e48cabacf0ef580"
+    },
+    {
+      "id": "SRC-PHOSPHOR",
+      "path": "evidence/search-pilot/source/official-phosphor.json",
+      "sha256": "5d0195f20c0d3dec88167cdb7175f8b27919d5f6a1eb73588748a1b8efbd0dcb"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "search.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.spacing-sm",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.color-text-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.font-bold",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.font-size",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.font-line-height-label",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.font-tracking-label",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.spacing-content",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.size-height-large",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.radius-container",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.color-bg-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.border-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.color-stroke-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.size-icon",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.color-icon-secondary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.color-text-secondary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.font-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.font-tracking-value",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.size-height-medium",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.size-height-small",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.color-stroke-primary-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.radius-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.border-emphasis",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.color-stroke-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.color-stroke-filled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.color-icon-primary-filled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.color-text-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.color-bg-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "search.color-icon-disabled",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar con fuente, receta seleccionada y evidencia ejecutada: REQ-ANATOMY"
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar con fuente, receta seleccionada y evidencia ejecutada: REQ-API"
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar con fuente, receta seleccionada y evidencia ejecutada: REQ-LAYOUT"
+      ]
+    },
+    {
+      "id": "REQ-FOCUS",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar con fuente, receta seleccionada y evidencia ejecutada: REQ-FOCUS"
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar con fuente, receta seleccionada y evidencia ejecutada: REQ-TYPOGRAPHY"
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar con fuente, receta seleccionada y evidencia ejecutada: REQ-TOKENS"
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar con fuente, receta seleccionada y evidencia ejecutada: REQ-THEME"
+      ]
+    },
+    {
+      "id": "REQ-ICONS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar con fuente, receta seleccionada y evidencia ejecutada: REQ-ICONS"
+      ]
+    },
+    {
+      "id": "REQ-CONTENT",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar con fuente, receta seleccionada y evidencia ejecutada: REQ-CONTENT"
+      ]
+    },
+    {
+      "id": "REQ-BEHAVIOR",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar con fuente, receta seleccionada y evidencia ejecutada: REQ-BEHAVIOR"
+      ]
+    },
+    {
+      "id": "REQ-ACCESSIBILITY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar con fuente, receta seleccionada y evidencia ejecutada: REQ-ACCESSIBILITY"
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar con fuente, receta seleccionada y evidencia ejecutada: REQ-DEPENDENCIES"
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar con fuente, receta seleccionada y evidencia ejecutada: REQ-QA"
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Root",
+      "Label",
+      "content",
+      "MagnifyingGlass",
+      "Value",
+      "Clear",
+      "Focus ring"
+    ],
+    "composition": "Own Search anatomy with linked official Phosphor icons; fixed children, no results Slot.",
+    "accessibility": "Search region, accessible name and clear control supplied by host; Figma does not certify keyboard/ARIA."
+  }
+}
+---
+# SEARCH-001 · 1.0.0
+
+### REQ-ANATOMY
+
+Quince variantes size=large/medium/small × state=default/hover/focus/filled/disabled. Root vertical contiene Label opcional y content horizontal con MagnifyingGlass, Value y X solo filled; focus añade anillo absoluto. No añadir error, loading, resultados ni variantes por icono. Los resultados pertenecen al host.
+
+### REQ-API
+
+Por elección humana, exponer Placeholder TEXT para default/hover/focus/disabled y Value TEXT exclusivamente para filled; Label TEXT y Show label BOOLEAN false, además de size/state. Placeholder y Value son independientes y conservan sus textos al cambiar de variante. Ambos inician Search. No confundir el nodo anatómico Value con la propiedad Value, que solo se vincula en filled. La Skill resuelve keys reales desde el ledger, nunca reconstruye sufijos. No necesita Slot: la anatomía es fija, no una lista de resultados.
+
+### REQ-LAYOUT
+
+Ancho464 es la muestra editable del consumidor, no un tamaño mínimo ni una Foundation nueva. Root ancho FIXED y alto HUG; gap8, sin padding. Content FILL horizontal, alturas48/40/32, padding vertical8/horizontal16, gap16 y CENTER vertical, sin wrap. Iconos20; Value FILL/HEIGHT, truncation ENDING y maxLines1. Conservar el padding8 incluso en small32: el destino nativo centra su icono20; no inventar una reducción. Label FILL/HEIGHT y alto HUG permite crecimiento; normalizar large/focus de HUG a FILL como las otras14, sin alterar muestra inicial. QA ancho136/260/768 y texto largo.
+
+### REQ-FOCUS
+
+Anillo hijo absoluto de content: x/y=-4, ancho/alto de content+8, radio12, stroke2 INSIDE y constraints STRETCH en ambos ejes. Conserva separación visible2 con el contenedor radio8/borde1. No vincular su ancho a una constante472 que falle al redimensionar; su crecimiento deriva del padre. Contenido y ejemplos no recortan el anillo. Focus y filled son estados separados de la API, sin variante filled-focus inventada.
+
+### REQ-TYPOGRAPHY
+
+Manrope Bold14/20 en Label y Regular14/AUTO en Value. Dos estilos compartidos, aplicados tras bindings; Value conserva AUTO, no convertir el alto observado19 a otra línea fija. Tracking Label0.1% equivale exactamente a0.014000000208616257px a14px y reutiliza semantic.font-letter-spacing-label-px por limitación de binding LETTER_SPACING; Value tracking0. No cambiar la Foundation ni convertir fontStyle STRING a peso numérico.
+
+### REQ-TOKENS
+
+Aplicar BH-P07: treinta firmas mínimas para453bindings propios. Solo grupo search/ dentro de component, nombres por función/estado, aliases a semánticos existentes y un scope concreto. Cero Foundations nuevas,953tokens totales preservando923objetos previos. Los estados reutilizan firmas completas; no duplicar variables para cada tamaño/estado ni crear semánticos por parte. El mapa conserva nombre lógico, ruta Figma, ID/key y WEB.
+
+### REQ-THEME
+
+Únicamente el borde hover sigue los cuatro temas observados. El anillo focus permanece fijo, aunque su alias coincida con hover en Contable; no fusionar esos vectores. Fondos, otros bordes, Label/Value e iconos son invariantes. Verificar aliases y paints desde consumidores en cuatro modos; no importar las excepciones moradas de Tab.
+
+### REQ-ICONS
+
+MagnifyingGlass a la izquierda y X de limpieza a la derecha solo filled, ambos Phosphor Outline/Light del equipo con keys verificadas. Consumir instancias remotas, sin vectores locales ni desacoplar. BH-P06 hace que ambos glyphs SHAPE_FILL sigan todos los aliases del Value TEXT_FILL correspondiente: placeholder en vacíos, primary en filled y disabled cuando aplique. Es una adaptación explícita del gris fuente de filled. X visual20 no es Icon Button oficial32: no sustituir por analogía ni cambiar geometría. Desarrollo futuro importa MagnifyingGlassIcon/XIcon weight=light desde paquete oficial; no se instala React por este encargo.
+
+### REQ-CONTENT
+
+Placeholder explica el universo de búsqueda, por ejemplo nombre/RFC/folio; Label aporta contexto cuando se muestra. Textos y queries son contenido de muestra, sin afirmar una regla fiscal. Search sirve para buscar/filtrar, no para capturar un dato de negocio como Input. Un search por contexto/vista es la recomendación fuente, no un límite que el componente imponga al host.
+
+### REQ-BEHAVIOR
+
+El host conserva query, interpreta cambios y decide búsqueda en vivo con umbral2–3 o envío Enter en catálogos grandes. Debe aceptar acentos y Ñ y definir comparación, normalización, errores, solicitudes y estado vacío con sugerencias; la prosa no define algoritmo ni servicio. No equiparar Ñ con N por inferencia. X limpia query y conserva foco en la implementación futura. Los principales agregan solo hover reversible; disabled es inerte. El prototipo demuestra focus/filled/limpiar/resultados de ejemplo por pantallas, sin afirmar entrada real, callbacks, búsqueda normalizada ni servicios.
+
+### REQ-ACCESSIBILITY
+
+Host futuro aporta región search, nombre accesible aunque Label esté oculto y control de limpieza con nombre Limpiar búsqueda. ARIA/HTML, navegación de teclado, Enter/Escape y transferencia de foco necesitan implementación propia. Small32/medium40 y X20 necesitan ampliación táctil del host a44 sin cambiar silenciosamente el principal. Medir contraste de texto/icono y bordes por rol; el borde default fuente bajo3:1 se conserva como limitación, sin AA global ni certificación por un screenshot.
+
+### REQ-DEPENDENCIES
+
+La auditoría previa de20páginas y6035instancias no encontró consumidores, helpers ni principales que sustituir. Search tiene18instancias Phosphor en sus principales, sin dependencia contractual de Input/Icon Button. Button/Loader del host de reproducción son solo muestra. Fuente y proyecto anterior permanecen solo lectura. Contexto completo de requisitos y tokens debe caber en65536bytes sin truncar ni ampliar presupuesto.
+
+### REQ-QA
+
+Verificar15variantes,30variables/120aliases,453bindings,18instancias Phosphor y30textos estilados. Instancias en cuatro modos: Label visible/oculto, textos cortos/largos, ancho reducido/amplio,  cambios size/state con Placeholder y Value independientes conservados, truncation/maxLines, anillo redimensionado y key/remote/color de iconos. Tolerancia0.05px geometría y0.000001color; identidades/aliases exactos. Guía editable y reproducción visible con consultas ficticias, no teclado/ARIA/toque físico. Infraestructura y QA nativo son evidencias distintas; declarar que el ejecutor realizó las pruebas sin revisor independiente.
+

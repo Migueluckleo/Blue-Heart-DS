@@ -1,0 +1,82 @@
+{
+  "fileKey": "yZsIpXywybsPDytjolwcP4",
+  "pageId": "32:26",
+  "setId": "32:33",
+  "createdNodeIds": [
+    "32:26",
+    "S:bd163b7da9eb30937eee922045799f56c1427460,",
+    "S:8e7ce39f62bb67591fcd35208dabad9007ce4791,",
+    "32:29",
+    "32:30",
+    "32:31",
+    "32:32",
+    "32:33"
+  ],
+  "mutatedNodeIds": [
+    "32:26",
+    "32:33"
+  ],
+  "nodes": {
+    "201:1544": "32:29",
+    "201:1545": "32:30",
+    "201:1546": "32:31",
+    "201:1547": "32:32"
+  },
+  "textStyles": {},
+  "styles": {
+    "S:c7b993aaf2886c49480873fee83c9f00cc83e324,": "S:bd163b7da9eb30937eee922045799f56c1427460,",
+    "S:69e9b2d42eeae84931453a60f63d937351f3d86d,": "S:8e7ce39f62bb67591fcd35208dabad9007ce4791,"
+  },
+  "variants": [
+    {
+      "id": "32:29",
+      "name": "type=active, size=large, color=default"
+    },
+    {
+      "id": "32:30",
+      "name": "type=active, size=medium, color=default"
+    },
+    {
+      "id": "32:31",
+      "name": "type=active, size=small, color=default"
+    },
+    {
+      "id": "32:32",
+      "name": "type=busy, size=large, color=default"
+    }
+  ],
+  "properties": {
+    "Count#32:0": {
+      "type": "TEXT",
+      "defaultValue": "1"
+    },
+    "Max count#32:5": {
+      "type": "TEXT",
+      "defaultValue": "99+"
+    },
+    "type": {
+      "type": "VARIANT",
+      "defaultValue": "active",
+      "variantOptions": [
+        "active",
+        "busy"
+      ]
+    },
+    "size": {
+      "type": "VARIANT",
+      "defaultValue": "large",
+      "variantOptions": [
+        "large",
+        "medium",
+        "small"
+      ]
+    },
+    "color": {
+      "type": "VARIANT",
+      "defaultValue": "default",
+      "variantOptions": [
+        "default"
+      ]
+    }
+  }
+}

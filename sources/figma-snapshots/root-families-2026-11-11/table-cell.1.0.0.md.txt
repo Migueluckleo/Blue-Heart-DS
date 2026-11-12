@@ -1,0 +1,575 @@
+---
+{
+  "schema_version": 1,
+  "id": "TABLE-CELL-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-046"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/tables-request.json",
+      "sha256": "0479e407345996c71007ef5663f9fda4cfd3492647e8ed7686265d4527fec091"
+    },
+    {
+      "id": "SRC-CHOICES",
+      "path": "evidence/authorization/tables-choices.json",
+      "sha256": "2b2702b0bd0c2d268f9134d42aa8b8712a8a507d74f881cdd21ba8d74139e71a"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/tables-pilot/source/capture-manifest.json",
+      "sha256": "ebc3b137a2632ade6c49bc2e387011b85c3241453a171e9453e01bc0b1df2665"
+    },
+    {
+      "id": "SRC-MODEL",
+      "path": "evidence/tables-pilot/source/table-cell-component-contract.yaml",
+      "sha256": "91b23bfec0748e3b6336fca66b0d77948fb327404963406b43695ac95501f1ab"
+    },
+    {
+      "id": "SRC-PLAN",
+      "path": "evidence/tables-pilot/build-plan.json",
+      "sha256": "f856b080ab4d547252f364b4a631abedd3bd847e0b6a04b191d7723b33bbb1ab"
+    },
+    {
+      "id": "SRC-MINIMUM",
+      "path": "evidence/tables-pilot/token-minimum.json",
+      "sha256": "dabdc2ee4e15adc19107b4ddcf37c84d7ab33136eda444446c50a608aa3b850a"
+    },
+    {
+      "id": "SRC-AUDIT",
+      "path": "evidence/tables-pilot/reverse-dependencies.json",
+      "sha256": "4379dac08ac474e9b7b045acb941d4686b8d822d9fa748f5a45305237c26224a"
+    },
+    {
+      "id": "SRC-CONTRAST",
+      "path": "evidence/tables-pilot/source/contrast.json",
+      "sha256": "cf68434c93a18fbc4be2a195a7d382eee4b470655fc06b84e6ab8ddf9c67e428"
+    },
+    {
+      "id": "SRC-PHOSPHOR",
+      "path": "evidence/tables-pilot/source/official-phosphor.json",
+      "sha256": "6bec8424ce572fe98c75a175bccb82a828b22adbc0708054a837fe7452050c9d"
+    },
+    {
+      "id": "SRC-BASELINE",
+      "path": "evidence/tables-pilot/baseline/manifest.json",
+      "sha256": "43ac76c07c0a05c918810c5ed0fc53f945b536b425577bdbf397bdae4a3ead2c"
+    },
+    {
+      "id": "SRC-CAPTURE-CELL",
+      "path": "evidence/tables-pilot/source/table-capture-cell-component-contract.yaml",
+      "sha256": "e24366b20bf81ebbeba059fb6fc2673cdb32965abc6ab4ffb2dee72ec69be0ca"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "table-cell.spacing-cell-small",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.spacing-cell-content",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.size-cell-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.radius-cell-container",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.color-bg-cell-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.size-cell-icon",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.color-icon-cell-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.color-text-cell-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.font-cell-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.font-cell-style-body",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.font-cell-size",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.font-cell-line-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.font-cell-tracking",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.color-divider-cell-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.size-cell-divider-thickness",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.color-bg-header-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.font-cell-style-header",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.color-icon-link-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.color-text-link-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.color-bg-cell-selected",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.color-bg-cell-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.color-stroke-cell-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.border-cell-focus-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.spacing-cell-compact",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.spacing-cell-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.radius-cell-field",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.color-stroke-capture-on-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.border-cell-field-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.color-icon-capture-placeholder",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.color-text-capture-placeholder",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "table-cell.color-stroke-capture-off-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "AVATAR-001",
+      "version": "3.0.0",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "CHECKBOX-001",
+      "version": "1.0.0",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "TOGGLE-001",
+      "version": "1.0.0",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "BADGE-001",
+      "version": "1.1.0",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-CAPTURE-CELL"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ANATOMY con receta seleccionada,registro nativo y QA del alcance table-cell."
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-CAPTURE-CELL"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API con receta seleccionada,registro nativo y QA del alcance table-cell."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-CAPTURE-CELL"
+      ],
+      "acceptance": [
+        "Contrastar REQ-LAYOUT con receta seleccionada,registro nativo y QA del alcance table-cell."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-CAPTURE-CELL"
+      ],
+      "acceptance": [
+        "Contrastar REQ-THEME con receta seleccionada,registro nativo y QA del alcance table-cell."
+      ]
+    },
+    {
+      "id": "REQ-CONTRAST",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-CAPTURE-CELL"
+      ],
+      "acceptance": [
+        "Contrastar REQ-CONTRAST con receta seleccionada,registro nativo y QA del alcance table-cell."
+      ]
+    },
+    {
+      "id": "REQ-PHOSPHOR",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-CAPTURE-CELL"
+      ],
+      "acceptance": [
+        "Contrastar REQ-PHOSPHOR con receta seleccionada,registro nativo y QA del alcance table-cell."
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-CAPTURE-CELL"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TYPOGRAPHY con receta seleccionada,registro nativo y QA del alcance table-cell."
+      ]
+    },
+    {
+      "id": "REQ-COMPOSITION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-CAPTURE-CELL"
+      ],
+      "acceptance": [
+        "Contrastar REQ-COMPOSITION con receta seleccionada,registro nativo y QA del alcance table-cell."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-CAPTURE-CELL"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS con receta seleccionada,registro nativo y QA del alcance table-cell."
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-CAPTURE-CELL"
+      ],
+      "acceptance": [
+        "Contrastar REQ-DEPENDENCIES con receta seleccionada,registro nativo y QA del alcance table-cell."
+      ]
+    },
+    {
+      "id": "REQ-HOST",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-CAPTURE-CELL"
+      ],
+      "acceptance": [
+        "Contrastar REQ-HOST con receta seleccionada,registro nativo y QA del alcance table-cell."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-BASELINE",
+        "SRC-CAPTURE-CELL"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA con receta seleccionada,registro nativo y QA del alcance table-cell."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Cell roots",
+      "Label",
+      "Phosphor",
+      "Dividers",
+      "Capture field",
+      "Official children",
+      "Private Actions"
+    ],
+    "composition": "Versioned official children; private helpers remain owned by this contract.",
+    "accessibility": "Host implements semantics,keyboard,accessible names,live data and touch targets. Source contrast exceptions are explicit; no global AA certification."
+  }
+}
+---
+# TABLE-CELL-001 ·1.0.0
+
+### REQ-ANATOMY
+
+Una familia contractual con dos sets públicos. Table cell conserva30 combinaciones reales: concept con default/link/checkbox/action/toggle/badge × default/selected/hover/focus; header con default/checkbox/toggle × default/focus. Table capture cell conserva8 combinaciones capture off/on × default/selected/hover/focus. No completar combinaciones inexistentes ni añadir disabled al padre. __Table/Cell actions es helper privado con amount4/3/2/1; sí se usa, no se elimina por estar oculto en la raíz.
+
+### REQ-API
+
+Conservar ejes item,type,state del set Cell y cell capture,state del set Capture. Exponer Label,Show left icon/Left icon,Show right icon/Right icon,Show avatar donde exista,Show vertical divider y Show horizontal borders con sus referencias reales. El Label del padre aplica al texto propio; Badge,Checkbox,Toggle y Avatar se editan mediante hijos expuestos y sus propias propiedades. No afirmar forwarding hacia textos de hijos. Actions conserva sus cuatro swaps y amount por instancia privada. Resolver keys reales desde el ledger después de combine; no usar IDs fuente como IDs locales.
+
+### REQ-LAYOUT
+
+Alto40 vinculado. Anchos238/56/72/78/136 de los principales son tamaños iniciales de host, no tokens ni mínimos universales. Label HORIZONTAL FILL,HEIGHT/HUG,ENDING/maxLines1. Mantener padding/gap fuente:8/16 del Cell normal y4/8 del Capture; métricas compartidas reutilizan firmas incluso entre sets. Los controles hijos conservan24/40 y Badge/Avatar sus tamaños propios. No escalar ni truncar Badge para hacerlo caber; ajustar contenido/columna. Los divisores conservan color,visibilidad y1px; la horizontal se normaliza de rectángulo girado con floats a rectángulo sin rotación anclado a borde inferior,con ancho derivado del consumidor. El foco fuente es stroke2 interior; no importar el anillo externo de Button.
+
+### REQ-THEME
+
+Conservar aliases fuente por rol/estado en cuatro modos. Selected de celda usa su vector de superficie de marca. Header sigue el vector observado: morado Contable/Administrativo y azul Servicios/Personas; no adoptar la excepción fija de Tab. Link mantiene su vector propio; superficies blanca/hover,divisores,textos comunes y foco son invariantes según la receta. Los hijos heredan component del host y siguen sus contratos; no duplicar sus colores en tokens del padre.
+
+### REQ-CONTRAST
+
+El responsable conserva los colores de la raíz. La medición propia72 casos encuentra enlace hover/selected en Servicios a4.308:1/4.442:1 y Capture off hover/selected con mínimo4.258:1, por debajo de4.5:1. Conservar medición y elección humana; no oscurecer por conveniencia ni declarar AA global. Los límites de hijos pertenecen a sus propietarios. La aceptación de fidelidad no convierte esos casos en cumplimiento de accesibilidad.
+
+### REQ-PHOSPHOR
+
+Iconos propios20px mediante instancias vinculadas Phosphor del equipo: CaretDown,Funnel,Eye,PencilSimple,TrashSimple Outline Light y DotsThree Outline Regular. Funnel local de la raíz se sustituye por la key oficial del equipo; no conservar otra copia vectorial. Aplicar BH-P06 a opcionales y swaps: SHAPE_FILL del icono tiene los mismos aliases que TEXT_FILL de Label para cada estado, incluido Capture off y Link. Actions no tiene texto asociado: usa el rol de acción neutral fuente, sin tomar un Label ajeno. Marcas de Checkbox y dibujos de hijos no se recolorean con el token del padre. Source20 no se convierte en Icon Button32 por analogía.
+
+### REQ-TYPOGRAPHY
+
+Dos estilos compartidos de Cell: Manrope Regular14/20 y SemiBold14/20 de header. Binding de familia,estilo,tamaño,línea y tracking en todos los textos propios. Conservar la Foundation Semibold que Figma presenta como Manrope SemiBold. Tracking0.1% fuente equivale a0.014000000208616257px a14px; reutilizar el alias existente y registrar la conversión. Aplicar estilo y después underline,ellipsis y maxLines; verificar que estilo y bindings sigan presentes. No pegar una tipografía paralela.
+
+### REQ-COMPOSITION
+
+Compone Avatar3.0.0 image/medium24 con status inicialmente oculto,Checkbox1.0.0 sin Label,Toggle1.0.0 sin Label y Badge1.1.0 error/medium según la variante fuente. Dot es transitivo de Avatar. Capture es anatomía propia con tex-box y texto editable, no una instancia de Input; no introducir Input por similitud. El modo capture no implementa entrada real. State de celda es representación visual independiente de selected de Checkbox/Toggle; el host coordina datos y selección. La raíz no define reacciones del padre; no acreditar interacción de celda por un nombre de estado. Los hijos conservan su interacción oficial y la muestra distingue acciones ficticias de operaciones reales.
+
+### REQ-TOKENS
+
+Aplicar BH-P07 a la receta seleccionada: una variable por firma completa de tipo, unidad, scope y aliases en cuatro modos. Los41 tokens nuevos viven bajo table/ de component; no crear colecciones por pieza. Primitive y semantic conservan scopes vacíos. El corte6.18.0 conserva1099 tokens y agrega31 de Cell y10 del contenedor:1140 totales,170 primitivas,131 semánticos y839 de componente. No añade Foundations ni colores. El nombre lógico/CSS, figmaName, WEB e ID/key permanecen diferenciados. No convertir anchos de columnas,1695/1711,360,posición de thumb o número de filas en tokens de muestra.
+
+### REQ-DEPENDENCIES
+
+Resolver hijos por identidad y versión exactas antes de consumirlos. Mantener instancias oficiales y sus variables, estilos y API. La auditoría previa abarcó25 páginas y7659 instancias: cero consumidores o principales anteriores de Table/Cell/Capture cell/Cell icon, cero sustituciones y cero referencias irresolubles. Los15 usos directos/transitivos de Scrollbar privados previos continúan bajo sus propietarios; no sustituir small por medium ni declarar creada la familia pública. Las referencias inversas son evidencia, no dependencias normativas circulares.
+
+### REQ-HOST
+
+El host define datos, columnas,selección de filas,confirmaciones,ordenamiento,filtros,paginación real,captura/validación,persistencia y servicios. Figma acredita solo la edición y reproducción ejecutadas con datos de muestra. Semántica table/headers/scope, nombres accesibles, navegación por teclado, anuncios de selección/errores y área táctil pertenecen a la implementación posterior. Mantener40px de fila visual fuente; no declarar target44 ni AA global. React,HTML,Next.js,Tailwind,TypeScript de producto,Graphify y releases oficiales no se habilitan por este encargo.
+
+### REQ-QA
+
+Comparar contrato,receta y destino por combinación real y cuatro temas. Verificar aliases,scopes,WEB,bindings,estilos,fuentes,ellipsis,visibilidad y swaps desde instancias comprometidas. Probar hijos,contenido corto/largo,ancho reducido,Slots y cambios de cantidad/orden manteniendo vínculos. Tolerancias previas:geometría0.05px,color0.000001 y precisión float32; identidades y aliases exactos. Comparar el baseline de1099 variables sin sobreescribir cambios concurrentes. Conservar capturas y reproducción visible separadas de infraestructura y de revisión independiente no ejecutada. Si el contexto completo excede presupuesto, consumir todos los requisitos del padre con referencias tipadas y los propietarios hijos completos; no elevar presupuesto ni omitir reglas.

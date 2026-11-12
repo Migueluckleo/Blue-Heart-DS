@@ -1,0 +1,106 @@
+# Header actions · React / TypeScript
+
+Documento técnico generado por `pnpm ds:generate`. Editar la API en código, el ejemplo ejecutable o las notas de `components.registry.json`, y regenerar. No es otra aprobación del contrato visual.
+
+Familia `HEADER-ACTIONS-001` · API local 0.1.0 · categoría acción.
+
+## Guía semántica normativa
+
+Fuente: [guía del contrato](../../../../specs/components/header-actions.contract.v1.0.0.md#guía-semántica-normativa).
+
+Usa Header actions para acciones globales con nombre accesible. Selecciona la variante con el conjunto previsto por el contrato. El anfitrión suministra destinos y número de notificaciones.
+
+| Situación | Haz | Evita |
+|---|---|---|
+| Cuatro acciones | Conserva Sincronizar, Soporte, Aplicaciones y Notificaciones. | Tomar los primeros cuatro de la lista de cinco. |
+| Notificaciones | Usa el Dot vinculado y comunica el conteo accesiblemente. | Convertir el contador de muestra en un dato de producto. |
+| Acciones globales | Nombra cada acción por su intención. | Usar el nombre de la librería de iconos como etiqueta. |
+
+[Carbon UI shell header](https://www.carbondesignsystem.com/building-blocks/core/components/ui-shell-header/guidelines) · [W3C Disclosure Navigation](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/)
+
+## Uso sin backend
+
+Compara el conjunto de cuatro y activa la demostración de notificaciones.
+
+```tsx
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';
+import { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';
+import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
+import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
+import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
+import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
+
+const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];
+
+export function HeaderActionsExample() {
+  const [last, setLast] = useState('');
+  return <div className="my-4 space-y-2">
+    <HeaderActions actions={4} notifications={103} onAction={setLast}/>
+    <p id="demo-header-action-status" role="status">{last && `Acción de muestra: ${last}`}</p>
+  </div>;
+}
+```
+
+Ejemplo compilado en [examples.tsx](../../src/examples.tsx). Usa React state en memoria; recargar restaura la muestra. No hay endpoint, credencial ni persistencia implícita.
+
+## API tipada
+
+Importar desde [src/index.ts](../../src/index.ts), con `@/index` dentro del catálogo. Código propietario: [header-actions.tsx](../../src/components/header-actions.tsx). Los atributos HTML heredados mantienen los tipos de React; callbacks y datos controlados pertenecen a la pantalla.
+
+```tsx
+export type HeaderAction = 'sync' | 'academy' | 'support' | 'apps' | 'notifications';
+
+export interface HeaderActionsProps {
+  actions?: 1 | 2 | 3 | 4 | 5;
+  notifications?: number;
+  onAction?: (action: HeaderAction) => void;
+}
+
+const actionOrder = {
+  5:['sync','academy','support','apps','notifications'],
+  4:['sync','support','apps','notifications'],
+  3:['sync','apps','notifications'],
+  2:['apps','notifications'],
+  1:['notifications'],
+} as const;
+const glyphs = {
+  sync:[ArrowsCounterClockwiseIcon,'Sincronizar'],
+  academy:[GraduationCapIcon,'Academia'],
+  support:[HeadsetIcon,'Soporte'],
+  apps:[AppWindowIcon,'Aplicaciones'],
+  notifications:[BellIcon,'Notificaciones'],
+} as const;
+```
+
+## Defaults y eventos
+
+Las firmas siguientes se extraen de las funciones, incluidos sus valores por defecto. Una prop sin asignación `=` es obligatoria o permanece undefined según su tipo; no se rellena con reglas de negocio.
+
+```tsx
+HeaderActions: {actions=5,notifications=1,onAction}:HeaderActionsProps
+```
+
+Props `on…` son callbacks locales. No atribuyen autorización, carga, guardado ni resultados de negocio.
+
+## Composición y Slots
+
+P-SLOTS: **NOT_APPLICABLE**. Cinco conjuntos fijos por variante. ReactNode/listas tipadas son la traducción web de las regiones, no evidencia de Slots Figma. El anfitrión conserva el orden y los IDs de listas; las cantidades de las demos no son límites de producto.
+
+## Estilos y Next.js
+
+Importar [styles.css](../../src/styles.css) desde el layout. Consultar el manifiesto generado y los contratos vigentes para roles, modos y aliases.
+
+Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos serializables pueden venir de un Server Component; crear callbacks en una frontera cliente. No enviar funciones desde el servidor. No se requiere backend para el catálogo ni para componer con fixtures.
+
+## Fuentes y límites
+
+- [header-actions.contract.v1.0.0.md](../../../../specs/components/header-actions.contract.v1.0.0.md) · SHA-256 `78401d643bb90f88b3ed67fd73a0c9be2bf8d132da626bc7c773dd886c015ec5`.
+
+Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
+
+## Verificación
+
+`pnpm verify` comprueba generación/cobertura, TypeScript, pruebas y build estático. `pnpm test:browser` valida los recorridos locales. [Evidencia de QA](../../../../qa/implementations/header-chain.v1.0.0.review.md) identifica alcance, resultados y límites; una demo visible por sí sola no es un PASS visual.

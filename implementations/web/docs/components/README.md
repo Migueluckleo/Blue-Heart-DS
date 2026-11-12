@@ -1,0 +1,43 @@
+# Componentes web
+
+Índice generado. Cada ficha contiene API, ejemplo ejecutable, Slots, fuentes y límites.
+
+- [App Shell](app-shell.md) · APP-SHELL-001
+- [Avatar](avatar.md) · AVATAR-001
+- [Avatar group](avatar-group.md) · AVATAR-GROUP-001
+- [Badge](badge.md) · BADGE-001
+- [Breadcrumb](breadcrumb.md) · BREADCRUMB-001
+- [Breadcrumb item](breadcrumb-item.md) · BREADCRUMB-ITEM-001
+- [Buttons](buttons.md) · BUTTON-001
+- [Checkbox](checkbox.md) · CHECKBOX-001
+- [Chip](chip.md) · CHIP-001
+- [Company selector](company-selector.md) · COMPANY-SELECTOR-001
+- [Dot](dot.md) · DOT-001
+- [Dropdown item](dropdown-item.md) · DROPDOWN-ITEM-001
+- [Dropdown menu](dropdown-menu.md) · DROPDOWN-MENU-001
+- [File Upload](file-upload.md) · FILE-UPLOAD-001
+- [Floating Actions](floating-actions.md) · FLOATING-ACTIONS-001
+- [Header](header.md) · HEADER-001
+- [Header actions](header-actions.md) · HEADER-ACTIONS-001
+- [Icon Button](icon-button.md) · ICON-BUTTON-001
+- [Inline Notification](inline-notification.md) · INLINE-NOTIFICATION-001
+- [Input](input.md) · INPUT-001
+- [Linear Progress Bar](linear-progress.md) · LINEAR-PROGRESS-001
+- [Loader](loader.md) · LOADER-001
+- [Menu item](menu-item.md) · MENU-ITEM-001
+- [Pagination](pagination.md) · PAGINATION-001
+- [Pagination item](pagination-item.md) · PAGINATION-ITEM-001
+- [Radio](radio.md) · RADIO-001
+- [Radio group](radio-group.md) · RADIO-GROUP-001
+- [Search](search.md) · SEARCH-001
+- [Section Header](section-header.md) · SECTION-HEADER-001
+- [Sidebar](sidebar.md) · SIDEBAR-001
+- [Tab](tab.md) · TAB-001
+- [Table](table.md) · TABLE-001
+- [Table cell](table-cell.md) · TABLE-CELL-001
+- [Tabs](tabs.md) · TABS-001
+- [Text Area](text-area.md) · TEXT-AREA-001
+- [Toggle](toggle.md) · TOGGLE-001
+- [Tooltip](tooltip.md) · TOOLTIP-001
+- [Top bar](top-bar.md) · TOP-BAR-001
+- [User selector](user-selector.md) · USER-SELECTOR-001

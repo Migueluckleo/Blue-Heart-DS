@@ -1,0 +1,129 @@
+{
+  "fileKey": "yZsIpXywybsPDytjolwcP4",
+  "pageId": "128:2",
+  "setId": "129:44",
+  "createdNodeIds": [
+    "129:160",
+    "129:161",
+    "129:162",
+    "129:163",
+    "129:172",
+    "129:173",
+    "129:175",
+    "129:176",
+    "129:178",
+    "129:179",
+    "129:184",
+    "129:185"
+  ],
+  "mutatedNodeIds": [
+    "128:2",
+    "129:44"
+  ],
+  "nodes": {
+    "826:380": "129:160",
+    "826:381": "129:161",
+    "826:382": "129:162",
+    "826:383": "129:163",
+    "826:410": "129:172",
+    "826:411": "129:173",
+    "826:413": "129:175",
+    "826:414": "129:176",
+    "826:416": "129:178",
+    "826:417": "129:179",
+    "826:422": "129:184",
+    "826:423": "129:185"
+  },
+  "textStyles": {
+    "826:413": "S:35cc2fd1b0e426e37ebc707527a461aa2576ac9b,"
+  },
+  "styles": {
+    "S:08768ecf0ffa465f528af0fcc8ea45e7dab9ac37,": "S:35cc2fd1b0e426e37ebc707527a461aa2576ac9b,",
+    "S:4cc046988e16a7ea9a8839fee650c002cf592ce5,": "S:fab324fc7a9fd6b7cf22be0d3f4a3df122cf1f3c,"
+  },
+  "effectStyles": {},
+  "variants": [
+    {
+      "id": "129:160",
+      "name": "item=concept, type=action, state=hover"
+    },
+    {
+      "id": "129:172",
+      "name": "item=concept, type=link, state=focus"
+    },
+    {
+      "id": "129:178",
+      "name": "item=concept, type=checkbox, state=focus"
+    },
+    {
+      "id": "129:184",
+      "name": "item=header, type=checkbox, state=focus"
+    }
+  ],
+  "properties": {
+    "Show right icon#129:0": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Show left icon#129:5": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Show avatar#129:10": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Label#129:15": {
+      "type": "TEXT",
+      "defaultValue": "Escribe información "
+    },
+    "Show vertical divider#129:20": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Show horizontal borders#129:25": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "Left icon#129:30": {
+      "type": "INSTANCE_SWAP",
+      "defaultValue": "54:79",
+      "preferredValues": []
+    },
+    "Right icon#129:35": {
+      "type": "INSTANCE_SWAP",
+      "defaultValue": "54:79",
+      "preferredValues": []
+    },
+    "item": {
+      "type": "VARIANT",
+      "defaultValue": "concept",
+      "variantOptions": [
+        "concept",
+        "header"
+      ]
+    },
+    "type": {
+      "type": "VARIANT",
+      "defaultValue": "link",
+      "variantOptions": [
+        "link",
+        "checkbox",
+        "toggle",
+        "badge",
+        "action"
+      ]
+    },
+    "state": {
+      "type": "VARIANT",
+      "defaultValue": "default",
+      "variantOptions": [
+        "default",
+        "selected",
+        "hover",
+        "focus"
+      ]
+    }
+  },
+  "setName": "Table cell"
+}

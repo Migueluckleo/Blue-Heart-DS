@@ -1,0 +1,451 @@
+---
+{
+  "schema_version": 1,
+  "id": "SECTION-HEADER-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-047"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-REQUEST",
+      "path": "evidence/authorization/section-header-request.json",
+      "sha256": "7d154f58cf419e2264c1dc6b2344e787a1c1031636436bfbe3daca7015e32ae3"
+    },
+    {
+      "id": "SRC-NODES",
+      "path": "evidence/section-header-pilot/source/nodes.json",
+      "sha256": "6615d8119215e841f37e51f07d11c307a2726e2d208bd3c9d8faa92039015cc4"
+    },
+    {
+      "id": "SRC-TREE",
+      "path": "evidence/section-header-pilot/source/tree.json",
+      "sha256": "e151a811dd7218ae0ee6b87ec1bb54c3ebc201e80efabf391a2b7710d74c7081"
+    },
+    {
+      "id": "SRC-CONTRAST",
+      "path": "evidence/section-header-pilot/source/contrast.json",
+      "sha256": "8a99e7edc7aeac77c96668f0491e2e9da015e6a8943d58c0835fc61c9d320dd8"
+    },
+    {
+      "id": "SRC-PLAN",
+      "path": "evidence/section-header-pilot/build-plan.json",
+      "sha256": "9b4eec67d8d600f84d9570ded31d7e9538f2ebb586f779e1e7f0f660c0fd616d"
+    },
+    {
+      "id": "SRC-MINIMUM",
+      "path": "evidence/section-header-pilot/token-minimum.json",
+      "sha256": "13a486971411649dd85ca45dd42cbb408fe5b24942353207f2c79be1f6c7d07a"
+    },
+    {
+      "id": "SRC-REVERSE",
+      "path": "evidence/section-header-pilot/reverse-dependencies.json",
+      "sha256": "bfdde0c2f8a850238d55ed9f6d4ac21c6574b757237fcf3007860f78a53eed6b"
+    },
+    {
+      "id": "SRC-PHOSPHOR",
+      "path": "evidence/section-header-pilot/source/official-phosphor.json",
+      "sha256": "a767f171aa1549d5cba14f85284fe70f44cf50117b50493bfb19ba7eb1bdf89c"
+    },
+    {
+      "id": "SRC-ACTIONS",
+      "path": "evidence/authorization/section-header-general-actions-request.json",
+      "sha256": "fe8109ad82422ab21ac4cb93aa30685bf8cac4da8ed3f770b7b794febf231723"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "section-header.color-bg-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.color-text-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.color-text-metadata-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.radius-container",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.spacing-container-padding",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.spacing-section-gap",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.spacing-heading-gap",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.spacing-content-wrap-gap",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.size-metadata-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.size-content-min-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.size-title-max-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.font-title-style",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.font-body-style",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.font-title-size",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.font-body-size",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "section-header.font-letter-spacing",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "BREADCRUMB-001",
+      "version": "1.0.0",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "BADGE-001",
+      "version": "1.1.0",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "INPUT-001",
+      "version": "2.0.1",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "ICON-BUTTON-001",
+      "version": "1.0.0",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "BUTTON-001",
+      "version": "4.0.1",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-SCOPE",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-NODES",
+        "SRC-TREE",
+        "SRC-CONTRAST",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-REVERSE",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Contrastar REQ-SCOPE con receta, registro nativo y evidencia de Section Header."
+      ]
+    },
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-NODES",
+        "SRC-TREE",
+        "SRC-CONTRAST",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-REVERSE",
+        "SRC-PHOSPHOR",
+        "SRC-ACTIONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ANATOMY con receta, registro nativo y evidencia de Section Header."
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-NODES",
+        "SRC-TREE",
+        "SRC-CONTRAST",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-REVERSE",
+        "SRC-PHOSPHOR",
+        "SRC-ACTIONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API con receta, registro nativo y evidencia de Section Header."
+      ]
+    },
+    {
+      "id": "REQ-SLOTS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-NODES",
+        "SRC-TREE",
+        "SRC-CONTRAST",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-REVERSE",
+        "SRC-PHOSPHOR",
+        "SRC-ACTIONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-SLOTS con receta, registro nativo y evidencia de Section Header."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-NODES",
+        "SRC-TREE",
+        "SRC-CONTRAST",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-REVERSE",
+        "SRC-PHOSPHOR",
+        "SRC-ACTIONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-LAYOUT con receta, registro nativo y evidencia de Section Header."
+      ]
+    },
+    {
+      "id": "REQ-COMPOSITION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-NODES",
+        "SRC-TREE",
+        "SRC-CONTRAST",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-REVERSE",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Contrastar REQ-COMPOSITION con receta, registro nativo y evidencia de Section Header."
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-NODES",
+        "SRC-TREE",
+        "SRC-CONTRAST",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-REVERSE",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TYPOGRAPHY con receta, registro nativo y evidencia de Section Header."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-NODES",
+        "SRC-TREE",
+        "SRC-CONTRAST",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-REVERSE",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS con receta, registro nativo y evidencia de Section Header."
+      ]
+    },
+    {
+      "id": "REQ-CONTRAST",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-NODES",
+        "SRC-TREE",
+        "SRC-CONTRAST",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-REVERSE",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Contrastar REQ-CONTRAST con receta, registro nativo y evidencia de Section Header."
+      ]
+    },
+    {
+      "id": "REQ-HOST",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-NODES",
+        "SRC-TREE",
+        "SRC-CONTRAST",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-REVERSE",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Contrastar REQ-HOST con receta, registro nativo y evidencia de Section Header."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-NODES",
+        "SRC-TREE",
+        "SRC-CONTRAST",
+        "SRC-PLAN",
+        "SRC-MINIMUM",
+        "SRC-REVERSE",
+        "SRC-PHOSPHOR",
+        "SRC-ACTIONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA con receta, registro nativo y evidencia de Section Header."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Root",
+      "Content",
+      "Heading",
+      "Breadcrumb",
+      "Title",
+      "Description",
+      "Metadata Slot",
+      "Main actions",
+      "Inputs Slot",
+      "General actions Slot"
+    ],
+    "composition": "Official versioned instances, with native Metadata, Inputs and General actions Slots.",
+    "accessibility": "Host owns section heading hierarchy, accessible names and keyboard. Update text contrast retained at 4.34:1."
+  }
+}
+---
+# Section Header · 1.0.0
+
+### REQ-SCOPE
+
+Section Header es la cabecera de una sección y se registra en su página propia de Blue Heart DS. El único principal procede de Laboratorio, nodo 17:3406. Mantener separados Section Header y Header global. La raíz de Laboratorio se usa en solo lectura.
+
+### REQ-ANATOMY
+
+Un principal con dos bloques. Content contiene Breadcrumb opcional, título y descripción opcional a la izquierda y metadatos opcionales a la derecha. Main actions contiene dos regiones editables e independientes para configuración y acciones generales. La muestra contiene dos niveles de Breadcrumb con Back, Badge success/small, fecha, cinco Input, Icon Button y Button. La fecha y los textos de muestra son editables y no definen lógica de producto.
+
+### REQ-API
+
+Exponer Title y Description como propiedades TEXT independientes. Show breadcrumbs, Show description, Show metadata y Show actions son BOOLEAN inicialmente activos. El Slot fuente pasa a Metadata. Inputs pasa a un Slot nativo funcional para configuración. General actions se expone como Slot nativo a petición del responsable. Show actions da una función explícita a main configuration, que estaba sin vínculo. Omitir subtitle porque carece de capa y vínculo en Laboratorio. Editar la fecha dentro de Metadata. Los controles hijos se editan con sus propias propiedades y conservan su identidad.
+
+### REQ-SLOTS
+
+Metadata es un Slot nativo vertical de 0..n elementos. Su muestra es Badge y fecha, alineados a la derecha. Inputs es un Slot nativo horizontal de 0..n elementos. Contiene cinco Input oficiales inicialmente con la misma participación FILL. Se admite vacío, inserción, retirada y reordenación desde la instancia. El contenido insertado debe caber en el ancho de su región; los límites nativos no sustituyen el ajuste del host. General actions es un Slot horizontal independiente, de 0..n acciones. Configuración y acción principal son los dos ejemplos iniciales. Desde la instancia se pueden insertar, retirar y reordenar controles oficiales sin alterar Inputs. El consumidor define los controles, el orden y los destinos. El ancho disponible y el contenido de filtros y acciones se comprueban en el host.
+
+### REQ-LAYOUT
+
+El principal inicia con ancho de muestra de 1225 px y alto HUG. Padding 24, radio 16 y separación entre bloques 16. Content usa FILL y wrap, con mínimos de 358 para Content y Heading. Metadata mide 294, con separación vertical 16. Conservar la distribución SPACE_BETWEEN y los gaps de wrap de 32. Heading usa gap 8. El título crece con el texto hasta 554 px mediante un frame con máximo vinculado. Descripción FILL y alto según texto. Main actions conserva la fila y gaps de 16 del origen. General actions usa ancho HUG para que Inputs ocupe el espacio restante. El host ajusta el ancho y reduce la cantidad de Inputs o desactiva la fila en contenedores estrechos. Verificar el caso estrecho del comprobante en vez de inferir un breakpoint universal.
+
+### REQ-COMPOSITION
+
+Consumir Breadcrumb 1.0.0 levels=2 con Back, Badge 1.1.0 success/small sin iconos, Input 2.0.1 empty/large/default con CaretDown y sin Label ni Helper visibles, Icon Button 1.0.0 secondary/large/default sin selección ni contador y Button 4.0.1 primary/large/default sin iconos. Gear usa Phosphor Outline Light del equipo, tamaño y color del Icon Button oficial. Conservar los estilos, interacciones y variables de los hijos. Las referencias inversas del destino quedan en el comprobante; los hijos no dependen de este padre.
+
+### REQ-TYPOGRAPHY
+
+Manrope SemiBold 24 para Title y Manrope Regular 14 para Description y Updated. Dos estilos de texto locales enlazan familia, estilo, tamaño y tracking 0 px, equivalente a 0% de Laboratorio. Conservar interlínea AUTO de la fuente sin crear una medida fija que altere el alto. Descripción y fecha comparten la firma tipográfica. La capa de fecha queda dentro del Slot para que su contenido se pueda reemplazar.
+
+### REQ-TOKENS
+
+Aplicar BH-P07 a los usos de la receta. Se incorporan 17 firmas mínimas en section-header/ de component y tres cadenas de medidas observadas, 294, 358 y 554 px, en primitive y semantic. Conservar las 1140 entradas anteriores y las tres colecciones. Fondo, textos y métricas propias son invariantes en los cuatro modos. El tema de los hijos se hereda del contenedor y se resuelve según su propietario. Guardar aliases, scopes, nombres nativos, nombres CSS e identidades de Figma en sus mapas.
+
+### REQ-CONTRAST
+
+El usuario eligió conservar #64748B sobre #F1F5F9 para Updated. La medición es 4.34:1 frente a 4.5:1 para texto normal. Esta excepción se aplica a la fecha de Section Header. El título y la descripción usan #0F172A. Conservar las limitaciones de los componentes hijos bajo sus contratos.
+
+### REQ-HOST
+
+El principal organiza la sección y conserva las reacciones oficiales de sus hijos. Los destinos del Breadcrumb, apertura de desplegables, cambio de filtros, actualización de la fecha y acciones reales los decide el host. Semántica de encabezados, foco, nombres accesibles, teclado y servicios se resuelven en el consumidor. El alcance de este contrato cubre Figma y documentación.
+
+### REQ-QA
+
+Validar principal, cuatro visibilidades, dos textos y los tres Slots desde instancias, con vacío, orden nuevo, cantidad menor y mayor que la muestra, contenido largo y un ancho reducido. Comprobar bindings y estilos, colores y modo en los cuatro temas, identidades de hijos y el clic o hover de los controles de muestra donde corresponda. Separar evidencia de estructura, reproducción visible, infraestructura y revisión independiente. Proyectar todas las reglas propias con referencias tipadas a los hijos si el cierre transitivo excede el presupuesto.

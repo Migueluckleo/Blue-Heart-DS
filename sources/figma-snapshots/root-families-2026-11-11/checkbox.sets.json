@@ -1,0 +1,117 @@
+{
+  "sets": [
+    {
+      "id": "376:143",
+      "page": "373:36",
+      "name": "Checkbox",
+      "x": 100,
+      "y": 2033,
+      "width": 520,
+      "height": 240,
+      "vars": [
+        [
+          "376:128",
+          "selected=false, state=default"
+        ],
+        [
+          "376:129",
+          "selected=false, state=hover"
+        ],
+        [
+          "376:130",
+          "selected=false, state=focus"
+        ],
+        [
+          "376:131",
+          "selected=false, state=disabled"
+        ],
+        [
+          "376:132",
+          "selected=false, state=error"
+        ],
+        [
+          "376:133",
+          "selected=true, state=default"
+        ],
+        [
+          "376:134",
+          "selected=true, state=hover"
+        ],
+        [
+          "376:135",
+          "selected=true, state=focus"
+        ],
+        [
+          "376:136",
+          "selected=true, state=disabled"
+        ],
+        [
+          "376:137",
+          "selected=true, state=error"
+        ],
+        [
+          "376:138",
+          "selected=indeterminate, state=default"
+        ],
+        [
+          "376:139",
+          "selected=indeterminate, state=hover"
+        ],
+        [
+          "376:140",
+          "selected=indeterminate, state=focus"
+        ],
+        [
+          "376:141",
+          "selected=indeterminate, state=disabled"
+        ],
+        [
+          "376:142",
+          "selected=indeterminate, state=error"
+        ]
+      ],
+      "props": {
+        "Label#376:64": {
+          "type": "TEXT",
+          "defaultValue": "Label"
+        },
+        "Show label#376:80": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "selected": {
+          "type": "VARIANT",
+          "defaultValue": "false",
+          "variantOptions": [
+            "false",
+            "true",
+            "indeterminate"
+          ]
+        },
+        "state": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "focus",
+            "disabled",
+            "error"
+          ]
+        }
+      },
+      "all": [
+        [
+          "376:143",
+          "Checkbox",
+          "COMPONENT_SET"
+        ],
+        [
+          "382:12",
+          "Checkbox · guía y prueba interactiva",
+          "FRAME"
+        ]
+      ]
+    }
+  ]
+}

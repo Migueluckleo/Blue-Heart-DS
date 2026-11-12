@@ -1,0 +1,666 @@
+{
+  "sets": [
+    {
+      "id": "429:62",
+      "key": "95a658591a1125b7404ebfd30ca9181b263b9e8c",
+      "type": "COMPONENT_SET",
+      "page": "428:48",
+      "pageName": "Chips",
+      "name": "Chip/large",
+      "x": 100,
+      "y": 4500,
+      "width": 1330,
+      "height": 250,
+      "props": {
+        "Label#429:88": {
+          "type": "TEXT",
+          "defaultValue": "Label"
+        },
+        "Counter#429:99": {
+          "type": "TEXT",
+          "defaultValue": "12"
+        },
+        "Show left icon#429:110": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show right icon#429:121": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show counter#429:132": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show remove#429:143": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Left icon#429:154": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "28:501",
+          "preferredValues": []
+        },
+        "Right icon#429:165": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "28:501",
+          "preferredValues": []
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "large",
+          "variantOptions": [
+            "large"
+          ]
+        },
+        "selected": {
+          "type": "VARIANT",
+          "defaultValue": "false",
+          "variantOptions": [
+            "false",
+            "true"
+          ]
+        },
+        "state": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "pressed",
+            "focus",
+            "disabled"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "429:52",
+          "size=large, selected=false, state=default"
+        ],
+        [
+          "429:53",
+          "size=large, selected=false, state=hover"
+        ],
+        [
+          "429:54",
+          "size=large, selected=false, state=pressed"
+        ],
+        [
+          "429:55",
+          "size=large, selected=false, state=focus"
+        ],
+        [
+          "429:56",
+          "size=large, selected=false, state=disabled"
+        ],
+        [
+          "429:57",
+          "size=large, selected=true, state=default"
+        ],
+        [
+          "429:58",
+          "size=large, selected=true, state=hover"
+        ],
+        [
+          "429:59",
+          "size=large, selected=true, state=pressed"
+        ],
+        [
+          "429:60",
+          "size=large, selected=true, state=focus"
+        ],
+        [
+          "429:61",
+          "size=large, selected=true, state=disabled"
+        ]
+      ],
+      "frames": [
+        [
+          "434:2",
+          "Chips · guía de uso"
+        ],
+        [
+          "434:791",
+          "Chip · selección única · 0"
+        ],
+        [
+          "434:816",
+          "Chip · selección única · 1"
+        ],
+        [
+          "434:841",
+          "Chip · selección múltiple · 0"
+        ],
+        [
+          "434:877",
+          "Chip · selección múltiple · 1"
+        ],
+        [
+          "434:913",
+          "Chip · selección múltiple · 2"
+        ],
+        [
+          "434:949",
+          "Chip · selección múltiple · 3"
+        ],
+        [
+          "434:985",
+          "Chip · removible · antes"
+        ],
+        [
+          "434:999",
+          "Chip · removible · después"
+        ]
+      ],
+      "description": "CHIP-001@1.0.0 · large · selected false/true y cinco estados. Filtrado y selección controlados por el host. Todos los colores invariantes; Phosphor Light sigue Label. Contador y Remove opcionales. Pressed/focus son estados visuales; no acredita teclado/ARIA."
+    },
+    {
+      "id": "429:169",
+      "key": "1931e85e4e5c542977763e198cb7630ee3a27456",
+      "type": "COMPONENT_SET",
+      "page": "428:48",
+      "pageName": "Chips",
+      "name": "Chip/medium",
+      "x": 100,
+      "y": 4820,
+      "width": 1330,
+      "height": 250,
+      "props": {
+        "Label#429:176": {
+          "type": "TEXT",
+          "defaultValue": "Label"
+        },
+        "Counter#429:187": {
+          "type": "TEXT",
+          "defaultValue": "12"
+        },
+        "Show left icon#429:198": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show right icon#429:209": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show counter#429:220": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show remove#429:231": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Left icon#429:242": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "28:501",
+          "preferredValues": []
+        },
+        "Right icon#429:253": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "28:501",
+          "preferredValues": []
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "medium",
+          "variantOptions": [
+            "medium"
+          ]
+        },
+        "selected": {
+          "type": "VARIANT",
+          "defaultValue": "false",
+          "variantOptions": [
+            "false",
+            "true"
+          ]
+        },
+        "state": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "pressed",
+            "focus",
+            "disabled"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "429:159",
+          "size=medium, selected=false, state=default"
+        ],
+        [
+          "429:160",
+          "size=medium, selected=false, state=hover"
+        ],
+        [
+          "429:161",
+          "size=medium, selected=false, state=pressed"
+        ],
+        [
+          "429:162",
+          "size=medium, selected=false, state=focus"
+        ],
+        [
+          "429:163",
+          "size=medium, selected=false, state=disabled"
+        ],
+        [
+          "429:164",
+          "size=medium, selected=true, state=default"
+        ],
+        [
+          "429:165",
+          "size=medium, selected=true, state=hover"
+        ],
+        [
+          "429:166",
+          "size=medium, selected=true, state=pressed"
+        ],
+        [
+          "429:167",
+          "size=medium, selected=true, state=focus"
+        ],
+        [
+          "429:168",
+          "size=medium, selected=true, state=disabled"
+        ]
+      ],
+      "frames": [
+        [
+          "434:2",
+          "Chips · guía de uso"
+        ],
+        [
+          "434:791",
+          "Chip · selección única · 0"
+        ],
+        [
+          "434:816",
+          "Chip · selección única · 1"
+        ],
+        [
+          "434:841",
+          "Chip · selección múltiple · 0"
+        ],
+        [
+          "434:877",
+          "Chip · selección múltiple · 1"
+        ],
+        [
+          "434:913",
+          "Chip · selección múltiple · 2"
+        ],
+        [
+          "434:949",
+          "Chip · selección múltiple · 3"
+        ],
+        [
+          "434:985",
+          "Chip · removible · antes"
+        ],
+        [
+          "434:999",
+          "Chip · removible · después"
+        ]
+      ],
+      "description": "CHIP-001@1.0.0 · medium · selected false/true y cinco estados. Filtrado y selección controlados por el host. Todos los colores invariantes; Phosphor Light sigue Label. Contador y Remove opcionales. Pressed/focus son estados visuales; no acredita teclado/ARIA."
+    },
+    {
+      "id": "429:276",
+      "key": "0ddc178c7e386cee33fd77df305ea3201eb319bc",
+      "type": "COMPONENT_SET",
+      "page": "428:48",
+      "pageName": "Chips",
+      "name": "Chip/small",
+      "x": 100,
+      "y": 5140,
+      "width": 1330,
+      "height": 250,
+      "props": {
+        "Label#429:264": {
+          "type": "TEXT",
+          "defaultValue": "Label"
+        },
+        "Counter#429:275": {
+          "type": "TEXT",
+          "defaultValue": "12"
+        },
+        "Show left icon#429:286": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show right icon#429:297": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show counter#429:308": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show remove#429:319": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Left icon#429:330": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "28:501",
+          "preferredValues": []
+        },
+        "Right icon#429:341": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "28:501",
+          "preferredValues": []
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "small",
+          "variantOptions": [
+            "small"
+          ]
+        },
+        "selected": {
+          "type": "VARIANT",
+          "defaultValue": "false",
+          "variantOptions": [
+            "false",
+            "true"
+          ]
+        },
+        "state": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "pressed",
+            "focus",
+            "disabled"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "429:266",
+          "size=small, selected=false, state=default"
+        ],
+        [
+          "429:267",
+          "size=small, selected=false, state=hover"
+        ],
+        [
+          "429:268",
+          "size=small, selected=false, state=pressed"
+        ],
+        [
+          "429:269",
+          "size=small, selected=false, state=focus"
+        ],
+        [
+          "429:270",
+          "size=small, selected=false, state=disabled"
+        ],
+        [
+          "429:271",
+          "size=small, selected=true, state=default"
+        ],
+        [
+          "429:272",
+          "size=small, selected=true, state=hover"
+        ],
+        [
+          "429:273",
+          "size=small, selected=true, state=pressed"
+        ],
+        [
+          "429:274",
+          "size=small, selected=true, state=focus"
+        ],
+        [
+          "429:275",
+          "size=small, selected=true, state=disabled"
+        ]
+      ],
+      "frames": [
+        [
+          "434:2",
+          "Chips · guía de uso"
+        ],
+        [
+          "434:791",
+          "Chip · selección única · 0"
+        ],
+        [
+          "434:816",
+          "Chip · selección única · 1"
+        ],
+        [
+          "434:841",
+          "Chip · selección múltiple · 0"
+        ],
+        [
+          "434:877",
+          "Chip · selección múltiple · 1"
+        ],
+        [
+          "434:913",
+          "Chip · selección múltiple · 2"
+        ],
+        [
+          "434:949",
+          "Chip · selección múltiple · 3"
+        ],
+        [
+          "434:985",
+          "Chip · removible · antes"
+        ],
+        [
+          "434:999",
+          "Chip · removible · después"
+        ]
+      ],
+      "description": "CHIP-001@1.0.0 · small · selected false/true y cinco estados. Filtrado y selección controlados por el host. Todos los colores invariantes; Phosphor Light sigue Label. Contador y Remove opcionales. Pressed/focus son estados visuales; no acredita teclado/ARIA."
+    },
+    {
+      "id": "429:383",
+      "key": "4c10112782be0724ceacf0427f41ddfd07c1ce50",
+      "type": "COMPONENT_SET",
+      "page": "428:48",
+      "pageName": "Chips",
+      "name": "Chip/extra-small",
+      "x": 100,
+      "y": 5460,
+      "width": 1330,
+      "height": 250,
+      "props": {
+        "Label#429:352": {
+          "type": "TEXT",
+          "defaultValue": "Label"
+        },
+        "Counter#429:363": {
+          "type": "TEXT",
+          "defaultValue": "12"
+        },
+        "Show left icon#429:374": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show right icon#429:385": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show counter#429:396": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show remove#429:407": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Left icon#429:418": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "28:501",
+          "preferredValues": []
+        },
+        "Right icon#429:429": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "28:501",
+          "preferredValues": []
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "extra-small",
+          "variantOptions": [
+            "extra-small"
+          ]
+        },
+        "selected": {
+          "type": "VARIANT",
+          "defaultValue": "false",
+          "variantOptions": [
+            "false",
+            "true"
+          ]
+        },
+        "state": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "pressed",
+            "focus",
+            "disabled"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "429:373",
+          "size=extra-small, selected=false, state=default"
+        ],
+        [
+          "429:374",
+          "size=extra-small, selected=false, state=hover"
+        ],
+        [
+          "429:375",
+          "size=extra-small, selected=false, state=pressed"
+        ],
+        [
+          "429:376",
+          "size=extra-small, selected=false, state=focus"
+        ],
+        [
+          "429:377",
+          "size=extra-small, selected=false, state=disabled"
+        ],
+        [
+          "429:378",
+          "size=extra-small, selected=true, state=default"
+        ],
+        [
+          "429:379",
+          "size=extra-small, selected=true, state=hover"
+        ],
+        [
+          "429:380",
+          "size=extra-small, selected=true, state=pressed"
+        ],
+        [
+          "429:381",
+          "size=extra-small, selected=true, state=focus"
+        ],
+        [
+          "429:382",
+          "size=extra-small, selected=true, state=disabled"
+        ]
+      ],
+      "frames": [
+        [
+          "434:2",
+          "Chips · guía de uso"
+        ],
+        [
+          "434:791",
+          "Chip · selección única · 0"
+        ],
+        [
+          "434:816",
+          "Chip · selección única · 1"
+        ],
+        [
+          "434:841",
+          "Chip · selección múltiple · 0"
+        ],
+        [
+          "434:877",
+          "Chip · selección múltiple · 1"
+        ],
+        [
+          "434:913",
+          "Chip · selección múltiple · 2"
+        ],
+        [
+          "434:949",
+          "Chip · selección múltiple · 3"
+        ],
+        [
+          "434:985",
+          "Chip · removible · antes"
+        ],
+        [
+          "434:999",
+          "Chip · removible · después"
+        ]
+      ],
+      "description": "CHIP-001@1.0.0 · extra-small · selected false/true y cinco estados. Filtrado y selección controlados por el host. Todos los colores invariantes; Phosphor Light sigue Label. Contador y Remove opcionales. Pressed/focus son estados visuales; no acredita teclado/ARIA."
+    }
+  ],
+  "swaps": {
+    "Left icon#429:154": {
+      "id": "28:501",
+      "key": "46d251bb4099700c5852180f2370d265e5166432",
+      "remote": true
+    },
+    "Right icon#429:165": {
+      "id": "28:501",
+      "key": "46d251bb4099700c5852180f2370d265e5166432",
+      "remote": true
+    },
+    "Left icon#429:242": {
+      "id": "28:501",
+      "key": "46d251bb4099700c5852180f2370d265e5166432",
+      "remote": true
+    },
+    "Right icon#429:253": {
+      "id": "28:501",
+      "key": "46d251bb4099700c5852180f2370d265e5166432",
+      "remote": true
+    },
+    "Left icon#429:330": {
+      "id": "28:501",
+      "key": "46d251bb4099700c5852180f2370d265e5166432",
+      "remote": true
+    },
+    "Right icon#429:341": {
+      "id": "28:501",
+      "key": "46d251bb4099700c5852180f2370d265e5166432",
+      "remote": true
+    },
+    "Left icon#429:418": {
+      "id": "28:501",
+      "key": "46d251bb4099700c5852180f2370d265e5166432",
+      "remote": true
+    },
+    "Right icon#429:429": {
+      "id": "28:501",
+      "key": "46d251bb4099700c5852180f2370d265e5166432",
+      "remote": true
+    }
+  }
+}

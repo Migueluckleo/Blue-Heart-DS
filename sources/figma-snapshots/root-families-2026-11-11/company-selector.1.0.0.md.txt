@@ -1,0 +1,453 @@
+---
+{
+  "schema_version": 1,
+  "id": "COMPANY-SELECTOR-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-034"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/header-request.json",
+      "sha256": "162763378881378a8cab402d9b057a03c094823b30aedae7907190721bade59f"
+    },
+    {
+      "id": "SRC-TEMP",
+      "path": "evidence/authorization/header-temporary-icon-button-decision.json",
+      "sha256": "72e70eb58d3421008d4883ebbd6ed1e49536f9dc82c98f7a00eca23db23a49cd"
+    },
+    {
+      "id": "SRC-WIDTH",
+      "path": "evidence/authorization/header-minimum-width-decision.json",
+      "sha256": "9983111dd79d29186a635509aca87b7dd636a5535d9514bbd40a1aeeb469e7ae"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/header-pilot/source/capture-manifest.json",
+      "sha256": "47f0978433f3a56afdba9cc8dfe4aec1cd767bf4431f4c77ef6945eff2f211f4"
+    },
+    {
+      "id": "SRC-DEFS",
+      "path": "evidence/header-pilot/source/definitions.json",
+      "sha256": "9d99bd81ba4d9df2051fc6e7cdc1e76045180dcff1815d769f22ce2b8d78f127"
+    },
+    {
+      "id": "SRC-ACTIVE",
+      "path": "evidence/header-pilot/source/active-definitions.json",
+      "sha256": "9725a16a439c5de77bcdf1ccc58a7fcac8e530c2a86418993a8d46979ff95d11"
+    },
+    {
+      "id": "SRC-VARS",
+      "path": "evidence/header-pilot/source/variables.json",
+      "sha256": "44ccb2c36a99111c6f4c29092d7a6f7af5af93ad3bc87d555eb921209397ecf8"
+    },
+    {
+      "id": "SRC-ICONS",
+      "path": "protocols/06-PHOSPHOR-ICONS.md",
+      "sha256": "aad27541d6cb8b9deadeac6ad966a0fe77d2203ce0989525b6c8c2028d5c0f68"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "company-selector.spacing-compact",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.spacing-section",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.spacing-content",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.size-min-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.size-max-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.color-bg-control-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.color-stroke-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.radius-control",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.border-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.size-control-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.color-bg-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.radius-tile",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.size-tile",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.size-icon-20",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.color-icon-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.color-text-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.font-semibold",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.font-size-14",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.font-line-height-20",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.font-letter-spacing",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.color-text-secondary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.font-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.font-size-12",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.font-line-height-16",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.color-bg-control-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.color-stroke-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.radius-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.border-focus-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "company-selector.color-stroke-open",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-LAYOUT con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-FOCUS",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-FOCUS con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TYPOGRAPHY con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-ICON-PARITY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ICON-PARITY con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-FUNCTION",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-FUNCTION con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-THEME con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-BOUNDARIES",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-BOUNDARIES con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "8983:832 company-selector"
+    ],
+    "composition": "source-defined-composition-with-official-dependencies",
+    "accessibility": "host-intent-not-implemented"
+  }
+}
+---
+
+# company-selector1.0.0
+
+Contrato normativo de diseño y función; observaciones y recetas permanecen referenciales.
+
+### REQ-API
+
+Cuatro variantes state=default/hover/focus/open; Company name TEXT Empresa S.A. de C.V. y RFC TEXT CAC840428RH1. No añadir error, disabled, búsqueda ni menú a la anatomía. El consumidor controla datos, permisos y apertura.
+
+### REQ-LAYOUT
+
+Ancho inicial280, mínimo240, máximo320 y alto48. Padding8 izquierda/12 derecha,4 vertical y gap12; Icon tile32, iconos20, Company info FILL/HUG con gap0. Company name se trunca ENDING a una línea conservando la cadena completa; RFC es texto completo sin prefijo visual ni elipsis. Probar identificadores fiscales de muestra largos en anchos permitidos; si el contenido válido no cabe, el host requiere otra composición en vez de recortar silenciosamente.
+
+### REQ-FOCUS
+
+Radio8, tile4, borde1; focus conserva anillo absoluto a−4 con bounds del control+8, radio12 y borde2. En open el caret rota hacia arriba. Preservar transforms, constraints y las cuatro geometrías; no aplanar glyphs ni convertir la rotación en otro asset.
+
+### REQ-TYPOGRAPHY
+
+Company name Manrope SemiBold14/20; RFC Regular12/16; tracking0 y dos estilos vinculados, aplicados al finalizar. Mantener el texto editable por las propiedades correspondientes y probar razón social larga sin recortarla en el dato.
+
+### REQ-ICON-PARITY
+
+Por BH-P06, Buildings y Caret siguen exactamente los aliases TEXT_FILL de Company name en los cuatro estados/modos, conservando SHAPE_FILL para vectores. La superficie temática del tile sigue siendo independiente. La corrección de paridad reemplaza los colores de glyph fuente; no cambia el semántico, la geometría ni la marca del logo.
+
+### REQ-FUNCTION
+
+Muestra empresa activa e identificador fiscal y solicita al host abrir su lista autorizada. Open es el estado visual de esa apertura, no una lista implementada. El host mantiene identidad completa, cambio de contexto y confirmación por datos sin guardar. La intención específica del selector usa listbox; no adoptar la mención genérica menu del Header como ARIA implementada.
+
+### REQ-TOKENS
+
+Treinta y una firmas propias bajo header/company/ en component,206 bindings candidatos. Fondo del tile y control open comparten la firma primary-default cuando sus aliases coinciden; no crear otra variable con nombre diferente para ese mismo vector. Reutilizar Phosphor, sin dependencia de Input o iconos locales.
+
+### REQ-THEME
+
+Aplicar el vector fuente Contable/Administrativo/Servicios/Personas desde component. Conservar aliases completos de la receta y clasificar roles invariantes/temáticos; no aplicar excepciones de otras familias ni duplicar semánticos cromáticos.
+
+### REQ-BOUNDARIES
+
+Figma fuente y proyecto anterior permanecen en solo lectura. Este contrato habilita Figma y documentación, sin implementar React, Next.js, Tailwind, backend, ARIA, teclado ni datos reales. La prosa de accesibilidad es intención para el host, no certificación WCAG.
+
+### REQ-QA
+
+Verificar matriz real, propiedades/exposición, aliases/scopes/WEB en cuatro modos, estilos aplicados, bindings, edición/visibilidad, geometría, dependencia oficial e identidad Phosphor. Tolerancia geométrica0.05px y canal0.000001. Conservar adaptaciones registradas; no atribuir QA de diseño a pruebas de infraestructura. Consultar BH-P04/BH-P08 para evidencias, versiones y PDF por envío.

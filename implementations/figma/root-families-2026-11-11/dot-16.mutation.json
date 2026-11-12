@@ -1,0 +1,96 @@
+{
+  "fileKey": "yZsIpXywybsPDytjolwcP4",
+  "pageId": "32:26",
+  "setId": "32:33",
+  "createdNodeIds": [
+    "32:50",
+    "32:51",
+    "32:52",
+    "32:53",
+    "32:54",
+    "32:55",
+    "32:56",
+    "32:57"
+  ],
+  "mutatedNodeIds": [
+    "32:26",
+    "32:33"
+  ],
+  "nodes": {
+    "912:45": "32:50",
+    "912:46": "32:51",
+    "912:47": "32:52",
+    "912:48": "32:53",
+    "912:49": "32:54",
+    "912:50": "32:55",
+    "912:51": "32:56",
+    "912:52": "32:57"
+  },
+  "textStyles": {
+    "912:46": "S:bd163b7da9eb30937eee922045799f56c1427460,",
+    "912:48": "S:8e7ce39f62bb67591fcd35208dabad9007ce4791,",
+    "912:50": "S:bd163b7da9eb30937eee922045799f56c1427460,",
+    "912:52": "S:8e7ce39f62bb67591fcd35208dabad9007ce4791,"
+  },
+  "styles": {
+    "S:c7b993aaf2886c49480873fee83c9f00cc83e324,": "S:bd163b7da9eb30937eee922045799f56c1427460,",
+    "S:69e9b2d42eeae84931453a60f63d937351f3d86d,": "S:8e7ce39f62bb67591fcd35208dabad9007ce4791,"
+  },
+  "variants": [
+    {
+      "id": "32:50",
+      "name": "type=count, size=large, color=brand"
+    },
+    {
+      "id": "32:52",
+      "name": "type=count, size=medium, color=brand"
+    },
+    {
+      "id": "32:54",
+      "name": "type=count-expand, size=large, color=brand"
+    },
+    {
+      "id": "32:56",
+      "name": "type=count-expand, size=medium, color=brand"
+    }
+  ],
+  "properties": {
+    "Count#32:0": {
+      "type": "TEXT",
+      "defaultValue": "1"
+    },
+    "Max count#32:5": {
+      "type": "TEXT",
+      "defaultValue": "99+"
+    },
+    "type": {
+      "type": "VARIANT",
+      "defaultValue": "active",
+      "variantOptions": [
+        "active",
+        "busy",
+        "inactive",
+        "notification",
+        "count",
+        "count-expand"
+      ]
+    },
+    "size": {
+      "type": "VARIANT",
+      "defaultValue": "large",
+      "variantOptions": [
+        "large",
+        "medium",
+        "small"
+      ]
+    },
+    "color": {
+      "type": "VARIANT",
+      "defaultValue": "default",
+      "variantOptions": [
+        "default",
+        "brand"
+      ]
+    }
+  }
+}

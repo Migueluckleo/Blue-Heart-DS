@@ -1,0 +1,2602 @@
+{
+  "family": "breadcrumb",
+  "sourceFileKey": "98xEw6sK8FRVNEhopM5SSz",
+  "sourcePageId": "358:30",
+  "sourceNorm": "sources/figma-snapshots/root-families-2026-11-11/breadcrumb.1.0.0.md.txt",
+  "sourceNormSha256": "2a7c495b4435a6ad71dd47688335ac91b7810d2767985e56cbfd4009e67e1338",
+  "sourceParts": {
+    "sources/figma-snapshots/root-families-2026-11-11/breadcrumb-0.packed.json": "afb561d7248a256b772cad1b0c728518b1e9afdb3f9e9a9cffdf0be8a55a4473",
+    "sources/figma-snapshots/root-families-2026-11-11/breadcrumb.sets.json": "a6852f7dd72e0684881cdeb577b6023f1617e8af28ea98e3f8208ac957c28adf"
+  },
+  "styles": {},
+  "tokens": {
+    "VariableID:358:23": {
+      "name": "breadcrumb/spacing/back-gap",
+      "targetId": "VariableID:8:376",
+      "css": "--breadcrumb-spacing-back-gap",
+      "type": "FLOAT"
+    },
+    "VariableID:358:22": {
+      "name": "breadcrumb/spacing/container-none",
+      "targetId": "VariableID:8:375",
+      "css": "--breadcrumb-spacing-container-none",
+      "type": "FLOAT"
+    },
+    "VariableID:358:24": {
+      "name": "breadcrumb/size/back",
+      "targetId": "VariableID:8:395",
+      "css": "--breadcrumb-size-back",
+      "type": "FLOAT"
+    },
+    "VariableID:358:26": {
+      "name": "breadcrumb/color/icon/back-default",
+      "targetId": "VariableID:8:386",
+      "css": "--breadcrumb-color-icon-back-default",
+      "type": "COLOR"
+    },
+    "VariableID:358:25": {
+      "name": "breadcrumb/spacing/container-gap",
+      "targetId": "VariableID:8:377",
+      "css": "--breadcrumb-spacing-container-gap",
+      "type": "FLOAT"
+    },
+    "VariableID:358:3": {
+      "name": "breadcrumb/spacing/item-gap",
+      "targetId": "VariableID:8:374",
+      "css": "--breadcrumb-item-spacing-item-gap",
+      "type": "FLOAT"
+    },
+    "VariableID:358:2": {
+      "name": "breadcrumb/spacing/item-none",
+      "targetId": "VariableID:8:373",
+      "css": "--breadcrumb-item-spacing-item-none",
+      "type": "FLOAT"
+    }
+  },
+  "sets": [
+    {
+      "id": "359:146",
+      "page": "358:30",
+      "pageName": "Breadcrumbs",
+      "name": "Breadcrumb",
+      "x": 1039,
+      "y": 1708,
+      "width": 491,
+      "height": 420,
+      "props": {
+        "Show back#359:14": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "levels": {
+          "type": "VARIANT",
+          "defaultValue": "2",
+          "variantOptions": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "collapsed"
+          ]
+        }
+      },
+      "all": [
+        [
+          "359:63",
+          "Breadcrumb item",
+          "COMPONENT_SET"
+        ],
+        [
+          "359:146",
+          "Breadcrumb",
+          "COMPONENT_SET"
+        ],
+        [
+          "363:67",
+          "Breadcrumb · guía de uso",
+          "FRAME"
+        ]
+      ],
+      "variants": [
+        {
+          "id": "359:64",
+          "name": "levels=2",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 0,
+          "width": 223,
+          "height": 20,
+          "rotation": 0,
+          "visible": true,
+          "layoutMode": "HORIZONTAL",
+          "layoutPositioning": "AUTO",
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "minWidth": null,
+          "maxWidth": null,
+          "minHeight": null,
+          "maxHeight": null,
+          "primaryAxisSizingMode": "AUTO",
+          "counterAxisSizingMode": "AUTO",
+          "primaryAxisAlignItems": "MIN",
+          "counterAxisAlignItems": "CENTER",
+          "paddingTop": 0,
+          "paddingRight": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "itemSpacing": 8,
+          "strokesIncludedInLayout": true,
+          "clipsContent": false,
+          "cornerRadius": 0,
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "dashPattern": [],
+          "reactions": [],
+          "fills": [],
+          "strokes": [],
+          "b": {
+            "itemSpacing": "VariableID:358:23",
+            "paddingLeft": "VariableID:358:22",
+            "paddingTop": "VariableID:358:22",
+            "paddingRight": "VariableID:358:22",
+            "paddingBottom": "VariableID:358:22"
+          },
+          "children": [
+            {
+              "id": "359:65",
+              "name": "Back",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "NONE",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "FIXED",
+              "layoutSizingVertical": "FIXED",
+              "minWidth": null,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "AUTO",
+              "counterAxisSizingMode": "FIXED",
+              "primaryAxisAlignItems": "MIN",
+              "counterAxisAlignItems": "MIN",
+              "paddingTop": 0,
+              "paddingRight": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "itemSpacing": 0,
+              "strokesIncludedInLayout": false,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "reactions": [],
+              "main": {
+                "id": "358:100",
+                "key": "395e4dcf16b8451c0b295bb7402a9319d1b4a9f2",
+                "remote": true,
+                "name": "Format=Outline, Weight=Light"
+              },
+              "instanceProperties": {
+                "Format": {
+                  "value": "Outline",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                },
+                "Weight": {
+                  "value": "Light",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                }
+              },
+              "isExposedInstance": false,
+              "instanceVisibility": [
+                [
+                  "Vector",
+                  true
+                ]
+              ],
+              "fills": [],
+              "strokes": [],
+              "b": {
+                "width": "VariableID:358:24",
+                "height": "VariableID:358:24"
+              },
+              "vectorFills": [
+                {
+                  "name": "Vector",
+                  "b": {
+                    "fills": "VariableID:358:26"
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.05882352963089943,
+                        "g": 0.09019608050584793,
+                        "b": 0.16470588743686676
+                      }
+                    }
+                  ]
+                }
+              ],
+              "refs": {
+                "visible": "Show back#359:14"
+              }
+            },
+            {
+              "id": "359:67",
+              "name": "Items",
+              "type": "FRAME",
+              "x": 24,
+              "y": 0,
+              "width": 199,
+              "height": 20,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "minWidth": null,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "AUTO",
+              "counterAxisSizingMode": "AUTO",
+              "primaryAxisAlignItems": "MIN",
+              "counterAxisAlignItems": "CENTER",
+              "paddingTop": 0,
+              "paddingRight": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "itemSpacing": 4,
+              "strokesIncludedInLayout": true,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "reactions": [],
+              "fills": [],
+              "strokes": [],
+              "b": {
+                "itemSpacing": "VariableID:358:25",
+                "paddingLeft": "VariableID:358:22",
+                "paddingTop": "VariableID:358:22",
+                "paddingRight": "VariableID:358:22",
+                "paddingBottom": "VariableID:358:22"
+              },
+              "children": [
+                {
+                  "id": "359:68",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 0,
+                  "width": 103,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:6",
+                    "key": "afa8895c1c0c615b8a252b2b7fc77733d5a7724a",
+                    "remote": false,
+                    "name": "type=text, current=false, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Contabilidad"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "false",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ],
+                    [
+                      "Separator",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                },
+                {
+                  "id": "359:72",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 107,
+                  "y": 0,
+                  "width": 92,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:23",
+                    "key": "bcc5e2762b92d97e2e47e6e43c2e6a9cbffc403b",
+                    "remote": false,
+                    "name": "type=text, current=true, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Póliza P-0458"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "true",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "359:74",
+          "name": "levels=3",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 100,
+          "width": 293,
+          "height": 20,
+          "rotation": 0,
+          "visible": true,
+          "layoutMode": "HORIZONTAL",
+          "layoutPositioning": "AUTO",
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "minWidth": null,
+          "maxWidth": null,
+          "minHeight": null,
+          "maxHeight": null,
+          "primaryAxisSizingMode": "AUTO",
+          "counterAxisSizingMode": "AUTO",
+          "primaryAxisAlignItems": "MIN",
+          "counterAxisAlignItems": "CENTER",
+          "paddingTop": 0,
+          "paddingRight": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "itemSpacing": 8,
+          "strokesIncludedInLayout": true,
+          "clipsContent": false,
+          "cornerRadius": 0,
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "dashPattern": [],
+          "reactions": [],
+          "fills": [],
+          "strokes": [],
+          "b": {
+            "itemSpacing": "VariableID:358:23",
+            "paddingLeft": "VariableID:358:22",
+            "paddingTop": "VariableID:358:22",
+            "paddingRight": "VariableID:358:22",
+            "paddingBottom": "VariableID:358:22"
+          },
+          "children": [
+            {
+              "id": "359:75",
+              "name": "Back",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "NONE",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "FIXED",
+              "layoutSizingVertical": "FIXED",
+              "minWidth": null,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "AUTO",
+              "counterAxisSizingMode": "FIXED",
+              "primaryAxisAlignItems": "MIN",
+              "counterAxisAlignItems": "MIN",
+              "paddingTop": 0,
+              "paddingRight": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "itemSpacing": 0,
+              "strokesIncludedInLayout": false,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "reactions": [],
+              "main": {
+                "id": "358:100",
+                "key": "395e4dcf16b8451c0b295bb7402a9319d1b4a9f2",
+                "remote": true,
+                "name": "Format=Outline, Weight=Light"
+              },
+              "instanceProperties": {
+                "Format": {
+                  "value": "Outline",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                },
+                "Weight": {
+                  "value": "Light",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                }
+              },
+              "isExposedInstance": false,
+              "instanceVisibility": [
+                [
+                  "Vector",
+                  true
+                ]
+              ],
+              "fills": [],
+              "strokes": [],
+              "b": {
+                "width": "VariableID:358:24",
+                "height": "VariableID:358:24"
+              },
+              "vectorFills": [
+                {
+                  "name": "Vector",
+                  "b": {
+                    "fills": "VariableID:358:26"
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.05882352963089943,
+                        "g": 0.09019608050584793,
+                        "b": 0.16470588743686676
+                      }
+                    }
+                  ]
+                }
+              ],
+              "refs": {
+                "visible": "Show back#359:14"
+              }
+            },
+            {
+              "id": "359:77",
+              "name": "Items",
+              "type": "FRAME",
+              "x": 24,
+              "y": 0,
+              "width": 269,
+              "height": 20,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "minWidth": null,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "AUTO",
+              "counterAxisSizingMode": "AUTO",
+              "primaryAxisAlignItems": "MIN",
+              "counterAxisAlignItems": "CENTER",
+              "paddingTop": 0,
+              "paddingRight": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "itemSpacing": 4,
+              "strokesIncludedInLayout": true,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "reactions": [],
+              "fills": [],
+              "strokes": [],
+              "b": {
+                "itemSpacing": "VariableID:358:25",
+                "paddingLeft": "VariableID:358:22",
+                "paddingTop": "VariableID:358:22",
+                "paddingRight": "VariableID:358:22",
+                "paddingBottom": "VariableID:358:22"
+              },
+              "children": [
+                {
+                  "id": "359:78",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 0,
+                  "width": 103,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:6",
+                    "key": "afa8895c1c0c615b8a252b2b7fc77733d5a7724a",
+                    "remote": false,
+                    "name": "type=text, current=false, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Contabilidad"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "false",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ],
+                    [
+                      "Separator",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                },
+                {
+                  "id": "359:82",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 107,
+                  "y": 0,
+                  "width": 66,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:6",
+                    "key": "afa8895c1c0c615b8a252b2b7fc77733d5a7724a",
+                    "remote": false,
+                    "name": "type=text, current=false, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Pólizas"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "false",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ],
+                    [
+                      "Separator",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                },
+                {
+                  "id": "359:86",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 177,
+                  "y": 0,
+                  "width": 92,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:23",
+                    "key": "bcc5e2762b92d97e2e47e6e43c2e6a9cbffc403b",
+                    "remote": false,
+                    "name": "type=text, current=true, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Póliza P-0458"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "true",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "359:88",
+          "name": "levels=4",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 200,
+          "width": 355,
+          "height": 20,
+          "rotation": 0,
+          "visible": true,
+          "layoutMode": "HORIZONTAL",
+          "layoutPositioning": "AUTO",
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "minWidth": null,
+          "maxWidth": null,
+          "minHeight": null,
+          "maxHeight": null,
+          "primaryAxisSizingMode": "AUTO",
+          "counterAxisSizingMode": "AUTO",
+          "primaryAxisAlignItems": "MIN",
+          "counterAxisAlignItems": "CENTER",
+          "paddingTop": 0,
+          "paddingRight": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "itemSpacing": 8,
+          "strokesIncludedInLayout": true,
+          "clipsContent": false,
+          "cornerRadius": 0,
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "dashPattern": [],
+          "reactions": [],
+          "fills": [],
+          "strokes": [],
+          "b": {
+            "itemSpacing": "VariableID:358:23",
+            "paddingLeft": "VariableID:358:22",
+            "paddingTop": "VariableID:358:22",
+            "paddingRight": "VariableID:358:22",
+            "paddingBottom": "VariableID:358:22"
+          },
+          "children": [
+            {
+              "id": "359:89",
+              "name": "Back",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "NONE",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "FIXED",
+              "layoutSizingVertical": "FIXED",
+              "minWidth": null,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "AUTO",
+              "counterAxisSizingMode": "FIXED",
+              "primaryAxisAlignItems": "MIN",
+              "counterAxisAlignItems": "MIN",
+              "paddingTop": 0,
+              "paddingRight": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "itemSpacing": 0,
+              "strokesIncludedInLayout": false,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "reactions": [],
+              "main": {
+                "id": "358:100",
+                "key": "395e4dcf16b8451c0b295bb7402a9319d1b4a9f2",
+                "remote": true,
+                "name": "Format=Outline, Weight=Light"
+              },
+              "instanceProperties": {
+                "Format": {
+                  "value": "Outline",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                },
+                "Weight": {
+                  "value": "Light",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                }
+              },
+              "isExposedInstance": false,
+              "instanceVisibility": [
+                [
+                  "Vector",
+                  true
+                ]
+              ],
+              "fills": [],
+              "strokes": [],
+              "b": {
+                "width": "VariableID:358:24",
+                "height": "VariableID:358:24"
+              },
+              "vectorFills": [
+                {
+                  "name": "Vector",
+                  "b": {
+                    "fills": "VariableID:358:26"
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.05882352963089943,
+                        "g": 0.09019608050584793,
+                        "b": 0.16470588743686676
+                      }
+                    }
+                  ]
+                }
+              ],
+              "refs": {
+                "visible": "Show back#359:14"
+              }
+            },
+            {
+              "id": "359:91",
+              "name": "Items",
+              "type": "FRAME",
+              "x": 24,
+              "y": 0,
+              "width": 331,
+              "height": 20,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "minWidth": null,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "AUTO",
+              "counterAxisSizingMode": "AUTO",
+              "primaryAxisAlignItems": "MIN",
+              "counterAxisAlignItems": "CENTER",
+              "paddingTop": 0,
+              "paddingRight": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "itemSpacing": 4,
+              "strokesIncludedInLayout": true,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "reactions": [],
+              "fills": [],
+              "strokes": [],
+              "b": {
+                "itemSpacing": "VariableID:358:25",
+                "paddingLeft": "VariableID:358:22",
+                "paddingTop": "VariableID:358:22",
+                "paddingRight": "VariableID:358:22",
+                "paddingBottom": "VariableID:358:22"
+              },
+              "children": [
+                {
+                  "id": "359:92",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 0,
+                  "width": 103,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:6",
+                    "key": "afa8895c1c0c615b8a252b2b7fc77733d5a7724a",
+                    "remote": false,
+                    "name": "type=text, current=false, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Contabilidad"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "false",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ],
+                    [
+                      "Separator",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                },
+                {
+                  "id": "359:96",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 107,
+                  "y": 0,
+                  "width": 66,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:6",
+                    "key": "afa8895c1c0c615b8a252b2b7fc77733d5a7724a",
+                    "remote": false,
+                    "name": "type=text, current=false, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Pólizas"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "false",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ],
+                    [
+                      "Separator",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                },
+                {
+                  "id": "359:100",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 177,
+                  "y": 0,
+                  "width": 58,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:6",
+                    "key": "afa8895c1c0c615b8a252b2b7fc77733d5a7724a",
+                    "remote": false,
+                    "name": "type=text, current=false, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Diario"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "false",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ],
+                    [
+                      "Separator",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                },
+                {
+                  "id": "359:104",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 239,
+                  "y": 0,
+                  "width": 92,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:23",
+                    "key": "bcc5e2762b92d97e2e47e6e43c2e6a9cbffc403b",
+                    "remote": false,
+                    "name": "type=text, current=true, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Póliza P-0458"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "true",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "359:106",
+          "name": "levels=5",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 300,
+          "width": 491,
+          "height": 20,
+          "rotation": 0,
+          "visible": true,
+          "layoutMode": "HORIZONTAL",
+          "layoutPositioning": "AUTO",
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "minWidth": null,
+          "maxWidth": null,
+          "minHeight": null,
+          "maxHeight": null,
+          "primaryAxisSizingMode": "AUTO",
+          "counterAxisSizingMode": "AUTO",
+          "primaryAxisAlignItems": "MIN",
+          "counterAxisAlignItems": "CENTER",
+          "paddingTop": 0,
+          "paddingRight": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "itemSpacing": 8,
+          "strokesIncludedInLayout": true,
+          "clipsContent": false,
+          "cornerRadius": 0,
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "dashPattern": [],
+          "reactions": [],
+          "fills": [],
+          "strokes": [],
+          "b": {
+            "itemSpacing": "VariableID:358:23",
+            "paddingLeft": "VariableID:358:22",
+            "paddingTop": "VariableID:358:22",
+            "paddingRight": "VariableID:358:22",
+            "paddingBottom": "VariableID:358:22"
+          },
+          "children": [
+            {
+              "id": "359:107",
+              "name": "Back",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "NONE",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "FIXED",
+              "layoutSizingVertical": "FIXED",
+              "minWidth": null,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "AUTO",
+              "counterAxisSizingMode": "FIXED",
+              "primaryAxisAlignItems": "MIN",
+              "counterAxisAlignItems": "MIN",
+              "paddingTop": 0,
+              "paddingRight": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "itemSpacing": 0,
+              "strokesIncludedInLayout": false,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "reactions": [],
+              "main": {
+                "id": "358:100",
+                "key": "395e4dcf16b8451c0b295bb7402a9319d1b4a9f2",
+                "remote": true,
+                "name": "Format=Outline, Weight=Light"
+              },
+              "instanceProperties": {
+                "Format": {
+                  "value": "Outline",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                },
+                "Weight": {
+                  "value": "Light",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                }
+              },
+              "isExposedInstance": false,
+              "instanceVisibility": [
+                [
+                  "Vector",
+                  true
+                ]
+              ],
+              "fills": [],
+              "strokes": [],
+              "b": {
+                "width": "VariableID:358:24",
+                "height": "VariableID:358:24"
+              },
+              "vectorFills": [
+                {
+                  "name": "Vector",
+                  "b": {
+                    "fills": "VariableID:358:26"
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.05882352963089943,
+                        "g": 0.09019608050584793,
+                        "b": 0.16470588743686676
+                      }
+                    }
+                  ]
+                }
+              ],
+              "refs": {
+                "visible": "Show back#359:14"
+              }
+            },
+            {
+              "id": "359:109",
+              "name": "Items",
+              "type": "FRAME",
+              "x": 24,
+              "y": 0,
+              "width": 467,
+              "height": 20,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "minWidth": null,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "AUTO",
+              "counterAxisSizingMode": "AUTO",
+              "primaryAxisAlignItems": "MIN",
+              "counterAxisAlignItems": "CENTER",
+              "paddingTop": 0,
+              "paddingRight": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "itemSpacing": 4,
+              "strokesIncludedInLayout": true,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "reactions": [],
+              "fills": [],
+              "strokes": [],
+              "b": {
+                "itemSpacing": "VariableID:358:25",
+                "paddingLeft": "VariableID:358:22",
+                "paddingTop": "VariableID:358:22",
+                "paddingRight": "VariableID:358:22",
+                "paddingBottom": "VariableID:358:22"
+              },
+              "children": [
+                {
+                  "id": "359:110",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 0,
+                  "width": 103,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:6",
+                    "key": "afa8895c1c0c615b8a252b2b7fc77733d5a7724a",
+                    "remote": false,
+                    "name": "type=text, current=false, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Contabilidad"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "false",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ],
+                    [
+                      "Separator",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                },
+                {
+                  "id": "359:114",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 107,
+                  "y": 0,
+                  "width": 66,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:6",
+                    "key": "afa8895c1c0c615b8a252b2b7fc77733d5a7724a",
+                    "remote": false,
+                    "name": "type=text, current=false, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Pólizas"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "false",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ],
+                    [
+                      "Separator",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                },
+                {
+                  "id": "359:118",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 177,
+                  "y": 0,
+                  "width": 58,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:6",
+                    "key": "afa8895c1c0c615b8a252b2b7fc77733d5a7724a",
+                    "remote": false,
+                    "name": "type=text, current=false, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Diario"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "false",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ],
+                    [
+                      "Separator",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                },
+                {
+                  "id": "359:122",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 239,
+                  "y": 0,
+                  "width": 132,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:6",
+                    "key": "afa8895c1c0c615b8a252b2b7fc77733d5a7724a",
+                    "remote": false,
+                    "name": "type=text, current=false, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Septiembre 2026"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "false",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ],
+                    [
+                      "Separator",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                },
+                {
+                  "id": "359:126",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 375,
+                  "y": 0,
+                  "width": 92,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:23",
+                    "key": "bcc5e2762b92d97e2e47e6e43c2e6a9cbffc403b",
+                    "remote": false,
+                    "name": "type=text, current=true, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Póliza P-0458"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "true",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "359:128",
+          "name": "levels=collapsed",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 400,
+          "width": 320,
+          "height": 20,
+          "rotation": 0,
+          "visible": true,
+          "layoutMode": "HORIZONTAL",
+          "layoutPositioning": "AUTO",
+          "layoutSizingHorizontal": "HUG",
+          "layoutSizingVertical": "HUG",
+          "minWidth": null,
+          "maxWidth": null,
+          "minHeight": null,
+          "maxHeight": null,
+          "primaryAxisSizingMode": "AUTO",
+          "counterAxisSizingMode": "AUTO",
+          "primaryAxisAlignItems": "MIN",
+          "counterAxisAlignItems": "CENTER",
+          "paddingTop": 0,
+          "paddingRight": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "itemSpacing": 8,
+          "strokesIncludedInLayout": true,
+          "clipsContent": false,
+          "cornerRadius": 0,
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "dashPattern": [],
+          "reactions": [],
+          "fills": [],
+          "strokes": [],
+          "b": {
+            "itemSpacing": "VariableID:358:23",
+            "paddingLeft": "VariableID:358:22",
+            "paddingTop": "VariableID:358:22",
+            "paddingRight": "VariableID:358:22",
+            "paddingBottom": "VariableID:358:22"
+          },
+          "children": [
+            {
+              "id": "359:129",
+              "name": "Back",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "NONE",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "FIXED",
+              "layoutSizingVertical": "FIXED",
+              "minWidth": null,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "AUTO",
+              "counterAxisSizingMode": "FIXED",
+              "primaryAxisAlignItems": "MIN",
+              "counterAxisAlignItems": "MIN",
+              "paddingTop": 0,
+              "paddingRight": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "itemSpacing": 0,
+              "strokesIncludedInLayout": false,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "reactions": [],
+              "main": {
+                "id": "358:100",
+                "key": "395e4dcf16b8451c0b295bb7402a9319d1b4a9f2",
+                "remote": true,
+                "name": "Format=Outline, Weight=Light"
+              },
+              "instanceProperties": {
+                "Format": {
+                  "value": "Outline",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                },
+                "Weight": {
+                  "value": "Light",
+                  "type": "VARIANT",
+                  "boundVariables": {}
+                }
+              },
+              "isExposedInstance": false,
+              "instanceVisibility": [
+                [
+                  "Vector",
+                  true
+                ]
+              ],
+              "fills": [],
+              "strokes": [],
+              "b": {
+                "width": "VariableID:358:24",
+                "height": "VariableID:358:24"
+              },
+              "vectorFills": [
+                {
+                  "name": "Vector",
+                  "b": {
+                    "fills": "VariableID:358:26"
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.05882352963089943,
+                        "g": 0.09019608050584793,
+                        "b": 0.16470588743686676
+                      }
+                    }
+                  ]
+                }
+              ],
+              "refs": {
+                "visible": "Show back#359:14"
+              }
+            },
+            {
+              "id": "359:131",
+              "name": "Items",
+              "type": "FRAME",
+              "x": 24,
+              "y": 0,
+              "width": 296,
+              "height": 20,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "HUG",
+              "layoutSizingVertical": "HUG",
+              "minWidth": null,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "AUTO",
+              "counterAxisSizingMode": "AUTO",
+              "primaryAxisAlignItems": "MIN",
+              "counterAxisAlignItems": "CENTER",
+              "paddingTop": 0,
+              "paddingRight": 0,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "itemSpacing": 4,
+              "strokesIncludedInLayout": true,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "reactions": [],
+              "fills": [],
+              "strokes": [],
+              "b": {
+                "itemSpacing": "VariableID:358:25",
+                "paddingLeft": "VariableID:358:22",
+                "paddingTop": "VariableID:358:22",
+                "paddingRight": "VariableID:358:22",
+                "paddingBottom": "VariableID:358:22"
+              },
+              "children": [
+                {
+                  "id": "359:132",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 0,
+                  "width": 103,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:6",
+                    "key": "afa8895c1c0c615b8a252b2b7fc77733d5a7724a",
+                    "remote": false,
+                    "name": "type=text, current=false, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Contabilidad"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "false",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ],
+                    [
+                      "Separator",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                },
+                {
+                  "id": "359:136",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 107,
+                  "y": 0,
+                  "width": 31,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:46",
+                    "key": "1349d4c8c9ddd4d41e8906536d1e29a280ace861",
+                    "remote": false,
+                    "name": "type=overflow, current=false, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Breadcrumb"
+                    },
+                    "type": {
+                      "value": "overflow",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "false",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Overflow",
+                      true
+                    ],
+                    [
+                      "Separator",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                },
+                {
+                  "id": "359:140",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 142,
+                  "y": 0,
+                  "width": 58,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:6",
+                    "key": "afa8895c1c0c615b8a252b2b7fc77733d5a7724a",
+                    "remote": false,
+                    "name": "type=text, current=false, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Diario"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "false",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ],
+                    [
+                      "Separator",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                },
+                {
+                  "id": "359:144",
+                  "name": "Breadcrumb item",
+                  "type": "INSTANCE",
+                  "x": 204,
+                  "y": 0,
+                  "width": 92,
+                  "height": 20,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "HORIZONTAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "HUG",
+                  "layoutSizingVertical": "HUG",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "AUTO",
+                  "counterAxisSizingMode": "AUTO",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "CENTER",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 4,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "reactions": [],
+                  "main": {
+                    "id": "359:23",
+                    "key": "bcc5e2762b92d97e2e47e6e43c2e6a9cbffc403b",
+                    "remote": false,
+                    "name": "type=text, current=true, state=default"
+                  },
+                  "instanceProperties": {
+                    "Label#359:0": {
+                      "type": "TEXT",
+                      "value": "Póliza P-0458"
+                    },
+                    "type": {
+                      "value": "text",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "current": {
+                      "value": "true",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "state": {
+                      "value": "default",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": true,
+                  "instanceVisibility": [
+                    [
+                      "Label",
+                      true
+                    ]
+                  ],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:358:3",
+                    "paddingLeft": "VariableID:358:2",
+                    "paddingTop": "VariableID:358:2",
+                    "paddingRight": "VariableID:358:2",
+                    "paddingBottom": "VariableID:358:2"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

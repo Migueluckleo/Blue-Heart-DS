@@ -1,0 +1,97 @@
+# User selector · React / TypeScript
+
+Documento técnico generado por `pnpm ds:generate`. Editar la API en código, el ejemplo ejecutable o las notas de `components.registry.json`, y regenerar. No es otra aprobación del contrato visual.
+
+Familia `USER-SELECTOR-001` · API local 0.1.0 · categoría navegación.
+
+## Guía semántica normativa
+
+Fuente: [guía del contrato](../../../../specs/components/user-selector.contract.v1.0.0.md#guía-semántica-normativa).
+
+Usa este control para solicitar las opciones de cuenta. El anfitrión proporciona un nombre accesible, controla el menú y comunica su estado. Avatar representa la cuenta sin duplicar el anuncio.
+
+| Situación | Haz | Evita |
+|---|---|---|
+| Cuenta activa | Nombra «Cuenta de Julia» en el control. | Depender solo de las iniciales. |
+| Menú abierto | Comunica expanded y conserva el foco. | Usar open como una acción de sesión. |
+| Imagen de cuenta | Reutiliza Avatar con el tamaño del selector. | Duplicar fotos, fuentes o Dot en el selector. |
+
+[Carbon UI shell header](https://www.carbondesignsystem.com/building-blocks/core/components/ui-shell-header/guidelines) · [W3C Disclosure Navigation](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/)
+
+## Uso sin backend
+
+Abre el menú local de cuenta con el Avatar y nombre accesible.
+
+```tsx
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';
+import { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';
+import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
+import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
+import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
+import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
+
+const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];
+
+export function UserSelectorExample() {
+  const [open, setOpen] = useState(false);
+  const close = () => {setOpen(false);document.getElementById('demo-user-selector')?.focus();};
+  useEffect(()=>{if(open)document.getElementById('demo-user-option')?.focus();},[open]);
+  return <div className="my-4 space-y-2" onKeyDown={event=>{if(open&&event.key==='Escape')close();}}>
+    <UserSelector id="demo-user-selector" name="Julia Ávila" avatar={{initials:'JÁ'}}
+      open={open} onToggle={()=>setOpen(value=>!value)} controls="demo-user-menu"/>
+    <div id="demo-user-menu" role="menu" aria-label="Cuenta de muestra" hidden={!open}>
+      <button id="demo-user-option" type="button" role="menuitem" onClick={close}>Preferencias de muestra</button>
+    </div>
+  </div>;
+}
+```
+
+Ejemplo compilado en [examples.tsx](../../src/examples.tsx). Usa React state en memoria; recargar restaura la muestra. No hay endpoint, credencial ni persistencia implícita.
+
+## API tipada
+
+Importar desde [src/index.ts](../../src/index.ts), con `@/index` dentro del catálogo. Código propietario: [user-selector.tsx](../../src/components/user-selector.tsx). Los atributos HTML heredados mantienen los tipos de React; callbacks y datos controlados pertenecen a la pantalla.
+
+```tsx
+export interface UserSelectorProps {
+  id?: string;
+  name: string;
+  avatar?: Pick<AvatarProps,'initials'|'imageSrc'|'icon'>;
+  open?: boolean;
+  controls?: string;
+  onToggle?: () => void;
+}
+```
+
+## Defaults y eventos
+
+Las firmas siguientes se extraen de las funciones, incluidos sus valores por defecto. Una prop sin asignación `=` es obligatoria o permanece undefined según su tipo; no se rellena con reglas de negocio.
+
+```tsx
+UserSelector: {id,name,avatar,open=false,controls,onToggle}:UserSelectorProps
+```
+
+Props `on…` son callbacks locales. No atribuyen autorización, carga, guardado ni resultados de negocio.
+
+## Composición y Slots
+
+P-SLOTS: **NOT_APPLICABLE**. Avatar y caret tienen composición fija. ReactNode/listas tipadas son la traducción web de las regiones, no evidencia de Slots Figma. El anfitrión conserva el orden y los IDs de listas; las cantidades de las demos no son límites de producto.
+
+## Estilos y Next.js
+
+Importar [styles.css](../../src/styles.css) desde el layout. Consultar el manifiesto generado y los contratos vigentes para roles, modos y aliases.
+
+Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos serializables pueden venir de un Server Component; crear callbacks en una frontera cliente. No enviar funciones desde el servidor. No se requiere backend para el catálogo ni para componer con fixtures.
+
+## Fuentes y límites
+
+- [user-selector.contract.v1.0.0.md](../../../../specs/components/user-selector.contract.v1.0.0.md) · SHA-256 `03032f86629b08c0f51410c729e7494266f1daef35ea5a44c9705db47e0720c5`.
+
+Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
+
+## Verificación
+
+`pnpm verify` comprueba generación/cobertura, TypeScript, pruebas y build estático. `pnpm test:browser` valida los recorridos locales. [Evidencia de QA](../../../../qa/implementations/header-chain.v1.0.0.review.md) identifica alcance, resultados y límites; una demo visible por sí sola no es un PASS visual.

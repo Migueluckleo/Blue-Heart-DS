@@ -1,0 +1,539 @@
+---
+{
+  "schema_version": 1,
+  "id": "ICON-BUTTON-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-035"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/icon-button-request.json",
+      "sha256": "1c0a401c0f357cdd6620f58040551a4df978d3bcd96863b5f06fd49710e0c8a0"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/icon-button-pilot/source/capture-manifest.json",
+      "sha256": "830d0195ba2467fc5f04cfcdb67f489c99f9cdb3ab0a333c738c79056419bef5"
+    },
+    {
+      "id": "SRC-API",
+      "path": "evidence/icon-button-pilot/source/page-index.json",
+      "sha256": "c4781f5dcc05cc4762e35218435d18ce2e5c5511b2d094ff66ddf55895d571b7"
+    },
+    {
+      "id": "SRC-MODEL",
+      "path": "evidence/icon-button-pilot/source/icon-button-component-contract.yaml",
+      "sha256": "1cec166f91d57112798576eaa0603d79a2e71e9c1842eb8663340aff8e0b2cdf"
+    },
+    {
+      "id": "SRC-REVERSE",
+      "path": "evidence/icon-button-pilot/reverse-dependencies.json",
+      "sha256": "5c062b08509c7f46fd7d09f9e78ab7514f19affd875dfa8b5c3baf7f03879c59"
+    },
+    {
+      "id": "SRC-CONSUMERS",
+      "path": "evidence/icon-button-pilot/target/consumers-before.json",
+      "sha256": "d86476c70e23f58b2737e85424c2714feb9602fc9edd3cabd49a1f1bf3061be2"
+    },
+    {
+      "id": "SRC-MINIMUM",
+      "path": "evidence/icon-button-pilot/build-plan.json",
+      "sha256": "379bb2303e7a8aac36ae6073fb17a933518444ae14ce8e16c11bdccb24fc8ca4"
+    },
+    {
+      "id": "SRC-CONTRAST",
+      "path": "evidence/icon-button-pilot/contrast-analysis.json",
+      "sha256": "ef352db8730758f03a90c9ea2e0dd125e0de030797bf884a76f5b132fcc66893"
+    },
+    {
+      "id": "SRC-ICONS",
+      "path": "protocols/06-PHOSPHOR-ICONS.md",
+      "sha256": "aad27541d6cb8b9deadeac6ad966a0fe77d2203ce0989525b6c8c2028d5c0f68"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "contract",
+      "id": "DOT-001",
+      "version": "1.0.0",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.radius-control",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.size-control-large",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-bg-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.size-icon-large",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-icon-inverse",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.size-control-medium",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.size-icon-medium",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.size-control-small",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.size-icon-small",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-bg-primary-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-bg-primary-pressed",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.radius-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-stroke-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.border-focus-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-bg-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-icon-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-bg-secondary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-stroke-secondary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.border-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-icon-secondary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-bg-secondary-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-stroke-secondary-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-icon-secondary-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-bg-secondary-pressed",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-stroke-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-icon-ghost-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-bg-danger-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-bg-danger-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "icon-button.color-bg-danger-pressed",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-MATRIX",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-API",
+        "SRC-MODEL",
+        "SRC-REVERSE",
+        "SRC-CONSUMERS",
+        "SRC-MINIMUM",
+        "SRC-CONTRAST",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-MATRIX con receta y QA del encargo."
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-API",
+        "SRC-MODEL",
+        "SRC-REVERSE",
+        "SRC-CONSUMERS",
+        "SRC-MINIMUM",
+        "SRC-CONTRAST",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API con receta y QA del encargo."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-API",
+        "SRC-MODEL",
+        "SRC-REVERSE",
+        "SRC-CONSUMERS",
+        "SRC-MINIMUM",
+        "SRC-CONTRAST",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-LAYOUT con receta y QA del encargo."
+      ]
+    },
+    {
+      "id": "REQ-DOT",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-API",
+        "SRC-MODEL",
+        "SRC-REVERSE",
+        "SRC-CONSUMERS",
+        "SRC-MINIMUM",
+        "SRC-CONTRAST",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-DOT con receta y QA del encargo."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-API",
+        "SRC-MODEL",
+        "SRC-REVERSE",
+        "SRC-CONSUMERS",
+        "SRC-MINIMUM",
+        "SRC-CONTRAST",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-THEME con receta y QA del encargo."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-API",
+        "SRC-MODEL",
+        "SRC-REVERSE",
+        "SRC-CONSUMERS",
+        "SRC-MINIMUM",
+        "SRC-CONTRAST",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS con receta y QA del encargo."
+      ]
+    },
+    {
+      "id": "REQ-ICONS",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-API",
+        "SRC-MODEL",
+        "SRC-REVERSE",
+        "SRC-CONSUMERS",
+        "SRC-MINIMUM",
+        "SRC-CONTRAST",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ICONS con receta y QA del encargo."
+      ]
+    },
+    {
+      "id": "REQ-FUNCTION",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-API",
+        "SRC-MODEL",
+        "SRC-REVERSE",
+        "SRC-CONSUMERS",
+        "SRC-MINIMUM",
+        "SRC-CONTRAST",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-FUNCTION con receta y QA del encargo."
+      ]
+    },
+    {
+      "id": "REQ-PROTOTYPE",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-API",
+        "SRC-MODEL",
+        "SRC-REVERSE",
+        "SRC-CONSUMERS",
+        "SRC-MINIMUM",
+        "SRC-CONTRAST",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-PROTOTYPE con receta y QA del encargo."
+      ]
+    },
+    {
+      "id": "REQ-ACCESSIBILITY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-API",
+        "SRC-MODEL",
+        "SRC-REVERSE",
+        "SRC-CONSUMERS",
+        "SRC-MINIMUM",
+        "SRC-CONTRAST",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ACCESSIBILITY con receta y QA del encargo."
+      ]
+    },
+    {
+      "id": "REQ-MIGRATION",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-API",
+        "SRC-MODEL",
+        "SRC-REVERSE",
+        "SRC-CONSUMERS",
+        "SRC-MINIMUM",
+        "SRC-CONTRAST",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-MIGRATION con receta y QA del encargo."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-API",
+        "SRC-MODEL",
+        "SRC-REVERSE",
+        "SRC-CONSUMERS",
+        "SRC-MINIMUM",
+        "SRC-CONTRAST",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA con receta y QA del encargo."
+      ]
+    },
+    {
+      "id": "REQ-SOURCE",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-API",
+        "SRC-MODEL",
+        "SRC-REVERSE",
+        "SRC-CONSUMERS",
+        "SRC-MINIMUM",
+        "SRC-CONTRAST",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-SOURCE con receta y QA del encargo."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Control",
+      "Phosphor Icon",
+      "Badge anchor > Dot",
+      "Focus ring"
+    ],
+    "composition": "source-defined-optional-Dot",
+    "accessibility": "host-intent-not-implemented"
+  }
+}
+---
+
+# Icon Button1.0.0
+
+### REQ-MATRIX
+
+Noventa combinaciones reales: primary15, secondary30, ghost30 y danger15. Resolver type por set Icon Button/primary, /secondary, /ghost o /danger; cada uno contiene size large/medium/small y state default/hover/pressed/focus/disabled. selected false/true solo en secondary/ghost; primary/danger conservan false como constante sin inventar variantes. No superar30 combinaciones por set ni crear una variante por ícono.
+
+### REQ-API
+
+Icon INSTANCE_SWAP con Bell Outline/Light por defecto; Show badge BOOLEAN false. Resolver propertyKeys desde el ledger por tipo; ghost conserva Icon#500:0 y Show badge#500:6 para sus consumidores existentes. Dot se expone como instancia anidada con sus propiedades oficiales. Los estados/tamaños no son modos de variables.
+
+### REQ-LAYOUT
+
+Control cuadrado48/40/32 y glyph24/20/16 para large/medium/small. Auto Layout HORIZONTAL centrado, padding/gap0, radio8. Preservar los bindings, strokeAlign y strokesIncludedInLayout por variante de la receta. Foco absoluto a−4 con dimensión control+8, radio12 y borde2; constraints STRETCH. El offset y el tamaño derivado del anillo no generan otra cadena de Foundation.
+
+### REQ-DOT
+
+Componer DOT-0011.0.0: count/large20px en large, count/medium16px en medium y notification/small8px en small. Mantener Counter/Max count por propiedades del hijo, no copiar tipografía, formas ni tokens. Usar un anchor absoluto transparente HORIZONTAL de ancho0 y alineaciónMAX en el borde derecho fuente; Dot HUG crece a la izquierda al editar1/42/99+. Show badge controla el hijo. La conversión a count-expand, el umbral100 y ocultar0 pertenecen al host; no afirmar motor numérico nativo. La guía fuente prohíbe indicador sobre danger y números en small: son restricciones de consumo, no una validación automática del editor.
+
+### REQ-THEME
+
+Primary y los rellenos selected de secondary/ghost siguen los cuatro temas según los vectores completos de la receta; las superficies, bordes y glyphs restantes usan su clasificación THEMATIC/INVARIANT registrada. Danger, disabled e inverse/foco mantienen sus roles fijos cuando sus aliases son iguales. No extender el morado fijo de Tabs ni colores de otras familias. El glyph tiene rol propio: no hay Label visible que le transmita un color.
+
+### REQ-TOKENS
+
+Treinta firmas mínimas bajo icon-button/ en component; ninguna Foundation ni estilo tipográfico propio nuevo. Unificar tipo/unidad/scope/aliases completos en los cuatro modos. Root48 y glyph24 de ghost reutilizan las firmas de toda la familia, no variables privadas Header. BLUEHEART-TOKENS6.9.0 añade30 y retira11 privadas ya sustituidas:812 tokens en primitive163/semantic124/component525. Los782 objetos anteriores no retirados se conservan íntegros. No crear tokens por cada estado ni duplicar los de Dot.
+
+### REQ-ICONS
+
+Phosphor del equipo por instancias vinculadas; Bell Outline/Light de key ef703d88cfc6792cdd17351c4cc923a019b91855 es default. Mantener swaps y color SHAPE_FILL por estado/modo y tamaño WIDTH_HEIGHT; probar los cinco activos de Header. Desarrollo futuro consumirá el paquete oficial por ADR-007/BH-P06, sin copias vectoriales locales. No enumerar/importar1512 candidatos preferidos.
+
+### REQ-FUNCTION
+
+Acción sin texto solo cuando el ícono es reconocible. Host aporta nombre accesible y tooltip con verbo/objeto, explica disabled, confirma danger nombrando el objeto y expresa selected como alternancia. Para acciones fiscales críticas usar Button con texto. Tooltip y confirmación son responsabilidades del consumidor, no anatomía ni nuevas familias incorporadas aquí.
+
+### REQ-PROTOTYPE
+
+Añadir hover reversible que conserva size/selected y propiedades personalizadas. Pressed/focus son variantes visuales explícitas; no usar MOUSE_DOWN→pressed que intercepte clic del host, conforme al ensayo de Header. Disabled es inerte. Demostrar una acción, alternancia selected, indicador y confirmación con datos ficticios; destinos se alojan en wrapper de consumidor. No acreditar presión física, teclado, ARIA ni operaciones reales.
+
+### REQ-ACCESSIBILITY
+
+Medición propia: glyph activo sobre superficie opaca/host blanco mínimo4.719:1, umbral no textual3:1; disabled excluido. No adoptar AA global de la descripción fuente ni aplicar esta medición a cualquier fondo. Large48 cubre44; medium40 y small32 necesitan ampliar área táctil o usar large. Nombre, tooltip, estado accesible y foco de teclado pertenecen a futura implementación web.
+
+### REQ-MIGRATION
+
+Adoptar y ampliar in situ el set privado500:7 como Icon Button/ghost; preservar los cinco principales/key ghost-large-unselected y las138 instancias inventariadas, glyphs intercambiados, contadores, estados y modos. Mover el propietario a la página Icon Buttons. Normalizar sus bindings al conjunto30 y crear los otros85 principales. Retirar el nombre/rol temporal de Header y sus11 variables privadas solo tras comprobar cero referencias activas en páginas/estilos/aliases. Header actions2.0.0 conserva actions/API visual y2tokens de espaciado; Header1.0.1 actualiza el pin compatible. Archivar IDs/key y mapa de sustitución, sin reconstruir helpers desde historia.
+
+### REQ-QA
+
+Ejecutar BH-P04:90variantes,4modos, scopes/WEB/aliases, todos los bindings propios y derivados, geometría, swaps Phosphor, dos visibilidades, contadores y cambios de variantes/tamaño/selected desde instancias; verificar consumidores directos/transitivos, herencia y reproducción visible de Header. Infraestructura no valida Figma. Preservar diferencias/límites observados sin atribuir aprobación independiente.
+
+### REQ-SOURCE
+
+Fuente Figma y proyecto anterior solo lectura. Captura909 nodos con descendientes ocultos y439 en el subtree contractual,180instancias/4definiciones activas/41variables usadas. Las observaciones MD/YAML son evidencia, no otro contrato normativo. Este encargo habilita únicamente Figma/documentación; React, ARIA/teclado reales, Graphify y publicación de release oficial continúan diferidos.

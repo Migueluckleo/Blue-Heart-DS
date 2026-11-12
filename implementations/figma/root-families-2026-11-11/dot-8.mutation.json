@@ -1,0 +1,80 @@
+{
+  "fileKey": "yZsIpXywybsPDytjolwcP4",
+  "pageId": "32:26",
+  "setId": "32:33",
+  "createdNodeIds": [
+    "32:38",
+    "32:39",
+    "32:40",
+    "32:41"
+  ],
+  "mutatedNodeIds": [
+    "32:26",
+    "32:33"
+  ],
+  "nodes": {
+    "201:1552": "32:38",
+    "201:1553": "32:39",
+    "201:1554": "32:40",
+    "201:1555": "32:41"
+  },
+  "textStyles": {},
+  "styles": {
+    "S:c7b993aaf2886c49480873fee83c9f00cc83e324,": "S:bd163b7da9eb30937eee922045799f56c1427460,",
+    "S:69e9b2d42eeae84931453a60f63d937351f3d86d,": "S:8e7ce39f62bb67591fcd35208dabad9007ce4791,"
+  },
+  "variants": [
+    {
+      "id": "32:38",
+      "name": "type=inactive, size=small, color=default"
+    },
+    {
+      "id": "32:39",
+      "name": "type=notification, size=large, color=default"
+    },
+    {
+      "id": "32:40",
+      "name": "type=notification, size=medium, color=default"
+    },
+    {
+      "id": "32:41",
+      "name": "type=notification, size=small, color=default"
+    }
+  ],
+  "properties": {
+    "Count#32:0": {
+      "type": "TEXT",
+      "defaultValue": "1"
+    },
+    "Max count#32:5": {
+      "type": "TEXT",
+      "defaultValue": "99+"
+    },
+    "type": {
+      "type": "VARIANT",
+      "defaultValue": "active",
+      "variantOptions": [
+        "active",
+        "busy",
+        "inactive",
+        "notification"
+      ]
+    },
+    "size": {
+      "type": "VARIANT",
+      "defaultValue": "large",
+      "variantOptions": [
+        "large",
+        "medium",
+        "small"
+      ]
+    },
+    "color": {
+      "type": "VARIANT",
+      "defaultValue": "default",
+      "variantOptions": [
+        "default"
+      ]
+    }
+  }
+}

@@ -1,0 +1,386 @@
+---
+{
+  "schema_version": 1,
+  "id": "RADIO-GROUP-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-039"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/radio-request.json",
+      "sha256": "3cfe4a152995476e1074a53e50fc328a91f310948357b56845496c9fd47cee21"
+    },
+    {
+      "id": "SRC-CHOICE",
+      "path": "evidence/authorization/radio-slot-choice.json",
+      "sha256": "480d4f5eb40dc6133d6911bcff0d5b6b1b85ff42766e3c648b5464eeb23f478c"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/radio-pilot/source/capture-manifest.json",
+      "sha256": "b887dbb7af6f312fe8e084438f4fc7d285fb12c1bd9f690fa9fa21d44c476962"
+    },
+    {
+      "id": "SRC-MODEL",
+      "path": "evidence/radio-pilot/source/radio-group-component-contract.yaml",
+      "sha256": "39b4c86c9cb3e44d40059584290333f3c6e9929dd963f74be0860322373ab58b"
+    },
+    {
+      "id": "SRC-IDENTITY",
+      "path": "evidence/radio-pilot/source/page-index.json",
+      "sha256": "94b345dba081da4bf87b56ec11fce54b58fb0c0f08f52e601907485b47aa72a9"
+    },
+    {
+      "id": "SRC-PLAN",
+      "path": "evidence/radio-pilot/build-plan.json",
+      "sha256": "9ad97bcd1b8391d6207e2fdd5af9e561d332ce73563ade51d3d291f957418a4e"
+    },
+    {
+      "id": "SRC-AUDIT",
+      "path": "evidence/radio-pilot/reverse-dependencies.json",
+      "sha256": "3d7c5e76595035b9b78270650aeebee040fbb836388ff53a70c96433c0bf5426"
+    },
+    {
+      "id": "SRC-HELPER",
+      "path": "evidence/authorization/radio-helper-choice.json",
+      "sha256": "ddcce53684b06ac38eaa9690c807f2c2d9f10dbf9bd2579d1d46fa429d75c341"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "contract",
+      "id": "RADIO-001",
+      "version": "1.0.0",
+      "relation": "composition"
+    },
+    {
+      "kind": "token",
+      "id": "radio-group.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio-group.spacing-vertical",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio-group.color-text-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio-group.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio-group.font-semibold",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio-group.font-size-label",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio-group.font-line-height-label",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio-group.font-tracking",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio-group.color-text-secondary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio-group.font-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio-group.font-size-helper",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio-group.font-line-height-helper",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio-group.color-text-error",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio-group.spacing-horizontal",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-ANATOMY con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-HELPER"
+      ],
+      "acceptance": [
+        "Comparar REQ-API con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-SLOT",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-SLOT con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-COMPOSITION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-COMPOSITION con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-LAYOUT con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-TYPOGRAPHY con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-TOKENS con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-CONTENT",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-CONTENT con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-BEHAVIOR",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-BEHAVIOR con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-ACCESSIBILITY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-ACCESSIBILITY con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-DEPENDENCIES con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-HELPER"
+      ],
+      "acceptance": [
+        "Comparar REQ-QA con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Root",
+      "Title",
+      "Options Slot",
+      "Radio options",
+      "Helper text"
+    ],
+    "composition": "Single native Options Slot of pinned official Radio instances.",
+    "accessibility": "Host single selection, accessible group/option names, keyboard/ARIA and44px touch targets; not certified by Figma."
+  }
+}
+---
+# RADIO-GROUP-0011.0.0
+
+### REQ-ANATOMY
+
+Cuatro combinaciones direction=vertical/horizontal × state=default/error. Root vertical contiene Title, Options y Helper text. Las opciones son instancias oficiales RADIO-001@1.0.0, nunca otra implementación privada de Circle/Dot/Label.
+
+### REQ-API
+
+Por elección humana, exponer un único Options SLOT para ambas direcciones y conservar contenido/orden/propiedades al cambiar direction y state. Mantener Title/Show title, Helper text/Show helper text. Title inicia Label; ambos flags true. Por elección humana, Helper text controla los caracteres solo en default. En error conservar Select an option fijo y sin referencia characters a esa propiedad; Show helper text aplica a ambos estados. La propiedad global sigue existiendo en error, pero editarla no cambia el mensaje visible. Un mensaje contextual adicional pertenece al host y no se presenta como una capacidad de este componente. Guardar keys reales después de combine, sin conservar Options2 como API actual del destino.
+
+### REQ-SLOT
+
+Options nativo acepta solo instancias de Radio, mínimo2 y máximo5 por propiedad común. Horizontal admite como máximo3 opciones cortas: ese límite específico pertenece al contrato y al guard/QA del consumidor, porque el Slot común no posee límites por variante. Probar2/5vertical,2/3horizontal, rechazo de0/1/6, tipo ajeno y4horizontal por validación del consumidor. No atribuir un error nativo ABOVE_MAX a4horizontal si el límite común5 no lo produce.
+
+### REQ-COMPOSITION
+
+Las doce opciones de muestra mantienen pin exacto a RADIO-0011.0.0. Cada opción insertada aporta Label no vacío y Show label=true; el host mantiene selección exclusiva, selected/disabled y orden. Default fuente muestra tres opciones, primera seleccionada; error muestra tres sin seleccionar con state=error. La muestra de3 no fija cardinalidad. No copiar tokens o estilos internos del hijo ni introducir dependencia de Dot público.
+
+### REQ-LAYOUT
+
+Root HUG en ambos ejes, padding0/gap8, alineación MIN. Options vertical usa gap8 y horizontal24, HUG y sin wrap automático. Conservar muestras87×144defaultvertical,91×144errorvertical y307×80horizontal. Etiquetas largas o idiomas pueden aumentar alto/ancho; elegir vertical o ancho suficiente. No prometer responsive automático ni recortar el texto para sostener las medidas de muestra.
+
+### REQ-TYPOGRAPHY
+
+Title Manrope SemiBold14/24 y Helper Regular12/16, tracking0, dos estilos propios con bindings. La cadena Foundation Semibold se presenta como SemiBold nativo; conservar alias y verificar el estilo real, sin cambiar la Foundation. Title es fijo primary, Helper secondary por defecto y danger en error. Las opciones conservan tipografía de Radio.
+
+### REQ-TOKENS
+
+Catorce firmas para88usos propios bajo radio/ en component, con group- en el último calificador cuando separa responsabilidad. Aplicar BH-P07, sin Foundations nuevas ni duplicación de tokens hijos. Todos los roles propios del grupo son invariantes y repiten alias en cuatro modos; los hijos heredan el tema component del contenedor.
+
+### REQ-CONTENT
+
+Usar opciones paralelas y sentence case con título que explique la decisión; ejemplos LATAM PUE/PPD y Persona física/Persona moral no son reglas de negocio. De2a5opciones, más de5 requiere otro patrón del host. No mezclar radios y checkboxes ni usar un radio aislado como booleano. Preseleccionar solo cuando el host tenga una recomendación segura; el default visual de muestra no autoriza selección de negocio.
+
+### REQ-BEHAVIOR
+
+El host conserva un único valor y como máximo una opción selected; error inicial puede estar vacío. Al seleccionar una opción se mantienen las demás deseleccionadas; pulsar la actual no borra el valor y disabled es inerte. La validación/error y su limpieza son del host. El componente de grupo no contiene un algoritmo que sincronice automáticamente sus instancias: demostrar selección exclusiva con prototipo de datos ficticios y registrar ese límite.
+
+### REQ-ACCESSIBILITY
+
+Consumo web futuro: radiogroup con aria-labelledby al título, ayuda/error por aria-describedby e invalidez cuando corresponda; conservar reglas de Radio. Si se oculta Title/Helper, el host aporta nombre/explicación equivalentes cuando necesarios. No acreditar ARIA, teclado ni servicios por la reproducción con ratón. El host táctil amplía áreas24 a44sin alterar silenciosamente el principal.
+
+### REQ-DEPENDENCIES
+
+La auditoría previa no encontró consumidores que sustituir. El mapa actual fija RADIO-001@1.0.0 y registra doce instancias nuevas; no introducir dependencia circular Radio→Radio group. El contexto consultado por la Skill debe incluir todos los requisitos dentro de65536bytes con identidad/hash/modo. Un resultado BLOCKED no se usa ni se resuelve truncando reglas o quitando pins.
+
+### REQ-QA
+
+Verificar cuatro variantes,14variables/56aliases,88bindings y un Options real por instancia; Title editable en ambos estados, Helper text editable solo default y mensaje fijo en error; flags independientes. Desde consumidores probar inserción/retirada/reordenación, contenido largo, cantidades válidas/inválidas y cambios dirección/estado conservando contenido y selección. Rehidratar raíz/Slot/hijos después de operaciones estructurales/commit; no usar IDs transitorios. Validar todos los modos, guía editable y reproducción visible de exclusión/disabled/error. No afirmar QA de React/teclado/ARIA/toque físico.
+

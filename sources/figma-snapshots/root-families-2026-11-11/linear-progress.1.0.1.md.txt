@@ -1,0 +1,452 @@
+---
+{
+  "schema_version": 1,
+  "id": "LINEAR-PROGRESS-001",
+  "version": "1.0.1",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-036"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/linear-progress-request.json",
+      "sha256": "a9f6591fa0c435e9843ecf6692a769491af6349c42bc779ac1c89f06f67f7013"
+    },
+    {
+      "id": "SRC-HEADER",
+      "path": "evidence/authorization/linear-progress-header-decision.json",
+      "sha256": "ea59478a18dc361dc96fd4973264aac38f2a98de39c7639f3fa33a2671a633cd"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/linear-progress-pilot/source/capture-manifest.json",
+      "sha256": "159b44076ec53e52c3e8732a3fd79cc2faa21a2a0416bf91ac9df4bd51aaeb61"
+    },
+    {
+      "id": "SRC-IDENTITY",
+      "path": "evidence/linear-progress-pilot/source/page-index.json",
+      "sha256": "54338bbd45bfacef2402afbd6a679761b09ddfb53bb21363d643d985682a7906"
+    },
+    {
+      "id": "SRC-DEFS",
+      "path": "evidence/linear-progress-pilot/source/definitions.json",
+      "sha256": "ffcbc3c30f89e566bb29ea34aa116f48d3217ad80d4905638466bf9a81420b55"
+    },
+    {
+      "id": "SRC-VARS",
+      "path": "evidence/linear-progress-pilot/source/variables.json",
+      "sha256": "1909de16629172bf823490b32c0c84b3e38d5f0fb72a085df45967ccd41e36fa"
+    },
+    {
+      "id": "SRC-RECONCILIATION",
+      "path": "evidence/linear-progress-reconciliation/dependency-map.json",
+      "sha256": "f6c8fff4945a149db5385dece74f348b22e56672f088b49699de5a4709b1097b"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "linear-progress.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.spacing-content",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.size-min-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.spacing-header",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.color-text-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.font-style",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.font-size-12",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.font-line-height-16",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.font-letter-spacing",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.color-track-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.radius-track",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.size-height-small",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.color-indicator-primary",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.color-text-helper",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.font-size-14",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.font-line-height-20",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.size-height-medium",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.size-height-large",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.color-indicator-success",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.color-indicator-warning",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "linear-progress.color-indicator-error",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-HEADER",
+        "SRC-CAPTURE",
+        "SRC-IDENTITY",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API con fuentes, receta adoptada y evidencia ejecutada."
+      ]
+    },
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HEADER",
+        "SRC-CAPTURE",
+        "SRC-IDENTITY",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ANATOMY con fuentes, receta adoptada y evidencia ejecutada."
+      ]
+    },
+    {
+      "id": "REQ-CONTENT",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-HEADER",
+        "SRC-CAPTURE",
+        "SRC-IDENTITY",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-CONTENT con fuentes, receta adoptada y evidencia ejecutada."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HEADER",
+        "SRC-CAPTURE",
+        "SRC-IDENTITY",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-LAYOUT con fuentes, receta adoptada y evidencia ejecutada."
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HEADER",
+        "SRC-CAPTURE",
+        "SRC-IDENTITY",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TYPOGRAPHY con fuentes, receta adoptada y evidencia ejecutada."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HEADER",
+        "SRC-CAPTURE",
+        "SRC-IDENTITY",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-THEME con fuentes, receta adoptada y evidencia ejecutada."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HEADER",
+        "SRC-CAPTURE",
+        "SRC-IDENTITY",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS con fuentes, receta adoptada y evidencia ejecutada."
+      ]
+    },
+    {
+      "id": "REQ-FUNCTION",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-HEADER",
+        "SRC-CAPTURE",
+        "SRC-IDENTITY",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-FUNCTION con fuentes, receta adoptada y evidencia ejecutada."
+      ]
+    },
+    {
+      "id": "REQ-PROTOTYPE",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HEADER",
+        "SRC-CAPTURE",
+        "SRC-IDENTITY",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-PROTOTYPE con fuentes, receta adoptada y evidencia ejecutada."
+      ]
+    },
+    {
+      "id": "REQ-A11Y",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-HEADER",
+        "SRC-CAPTURE",
+        "SRC-IDENTITY",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-A11Y con fuentes, receta adoptada y evidencia ejecutada."
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HEADER",
+        "SRC-CAPTURE",
+        "SRC-IDENTITY",
+        "SRC-DEFS",
+        "SRC-VARS",
+        "SRC-RECONCILIATION"
+      ],
+      "acceptance": [
+        "Contrastar REQ-DEPENDENCIES con fuentes, receta adoptada y evidencia ejecutada."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HEADER",
+        "SRC-CAPTURE",
+        "SRC-IDENTITY",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA con fuentes, receta adoptada y evidencia ejecutada."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Header(Label, Value)",
+      "Track(Indicator/private indeterminate instance)",
+      "Helper text"
+    ],
+    "composition": "fixed-no-slots-private-animation-helper",
+    "accessibility": "defined-host-runtime-not-implemented"
+  }
+}
+---
+
+# Linear Progress Bar1.0.1
+
+Contrato normativo de diseño y función. Fuentes observacionales y recetas son proyecciones trazables.
+
+### REQ-API
+
+Conservar72 combinaciones reales: type primary/success/warning/error, size small/medium/large y value0%/25%/50%/75%/100%/indeterminate. Particionar nativamente por tamaño en tres sets de24 sin añadir combinaciones. Propiedades Label TEXT, Helper text TEXT y Show label/Show value/Show helper text BOOLEAN true. El porcentaje se edita en Value; no calcula avance. La resolución lógica de size selecciona el set y sus keys reales.
+
+### REQ-ANATOMY
+
+Anatomía: Header(Label, Value), Track(Indicator) y Helper text. Indeterminate compone una instancia del único helper privado __Linear Progress/Indeterminate, con type y position rest/exit/enter. Se conservan doce fases y un uso por cada variante indeterminada; no exponer el helper como componente público ni reconstruir Loader. No hay iconos, Slot ni lista extensible.
+
+### REQ-CONTENT
+
+Por decisión humana, Show label controla exclusivamente Label y Show value exclusivamente Value. Ninguno oculta el otro. Header permanece como contenedor HUG; al apagar ambos conserva16/20px en el motor nativo, Value se alinea al extremo derecho incluso sin etiqueta. Al apagar ambos, la cabecera queda vacía; para solo riel la receta oculta Header desde la instancia y retira ese alto reservado. Show helper text permanece independiente. Label y Helper text son editables y multilínea HEIGHT/FILL; Value es texto editable, sin decimales como guía de contenido. Ejemplos fiscales no son reglas de producto ni validación.
+
+### REQ-LAYOUT
+
+Ancho flexible y mínimo120px; alturas fuente completas44/52/56 para small/medium/large, con riel4/8/12. Header y Helper abrazan el contenido; espaciado4 entre partes y8 entre Label y Value. Radiofull compartido. El indicador determinado conserva ratios0/25/50/75/100;0% mantiene ancho25% fuera del riel a la izquierda para Smart Animate y debe quedar completamente recortado. Indeterminate mantiene segmento74/246 del ancho y posiciones relativas rest86/246, exit1 y enter−74/246. Normalizar las cuatro cabeceras small/100% de FIXED a FILL para conservar el extremo derecho de Value. Escalar horizontalmente al redimensionar sin usar un token por porcentaje/ancho; preservar grosor vertical en tres tamaños.
+
+### REQ-TYPOGRAPHY
+
+Manrope Regular:12/16 para small y Helper de todos los tamaños;14/20 para Header medium/large. Tracking0px. Dos estilos compartidos propios de la familia, con cinco bindings tipográficos y estilo aplicado en cada texto/instancia. No reutilizar estilos de otras familias que enlazan sus tokens de componente aunque coincidan visualmente.
+
+### REQ-THEME
+
+Solo el indicador primary sigue el vector fuente Contable/Administrativo/Servicios/Personas. Success, warning, error, riel y textos son invariantes y repiten su alias semántico en los cuatro modos. El indicador es un FRAME con scope FRAME_FILL; su semántico fuente con nombre icon no obliga a SHAPE_FILL. No aplicar excepciones de Tab ni inventar estados hover/disabled.
+
+### REQ-TOKENS
+
+Aplicar BH-P07:22 firmas mínimas en linear-progress/ dentro de component, compartidas entre principales y helper privado. Añadir únicamente primitive.size-120 y semantic.size-120 para el mínimo observado. La extensión conserva las646 identidades y definiciones anteriores; total670, con157 primitivas,118 semánticos y395 de componente en las tres colecciones existentes. La receta deriva2532 bindings candidatos de la fuente; la construcción puede añadir bindings a geometría de la dependencia cuando la API lo requiera y debe registrarlos. Valores/aliases pertenecen al token set seleccionado; no duplicarlos en esta norma.
+
+### REQ-FUNCTION
+
+Representa un proceso real. Primary comunica progreso normal; success resultado correcto; warning avance con advertencias y error fallo/detención explicados en Helper. El host suministra el avance real, conserva el valor al fallar y confirma100% antes de success o retiro. Indeterminate se usa mientras no se conoce el total; no simular avance en producción. La guía sugiere nombre del proceso en gerundio, conteos localizados y sin datos personales. Esperas largas y notificación final pertenecen al host; no implementar backend, React ni validación de datos.
+
+### REQ-PROTOTYPE
+
+Conservar la secuencia Figma determinada0→25→50→75→100, con10ms de espera y800ms Smart Animate lineal por tramo, y detenerse en100. Es una demostración de porcentajes de muestra, incluso para los colores warning/error; no implica que un error productivo progrese solo. El helper indeterminado recorre rest→exit en800ms lineal, exit→enter instantáneo y enter→rest en800ms lineal, con esperas10ms. Su ciclo nativo observado prevalece sobre la prosa fuente anterior estática/1.5s ease-in-out. Un grafo guardado no acredita reproducción: verificar en presentador avance, final estable y movimiento reiterado del indeterminado.
+
+### REQ-A11Y
+
+La implementación web futura requiere role progressbar, nombre accesible vinculado al proceso, min0/max100 y valor actual determinado; omitir aria-valuenow en indeterminate y respetar prefers-reduced-motion. Figma no acredita ARIA, lector, teclado ni preferencia del sistema. Advertencias/fallos necesitan explicación textual, no solo color. La medición del corte adoptado exige indicador/riel≥3:1 y texto/fondo blanco≥4.5:1; conservar fórmula y cifras reales sin copiar las afirmaciones globales de la raíz como certificado.
+
+### REQ-DEPENDENCIES
+
+El mapa vigente de auditoría inversa, identificado por ID/key y referenciado en SRC-RECONCILIATION, registra File Upload como consumidor directo: tres usos actuales del principal success/large/100%, con ancho FILL, riel12, Show label/Show value/Show helper text apagados y Header oculto. Los tres ya eran oficiales: conservar sus IDs/key y overrides; la revisión no recrea ni sustituye instancias. Son usos del principal, guía y prototipo, no tres familias. No se encontraron otros consumidores externos entre17páginas y5049instancias; las coincidencias de selección indeterminate de Checkbox y Loader pertenecen a otras funciones. El helper privado sí está usado: conservar sus12fases e identidad, sin convertirlo en dependencia pública. Las relaciones inversas son evidencia de impacto, no dependencias normativas del hijo hacia el padre; evitar ciclos. La auditoría inicial sin consumidores permanece como historia de ADR-032. Fuente y proyecto anterior continúan en solo lectura.
+
+### REQ-QA
+
+Verificar22 variables de componente y las dos Foundations, tres colecciones, scopes/WEB/aliases exactos, dos estilos vinculados,72 principales y12 fases privadas. Contrastar geometría/bindings fuente con tolerancia0.02px y canales de color0.000001; las adaptaciones humanas se prueban aparte. Cubrir las ocho combinaciones de visibilidad en cuatro modos, contenido largo/corto/vacío, anchuras120/246/360/640, cambios de variante y restauración, clipping0%, ratios, dependencia anidada y grosor del indeterminado. Revisar guía compacta de instancias y reproducción real. Contexto completo dentro de65536bytes; separar QA nativo, núcleo y web diferido.
+
+
+| ID lógico | Ruta Figma |
+|---|---|
+| linear-progress.spacing-none | linear-progress/spacing/none |
+| linear-progress.spacing-content | linear-progress/spacing/content |
+| linear-progress.size-min-width | linear-progress/size/min-width |
+| linear-progress.spacing-header | linear-progress/spacing/header |
+| linear-progress.color-text-default | linear-progress/color/text/default |
+| linear-progress.font-family | linear-progress/font/family |
+| linear-progress.font-style | linear-progress/font/style |
+| linear-progress.font-size-12 | linear-progress/font/size-12 |
+| linear-progress.font-line-height-16 | linear-progress/font/line-height-16 |
+| linear-progress.font-letter-spacing | linear-progress/font/letter-spacing |
+| linear-progress.color-track-default | linear-progress/color/track/default |
+| linear-progress.radius-track | linear-progress/radius/track |
+| linear-progress.size-height-small | linear-progress/size/height-small |
+| linear-progress.color-indicator-primary | linear-progress/color/indicator/primary |
+| linear-progress.color-text-helper | linear-progress/color/text/helper |
+| linear-progress.font-size-14 | linear-progress/font/size-14 |
+| linear-progress.font-line-height-20 | linear-progress/font/line-height-20 |
+| linear-progress.size-height-medium | linear-progress/size/height-medium |
+| linear-progress.size-height-large | linear-progress/size/height-large |
+| linear-progress.color-indicator-success | linear-progress/color/indicator/success |
+| linear-progress.color-indicator-warning | linear-progress/color/indicator/warning |
+| linear-progress.color-indicator-error | linear-progress/color/indicator/error |

@@ -1,0 +1,337 @@
+---
+{
+  "schema_version": 1,
+  "id": "USER-SELECTOR-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-034"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/header-request.json",
+      "sha256": "162763378881378a8cab402d9b057a03c094823b30aedae7907190721bade59f"
+    },
+    {
+      "id": "SRC-TEMP",
+      "path": "evidence/authorization/header-temporary-icon-button-decision.json",
+      "sha256": "72e70eb58d3421008d4883ebbd6ed1e49536f9dc82c98f7a00eca23db23a49cd"
+    },
+    {
+      "id": "SRC-WIDTH",
+      "path": "evidence/authorization/header-minimum-width-decision.json",
+      "sha256": "9983111dd79d29186a635509aca87b7dd636a5535d9514bbd40a1aeeb469e7ae"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/header-pilot/source/capture-manifest.json",
+      "sha256": "47f0978433f3a56afdba9cc8dfe4aec1cd767bf4431f4c77ef6945eff2f211f4"
+    },
+    {
+      "id": "SRC-DEFS",
+      "path": "evidence/header-pilot/source/definitions.json",
+      "sha256": "9d99bd81ba4d9df2051fc6e7cdc1e76045180dcff1815d769f22ce2b8d78f127"
+    },
+    {
+      "id": "SRC-ACTIVE",
+      "path": "evidence/header-pilot/source/active-definitions.json",
+      "sha256": "9725a16a439c5de77bcdf1ccc58a7fcac8e530c2a86418993a8d46979ff95d11"
+    },
+    {
+      "id": "SRC-VARS",
+      "path": "evidence/header-pilot/source/variables.json",
+      "sha256": "44ccb2c36a99111c6f4c29092d7a6f7af5af93ad3bc87d555eb921209397ecf8"
+    },
+    {
+      "id": "SRC-ICONS",
+      "path": "protocols/06-PHOSPHOR-ICONS.md",
+      "sha256": "aad27541d6cb8b9deadeac6ad966a0fe77d2203ce0989525b6c8c2028d5c0f68"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "contract",
+      "id": "AVATAR-001",
+      "version": "3.0.0",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "user-selector.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "user-selector.spacing-content",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "user-selector.color-bg-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "user-selector.radius-leading",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "user-selector.radius-control",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "user-selector.size-icon-24",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "user-selector.color-icon-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "user-selector.color-bg-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "user-selector.color-stroke-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "user-selector.radius-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "user-selector.border-focus-width",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ANATOMY con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-LAYOUT con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-ICONS",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ICONS con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-FUNCTION",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-FUNCTION con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-THEME con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-BOUNDARIES",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-BOUNDARIES con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-TEMP",
+        "SRC-WIDTH",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-ACTIVE",
+        "SRC-VARS",
+        "SRC-ICONS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA con fuentes, receta y evidencia ejecutada del destino."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "8983:862 user-selector"
+    ],
+    "composition": "source-defined-composition-with-official-dependencies",
+    "accessibility": "host-intent-not-implemented"
+  }
+}
+---
+
+# user-selector1.0.0
+
+Contrato normativo de diseño y función; observaciones y recetas permanecen referenciales.
+
+### REQ-API
+
+Cuatro variantes state=default/hover/focus/open; únicamente state es propiedad propia. Avatar es instancia expuesta, con sus propiedades oficiales; no inventar User name o Initials en el padre. Usar extra-large y mantener la cuenta accesible en el host.
+
+### REQ-ANATOMY
+
+Componer AVATAR-0013.0.0 text/extra-large, Initials JA y Show status false como fuente, con CaretDown Light24. Avatar permite sus contenidos por su propio contrato; el Header conserva extra-large para alinear los controles48. No duplicar Dot, estilos, iniciales ni fotos dentro del selector.
+
+### REQ-LAYOUT
+
+Root HORIZONTAL HUG, gap8, padding derecho8 y restantes0; cuerpo inicial88×48. Default/hover/open conservan radios24 a la izquierda y8 a la derecha; focus usa24 en las cuatro esquinas y anillo absoluto96×56 a−4, radio32 y borde2. Open rota el caret hacia arriba. Mantener esas asimetrías y el crecimiento de instancia, sin crear un token por ancho88 derivado.
+
+### REQ-ICONS
+
+El caret es indicador de apertura sin texto visible asociado; conserva su rol propio y no toma el blanco de las iniciales dentro del Avatar. Avatar compone su propio contenido/colores; no confundirlo con una etiqueta adyacente. Registrar rol, key,24px y SHAPE_FILL conforme BH-P06.
+
+### REQ-FUNCTION
+
+Solicita el menú Mi cuenta al host: perfil, preferencias y salida según el producto. El host aporta nombre accesible y aria-haspopup/menu/expanded; aquí no se implementa sesión, permisos ni menú real. La reproducción solo muestra estados y destinos ficticios.
+
+### REQ-TOKENS
+
+Once firmas propias bajo header/user/ en component y58 bindings candidatos. Superficies siguen los vectores fuente; foco e indicador conservan su clasificación observada. No crear tokens tipográficos propios para contenido que pertenece a Avatar.
+
+### REQ-THEME
+
+Aplicar el vector fuente Contable/Administrativo/Servicios/Personas desde component. Conservar aliases completos de la receta y clasificar roles invariantes/temáticos; no aplicar excepciones de otras familias ni duplicar semánticos cromáticos.
+
+### REQ-BOUNDARIES
+
+Figma fuente y proyecto anterior permanecen en solo lectura. Este contrato habilita Figma y documentación, sin implementar React, Next.js, Tailwind, backend, ARIA, teclado ni datos reales. La prosa de accesibilidad es intención para el host, no certificación WCAG.
+
+### REQ-QA
+
+Verificar matriz real, propiedades/exposición, aliases/scopes/WEB en cuatro modos, estilos aplicados, bindings, edición/visibilidad, geometría, dependencia oficial e identidad Phosphor. Tolerancia geométrica0.05px y canal0.000001. Conservar adaptaciones registradas; no atribuir QA de diseño a pruebas de infraestructura. Consultar BH-P04/BH-P08 para evidencias, versiones y PDF por envío.

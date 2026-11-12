@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "run": "2026-11-11-root-avatar-header-sidebar",
+  "status": "COMPLETE_LOCAL",
+  "started": 1794438159.839318,
+  "invocations": 4,
+  "retry_attempts": 2,
+  "previous_attempts": [
+    {
+      "started": 1794437931.5166159,
+      "elapsed_seconds": 2.882,
+      "status": "NEEDS_SEMANTICS",
+      "phases": [
+        {
+          "name": "documents",
+          "seconds": 1.341,
+          "status": "PASS",
+          "result": {
+            "status": "PASS",
+            "files": 747,
+            "findings": 0,
+            "timings": {
+              "inventory": 0.27,
+              "metadata": 0.617,
+              "status": 0.148,
+              "validation": 0.264
+            }
+          }
+        },
+        {
+          "name": "graph_plan",
+          "seconds": 1.007,
+          "status": "PASS",
+          "result": {
+            "status": "PREPARED",
+            "run": "2026-11-11-root-avatar-header-sidebar",
+            "semantic_files": 26,
+            "chunks": 4,
+            "next": "Extraer cada chunk según la skill Graphify y después ejecutar scripts/ds graph close --run 2026-11-11-root-avatar-header-sidebar"
+          }
+        }
+      ]
+    },
+    {
+      "started": 1794438080.4276779,
+      "elapsed_seconds": 2.114,
+      "status": "BLOCKED",
+      "phases": [
+        {
+          "name": "documents",
+          "seconds": 0.754,
+          "status": "PASS",
+          "result": {
+            "status": "PASS",
+            "files": 747,
+            "findings": 0,
+            "timings": {
+              "inventory": 0.358,
+              "metadata": 0.025,
+              "status": 0.138,
+              "validation": 0.19
+            }
+          }
+        },
+        {
+          "name": "graph_plan",
+          "seconds": 0.31,
+          "status": "PASS",
+          "result": {
+            "status": "PREPARED",
+            "run": "2026-11-11-root-avatar-header-sidebar",
+            "semantic_files": 26,
+            "chunks": 4
+          }
+        },
+        {
+          "name": "graph",
+          "seconds": 0.531,
+          "status": "BLOCKED",
+          "error": "Invalid semantic node ID"
+        }
+      ]
+    },
+    {
+      "started": 1794438117.8813171,
+      "elapsed_seconds": 10.35,
+      "status": "BLOCKED",
+      "phases": [
+        {
+          "name": "documents",
+          "seconds": 0.811,
+          "status": "PASS",
+          "result": {
+            "status": "PASS",
+            "files": 747,
+            "findings": 0,
+            "timings": {
+              "inventory": 0.384,
+              "metadata": 0.018,
+              "status": 0.15,
+              "validation": 0.213
+            }
+          }
+        },
+        {
+          "name": "graph_plan",
+          "seconds": 0.753,
+          "status": "PASS",
+          "result": {
+            "status": "PREPARED",
+            "run": "2026-11-11-root-avatar-header-sidebar",
+            "semantic_files": 26,
+            "chunks": 4
+          }
+        },
+        {
+          "name": "graph",
+          "seconds": 8.24,
+          "status": "BLOCKED",
+          "error": "(0, {'specs/components/avatar.contract.v1.0.0.md', 'sources/figma-snapshots/root-families-2026-11-11/header.1.0.1.md.txt', 'qa/contracts/header-chain.v1.0.0.review.md', 'qa/contracts/avatar-group.v1.0.0.review.md', 'qa/implementations/avatar.v1.0.0.review.md', 'qa/implementations/header-chain.v1.0.0.review.md', 'sources/figma-snapshots/root-families-2026-11-11/header-actions.2.0.0.md.txt', 'specs/components/header.contract.v1.0.0.md', 'specs/components/company-selector.contract.v1.0.0.md', 'qa/implementations/sidebar-secondary-control.v1.0.1.review.md', 'sources/figma-snapshots/root-families-2026-11-11/avatar-group.3.0.0.md.txt', 'sources/figma-snapshots/root-families-2026-11-11/company-selector.1.0.0.md.txt', 'specs/components/header-actions.contract.v1.0.0.md', 'sources/figma-snapshots/root-families-2026-11-11/avatar.3.0.0.md.txt', 'specs/components/avatar-group.contract.v1.0.0.md', 'sources/figma-snapshots/root-families-2026-11-11/user-selector.1.0.0.md.txt', 'qa/contracts/avatar.v1.0.0.review.md'})"
+        }
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "name": "documents",
+      "seconds": 0.739,
+      "status": "PASS",
+      "result": {
+        "status": "PASS",
+        "files": 747,
+        "findings": 0,
+        "timings": {
+          "inventory": 0.328,
+          "metadata": 0.035,
+          "status": 0.144,
+          "validation": 0.189
+        }
+      }
+    },
+    {
+      "name": "graph_plan",
+      "seconds": 0.701,
+      "status": "PASS",
+      "result": {
+        "status": "PREPARED",
+        "run": "2026-11-11-root-avatar-header-sidebar",
+        "semantic_files": 26,
+        "chunks": 4
+      }
+    },
+    {
+      "name": "graph",
+      "seconds": 8.381,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "run": "2026-11-11-root-avatar-header-sidebar",
+        "files": 747,
+        "nodes": 3068,
+        "edges": 5828,
+        "config_sha256": "64200147d7f8876266bfc3547518007dc7c1a5d29ea83d98bb44712ac6b7b6ed",
+        "output_sha256": {
+          "graph.json": "1be456f98112740724e19f5edaf4ca4ad13e980680f97fd1460ffc7a801904ec",
+          "graph.html": "b819c85ca87ffc01cb079ac622dea384b953254aca3cda96794132894c16e75d",
+          "GRAPH_REPORT.md": "d3dc47a9d5c26a807c7eaa0b482a4b1bde77f71dd4fed46e177bb47f883da905",
+          "manifest.json": "a87ba8031b750add81ab0dfa89ded374f81adf39094a02ad8c9b006a28b29a07",
+          ".graphify_health.json": "fbb0c501c75389927947f882c198696203d26d1da4422024b44c0fa6eda65aff",
+          ".graphify_labels.json": "62f5346cd62c4df433424f26db96f1bd8deffdf17e7d9b84144c99a6a63bf27e",
+          ".graphify_labels.json.sig": "957e4c713d3c8649abeda1cf027b84f9df25e37911d02226449588f433d077a9",
+          "cost.json": "da0b615b872006a0cadf68f0525a206abe695acb4121ed7e4761900316fd5b20"
+        },
+        "source_link_limitations": 0,
+        "semantic_usage": "UNAVAILABLE; not zero",
+        "scope": "Local corpus freshness, deterministic documentation checks, no Figma QA or design approval",
+        "extraction_tool_sha256": "593eb639d649019c81606b410999b243c76e43ad3b7988ee90a120e973dd8bd7",
+        "extraction_sha256": {
+          "ast.json": "1047c819693fe4d1f5d68a7d0b7428f82446db1f024c9c9e41f2b7e365020dfe",
+          "structural-supplement.json": "86343f722748f6b1edbc6f0db8127e384ae7b84cae4ff42a3d38f41447c11c42",
+          "source-plan.json": "6f26f39dae7260416f5505ebefadf3e53036f9de1448f0963c75a1fc24113b21"
+        }
+      }
+    },
+    {
+      "name": "consumption",
+      "seconds": 5.683,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "index_bytes": 271055,
+        "documents": 56,
+        "relations": 65
+      }
+    },
+    {
+      "name": "catalog",
+      "seconds": 0.7,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "files": 710,
+        "components": 24,
+        "ds_digest": "8f38617dc9408ae074a92718d3a2071e3325b29231cbe5ef9611ea8ca2e63266",
+        "bundle_bytes": 4183156
+      }
+    },
+    {
+      "name": "skills_sync_export",
+      "seconds": 0.242,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "version": "0.1.3",
+        "ds_digest": "LOCAL_CATALOG",
+        "components": 0,
+        "errors": [],
+        "scope": "Package integrity and source freshness; no design approval or live Figma/web QA",
+        "operation": "UNCHANGED"
+      }
+    },
+    {
+      "name": "skills_integrity",
+      "seconds": 0.131,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "version": "0.1.3",
+        "ds_digest": "LOCAL_CATALOG",
+        "components": 0,
+        "errors": [],
+        "scope": "Package integrity and source freshness; no design approval or live Figma/web QA"
+      }
+    },
+    {
+      "name": "source_integrity",
+      "seconds": 0.122,
+      "status": "PASS",
+      "result": {
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "graph_integrity",
+      "seconds": 0.3,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "errors": [],
+        "files": 747,
+        "nodes": 3068,
+        "edges": 5828,
+        "scope": "Graph freshness/integrity, not Figma validation"
+      }
+    }
+  ],
+  "usage_start": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "usage_end": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "agent_tokens": "UNAVAILABLE",
+  "agent_tool_calls": "UNAVAILABLE",
+  "command_phase_calls": 9,
+  "publication": "NOT_RUN",
+  "installation": "NOT_REQUESTED; portable packages verified",
+  "publication_holds": [
+    "registry/decisions.md"
+  ],
+  "reuse": {
+    "ds_core.corpus": {
+      "executed": 1,
+      "reused": 7
+    },
+    "yaml_files": {
+      "executed": 25,
+      "reused": 497,
+      "persisted_reused": 114
+    },
+    "ds_core.generate_status": {
+      "executed": 2,
+      "reused": 1
+    },
+    "ds_core.documentation_check": {
+      "executed": 2,
+      "reused": 0
+    },
+    "ds_skills.source_inputs": {
+      "executed": 1,
+      "reused": 10
+    },
+    "ds_consumption.validate_sources": {
+      "executed": 1,
+      "reused": 4
+    }
+  },
+  "hash_reads": 1634,
+  "source_fingerprint": "5b9e9583fbddf77a1e3d11a9bd51a300b3103ef33c5e57da2148b9696fd5f6eb",
+  "elapsed_seconds": 17.842,
+  "concurrent_attempts": 0
+}

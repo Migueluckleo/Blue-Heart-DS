@@ -1,0 +1,33 @@
+{
+  "base_status": "PASS",
+  "base_closure": "output/closures/2026-11-11-blueheart-resolvers.json",
+  "protocols": [
+    "protocols/01-ENVIRONMENT-AND-TOOLS.md",
+    "protocols/02-DOCUMENT-INGESTION-AND-STORAGE.md",
+    "protocols/03-CONTRACT-SYNTHESIS.md",
+    "protocols/04-FIGMA-CONSTRUCTION.md",
+    "protocols/05-SELF-DOCUMENTATION-AND-TRACEABILITY.md",
+    "protocols/06-QA-AND-VALIDATION.md",
+    "protocols/07-WEB-COMPONENTS-AND-TECHNICAL-DOCUMENTATION.md",
+    "protocols/08-SKILLS-AND-RELEASES.md",
+    "protocols/SLOTS-REVIEW-AND-IMPLEMENTATION.md"
+  ],
+  "verification": {
+    "web_catalogue": "PASS_0_FAMILIES",
+    "documentary": "PASS",
+    "scope_query": "PASS",
+    "figma_package_snapshot": "PASS",
+    "zero_coverage_queries": {
+      "contpaqi-figma-screens": "UNKNOWN_COMPONENT",
+      "contpaqi-po-prototypes": "UNKNOWN_COMPONENT"
+    },
+    "figma_consumption_sandbox": "PENDING",
+    "po_html_export_and_handoff": "PASS",
+    "po_browser_qa": "NOT_RUN",
+    "po_browser_reason": "Chrome terminated during launch in Playwright"
+  },
+  "reference_recovery": "output/bootstrap/recovery.json",
+  "config_decision": "The surviving configs were adapted to the isolated local root; their old manifests did not match byte for byte.",
+  "published": false,
+  "managed_installation": false
+}

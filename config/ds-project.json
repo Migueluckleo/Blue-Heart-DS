@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "protocol_package": "0.5.0",
+  "runtime": {
+    "graphifyy": "0.9.65",
+    "python_major_minor": [
+      3,
+      12
+    ],
+    "yaml_backend": "ruby-psych"
+  },
+  "exclude_roots": [
+    "graphify-out",
+    "output",
+    "tmp",
+    ".codex-build",
+    ".codex-finalizer",
+    ".git",
+    "catalog",
+    ".codex"
+  ],
+  "exclude_prefixes": [
+    "registry/generated/",
+    "implementations/web/node_modules/",
+    "implementations/web/.pnpm-store/",
+    "implementations/web/.next/",
+    "implementations/web/out/",
+    "implementations/web/test-results/",
+    "implementations/web/playwright-report/",
+    "implementations/web/src/generated/",
+    "implementations/web/public/",
+    "output/skills/",
+    "implementations/web/docs/components/",
+    "implementations/web/tsconfig.tsbuildinfo",
+    "implementations/web/next-env.d.ts",
+    "implementations/web/docs/TYPOGRAPHY.md"
+  ],
+  "supplemental_design_data": [
+    "specs/tokens/blueheart-variables.v0.1.2.json"
+  ],
+  "supplemental_documents": [],
+  "supplemental_web_sources": [
+    "implementations/web/src/styles.css",
+    "implementations/web/pnpm-lock.yaml"
+  ],
+  "supplemental_skill_sources": [
+    "skills/contpaqi-po-prototypes/assets/starter/prototype/globals.css"
+  ],
+  "protected_data": {
+    "specs/tokens/blueheart-variables.v0.1.2.json": {
+      "sha256": "09a96d3707735fa129e3cfa99de6ccac1a9d94ccf5cc19fa5d282de867629993",
+      "authority": "specs/foundations/blueheart-variables.contract.v0.1.2.md"
+    },
+    "specs/data/buttons.v1.0.0.json": {
+      "sha256": "d271e1de91be664fe0c78eef8ea311fdafa52073535f4349a7d78f7611d4c9fa",
+      "authority": "specs/components/buttons.contract.v1.0.0.md"
+    },
+    "specs/data/loader.v1.0.0.json": {
+      "sha256": "09a7070ebb3dd5b583ce613e61a59c3b8321fd75060da671a13a1b429049abfe",
+      "authority": "specs/components/loader.contract.v1.0.0.md"
+    }
+  },
+  "historical_link_exceptions": [],
+  "graph_smoke_pairs": [
+    [
+      "protocols/05-SELF-DOCUMENTATION-AND-TRACEABILITY.md",
+      "references/EFFICIENT-CLOSURE.md"
+    ],
+    [
+      "protocols/07-WEB-COMPONENTS-AND-TECHNICAL-DOCUMENTATION.md",
+      "implementations/web/README.md"
+    ],
+    [
+      "AGENTS.md",
+      "protocols/SLOTS-REVIEW-AND-IMPLEMENTATION.md"
+    ],
+    [
+      "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+      "specs/tokens/blueheart-variables.v0.1.2.json"
+    ],
+    [
+      "specs/components/buttons.contract.v1.0.0.md",
+      "specs/data/buttons.v1.0.0.json"
+    ],
+    [
+      "specs/components/loader.contract.v1.0.0.md",
+      "specs/data/loader.v1.0.0.json"
+    ]
+  ],
+  "source_mode": "local"
+}

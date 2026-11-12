@@ -1,0 +1,1012 @@
+---
+{
+  "schema_version": 1,
+  "id": "CHIP-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-031"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/chips-request.json",
+      "sha256": "bc619451633676879ba7085d694464ef740b8d729ad0a33d022619afa8dfe7dc"
+    },
+    {
+      "id": "SRC-IDENTITY",
+      "path": "evidence/chips-pilot/source/identity.json",
+      "sha256": "4703e0449e51e7fb40c100e5a85eb9dbd026b27a0d143433594151903c45c325"
+    },
+    {
+      "id": "SRC-VARIABLES",
+      "path": "evidence/chips-pilot/source/variables-and-assets.json",
+      "sha256": "d61e1df8731d931ad1867b35fb267563b23f7ad886042757963cfb5b9c19065f"
+    },
+    {
+      "id": "SRC-INDEX",
+      "path": "evidence/chips-pilot/source/index.json",
+      "sha256": "1dc3672adde910e96d203063182a33417f7540c1e8139ef6db5a0df6825e167f"
+    },
+    {
+      "id": "SRC-V0",
+      "path": "evidence/chips-pilot/source/variants-0.json",
+      "sha256": "86c54c35cf91a7959aa4d323f2f37cd5a00ee619347c38dc6ef0fa0006a43855"
+    },
+    {
+      "id": "SRC-V1",
+      "path": "evidence/chips-pilot/source/variants-1.json",
+      "sha256": "be43659b37fac729fa45098d25b7fbc5d55d59af4bf3a1a6b6a83bb4855493a5"
+    },
+    {
+      "id": "SRC-V2",
+      "path": "evidence/chips-pilot/source/variants-2.json",
+      "sha256": "add248d509d5b13092aef83c4a64a76b4b3a2308863e2429bcac8eaa0b76187a"
+    },
+    {
+      "id": "SRC-V3",
+      "path": "evidence/chips-pilot/source/variants-3.json",
+      "sha256": "f29d9b673b2b3b60197a88d09fea143486e79636558ac1b907523341c82eb2c7"
+    },
+    {
+      "id": "SRC-V4",
+      "path": "evidence/chips-pilot/source/variants-4.json",
+      "sha256": "10db6ed23c84ab6c978c9f16d85661762b5865ef3fcc5677d49639e4e46db214"
+    },
+    {
+      "id": "SRC-V5",
+      "path": "evidence/chips-pilot/source/variants-5.json",
+      "sha256": "7ad5421de246d9994a6902ba34d58688d6b2d0f1fb85d15893726503e3706873"
+    },
+    {
+      "id": "SRC-V6",
+      "path": "evidence/chips-pilot/source/variants-6.json",
+      "sha256": "52f30a0b90732096125263850604c1c5609c154fcb432a4f57a3911716f27f03"
+    },
+    {
+      "id": "SRC-V7",
+      "path": "evidence/chips-pilot/source/variants-7.json",
+      "sha256": "c08cdb949625c797d3c99b32100c45097ca6271af9aa01d7012a7076dc96c588"
+    },
+    {
+      "id": "SRC-V8",
+      "path": "evidence/chips-pilot/source/variants-8.json",
+      "sha256": "33d6a2e00686c988d8e7cc8d980622a3f3abe2cbad63a34e538da49cbf10ecc8"
+    },
+    {
+      "id": "SRC-V9",
+      "path": "evidence/chips-pilot/source/variants-9.json",
+      "sha256": "84cf55d57fbf3b131b37c720332112f3e3a217de6552de03a0b146eb0e433197"
+    },
+    {
+      "id": "SRC-V10",
+      "path": "evidence/chips-pilot/source/variants-10.json",
+      "sha256": "01552ca6efcb61cf09e071ec710e9be67cd08786ab684ee0dd729f2a0a9a943c"
+    },
+    {
+      "id": "SRC-V11",
+      "path": "evidence/chips-pilot/source/variants-11.json",
+      "sha256": "07336970bfddae5cea3cad095ed4120a69243d5d4410ea1f19c740e0468c35ec"
+    },
+    {
+      "id": "SRC-V12",
+      "path": "evidence/chips-pilot/source/variants-12.json",
+      "sha256": "02412333024b937beb997c03e91a92c8b77198d9115c09e8286a52a9d878bb0c"
+    },
+    {
+      "id": "SRC-V13",
+      "path": "evidence/chips-pilot/source/variants-13.json",
+      "sha256": "f3a3faca2051130b4f088117955bc69a9648e09ca7f6546ef52cbfb2f006aa25"
+    },
+    {
+      "id": "SRC-V14",
+      "path": "evidence/chips-pilot/source/variants-14.json",
+      "sha256": "751448e89329c614a5d1cfd6f00647f92d0a282c36772493d608d7c75d98ff94"
+    },
+    {
+      "id": "SRC-V15",
+      "path": "evidence/chips-pilot/source/variants-15.json",
+      "sha256": "48169f66beb999ccbf80e0014451eb639a5b472b4af9d1f0fb4c752b26c3e888"
+    },
+    {
+      "id": "SRC-V16",
+      "path": "evidence/chips-pilot/source/variants-16.json",
+      "sha256": "093fa5af62a76638b96a360d818bb19a1a0b1f30fc53fe023c79c8378f13be61"
+    },
+    {
+      "id": "SRC-V17",
+      "path": "evidence/chips-pilot/source/variants-17.json",
+      "sha256": "7ec49cdbd1d785cfe1bf8a6aa9dde75ece617e85dc8870b77c2e350fa818d774"
+    },
+    {
+      "id": "SRC-V18",
+      "path": "evidence/chips-pilot/source/variants-18.json",
+      "sha256": "cf3c9f153943f5d0ee3c07e121a456c774e892f7427dab699b2e08eefe7d585d"
+    },
+    {
+      "id": "SRC-V19",
+      "path": "evidence/chips-pilot/source/variants-19.json",
+      "sha256": "8a42ab5b49de7d23505c23487c0b1e4349ab9a0d62f0148b181c6d0b9f23aa84"
+    },
+    {
+      "id": "SRC-V20",
+      "path": "evidence/chips-pilot/source/variants-20.json",
+      "sha256": "a7b2c22cc364ad05fc7048a52b2a3a346f1a655b08bb4565aba5b0e7f1d6ba51"
+    },
+    {
+      "id": "SRC-V21",
+      "path": "evidence/chips-pilot/source/variants-21.json",
+      "sha256": "4df9e11bcf6212e5851932178ca6c1fe6681c4b213547a144e151dbdb0f5d06a"
+    },
+    {
+      "id": "SRC-V22",
+      "path": "evidence/chips-pilot/source/variants-22.json",
+      "sha256": "9855e3fd18835937f24341a58846fcf2cc62ac76798dd30db4b80c66182cb226"
+    },
+    {
+      "id": "SRC-V23",
+      "path": "evidence/chips-pilot/source/variants-23.json",
+      "sha256": "6488e13a36ae566623371819f4bc1420bfa61c6161e0167511a42e6a3c75965b"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "chip.spacing-md",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.spacing-lg",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.spacing-sm",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.size-height-large",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.radius-container",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.color-bg-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.border-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.color-stroke-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.size-icon-large",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.color-icon-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.color-text-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.font-label-style",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.font-size-16",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.font-line-height-24",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.font-letter-spacing",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.spacing-xs",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.color-bg-counter-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.font-counter-style",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.font-size-14",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.size-height-medium",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.size-icon-medium",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.font-line-height-20",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.font-size-12",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.size-height-small",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.size-icon-small",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.font-line-height-16",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.font-size-10",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.size-icon-extra-small",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.color-bg-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.border-focus-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.color-stroke-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.color-icon-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.color-text-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.color-bg-selected-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.color-icon-selected",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.color-text-selected",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.color-bg-selected-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "chip.color-bg-selected-pressed",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-V0",
+        "SRC-V1",
+        "SRC-V2",
+        "SRC-V3",
+        "SRC-V4",
+        "SRC-V5",
+        "SRC-V6",
+        "SRC-V7",
+        "SRC-V8",
+        "SRC-V9",
+        "SRC-V10",
+        "SRC-V11",
+        "SRC-V12",
+        "SRC-V13",
+        "SRC-V14",
+        "SRC-V15",
+        "SRC-V16",
+        "SRC-V17",
+        "SRC-V18",
+        "SRC-V19",
+        "SRC-V20",
+        "SRC-V21",
+        "SRC-V22",
+        "SRC-V23"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API con las fuentes, receta seleccionada y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-V0",
+        "SRC-V1",
+        "SRC-V2",
+        "SRC-V3",
+        "SRC-V4",
+        "SRC-V5",
+        "SRC-V6",
+        "SRC-V7",
+        "SRC-V8",
+        "SRC-V9",
+        "SRC-V10",
+        "SRC-V11",
+        "SRC-V12",
+        "SRC-V13",
+        "SRC-V14",
+        "SRC-V15",
+        "SRC-V16",
+        "SRC-V17",
+        "SRC-V18",
+        "SRC-V19",
+        "SRC-V20",
+        "SRC-V21",
+        "SRC-V22",
+        "SRC-V23"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ANATOMY con las fuentes, receta seleccionada y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-V0",
+        "SRC-V1",
+        "SRC-V2",
+        "SRC-V3",
+        "SRC-V4",
+        "SRC-V5",
+        "SRC-V6",
+        "SRC-V7",
+        "SRC-V8",
+        "SRC-V9",
+        "SRC-V10",
+        "SRC-V11",
+        "SRC-V12",
+        "SRC-V13",
+        "SRC-V14",
+        "SRC-V15",
+        "SRC-V16",
+        "SRC-V17",
+        "SRC-V18",
+        "SRC-V19",
+        "SRC-V20",
+        "SRC-V21",
+        "SRC-V22",
+        "SRC-V23"
+      ],
+      "acceptance": [
+        "Contrastar REQ-LAYOUT con las fuentes, receta seleccionada y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-FOCUS",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-V0",
+        "SRC-V1",
+        "SRC-V2",
+        "SRC-V3",
+        "SRC-V4",
+        "SRC-V5",
+        "SRC-V6",
+        "SRC-V7",
+        "SRC-V8",
+        "SRC-V9",
+        "SRC-V10",
+        "SRC-V11",
+        "SRC-V12",
+        "SRC-V13",
+        "SRC-V14",
+        "SRC-V15",
+        "SRC-V16",
+        "SRC-V17",
+        "SRC-V18",
+        "SRC-V19",
+        "SRC-V20",
+        "SRC-V21",
+        "SRC-V22",
+        "SRC-V23"
+      ],
+      "acceptance": [
+        "Contrastar REQ-FOCUS con las fuentes, receta seleccionada y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-V0",
+        "SRC-V1",
+        "SRC-V2",
+        "SRC-V3",
+        "SRC-V4",
+        "SRC-V5",
+        "SRC-V6",
+        "SRC-V7",
+        "SRC-V8",
+        "SRC-V9",
+        "SRC-V10",
+        "SRC-V11",
+        "SRC-V12",
+        "SRC-V13",
+        "SRC-V14",
+        "SRC-V15",
+        "SRC-V16",
+        "SRC-V17",
+        "SRC-V18",
+        "SRC-V19",
+        "SRC-V20",
+        "SRC-V21",
+        "SRC-V22",
+        "SRC-V23"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TYPOGRAPHY con las fuentes, receta seleccionada y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-V0",
+        "SRC-V1",
+        "SRC-V2",
+        "SRC-V3",
+        "SRC-V4",
+        "SRC-V5",
+        "SRC-V6",
+        "SRC-V7",
+        "SRC-V8",
+        "SRC-V9",
+        "SRC-V10",
+        "SRC-V11",
+        "SRC-V12",
+        "SRC-V13",
+        "SRC-V14",
+        "SRC-V15",
+        "SRC-V16",
+        "SRC-V17",
+        "SRC-V18",
+        "SRC-V19",
+        "SRC-V20",
+        "SRC-V21",
+        "SRC-V22",
+        "SRC-V23"
+      ],
+      "acceptance": [
+        "Contrastar REQ-THEME con las fuentes, receta seleccionada y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-ICONS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-V0",
+        "SRC-V1",
+        "SRC-V2",
+        "SRC-V3",
+        "SRC-V4",
+        "SRC-V5",
+        "SRC-V6",
+        "SRC-V7",
+        "SRC-V8",
+        "SRC-V9",
+        "SRC-V10",
+        "SRC-V11",
+        "SRC-V12",
+        "SRC-V13",
+        "SRC-V14",
+        "SRC-V15",
+        "SRC-V16",
+        "SRC-V17",
+        "SRC-V18",
+        "SRC-V19",
+        "SRC-V20",
+        "SRC-V21",
+        "SRC-V22",
+        "SRC-V23"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ICONS con las fuentes, receta seleccionada y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-V0",
+        "SRC-V1",
+        "SRC-V2",
+        "SRC-V3",
+        "SRC-V4",
+        "SRC-V5",
+        "SRC-V6",
+        "SRC-V7",
+        "SRC-V8",
+        "SRC-V9",
+        "SRC-V10",
+        "SRC-V11",
+        "SRC-V12",
+        "SRC-V13",
+        "SRC-V14",
+        "SRC-V15",
+        "SRC-V16",
+        "SRC-V17",
+        "SRC-V18",
+        "SRC-V19",
+        "SRC-V20",
+        "SRC-V21",
+        "SRC-V22",
+        "SRC-V23"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS con las fuentes, receta seleccionada y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-FUNCTION",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-V0",
+        "SRC-V1",
+        "SRC-V2",
+        "SRC-V3",
+        "SRC-V4",
+        "SRC-V5",
+        "SRC-V6",
+        "SRC-V7",
+        "SRC-V8",
+        "SRC-V9",
+        "SRC-V10",
+        "SRC-V11",
+        "SRC-V12",
+        "SRC-V13",
+        "SRC-V14",
+        "SRC-V15",
+        "SRC-V16",
+        "SRC-V17",
+        "SRC-V18",
+        "SRC-V19",
+        "SRC-V20",
+        "SRC-V21",
+        "SRC-V22",
+        "SRC-V23"
+      ],
+      "acceptance": [
+        "Contrastar REQ-FUNCTION con las fuentes, receta seleccionada y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-CONTENT",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-V0",
+        "SRC-V1",
+        "SRC-V2",
+        "SRC-V3",
+        "SRC-V4",
+        "SRC-V5",
+        "SRC-V6",
+        "SRC-V7",
+        "SRC-V8",
+        "SRC-V9",
+        "SRC-V10",
+        "SRC-V11",
+        "SRC-V12",
+        "SRC-V13",
+        "SRC-V14",
+        "SRC-V15",
+        "SRC-V16",
+        "SRC-V17",
+        "SRC-V18",
+        "SRC-V19",
+        "SRC-V20",
+        "SRC-V21",
+        "SRC-V22",
+        "SRC-V23"
+      ],
+      "acceptance": [
+        "Contrastar REQ-CONTENT con las fuentes, receta seleccionada y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-A11Y",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-V0",
+        "SRC-V1",
+        "SRC-V2",
+        "SRC-V3",
+        "SRC-V4",
+        "SRC-V5",
+        "SRC-V6",
+        "SRC-V7",
+        "SRC-V8",
+        "SRC-V9",
+        "SRC-V10",
+        "SRC-V11",
+        "SRC-V12",
+        "SRC-V13",
+        "SRC-V14",
+        "SRC-V15",
+        "SRC-V16",
+        "SRC-V17",
+        "SRC-V18",
+        "SRC-V19",
+        "SRC-V20",
+        "SRC-V21",
+        "SRC-V22",
+        "SRC-V23"
+      ],
+      "acceptance": [
+        "Contrastar REQ-A11Y con las fuentes, receta seleccionada y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-PROTOTYPE",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-V0",
+        "SRC-V1",
+        "SRC-V2",
+        "SRC-V3",
+        "SRC-V4",
+        "SRC-V5",
+        "SRC-V6",
+        "SRC-V7",
+        "SRC-V8",
+        "SRC-V9",
+        "SRC-V10",
+        "SRC-V11",
+        "SRC-V12",
+        "SRC-V13",
+        "SRC-V14",
+        "SRC-V15",
+        "SRC-V16",
+        "SRC-V17",
+        "SRC-V18",
+        "SRC-V19",
+        "SRC-V20",
+        "SRC-V21",
+        "SRC-V22",
+        "SRC-V23"
+      ],
+      "acceptance": [
+        "Contrastar REQ-PROTOTYPE con las fuentes, receta seleccionada y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-V0",
+        "SRC-V1",
+        "SRC-V2",
+        "SRC-V3",
+        "SRC-V4",
+        "SRC-V5",
+        "SRC-V6",
+        "SRC-V7",
+        "SRC-V8",
+        "SRC-V9",
+        "SRC-V10",
+        "SRC-V11",
+        "SRC-V12",
+        "SRC-V13",
+        "SRC-V14",
+        "SRC-V15",
+        "SRC-V16",
+        "SRC-V17",
+        "SRC-V18",
+        "SRC-V19",
+        "SRC-V20",
+        "SRC-V21",
+        "SRC-V22",
+        "SRC-V23"
+      ],
+      "acceptance": [
+        "Contrastar REQ-DEPENDENCIES con las fuentes, receta seleccionada y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-V0",
+        "SRC-V1",
+        "SRC-V2",
+        "SRC-V3",
+        "SRC-V4",
+        "SRC-V5",
+        "SRC-V6",
+        "SRC-V7",
+        "SRC-V8",
+        "SRC-V9",
+        "SRC-V10",
+        "SRC-V11",
+        "SRC-V12",
+        "SRC-V13",
+        "SRC-V14",
+        "SRC-V15",
+        "SRC-V16",
+        "SRC-V17",
+        "SRC-V18",
+        "SRC-V19",
+        "SRC-V20",
+        "SRC-V21",
+        "SRC-V22",
+        "SRC-V23"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA con las fuentes, receta seleccionada y evidencia ejecutada del destino."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Left icon?",
+      "Label",
+      "Counter?(Count)",
+      "Right icon?",
+      "Remove?",
+      "Focus ring?"
+    ],
+    "composition": "fixed-no-slots",
+    "accessibility": "defined-host-runtime-not-implemented"
+  }
+}
+---
+
+# Chip
+
+### REQ-API
+
+Conservar40 combinaciones reales: size large/medium/small/extra-small, selected false/true y state default/hover/pressed/focus/disabled. API pública: Label TEXT Label, Counter TEXT 12, Show counter/Show remove/Show left icon/Show right icon BOOLEAN false y Left icon/Right icon INSTANCE_SWAP PlusCircle Outline/Light. No crear variantes por icono, texto, contador o visibilidad. Los1512 candidatos preferredValues observados por swap se registran como cantidad en la evidencia; son sugerencias, no otra matriz de variantes. El destino conserva INSTANCE_SWAP y default Phosphor con lista preferida vacía, sin importar masivamente candidatos no usados. La partición nativa por tamaño produce cuatro sets Chip/large, Chip/medium, Chip/small y Chip/extra-small, diez variantes por set; cada set conserva size con su único valor, selected y state. El consumo lógico CHIP-001 resuelve size al set correcto y mapea propiedades por keys reales; no simular un único set ni añadir tamaños.
+
+### REQ-ANATOMY
+
+Anatomía horizontal: Left icon?, Label, Counter?(Count), Right icon?, Remove? y Focus ring absoluto solo en focus. Contador y Remove son partes propias, no instancias de Badge/Dot. Conservar orden, clips y constraints fuente; no duplicar iconos como vectores locales. No hay región de contenido extensible: TEXT/BOOLEAN/INSTANCE_SWAP cubren la variación; no se justifica Slot ni componente público Chip group por esta muestra.
+
+### REQ-LAYOUT
+
+Conservar altura fija48/40/32/24 y ancho HUG, radiofull, centrado y métricas/bindings fuente de la receta. El outline activo no seleccionado usa borde1 incluido en layout; selected y disabled no tienen ese stroke, lo que explica2 px de diferencia de ancho para igual Label. Label y Count usan WIDTH_AND_HEIGHT/HUG, una línea sin truncamiento ni ancho máximo inventado. Counter es Auto Layout HUG/HUG: la geometría oculta capturada puede estar sin recalcular y no impone su ancho/alto inicial al activarlo. Permitir crecimiento con contenido largo; el host agrupa con wrap o scroll horizontal, sin encoger la tipografía ni fijar un ancho global. No afirmar adaptación automática a hosts más estrechos que el contenido.
+
+### REQ-FOCUS
+
+Focus ring conserva stroke2 INSIDE, radiofull, x/y=-4 y tamaño del control+8 en ambas dimensiones; el resultado es separación2 respecto del control. Constraints STRETCH deben seguir el ancho después de editar texto, Count e iconos. El contenedor de ejemplos no recorta el anillo. La geometría relativa usa offsets observados, no variables por cada ancho de Label.
+
+### REQ-TYPOGRAPHY
+
+Conservar Manrope Medium para Label y SemiBold para Count con las seis recetas observadas: Label16/24,14/20,12/16; Count14/24,12/20,10/16. Los tamaños exactos por variante y tracking0 se consumen de la receta y tokens seleccionados. Vincular cinco propiedades tipográficas por estilo compartido y aplicar su ID en textos e instancias. La normalización portable Semibold se traduce al nombre nativo verificado SemiBold; no sustituir pesos ni simularlos.
+
+### REQ-THEME
+
+Todos los roles de Chip son invariantes en los cuatro modos existentes de component, confirmado por los39 vectores fuente. Selected usa inverse neutro, no marca: default neutral-deep, hover neutral-intense y pressed neutral-maximum; focus conserva el fondo default. No seleccionado usa superficies neutrales, borde de control neutro y texto oscuro. Foco usa el semántico existente de blue500 repetido en los cuatro modos; su nombre de marca no lo vuelve temático. Disabled conserva sus roles fuente, con selected almacenado pero misma presentación inactiva. Counter invierte su superficie y mantiene texto oscuro cuando selected. No extender colores morados o excepciones de Tab a Chip.
+
+### REQ-ICONS
+
+Aplicar BH-P06: PlusCircle y X de Phosphor del equipo, Format Outline y Weight Light, mediante instancias vinculadas y sus keys observadas; sin copias vectoriales. Left/Right swaps mantienen tamaño por size y SHAPE_FILL con los mismos aliases completos que Label TEXT_FILL por estado. Remove también sigue Label. Counter tiene su propio texto oscuro asociado a su superficie, no recolorea los iconos del control. En desarrollo futuro usar PlusCircleIcon y XIcon weight light de la distribución oficial; no implementar React en este encargo.
+
+### REQ-TOKENS
+
+Aplicar BH-P07 antes de construir:40 firmas únicas para1496 usos de bindings, bajo chip/ en la colección component. No añadir Foundations: todas las correspondencias existen. Compartir token entre estados o partes cuando coincidan tipo, scope y cuatro aliases; el mapa conserva cada consumidor aunque el nombre corresponda a un uso compartido. No recrear variables disabled/bg, pressed/bg, counter/bg o height extra-small cuando ya comparten una firma seleccionada. Las rutas Figma se fijan abajo; valores y aliases pertenecen únicamente al conjunto seleccionado.
+
+### REQ-FUNCTION
+
+Chip representa filtros, selección o filtros aplicados; las acciones de guardar/timbrar corresponden a Button y el estado de solo lectura a Badge. El host elige un modo por grupo: selección única siempre con una opción activa; múltiple con toggles independientes y limpiar cuando corresponda; o removible con X y actualización de la colección. No mezclar removibles y selección en el mismo grupo. Mantener un size por grupo. Disabled no activa ni elimina y el host comunica el motivo. Counter conserva0 visible y lo actualiza con datos del host. No imponer consultas fiscales, motor de filtrado, sincronización de datos ni reglas monetarias desde ejemplos.
+
+### REQ-CONTENT
+
+Etiquetas breves en sentence case, normalmente1–3 palabras, ajustadas al contexto. El host decide formato local de Count y abreviación, incluyendo99+ en tamaños pequeños según el contenido; Counter es TEXT, no calcula ni valida números en Figma. Usar términos, fechas y códigos de moneda apropiados al mercado sin inventar datos de producto. Los ejemplos Label/12 no son restricciones de contenido ni límite de cantidad de chips.
+
+### REQ-A11Y
+
+El host web futuro define aria-pressed para múltiple o patrón radio para única, nombre accesible y teclado, restauración de foco al quitar, y nombre Quitar filtro seguido de Label. Los iconos acompañantes son decorativos salvo acciones explícitas. Large48 cubre el target44; medium40, small32 y extra-small24 requieren ampliación del target para uso táctil, por lo que no se declara que medium ya alcance44. El cambio de fondo/texto es una señal cromática: la descripción que afirma no depender solo del color no prueba un indicador no cromático ni accesibilidad web. Medir contraste real de Label/Count/iconos/borde/foco sobre superficies observadas; disabled es inactivo y no acredita AA. No adoptar la afirmación general Cumple AA de la raíz como certificado.
+
+### REQ-PROTOTYPE
+
+Las reacciones fuente son vacías. La biblioteca añade hover entre default/hover conservando size y selected; pressed/focus se documentan como variantes visuales sin atribuirles teclado o reproducción de presión no ejecutada. La selección única, múltiple y remoción viven en consumidores de muestra mediante instancias y navegación local, conservando la única selección o toggles independientes según el modo. Separar lectura del grafo de reproducción real: comprobar selección, retención, disabled inactivo y eliminación desde X. El prototipo usa datos de muestra y no implementa filtros reales, captura de datos ni ARIA.
+
+### REQ-DEPENDENCIES
+
+La auditoría inversa de las doce páginas anteriores a Chips revisa principales, helpers e instancias incluidos ejemplos ocultos. Registrar resultado y sustituciones reales; no deducir dependencia desde un nombre genérico. Las dos dependencias activas son assets Phosphor; no reconstruir Button, Badge, Dot ni Input para este encargo. El Figma origen y el proyecto original permanecen en solo lectura.
+
+### REQ-QA
+
+Comprobar registro nativo40 variables, seis estilos vinculados, cuatro sets de diez y1496 bindings, scopes/WEB/cuatro aliases. Probar las40 variantes en cuatro modos y las16 combinaciones de opcionales, edición corta/larga/vacía de Label y Counter, crecimiento HUG, foco tras edición, swaps de ambos iconos y restauración. Verificar roles invariantes y paridad Phosphor/Label aun en selected sobre oscuro. Revisar visualmente una guía compacta con instancias y variantes completas, y reproducir los consumidores en navegador. Mantener separadas pruebas del núcleo, QA Figma, accesibilidad web y revisión independiente.
+
+| ID lógico | Ruta Figma |
+|---|---|
+| chip.spacing-md | chip/spacing/md |
+| chip.spacing-lg | chip/spacing/lg |
+| chip.spacing-sm | chip/spacing/sm |
+| chip.size-height-large | chip/size/height-large |
+| chip.radius-container | chip/radius/container |
+| chip.color-bg-default | chip/color/bg/default |
+| chip.border-width | chip/border/width |
+| chip.color-stroke-default | chip/color/stroke/default |
+| chip.size-icon-large | chip/size/icon-large |
+| chip.color-icon-default | chip/color/icon/default |
+| chip.color-text-default | chip/color/text/default |
+| chip.font-family | chip/font/family |
+| chip.font-label-style | chip/font/label-style |
+| chip.font-size-16 | chip/font/size-16 |
+| chip.font-line-height-24 | chip/font/line-height-24 |
+| chip.font-letter-spacing | chip/font/letter-spacing |
+| chip.spacing-none | chip/spacing/none |
+| chip.spacing-xs | chip/spacing/xs |
+| chip.color-bg-counter-default | chip/color/bg/counter-default |
+| chip.font-counter-style | chip/font/counter-style |
+| chip.font-size-14 | chip/font/size-14 |
+| chip.size-height-medium | chip/size/height-medium |
+| chip.size-icon-medium | chip/size/icon-medium |
+| chip.font-line-height-20 | chip/font/line-height-20 |
+| chip.font-size-12 | chip/font/size-12 |
+| chip.size-height-small | chip/size/height-small |
+| chip.size-icon-small | chip/size/icon-small |
+| chip.font-line-height-16 | chip/font/line-height-16 |
+| chip.font-size-10 | chip/font/size-10 |
+| chip.size-icon-extra-small | chip/size/icon-extra-small |
+| chip.color-bg-hover | chip/color/bg/hover |
+| chip.border-focus-width | chip/border/focus-width |
+| chip.color-stroke-focus | chip/color/stroke/focus |
+| chip.color-icon-disabled | chip/color/icon/disabled |
+| chip.color-text-disabled | chip/color/text/disabled |
+| chip.color-bg-selected-default | chip/color/bg/selected-default |
+| chip.color-icon-selected | chip/color/icon/selected |
+| chip.color-text-selected | chip/color/text/selected |
+| chip.color-bg-selected-hover | chip/color/bg/selected-hover |
+| chip.color-bg-selected-pressed | chip/color/bg/selected-pressed |

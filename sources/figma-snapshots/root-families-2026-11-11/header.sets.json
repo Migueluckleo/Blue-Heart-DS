@@ -1,0 +1,140 @@
+{
+  "sets": [
+    {
+      "id": "500:1189",
+      "page": "499:79",
+      "pageName": "Header",
+      "type": "COMPONENT",
+      "name": "Header",
+      "x": 1500,
+      "y": 800,
+      "width": 1280,
+      "height": 96,
+      "props": {
+        "Show version#500:28": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show company#500:29": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show actions#500:30": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show user#500:31": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show release badge#500:32": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Version#500:33": {
+          "type": "TEXT",
+          "defaultValue": "2.0.0"
+        }
+      },
+      "vars": [
+        [
+          "500:1189",
+          "Header"
+        ]
+      ]
+    }
+  ],
+  "swaps": {},
+  "children": [
+    [
+      "500:44",
+      "Company selector",
+      "COMPONENT_SET"
+    ],
+    [
+      "500:85",
+      "User selector",
+      "COMPONENT_SET"
+    ],
+    [
+      "500:132",
+      "Header actions",
+      "COMPONENT_SET"
+    ],
+    [
+      "500:1189",
+      "Header",
+      "COMPONENT"
+    ],
+    [
+      "503:195",
+      "Header / Guía",
+      "FRAME"
+    ],
+    [
+      "504:826",
+      "Header / base / Inicio",
+      "FRAME"
+    ],
+    [
+      "504:978",
+      "Header / company / Inicio",
+      "FRAME"
+    ],
+    [
+      "504:1218",
+      "Header / user / Inicio",
+      "FRAME"
+    ],
+    [
+      "504:1421",
+      "Header / base / Empresa Norte",
+      "FRAME"
+    ],
+    [
+      "504:1559",
+      "Header / company / Empresa Norte",
+      "FRAME"
+    ],
+    [
+      "504:1764",
+      "Header / user / Empresa Norte",
+      "FRAME"
+    ],
+    [
+      "504:1967",
+      "Header / Sincronizar / muestra",
+      "FRAME"
+    ],
+    [
+      "504:2105",
+      "Header / Academia / muestra",
+      "FRAME"
+    ],
+    [
+      "504:2243",
+      "Header / Soporte / muestra",
+      "FRAME"
+    ],
+    [
+      "504:2381",
+      "Header / Aplicaciones / muestra",
+      "FRAME"
+    ],
+    [
+      "504:2519",
+      "Header / Notificaciones / muestra",
+      "FRAME"
+    ],
+    [
+      "505:2208",
+      "Header / Perfil / muestra",
+      "FRAME"
+    ],
+    [
+      "505:2360",
+      "Header / Preferencias / muestra",
+      "FRAME"
+    ]
+  ]
+}

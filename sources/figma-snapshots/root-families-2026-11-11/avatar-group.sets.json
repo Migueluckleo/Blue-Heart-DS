@@ -1,0 +1,95 @@
+{
+  "sets": [
+    {
+      "id": "145:147",
+      "page": "145:42",
+      "pageName": "Avatars",
+      "type": "COMPONENT_SET",
+      "name": "Avatar group",
+      "x": 4900,
+      "y": 1050,
+      "width": 350,
+      "height": 350,
+      "props": {
+        "Avatars#145:39": {
+          "type": "SLOT",
+          "description": "2–4 Avatar, tamaño coherente y sin Status. Para >4 personas: tres + contador +N calculado por el consumidor.",
+          "slotSettings": {
+            "stretchChildOnInsert": false,
+            "displayEmptyByDefault": false,
+            "minChildren": 2,
+            "maxChildren": 4,
+            "allowPreferredValuesOnly": true
+          },
+          "preferredValues": [
+            {
+              "type": "COMPONENT_SET",
+              "key": "4043629018093b5ca988f2189ba2039309b43f0f"
+            }
+          ]
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "extra-large",
+          "variantOptions": [
+            "extra-large",
+            "large",
+            "medium",
+            "small"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "145:143",
+          "size=extra-large"
+        ],
+        [
+          "145:144",
+          "size=large"
+        ],
+        [
+          "145:145",
+          "size=medium"
+        ],
+        [
+          "145:146",
+          "size=small"
+        ]
+      ]
+    }
+  ],
+  "swaps": {},
+  "children": [
+    [
+      "145:106",
+      "Avatar",
+      "COMPONENT_SET"
+    ],
+    [
+      "145:147",
+      "Avatar group",
+      "COMPONENT_SET"
+    ],
+    [
+      "154:54",
+      "Overview",
+      "FRAME"
+    ],
+    [
+      "154:255",
+      "Variants & states",
+      "FRAME"
+    ],
+    [
+      "154:268",
+      "Avatar · matriz de referencia",
+      "FRAME"
+    ],
+    [
+      "161:281",
+      "Avatar · Uso y QA",
+      "FRAME"
+    ]
+  ]
+}

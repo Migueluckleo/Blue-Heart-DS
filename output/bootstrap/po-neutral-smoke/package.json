@@ -1,0 +1,29 @@
+{
+  "name": "contpaqi-po-prototype",
+  "version": "0.0.0+ds.aa0721e6079089f4",
+  "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "build": "node scripts/prepare.mjs && next build --webpack && node scripts/inline-export.mjs out/index.html render.html",
+    "typecheck": "tsc --noEmit",
+    "capture": "node scripts/capture.mjs",
+    "handoff": "node scripts/handoff.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "4.3.3",
+    "@tailwindcss/postcss": "4.3.3",
+    "typescript": "7.0.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/node": "26.6.5",
+    "postcss": "8.5.30",
+    "@playwright/test": "1.64.0"
+  }
+}

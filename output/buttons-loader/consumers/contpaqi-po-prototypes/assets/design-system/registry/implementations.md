@@ -1,0 +1,11 @@
+# Implementaciones y bindings
+
+Registro inicial vacío. Registrar alcance, fuente, versión y evidencia según [P05](../protocols/05-SELF-DOCUMENTATION-AND-TRACEABILITY.md).
+
+## FOUNDATIONS-BLUEHEART-VARIABLES-001 v0.1.2
+
+AI Blueheart DS · tres colecciones locales · `VALIDATED` para variables. [Mapa](../implementations/figma/variables-2026-11-11/id-map.json), [readback final](../implementations/figma/variables-2026-11-11/final-collections.readback.json) y [estado](../implementations/figma/variables-2026-11-11/blueheart-variables.v0.1.2.state.json). Escritura efectiva confirmada para variables.
+
+## Buttons y Loader
+
+Maestro AI Blueheart DS. [Página Buttons](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=22-3) y [página Loader](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=22-2). [IDs Buttons](../implementations/figma/buttons-loader-2026-11-11/buttons.state.json) y [IDs Loader](../implementations/figma/buttons-loader-2026-11-11/loader.state.json). El catálogo local Next.js exporta ambas familias.

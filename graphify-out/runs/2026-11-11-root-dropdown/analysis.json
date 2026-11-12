@@ -1,0 +1,151 @@
+{
+  "nodes": 3573,
+  "edges": 6660,
+  "communities": 750,
+  "gods": [
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_174",
+      "label": "neutral-maximum",
+      "degree": 43
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_155",
+      "label": "brand-strong",
+      "degree": 41
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_166",
+      "label": "neutral-base",
+      "degree": 41
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_169",
+      "label": "neutral-soft",
+      "degree": 41
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_154",
+      "label": "brand-default",
+      "degree": 37
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_163",
+      "label": "brand-administrativo-default",
+      "degree": 36
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_184",
+      "label": "brand-personas-default",
+      "degree": 36
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_191",
+      "label": "spacing-none",
+      "degree": 36
+    },
+    {
+      "id": "ref_react",
+      "label": "react",
+      "degree": 35
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_178",
+      "label": "brand-servicios-strong",
+      "degree": 35
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Asset horizontal oficial de Contabilidad para Header web",
+      "target": "Contrato Header compone contexto global a 96 px de alto",
+      "source_files": [
+        "sources/assets/contabilidad-header.png",
+        "specs/components/header.contract.v1.0.0.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Asset horizontal oficial de Contabilidad para Header web` unexpectedly reaches hub `Contrato Header compone contexto global a 96 px de alto`"
+    },
+    {
+      "source": "Enmienda Sidebar consume Icon Button Secondary small en Figma y React",
+      "target": "Sidebar()",
+      "source_files": [
+        "specs/components/sidebar.secondary-control.amendment.v1.0.1.md",
+        "implementations/web/src/components/sidebar.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "implements",
+      "why": "crosses file types (doc ↔ code); connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "Transferencia a Figma requiere autorización explícita para la fotografía",
+      "target": "Fotografía de muestra original de Avatar",
+      "source_files": [
+        "qa/implementations/avatar.v1.0.0.review.md",
+        "sources/assets/avatar-portrait.png"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories"
+    },
+    {
+      "source": "Fotografía de muestra original de Avatar",
+      "target": "Contrato Avatar preserva imagen, iniciales, Phosphor y presencia",
+      "source_files": [
+        "sources/assets/avatar-portrait.png",
+        "specs/components/avatar.contract.v1.0.0.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories"
+    },
+    {
+      "source": "Chrome verifica anchos 1272 y 1110, Secondary y valor persistente",
+      "target": "Contrato App Shell delega composición oficial y cuatro combinaciones",
+      "source_files": [
+        "qa/implementations/app-shell.v1.0.0.review.md",
+        "specs/components/app-shell.contract.v1.0.0.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `Chrome verifica anchos 1272 y 1110, Secondary y valor persistente` unexpectedly reaches hub `Contrato App Shell delega composición oficial y cuatro combinaciones`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `react` connect `Radio Group` to `Tabs · Evidencias`, `Package · Evidencias`, `Avatar · Evidencias`, `Input · Evidencias`, `Header Actions`, `App Shell`, `Icon Button`, `Linear Progress`, `Menu Item`, `Examples · Evidencias`, `Breadcrumb · Evidencias`, `Button · Evidencias`, `Layout · Evidencias`, `Dropdown Menu`, `Page · Evidencias`?",
+      "why": "High betweenness centrality (0.021) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `next` connect `Package · Evidencias` to `Prepare · Evidencias`?",
+      "why": "High betweenness centrality (0.012) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `@phosphor-icons/react` connect `Package · Evidencias` to `Tabs · Evidencias`, `Avatar · Evidencias`, `Input · Evidencias`, `Header Actions`, `App Shell`, `Icon Button`, `Linear Progress`, `Menu Item`, `Examples · Evidencias`, `Breadcrumb · Evidencias`, `Button · Evidencias`, `Dropdown Menu`?",
+      "why": "High betweenness centrality (0.011) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Cierre coordinado por ID`, `Estados de procedencia`, `Separación de la base inicial` to the rest of the system?",
+      "why": "109 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Blueheart Variables` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.026732673267326732 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Blueheart Variables` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06256384065372829 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Consumption Query Schema` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.05921325051759834 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

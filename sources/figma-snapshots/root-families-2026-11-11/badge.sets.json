@@ -1,0 +1,165 @@
+{
+  "sets": [
+    {
+      "id": "282:3",
+      "page": "281:63",
+      "pageName": "Badge",
+      "type": "COMPONENT_SET",
+      "name": "Badge",
+      "x": 2200,
+      "y": 80,
+      "width": 580,
+      "height": 460,
+      "props": {
+        "Label#282:0": {
+          "type": "TEXT",
+          "defaultValue": "Label"
+        },
+        "Show left icon#326:0": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show right icon#326:2": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Left icon#326:4": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "326:35",
+          "preferredValues": []
+        },
+        "Right icon#326:6": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "326:35",
+          "preferredValues": []
+        },
+        "type": {
+          "type": "VARIANT",
+          "defaultValue": "subtle",
+          "variantOptions": [
+            "subtle",
+            "error",
+            "warning",
+            "success",
+            "info",
+            "neutral"
+          ]
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "small",
+          "variantOptions": [
+            "small",
+            "medium",
+            "large"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "282:2",
+          "type=subtle, size=small"
+        ],
+        [
+          "326:210",
+          "type=error, size=small"
+        ],
+        [
+          "326:216",
+          "type=warning, size=small"
+        ],
+        [
+          "326:222",
+          "type=success, size=small"
+        ],
+        [
+          "326:228",
+          "type=info, size=small"
+        ],
+        [
+          "326:238",
+          "type=neutral, size=small"
+        ],
+        [
+          "326:244",
+          "type=error, size=medium"
+        ],
+        [
+          "326:250",
+          "type=warning, size=medium"
+        ],
+        [
+          "326:256",
+          "type=success, size=medium"
+        ],
+        [
+          "326:262",
+          "type=info, size=medium"
+        ],
+        [
+          "326:268",
+          "type=subtle, size=medium"
+        ],
+        [
+          "326:274",
+          "type=neutral, size=medium"
+        ],
+        [
+          "326:280",
+          "type=error, size=large"
+        ],
+        [
+          "326:286",
+          "type=warning, size=large"
+        ],
+        [
+          "326:292",
+          "type=success, size=large"
+        ],
+        [
+          "326:298",
+          "type=info, size=large"
+        ],
+        [
+          "326:304",
+          "type=subtle, size=large"
+        ],
+        [
+          "326:310",
+          "type=neutral, size=large"
+        ]
+      ]
+    }
+  ],
+  "swaps": {
+    "Left icon#326:4": {
+      "id": "326:35",
+      "key": "3f0d7ae9a02577d4fb4e615737d09fa1b49ec230",
+      "name": "Format=Outline, Weight=Fill",
+      "remote": true
+    },
+    "Right icon#326:6": {
+      "id": "326:35",
+      "key": "3f0d7ae9a02577d4fb4e615737d09fa1b49ec230",
+      "name": "Format=Outline, Weight=Fill",
+      "remote": true
+    }
+  },
+  "children": [
+    [
+      "282:3",
+      "Badge",
+      "COMPONENT_SET"
+    ],
+    [
+      "289:2",
+      "Badge · API y dependencia de Input",
+      "FRAME"
+    ],
+    [
+      "332:234",
+      "Badge · tipos, tamaños e iconos",
+      "FRAME"
+    ]
+  ]
+}

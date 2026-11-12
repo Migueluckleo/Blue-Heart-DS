@@ -1,0 +1,64 @@
+{
+  "sets": [
+    {
+      "id": "940:1376",
+      "key": "a9899a246f2c56cd0a87f3407388a06d9656a1af",
+      "page": "940:2",
+      "pageName": "App Shell",
+      "type": "COMPONENT_SET",
+      "name": "App Shell",
+      "x": -666,
+      "y": -226,
+      "width": 3008,
+      "height": 2176,
+      "props": {
+        "Body#940:5": {
+          "type": "SLOT",
+          "description": "Sustituye los ejemplos por contenido de la pantalla. Mantén la rejilla o la composición de filas que corresponda.",
+          "slotSettings": {
+            "stretchChildOnInsert": false,
+            "displayEmptyByDefault": false,
+            "minChildren": null,
+            "maxChildren": null,
+            "allowPreferredValuesOnly": false
+          },
+          "preferredValues": []
+        },
+        "menu": {
+          "type": "VARIANT",
+          "defaultValue": "collapsed",
+          "variantOptions": [
+            "collapsed",
+            "expanded"
+          ]
+        },
+        "body layout": {
+          "type": "VARIANT",
+          "defaultValue": "grid",
+          "variantOptions": [
+            "grid",
+            "flex"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "940:3",
+          "menu=collapsed, body layout=grid"
+        ],
+        [
+          "940:486",
+          "menu=expanded, body layout=grid"
+        ],
+        [
+          "940:846",
+          "menu=collapsed, body layout=flex"
+        ],
+        [
+          "940:1093",
+          "menu=expanded, body layout=flex"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,582 @@
+---
+{
+  "schema_version": 1,
+  "id": "FILE-UPLOAD-001",
+  "version": "1.0.1",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-036"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/file-upload-request.json",
+      "sha256": "8999ac468bb60fd55d088670949dcce1c3b720ed6d72f722b0b8d6418aa69f4f"
+    },
+    {
+      "id": "SRC-CONTRAST",
+      "path": "evidence/authorization/file-upload-contrast-decision.json",
+      "sha256": "2d7c0d0e609e5f195f463bda7054b30eaa98269508800b682cab21f16feee08a"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/file-upload-pilot/source/capture-manifest.json",
+      "sha256": "76dba652a5f5a5933bc5754bc388349b00ecf10e54e5060927d0bd6e7d6d4943"
+    },
+    {
+      "id": "SRC-DEFS",
+      "path": "evidence/file-upload-pilot/source/definitions.json",
+      "sha256": "6e8e000b9156a53c4c1a2face548c92e7bf3ccd9f5047d378d761bf878e39b74"
+    },
+    {
+      "id": "SRC-VARS",
+      "path": "evidence/file-upload-pilot/source/variables.json",
+      "sha256": "f0d99be4326092ad820ccee5b10a875ffd81a5a8df13189d20d30079a80d5692"
+    },
+    {
+      "id": "SRC-PX",
+      "path": "evidence/file-upload-pilot/target/autolayout-line-height-probe.json",
+      "sha256": "df73b5ab08ea2e391a056d31e193b8ac2b520e45a1658b8660b98db604815fff"
+    },
+    {
+      "id": "SRC-RECONCILIATION",
+      "path": "evidence/linear-progress-reconciliation/dependency-map.json",
+      "sha256": "f6c8fff4945a149db5385dece74f348b22e56672f088b49699de5a4709b1097b"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "contract",
+      "id": "BUTTON-001",
+      "version": "4.0.1",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "LINEAR-PROGRESS-001",
+      "version": "1.0.1",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.spacing-helper",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.spacing-padding",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.spacing-section",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-bg-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-stroke-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.border-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.radius-container",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.size-icon-40",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-icon-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.spacing-content",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-text-instruction-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.font-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.font-size-14",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.font-letter-spacing",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-text-link-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.font-semibold",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-text-formats-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.font-size-12",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-text-helper-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-bg-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-stroke-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-stroke-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.border-focus-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.radius-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-stroke-error",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.size-icon-32",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-icon-error",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-text-message-error",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.font-line-height-22p4",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-text-formats-error",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-icon-success",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-text-message-success",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.font-message-tracking",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.font-size-10",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.font-formats-tracking",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.font-line-height-15p0",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-bg-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-stroke-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "file-upload.color-icon-disabled",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ANATOMY con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-CONTENT",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-CONTENT con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS",
+        "SRC-PX"
+      ],
+      "acceptance": [
+        "Contrastar REQ-LAYOUT con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS",
+        "SRC-PX"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TYPOGRAPHY con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-ICONS",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ICONS con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-THEME con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-CONTRAST",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-CONTRAST con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-FUNCTION",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-FUNCTION con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-PROTOTYPE",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-PROTOTYPE con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS",
+        "SRC-RECONCILIATION"
+      ],
+      "acceptance": [
+        "Contrastar REQ-DEPENDENCIES con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-CONSUMPTION",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-CONSUMPTION con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-A11Y",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-A11Y con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CONTRAST",
+        "SRC-CAPTURE",
+        "SRC-DEFS",
+        "SRC-VARS",
+        "SRC-PX"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA con fuente, decisión, receta y evidencia ejecutada del destino."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Content(Phosphor, text, optional Button, success Linear Progress, focus ring)",
+      "supporting-text"
+    ],
+    "composition": "official-button-and-linear-progress-no-slots",
+    "accessibility": "host-runtime-not-implemented-source-contrast-exception"
+  }
+}
+---
+
+# File Upload1.0.1
+
+Contrato normativo de diseño y función. La evidencia observacional y las recetas son proyecciones trazables.
+
+### REQ-API
+
+Conservar las seis combinaciones reales state=default/hover/focus/error/success/disabled en un único set. Helper text TEXT edita el párrafo de formatos dentro de la zona; Show button BOOLEAN false controla Button; Show helper BOOLEAN true controla el texto de apoyo exterior. Mantener el contenido inicial observado. El texto inferior y los mensajes se editan directamente; no inventar propiedades filename, uploading, cancel ni slots ausentes.
+
+### REQ-ANATOMY
+
+Contenedor VERTICAL con Content (zona delimitada) y supporting-text exterior. La zona compone Phosphor, contenido textual y Button secondary/small opcional; success añade Linear Progress success/large/100% solo riel. Focus añade anillo absoluto alrededor de la zona. No aplanar instancias ni copiar principales de dependencias.
+
+### REQ-CONTENT
+
+Conservar el TEXT mixto de instrucción y su salto de línea, mensajes genéricos error/success y las etiquetas de Button observadas: Subir archivo, Subir nuevamente y Subir otro archivo. Helper text y Show helper actúan sobre nodos distintos. Los formatos XLS/XLSX/CSV y máximo50MB son contenido de muestra editable, no política de validación adoptada. La prosa fuente menciona filename en success pero no existe campo, propiedad ni slot: identificar archivos pertenece al host.
+
+### REQ-LAYOUT
+
+Ancho fuente500 FIXED, altura HUG y contenido flexible FILL. Conservar padding16, separación12 dentro de zona,4 entre textos y8 al apoyo; radio12, borde1 INSIDE discontinuo5/5. Focus conserva anillo2, radio16, offset−4, tamaño de zona+8 y constraints STRETCH. El borde1.5 sin pintura del root focus no genera token. Normalizar supporting-text FIXED de focus/disabled a HUG para multilínea; no alterar contenido. Success consume el riel12 con ancho FILL y mínimo heredado120. No inventar mínimo global de producto. Probar anchos280/500/720.
+
+### REQ-TYPOGRAPHY
+
+Manrope Regular/SemiBold. Instrucción: un TEXT con rangos Regular14 y SemiBold14, líneaAUTO y tracking0. Formatos/apoyo Regular12/AUTO/0. Error SemiBold14/160%/0; success SemiBold14/160%/−2%. Solo formatos success Regular10/150%/−2% y alineación izquierda. Seis estilos propios vinculados y aplicados por rango. Convertir una sola vez línea/tracking porcentuales a22.4/15 y−0.28/−0.2px para binding nativo; AUTO permanece AUTO sin número inventado. Registrar cualquier variación de altura derivada de esa conversión con tolerancia específica, sin usarla para ocultar otros cambios.
+
+### REQ-ICONS
+
+Usar CloudArrowUp Light40, XCircle Fill32 y CheckCircle Fill32 de Phosphor del equipo, vinculados y sin copias vectoriales locales. Aplicar BH-P06: el icono sigue la instrucción neutra o mensaje de resultado asociado, no la frase resaltada de selección. Disabled conserva el papel inactivo. Vectores con SHAPE_FILL; superficie de zona FRAME_FILL. Button conserva sus propios iconos opcionales apagados.
+
+### REQ-THEME
+
+Solo superficie/borde hover y frase de selección activa siguen los cuatro temas fuente. Superficies default/disabled, instrucción, feedback y foco son invariantes y repiten alias en los cuatro modos de component. Conservar clasificación y vectores completos de la receta; no trasladar excepciones de Tab ni semánticos cromáticos duplicados.
+
+### REQ-TOKENS
+
+Aplicar BH-P07:41 firmas distintas bajo file-upload/ en component,248 usos propios y seis estilos. Excluir tokens de descendientes Button/Linear Progress. Añadir cuatro cadenas numéricas generales para línea/tracking (ocho Foundations), sin nuevos colores. BLUEHEART-TOKENS6.7.0 conserva íntegros los670 tokens anteriores y suma719:161 primitivas,122 semánticos y436 de componente. Mantener únicamente primitive/semantic/component. Valores y aliases pertenecen al token set seleccionado; no duplicarlos aquí.
+
+### REQ-CONTRAST
+
+Por elección humana conservar colores raíz, incluidos formatos hover mínimo4.258151450:1 y error2.564041220:1. Documentar cada estado/tema por debajo de4.5:1; no afirmar AA global ni heredar autorizaciones de otras familias. Disabled se evalúa como inactivo, separado del texto activo. Esta excepción no autoriza cambios cromáticos adicionales.
+
+### REQ-FUNCTION
+
+Zona habilitada inicia selección o recibe arrastre. Hover representa drag-over; focus foco visible. Disabled no inicia selección/reintento. Error permite volver a cargar; success iniciar otra selección. El host suministra selector, eventos de arrastre, validación, datos reales, transferencia y cancelación si el producto la requiere. Success contiene100% fijo y mensaje genérico, sin proceso uploading implementado. No implementar React, backend ni lógica de archivos por este encargo.
+
+### REQ-PROTOTYPE
+
+La raíz no define reacciones propias. Añadir únicamente default↔hover con ratón a los principales y una composición local de muestra que permita selección, error, reintento y success. Las transiciones usan archivos ficticios catálogo.xlsx/archivo.exe sin seleccionar ni transmitir archivos reales. No atribuir al prototipo drag-over del sistema, validación ejecutada, teclado/lector, cancelación ni progreso real. Comprobar reproducción visible y disabled inerte, además del grafo.
+
+### REQ-DEPENDENCIES
+
+La revisión ADR-036 conserva la instancia oficial existente y sus dos usos heredados en guía/prototipo: tres usos current, cero sustituciones. SRC-RECONCILIATION registra IDs/key, modo, geometría y48 casos de consumo. No crear otro riel ni copiar tokens del hijo.
+
+Dependencias tipadas y fijadas: BUTTON-0014.0.1 y LINEAR-PROGRESS-0011.0.1. Crear seis instancias Button secondary/small (disabled solo en estado disabled) y una Linear success/large/100%, sin alterar sus principales. El ancho de Button es HUG según su contrato vigente, no el ancho del Button histórico: las etiquetas fuente miden114/148/145px frente a122/156/154px; conservar altura32, tipografía y padding oficiales. En esa nueva instancia Linear apagar Show label/Show value/Show helper text y ocultar Header para eliminar el alto vacío nativo; no revertir controles independientes. Auditoría previa14páginas3587instancias: ningún consumidor anterior de File Upload, cero sustituciones. Fuente y proyecto anterior permanecen en solo lectura.
+
+### REQ-CONSUMPTION
+
+Conservar el cierre contractual tipado completo. context --intent dependencies consulta identidades/cierre; cargar requisitos propios y cadenas de tokens en una proyección derivada acotada con hashes de hijos para expansión bajo demanda. El cierre completo de reglas excede65536bytes y debe seguir BLOCKED sin salida parcial. No aumentar presupuesto global ni eliminar pins para aparentar contexto completo. La guía distingue paquete de reglas del padre de las reglas transitivas consultadas por separado.
+
+### REQ-A11Y
+
+La futura implementación web requiere selección nativa con nombre accesible, teclado, foco visible, errores anunciados y alternativa al arrastre. Las validaciones deben comunicar el problema con texto, sin depender de color. Figma no acredita React/ARIA, lector, teclado, transferencia ni política de archivos. El contraste observado se rige por la excepción específica REQ-CONTRAST.
+
+### REQ-QA
+
+Verificar41 variables, ocho Foundations, tres colecciones, scopes/WEB/aliases, seis estilos y seis principales. Contrastar los248 bindings candidatos y la composición con siete instancias oficiales. Geometría fuente tolerancia0.05px; mensajes de error/success y sus ancestros adoptan exactamente+1px frente a la raíz, comprobado en el probe de Auto Layout (160% produce22px y22.4px produce23px), con delta registrado y la misma tolerancia0.05; canales0.000001. Cubrir cuatro temas, cuatro combinaciones Show button/Show helper, formatos/apoyos corto/largo/vacío, anchos280/500/720, ring, cambios de variante/restauración. Revisar guía compacta y reproducción real de la muestra. Separar QA nativo, núcleo y web diferido. Publicación y PDF según BH-P08 vigente.

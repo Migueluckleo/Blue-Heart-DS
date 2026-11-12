@@ -1,0 +1,224 @@
+{
+  "sets": [
+    {
+      "id": "841:2760",
+      "type": "COMPONENT",
+      "name": "__Table/Scrollbar thumb",
+      "key": "887da1f8593fa979b3510cbeae964bb7c301eda4",
+      "page": "825:2",
+      "pageName": "Table",
+      "layoutMode": "HORIZONTAL",
+      "width": 8,
+      "height": 8,
+      "x": 700,
+      "y": 1300,
+      "clipsContent": false,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "props": {},
+      "slots": [],
+      "vars": [
+        [
+          "841:2760",
+          "__Table/Scrollbar thumb"
+        ]
+      ]
+    },
+    {
+      "id": "827:98",
+      "type": "COMPONENT_SET",
+      "name": "__Table/Scrollbar medium",
+      "key": "d90a27ad940b58ff8624492fb25dc3b20a320f1a",
+      "page": "825:2",
+      "pageName": "Table",
+      "layoutMode": "NONE",
+      "width": 400,
+      "height": 340,
+      "x": 100,
+      "y": 1300,
+      "clipsContent": false,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "props": {
+        "Horizontal thumb#842:3": {
+          "type": "SLOT",
+          "description": "Private derived initial indicator;fit replaces this Slot content with a linked thumb of calculated length.",
+          "slotSettings": {
+            "stretchChildOnInsert": false,
+            "displayEmptyByDefault": false,
+            "minChildren": 1,
+            "maxChildren": 1,
+            "allowPreferredValuesOnly": true
+          },
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "887da1f8593fa979b3510cbeae964bb7c301eda4"
+            }
+          ]
+        },
+        "Vertical thumb#842:6": {
+          "type": "SLOT",
+          "description": "Private derived initial indicator;fit replaces this Slot content with a linked thumb of calculated length.",
+          "slotSettings": {
+            "stretchChildOnInsert": false,
+            "displayEmptyByDefault": false,
+            "minChildren": 1,
+            "maxChildren": 1,
+            "allowPreferredValuesOnly": true
+          },
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "887da1f8593fa979b3510cbeae964bb7c301eda4"
+            }
+          ]
+        },
+        "orientation": {
+          "type": "VARIANT",
+          "defaultValue": "horizontal",
+          "variantOptions": [
+            "horizontal",
+            "vertical"
+          ]
+        }
+      },
+      "slots": [
+        [
+          "842:2176",
+          "Horizontal thumb",
+          "HORIZONTAL",
+          68,
+          8,
+          false,
+          "NONE",
+          {
+            "slotContentId": "Horizontal thumb#842:3"
+          },
+          1
+        ],
+        [
+          "842:2180",
+          "Vertical thumb",
+          "VERTICAL",
+          8,
+          68,
+          false,
+          "NONE",
+          {
+            "slotContentId": "Vertical thumb#842:6"
+          },
+          1
+        ]
+      ],
+      "vars": [
+        [
+          "827:92",
+          "orientation=horizontal"
+        ],
+        [
+          "827:95",
+          "orientation=vertical"
+        ]
+      ]
+    },
+    {
+      "id": "827:99",
+      "type": "COMPONENT",
+      "name": "Table",
+      "key": "0cea74018fd8d56c6fa56f882a773726bd538ef9",
+      "page": "825:2",
+      "pageName": "Table",
+      "layoutMode": "VERTICAL",
+      "width": 1711,
+      "height": 432,
+      "x": 1800,
+      "y": 100,
+      "clipsContent": true,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "HUG",
+      "props": {
+        "Rows#827:0": {
+          "type": "SLOT",
+          "description": "First header row, then0..n body rows. Re-run fit-instance after content/viewport edits.",
+          "slotSettings": {
+            "stretchChildOnInsert": false,
+            "displayEmptyByDefault": false,
+            "minChildren": 1,
+            "maxChildren": null,
+            "allowPreferredValuesOnly": false
+          },
+          "preferredValues": []
+        },
+        "Show horizontal scrollbar#827:1": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show vertical scrollbar#827:2": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        }
+      },
+      "slots": [
+        [
+          "827:101",
+          "Rows",
+          "VERTICAL",
+          1711,
+          360,
+          true,
+          "BOTH",
+          {
+            "slotContentId": "Rows#827:0"
+          },
+          9
+        ],
+        [
+          "I827:102;842:2180",
+          "Vertical thumb",
+          "VERTICAL",
+          8,
+          352,
+          false,
+          "NONE",
+          {
+            "slotContentId": "Vertical thumb#842:6"
+          },
+          1
+        ],
+        [
+          "I827:105;842:2176",
+          "Horizontal thumb",
+          "HORIZONTAL",
+          1703,
+          8,
+          false,
+          "NONE",
+          {
+            "slotContentId": "Horizontal thumb#842:3"
+          },
+          1
+        ],
+        [
+          "I827:108;585:49",
+          "Pages",
+          "HORIZONTAL",
+          392,
+          32,
+          false,
+          "NONE",
+          {
+            "slotContentId": "Pages#585:21"
+          },
+          11
+        ]
+      ],
+      "vars": [
+        [
+          "827:99",
+          "Table"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+---
+{
+  "schema_version": 1,
+  "id": "SIDEBAR-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-045"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/sidebar-request.json",
+      "sha256": "8a9904a53cf30534b338ce0cbd2909f493f95c9b4372ee27b21a9e6c90b1ba88"
+    },
+    {
+      "id": "SRC-CHOICES",
+      "path": "evidence/authorization/sidebar-choices.json",
+      "sha256": "44e0c850198ea4bd7e2373ded8a0d5e86c04c3960edc8e9a2d8364144f481b62"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/sidebar-pilot/source/capture-manifest.json",
+      "sha256": "eb7f7b21752fb873658d95a82c9ef04c21485ff933ee54cf71b9aa57bc4686da"
+    },
+    {
+      "id": "SRC-MODEL",
+      "path": "evidence/sidebar-pilot/source/sidebar-component-contract.yaml",
+      "sha256": "29f11b88b8b00424fee8535f829d1bec7c5f4a37b15e40237bbf1ccb0109c67d"
+    },
+    {
+      "id": "SRC-PLAN",
+      "path": "evidence/sidebar-pilot/build-plan.json",
+      "sha256": "17abef3a27c9a7ce8a632e1ff1fbaedc3a33b77f16392d0120cf2c84cdc68cb6"
+    },
+    {
+      "id": "SRC-AUDIT",
+      "path": "evidence/sidebar-pilot/reverse-dependencies.json",
+      "sha256": "99ef6aa17fa09e1913bde42d3d6eda525e51b9c58dcbedbfd6b0bd7be4fa377c"
+    },
+    {
+      "id": "SRC-CONTRAST",
+      "path": "evidence/sidebar-pilot/contrast-analysis.json",
+      "sha256": "b7fc0ce128cd25786ba4f4b0770dab6e570a2f22d09ccf076b4aab413566cbb7"
+    },
+    {
+      "id": "SRC-PHOSPHOR",
+      "path": "evidence/sidebar-pilot/source/official-phosphor.json",
+      "sha256": "d2ad9927a7638142c04924bfe00b92c32088821d703a5bdb20e97d3f108a3aa5"
+    },
+    {
+      "id": "SRC-STACK",
+      "path": "evidence/sidebar-pilot/source/stacking-strokes.json",
+      "sha256": "11149eaaa9dbfd876d785c15eac3e5cb6c050ad25ca7d06685380ea496a1e6f0"
+    },
+    {
+      "id": "SRC-NATIVE",
+      "path": "evidence/sidebar-pilot/native-adaptations.json",
+      "sha256": "90b79059693aafaa4464ef0a3dce155f7a8a223ff565aa1665142f5fb4504f20",
+      "selector": "JSON:/adaptations"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "sidebar.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "sidebar.size-collapsed-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "sidebar.radius-container",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "sidebar.color-bg-collapsed",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "sidebar.spacing-content",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "sidebar.spacing-small",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "sidebar.spacing-leading",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "sidebar.color-stroke-divider-collapsed",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "sidebar.border-divider-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "sidebar.size-expanded-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "sidebar.color-bg-expanded",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "sidebar.color-stroke-divider-expanded",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "MENU-ITEM-001",
+      "version": "1.0.0",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "ICON-BUTTON-001",
+      "version": "1.0.0",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de sidebar: REQ-ANATOMY"
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de sidebar: REQ-API"
+      ]
+    },
+    {
+      "id": "REQ-COMPOSITION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK",
+        "SRC-NATIVE"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de sidebar: REQ-COMPOSITION"
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK",
+        "SRC-NATIVE"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de sidebar: REQ-LAYOUT"
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de sidebar: REQ-THEME"
+      ]
+    },
+    {
+      "id": "REQ-INTERACTION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de sidebar: REQ-INTERACTION"
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de sidebar: REQ-TOKENS"
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de sidebar: REQ-DEPENDENCIES"
+      ]
+    },
+    {
+      "id": "REQ-HOST",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de sidebar: REQ-HOST"
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK",
+        "SRC-NATIVE"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de sidebar: REQ-QA"
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Root",
+      "Collapse control",
+      "Menu items Slot",
+      "Lower options Slot",
+      "Divider",
+      "Official Menu item"
+    ],
+    "composition": "Official children by exact typed references; own anatomy and tokens remain separate.",
+    "accessibility": "Host implements navigation semantics,focus/keyboard,routes,names and mobile targets; no global AA claim."
+  }
+}
+---
+# SIDEBAR-001 ·1.0.0
+
+### REQ-ANATOMY
+
+Dos variantes collapsed/expanded con contenedor VERTICAL,control superior,Slot central ySlot inferior con divisor decorativo y ayuda. Sustituir nombres genéricos Property1/colapsed por state=collapsed|expanded. Conservar presentación,fondos,radio16,ancho72/234 y alto inicial885 de muestra. Los Slots centrales FILL absorben espacio; el host determina la altura disponible.
+
+### REQ-API
+
+Conservar cuatro propiedades SLOT separadas: Collapsed menu items,Collapsed lower options,Expanded menu items,Expanded lower options. No unificarlas ni sincronizar contenido entre presentaciones: el responsable conserva sus jerarquías distintas. Usar Slots nativos; contenido variable0..n,sin convertir7/10 ítems o2 hijos inferiores en cardinalidades de producto. Exponer el Icon Button oficial para edición desde instancia. Los ítems dentro de Slots se editan directamente en su contenido: la API no permite marcarlos como exposed dentro del Slot.
+
+### REQ-COMPOSITION
+
+Consumir MENU-ITEM-0011.0.0 e ICON-BUTTON-0011.0.0 ghost/small/unselected/default,con Dot1.0.0 transitivo de Icon Button. Dos controles con CaretRight/CaretLeft Light oficiales; Ayuda conserva Question Light y Fill en sus dos swaps para no convertirse en HouseLine al pasar a hover; tokens y principales hijos intactos. El pie compone __Sidebar/Help privado de seis estados presentation×status y cero tokens propios; cada estado aloja Menu item oficial, Question de peso correcto y un binding de color del hijo. El wrapper privado aporta hover reversible y solo sus instancias internas suprimen hover del Menu item, evitando pérdida de pintura al materializar un swap dentro del Slot. No publicar este adaptador como familia ni extraer sus reglas a otro contrato. Conservar19 ítems oficiales en los contenidos iniciales:8 collapsed y11 expanded,incluidos3 submenús expandidos. Divider es anatomía decorativa propia,no texto de versión ni contador.
+
+### REQ-LAYOUT
+
+Anchos fijos vinculados72/234; se normaliza expanded HUG fuente a FIXED234 para que una edición de Slot no cambie la anchura del Sidebar. Alto inicial885 es ejemplo,redimensionable por el consumidor; controles superiores64 y pie96/88 derivan de sus hijos y padding. Slots centrales FILL y pies HUG; ambos pies usan clipsContent=false para permitir Tooltip fuera de su ancho. Los controles Expand/Collapse tienen nombres distintos para evitar heredar el caret opuesto al cambiar presentación. No inventar scroll en el principal:overflow NONE raíz. El host elige altura,contenido,viewport y eventual desplazamiento sin romper Slots.
+
+### REQ-THEME
+
+Collapsed usa fondo de marca principal y expanded superficie de marca suave,temáticos en cuatro modos; líneas inferiores conservan vector fuente blanco fijo oacento temático. No duplicar colores hijos en tokens del Sidebar. Los iconos superiores conservan contrato de Icon Button y los de ayuda el de Menu item.
+
+### REQ-INTERACTION
+
+El control superior puede enlazar collapsed↔expanded con CHANGE_TO desde su wrapper para conservar el clic y hover del hijo. Los pares de Slots tienen configuración independiente; no afirmar transformación automática de menús personalizados o conservación de una ruta del producto. La muestra verifica retorno entre presentaciones y selección visual con datos ficticios. El consumidor decide si mantiene selección/ruta al cambiar de presentación.
+
+### REQ-TOKENS
+
+Aplicar BH-P07 al mapa seleccionado antes de construir. Una firma por tipo,unidad,scope y aliases completos; no multiplicar por estados. Tokens directos de cada contrato viven en su único grupo bajo component; primitive y semantic conservan scopes vacíos. Mantener nombre lógico,figmaName,WEB e ID/key. El corte6.17.0 conserva1032 tokens anteriores y totaliza1099:170 primitivas,131 semánticos y798 de componente. Ocho Foundations corresponden únicamente a las cadenas72/200/234 e Inter; el estilo Bold reutiliza el alias canónico bold; no crear colores nuevos ni cotas885/1399/222/65.
+
+### REQ-DEPENDENCIES
+
+Resolver hijos por contratos y versiones exactas,con instancias oficiales vinculadas y sus tokens intactos. La auditoría previa24páginas/6939instancias no encontró consumidores,helpers ni definiciones de estas familias; cero sustituciones/retiros. Las referencias inversas son evidencia,no dependencias normativas circulares. Los ejemplos con Button,Loader o Header no añaden dependencias anatómicas. El popup legado fuera del Top bar principal no se incorpora como una cuarta familia.
+
+### REQ-HOST
+
+El consumidor define rutas,permisos,contenido,navegación de producto,semántica nav/enlaces,aria-current,expanded,controles de teclado,nombre accesible,área táctil y adaptación móvil. Figma acredita únicamente lo ejecutado en sus muestras. Separar selección visual,hover y navegación ficticia de rutas o datos reales. No instalar stack ni implementar React,servicios o Graphify por este encargo.
+
+### REQ-QA
+
+Comparar contrato/receta/implementación por variante y cuatro modos. Verificar scopes,aliases,WEB,bindings,estilos,textos largos/vacíos,visibilidad,BETA y swaps de iconos. Comprobar reutilización de hijos,Slots desde consumidores con cantidades menores/mayores que la muestra,inserción,retirada,reordenación y vínculo intacto. Tolerancia geométrica0.05px,color0.000001 y float32 nativo; identidades/aliases exactos. Conservar1032 fingerprints previos. Medir contraste contra el fondo efectivo,sin AA global. Guía compacta y reproducción visible separadas de infraestructura; QA del ejecutor,sin revisor independiente. Un cierre de contexto BLOCKED no se consume: dividir en propietarios completos con referencias tipadas,sin elevar presupuesto ni omitir reglas.

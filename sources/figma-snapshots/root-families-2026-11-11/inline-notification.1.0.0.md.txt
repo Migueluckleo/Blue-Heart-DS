@@ -1,0 +1,455 @@
+---
+{
+  "schema_version": 1,
+  "id": "INLINE-NOTIFICATION-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-037"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/inline-notification-request.json",
+      "sha256": "1d7184c376291a1a7cb921da9c21fd25c43897b7c00ab59103840ee4bdcdad53"
+    },
+    {
+      "id": "SRC-CONTRAST",
+      "path": "evidence/authorization/inline-notification-contrast-decision.json",
+      "sha256": "f90491c9fdd1ebbe1da1b5a660905f7daf0836c6cd3929338732623357827bc2"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/inline-notification-pilot/source/capture-manifest.json",
+      "sha256": "9f8a18ca0a46e91a96c4dab4f4bda54bef4c0e146dd22f156facf73d889138f7"
+    },
+    {
+      "id": "SRC-MODEL",
+      "path": "evidence/inline-notification-pilot/source/inline-notification-component-contract.yaml",
+      "sha256": "724ab156f88f2aa7a5d307eaa254c032015c56a6fa7b12e97e1bb989dca22112"
+    },
+    {
+      "id": "SRC-IDENTITY",
+      "path": "evidence/inline-notification-pilot/source/page-index.json",
+      "sha256": "20cd7db3107b548b7b0384591aa9e555f9cd4e8a9b434534cb08034e461db9b4"
+    },
+    {
+      "id": "SRC-PLAN",
+      "path": "evidence/inline-notification-pilot/build-plan.json",
+      "sha256": "ccda0395176e91c4233c56af03ca79f3e4ddcb9be9ace431ec8d4a7c90354632"
+    },
+    {
+      "id": "SRC-AUDIT",
+      "path": "evidence/inline-notification-pilot/reverse-dependencies.json",
+      "sha256": "277c402f2f3aad1b1eca8297d64ed75148e3b20daa8059e9b41a61641665995a"
+    },
+    {
+      "id": "SRC-MEASURE",
+      "path": "evidence/inline-notification-pilot/contrast-analysis.json",
+      "sha256": "a04623fb6561a0097349a4ccee1f0c203aba5a44c3388c140be1d5ccba3e31af"
+    },
+    {
+      "id": "SRC-NATIVE-LIMIT",
+      "path": "evidence/inline-notification-pilot/target/instance-qa-neutral.json",
+      "sha256": "27aa091addb300c55fc79805f1af68b05f125addb192c0fd81553b343cdfbfca"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "contract",
+      "id": "ICON-BUTTON-001",
+      "version": "1.0.0",
+      "relation": "composition"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.spacing-top",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.spacing-content",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.spacing-leading",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.color-bg-neutral",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.radius-container",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.size-min-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.color-stroke-neutral",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.border-width-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.size-status-icon",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.color-icon-neutral",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.spacing-text",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.color-text-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.font-semibold",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.font-size-title",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.font-line-height-title",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.font-tracking",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.color-text-secondary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.font-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.font-size-description",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.font-line-height-description",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.color-text-link-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.color-bg-info",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.color-icon-info",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.color-bg-success",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.color-icon-success",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.color-bg-warning",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.color-icon-warning",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.color-bg-error",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "inline-notification.color-icon-error",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-MODEL",
+        "SRC-PLAN"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ANATOMY con las fuentes registradas, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-COMPOSITION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-PLAN"
+      ],
+      "acceptance": [
+        "Contrastar REQ-COMPOSITION con las fuentes registradas, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-IDENTITY"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API con las fuentes registradas, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-NATIVE-LIMIT"
+      ],
+      "acceptance": [
+        "Contrastar REQ-LAYOUT con las fuentes registradas, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-MODEL",
+        "SRC-PLAN"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TYPOGRAPHY con las fuentes registradas, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-PLAN"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS con las fuentes registradas, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-PLAN",
+        "SRC-IDENTITY"
+      ],
+      "acceptance": [
+        "Contrastar REQ-THEME con las fuentes registradas, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-CONTENT",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-IDENTITY"
+      ],
+      "acceptance": [
+        "Contrastar REQ-CONTENT con las fuentes registradas, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-BEHAVIOR",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-IDENTITY",
+        "SRC-MODEL"
+      ],
+      "acceptance": [
+        "Contrastar REQ-BEHAVIOR con las fuentes registradas, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-ACCESSIBILITY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-IDENTITY",
+        "SRC-CONTRAST",
+        "SRC-MEASURE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ACCESSIBILITY con las fuentes registradas, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-AUDIT",
+        "SRC-PLAN"
+      ],
+      "acceptance": [
+        "Contrastar REQ-DEPENDENCIES con las fuentes registradas, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-CONSUMPTION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-PLAN"
+      ],
+      "acceptance": [
+        "Contrastar REQ-CONSUMPTION con las fuentes registradas, receta y evidencia ejecutada del destino."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-PLAN",
+        "SRC-MEASURE",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA con las fuentes registradas, receta y evidencia ejecutada del destino."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Root",
+      "Content",
+      "Status icon",
+      "Text",
+      "Title",
+      "Description",
+      "Dismiss host target",
+      "Dismiss official Icon Button"
+    ],
+    "composition": "Fixed anatomy, editable text/visibility and official child; no Slot required.",
+    "accessibility": "Host status/alert intent; warning icon contrast exception; keyboard/ARIA not implemented."
+  }
+}
+---
+# Inline Notification 1.0.0
+
+### REQ-ANATOMY
+
+Familia Inline Notification: Root horizontal contiene Content (indicador de tipo y Text vertical con Title/Description) y Dismiss opcional. Cinco variantes reales: neutral, info, success, warning y error; no inventar tamaños ni estados de la notificación. Confetti Regular identifica neutral; Info/CheckCircle/Warning/XCircle Fill identifican los otros tipos. Conservar sus instancias Phosphor remotas; no copiar paths. El wrapper transparente HUG del cierre es adaptación DERIVED adoptada por ADR-037 para que el host pueda atender clic sin interferir con hover del hijo; no añade otra familia ni replica tokens del hijo.
+
+### REQ-COMPOSITION
+
+Usar ICON-BUTTON-001@1.0.0 ghost/small, selected=false, state=default, con X Light y Show badge=false. Dot permanece dependencia transitiva del hijo, incluso oculto; no reconstruirlo ni declarar sus tokens como propios. Los cinco estados del cierre pertenecen al contrato del hijo; no crear variantes Inline para ellos. Mantener la relación de instancia y admitir cambios del estado del cierre desde el consumidor. No se necesita Slot: la anatomía es fija y la variabilidad observada es texto, visibilidad, tipo y composición con el hijo oficial.
+
+### REQ-API
+
+Exponer type con los cinco valores observados; Title y Description como TEXT; Show icon, Show title, Show description y Show dismiss como BOOLEAN, todos true inicialmente. Conservar la correspondencia de keys Figma en el ledger; no deducirlas del nombre. Title por defecto es Title y Description por defecto es Description text that explains what happened. View details. Description es un único texto con dos rangos estilísticos. Cambiar la propiedad no acredita conservar automáticamente el enlace: después de editar la copia, el consumidor debe definir el rango de enlace, aplicar sus estilos/bindings y, si aplica, su destino. No añadir una propiedad de URL inexistente ni interpretar subrayado como navegación configurada.
+
+### REQ-LAYOUT
+
+Ancho de referencia602px y mínimo320px; ancho adaptable al host y altura HUG. Padding superior12, derecho16, inferior16 e izquierdo24; separación principal16 y entre textos4; radio8. El ejemplo completo mide76px de alto. Title16/24 y Description14/20 crecen con contenido; no fijar alto ni recortar líneas. La recomendación editorial de dos líneas no es un máximo nativo: si el texto no cabe, crece en altura o el responsable reduce la copia. El indicador conserva24px; el cierre32px los gobierna el hijo. Ocultar opcionales redistribuye Auto Layout mientras queda contenido visible. El lector nativo conserva la altura del frame Text vacío cuando Show title y Show description están apagados: para una composición de solo indicador, ocultar Text desde la instancia; para solo cierre, ocultar también Content. Son overrides del consumidor, no nuevas propiedades ni variantes. Si todos los contenidos se ocultan, el host retira la notificación; el componente no incorpora una condición de negocio ni una altura cero automática.
+
+### REQ-TYPOGRAPHY
+
+Conservar Manrope, Title16px/24px SemiBold y Description14px/20px Regular con tramo final SemiBold/subrayado; tracking0px. Usar tres estilos compartidos propios (title, description, link), vinculados a los tokens de esta familia, y conservar sus IDs después de las ediciones. Aplicar bindings por rango y la decoración literal de texto, no un token de color pegado ni un estilo de otra familia. No hay estilos nombrados fuente: los del destino son proyección adoptada. Subrayado es una propiedad enumerada, no una variable nueva.
+
+### REQ-TOKENS
+
+La receta SRC-PLAN declara31 firmas propias para197 usos observados. Compartirlas por firma completa, con un scope por token, y reutilizar el token spacing/none en las cinco propiedades de cada wrapper de cierre derivado. No copiar tokens de Icon Button/Dot, no crear variables de estado sin usos ni Foundations nuevas. La receta enlaza parte/propiedad/rango/tipo con token, alias y ruta Figma; las dependencias directas de este MD son su inventario único. Aplicar BH-P07 para mínimo, nombres y colecciones. Todos los nuevos tokens se alojan bajo inline-notification/ en component; las otras dos colecciones permanecen primitive y semantic con scopes vacíos.
+
+### REQ-THEME
+
+Solo el texto del enlace sigue el vector temático fuente de Contable, Administrativo, Servicios y Personas. Fondos, borde neutral, Title, Description e indicadores de estado son invariantes y repiten su alias en los cuatro modos. Seleccionar component en el contenedor; no añadir modos por tipo. Los indicadores comunican un estado propio aun sin Title: no son acompañantes tipográficos de ese título genérico, por lo que conservan los colores de feedback independientes; neutral sí coincide con Title. Dismiss es una acción sin etiqueta visible y conserva los aliases de su contrato. No trasladar excepciones de Tab/Button a esta familia.
+
+### REQ-CONTENT
+
+Mensaje contextual persistente junto al contenido afectado, sin superposición ni temporizador. Title resume qué pasó y Description explica qué hacer; las cadenas fuente son ejemplos, no reglas fiscales o de negocio. Seleccionar tipo según la gravedad del contexto. Usar una notificación por contexto y agrupar incidencias cuando corresponda; no insertar una acción principal dentro de su anatomía. El host aporta copia localizada y enmascaramiento adecuado de información; los ejemplos de QA son ficticios. La composición no valida formatos, identificadores, fechas, montos ni datos personales.
+
+### REQ-BEHAVIOR
+
+La notificación no se descarta sola. El host define el cierre por Dismiss o por resolución de la condición y decide cuándo reaparece. En error activo, el host apaga Show dismiss; type=error por sí solo no conoce ni valida la condición. El cierre, sus callbacks y un posible enlace no están implementados en los principales. El subrayado fuente tiene hyperlink=null. Solo demostrar navegación si el consumidor aporta un destino real en el prototipo; no atribuir esa reacción al componente fuente. Hover del cierre se hereda del Icon Button oficial; pressed/focus son estados visuales del hijo y no acreditan teclado o presión física.
+
+### REQ-ACCESSIBILITY
+
+Intención de consumo web: status para neutral/info/success y alert para warning/error; nombre accesible del cierre Cerrar notificación. Son responsabilidades del host futuro, sin implementación ARIA/teclado en este encargo. No depender solo del color: el tipo se acompaña con símbolo y copia clara. La medición actual conserva Title14.827–17.853:1, Description6.293–7.578:1 y enlace4.616–7.202:1 en cuatro temas. Warning conserva2.962:1 por elección humana, por debajo de3:1 para gráficos; registrar la limitación sin afirmar cumplimiento ni accesibilidad global. La advertencia fuente de enlace Servicios por debajo4.5:1 no corresponde a los valores actuales. El cierre visual32px requiere ampliación de target en un host táctil; no alterar silenciosamente su geometría oficial.
+
+### REQ-DEPENDENCIES
+
+La auditoría previa cubre17páginas y5049instancias: cero consumidores anteriores de Inline Notification y cero sustituciones. Las tres variantes Dot type=notification son indicadores distintos; no retirarlas. Crear la nueva relación de consumo a Icon Button oficial y documentarla en el mapa y las guías, sin introducir una dependencia normativa inversa ni cambiar el contrato del hijo por agregar un consumidor. Conservar sus principales, keys, estilos, tokens y consumidores anteriores. Fuente Figma y proyecto anterior permanecen en solo lectura.
+
+### REQ-CONSUMPTION
+
+Resolver catálogo/versión/hash y modo antes de consumir. Si el cierre transitivo completo de reglas excede65536bytes, devolver BLOCKED; no elevar presupuesto, quitar pins ni devolver reglas truncadas. La proyección acotada del padre debe incluir todos sus requisitos y cadenas de tokens, con referencias tipadas y hash íntegro de Icon Button y Dot. No es un contexto transitivo de reglas: expandir los contratos hijos desde sus guías cuando se modifique su interior. Las proyecciones no son otra fuente normativa.
+
+### REQ-QA
+
+Validar cinco tipos y siete propiedades,31variables/124aliases, scopes/WEB, tres estilos y los bindings por rango y geometría. Probar todos los opcionales en cuatro modos, copia larga/corta,320/602/ancho amplio y cambios de variante desde instancias, conservando vínculo y overrides. Verificar glyph keys/remote, color/medidas y cierre oficial en sus estados. Comparar presets y source geometry con tolerancia declarada; registrar adaptaciones, no modificar el contrato para hacer pasar un fallo. Revisar guía visual y reproducción visible de cierre/enlace con destino/condición de muestra, separadas de QA de infraestructura. El encargo no implementa React, negocio, teclado ni anuncia ARIA.
+

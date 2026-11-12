@@ -1,0 +1,435 @@
+---
+{
+  "schema_version": 1,
+  "id": "RADIO-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-039"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/radio-request.json",
+      "sha256": "3cfe4a152995476e1074a53e50fc328a91f310948357b56845496c9fd47cee21"
+    },
+    {
+      "id": "SRC-CHOICE",
+      "path": "evidence/authorization/radio-slot-choice.json",
+      "sha256": "480d4f5eb40dc6133d6911bcff0d5b6b1b85ff42766e3c648b5464eeb23f478c"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/radio-pilot/source/capture-manifest.json",
+      "sha256": "b887dbb7af6f312fe8e084438f4fc7d285fb12c1bd9f690fa9fa21d44c476962"
+    },
+    {
+      "id": "SRC-MODEL",
+      "path": "evidence/radio-pilot/source/radio-component-contract.yaml",
+      "sha256": "d24c6bf8a8746812ebc9ab5762905ebc5df6bd7dc2e6641a60af5ce6d20836a2"
+    },
+    {
+      "id": "SRC-IDENTITY",
+      "path": "evidence/radio-pilot/source/page-index.json",
+      "sha256": "94b345dba081da4bf87b56ec11fce54b58fb0c0f08f52e601907485b47aa72a9"
+    },
+    {
+      "id": "SRC-PLAN",
+      "path": "evidence/radio-pilot/build-plan.json",
+      "sha256": "9ad97bcd1b8391d6207e2fdd5af9e561d332ce73563ade51d3d291f957418a4e"
+    },
+    {
+      "id": "SRC-AUDIT",
+      "path": "evidence/radio-pilot/reverse-dependencies.json",
+      "sha256": "3d7c5e76595035b9b78270650aeebee040fbb836388ff53a70c96433c0bf5426"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "radio.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.spacing-label-gap",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.size-control",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.size-circle",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.radius-control",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.color-bg-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.border-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.color-stroke-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.color-text-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.font-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.font-size-label",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.font-line-height-label",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.font-tracking",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.size-label-max",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.color-stroke-primary-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.color-stroke-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.color-bg-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.color-stroke-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.color-text-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.color-stroke-error",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.color-bg-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.size-dot",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.color-bg-primary-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.color-bg-selected-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "radio.color-bg-error",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-ANATOMY con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-API con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-LAYOUT con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-FOCUS",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-FOCUS con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-TYPOGRAPHY con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-TOKENS con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-THEME con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-BEHAVIOR",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-BEHAVIOR con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-ASSETS",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-ASSETS con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-ACCESSIBILITY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-ACCESSIBILITY con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-DEPENDENCIES con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT"
+      ],
+      "acceptance": [
+        "Comparar REQ-QA con fuentes, receta y evidencia ejecutada; conservar límites y decisiones adoptadas."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Root",
+      "Control",
+      "Circle",
+      "Dot",
+      "Focus ring",
+      "Label wrapper",
+      "Label"
+    ],
+    "composition": "Intrinsic selection geometry and bound multiline label.",
+    "accessibility": "Host single selection, accessible group/option names, keyboard/ARIA and44px touch targets; not certified by Figma."
+  }
+}
+---
+# RADIO-0011.0.0
+
+### REQ-ANATOMY
+
+Conservar diez combinaciones selected=false/true × state=default/hover/focus/disabled/error. Root horizontal contiene Control24, Circle18, Dot8 solo seleccionado y Focus ring solo focus; Label opcional a la derecha. No añadir indeterminate, pressed, tamaños ni variantes por contenido.
+
+### REQ-API
+
+Exponer Label TEXT y Show label BOOLEAN false, selected y state con valores realmente observados. Resolver keys desde el ledger después de combine. Label inicial es Label; oculto conserva24×24. Toda área visible Control+Label es accionable desde el host de grupo. No confundir existencia de la propiedad selected con lógica exclusiva implementada automáticamente.
+
+### REQ-LAYOUT
+
+Preservar Control24×24, Circle18×18 y Dot8×8 centrados, radio full, gap8 y sin padding. Root HUG/HUG, primera línea por alineación MIN. Label crece en alto, no se trunca y tiene máximo320px según la raíz. Usar wrapper FRAME HUG con maxWidth vinculado a token y texto HEIGHT/FILL: el límite de binding nativo sobre TEXT requiere ese contenedor. Conservar320 al editar desde instancia y el oculto inicial; no cambiar Foundation ni hardcodear el límite del consumidor.
+
+### REQ-FOCUS
+
+Conservar Focus ring26×26, stroke2 INSIDE, radio full, centrado en Control24 y posicionado fuera del flujo. Sus bounds distan4px del Circle18 por lado; el espacio visible entre círculo y el borde interior del anillo es2px. Esta precisión sustituye la descripción ambigua de separación4 sin alterar geometría. No extender el anillo al ancho de Label ni recortarlo en ejemplos o consumidores.
+
+### REQ-TYPOGRAPHY
+
+Label usa Manrope Regular14/24 y tracking0. Crear/aplicar estilo compartido propio con todos sus bindings de tipografía y fill de texto propio. Font style es STRING, no peso numérico inferido. Conservar familia/estilo reales y cargar fuentes antes de editar. Las cadenas fuente son ejemplos editables; el máximo de ancho no es un límite de caracteres.
+
+### REQ-TOKENS
+
+Aplicar BH-P07:26firmas mínimas para366usos propios incluidos wrapper y estados reales. Variables solo bajo radio/ en component; propiedad→token propio→semántico→primitiva. No crear Foundations nuevas, duplicar semánticos, usar scopes múltiples ni multiplicar tokens por estado. Circle y Dot pueden compartir fill cuando la firma completa coincide; su geometría sigue sus tamaños distintos. El mapa registra rutas Figma y WEB por identidad.
+
+### REQ-THEME
+
+Son temáticos Circle seleccionado default/focus y hover, y stroke sin seleccionar hover. Background default, foco del anillo, error, disabled, Dot y textos son invariantes. Verificar alias y paint efectivo en cuatro modos, incluidos overrides de instancia. No trasladar colores de Button, Tab o Checkbox por semejanza; la receta contiene el vector observado y las firmas compartidas.
+
+### REQ-BEHAVIOR
+
+Una sola opción por grupo; seleccionar otra deselecciona la anterior, mientras pulsar la actual no la apaga. Disabled no cambia selección ni recibe foco. El host gobierna disponibilidad, valor y validación. Los principales añaden hover reversible solo para default, conservando selected. No implementar un toggle autónomo que permita varios radios activos en el mismo grupo; la muestra de grupo demuestra exclusión por estados completos del host.
+
+### REQ-ASSETS
+
+Dot es un FRAME circular intrínseco de selección; no es el componente público Dot de estado/conteo y no debe sustituirse por él. No existen dependencias de iconos en Radio. No importar un pictograma Phosphor llamado Radio/RadioButton por coincidencia nominal ni inventar assets. El desarrollo futuro conserva semántica de radio; la política Phosphor rige únicamente iconografía real.
+
+### REQ-ACCESSIBILITY
+
+El consumidor aporta grupo con título y etiquetas visibles, nombre accesible, aria-checked/role radio o elemento HTML nativo equivalente, navegación Tab/flechas y focus de teclado. Control visual24 necesita target host44×44 en táctil; una etiqueta alta no demuestra44px de ancho/alto de toque. Medir contraste por rol; disabled se reporta separado. Error necesita helper explicativo, no solo color. QA Figma no acredita implementación web ni AA global.
+
+### REQ-DEPENDENCIES
+
+Auditoría inversa previa19páginas/5862instancias: cero principales, helpers, consumidores o referencias sin resolver. Construir Radio antes del grupo y registrar sus instancias nuevas; las relaciones inversas son evidencia, sin ciclos normativos. Fuente y proyecto anterior permanecen solo lectura; no reconstruir recursos desde scripts históricos.
+
+### REQ-QA
+
+Probar diez variantes,26variables/104aliases y366bindings; textStyle y tipografía resuelta. Desde instancias ejecutar cuatro modos, visibilidad de Label, textos cortos/largos/multilínea, cambio de selected/state y anillo sin clipping. Tolerancia geométrica0.05px y color0.000001, identidades/aliases exactos. Validar controles negativos disabled y preservar vínculos. Separar nativo, captura, reproducción e infraestructura; React/ARIA/teclado/toque físico no implementados.
+

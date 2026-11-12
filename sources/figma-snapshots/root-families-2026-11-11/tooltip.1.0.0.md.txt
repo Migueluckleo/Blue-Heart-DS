@@ -1,0 +1,440 @@
+---
+{
+  "schema_version": 1,
+  "id": "TOOLTIP-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-044"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/tooltip-request.json",
+      "sha256": "45c2005580cb1ce92a7d871aa49f9b70c75a0768c5e3e0541c910cc31192ac58"
+    },
+    {
+      "id": "SRC-HUG",
+      "path": "evidence/authorization/tooltip-hug-choice.json",
+      "sha256": "2cd86d86f363e4e417e417644ceab0a2a589f49a01a9115644471f1ef73de85d"
+    },
+    {
+      "id": "SRC-PROBE",
+      "path": "evidence/tooltip-pilot/hug-layout-probe.json",
+      "sha256": "ead47b6f45419eb3f5a62fc40d347fea6c3873381e5b3ab7df2aac17b342615d"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/tooltip-pilot/source/capture-manifest.json",
+      "sha256": "923e2030d362981f6c0dc0ea94e9b18c759fbf50ca800f04f962e6f08f9ba413"
+    },
+    {
+      "id": "SRC-MODEL",
+      "path": "evidence/tooltip-pilot/source/tooltip-component-contract.yaml",
+      "sha256": "52424540dfa8aaec4958aeb34826ad37d55cd56426f3e15a78946158cc8bfaab"
+    },
+    {
+      "id": "SRC-PLAN",
+      "path": "evidence/tooltip-pilot/build-plan.json",
+      "sha256": "dc8bae6fb99c07897ab4334b736824c14c2ea772cf8e67a1f379024b61ca277c"
+    },
+    {
+      "id": "SRC-AUDIT",
+      "path": "evidence/tooltip-pilot/reverse-dependencies.json",
+      "sha256": "ec95af423e2c09457af1fe615b8d0d1e7d0c1c21373c86306a4d3267bbca5284"
+    },
+    {
+      "id": "SRC-CONTRAST",
+      "path": "evidence/tooltip-pilot/contrast-analysis.json",
+      "sha256": "73fadfb59277a3ac4064ac8fe41fbd947246ab8b40ec7bf95431aaf5537c6fa2"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "tooltip.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.spacing-compact",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.spacing-container",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.spacing-content",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.size-body-max-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.radius-container",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.color-bg-inverse",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.color-text-inverse",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.font-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.font-size-label",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.font-line-height-label",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.font-tracking",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.size-arrow-length",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.size-arrow-depth",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.color-arrow-inverse",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.font-semibold",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.font-size-description",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "tooltip.font-line-height-description",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HUG",
+        "SRC-PROBE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Contrastar contrato,receta y comprobante ejecutado: REQ-ANATOMY"
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HUG",
+        "SRC-PROBE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Contrastar contrato,receta y comprobante ejecutado: REQ-API"
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HUG",
+        "SRC-PROBE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Contrastar contrato,receta y comprobante ejecutado: REQ-LAYOUT"
+      ]
+    },
+    {
+      "id": "REQ-ARROW",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HUG",
+        "SRC-PROBE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Contrastar contrato,receta y comprobante ejecutado: REQ-ARROW"
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HUG",
+        "SRC-PROBE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Contrastar contrato,receta y comprobante ejecutado: REQ-TYPOGRAPHY"
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HUG",
+        "SRC-PROBE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Contrastar contrato,receta y comprobante ejecutado: REQ-TOKENS"
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HUG",
+        "SRC-PROBE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Contrastar contrato,receta y comprobante ejecutado: REQ-THEME"
+      ]
+    },
+    {
+      "id": "REQ-CONTENT",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-HUG",
+        "SRC-PROBE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Contrastar contrato,receta y comprobante ejecutado: REQ-CONTENT"
+      ]
+    },
+    {
+      "id": "REQ-HOST",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-HUG",
+        "SRC-PROBE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Contrastar contrato,receta y comprobante ejecutado: REQ-HOST"
+      ]
+    },
+    {
+      "id": "REQ-ACCESSIBILITY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-HUG",
+        "SRC-PROBE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Contrastar contrato,receta y comprobante ejecutado: REQ-ACCESSIBILITY"
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HUG",
+        "SRC-PROBE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Contrastar contrato,receta y comprobante ejecutado: REQ-DEPENDENCIES"
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-HUG",
+        "SRC-PROBE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Contrastar contrato,receta y comprobante ejecutado: REQ-QA"
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Root",
+      "Body",
+      "Title",
+      "Label",
+      "Arrow",
+      "Arrow shape"
+    ],
+    "composition": "Own tooltip bubble and vector arrow; host supplies trigger and timing.",
+    "accessibility": "Future host implements tooltip semantics,describedby,focus,dismissal and mobile alternative; no global AA claim."
+  }
+}
+---
+# TOOLTIP-001 · 1.0.0
+
+### REQ-ANATOMY
+
+Conservar24combinaciones reales placement top/bottom/left/right × arrow start/center/end × type simple/rich en un set. Root compone Body y Arrow frame/Arrow shape VECTOR propios; rich añade Title antes de Label. No añadir iconos,acciones,componentes hijos,loading,error ni variantes de disparador.
+
+### REQ-API
+
+Conservar Label TEXT por defecto Tooltip y Title TEXT por defecto Title; Title solo consume rich. Placement,arrow,type son ejes VARIANT. Default top/start/simple. Resolver keys por ledger después de combinar; Label conserva su texto al cambiar simple/rich y Title conserva su override en rich. Arrow siempre visible; no inventar toggle de flecha.
+
+### REQ-LAYOUT
+
+HUG horizontal/vertical adoptado por el responsable para24principales,corrigiendo anchos laterales fijos68/75. Body VERTICAL HUG,ancho máximo240 vinculado; padding horizontal12 y vertical8 simple/12 rich,gap4. Textos HEIGHT/FILL sin cap literal TEXT: los216interiores derivan del máximo240 menos24de padding. La prueba nativa confirma crecimiento por Label o Title sin wrappers ni token216. Iniciales se conservan: simple69×42 vertical/75×36 lateral;rich62×70 vertical/68×64 lateral. Máximo del cuerpo240; total lateral246 por flecha6. Hosts más estrechos requieren una anchura disponible explícita y receta desde instancia; no afirmar autocolisión.
+
+### REQ-ARROW
+
+Conservar orden de hijos y dirección de vector desde raíz: top apunta abajo,bottom arriba,left derecha,right izquierda. Flecha12×6 vertical y6×12 lateral,paths nativos exactos; no Phosphor ni copia de icono. Arrow frame FILL sobre eje transversal y HUG en profundidad. Start/center/end son alineaciones MIN/CENTER/MAX; padding12 horizontal y8 vertical según orientación. Body y flecha no se superponen ni se desacoplan al editar texto. No tokenizar coordenadas derivadas de Auto Layout.
+
+### REQ-TYPOGRAPHY
+
+Tres estilos compartidos: simple Manrope Regular14/20,Title SemiBold14/20,Description Regular12/16; tracking0. Reutilizar aliases exactos,incluido semantic.font-weight-semibold cuyo literal Semibold se presenta nativamente como SemiBold. No modificar la Foundation ni convertir STRING a peso numérico. Aplicar estilos y bindings a36textos. Sombra Body24usos en un estilo compartido con valores completos de elevation/shadow/md fuente: efecto atómico sin bindings fuente,no crear paleta o variables de sombra por analogía.
+
+### REQ-TOKENS
+
+BH-P07 gobierna19firmas únicas y720bindings bajo tooltip/ de component,un scope específico por token. Background FRAME_FILL y Arrow SHAPE_FILL mantienen firmas distintas; texto inverso compartido entre roles. Reutilizar fuentes,tamaños,líneas,espaciados,radio,dimensiones6/12/240 y aliases existentes. Cero Foundations nuevas,1013tokens anteriores íntegros,total1032 en tres colecciones. Mantener ID/key,nombre lógico,ruta Figma y WEB; no multiplicar por24variantes.
+
+### REQ-THEME
+
+Todos los roles son invariantes en Contable,Administrativo,Servicios y Personas,incluidos fondo inverso,texto blanco y flecha. Repetir alias en cuatro modos de component; no heredar colores de marca,excepción Tab o foco de Button. Contraste medido se limita a la pareja texto/cuerpo,sin certificar interacción ni accesibilidad global.
+
+### REQ-CONTENT
+
+Tooltip aporta ayuda breve,no contenido indispensable ni mensajes de error. Simple nombra una acción/icono con1–4palabras,sentence case y sin punto final; rich usa título corto y descripción de máximo2líneas como guía de autoría,no truncamiento automático. Conservar saltos y crecimiento real,no ellipsis ni pérdida de texto inventados. Considerar expansión del portugués y terminología oficial. No repetir el texto visible del disparador ni poner enlaces/botones; acciones requieren otro patrón.
+
+### REQ-HOST
+
+El consumidor aporta disparador,anclaje,retardo hover aproximado300ms,apertura por foco,cierre al salir/perder foco/Escape y placement que evite tapar contenido con fallback si no cabe. El componente visual no implementa colisión automática ni lógica del producto. Usar Tooltip oficial junto a Icon Button o términos técnicos por composición del host,no insertarlo como hijo universal de cada familia ni añadir dependencia inversa normativa. La muestra Figma debe declarar exactamente sus disparos y cierres ejecutados.
+
+### REQ-ACCESSIBILITY
+
+Implementación futura aporta role=tooltip y aria-describedby desde disparador con nombre accesible; un icon button sin texto necesita nombre/tooltip coherentes. Información esencial también accesible sin hover,en móvil y con teclado. Figma no acredita DOM,lector,gestión real de foco ni toque físico. No confundir contraste de la paleta con AA global; medir fondo real del host y evitar que tooltip o sombra queden recortados.
+
+### REQ-DEPENDENCIES
+
+Auditoría previa23páginas/6722instancias:cero principales,helpers,instancias o frames Tooltip por identidad/key/nombre,cero sustituciones/retiros. Las recomendaciones y Show tooltip de otros contratos no demuestran burbujas anidadas. No hijos reutilizables ni Phosphor en Tooltip; los controles de muestras se registran aparte con contratos propios. El contexto completo de esta familia debe caber65536bytes sin truncar. Fuentes solo lectura,React/Graphify y etapa web diferidos.
+
+### REQ-QA
+
+Comprobar24variantes,19variables/76aliases,720bindings,36textos con tres estilos y24sombra compartida. Probar cuatro modos,contenido corto/largo/vacío,ediciones independientes de Title/Label,swaps placement/arrow/type,anchos natural y restringido,capBody240/texto216/lateral246,paths y alineación de flecha. Comparar1013variables previas con identidad/alias/scopes intactos,tolerancia0.05px y0.000001color,float32 nativo. Guía compacta de instancias y reproducción visible separadas de infraestructura; QA del ejecutor,no revisor independiente. Documentar límites del host y reacciones no implementadas.
+

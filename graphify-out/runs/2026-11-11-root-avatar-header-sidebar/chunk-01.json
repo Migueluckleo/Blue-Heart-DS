@@ -1,0 +1,74 @@
+{
+  "nodes": [
+    {
+      "id": "specs_components_sidebar_secondary_control_amendment_v1_0_1_sidebar_spec",
+      "label": "Enmienda Sidebar consume Icon Button Secondary small en Figma y React",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/sidebar.secondary-control.amendment.v1.0.1.md",
+      "source_location": "L23",
+      "rationale": "La variante 61:455 corresponde a las dos presentaciones y el mismo ejemplo Next."
+    },
+    {
+      "id": "specs_components_sidebar_secondary_control_amendment_v1_0_1_sidebar_guide",
+      "label": "Guía Sidebar conserva nombres y foco al alternar",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/sidebar.secondary-control.amendment.v1.0.1.md",
+      "source_location": "L27",
+      "rationale": "CaretRight expande y CaretLeft contrae. Cada presentación tiene contenido independiente."
+    },
+    {
+      "id": "specs_components_user_selector_contract_v1_0_0_user_spec",
+      "label": "Contrato User selector delega Avatar extra-large y cuatro estados",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/user-selector.contract.v1.0.0.md",
+      "source_location": "L21",
+      "rationale": "El anfitrión controla el menú de cuenta y la etiqueta accesible."
+    }
+  ],
+  "edges": [
+    {
+      "source": "specs_components_user_selector_contract_v1_0_0_user_spec",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_user_selector_1_0_0_md_orig_user",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/user-selector.contract.v1.0.0.md",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_user_selector_contract_v1_0_0_user_spec",
+      "target": "specs_components_avatar_contract_v1_0_0_avatar_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/user-selector.contract.v1.0.0.md",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_sidebar_secondary_control_amendment_v1_0_1_sidebar_guide",
+      "target": "specs_components_sidebar_secondary_control_amendment_v1_0_1_sidebar_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/sidebar.secondary-control.amendment.v1.0.1.md",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_sidebar_secondary_control_amendment_v1_0_1_sidebar_spec",
+      "target": "implementations_web_src_components_sidebar_sidebar",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/sidebar.secondary-control.amendment.v1.0.1.md",
+      "source_location": "L23",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": null,
+  "output_tokens": null,
+  "usage_status": "UNAVAILABLE"
+}

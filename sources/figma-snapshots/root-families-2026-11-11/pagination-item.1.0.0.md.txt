@@ -1,0 +1,430 @@
+---
+{
+  "schema_version": 1,
+  "id": "PAGINATION-ITEM-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-038"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/pagination-request.json",
+      "sha256": "8fc493311e436d46df56caaa67ea6f7717e7d93694f97b2ebd331e20fd422e6e"
+    },
+    {
+      "id": "SRC-CHOICES",
+      "path": "evidence/authorization/pagination-source-decisions.json",
+      "sha256": "a01b0f5c2021a0374de627706f113f211746012dbf0a1409269a09805e74892e"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/pagination-pilot/source/capture-manifest.json",
+      "sha256": "af2af64f7926cda1458b4cb4448beeb999699deb195c9020de880c27aecc1ce3"
+    },
+    {
+      "id": "SRC-MODEL",
+      "path": "evidence/pagination-pilot/source/pagination-item-component-contract.yaml",
+      "sha256": "f1af19eb92d7281e8590c36752826685dd741debf29be5797f29f8daa50a75cd"
+    },
+    {
+      "id": "SRC-IDENTITY",
+      "path": "evidence/pagination-pilot/source/page-index.json",
+      "sha256": "e96b86494ac9b558552ea6694f1151a9f399301ef36eea2bccabd047ee97070b"
+    },
+    {
+      "id": "SRC-PLAN",
+      "path": "evidence/pagination-pilot/build-plan.json",
+      "sha256": "e23838d69ceed2a9035252ddb4bb2d39e5bc4abb79dc6e877373fbbe5b898c5e"
+    },
+    {
+      "id": "SRC-AUDIT",
+      "path": "evidence/pagination-pilot/reverse-dependencies.json",
+      "sha256": "e4289ad9807f379559cc9fbc4ac5d29c3de768f02fe19c97d433c6ef53e605e3"
+    },
+    {
+      "id": "SRC-ASSETS",
+      "path": "evidence/pagination-pilot/source/official-phosphor.json",
+      "sha256": "f8b0d05d87cd7f5ec574865567070434ecfeafdffe86fc825b97466f41a227f1"
+    },
+    {
+      "id": "SRC-NATIVE-SWAP",
+      "path": "evidence/pagination-pilot/target/default-icon-swap-diagnostic.json",
+      "sha256": "f83c3a6a847211334125ed2c65179fe49bb291ebc8593b709601d756a169b579"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "pagination-item.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.spacing-inline",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.size-control",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.radius-control",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.color-stroke-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.border-width-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.color-text-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.font-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.font-size",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.font-line-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.font-tracking",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.color-bg-primary-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.color-bg-primary-selected",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.color-stroke-primary-selected",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.color-text-selected",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.font-semibold",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.color-stroke-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.border-width-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.radius-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.size-icon",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.color-icon-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.color-bg-primary-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.color-icon-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination-item.color-text-ellipsis",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ANATOMY contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-LAYOUT contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TYPOGRAPHY contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-THEME contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-ASSETS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS",
+        "SRC-NATIVE-SWAP"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ASSETS contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-BEHAVIOR",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-BEHAVIOR contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-ACCESSIBILITY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ACCESSIBILITY contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-DEPENDENCIES contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Root",
+      "Label",
+      "Icon",
+      "Focus ring"
+    ],
+    "composition": "Editable text/icon with linked Phosphor.",
+    "accessibility": "Host semantics/keyboard/44px touch target; source contrast measured, no global AA claim."
+  }
+}
+---
+# PAGINATION-ITEM-0011.0.0
+
+### REQ-ANATOMY
+
+Root contiene Label para page/ellipsis o icono Phosphor para icon, y anillo absoluto solo en focus. Conservar exactamente nueve combinaciones: page default/hover/selected/focus, icon default/hover/focus/disabled y ellipsis default. No completar el producto cartesiano ni inventar pressed, page disabled, icon selected o selected+focus.
+
+### REQ-API
+
+Label TEXT e Icon INSTANCE_SWAP conservan la API fuente; resolver keys desde el ledger. Label se aplica a page; ellipsis conserva su texto no interactivo. Icon admite los cuatro carets oficiales Light sin variantes por dibujo. El host elige únicamente combinaciones reales desde el ledger; una propiedad disponible en el set no autoriza una combinación inexistente.
+
+### REQ-LAYOUT
+
+Por elección humana, page usa ancho HUG y mínimo32px; alto32px fijo. Icon y ellipsis conservan32×32. Padding horizontal8px y vertical0; Label no envuelve y crece con números largos. Icon16×16. Radio8 y borde1 cuando existe. Focus conserva anillo2px/radio12 con bounds derivados del root más8px, desplazado−4px por lado y constraints STRETCH. No convertir sus40px iniciales en ancho fijo que rompa el crecimiento.
+
+### REQ-TYPOGRAPHY
+
+Manrope14/20, tracking0. Regular para page normal/focus/hover y ellipsis; SemiBold para selected. Crear y aplicar dos estilos compartidos vinculados a los tokens propios; no reutilizar estilos de otra familia ni tratar fuentes como pesos numéricos. La cadena semántica Semibold se presenta como SemiBold en fontName.style de Manrope en la fuente y el destino; verificar esa forma nativa observada junto con el binding, sin renombrar la Foundation.
+
+### REQ-TOKENS
+
+La receta selecciona25 firmas mínimas para145 usos propios; child glyphs consumen tamaño y color del padre. Todas las variables propias se alojan en pagination/ de component, un scope por propiedad, alias a semántico. Aplicar BH-P07; no crear variables por cada estado cuando coincida la firma completa, otra colección, paleta o Foundation.
+
+### REQ-THEME
+
+Solo fondo, borde y texto selected de page siguen los cuatro temas de component. Los demás roles, incluidos foco/hover/disabled/ellipsis, son invariantes. Icon primary sigue los aliases de Label primary equivalente en los cuatro modos; disabled es un rol independiente sin texto asociado. No extender colores de Button/Tab por analogía.
+
+### REQ-ASSETS
+
+Usar CaretLeft, CaretRight, CaretDoubleLeft y CaretDoubleRight, Outline/Light de la biblioteca Phosphor del equipo. Las dobles locales de la raíz se mapean a las variantes oficiales registradas en SRC-ASSETS, con keys distintas conservadas en evidencia. Importar/vincular únicamente los componentes requeridos; no aplanar, desacoplar o guardar vectores locales. Verificar cada swap desde instancia con tamaño WIDTH_HEIGHT y fill de vectores SHAPE_FILL. Antes de asignar Icon por API, comparar el destino con el valor actual: omitir la asignación redundante. La prueba nativa muestra que esa operación puede borrar overrides heredados; un cambio real y el regreso al predeterminado sí conservan bindings. No cambiar el principal remoto ni aplicar un literal para compensarlo.
+
+### REQ-BEHAVIOR
+
+Page activa una página; selected identifica la actual y ellipsis no es interactivo. Las cuatro flechas significan primera/anterior/siguiente/última y solo icon puede estar disabled en extremos. La selección, navegación, disponibilidad y foco pertenecen al host; selected no incluye por sí solo un estado de teclado combinado. El principal añade hover reversible únicamente a page/icon default; pressed/focus son visuales explícitos cuando corresponda. Una muestra no acredita datos ni callbacks reales.
+
+### REQ-ACCESSIBILITY
+
+Consumo web futuro: aria-current=page para la actual, nombres accesibles para las flechas y activación por teclado. El ícono es contenido del control, no su nombre accesible. Visual32px exige target host44×44 en táctil, incluso dentro de compact. Selected usa además SemiBold, borde y fondo; su texto medido supera4.5:1 en cuatro temas. Conservar mediciones por rol; no declarar AA global ni certificar ARIA/teclado por QA Figma.
+
+### REQ-DEPENDENCIES
+
+La auditoría previa18páginas/5204instancias no encuentra principales, helpers ni consumidores anteriores. Construir el hijo oficial antes del padre, conservar instancias y actualizar su mapa inverso como evidencia, no como dependencia circular. La fuente Figma/proyecto anterior permanecen solo lectura.
+
+### REQ-QA
+
+Verificar nueve variantes,25variables y100aliases,145bindings más cualquier uso derivado declarado. Probar cuatro modos, Label largo/corto/1/128/10000, icon swaps oficiales, anillos con texto largo y transiciones reales. Registrar tolerancia geométrica0.05px y color0.000001, no adaptar expectativas después del fallo. Separar infraestructura, nativo, captura y reproducción visible. El contexto de consumo debe conservar todos los requisitos dentro del presupuesto.
+

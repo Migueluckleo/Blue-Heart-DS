@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "run": "2026-11-11-buttons-loader",
+  "status": "COMPLETE_LOCAL",
+  "started": 1794428890.535758,
+  "invocations": 2,
+  "retry_attempts": 0,
+  "previous_attempts": [
+    {
+      "started": 1794428823.073503,
+      "elapsed_seconds": 0.82,
+      "status": "NEEDS_SEMANTICS",
+      "phases": [
+        {
+          "name": "documents",
+          "seconds": 0.484,
+          "status": "PASS",
+          "result": {
+            "status": "PASS",
+            "files": 273,
+            "findings": 0,
+            "timings": {
+              "inventory": 0.129,
+              "metadata": 0.229,
+              "status": 0.042,
+              "validation": 0.067
+            }
+          }
+        },
+        {
+          "name": "graph_plan",
+          "seconds": 0.144,
+          "status": "PASS",
+          "result": {
+            "status": "PREPARED",
+            "run": "2026-11-11-buttons-loader",
+            "semantic_files": 19,
+            "chunks": 1,
+            "next": "Extraer cada chunk según la skill Graphify y después ejecutar scripts/ds graph close --run 2026-11-11-buttons-loader"
+          }
+        }
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "name": "documents",
+      "seconds": 0.329,
+      "status": "PASS",
+      "result": {
+        "status": "PASS",
+        "files": 273,
+        "findings": 0,
+        "timings": {
+          "inventory": 0.201,
+          "metadata": 0.009,
+          "status": 0.038,
+          "validation": 0.066
+        }
+      }
+    },
+    {
+      "name": "graph_plan",
+      "seconds": 0.138,
+      "status": "PASS",
+      "result": {
+        "status": "PREPARED",
+        "run": "2026-11-11-buttons-loader",
+        "semantic_files": 19,
+        "chunks": 1
+      }
+    },
+    {
+      "name": "graph",
+      "seconds": 7.827,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "run": "2026-11-11-buttons-loader",
+        "files": 273,
+        "nodes": 2253,
+        "edges": 4769,
+        "config_sha256": "64200147d7f8876266bfc3547518007dc7c1a5d29ea83d98bb44712ac6b7b6ed",
+        "output_sha256": {
+          "graph.json": "8343b6ddef506d1e4539815778bb7cb0e557019b86c707b9383aa1e83e1bbbe9",
+          "graph.html": "2b36a824bc1bf6c0f55642914a7ec1c68cdcb11b87f6fb9d00c530ad01e9d62e",
+          "GRAPH_REPORT.md": "94f74206a8b97617d6727f69bfff32dfb17df8d9772e634c5f5a71492a86e717",
+          "manifest.json": "1a059e2e5ae19bc599ffcce382136ccf581f9cb83c8655f86d781a99d93f37bd",
+          ".graphify_health.json": "cf6b85d192ca6a5d77e49ff0e00a838c76da9c67d35de6ba48dc9ba0a7deb252",
+          ".graphify_labels.json": "f5f2252ee43abf36681f806c4702e11a9ba3d2588c9b09ea79c96ff47cbcdc61",
+          ".graphify_labels.json.sig": "2e229439fb0e4d2c86b6722584c5252c804996c02b1bf39b954f86266b7a827b",
+          "cost.json": "1b1c00ee8aeeeb52094b1bcaeed16a57678649a876f95d30a1ca2de36f5aa8bd"
+        },
+        "source_link_limitations": 0,
+        "semantic_usage": "UNAVAILABLE; not zero",
+        "scope": "Local corpus freshness, deterministic documentation checks, no Figma QA or design approval",
+        "extraction_tool_sha256": "593eb639d649019c81606b410999b243c76e43ad3b7988ee90a120e973dd8bd7",
+        "extraction_sha256": {
+          "ast.json": "7fdfb08b833b900d8b6cb2e69ca6ceeafdcfbdf6c05cd1350a2218dc6f502acd",
+          "structural-supplement.json": "c363a044df788ccc0c71715c7406264e1480875b780724a844eddb76cee21942",
+          "source-plan.json": "bbb8e98de970d0102b84fcfd23b8e08a74670db0d8bd038421cd5376f760d24a"
+        }
+      }
+    },
+    {
+      "name": "consumption",
+      "seconds": 4.621,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "index_bytes": 250588,
+        "documents": 6,
+        "relations": 12
+      }
+    },
+    {
+      "name": "catalog",
+      "seconds": 0.217,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "files": 212,
+        "components": 2,
+        "ds_digest": "e3bd41fd28c99a09acc95b2d606dca9dedd6a814a758bda085e34f65de414b2e",
+        "bundle_bytes": 651384
+      }
+    },
+    {
+      "name": "skills_sync_export",
+      "seconds": 0.694,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "operation": "CREATED",
+        "version": "0.1.3",
+        "directory": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/output/skills/0.1.3",
+        "components": 0,
+        "ds_digest": "LOCAL_CATALOG",
+        "archives": [
+          "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/output/skills/0.1.3/contpaqi-figma-screens-0.1.3.zip",
+          "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/output/skills/0.1.3/contpaqi-po-prototypes-0.1.3.zip"
+        ]
+      }
+    },
+    {
+      "name": "skills_integrity",
+      "seconds": 0.091,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "version": "0.1.3",
+        "ds_digest": "LOCAL_CATALOG",
+        "components": 0,
+        "errors": [],
+        "scope": "Package integrity and source freshness; no design approval or live Figma/web QA"
+      }
+    },
+    {
+      "name": "source_integrity",
+      "seconds": 0.048,
+      "status": "PASS",
+      "result": {
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "graph_integrity",
+      "seconds": 0.124,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "errors": [],
+        "files": 273,
+        "nodes": 2253,
+        "edges": 4769,
+        "scope": "Graph freshness/integrity, not Figma validation"
+      }
+    }
+  ],
+  "usage_start": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "usage_end": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "agent_tokens": "UNAVAILABLE",
+  "agent_tool_calls": "UNAVAILABLE",
+  "command_phase_calls": 9,
+  "publication": "NOT_RUN",
+  "installation": "NOT_REQUESTED; portable packages verified",
+  "publication_holds": [
+    "registry/decisions.md"
+  ],
+  "reuse": {
+    "ds_core.corpus": {
+      "executed": 1,
+      "reused": 7
+    },
+    "yaml_files": {
+      "executed": 3,
+      "reused": 209,
+      "persisted_reused": 60
+    },
+    "ds_core.generate_status": {
+      "executed": 2,
+      "reused": 1
+    },
+    "ds_core.documentation_check": {
+      "executed": 1,
+      "reused": 1
+    },
+    "ds_skills.source_inputs": {
+      "executed": 1,
+      "reused": 10
+    },
+    "ds_consumption.validate_sources": {
+      "executed": 1,
+      "reused": 3
+    }
+  },
+  "hash_reads": 590,
+  "source_fingerprint": "c85e42c5411880715847f7a7f5b292c072bbf1bed7d89b6eeced86a61eada367",
+  "elapsed_seconds": 14.703,
+  "concurrent_attempts": 0
+}

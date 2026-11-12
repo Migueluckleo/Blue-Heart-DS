@@ -1,0 +1,146 @@
+{
+  "sets": [
+    {
+      "id": "500:44",
+      "page": "499:79",
+      "pageName": "Header",
+      "type": "COMPONENT_SET",
+      "name": "Company selector",
+      "x": 1900,
+      "y": 100,
+      "width": 328,
+      "height": 472,
+      "props": {
+        "Company name#500:12": {
+          "type": "TEXT",
+          "defaultValue": "Empresa S.A. de C.V."
+        },
+        "RFC#500:17": {
+          "type": "TEXT",
+          "defaultValue": "CAC840428RH1"
+        },
+        "state": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "focus",
+            "open"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "500:40",
+          "state=default"
+        ],
+        [
+          "500:41",
+          "state=hover"
+        ],
+        [
+          "500:42",
+          "state=focus"
+        ],
+        [
+          "500:43",
+          "state=open"
+        ]
+      ]
+    }
+  ],
+  "swaps": {},
+  "children": [
+    [
+      "500:44",
+      "Company selector",
+      "COMPONENT_SET"
+    ],
+    [
+      "500:85",
+      "User selector",
+      "COMPONENT_SET"
+    ],
+    [
+      "500:132",
+      "Header actions",
+      "COMPONENT_SET"
+    ],
+    [
+      "500:1189",
+      "Header",
+      "COMPONENT"
+    ],
+    [
+      "503:195",
+      "Header / Guía",
+      "FRAME"
+    ],
+    [
+      "504:826",
+      "Header / base / Inicio",
+      "FRAME"
+    ],
+    [
+      "504:978",
+      "Header / company / Inicio",
+      "FRAME"
+    ],
+    [
+      "504:1218",
+      "Header / user / Inicio",
+      "FRAME"
+    ],
+    [
+      "504:1421",
+      "Header / base / Empresa Norte",
+      "FRAME"
+    ],
+    [
+      "504:1559",
+      "Header / company / Empresa Norte",
+      "FRAME"
+    ],
+    [
+      "504:1764",
+      "Header / user / Empresa Norte",
+      "FRAME"
+    ],
+    [
+      "504:1967",
+      "Header / Sincronizar / muestra",
+      "FRAME"
+    ],
+    [
+      "504:2105",
+      "Header / Academia / muestra",
+      "FRAME"
+    ],
+    [
+      "504:2243",
+      "Header / Soporte / muestra",
+      "FRAME"
+    ],
+    [
+      "504:2381",
+      "Header / Aplicaciones / muestra",
+      "FRAME"
+    ],
+    [
+      "504:2519",
+      "Header / Notificaciones / muestra",
+      "FRAME"
+    ],
+    [
+      "505:2208",
+      "Header / Perfil / muestra",
+      "FRAME"
+    ],
+    [
+      "505:2360",
+      "Header / Preferencias / muestra",
+      "FRAME"
+    ]
+  ]
+}

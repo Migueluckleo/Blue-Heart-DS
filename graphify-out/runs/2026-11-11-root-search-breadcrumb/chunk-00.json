@@ -1,0 +1,378 @@
+{
+  "nodes": [
+    {
+      "id": "implementations_web_src_styles_search_css",
+      "label": "Search mantiene tres alturas y foco visible",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L602",
+      "rationale": "El CSS representa estados del input y usa iconos Phosphor. La limpieza conserva el foco."
+    },
+    {
+      "id": "implementations_web_src_styles_breadcrumb_item_css",
+      "label": "Eslabón con foco exterior y separador decorativo",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L688",
+      "rationale": "El rol current y los roles de ancestro resuelven aliases distintos."
+    },
+    {
+      "id": "implementations_web_src_styles_breadcrumb_css",
+      "label": "Composición web de Back, eslabones y ancestros ocultos",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L732",
+      "rationale": "El anfitrión controla rutas y presentación compacta."
+    },
+    {
+      "id": "implementations_web_src_styles_progress_css",
+      "label": "Proporciones de la barra y movimiento reducido",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L316",
+      "rationale": "El valor controlado dimensiona el indicador. El indeterminado usa un segmento de la fuente y se detiene con reduced motion."
+    },
+    {
+      "id": "implementations_web_src_styles_checkbox_css",
+      "label": "Marca nativa de Checkbox y foco en Box",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L398",
+      "rationale": "Control y Box tienen medidas vinculadas. Label envuelve conservando alineación a la primera línea."
+    },
+    {
+      "id": "implementations_web_src_styles_upload_css",
+      "label": "Zona de File Upload, foco y colores por estado",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L486",
+      "rationale": "Los roles de superficie, borde, mensaje y texto siguen los tokens del componente."
+    },
+    {
+      "id": "implementations_web_src_styles_tooltip_css",
+      "label": "Tooltip limita Body y orienta su flecha propia",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L243",
+      "rationale": "Los aliases controlan tamaño, contraste y tipografía. El placement orienta la flecha sin lógica de colisiones."
+    },
+    {
+      "id": "implementations_web_src_styles_dot_css",
+      "label": "Dot usa geometría, borde y tipografía de los aliases del tema",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L56",
+      "rationale": "El punto acompaña al texto del anfitrión y el contador conserva tamaño mínimo."
+    },
+    {
+      "id": "implementations_web_src_styles_selection_css",
+      "label": "Foco y estados de selección sobre controles HTML nativos",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L69",
+      "rationale": "El CSS refleja checked, disabled, invalid y focus-visible de los inputs."
+    },
+    {
+      "id": "implementations_web_src_styles_group_css",
+      "label": "Dirección y roles de texto del Radio group web",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L203",
+      "rationale": "La dirección usa espacios propios y el mensaje de error conserva su rol semántico."
+    },
+    {
+      "id": "qa_contracts_breadcrumb_v1_0_0_review_breadcrumb_doc",
+      "label": "Delegación de cinco variantes de Breadcrumb",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/contracts/breadcrumb.v1.0.0.review.md",
+      "source_location": "L5",
+      "rationale": "Cantidad fija por variante y eslabones expuestos sustentan P-SLOTS NOT_APPLICABLE."
+    },
+    {
+      "id": "qa_contracts_search_breadcrumb_item_v1_0_0_review_leaf_doc",
+      "label": "Delegación de Search y Breadcrumb item",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/contracts/search-breadcrumb-item.v1.0.0.review.md",
+      "source_location": "L5",
+      "rationale": "Matrices fijas con Phosphor. El anfitrión gobierna consulta y destinos."
+    },
+    {
+      "id": "qa_implementations_search_breadcrumb_item_v1_0_0_review_navigation_figma",
+      "label": "Lectura de 33 variantes de Search y Breadcrumbs",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/search-breadcrumb-item.v1.0.0.review.md",
+      "source_location": "L5",
+      "rationale": "Se verificaron vínculos, propiedades y geometría sin discrepancias."
+    },
+    {
+      "id": "qa_implementations_search_breadcrumb_item_v1_0_0_review_navigation_instances",
+      "label": "Prueba consumidora de anillo, exposición y Back",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/search-breadcrumb-item.v1.0.0.review.md",
+      "source_location": "L7",
+      "rationale": "Search prueba ancho variable y propiedades independientes. Breadcrumb verifica exposición y 24 px de Back."
+    },
+    {
+      "id": "qa_implementations_search_breadcrumb_item_v1_0_0_review_navigation_web",
+      "label": "Chrome prueba consulta, limpieza y retorno de foco",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/search-breadcrumb-item.v1.0.0.review.md",
+      "source_location": "L9",
+      "rationale": "La ruta confirma padre inmediato, ocultos y navegación de muestra."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_census",
+      "label": "Censo de maestros públicos, auxiliares y demo de la raíz",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L3",
+      "rationale": "29 páginas y 66 IDs, incluido un demo fuera de alcance."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_rebuild_progress",
+      "label": "Reconstrucción verificable por identidad de fuente",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L13",
+      "rationale": "26 maestros comprobados y 39 pendientes."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_breadcrumb_dependency",
+      "label": "Breadcrumb oficial habilita la dependencia de Section Header",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L17",
+      "rationale": "Otros vínculos de Section Header conservan su estado pendiente."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_progress_dependency",
+      "label": "File Upload reutiliza Linear Progress y Button",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L19",
+      "rationale": "La composición se conserva en Figma y React."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_tooltip_dependency",
+      "label": "Tooltip verificado habilita Menu item",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L21",
+      "rationale": "Menu item precede a Sidebar, Top bar y su auxiliar. BETA, swaps y Tooltip requieren lectura."
+    },
+    {
+      "id": "sources_figma_snapshots_root_families_2026_11_11_breadcrumb_item_1_0_0_md_item_source",
+      "label": "Eslabón con ancestro, Inicio, overflow o actual",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/sources/figma-snapshots/root-families-2026-11-11/breadcrumb-item.1.0.0.md.txt",
+      "source_location": "L379",
+      "rationale": "El destino y el menú pertenecen al anfitrión. Current se anuncia sin navegación."
+    },
+    {
+      "id": "sources_figma_snapshots_root_families_2026_11_11_breadcrumb_1_0_0_md_breadcrumb_source",
+      "label": "Back y cinco composiciones de eslabones oficiales",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/sources/figma-snapshots/root-families-2026-11-11/breadcrumb.1.0.0.md.txt",
+      "source_location": "L281",
+      "rationale": "Collapsed conserva extremos y un control de ancestros omitidos."
+    },
+    {
+      "id": "sources_figma_snapshots_root_families_2026_11_11_search_1_0_0_md_search_source",
+      "label": "Consulta controlada, limpieza y resultados del anfitrión",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/sources/figma-snapshots/root-families-2026-11-11/search.1.0.0.md.txt",
+      "source_location": "L485",
+      "rationale": "El campo conserva Ñ y acentos. El anfitrión aporta algoritmo, errores y resultados."
+    },
+    {
+      "id": "specs_components_breadcrumb_item_contract_v1_0_0_item_guide",
+      "label": "Eslabón con nombre accesible y página actual",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/breadcrumb-item.contract.v1.0.0.md",
+      "source_location": "L25",
+      "rationale": "Inicio y overflow reciben nombres. El actual carece de navegación."
+    },
+    {
+      "id": "specs_components_breadcrumb_contract_v1_0_0_breadcrumb_guide",
+      "label": "Ruta jerárquica, padre inmediato y ancestros omitidos",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/breadcrumb.contract.v1.0.0.md",
+      "source_location": "L25",
+      "rationale": "Breadcrumb reutiliza eslabones y conserva un actual final. En retorno compacto el padre permanece enlace."
+    },
+    {
+      "id": "specs_components_search_contract_v1_0_0_search_guide",
+      "label": "Search para buscar dentro de un conjunto identificable",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/search.contract.v1.0.0.md",
+      "source_location": "L25",
+      "rationale": "Placeholder indica alcance, X limpia sin perder foco y la consulta la gobierna el anfitrión."
+    }
+  ],
+  "edges": [
+    {
+      "source": "registry_root_families_2026_11_11_root_rebuild_progress",
+      "target": "registry_root_families_2026_11_11_root_census",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_rebuild_progress",
+      "target": "registry_root_families_2026_11_11_root_breadcrumb_dependency",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_breadcrumb_dependency",
+      "target": "specs_components_breadcrumb_contract_v1_0_0_breadcrumb_guide",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_breadcrumb_contract_v1_0_0_breadcrumb_guide",
+      "target": "specs_components_breadcrumb_item_contract_v1_0_0_item_guide",
+      "relation": "depends_on",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/breadcrumb.contract.v1.0.0.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_breadcrumb_contract_v1_0_0_breadcrumb_guide",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_breadcrumb_1_0_0_md_breadcrumb_source",
+      "relation": "derives_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/breadcrumb.contract.v1.0.0.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_breadcrumb_item_contract_v1_0_0_item_guide",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_breadcrumb_item_1_0_0_md_item_source",
+      "relation": "derives_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/breadcrumb-item.contract.v1.0.0.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_search_contract_v1_0_0_search_guide",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_search_1_0_0_md_search_source",
+      "relation": "derives_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/search.contract.v1.0.0.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_contracts_breadcrumb_v1_0_0_review_breadcrumb_doc",
+      "target": "specs_components_breadcrumb_contract_v1_0_0_breadcrumb_guide",
+      "relation": "validates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/contracts/breadcrumb.v1.0.0.review.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_contracts_search_breadcrumb_item_v1_0_0_review_leaf_doc",
+      "target": "specs_components_breadcrumb_item_contract_v1_0_0_item_guide",
+      "relation": "validates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/contracts/search-breadcrumb-item.v1.0.0.review.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_contracts_search_breadcrumb_item_v1_0_0_review_leaf_doc",
+      "target": "specs_components_search_contract_v1_0_0_search_guide",
+      "relation": "validates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/contracts/search-breadcrumb-item.v1.0.0.review.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_implementations_search_breadcrumb_item_v1_0_0_review_navigation_figma",
+      "target": "qa_contracts_breadcrumb_v1_0_0_review_breadcrumb_doc",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/search-breadcrumb-item.v1.0.0.review.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_implementations_search_breadcrumb_item_v1_0_0_review_navigation_figma",
+      "target": "qa_contracts_search_breadcrumb_item_v1_0_0_review_leaf_doc",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/search-breadcrumb-item.v1.0.0.review.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_implementations_search_breadcrumb_item_v1_0_0_review_navigation_instances",
+      "target": "qa_implementations_search_breadcrumb_item_v1_0_0_review_navigation_figma",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/search-breadcrumb-item.v1.0.0.review.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_implementations_search_breadcrumb_item_v1_0_0_review_navigation_web",
+      "target": "implementations_web_src_styles_search_css",
+      "relation": "validates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/search-breadcrumb-item.v1.0.0.review.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_implementations_search_breadcrumb_item_v1_0_0_review_navigation_web",
+      "target": "implementations_web_src_styles_breadcrumb_css",
+      "relation": "validates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/search-breadcrumb-item.v1.0.0.review.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_implementations_search_breadcrumb_item_v1_0_0_review_navigation_web",
+      "target": "implementations_web_src_styles_breadcrumb_item_css",
+      "relation": "validates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/search-breadcrumb-item.v1.0.0.review.md",
+      "source_location": "L9",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": null,
+  "output_tokens": null,
+  "usage_status": "UNAVAILABLE"
+}

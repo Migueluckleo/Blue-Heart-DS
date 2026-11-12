@@ -1,0 +1,720 @@
+---
+{
+  "schema_version": 1,
+  "id": "DROPDOWN-ITEM-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-030"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/dropdown-request.json",
+      "sha256": "8aae1f6a6609c1e34fbe88340d96fa6d669f5116726a7b4ffbac02f6e55230bc"
+    },
+    {
+      "id": "SRC-IDENTITY",
+      "path": "evidence/dropdown-pilot/source/identity.json",
+      "sha256": "08c4fb46bf530a954c74f9468f632d0c3bf4f5a72dd63afe41ab96ce9294d7e5"
+    },
+    {
+      "id": "SRC-VARIABLES",
+      "path": "evidence/dropdown-pilot/source/variables-and-assets.json",
+      "sha256": "a134216cbe0c1a16ed476ed27a3ee2a5826f960c8857a9caad8514886c580b36"
+    },
+    {
+      "id": "SRC-INDEX",
+      "path": "evidence/dropdown-pilot/source/index.json",
+      "sha256": "66b2f2f46512b9a6baedfb8c73334bb625900d56855e1a58cf598d2ef533a8c7"
+    },
+    {
+      "id": "SRC-ITEMS-0",
+      "path": "evidence/dropdown-pilot/source/items-0.json",
+      "sha256": "57ac96d9c2ac822adc45b759eb9641321364aea15307a512d60c429584247f8e"
+    },
+    {
+      "id": "SRC-ITEMS-1",
+      "path": "evidence/dropdown-pilot/source/items-1.json",
+      "sha256": "096d0047cfe26f9d4dddcd4d6a326c6734a81c62813597fc172d77758d0c1227"
+    },
+    {
+      "id": "SRC-ITEMS-2",
+      "path": "evidence/dropdown-pilot/source/items-2.json",
+      "sha256": "fc8c8dcb856f26017c3f1339db89829130e53ae3a618beaac4618c46d3ad8977"
+    },
+    {
+      "id": "SRC-ITEMS-3",
+      "path": "evidence/dropdown-pilot/source/items-3.json",
+      "sha256": "db3b6c9b7659a7157809804352c0441238e958d01b356595463c19350eb88ef8"
+    },
+    {
+      "id": "SRC-ITEMS-4",
+      "path": "evidence/dropdown-pilot/source/items-4.json",
+      "sha256": "7e72fe49fd0ede2b7dfd2a26255199d670856030897c231adf3eb9422abd5ebf"
+    },
+    {
+      "id": "SRC-ITEMS-5",
+      "path": "evidence/dropdown-pilot/source/items-5.json",
+      "sha256": "252d568646291624ce39bb9b24f059c5c5471f45fa3cdfd340b7cec44f98e88f"
+    },
+    {
+      "id": "SRC-ITEMS-6",
+      "path": "evidence/dropdown-pilot/source/items-6.json",
+      "sha256": "3618cd1840e40d4ae60740f338baf73fdd48669ffb618e50ad06041e6479eace"
+    },
+    {
+      "id": "SRC-ITEMS-7",
+      "path": "evidence/dropdown-pilot/source/items-7.json",
+      "sha256": "2dab73f9d395a0ecea13de97c914093704b26d73802fa3ac6f8db1a73bcfc530"
+    },
+    {
+      "id": "SRC-ITEMS-8",
+      "path": "evidence/dropdown-pilot/source/items-8.json",
+      "sha256": "eda698e9e901f4f0421dc5571aa567ff8e35cdde61d88682a20a751069a566c8"
+    },
+    {
+      "id": "SRC-MENU-0",
+      "path": "evidence/dropdown-pilot/source/menu-0.json",
+      "sha256": "0b7c5e3b5f82248d2a3e828c90d4a0839d3c88fbb879dfc2b95130846b08b098"
+    },
+    {
+      "id": "SRC-MENU-1",
+      "path": "evidence/dropdown-pilot/source/menu-1.json",
+      "sha256": "26be87ab7cd0c84ff8acfd4ca83d9c3f3d0b9972f07f8d95c37de098a26516cd"
+    },
+    {
+      "id": "SRC-MENU-2",
+      "path": "evidence/dropdown-pilot/source/menu-2.json",
+      "sha256": "c6f5625098115cd75a762b48a46c3e7691bffa855dda879a88d1922de7756ee4"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "dropdown-item.spacing-md",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.spacing-sm",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.size-height-large",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.radius-option",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.size-icon-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.color-icon-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.color-text-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.font-label-style",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.font-size-large",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.font-line-height-24",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.font-letter-spacing",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.color-text-description-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.font-size-small",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.font-line-height-16",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.color-bg-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.border-focus-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.color-stroke-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.color-icon-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.color-text-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.color-bg-selected-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.color-icon-selected-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.color-text-selected-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.font-selected-style",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.size-height-medium",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.font-size-medium",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.font-line-height-20",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.spacing-xs",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.size-height-small",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.size-icon-small",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.color-text-group-label-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.size-divider-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-item.color-bg-divider-default",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-SCOPE",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-SCOPE con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ANATOMY con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-LAYOUT con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TYPOGRAPHY con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-THEME con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-ICON-COLOR",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ICON-COLOR con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-FUNCTION",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-FUNCTION con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-CONTENT",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-CONTENT con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-A11Y",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-A11Y con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-PROTOTYPE",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-PROTOTYPE con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA con fuentes, receta, registro y QA nativo del destino."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Left icon",
+      "Content",
+      "Label",
+      "Description",
+      "Check",
+      "Focus ring",
+      "Group label",
+      "Line"
+    ],
+    "composition": "fixed-no-slots",
+    "accessibility": "host-runtime-not-implemented"
+  }
+}
+---
+# DROPDOWN-ITEM-001 · dropdown-item 1.0.0
+
+### REQ-SCOPE
+
+Construir Dropdown item en la página Dropdown de Blue Heart DS. El origen y el proyecto anterior son solo lectura. Una única matriz observada de25 variantes, con sus assets, tokens y ejemplos; no crear una variante por icono ni completar combinaciones ausentes.
+
+### REQ-API
+
+API: type option/header/divider, size large/medium/small, state default/hover/focus/disabled, selected false/true. Matriz legal: option tiene false en los cuatro estados y true solo en default/hover/focus, para los tres tamaños (21); header solo default/false en los tres tamaños (3); divider solo medium/default/false (1). No hay selected/disabled ni otros estados de header/divider. Label, Description, Group label son TEXT; Show description y Show left icon BOOLEAN false; Left icon INSTANCE_SWAP con ImageSquare Outline/Light inicial. Default option/large/default/false, Label Option. La matriz legal prevalece sobre el producto cartesiano de las opciones de cada eje; consumidores validan antes de seleccionar una combinación.
+
+### REQ-ANATOMY
+
+Option contiene Left icon opcional, Content vertical con Label y Description opcional, Check solo seleccionado y Focus ring en focus. Header contiene Label ligado a Group label. Divider contiene Line. No hay Slot dentro del item: la variabilidad de la lista pertenece al menú. ImageSquare y Check son Phosphor Outline/Light vinculados, con sus keys fuente; no copiar vectores locales. El default de Left icon se conserva; permitir swaps de la biblioteca con color/tamaño del consumidor. Los30 fondos invisibles de contenedores Phosphor no renderizan y se omiten sin crear tokens.
+
+### REQ-LAYOUT
+
+Option: HORIZONTAL, ancho280 de muestra adaptable, HUG vertical, mínimo48/40/32 para large/medium/small. Padding horizontal12; vertical12/8/4; gap8, radio4, alineación MIN/CENTER. Content VERTICAL FILL/HUG, padding/gap0, clipsContent observado. Label HEIGHT/FILL/HUG sin truncamiento ni límite de líneas. Description conserva Manrope12/16 y se adapta a FILL/HUG, corrigiendo el ancho fijo residual228/200/232/208 de los nodos fuente para no recortar contenido en hosts estrechos. La altura crece con ambos textos y no queda fijada al mínimo. Header: padding superior12/inferior4/horizontal12, alto32 corto; tres variantes de size iguales, preservadas como API fuente. Divider: padding vertical4/horizontal0, Line FILL con altura1; alto9. Focus ring absoluto x=y=0, STRETCH en ambos ejes, borde interior2/radio4; se adapta al crecimiento del item, sin outset ni clipping por el ejemplo.
+
+### REQ-TYPOGRAPHY
+
+Manrope: Label large16/24, medium/small14/20; Regular no seleccionado y SemiBold seleccionado. Description12/16 Regular; Group label12/16 SemiBold. Tracking0 PIXELS. Aplicar seis estilos compartidos dropdown/item/large-regular, large-selected, compact-regular, compact-selected, description y group-label, con sus cinco bindings tipográficos. La variable portable conserva Semibold; Figma normaliza la cara a SemiBold, que debe estar disponible. No convertir la apariencia a una fuente aproximada ni conservar el estilo sin sus bindings.
+
+### REQ-THEME
+
+Fondo seleccionado default/focus, Label seleccionado e indicadores seleccionados siguen los vectores fuente de los cuatro temas. El texto seleccionado de Servicios usa el semántico strong observado. Hover usa fondo neutral fijo aun seleccionado. Foco es brand-strong Contable fijo en todos los temas; textos primary/description/group/disabled y fondos no seleccionados son invariantes. Divider usa el vector de color/border/subtle fuente, mediante FRAME_FILL de Line. No deducir un comportamiento temático global desde un solo color. Aliases y valores pertenecen exclusivamente al token set.
+
+### REQ-ICON-COLOR
+
+Consumir BH-P06 REQ-P06-03/04. ImageSquare/Check siguen Label por estado y tema, con SHAPE_FILL y aliases idénticos al TEXT_FILL correspondiente. Esto corrige el secondary de Left icon small no seleccionado y el color de marca distinto de Check/Left icon en Servicios seleccionado. Conservar key, peso y tamaño20 para large/medium,16 para small; la geometría del dibujo escala con el contenedor. No recolorear el maestro remoto. Desarrollo futuro consume ImageSquareIcon y CheckIcon weight=light de la distribución oficial.
+
+### REQ-TOKENS
+
+Aplicar BH-P07:34 firmas propias de Dropdown item, sin redundancias, bajo dropdown/ en component; rutas en la tabla. Compartir valores entre estados y tamaños solo por tipo, scope y aliases completos. Width280 es una muestra; no se crea un token de ancho fijo. Las propiedades derivadas/inertes no justifican variables ficticias. No fusionar estos tokens con los del menú ni con Input. Todos los modos y WEB están en el conjunto seleccionado.
+
+| ID lógico | Ruta Figma |
+|---|---|
+| dropdown-item.spacing-md | dropdown/spacing/item-md |
+| dropdown-item.spacing-sm | dropdown/spacing/item-sm |
+| dropdown-item.size-height-large | dropdown/size/item-height-large |
+| dropdown-item.radius-option | dropdown/radius/item-option |
+| dropdown-item.size-icon-default | dropdown/size/item-icon-default |
+| dropdown-item.color-icon-primary-default | dropdown/color/icon/item-primary-default |
+| dropdown-item.spacing-none | dropdown/spacing/item-none |
+| dropdown-item.color-text-primary-default | dropdown/color/text/item-primary-default |
+| dropdown-item.font-family | dropdown/font/item-family |
+| dropdown-item.font-label-style | dropdown/font/item-label-style |
+| dropdown-item.font-size-large | dropdown/font/item-size-large |
+| dropdown-item.font-line-height-24 | dropdown/font/item-line-height-24 |
+| dropdown-item.font-letter-spacing | dropdown/font/item-letter-spacing |
+| dropdown-item.color-text-description-default | dropdown/color/text/item-description-default |
+| dropdown-item.font-size-small | dropdown/font/item-size-small |
+| dropdown-item.font-line-height-16 | dropdown/font/item-line-height-16 |
+| dropdown-item.color-bg-hover | dropdown/color/bg/item-hover |
+| dropdown-item.border-focus-width | dropdown/border/item-focus-width |
+| dropdown-item.color-stroke-focus | dropdown/color/stroke/item-focus |
+| dropdown-item.color-icon-disabled | dropdown/color/icon/item-disabled |
+| dropdown-item.color-text-disabled | dropdown/color/text/item-disabled |
+| dropdown-item.color-bg-selected-default | dropdown/color/bg/item-selected-default |
+| dropdown-item.color-icon-selected-default | dropdown/color/icon/item-selected-default |
+| dropdown-item.color-text-selected-default | dropdown/color/text/item-selected-default |
+| dropdown-item.font-selected-style | dropdown/font/item-selected-style |
+| dropdown-item.size-height-medium | dropdown/size/item-height-medium |
+| dropdown-item.font-size-medium | dropdown/font/item-size-medium |
+| dropdown-item.font-line-height-20 | dropdown/font/item-line-height-20 |
+| dropdown-item.spacing-xs | dropdown/spacing/item-xs |
+| dropdown-item.size-height-small | dropdown/size/item-height-small |
+| dropdown-item.size-icon-small | dropdown/size/item-icon-small |
+| dropdown-item.color-text-group-label-default | dropdown/color/text/item-group-label-default |
+| dropdown-item.size-divider-height | dropdown/size/item-divider-height |
+| dropdown-item.color-bg-divider-default | dropdown/color/bg/item-divider-default |
+
+### REQ-FUNCTION
+
+Una option representa una elección; header y divider organizan contenido y no son interactivos. En selección simple el host conserva como máximo una option selected; selected muestra Check, SemiBold y color, no solo color. Disabled no elige ni recibe la acción del demo. El item no conoce el Input, los datos fiscales ni otras filas; el controlador de la composición actualiza el valor y cierra el menú. No inferir selección múltiple, búsqueda, validación, destinos o catálogo real desde Option/Description.
+
+### REQ-CONTENT
+
+Usar etiquetas y descripciones contextuales en sentence case; Description puede aportar información complementaria, como RFC bajo razón social, sin sustituir el nombre de la opción. Group label rotula la categoría. Las cadenas fiscales de la muestra son contenido de ejemplo, sin validación fiscal ni destinos legales. Probar textos cortos, largos, vacíos y no divisibles; el texto vacío no acredita un nombre accesible válido.
+
+### REQ-A11Y
+
+El host web implementa role=option, aria-selected, aria-disabled, nombre accesible, foco y navegación por teclado según su listbox. Header/divider no son opciones seleccionables. Figma no acredita ARIA ni teclado. La decisión humana conserva Description por debajo de4.5:1 en hover (aprox4.34) y en algunos fondos seleccionados (mínimo aprox4.26); medir cada caso y documentar sin afirmar AA. Disabled es inactivo y no acredita AA. La limitación se restringe a estas partes/estados, no se transfiere a otras familias.
+
+### REQ-PROTOTYPE
+
+Las25 variantes fuente no tienen reacciones. El destino puede añadir únicamente default↔hover para option conservando selected y size; disabled/header/divider permanecen inertes. La elección única y la actualización del Input se prueban en una composición consumidora de ejemplo, sin hacer que cada option alterne de forma independiente ni prometer captura o teclado. Distinguir grafo almacenado de reproducción visible en el presentador.
+
+### REQ-QA
+
+Probar las25 combinaciones legales en cuatro modos; Show description/left icon y swaps, contenido largo y ancho reducido, alturas mínimas, crecimiento, radii, foco y paridad de iconos con Label. Contrastar cada binding, estilo compartido, alias y scope con la receta; probar selección en un menú consumidor y preservar las restricciones de la matriz. No acreditar diseño mediante pruebas del núcleo.
+

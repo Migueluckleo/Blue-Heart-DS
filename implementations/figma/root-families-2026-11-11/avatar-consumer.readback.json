@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "Avatar initials and Status",
+      "pass": true,
+      "observed": [
+        "ÁL",
+        false
+      ]
+    },
+    {
+      "name": "Avatar official Icon swap and Status",
+      "pass": true,
+      "observed": [
+        "ac05f135edf1318580f23b4e20de17744d0453f7",
+        true
+      ]
+    },
+    {
+      "name": "type=text, size=extra-large cleanup",
+      "pass": true,
+      "observed": "83:2"
+    },
+    {
+      "name": "extra-large lower valid",
+      "pass": true,
+      "observed": 2
+    },
+    {
+      "name": "extra-large four reorder official children",
+      "pass": true,
+      "observed": [
+        "type=icon, size=extra-large",
+        "type=text, size=extra-large",
+        "type=icon, size=extra-large",
+        "type=text, size=extra-large"
+      ]
+    },
+    {
+      "name": "extra-large cardinality limits",
+      "pass": true,
+      "observed": [
+        [
+          "BELOW_MIN"
+        ],
+        [
+          "ABOVE_MAX"
+        ]
+      ]
+    },
+    {
+      "name": "size=extra-large cleanup",
+      "pass": true,
+      "observed": "83:2"
+    },
+    {
+      "name": "large lower valid",
+      "pass": true,
+      "observed": 2
+    },
+    {
+      "name": "large four reorder official children",
+      "pass": true,
+      "observed": [
+        "type=icon, size=large",
+        "type=text, size=large",
+        "type=icon, size=large",
+        "type=text, size=large"
+      ]
+    },
+    {
+      "name": "large cardinality limits",
+      "pass": true,
+      "observed": [
+        [
+          "BELOW_MIN"
+        ],
+        [
+          "ABOVE_MAX"
+        ]
+      ]
+    },
+    {
+      "name": "size=large cleanup",
+      "pass": true,
+      "observed": "83:2"
+    },
+    {
+      "name": "medium lower valid",
+      "pass": true,
+      "observed": 2
+    },
+    {
+      "name": "medium four reorder official children",
+      "pass": true,
+      "observed": [
+        "type=icon, size=medium",
+        "type=text, size=medium",
+        "type=icon, size=medium",
+        "type=text, size=medium"
+      ]
+    },
+    {
+      "name": "medium cardinality limits",
+      "pass": true,
+      "observed": [
+        [
+          "BELOW_MIN"
+        ],
+        [
+          "ABOVE_MAX"
+        ]
+      ]
+    },
+    {
+      "name": "size=medium cleanup",
+      "pass": true,
+      "observed": "83:2"
+    },
+    {
+      "name": "small lower valid",
+      "pass": true,
+      "observed": 2
+    },
+    {
+      "name": "small four reorder official children",
+      "pass": true,
+      "observed": [
+        "type=icon, size=small",
+        "type=text, size=small",
+        "type=icon, size=small",
+        "type=text, size=small"
+      ]
+    },
+    {
+      "name": "small cardinality limits",
+      "pass": true,
+      "observed": [
+        [
+          "BELOW_MIN"
+        ],
+        [
+          "ABOVE_MAX"
+        ]
+      ]
+    },
+    {
+      "name": "size=small cleanup",
+      "pass": true,
+      "observed": "83:2"
+    }
+  ]
+}

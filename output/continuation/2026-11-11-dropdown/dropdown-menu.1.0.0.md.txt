@@ -1,0 +1,637 @@
+---
+{
+  "schema_version": 1,
+  "id": "DROPDOWN-MENU-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-030"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/dropdown-request.json",
+      "sha256": "8aae1f6a6609c1e34fbe88340d96fa6d669f5116726a7b4ffbac02f6e55230bc"
+    },
+    {
+      "id": "SRC-IDENTITY",
+      "path": "evidence/dropdown-pilot/source/identity.json",
+      "sha256": "08c4fb46bf530a954c74f9468f632d0c3bf4f5a72dd63afe41ab96ce9294d7e5"
+    },
+    {
+      "id": "SRC-VARIABLES",
+      "path": "evidence/dropdown-pilot/source/variables-and-assets.json",
+      "sha256": "a134216cbe0c1a16ed476ed27a3ee2a5826f960c8857a9caad8514886c580b36"
+    },
+    {
+      "id": "SRC-INDEX",
+      "path": "evidence/dropdown-pilot/source/index.json",
+      "sha256": "66b2f2f46512b9a6baedfb8c73334bb625900d56855e1a58cf598d2ef533a8c7"
+    },
+    {
+      "id": "SRC-ITEMS-0",
+      "path": "evidence/dropdown-pilot/source/items-0.json",
+      "sha256": "57ac96d9c2ac822adc45b759eb9641321364aea15307a512d60c429584247f8e"
+    },
+    {
+      "id": "SRC-ITEMS-1",
+      "path": "evidence/dropdown-pilot/source/items-1.json",
+      "sha256": "096d0047cfe26f9d4dddcd4d6a326c6734a81c62813597fc172d77758d0c1227"
+    },
+    {
+      "id": "SRC-ITEMS-2",
+      "path": "evidence/dropdown-pilot/source/items-2.json",
+      "sha256": "fc8c8dcb856f26017c3f1339db89829130e53ae3a618beaac4618c46d3ad8977"
+    },
+    {
+      "id": "SRC-ITEMS-3",
+      "path": "evidence/dropdown-pilot/source/items-3.json",
+      "sha256": "db3b6c9b7659a7157809804352c0441238e958d01b356595463c19350eb88ef8"
+    },
+    {
+      "id": "SRC-ITEMS-4",
+      "path": "evidence/dropdown-pilot/source/items-4.json",
+      "sha256": "7e72fe49fd0ede2b7dfd2a26255199d670856030897c231adf3eb9422abd5ebf"
+    },
+    {
+      "id": "SRC-ITEMS-5",
+      "path": "evidence/dropdown-pilot/source/items-5.json",
+      "sha256": "252d568646291624ce39bb9b24f059c5c5471f45fa3cdfd340b7cec44f98e88f"
+    },
+    {
+      "id": "SRC-ITEMS-6",
+      "path": "evidence/dropdown-pilot/source/items-6.json",
+      "sha256": "3618cd1840e40d4ae60740f338baf73fdd48669ffb618e50ad06041e6479eace"
+    },
+    {
+      "id": "SRC-ITEMS-7",
+      "path": "evidence/dropdown-pilot/source/items-7.json",
+      "sha256": "2dab73f9d395a0ecea13de97c914093704b26d73802fa3ac6f8db1a73bcfc530"
+    },
+    {
+      "id": "SRC-ITEMS-8",
+      "path": "evidence/dropdown-pilot/source/items-8.json",
+      "sha256": "eda698e9e901f4f0421dc5571aa567ff8e35cdde61d88682a20a751069a566c8"
+    },
+    {
+      "id": "SRC-MENU-0",
+      "path": "evidence/dropdown-pilot/source/menu-0.json",
+      "sha256": "0b7c5e3b5f82248d2a3e828c90d4a0839d3c88fbb879dfc2b95130846b08b098"
+    },
+    {
+      "id": "SRC-MENU-1",
+      "path": "evidence/dropdown-pilot/source/menu-1.json",
+      "sha256": "26be87ab7cd0c84ff8acfd4ca83d9c3f3d0b9972f07f8d95c37de098a26516cd"
+    },
+    {
+      "id": "SRC-MENU-2",
+      "path": "evidence/dropdown-pilot/source/menu-2.json",
+      "sha256": "c6f5625098115cd75a762b48a46c3e7691bffa855dda879a88d1922de7756ee4"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "contract",
+      "id": "DROPDOWN-ITEM-001",
+      "version": "1.0.0",
+      "relation": "composition"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.radius-container",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.border-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.color-bg-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.color-stroke-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.size-viewport-max",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.color-effect-shadow",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.size-shadow-radius",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.size-shadow-offset",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.size-effect-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.size-shadow-spread",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.spacing-xs",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.size-scrollbar-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.radius-scrollbar",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "dropdown-menu.color-bg-scrollbar-thumb-default",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-SCOPE",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-SCOPE con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-COMPOSITION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-COMPOSITION con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-LAYOUT con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-SCROLLBAR",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-SCROLLBAR con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-ELEVATION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ELEVATION con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-THEME con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-INPUT-INTEGRATION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-INPUT-INTEGRATION con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-FUNCTION",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-FUNCTION con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-PROTOTYPE",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-PROTOTYPE con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-A11Y",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-A11Y con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-DEPENDENCIES con fuentes, receta, registro y QA nativo del destino."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-INDEX",
+        "SRC-ITEMS-0",
+        "SRC-ITEMS-1",
+        "SRC-ITEMS-2",
+        "SRC-ITEMS-3",
+        "SRC-ITEMS-4",
+        "SRC-ITEMS-5",
+        "SRC-ITEMS-6",
+        "SRC-ITEMS-7",
+        "SRC-ITEMS-8",
+        "SRC-MENU-0",
+        "SRC-MENU-1",
+        "SRC-MENU-2"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA con fuentes, receta, registro y QA nativo del destino."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Options native Slot",
+      "Dropdown item instances",
+      "Scrollbar small vertical private"
+    ],
+    "composition": "native-slot-min-1-unbounded",
+    "accessibility": "host-runtime-not-implemented"
+  }
+}
+---
+# DROPDOWN-MENU-001 · dropdown-menu 1.0.0
+
+### REQ-SCOPE
+
+Construir Dropdown menu en la página Dropdown de Blue Heart DS junto a Dropdown item. El origen y el proyecto anterior siguen en solo lectura. Se autoriza solo la dependencia privada Scrollbar small/vertical/default requerida por el menú, con corrección de su proporción; no se incorpora la familia Scrollbar completa ni React.
+
+### REQ-API
+
+Un COMPONENT Dropdown menu, sin ejes ni tamaños propios. Options es SLOT nativo con stretchChildOnInsert=true, displayEmptyByDefault=false, minChildren=1, maxChildren=null y allowPreferredValuesOnly=true; preferredValues apunta únicamente al set Dropdown item local. Show scrollbar BOOLEAN false. La muestra inicial contiene cinco items medium, Option1 seleccionado y Option2–5 sin seleccionar. Son contenido inicial, no una cardinalidad máxima. No usar un frame llamado Slot como sustituto ni setProperties para escribir una propiedad SLOT.
+
+### REQ-COMPOSITION
+
+El único hijo reusable registrado es DROPDOWN-ITEM-001@1.0.0, por composición dentro de Options. Desde una instancia consumidora debe poder insertarse, retirarse, reordenarse y sustituirse contenido por option/header/divider legales, sin editar el principal ni desacoplar. Conservar las restricciones y comprobar limitViolations. Exponer texto y propiedades de los items editables desde el Slot. No importar ni recrear las otras variantes de Scrollbar.
+
+### REQ-LAYOUT
+
+Menú horizontal, ancho320 de muestra adaptable, borde interior1 incluido en layout, radio8, fill blanco, padding/gap0 de raíz. Options vertical: padding4 en los cuatro lados, gap0, FILL horizontal y HUG vertical para crecimiento corto; items FILL horizontal y HUG vertical. La muestra de cinco medium mide210 px de alto (200+8+2). La fuente tiene Slot FILL con tamaño residual208 y no implementa maxHeight; el destino añade maxHeight320 tokenizado y el adaptador fit del consumidor ajusta altura a min(contenido medido+bordes,320), pone el Slot como viewport FILL y activa Show scrollbar solo al desbordar. El principal configura overflow VERTICAL permanentemente: la API rechaza cambiarlo desde una instancia; solo hay desplazamiento efectivo cuando el contenido excede el viewport. Recalcular después de cambios de contenido, ancho, tamaño o textos; maxHeight no basta para hacer crecer ni recortar correctamente un Slot. No añadir un ancho fijo por token ni inferir un breakpoint; el host puede reducir el viewport según el espacio disponible.
+
+### REQ-SCROLLBAR
+
+Helper privado __Dropdown/Scrollbar small vertical: track12 de ancho, padding4, gap0, radiofull; Thumb FILL horizontal de4 px. Cuatro regiones flexibles verticales iguales sobre el alto interior reservan25% inicial para Thumb y75% restante, sin nueva variable por porcentaje. Así el alto se adapta al viewport:280→thumb68 y208→thumb50; se corrige el override fuente212/padding final208 que reducía el thumb a1. El track sigue FILL vertical del menú sin ampliar el alto de la lista. Conservar color fuente del thumb y mostrarlo únicamente si hay overflow. Este helper representa la proporción inicial; no implementa arrastre ni sincronización continua con el scroll. El contenido sí puede probarse con desplazamiento nativo; la implementación completa del indicador corresponde al futuro encargo Scrollbar/host. Registrar su identidad privada para reemplazarlo cuando exista esa familia.
+
+### REQ-ELEVATION
+
+Conservar elevation/shadow/md: DROP_SHADOW visible, color RGBA observado, offset(0,4), blur6, spread-2, blend NORMAL y showShadowBehindNode=false. Crear/aplicar estilo dropdown/menu/elevation con bindings reales EFFECT_COLOR/EFFECT_FLOAT. Se añaden solo las cadenas compartidas de shadow-md (RGBA exacto con alpha0.1), size-6 y spacing-negative-2; los otros efectos reutilizan semánticos numéricos existentes. No redondear al negro ni a otra sombra de Tab/Input.
+
+### REQ-THEME
+
+El stroke de menú sigue el vector fuente color/border/subtle en Contable/Administrativo/Servicios/Personas; la superficie blanca, sombra, métricas y Scrollbar son invariantes. Los items heredan el mismo modo de component del host, conservando su propia clasificación. Borde decorativo y thumb discreto no acreditan contraste interactivo universal. La limitación del thumb default observada ronda2.56:1 sobre blanco y se conserva explícita; no se declara AA ni se simulan estados hover/active del Scrollbar completo.
+
+### REQ-TOKENS
+
+Aplicar BH-P07:15 firmas propias del menú y su helper privado, bajo el grupo dropdown/ en component. Los34 tokens del item pertenecen al hijo; no duplicarlos en el contenedor. Las seis adiciones de Foundations tienen scopes vacíos. La colección component conserva cuatro modos; ninguna colección por estado, Slot o helper. Los valores/aliases y WEB viven en el conjunto seleccionado, y las rutas de construcción en la tabla.
+
+| ID lógico | Ruta Figma |
+|---|---|
+| dropdown-menu.spacing-none | dropdown/spacing/menu-none |
+| dropdown-menu.radius-container | dropdown/radius/menu-container |
+| dropdown-menu.border-width | dropdown/border/menu-width |
+| dropdown-menu.color-bg-default | dropdown/color/bg/menu-default |
+| dropdown-menu.color-stroke-default | dropdown/color/stroke/menu-default |
+| dropdown-menu.size-viewport-max | dropdown/size/menu-viewport-max |
+| dropdown-menu.color-effect-shadow | dropdown/color/effect/menu-shadow |
+| dropdown-menu.size-shadow-radius | dropdown/size/menu-shadow-radius |
+| dropdown-menu.size-shadow-offset | dropdown/size/menu-shadow-offset |
+| dropdown-menu.size-effect-none | dropdown/size/menu-effect-none |
+| dropdown-menu.size-shadow-spread | dropdown/size/menu-shadow-spread |
+| dropdown-menu.spacing-xs | dropdown/spacing/menu-xs |
+| dropdown-menu.size-scrollbar-width | dropdown/size/menu-scrollbar-width |
+| dropdown-menu.radius-scrollbar | dropdown/radius/menu-scrollbar |
+| dropdown-menu.color-bg-scrollbar-thumb-default | dropdown/color/bg/menu-scrollbar-thumb-default |
+
+### REQ-INPUT-INTEGRATION
+
+El menú flota desde Input con CaretDown; Input es el disparador externo, no un hijo anatómico del menú. La guía/manifiesto de integración fija INPUT-001@2.0.1 y sus maestros existentes, además de ambas identidades Dropdown. No hay dependencia inversa desde Input ni ciclo normativo. Reutilizar Input/empty o Input/filled por instancia, mismo size de opciones y mismo ancho; separar la parte inferior del campo y el menú4 px, conservando Label, valor, foco y helper según el contrato Input. No duplicar sus41 tokens ni mutar sus42 variantes para añadir un menú anidado. Si otra composición futura requiere otro trigger, debe fijar su contrato y controlador propios.
+
+### REQ-FUNCTION
+
+En selección simple, abrir desde el campo, señalar la elección actual, seleccionar una opción habilitada, actualizar el valor visible del disparador y cerrar. El host conserva un único valor, aplica agrupación/validación y calcula el contenido real. Header/divider/disabled no eligen. No inferir búsqueda, multiselección, consultas SAT, verificación fiscal ni reglas regionales desde la muestra. El menú es listbox, no un menú de navegación con destinos inventados.
+
+### REQ-PROTOTYPE
+
+La fuente del menú y su ejemplo con Input no contienen reacciones. El destino añade un flujo local de ejemplo con instancias vinculadas: abrir, elegir entre valores de muestra, cerrar, reabrir conservando la selección y cerrar fuera del menú. Las reacciones viven en el consumidor, sin modificar los principales de Input ni atribuirles captura automática. Registrar grafo y reproducción real por separado; wheel/scroll nativo se acredita solo si se ejecuta. Los estados focus visuales no acreditan teclado ni ARIA.
+
+### REQ-A11Y
+
+El host web implementa combobox/listbox y sus vínculos, aria-expanded, aria-controls, opción activa/selected, nombres, cierre y restauración de foco y teclado. El label de Input permanece visible salvo nombre accesible equivalente documentado. Figma solo acredita geometría, propiedades, estados y reproducción ejecutada. No afirmar accesibilidad global: conservar la excepción de Description del hijo y la limitación del thumb default; declarar revisión independiente y web por separado.
+
+### REQ-DEPENDENCIES
+
+Auditoría inversa obligatoria por BH-P01 REQ-P01-07: las once páginas existentes no contienen Dropdown menu/item ni Scrollbar de esta fuente; no hay sustituciones directas o transitivas previas. Input se consume en los ejemplos nuevos y permanece en su identidad/API. Las dependencias Phosphor pertenecen al item y CaretDown/Question a Input. No reconstruir helpers anteriores ni recursos de otras bibliotecas por semejanza de nombre.
+
+### REQ-QA
+
+Validar Slot nativo y políticas desde instancias: cardinalidades1/5/10, inserción/retirada/reordenación/sustitución, rechazo reportado de contenido no preferido y por debajo del mínimo, texto editable y selección única. Probar anchos y tres tamaños de item/Input, cuatro modos, máximo320, crecimiento y recorte, Show scrollbar on/off y thumb25% en distintos altos. Contrastar propios bindings, sombra/estilo, inherited child bindings, roles de tema y preservación de Input. Registrar la limitación cromática humana y la reproducción visible; check no acredita implementación Figma.
+

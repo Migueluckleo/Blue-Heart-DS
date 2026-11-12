@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "run": "2026-11-11-base-blueheart-links",
+  "status": "BLOCKED",
+  "started": 1794425551.280579,
+  "invocations": 2,
+  "retry_attempts": 0,
+  "previous_attempts": [
+    {
+      "started": 1794425431.066658,
+      "elapsed_seconds": 2.671,
+      "status": "NEEDS_SEMANTICS",
+      "phases": [
+        {
+          "name": "documents",
+          "seconds": 2.291,
+          "status": "PASS",
+          "result": {
+            "status": "PASS",
+            "files": 107,
+            "findings": 0,
+            "timings": {
+              "inventory": 0.194,
+              "metadata": 2.047,
+              "status": 0.009,
+              "validation": 0.035
+            }
+          }
+        },
+        {
+          "name": "graph_plan",
+          "seconds": 0.066,
+          "status": "PASS",
+          "result": {
+            "status": "PREPARED",
+            "run": "2026-11-11-base-blueheart-links",
+            "semantic_files": 55,
+            "chunks": 3,
+            "next": "Extraer cada chunk según la skill Graphify y después ejecutar scripts/ds graph close --run 2026-11-11-base-blueheart-links"
+          }
+        }
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "name": "documents",
+      "seconds": 0.267,
+      "status": "PASS",
+      "result": {
+        "status": "PASS",
+        "files": 107,
+        "findings": 0,
+        "timings": {
+          "inventory": 0.204,
+          "metadata": 0.012,
+          "status": 0.01,
+          "validation": 0.035
+        }
+      }
+    },
+    {
+      "name": "graph_plan",
+      "seconds": 0.042,
+      "status": "PASS",
+      "result": {
+        "status": "PREPARED",
+        "run": "2026-11-11-base-blueheart-links",
+        "semantic_files": 55,
+        "chunks": 3
+      }
+    },
+    {
+      "name": "graph",
+      "seconds": 6.003,
+      "status": "BLOCKED",
+      "error": "name 'affected' is not defined"
+    }
+  ],
+  "usage_start": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "usage_end": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "agent_tokens": "UNAVAILABLE",
+  "agent_tool_calls": "UNAVAILABLE",
+  "command_phase_calls": 3,
+  "publication": "NOT_RUN",
+  "error": "name 'affected' is not defined",
+  "elapsed_seconds": 6.492,
+  "concurrent_attempts": 0,
+  "reuse": {
+    "ds_core.corpus": {
+      "executed": 1,
+      "reused": 3
+    },
+    "yaml_files": {
+      "executed": 0,
+      "reused": 106,
+      "persisted_reused": 53
+    },
+    "ds_core.generate_status": {
+      "executed": 1,
+      "reused": 1
+    },
+    "ds_core.documentation_check": {
+      "executed": 1,
+      "reused": 1
+    }
+  },
+  "hash_reads": 123
+}

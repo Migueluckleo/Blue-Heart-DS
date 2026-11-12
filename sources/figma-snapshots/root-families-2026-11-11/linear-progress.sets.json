@@ -1,0 +1,589 @@
+{
+  "page": "443:28",
+  "name": "Linear Progress Bar",
+  "all": [
+    [
+      "443:41",
+      "__Linear Progress/Indeterminate",
+      "COMPONENT_SET"
+    ],
+    [
+      "444:87",
+      "Linear Progress Bar/small",
+      "COMPONENT_SET"
+    ],
+    [
+      "444:276",
+      "Linear Progress Bar/medium",
+      "COMPONENT_SET"
+    ],
+    [
+      "444:465",
+      "Linear Progress Bar/large",
+      "COMPONENT_SET"
+    ],
+    [
+      "448:14",
+      "Linear Progress Bar / Guía",
+      "FRAME"
+    ],
+    [
+      "448:793",
+      "Linear Progress Bar / Iniciar prueba",
+      "FRAME"
+    ],
+    [
+      "448:798",
+      "Linear Progress Bar / Reproducción",
+      "FRAME"
+    ]
+  ],
+  "sets": [
+    {
+      "id": "443:41",
+      "x": 1500,
+      "y": 2400,
+      "width": 1210,
+      "height": 360,
+      "props": {
+        "type": {
+          "type": "VARIANT",
+          "defaultValue": "primary",
+          "variantOptions": [
+            "primary",
+            "success",
+            "warning",
+            "error"
+          ]
+        },
+        "position": {
+          "type": "VARIANT",
+          "defaultValue": "rest",
+          "variantOptions": [
+            "rest",
+            "exit",
+            "enter"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "443:29",
+          "type=primary, position=rest"
+        ],
+        [
+          "443:30",
+          "type=primary, position=exit"
+        ],
+        [
+          "443:31",
+          "type=primary, position=enter"
+        ],
+        [
+          "443:32",
+          "type=success, position=rest"
+        ],
+        [
+          "443:33",
+          "type=success, position=exit"
+        ],
+        [
+          "443:34",
+          "type=success, position=enter"
+        ],
+        [
+          "443:35",
+          "type=warning, position=rest"
+        ],
+        [
+          "443:36",
+          "type=warning, position=exit"
+        ],
+        [
+          "443:37",
+          "type=warning, position=enter"
+        ],
+        [
+          "443:38",
+          "type=error, position=rest"
+        ],
+        [
+          "443:39",
+          "type=error, position=exit"
+        ],
+        [
+          "443:40",
+          "type=error, position=enter"
+        ]
+      ]
+    },
+    {
+      "id": "444:87",
+      "x": 1500,
+      "y": 100,
+      "width": 1210,
+      "height": 660,
+      "props": {
+        "Label#444:125": {
+          "type": "TEXT",
+          "defaultValue": "Label"
+        },
+        "Helper text#444:150": {
+          "type": "TEXT",
+          "defaultValue": "Helper text"
+        },
+        "Show label#444:175": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show value#444:200": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show helper text#444:225": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "type": {
+          "type": "VARIANT",
+          "defaultValue": "primary",
+          "variantOptions": [
+            "primary",
+            "success",
+            "warning",
+            "error"
+          ]
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "small",
+          "variantOptions": [
+            "small"
+          ]
+        },
+        "value": {
+          "type": "VARIANT",
+          "defaultValue": "0%",
+          "variantOptions": [
+            "0%",
+            "25%",
+            "50%",
+            "75%",
+            "100%",
+            "indeterminate"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "444:63",
+          "type=primary, size=small, value=0%"
+        ],
+        [
+          "444:64",
+          "type=primary, size=small, value=25%"
+        ],
+        [
+          "444:65",
+          "type=primary, size=small, value=50%"
+        ],
+        [
+          "444:66",
+          "type=primary, size=small, value=75%"
+        ],
+        [
+          "444:67",
+          "type=primary, size=small, value=100%"
+        ],
+        [
+          "444:68",
+          "type=primary, size=small, value=indeterminate"
+        ],
+        [
+          "444:69",
+          "type=success, size=small, value=0%"
+        ],
+        [
+          "444:70",
+          "type=success, size=small, value=25%"
+        ],
+        [
+          "444:71",
+          "type=success, size=small, value=50%"
+        ],
+        [
+          "444:72",
+          "type=success, size=small, value=75%"
+        ],
+        [
+          "444:73",
+          "type=success, size=small, value=100%"
+        ],
+        [
+          "444:74",
+          "type=success, size=small, value=indeterminate"
+        ],
+        [
+          "444:75",
+          "type=warning, size=small, value=0%"
+        ],
+        [
+          "444:76",
+          "type=warning, size=small, value=25%"
+        ],
+        [
+          "444:77",
+          "type=warning, size=small, value=50%"
+        ],
+        [
+          "444:78",
+          "type=warning, size=small, value=75%"
+        ],
+        [
+          "444:79",
+          "type=warning, size=small, value=100%"
+        ],
+        [
+          "444:80",
+          "type=warning, size=small, value=indeterminate"
+        ],
+        [
+          "444:81",
+          "type=error, size=small, value=0%"
+        ],
+        [
+          "444:82",
+          "type=error, size=small, value=25%"
+        ],
+        [
+          "444:83",
+          "type=error, size=small, value=50%"
+        ],
+        [
+          "444:84",
+          "type=error, size=small, value=75%"
+        ],
+        [
+          "444:85",
+          "type=error, size=small, value=100%"
+        ],
+        [
+          "444:86",
+          "type=error, size=small, value=indeterminate"
+        ]
+      ]
+    },
+    {
+      "id": "444:276",
+      "x": 1500,
+      "y": 860,
+      "width": 1210,
+      "height": 660,
+      "props": {
+        "Label#444:250": {
+          "type": "TEXT",
+          "defaultValue": "Label"
+        },
+        "Helper text#444:275": {
+          "type": "TEXT",
+          "defaultValue": "Helper text"
+        },
+        "Show label#444:300": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show value#444:325": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show helper text#444:350": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "type": {
+          "type": "VARIANT",
+          "defaultValue": "primary",
+          "variantOptions": [
+            "primary",
+            "success",
+            "warning",
+            "error"
+          ]
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "medium",
+          "variantOptions": [
+            "medium"
+          ]
+        },
+        "value": {
+          "type": "VARIANT",
+          "defaultValue": "0%",
+          "variantOptions": [
+            "0%",
+            "25%",
+            "50%",
+            "75%",
+            "100%",
+            "indeterminate"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "444:252",
+          "type=primary, size=medium, value=0%"
+        ],
+        [
+          "444:253",
+          "type=primary, size=medium, value=25%"
+        ],
+        [
+          "444:254",
+          "type=primary, size=medium, value=50%"
+        ],
+        [
+          "444:255",
+          "type=primary, size=medium, value=75%"
+        ],
+        [
+          "444:256",
+          "type=primary, size=medium, value=100%"
+        ],
+        [
+          "444:257",
+          "type=primary, size=medium, value=indeterminate"
+        ],
+        [
+          "444:258",
+          "type=success, size=medium, value=0%"
+        ],
+        [
+          "444:259",
+          "type=success, size=medium, value=25%"
+        ],
+        [
+          "444:260",
+          "type=success, size=medium, value=50%"
+        ],
+        [
+          "444:261",
+          "type=success, size=medium, value=75%"
+        ],
+        [
+          "444:262",
+          "type=success, size=medium, value=100%"
+        ],
+        [
+          "444:263",
+          "type=success, size=medium, value=indeterminate"
+        ],
+        [
+          "444:264",
+          "type=warning, size=medium, value=0%"
+        ],
+        [
+          "444:265",
+          "type=warning, size=medium, value=25%"
+        ],
+        [
+          "444:266",
+          "type=warning, size=medium, value=50%"
+        ],
+        [
+          "444:267",
+          "type=warning, size=medium, value=75%"
+        ],
+        [
+          "444:268",
+          "type=warning, size=medium, value=100%"
+        ],
+        [
+          "444:269",
+          "type=warning, size=medium, value=indeterminate"
+        ],
+        [
+          "444:270",
+          "type=error, size=medium, value=0%"
+        ],
+        [
+          "444:271",
+          "type=error, size=medium, value=25%"
+        ],
+        [
+          "444:272",
+          "type=error, size=medium, value=50%"
+        ],
+        [
+          "444:273",
+          "type=error, size=medium, value=75%"
+        ],
+        [
+          "444:274",
+          "type=error, size=medium, value=100%"
+        ],
+        [
+          "444:275",
+          "type=error, size=medium, value=indeterminate"
+        ]
+      ]
+    },
+    {
+      "id": "444:465",
+      "x": 1500,
+      "y": 1620,
+      "width": 1210,
+      "height": 660,
+      "props": {
+        "Label#444:375": {
+          "type": "TEXT",
+          "defaultValue": "Label"
+        },
+        "Helper text#444:400": {
+          "type": "TEXT",
+          "defaultValue": "Helper text"
+        },
+        "Show label#444:425": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show value#444:450": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show helper text#444:475": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "type": {
+          "type": "VARIANT",
+          "defaultValue": "primary",
+          "variantOptions": [
+            "primary",
+            "success",
+            "warning",
+            "error"
+          ]
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "large",
+          "variantOptions": [
+            "large"
+          ]
+        },
+        "value": {
+          "type": "VARIANT",
+          "defaultValue": "0%",
+          "variantOptions": [
+            "0%",
+            "25%",
+            "50%",
+            "75%",
+            "100%",
+            "indeterminate"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "444:441",
+          "type=primary, size=large, value=0%"
+        ],
+        [
+          "444:442",
+          "type=primary, size=large, value=25%"
+        ],
+        [
+          "444:443",
+          "type=primary, size=large, value=50%"
+        ],
+        [
+          "444:444",
+          "type=primary, size=large, value=75%"
+        ],
+        [
+          "444:445",
+          "type=primary, size=large, value=100%"
+        ],
+        [
+          "444:446",
+          "type=primary, size=large, value=indeterminate"
+        ],
+        [
+          "444:447",
+          "type=success, size=large, value=0%"
+        ],
+        [
+          "444:448",
+          "type=success, size=large, value=25%"
+        ],
+        [
+          "444:449",
+          "type=success, size=large, value=50%"
+        ],
+        [
+          "444:450",
+          "type=success, size=large, value=75%"
+        ],
+        [
+          "444:451",
+          "type=success, size=large, value=100%"
+        ],
+        [
+          "444:452",
+          "type=success, size=large, value=indeterminate"
+        ],
+        [
+          "444:453",
+          "type=warning, size=large, value=0%"
+        ],
+        [
+          "444:454",
+          "type=warning, size=large, value=25%"
+        ],
+        [
+          "444:455",
+          "type=warning, size=large, value=50%"
+        ],
+        [
+          "444:456",
+          "type=warning, size=large, value=75%"
+        ],
+        [
+          "444:457",
+          "type=warning, size=large, value=100%"
+        ],
+        [
+          "444:458",
+          "type=warning, size=large, value=indeterminate"
+        ],
+        [
+          "444:459",
+          "type=error, size=large, value=0%"
+        ],
+        [
+          "444:460",
+          "type=error, size=large, value=25%"
+        ],
+        [
+          "444:461",
+          "type=error, size=large, value=50%"
+        ],
+        [
+          "444:462",
+          "type=error, size=large, value=75%"
+        ],
+        [
+          "444:463",
+          "type=error, size=large, value=100%"
+        ],
+        [
+          "444:464",
+          "type=error, size=large, value=indeterminate"
+        ]
+      ]
+    }
+  ]
+}

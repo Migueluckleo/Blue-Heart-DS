@@ -1,0 +1,5 @@
+# DEC-USAGE-DOCUMENTATION-001 · Guía y Description de cada familia
+
+Decisión explícita del 11 de noviembre de 2026. Al redactar una spec a partir de un Figma con componentes y variantes sin documentación semántica, elaborar su [guía de uso](../references/USAGE-GUIDE.md) desde evidencia y decisiones. Escribir una Description útil directamente en cada componente principal o component set maestro cuando se autorice construir. Vincular la ficha por identidad de componente y agregar su enlace en Figma donde esté soportado. El contrato gobierna ambas representaciones. P03, P04, P05, P06 y P07 integran la decisión. En este corte se verifican los procedimientos y las plantillas. Description real, ficha de familia y readback dependen de la recepción de fuentes y del encargo de construcción.
+
+En cada página de familia afectada solo quedan sus componentes principales y sets, con variantes dentro de sus sets. La guía y el enlace son metadatos. Un nodo ajeno requiere hallazgo y decisión antes de moverlo o borrarlo.

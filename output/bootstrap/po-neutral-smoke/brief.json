@@ -1,0 +1,125 @@
+{
+  "title": "Prueba local de HTML autónomo",
+  "objective": "Comprobar interacción y traspaso con cobertura DS cero",
+  "theme": null,
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900
+    }
+  ],
+  "screens": [
+    {
+      "id": "offline",
+      "name": "Prueba local",
+      "entry": "Abrir archivo",
+      "layout": "Columna",
+      "content": "Control HTML de prueba",
+      "states": [
+        {
+          "id": "initial",
+          "name": "initial",
+          "actions": [],
+          "expect": [
+            {
+              "selector": "[aria-live]",
+              "text": "Interacciones: 0",
+              "visible": true
+            }
+          ],
+          "nodes": [
+            "title",
+            "action",
+            "feedback"
+          ]
+        },
+        {
+          "id": "keyboard",
+          "name": "keyboard",
+          "actions": [
+            {
+              "selector": "button",
+              "type": "press",
+              "key": "Enter"
+            }
+          ],
+          "expect": [
+            {
+              "selector": "[aria-live]",
+              "text": "Interacciones: 1",
+              "visible": true
+            }
+          ],
+          "nodes": [
+            "title",
+            "action",
+            "feedback"
+          ]
+        }
+      ]
+    }
+  ],
+  "transitions": [],
+  "components": [
+    {
+      "instanceId": "title",
+      "componentId": "LOCAL-TITLE",
+      "exportName": "title",
+      "placement": "Prueba local",
+      "props": {},
+      "tokens": [],
+      "slots": [
+        {
+          "name": "contenido",
+          "status": "NOT_APPLICABLE",
+          "content": "Texto local"
+        }
+      ],
+      "omissions": [],
+      "kind": "local-content",
+      "reason": "Marcador de prueba mecánica sin autoridad DS"
+    },
+    {
+      "instanceId": "action",
+      "componentId": "LOCAL-ACTION",
+      "exportName": "action",
+      "placement": "Prueba local",
+      "props": {},
+      "tokens": [],
+      "slots": [
+        {
+          "name": "contenido",
+          "status": "NOT_APPLICABLE",
+          "content": "Texto local"
+        }
+      ],
+      "omissions": [],
+      "kind": "local-content",
+      "reason": "Marcador de prueba mecánica sin autoridad DS"
+    },
+    {
+      "instanceId": "feedback",
+      "componentId": "LOCAL-FEEDBACK",
+      "exportName": "feedback",
+      "placement": "Prueba local",
+      "props": {},
+      "tokens": [],
+      "slots": [
+        {
+          "name": "contenido",
+          "status": "NOT_APPLICABLE",
+          "content": "Texto local"
+        }
+      ],
+      "omissions": [],
+      "kind": "local-content",
+      "reason": "Marcador de prueba mecánica sin autoridad DS"
+    }
+  ],
+  "decisions": [],
+  "limitations": [
+    "Cobertura DS cero; fixture de infraestructura"
+  ],
+  "checks": [],
+  "figmaTarget": null
+}

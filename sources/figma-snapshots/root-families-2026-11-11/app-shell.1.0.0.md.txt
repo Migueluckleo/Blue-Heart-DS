@@ -1,0 +1,289 @@
+---
+{
+  "schema_version": 1,
+  "id": "APP-SHELL-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-051"
+  },
+  "targets": [
+    "documentation"
+  ],
+  "readiness": {
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "REQUEST",
+      "path": "evidence/authorization/app-shell-request.json",
+      "sha256": "aa3aa05062d8efff00bba1e374e5fb77d12a612398e15a3bcff0e8c183b5de36"
+    },
+    {
+      "id": "FIGMA-LAYOUT",
+      "path": "evidence/app-shell/source/layout.json",
+      "sha256": "996174aca0414ab0a14e420f01d7dbc647072242d045deed18ec0a7ac81e9455"
+    },
+    {
+      "id": "FIGMA-DEPENDENCIES",
+      "path": "evidence/app-shell/source/direct-components.json",
+      "sha256": "a4f3f3c12e0877dee4faa1e844fac4db035d2fecc6ec375533f9a3b6d7760f4b"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "contract",
+      "id": "HEADER-001",
+      "version": "1.0.1",
+      "relation": "composition"
+    },
+    {
+      "kind": "contract",
+      "id": "SIDEBAR-001",
+      "version": "1.0.0",
+      "relation": "composition"
+    },
+    {
+      "kind": "contract",
+      "id": "SECTION-HEADER-001",
+      "version": "1.0.0",
+      "relation": "composition"
+    },
+    {
+      "kind": "token",
+      "id": "semantic.spacing-sm",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "semantic.spacing-2xl",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "semantic.neutral-base",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-SHELL-STRUCTURE",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "FIGMA-LAYOUT",
+        "FIGMA-DEPENDENCIES"
+      ],
+      "acceptance": [
+        "Header, Sidebar, Section Header y Body conservan orden, roles y dependencias exactas."
+      ]
+    },
+    {
+      "id": "REQ-SHELL-VARIANTS",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "REQUEST",
+        "FIGMA-LAYOUT"
+      ],
+      "acceptance": [
+        "Las cuatro combinaciones, los tres IDs de propiedad activos y ambos anchos de Main coinciden con Laboratorio."
+      ]
+    },
+    {
+      "id": "REQ-SHELL-SPACING",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "REQUEST",
+        "FIGMA-LAYOUT"
+      ],
+      "acceptance": [
+        "Distinguir el espacio de Shell, Content, Main y Body del padding de los hijos. Los valores resuelven a 8 y 32 px."
+      ]
+    },
+    {
+      "id": "REQ-SHELL-GRID",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "REQUEST",
+        "FIGMA-LAYOUT"
+      ],
+      "acceptance": [
+        "Comprobar cuatro columnas, tres canales por eje y las cuatro distribuciones de spans observadas."
+      ]
+    },
+    {
+      "id": "REQ-SHELL-FLEX",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "REQUEST",
+        "FIGMA-LAYOUT"
+      ],
+      "acceptance": [
+        "Comprobar fila 1+1, grupo de ancho completo y gap. Evaluar el ajuste con contenido representativo."
+      ]
+    },
+    {
+      "id": "REQ-SHELL-SCREEN-CHOICE",
+      "force": "SHOULD",
+      "provenance": "DERIVED",
+      "sources": [
+        "REQUEST",
+        "FIGMA-LAYOUT"
+      ],
+      "acceptance": [
+        "Justificar Grid o Flex para dashboard, administración y lectura según relaciones y mínimos."
+      ]
+    },
+    {
+      "id": "REQ-SHELL-OVERFLOW",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "REQUEST",
+        "FIGMA-LAYOUT"
+      ],
+      "acceptance": [
+        "Registrar recorte, ausencia de scroll en la referencia y dueño del scroll en cada diseño consumidor."
+      ]
+    },
+    {
+      "id": "REQ-SHELL-CONTENT",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "REQUEST"
+      ],
+      "acceptance": [
+        "Los bloques grises permanecen como ejemplos y no generan componentes ni tokens."
+      ]
+    },
+    {
+      "id": "REQ-SHELL-ACCESSIBILITY",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "REQUEST",
+        "FIGMA-LAYOUT"
+      ],
+      "acceptance": [
+        "Conservar el orden lógico y distinguir las verificaciones que requieren implementación."
+      ]
+    },
+    {
+      "id": "REQ-SHELL-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "REQUEST",
+        "FIGMA-LAYOUT"
+      ],
+      "acceptance": [
+        "Contrastar las cuatro geometrías, dependencias, semánticos y diferencias de slots con la evidencia."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Header",
+      "Content",
+      "Sidebar",
+      "Main",
+      "Section Header",
+      "Body"
+    ],
+    "composition": "El Shell organiza la navegación global, el contexto de página y contenido reemplazable en Grid o Flex.",
+    "accessibility": "Conservar orden lógico y alcance del contenido. Validar foco y teclado en la implementación consumidora."
+  }
+}
+---
+
+# App Shell 1.0.0
+
+Estructura de página de escritorio para Blue Heart. Aloja el Header global, el Sidebar, el Section Header de la página y un Body reemplazable. La referencia documenta cuatro combinaciones; esta edición fija las reglas de composición y de diseño de pantallas.
+
+### REQ-SHELL-STRUCTURE
+
+El Shell se apila en vertical: **Header → Content**. Content es una fila: **Sidebar → Main**. Main se apila en vertical: **Section Header → Body**. Sidebar y Main comparten el borde superior e inferior de Content. Section Header y Body comparten el mismo ancho y eje izquierdo. La navegación global pertenece a Header y Sidebar. La jerarquía, los filtros y las acciones de la página pertenecen a Section Header. Cada pantalla compone su contenido dentro de Body y reutiliza los componentes definidos en sus propios contratos.
+
+```text
+App Shell · vertical
+├── Header global
+└── Content · horizontal
+    ├── Sidebar · ancho según estado
+    └── Main · ocupa el ancho restante, vertical
+        ├── Section Header · ancho de Main, alto según contenido
+        └── Body · ancho de Main, contenido propio de la pantalla
+```
+
+### REQ-SHELL-VARIANTS
+
+Los ejes son independientes: `menu=collapsed|expanded` y `body layout=grid|flex`. En Laboratorio el valor inicial es `collapsed / grid`. La referencia mide **1440 × 1024 px** en cada combinación. Cambiar el menú de 72 a 234 px consume 162 px de Main sin cambiar los márgenes ni el gap entre Sidebar y Main. Al diseñar ambas variantes de una pantalla se conserva la identidad y el orden de su contenido. Hay un slot Body activo en cada variante. Las dos variantes colapsadas comparten la clave `body#4:0`. Grid expandido usa `body#35:1`; Flex expandido usa `body4#35:11`. El set también declara `body3#35:6`, sin uso directo en las cuatro muestras inspeccionadas. Al cambiar de variante, comprobar el contenido de Body y volver a insertarlo si Figma no conserva el override.
+
+| Menú | Sidebar | Main en la referencia | Inicio X de Main |
+| --- | ---: | ---: | ---: |
+| Colapsado | 72 px | 1272 px | 136 px |
+| Expandido | 234 px | 1110 px | 298 px |
+
+El cálculo es `ancho de Main = ancho de Content − 2 × 32 − ancho de Sidebar − 32`. Las medidas fijas de la muestra no definen por sí solas breakpoints, soporte móvil ni un comportamiento interactivo.
+
+### REQ-SHELL-SPACING
+
+Cada contenedor posee su propio espacio. Usa `semantic.spacing-sm` (8 px) entre Header y Content. Usa `semantic.spacing-2xl` (32 px) en los cuatro bordes internos de Content, entre Sidebar y Main, entre Section Header y Body y en los gaps de la referencia Grid y Flex. Main y Body tienen padding cero a nivel del Shell. Header y Section Header conservan su padding propio de 24 px según sus contratos. Las tarjetas o secciones en Body controlan su padding interior. Evita añadir márgenes al primer y último hijo si el contenedor ya aporta ese espacio.
+
+| Propietario | Función | Valor |
+| --- | --- | ---: |
+| Shell | Separación Header / Content | 8 px |
+| Content | Padding exterior del área de trabajo | 32 px |
+| Content | Gap horizontal Sidebar / Main | 32 px |
+| Main | Gap vertical Section Header / Body | 32 px |
+| Body Grid | Canal horizontal y vertical | 32 px |
+| Body Flex y su fila de ejemplo | Separación entre grupos y entre hermanos | 32 px |
+| Main y Body | Padding propio de composición | 0 px |
+
+La superficie de referencia es blanca. Usar `semantic.neutral-base` como rol de superficie en nuevas composiciones que reproduzcan esta referencia. Los valores del Shell se documentan con los semánticos existentes. El blanco y los espacios de los contenedores del Shell se observaron como valores locales en Laboratorio; esta Spec no acredita bindings de esas capas. Los 16 px y 61 px del marco que reúne las cuatro variantes organizan el catálogo de Figma y no son medidas de una pantalla.
+
+### REQ-SHELL-GRID
+
+Usa **Grid** cuando varios módulos deban compartir líneas horizontales y verticales. Es la opción de referencia para dashboards con KPI, gráficas y resúmenes alineados. El Grid va dentro de Body y ocupa todo su ancho. La referencia usa cuatro columnas de igual peso, gap de 32 px y un ejemplo de cuatro filas flexibles con el mismo peso. Los spans mostrados son **4**, **1+1+1+1**, **2+2** y **3+1**, en orden de lectura. Cada bloque gris es contenido de muestra. Los tamaños y el número de filas del ejemplo sirven para entender los spans; dimensiona las filas de la pantalla según su contenido y hazlas iguales solo si el caso lo requiere.
+
+Para un Body de ancho `W`, cada columna ocupa `(W − 3 × 32) / 4`. Un módulo de `n` columnas ocupa `n × columna + (n − 1) × 32`. A 1440 px de Shell las columnas miden 294 px con menú colapsado y 253.5 px con menú expandido. A esos anchos, un módulo de dos columnas mide 620 px o 539 px. Evalúa el mínimo real de cada módulo con el menú expandido. Si ya no cabe, reduce columnas o ajusta spans dentro del alcance de esa pantalla. Conserva el orden lógico y el espacio de los gutters al reorganizar.
+
+### REQ-SHELL-FLEX
+
+Usa **Flex** cuando la relación dominante sea de un solo eje. Apila regiones del Body en vertical; usa filas Flex para grupos que deban alinearse en horizontal, como herramientas, filtros, campos o módulos comparables. La muestra separa filas por 32 px. La primera fila tiene dos regiones flexibles de igual ancho y un gap de 32 px. La segunda ocupa todo el ancho. Se observan 620/620 px con menú colapsado y 539/539 px con menú expandido. El alto igual de ambas filas (286.5 px) procede del ejemplo a 1440 × 1024, no es una cuota para contenido real.
+
+Dentro de una fila, deja que el contenido corto conserve su tamaño natural y que la región flexible ceda o crezca según el espacio disponible. Si no cabe, la pantalla debe declarar si permite salto de línea o apila las regiones conservando su orden. La muestra Figma usa `NO_WRAP`; no presupone reflujo automático. Grid y Flex pueden anidarse: por ejemplo, Grid para alinear tarjetas de un dashboard y Flex para el contenido de una tarjeta.
+
+### REQ-SHELL-SCREEN-CHOICE
+
+| Pantalla | Composición recomendada | Criterio de uso |
+| --- | --- | --- |
+| Dashboard | Grid en Body, Flex dentro de los módulos | KPI en 1+1+1+1; comparación en 2+2; gráfica principal y panel secundario en 3+1. Usa span completo para una región que lo necesite. |
+| Administrativa | Flex vertical como base; Grid cuando filtros, resúmenes o formularios necesiten columnas comunes | La tabla, el listado o la tarea principal suelen ocupar todo el ancho. Una barra de herramientas es una fila Flex con ajuste explícito. La tabla gestiona su propio desbordamiento horizontal si su contrato lo contempla. |
+| Lectura o detalle | Flex vertical y columna de lectura dentro del Body | Alinea título, secciones y acciones. El ancho de lectura se define en la pantalla según su contenido. Usa Grid cuando haya regiones paralelas persistentes, como artículo y panel de referencias. |
+
+Decide por la relación entre regiones y sus mínimos de contenido. Una misma pantalla puede cambiar la composición de Body sin alterar la estructura exterior ni duplicar los espaciados de Section Header.
+
+### REQ-SHELL-OVERFLOW
+
+En la referencia Header mide 96 px, Content 920 px, Main 856 px, Section Header 219 px y Body 605 px. Grid tiene Body `FILL` vertical; Flex muestra Body `FIXED` a 605 px. Shell y Body recortan y no tienen scroll configurado en el origen inspeccionado. Estos son hechos del ejemplo. Para una pantalla con más contenido, identifica la región que debe crecer y declara un dueño del scroll vertical: página completa, o Main si el producto requiere conservar Header y Sidebar visibles. No conviertas el recorte de Figma en pérdida de contenido. Evita dos áreas verticales de scroll para el mismo flujo; una tabla puede conservar scroll horizontal local según su contrato.
+
+Prueba textos largos, navegación expandida, alturas variables de Section Header y contenido mayor al alto de referencia. El Header observado declara mínimo de 1152 px. Evalúa ese mínimo y el mínimo de las regiones de Body antes de diseñar un ancho menor. No se definen aquí breakpoints, menú superpuesto, sticky, restauración de scroll ni comportamiento móvil. Una pantalla que los necesite debe especificarlos.
+
+### REQ-SHELL-CONTENT
+
+Los rectángulos grises, las cadenas de ejemplo y sus alturas ilustran la distribución. Sustituye Body por los módulos, estados vacíos, tablas, formularios o contenido editorial de la pantalla. No publiques las siluetas grises como elementos del sistema, ni las uses como tokens de altura. No conviertas sus dimensiones derivadas en medidas globales. Cada pantalla define datos, orden, estados, permisos, rutas y acciones.
+
+### REQ-SHELL-ACCESSIBILITY
+
+En la futura implementación, distingue navegación global y contenido principal, conserva un orden coherente de lectura y foco al cambiar layout y deja que el contenido relevante se alcance aun cuando desborde. La presentación visual de una cuadrícula no debe reordenar el significado del contenido. Figma acredita geometría, slots y composición en este encargo. La semántica web, el foco, el teclado y el reflujo real requieren pruebas del consumidor.
+
+### REQ-SHELL-QA
+
+Para consumir la Spec, revisa ambas configuraciones de menú y ambos tipos de Body. Contrasta la propiedad de cada espaciado, las sumas de ancho y el span por módulo con la referencia. Sustituye los ejemplos por contenido real y revisa mínimos, orden y desbordamiento. Verifica el Body de cada variante al cambiar de menú o layout. La inspección de Laboratorio es de solo lectura. La arquitectura y la guía son entregables documentales; el prototipo web y las pruebas de interacción corresponden a un encargo de implementación.

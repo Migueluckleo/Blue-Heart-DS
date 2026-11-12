@@ -1,0 +1,1134 @@
+{
+  "nodes": [
+    {
+      "id": "implementations_web_src_styles_css_avatar",
+      "label": "Avatar ajusta superficie, recorte y presencia por tamaño",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L998",
+      "rationale": "Alias de tamaño, tipografía y color se aplican al círculo. Dot permanece fuera del recorte."
+    },
+    {
+      "id": "implementations_web_src_styles_css_group",
+      "label": "Avatar group consume aliases de traslape y colores alternos",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1029",
+      "rationale": "El orden DOM permite alternos por posición y un rol separado para el contador."
+    },
+    {
+      "id": "implementations_web_src_styles_css_selector",
+      "label": "Selectores de Header conservan foco exterior y caret abierto",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1074",
+      "rationale": "Los selectores comparten la mecánica del anillo y conservan radios y superficies propios."
+    },
+    {
+      "id": "implementations_web_src_styles_css_header",
+      "label": "Header mantiene la altura y el ancho mínimo de la composición",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1146",
+      "rationale": "Los bloques derechos y el logo preservan sus dimensiones intrínsecas."
+    },
+    {
+      "id": "registry_contracts_reg_contract",
+      "label": "Registro delega la enmienda Sidebar para Figma y web",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L15",
+      "rationale": "Ghost de la raíz queda documentado como antecedente."
+    },
+    {
+      "id": "registry_contracts_reg_avatar",
+      "label": "Registro incorpora Avatar, su Slot y la procedencia de la fotografía",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L17",
+      "rationale": "Contratos delegados con QA documental."
+    },
+    {
+      "id": "registry_contracts_reg_header",
+      "label": "Registro incorpora Header con sus tres dependencias inmediatas",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L19",
+      "rationale": "Compone selectores, acciones, Badge y el logo de Contabilidad."
+    },
+    {
+      "id": "registry_qa_qa_register_sidebar",
+      "label": "Registro QA de Sidebar Secondary en Figma y web",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L15",
+      "rationale": "Readback de Secondary y prueba de teclado y foco en Chrome."
+    },
+    {
+      "id": "registry_qa_qa_register_avatar",
+      "label": "Registro QA distingue Avatar web y el bloqueo Figma",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L17",
+      "rationale": "Avatar group y el consumo web pasan."
+    },
+    {
+      "id": "registry_qa_qa_register_header",
+      "label": "Registro QA de Header y sus cuatro maestros",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L19",
+      "rationale": "La lectura cubre catorce variantes y QA Chrome."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_rebuild_progress",
+      "label": "Corte con 49 maestros validados, 15 inventariados y Avatar bloqueado",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L13",
+      "rationale": "El registro conserva 720 variantes de maestros validados, origen y destino."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_sidebar_dependency",
+      "label": "Sidebar Secondary y Badge quedan disponibles para sus consumidores",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L21",
+      "rationale": "Sidebar mantiene cuatro Slots y habilita App Shell. Badge permite continuar Input y otros."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_header",
+      "label": "Avatar de texto habilita User selector y completa la cadena Header",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L23",
+      "rationale": "Cuatro variantes de Avatar group y cuatro maestros de Header entran al corte."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_next_dependency",
+      "label": "Dropdown y Table conservan cadenas propias pendientes",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L37",
+      "rationale": "Dropdown requiere verificar Options. Table ya consume Pagination y requiere celdas y scrollbars."
+    },
+    {
+      "id": "implementations_web_src_styles_badge_css",
+      "label": "Badge web mantiene dimensiones naturales y roles por tipo",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L926",
+      "rationale": "La etiqueta permanece sin foco y los iconos son decorativos."
+    },
+    {
+      "id": "implementations_web_src_styles_menu_item_css",
+      "label": "Menu item conserva colores por parte y siluetas delegadas",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L747",
+      "rationale": "La vista usa los roles de Label, glyph, silueta y fondo observados por variante."
+    },
+    {
+      "id": "implementations_web_src_styles_top_bar_css",
+      "label": "Top bar horizontal mantiene dimensiones de sus eslabones",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L848",
+      "rationale": "El anfitrión configura espacio y desplazamiento."
+    },
+    {
+      "id": "implementations_web_src_styles_icon_button_css",
+      "label": "Icon Button conserva el foco y el anclaje de Dot",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L859",
+      "rationale": "Las recetas resuelven 90 combinaciones de control, glyph, borde y fondo."
+    },
+    {
+      "id": "implementations_web_src_styles_sidebar_css",
+      "label": "Sidebar contraído y expandido con composición independiente",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L894",
+      "rationale": "El control reutiliza Icon Button y el anfitrión gobierna ambas presentaciones."
+    },
+    {
+      "id": "implementations_web_src_styles_search_css",
+      "label": "Search mantiene tres alturas y foco visible",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L602",
+      "rationale": "El CSS representa estados del input y usa iconos Phosphor. La limpieza conserva el foco."
+    },
+    {
+      "id": "implementations_web_src_styles_breadcrumb_item_css",
+      "label": "Eslabón con foco exterior y separador decorativo",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L688",
+      "rationale": "El rol current y los roles de ancestro resuelven aliases distintos."
+    },
+    {
+      "id": "implementations_web_src_styles_breadcrumb_css",
+      "label": "Composición web de Back, eslabones y ancestros ocultos",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L732",
+      "rationale": "El anfitrión controla rutas y presentación compacta."
+    },
+    {
+      "id": "implementations_web_src_styles_progress_css",
+      "label": "Proporciones de la barra y movimiento reducido",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L316",
+      "rationale": "El valor controlado dimensiona el indicador. El indeterminado usa un segmento de la fuente y se detiene con reduced motion."
+    },
+    {
+      "id": "implementations_web_src_styles_checkbox_css",
+      "label": "Marca nativa de Checkbox y foco en Box",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L398",
+      "rationale": "Control y Box tienen medidas vinculadas. Label envuelve conservando alineación a la primera línea."
+    },
+    {
+      "id": "implementations_web_src_styles_upload_css",
+      "label": "Zona de File Upload, foco y colores por estado",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L486",
+      "rationale": "Los roles de superficie, borde, mensaje y texto siguen los tokens del componente."
+    },
+    {
+      "id": "implementations_web_src_styles_tooltip_css",
+      "label": "Tooltip limita Body y orienta su flecha propia",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L243",
+      "rationale": "Los aliases controlan tamaño, contraste y tipografía. El placement orienta la flecha sin lógica de colisiones."
+    },
+    {
+      "id": "implementations_web_src_styles_dot_css",
+      "label": "Dot usa geometría, borde y tipografía de los aliases del tema",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L56",
+      "rationale": "El punto acompaña al texto del anfitrión y el contador conserva tamaño mínimo."
+    },
+    {
+      "id": "implementations_web_src_styles_selection_css",
+      "label": "Foco y estados de selección sobre controles HTML nativos",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L69",
+      "rationale": "El CSS refleja checked, disabled, invalid y focus-visible de los inputs."
+    },
+    {
+      "id": "implementations_web_src_styles_group_css",
+      "label": "Dirección y roles de texto del Radio group web",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L203",
+      "rationale": "La dirección usa espacios propios y el mensaje de error conserva su rol semántico."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_census",
+      "label": "Censo de maestros públicos, auxiliares y demo",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L3",
+      "rationale": "29 páginas y 66 IDs, incluido un demo fuera de alcance."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_breadcrumb_dependency",
+      "label": "Breadcrumb oficial habilita la dependencia de Section Header",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L17",
+      "rationale": "Otros vínculos de Section Header siguen pendientes."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_progress_dependency",
+      "label": "File Upload reutiliza Linear Progress y Button",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L19",
+      "rationale": "La composición se conserva en Figma y React."
+    },
+    {
+      "id": "registry_contracts_guide_release",
+      "label": "Enmiendas semánticas de Buttons y Loader",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "registry_qa_usage_qa",
+      "label": "QA de Description y fichas Buttons Loader",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "implementations_web_src_styles_input_geometry",
+      "label": "Input web organiza etiqueta, campo y ayuda con aliases de tamaño",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1170",
+      "rationale": "Los tamaños lógicos producen 48/40/32 px y la unidad se mantiene en Badge."
+    },
+    {
+      "id": "implementations_web_src_styles_input_focus",
+      "label": "Input conserva halo simple y doble según tamaño y contenido",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1250",
+      "rationale": "La variante focus y el foco real reutilizan los roles del contrato."
+    },
+    {
+      "id": "registry_contracts_input_delegation",
+      "label": "Registro delega los dos sets Input y sus estilos de foco",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L21",
+      "rationale": "El contrato incluye Badge subtle/small."
+    },
+    {
+      "id": "registry_qa_input_qa",
+      "label": "Registro QA acredita 42 variantes Input y Chrome",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L21",
+      "rationale": "El borde vacío fuente queda registrado."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_input",
+      "label": "Input habilita Section Header y Pagination",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L25",
+      "rationale": "Los dos sets se completaron y el corte conserva la excepción cromática."
+    },
+    {
+      "id": "implementations_web_src_styles_section_header_wrap",
+      "label": "Section Header permite wrap por el espacio disponible",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1291",
+      "rationale": "Heading conserva un mínimo, Metadata tiene ancho propio y el anfitrión reduce los controles al estrechar."
+    },
+    {
+      "id": "implementations_web_src_styles_section_header_actions",
+      "label": "Inputs y General actions conservan regiones independientes",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1325",
+      "rationale": "Inputs toma espacio restante, acciones conservan ancho intrínseco."
+    },
+    {
+      "id": "registry_contracts_section_contract",
+      "label": "Registro delega Section Header y sus tres Slots",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L23",
+      "rationale": "El documento rige una composición con dependencias de navegación y acciones."
+    },
+    {
+      "id": "registry_qa_section_qa",
+      "label": "Registro QA de Section Header incluye el caso a 640 px",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L23",
+      "rationale": "Figma y Chrome pasan con excepción documentada."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_section_header",
+      "label": "Section Header completa las dependencias directas de App Shell",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L27",
+      "rationale": "El maestro 96:5 valida tres Slots y ancho estrecho."
+    },
+    {
+      "id": "implementations_web_src_styles_shell_regions",
+      "label": "App Shell web separa Header, Content y Main mediante aliases semánticos",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1335",
+      "rationale": "El Shell aporta 8 px y Content aporta los gaps y padding de 32."
+    },
+    {
+      "id": "implementations_web_src_styles_shell_body_css",
+      "label": "Body web cambia entre rejilla de cuatro columnas y eje vertical",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1360",
+      "rationale": "Grid y Flex mantienen el orden DOM y permiten que el anfitrión defina alturas y contenido."
+    },
+    {
+      "id": "registry_contracts_shell_registry",
+      "label": "App Shell se delega con cuatro variantes y Slot compartido",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L25",
+      "rationale": "El contrato registra la composición de escritorio."
+    },
+    {
+      "id": "registry_qa_shell_registry_qa",
+      "label": "QA de App Shell registra lectura, Slot y Chrome",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L25",
+      "rationale": "Los dos ejes y el Grid nativo pasan."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_app_shell",
+      "label": "App Shell completa cuatro combinaciones de escritorio",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L29",
+      "rationale": "Body conserva overrides, Grid conserva spans y Sidebar mantiene Secondary."
+    },
+    {
+      "id": "implementations_web_src_styles_pagination_item_css",
+      "label": "Pagination item muestra anillo de teclado fuera de la superficie",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1407",
+      "rationale": "El área táctil de 44 px es opcional y la superficie mantiene 32 px."
+    },
+    {
+      "id": "implementations_web_src_styles_pagination_css",
+      "label": "Pagination usa aliases del contenedor y ancho de filas de 88 px",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1422",
+      "rationale": "La elección de filas comparte la superficie y los roles de Input."
+    },
+    {
+      "id": "registry_contracts_pagination_registration",
+      "label": "Pagination item y Pagination se delegan con referencias separadas",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L27",
+      "rationale": "Páginas editables y matriz de ítems dependen de roles distintos."
+    },
+    {
+      "id": "registry_qa_pagination_qa",
+      "label": "Registro QA acredita las 11 variantes y Slot Pages",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L27",
+      "rationale": "El corte incluye Input vinculado y prueba Chrome."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_pagination",
+      "label": "Pagination y Pagination item completan 11 variantes",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L31",
+      "rationale": "La cadena incluye Slot, cuatro carets e Input de 88 px."
+    },
+    {
+      "id": "implementations_web_src_styles_tab_styles",
+      "label": "Tab aplica estilos de estado, tipografía y foco exterior",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1444",
+      "rationale": "La matriz de recetas deriva los roles desde los bindings aprobados."
+    },
+    {
+      "id": "implementations_web_src_styles_tabs_styles",
+      "label": "Tabs conserva divisor, gap y fondo según presentación",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1473",
+      "rationale": "Underline tiene divisor estirable, Pill gap y Segmented superficie con padding."
+    },
+    {
+      "id": "registry_contracts_tabs_registration",
+      "label": "Se delegan Tab y Tabs como unidad y grupo con Slot",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L29",
+      "rationale": "24 variantes de Tab y tres del grupo."
+    },
+    {
+      "id": "registry_qa_tabs_qa",
+      "label": "Registro QA de Tab y Tabs y contrastes fuente",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L29",
+      "rationale": "Incluye lectura, Slot y Chrome."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_tabs",
+      "label": "Tab y Tabs completan 27 variantes",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L33",
+      "rationale": "El Divider y la interacción de paneles quedan verificados."
+    },
+    {
+      "id": "implementations_web_src_styles_text_area_states",
+      "label": "Text Area aplica roles invariantes por estado y valor",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1495",
+      "rationale": "Focus, Error y Disabled conservan borde, texto e icono propios."
+    },
+    {
+      "id": "implementations_web_src_styles_text_area_flow",
+      "label": "Text Area conserva un campo inicial de 104 y permite ampliar la región",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1533",
+      "rationale": "El textarea conserva scroll propio y el host puede definir la altura."
+    },
+    {
+      "id": "qa_contracts_text_area_v1_0_0_review_text_area_doc",
+      "label": "QA documental coteja ocho variantes, cuatro estilos y Notches",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/contracts/text-area.v1.0.0.review.md",
+      "source_location": "L5",
+      "rationale": "Placeholder y Value son independientes. La altura y el contador de muestra tienen alcance acotado."
+    },
+    {
+      "id": "qa_implementations_text_area_v1_0_0_review_text_area_native",
+      "label": "Text Area pasa lectura de ocho variantes y 464 bindings",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/text-area.v1.0.0.review.md",
+      "source_location": "L7",
+      "rationale": "La altura inicial es 104, Label de 23 y conjunto de 161."
+    },
+    {
+      "id": "qa_implementations_text_area_v1_0_0_review_text_area_instance",
+      "label": "Text Area prueba 160, 305 y 640 px desde instancias",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/text-area.v1.0.0.review.md",
+      "source_location": "L9",
+      "rationale": "Valida texto multilínea, contador, Notches y ampliación local a 180 px."
+    },
+    {
+      "id": "qa_implementations_text_area_v1_0_0_review_text_area_chrome",
+      "label": "Chrome verifica entrada multilínea, contador y altura interactiva",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/text-area.v1.0.0.review.md",
+      "source_location": "L13",
+      "rationale": "La muestra conserva el valor al ampliar y asocia error, ayuda y contador."
+    },
+    {
+      "id": "qa_implementations_text_area_v1_0_0_review_text_area_contrast",
+      "label": "Borde vacío de Text Area conserva contraste heredado 2.564:1",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/text-area.v1.0.0.review.md",
+      "source_location": "L15",
+      "rationale": "La excepción queda acotada al borde y no acredita conformidad global."
+    },
+    {
+      "id": "registry_contracts_text_area_delegation",
+      "label": "Text Area se delega con ocho estados y Notches oficial",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L31",
+      "rationale": "Incluye cuatro estilos y guía de consumo."
+    },
+    {
+      "id": "registry_qa_text_area_qa",
+      "label": "Registro QA acredita ocho variantes y medición de Text Area",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L31",
+      "rationale": "Lectura, edición nativa y Chrome pasan."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_text_area",
+      "label": "Text Area completa ocho variantes verificadas",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L35",
+      "rationale": "Notches, ancho, alto, ayuda y contador conservan evidencia."
+    },
+    {
+      "id": "sources_figma_snapshots_root_families_2026_11_11_text_area_1_0_0_md_source_text_area_geometry",
+      "label": "Fuente Text Area fija campo inicial de 104 y ancho del anfitrión",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/sources/figma-snapshots/root-families-2026-11-11/text-area.1.0.0.md.txt",
+      "source_location": "L432",
+      "rationale": "La muestra pide verificar 160, 305 y 640 y ajustar altura desde la instancia."
+    },
+    {
+      "id": "sources_figma_snapshots_root_families_2026_11_11_text_area_1_0_0_md_source_text_area_semantics",
+      "label": "Fuente Text Area asocia ayuda y contador a la captura",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/sources/figma-snapshots/root-families-2026-11-11/text-area.1.0.0.md.txt",
+      "source_location": "L456",
+      "rationale": "El anfitrión fija límites y tratamiento de overflow."
+    },
+    {
+      "id": "specs_components_text_area_contract_v1_0_0_text_area_spec",
+      "label": "Contrato Text Area delega ocho estados con anatomía fija",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/text-area.contract.v1.0.0.md",
+      "source_location": "L21",
+      "rationale": "Label es obligatorio. Placeholder y Value se editan independientemente."
+    }
+  ],
+  "edges": [
+    {
+      "source": "registry_contracts_reg_contract",
+      "target": "specs_components_sidebar_secondary_control_amendment_v1_0_1_sidebar_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_qa_qa_register_sidebar",
+      "target": "qa_implementations_sidebar_secondary_control_v1_0_1_review_qa_sidebar",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_qa_qa_register_avatar",
+      "target": "qa_implementations_avatar_v1_0_0_review_qa_avatar",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_qa_qa_register_header",
+      "target": "qa_implementations_header_chain_v1_0_0_review_qa_header",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_contracts_reg_avatar",
+      "target": "specs_components_avatar_contract_v1_0_0_avatar_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_contracts_reg_avatar",
+      "target": "specs_components_avatar_group_contract_v1_0_0_group_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_contracts_reg_header",
+      "target": "specs_components_header_contract_v1_0_0_header_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_header",
+      "target": "qa_implementations_header_chain_v1_0_0_review_qa_header",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_header",
+      "target": "qa_implementations_avatar_v1_0_0_review_qa_group",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "implementations_web_src_styles_css_avatar",
+      "target": "specs_components_avatar_contract_v1_0_0_avatar_spec",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L998",
+      "weight": 1.0
+    },
+    {
+      "source": "implementations_web_src_styles_css_group",
+      "target": "specs_components_avatar_group_contract_v1_0_0_group_spec",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1029",
+      "weight": 1.0
+    },
+    {
+      "source": "implementations_web_src_styles_css_selector",
+      "target": "specs_components_company_selector_contract_v1_0_0_company_spec",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1074",
+      "weight": 1.0
+    },
+    {
+      "source": "implementations_web_src_styles_css_selector",
+      "target": "specs_components_user_selector_contract_v1_0_0_user_spec",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1074",
+      "weight": 1.0
+    },
+    {
+      "source": "implementations_web_src_styles_css_header",
+      "target": "specs_components_header_contract_v1_0_0_header_spec",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1146",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_rebuild_progress",
+      "target": "registry_root_families_2026_11_11_root_census",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_rebuild_progress",
+      "target": "registry_root_families_2026_11_11_root_sidebar_dependency",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_contracts_input_delegation",
+      "target": "specs_components_input_contract_v1_0_0_input_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L21"
+    },
+    {
+      "source": "registry_qa_input_qa",
+      "target": "qa_implementations_input_v1_0_0_review_figma_consumer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L21"
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_input",
+      "target": "registry_qa_input_qa",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L25"
+    },
+    {
+      "source": "implementations_web_src_styles_input_geometry",
+      "target": "specs_components_input_contract_v1_0_0_input_spec",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1170"
+    },
+    {
+      "source": "implementations_web_src_styles_input_focus",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_input_2_0_1_md_source_focus",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1250"
+    },
+    {
+      "source": "registry_contracts_section_contract",
+      "target": "specs_components_section_header_contract_v1_0_0_section_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L23"
+    },
+    {
+      "source": "registry_qa_section_qa",
+      "target": "qa_implementations_section_header_v1_0_0_review_section_slots_qa",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L23"
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_section_header",
+      "target": "registry_qa_section_qa",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L27"
+    },
+    {
+      "source": "implementations_web_src_styles_section_header_wrap",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_section_header_1_0_0_md_source_section_wrap",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1291"
+    },
+    {
+      "source": "implementations_web_src_styles_section_header_actions",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_section_header_1_0_0_md_source_section_slots",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1325"
+    },
+    {
+      "source": "implementations_web_src_styles_shell_regions",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_app_shell_1_0_0_md_source_shell_structure",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1335"
+    },
+    {
+      "source": "implementations_web_src_styles_shell_body_css",
+      "target": "specs_components_app_shell_contract_v1_0_0_shell_spec",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1360"
+    },
+    {
+      "source": "registry_contracts_shell_registry",
+      "target": "specs_components_app_shell_contract_v1_0_0_shell_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L25"
+    },
+    {
+      "source": "registry_qa_shell_registry_qa",
+      "target": "qa_implementations_app_shell_v1_0_0_review_shell_slot_qa",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L25"
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_app_shell",
+      "target": "registry_qa_shell_registry_qa",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L29"
+    },
+    {
+      "source": "implementations_web_src_styles_pagination_item_css",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_pagination_item_1_0_0_md_source_pagination_item_focus",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1407"
+    },
+    {
+      "source": "implementations_web_src_styles_pagination_css",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_pagination_1_0_0_md_source_pagination_rows",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1422"
+    },
+    {
+      "source": "registry_contracts_pagination_registration",
+      "target": "specs_components_pagination_contract_v1_0_0_pagination_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L27"
+    },
+    {
+      "source": "registry_contracts_pagination_registration",
+      "target": "specs_components_pagination_item_contract_v1_0_0_pagination_item_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L27"
+    },
+    {
+      "source": "registry_qa_pagination_qa",
+      "target": "qa_implementations_pagination_chain_v1_0_0_review_pagination_slot_qa",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L27"
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_pagination",
+      "target": "registry_qa_pagination_qa",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L31"
+    },
+    {
+      "source": "implementations_web_src_styles_tab_styles",
+      "target": "specs_components_tab_contract_v1_0_0_tab_spec",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1444"
+    },
+    {
+      "source": "implementations_web_src_styles_tabs_styles",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_tabs_3_1_0_md_source_tabs_layout",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1473"
+    },
+    {
+      "source": "registry_contracts_tabs_registration",
+      "target": "specs_components_tab_contract_v1_0_0_tab_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L29"
+    },
+    {
+      "source": "registry_contracts_tabs_registration",
+      "target": "specs_components_tabs_contract_v1_0_0_tabs_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L29"
+    },
+    {
+      "source": "registry_qa_tabs_qa",
+      "target": "qa_implementations_tabs_chain_v1_0_0_review_tabs_slot_qa",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L29"
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_tabs",
+      "target": "registry_qa_tabs_qa",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L33"
+    },
+    {
+      "source": "implementations_web_src_styles_text_area_states",
+      "target": "specs_components_text_area_contract_v1_0_0_text_area_spec",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1495"
+    },
+    {
+      "source": "implementations_web_src_styles_text_area_flow",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_text_area_1_0_0_md_source_text_area_geometry",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L1533"
+    },
+    {
+      "source": "qa_contracts_text_area_v1_0_0_review_text_area_doc",
+      "target": "specs_components_text_area_contract_v1_0_0_text_area_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/contracts/text-area.v1.0.0.review.md",
+      "source_location": "L5"
+    },
+    {
+      "source": "qa_implementations_text_area_v1_0_0_review_text_area_native",
+      "target": "specs_components_text_area_contract_v1_0_0_text_area_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/text-area.v1.0.0.review.md",
+      "source_location": "L7"
+    },
+    {
+      "source": "qa_implementations_text_area_v1_0_0_review_text_area_instance",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_text_area_1_0_0_md_source_text_area_geometry",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/text-area.v1.0.0.review.md",
+      "source_location": "L9"
+    },
+    {
+      "source": "qa_implementations_text_area_v1_0_0_review_text_area_chrome",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_text_area_1_0_0_md_source_text_area_semantics",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/text-area.v1.0.0.review.md",
+      "source_location": "L13"
+    },
+    {
+      "source": "qa_implementations_text_area_v1_0_0_review_text_area_contrast",
+      "target": "qa_implementations_text_area_v1_0_0_review_text_area_chrome",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/text-area.v1.0.0.review.md",
+      "source_location": "L15"
+    },
+    {
+      "source": "registry_contracts_text_area_delegation",
+      "target": "specs_components_text_area_contract_v1_0_0_text_area_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/contracts.md",
+      "source_location": "L31"
+    },
+    {
+      "source": "registry_qa_text_area_qa",
+      "target": "qa_implementations_text_area_v1_0_0_review_text_area_instance",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/qa.md",
+      "source_location": "L31"
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_text_area",
+      "target": "registry_qa_text_area_qa",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L35"
+    },
+    {
+      "source": "specs_components_text_area_contract_v1_0_0_text_area_spec",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_text_area_1_0_0_md_source_text_area_geometry",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/text-area.contract.v1.0.0.md",
+      "source_location": "L21"
+    },
+    {
+      "source": "specs_components_text_area_contract_v1_0_0_text_area_spec",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_text_area_1_0_0_md_source_text_area_semantics",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "weight": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/text-area.contract.v1.0.0.md",
+      "source_location": "L21"
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": null,
+  "output_tokens": null,
+  "usage_status": "UNAVAILABLE"
+}

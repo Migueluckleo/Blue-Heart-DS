@@ -1,0 +1,465 @@
+---
+{
+  "schema_version": 1,
+  "id": "TEXT-AREA-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-041"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/text-area-request.json",
+      "sha256": "223b0dd338d3fc2d44142ba1da39c7851eefffd918559cf4c88dbdd82d8e2374"
+    },
+    {
+      "id": "SRC-CHOICE",
+      "path": "evidence/authorization/text-area-api-choice.json",
+      "sha256": "9fff92380d9c6def59cf4e4f0e8296ed6e8d2ad6bba53a4f65ed98975eb4a448"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/text-area-pilot/source/capture-manifest.json",
+      "sha256": "fe3199b1e82680bd17b9f89b002ecc80eb1ee401deb1e0d0760659f242f397e3"
+    },
+    {
+      "id": "SRC-MODEL",
+      "path": "evidence/text-area-pilot/source/text-area-component-contract.yaml",
+      "sha256": "0ab5062bd5f8f38c28a194e170832e1af6922d5c16cec46c2d5f15375e72922e"
+    },
+    {
+      "id": "SRC-PLAN",
+      "path": "evidence/text-area-pilot/build-plan.json",
+      "sha256": "186d3c1041151020a1a430c85cb214861a321cd70e455144bde8f903675b11f0"
+    },
+    {
+      "id": "SRC-AUDIT",
+      "path": "evidence/text-area-pilot/reverse-dependencies.json",
+      "sha256": "5c48590f660675487abefe16827661191505e2690b681e17b60ed592dc5e397a"
+    },
+    {
+      "id": "SRC-PHOSPHOR",
+      "path": "evidence/text-area-pilot/source/official-phosphor.json",
+      "sha256": "5e950e2bddb15dcbc586b63220fdcaf1f6440b7a91c3b51ec6907ae25e31a093"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "text-area.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.spacing-sm",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.color-text-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.font-bold",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.font-size-14",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.font-line-height-22p4",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.font-tracking-14",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.spacing-padding-y",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.spacing-padding-x",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.size-field-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.radius-container",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.color-bg-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.border-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.color-stroke-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.color-text-secondary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.font-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.font-semibold",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.font-size-12",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.font-line-height-18p0",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.font-tracking-12",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.size-resize",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.color-icon-secondary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.color-stroke-filled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.color-stroke-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.color-text-error",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.color-stroke-error",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.color-icon-error",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.color-text-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.color-bg-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "text-area.color-icon-disabled",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-ANATOMY"
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-API"
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-LAYOUT"
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-TYPOGRAPHY"
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-TOKENS"
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-THEME"
+      ]
+    },
+    {
+      "id": "REQ-ICONS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-ICONS"
+      ]
+    },
+    {
+      "id": "REQ-BEHAVIOR",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-BEHAVIOR"
+      ]
+    },
+    {
+      "id": "REQ-ACCESSIBILITY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-ACCESSIBILITY"
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-DEPENDENCIES"
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICE",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-PHOSPHOR"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-QA"
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Root",
+      "Label",
+      "input",
+      "Field",
+      "Value",
+      "Footer",
+      "Counter",
+      "Notches",
+      "Helper"
+    ],
+    "composition": "Own anatomy and linked official Phosphor Notches; no Input composition.",
+    "accessibility": "Host provides textarea semantics, count/validation and keyboard; no Figma runtime certification."
+  }
+}
+---
+# TEXT-AREA-001 · 1.0.0
+
+### REQ-ANATOMY
+
+Ocho variantes reales: state default/focus/error/disabled × value false/true. Root vertical contiene Label, input vertical con Field y Helper; Field contiene texto multilínea y Footer horizontal con Counter y Notches. No crear hover, loading, tamaños o variantes por longitud inexistentes. No existe anillo separado, sombra ni componente Input hijo.
+
+### REQ-API
+
+Conservar state y value como ejes VARIANT. Label, Helper text, Placeholder y Counter son TEXT; Show helper y Show counter BOOLEAN inicialmente true. Añadir Value TEXT por elección humana: solo variantes value=true lo consumen; vacías conservan Placeholder. Resolver sufijos desde ledger. Helper text permanece editable también en error: no trasladar la excepción fija de Radio. Counter0/300 es muestra, no una validación ni límite impuesto. Label no es opcional en esta API.
+
+### REQ-LAYOUT
+
+Root ancho305 de muestra editable, alto HUG; Label FILL/HEIGHT. input FILL/HUG; ambos gap8 sin padding. Field FILL/FIXED alto104 inicial vinculado, padding vertical12/horizontal16, radio8, borde1 INSIDE, gap8. Texto FILL/FILL con textAutoResize NONE y sin ellipsis ni maxLines. Footer FILL/HUG SPACE_BETWEEN/CENTER con gap0 y un spacer flexible transparente derivado entre Counter y Notches (sin variable propia):197 observado es caché de distribución, no una medida semántica. Counter HUG y Notches16 mantienen extremos incluso al ocultar Counter, por alineación secundaria documentada y verificada. Helper FILL/HEIGHT permite multilínea. Ancho definido por host sin máximo universal; verificar160/305/640. Para ampliar el alto de una instancia, fijar root a Label.height + gap raíz + Helper.height + gap input + alto deseado, poner input y Field en FILL y retirar binding height solo de ese Field consumidor; si Helper está oculto omitir su alto y gap. Redimensionar directamente el Field interno no cambia sus dimensiones heredadas. Contenido que exceda el alto visible requiere decisión del host (crecimiento o scroll); no afirmar autosize, recorte seguro ni resize real por la muesca.
+
+### REQ-TYPOGRAPHY
+
+Cuatro estilos compartidos: Manrope Bold14/22.4 Label, Regular14/22.4 Value, SemiBold12/18 Counter y Regular12/18 Helper. Tracking−2% equivale−0.28px a14 y−0.24px a12; aliases px por limitación nativa de variables. Línea160% a14 equivale22.4px: Auto Layout nativo redondea Label a23 frente a22 en fuente y root161 frente a160, sin cambiar Field104 ni Helper18. No alterar la Foundation Manrope Semibold por la grafía nativa SemiBold. Mantener esta adaptación explícita, no tolerancia que oculte1px.
+
+### REQ-TOKENS
+
+Aplicar BH-P07:31firmas únicas para416bindings; grupo text-area/ en la colección component y un scope concreto por token. Las firmas comparten tipo,unidad,scope y vector completo de cuatro aliases; no duplicar para cada estado ni para Label/Value cuando el vector es idéntico. Color por función/estado, no paleta. Añadir solo primitive/semantic size104,font-line-height18px,font-letter-spacing−0.24px;953objetos previos íntegros,990total. Mantener nombre lógico,ruta Figma,ID/key y WEB. Ancho305 y gap cacheado197 no son tokens.
+
+### REQ-THEME
+
+Todos los colores de esta familia son invariantes: fondo blanco/disabled, texto primary/secondary/error/disabled,bordes default/filled/focus/error/disabled e icono. Repetir aliases en cuatro modos de component; foco fijo incluso si otras familias tienen marca temática. No copiar reglas de Tab/Button/Search por analogía.
+
+### REQ-ICONS
+
+Notches es instancia remota oficial Phosphor del equipo, Outline/Light,16px. No copiar vectores,desacoplar,crear un Icon Button ni sustituirlo por otra geometría. Es indicador de resize junto a Counter y sigue sus aliases por BH-P06: secondary normal,error en error y disabled en disabled. TEXT_FILL y SHAPE_FILL siguen separados por scope. En desarrollo futuro importar NotchesIcon weight=light del paquete oficial; no se instala ni implementa React aquí.
+
+### REQ-BEHAVIOR
+
+El consumidor futuro mantiene valor,decide límite real según sistema destino,actualiza Counter al escribir y contextualiza Helper.300 no gobierna negocio ni PAC por inferencia. Define crecimiento/scroll y resize vertical con ancho del layout. La raíz no tiene reactions; el prototipo destino muestra focus,llenado,error,limpieza y altura ampliada mediante pantallas y datos ficticios, sin simular escritura real como evidencia de validación. Disabled no acepta acciones. No añadir hover nativo ausente.
+
+### REQ-ACCESSIBILITY
+
+Host web futuro asocia Label con textarea,aria-describedby con Helper/Counter y aria-invalid en error; anuncia contador con aria-live polite cuando proceda sin anunciar cada carácter innecesariamente. Requiere implementación y QA de teclado,lector,foco,selección,copiado,scroll y resize. Medir contraste de texto,control e indicador por rol; borde default bajo3:1 se conserva como limitación de fuente,disabled se informa por separado. No declarar AA global. La muesca visual no acredita área de arrastre accesible.
+
+### REQ-DEPENDENCIES
+
+La auditoría completa de21páginas/6419instancias no halló consumidores,helpers ni principales Text Area previos; cero sustituciones y retiradas. Ocho instancias directas del mismo Notches oficial; sin dependencia contractual de Input,Icon Button ni Badge. Los controles de navegación del host son demostración. Contexto completo de normas/tokens por modo debe caber65536bytes sin truncar ni aumentar presupuesto. Origen/proyecto anterior solo lectura.
+
+### REQ-QA
+
+Verificar8variantes,31variables/124aliases,416bindings,cuatro estilos/32textos y ocho assets. Validar cuatro modos,independencia Value/Placeholder,visibilidad Helper/Counter,texto largo y multilínea,cambio state/value con overrides conservados,anchos160/305/640,Counter largo,alineación Notches sin Counter y edición explícita de alto en instancia sin alterar principales. Alias/ID/key exactos; numeric float32 normalizado,geometry tolerancia0.05px fuera de adaptación1px explícita. Guía editable,grafo y reproducción visible separados de infraestructura. QA realizado por ejecutor,sin revisor independiente; no acredita React,entrada real,ARIA/teclado ni toque físico.
+

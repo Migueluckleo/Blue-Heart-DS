@@ -1,0 +1,583 @@
+---
+{
+  "schema_version": 1,
+  "id": "MENU-ITEM-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-045"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/sidebar-request.json",
+      "sha256": "8a9904a53cf30534b338ce0cbd2909f493f95c9b4372ee27b21a9e6c90b1ba88"
+    },
+    {
+      "id": "SRC-CHOICES",
+      "path": "evidence/authorization/sidebar-choices.json",
+      "sha256": "44e0c850198ea4bd7e2373ded8a0d5e86c04c3960edc8e9a2d8364144f481b62"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/sidebar-pilot/source/capture-manifest.json",
+      "sha256": "eb7f7b21752fb873658d95a82c9ef04c21485ff933ee54cf71b9aa57bc4686da"
+    },
+    {
+      "id": "SRC-MODEL",
+      "path": "evidence/sidebar-pilot/source/menu-item-component-contract.yaml",
+      "sha256": "fa7ccf0da8a34796909d080d735815897c577b0b69218d0fe0660e7c02a42b48"
+    },
+    {
+      "id": "SRC-PLAN",
+      "path": "evidence/sidebar-pilot/build-plan.json",
+      "sha256": "17abef3a27c9a7ce8a632e1ff1fbaedc3a33b77f16392d0120cf2c84cdc68cb6"
+    },
+    {
+      "id": "SRC-AUDIT",
+      "path": "evidence/sidebar-pilot/reverse-dependencies.json",
+      "sha256": "99ef6aa17fa09e1913bde42d3d6eda525e51b9c58dcbedbfd6b0bd7be4fa377c"
+    },
+    {
+      "id": "SRC-CONTRAST",
+      "path": "evidence/sidebar-pilot/contrast-analysis.json",
+      "sha256": "b7fc0ce128cd25786ba4f4b0770dab6e570a2f22d09ccf076b4aab413566cbb7"
+    },
+    {
+      "id": "SRC-PHOSPHOR",
+      "path": "evidence/sidebar-pilot/source/official-phosphor.json",
+      "sha256": "d2ad9927a7638142c04924bfe00b92c32088821d703a5bdb20e97d3f108a3aa5"
+    },
+    {
+      "id": "SRC-STACK",
+      "path": "evidence/sidebar-pilot/source/stacking-strokes.json",
+      "sha256": "11149eaaa9dbfd876d785c15eac3e5cb6c050ad25ca7d06685380ea496a1e6f0"
+    },
+    {
+      "id": "SRC-NATIVE",
+      "path": "evidence/sidebar-pilot/native-adaptations.json",
+      "sha256": "90b79059693aafaa4464ef0a3dce155f7a8a223ff565aa1665142f5fb4504f20",
+      "selector": "JSON:/adaptations"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "menu-item.spacing-medium",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.spacing-content",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.spacing-leading",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.size-expanded-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.size-active-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.size-icon",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.color-icon-inverse",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.color-text-active-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.font-family-base",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.font-style-selected",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.font-size-label",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.font-tracking",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.font-line-height-label",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.spacing-compact",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.radius-beta",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.color-bg-beta-start",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.color-bg-beta-end",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.font-family-beta",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.font-style-beta",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.font-size-beta",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.color-shape-active-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.size-collapsed-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.color-stroke-active-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.border-focus-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.size-row-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.color-icon-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.color-text-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.font-style-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.spacing-sub-menu-leading",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.color-stroke-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.border-divider-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.spacing-small",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.radius-item",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.color-bg-active-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.color-text-sub-menu-active-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.color-stroke-active-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.color-bg-active-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.color-shape-active-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.size-horizontal-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "menu-item.size-horizontal-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "TOOLTIP-001",
+      "version": "1.0.0",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de menu-item: REQ-ANATOMY"
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de menu-item: REQ-API"
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK",
+        "SRC-NATIVE"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de menu-item: REQ-LAYOUT"
+      ]
+    },
+    {
+      "id": "REQ-BETA",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de menu-item: REQ-BETA"
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de menu-item: REQ-THEME"
+      ]
+    },
+    {
+      "id": "REQ-PHOSPHOR",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK",
+        "SRC-NATIVE"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de menu-item: REQ-PHOSPHOR"
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de menu-item: REQ-TYPOGRAPHY"
+      ]
+    },
+    {
+      "id": "REQ-TOOLTIP",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK",
+        "SRC-NATIVE"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de menu-item: REQ-TOOLTIP"
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de menu-item: REQ-TOKENS"
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de menu-item: REQ-DEPENDENCIES"
+      ]
+    },
+    {
+      "id": "REQ-HOST",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de menu-item: REQ-HOST"
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST",
+        "SRC-PHOSPHOR",
+        "SRC-STACK",
+        "SRC-NATIVE"
+      ],
+      "acceptance": [
+        "Comparar fuentes,receta,registro nativo y QA de menu-item: REQ-QA"
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Root",
+      "Label",
+      "Phosphor icons",
+      "Union",
+      "Sub-menu line/background",
+      "BETA",
+      "Tooltip"
+    ],
+    "composition": "Official children by exact typed references; own anatomy and tokens remain separate.",
+    "accessibility": "Host implements navigation semantics,focus/keyboard,routes,names and mobile targets; no global AA claim."
+  }
+}
+---
+# MENU-ITEM-001 ·1.0.0
+
+### REQ-ANATOMY
+
+Conservar22 combinaciones reales en un set: vertical collapsed/expanded con default/hover/focus × isActive true/false,vertical sub-menu con default/hover × isActive,y horizontal collapsed con default/hover/focus × isActive. No completar producto cartesiano ni añadir Disabled. Mantener las siluetas Union VECTOR propias con paths originales,anatomía de submenú y contornos de foco. BETA es Frame/Text propios,no Badge ni Dot.
+
+### REQ-API
+
+Exponer Label,Show right icon,Fill icon y Light icon; conservar orientation,type,status,isActive y defaults vertical/collapsed/default/true. Añadir Show beta BOOLEAN,true inicial,solo consume vertical/expanded/active en default/hover/focus. Fill y Light son dos swaps Phosphor; respetar peso real por estado,incluido inactive/hover Fill. Resolver keys nativas por ledger después de combine. No crear variante por icono o BETA.
+
+### REQ-LAYOUT
+
+Anchos y altos fijos vinculados:72 collapsed,234 expanded/sub-menu y200 horizontal; altos56 collapsed/expanded activos,48 expanded inactivo/sub-menu y40 horizontal. Etiquetas a una línea con ENDING/maxLines1 por elección humana,con crecimiento horizontal FILL y altura tipográfica HEIGHT/HUG (24 px o AUTO de una línea),sin desbordamiento multilínea. Al ocultar BETA,Label recupera espacio. Los bounds65/222 de las siluetas derivan del padre y sus offsets; no son tokens independientes. No cambiar paths ni aplanar iconos.
+
+### REQ-BETA
+
+Insertar la insignia fuente en los tres estados activos expandidos y vincular Show beta a visible; texto BETA fijo,no una propiedad de release. Conservar padding4,radio9999,ancho47 y texto Inter Bold10/AUTO/tracking0 centrado. Usar la nueva cadena de familia Inter y reutilizar semantic.font-weight-bold cuyo literal bold se presenta como Inter Bold; no sustituir por Manrope. Degradado mantiene dos color stops variables y transform exacto,GLASS desactivado y sombra completos en estilo compartido. Aplicar efectos antes de reponer fill/opacidad1 para evitar el ajuste nativo de GLASS observado.
+
+### REQ-THEME
+
+Preservar vectores temáticos fuente de fondos,formas,textos,íconos y líneas; los blancos y foco permanecen invariantes. BETA alterna púrpuras en Contable/Servicios y azules en Administrativo/Personas según sus aliases fuente; no extrapolar la excepción fija de Tab. Por elección humana,sub-menu active/default usa texto de marca fuerte y horizontal inactive/hover usa blanco. Estas parejas alcanzan4.5:1 en cuatro temas; no extienden la corrección a BETA,cuyo degradado conserva mínimo2.262:1 sin AA.
+
+### REQ-PHOSPHOR
+
+Usar HouseLine Fill/Light y CaretDown Light de la biblioteca del equipo,por keys oficiales comprobadas. CaretDown se normaliza de23.2193 a24 por elección humana; Icon también24. Aplicar BH-P06: iconos acompañantes siguen aliases de Label en cada modo/estado,incluidas las correcciones de contraste. En collapsed no hay Label visible: declarar rol de navegación y conservar color fuente sobre el Sidebar correspondiente. No igualar esos iconos al texto de Tooltip,que pertenece al hijo.
+
+### REQ-TYPOGRAPHY
+
+Cuatro estilos compartidos: Manrope Regular14/24,SemiBold14/24,SemiBold14/AUTO de submenú activo,e Inter Bold10/AUTO de BETA. Tracking0 se vincula en px,equivalente a0% fuente. Mantener semantic.font-weight-semibold literal Semibold,presentado como Manrope SemiBold; no reescribir la Foundation. Aplicar estilos y bindings reales a19 textos propios después de cualquier cambio tipográfico.
+
+### REQ-TOOLTIP
+
+Collapsed compone seis instancias de Tooltip oficial: visibles en hover y ocultas en default/focus para conservar edición y contenido entre estados. Activo e inactivo usan right/center/simple1.0.0 con clip false y HUG/HUG oficial; no copiar la caja fija75×46 de la instancia fuente. Cuerpo máximo240 y lateral máximo246 pertenecen a Tooltip. El anclaje inicial se centra en la fila; al editar contenido,el host resuelve reposición/colisión; no reconstruir sus fuentes,flecha o variables. El hijo se expone para editar Label y sus controles; valor inicial Home. La API nativa rechaza referencias del padre en subcapas de instancia: Label de Menu item gobierna texto visible y Tooltip conserva Label propio. La receta consumidora edita ambos para coherencia; no afirmar sincronización automática. El hover público es reversible conservando isActive; focus es variante visual y la apertura/cierre accesibles corresponden al host.
+
+### REQ-TOKENS
+
+Aplicar BH-P07 al mapa seleccionado antes de construir. Una firma por tipo,unidad,scope y aliases completos; no multiplicar por estados. Tokens directos de cada contrato viven en su único grupo bajo component; primitive y semantic conservan scopes vacíos. Mantener nombre lógico,figmaName,WEB e ID/key. El corte6.17.0 conserva1032 tokens anteriores y totaliza1099:170 primitivas,131 semánticos y798 de componente. Ocho Foundations corresponden únicamente a las cadenas72/200/234 e Inter; el estilo Bold reutiliza el alias canónico bold; no crear colores nuevos ni cotas885/1399/222/65.
+
+### REQ-DEPENDENCIES
+
+Resolver hijos por contratos y versiones exactas,con instancias oficiales vinculadas y sus tokens intactos. La auditoría previa24páginas/6939instancias no encontró consumidores,helpers ni definiciones de estas familias; cero sustituciones/retiros. Las referencias inversas son evidencia,no dependencias normativas circulares. Los ejemplos con Button,Loader o Header no añaden dependencias anatómicas. El popup legado fuera del Top bar principal no se incorpora como una cuarta familia.
+
+### REQ-HOST
+
+El consumidor define rutas,permisos,contenido,navegación de producto,semántica nav/enlaces,aria-current,expanded,controles de teclado,nombre accesible,área táctil y adaptación móvil. Figma acredita únicamente lo ejecutado en sus muestras. Separar selección visual,hover y navegación ficticia de rutas o datos reales. No instalar stack ni implementar React,servicios o Graphify por este encargo.
+
+### REQ-QA
+
+Comparar contrato/receta/implementación por variante y cuatro modos. Verificar scopes,aliases,WEB,bindings,estilos,textos largos/vacíos,visibilidad,BETA y swaps de iconos. Comprobar reutilización de hijos,Slots desde consumidores con cantidades menores/mayores que la muestra,inserción,retirada,reordenación y vínculo intacto. Tolerancia geométrica0.05px,color0.000001 y float32 nativo; identidades/aliases exactos. Conservar1032 fingerprints previos. Medir contraste contra el fondo efectivo,sin AA global. Guía compacta y reproducción visible separadas de infraestructura; QA del ejecutor,sin revisor independiente. Un cierre de contexto BLOCKED no se consume: dividir en propietarios completos con referencias tipadas,sin elevar presupuesto ni omitir reglas.

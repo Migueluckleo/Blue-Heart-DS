@@ -1,0 +1,115 @@
+{
+  "sets": [
+    {
+      "id": "565:149",
+      "key": "9e74605b5cbdf989121c64bb6b56fa7e8896bf67",
+      "type": "COMPONENT_SET",
+      "page": "565:36",
+      "pageName": "Inline Notification",
+      "name": "Inline Notification",
+      "x": 1500,
+      "y": 100,
+      "width": 650,
+      "height": 524,
+      "props": {
+        "Show title#565:0": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Title#565:6": {
+          "type": "TEXT",
+          "defaultValue": "Title"
+        },
+        "Show description#565:12": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Description#565:18": {
+          "type": "TEXT",
+          "defaultValue": "Description text that explains what happened. View details."
+        },
+        "Show icon#565:24": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show dismiss#565:30": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "type": {
+          "type": "VARIANT",
+          "defaultValue": "neutral",
+          "variantOptions": [
+            "neutral",
+            "info",
+            "success",
+            "warning",
+            "error"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "565:144",
+          "type=neutral"
+        ],
+        [
+          "565:145",
+          "type=info"
+        ],
+        [
+          "565:146",
+          "type=success"
+        ],
+        [
+          "565:147",
+          "type=warning"
+        ],
+        [
+          "565:148",
+          "type=error"
+        ]
+      ],
+      "frames": [
+        [
+          "571:28",
+          "Inline Notification / Guía"
+        ],
+        [
+          "572:239",
+          "Inline Notification / Avisos de muestra"
+        ],
+        [
+          "572:277",
+          "Inline Notification / Aviso informativo cerrado"
+        ],
+        [
+          "572:300",
+          "Inline Notification / Condición de muestra resuelta"
+        ],
+        [
+          "572:323",
+          "Inline Notification / No hay avisos pendientes"
+        ],
+        [
+          "572:333",
+          "Inline Notification / Detalle del catálogo de ejemplo"
+        ]
+      ],
+      "description": "INLINE-NOTIFICATION-001@1.0.0 · mensaje contextual persistente en cinco tipos. Title/Description y cuatro opcionales editables. Composición con Icon Button ghost/small1.0.0 y X Light. El host resuelve cierre, condición activa, destino del enlace y anuncios accesibles. Source warning2.962:1 conservado por decisión humana; no certifica AA. Solo el enlace cambia con tema.",
+      "layout": {
+        "layoutMode": "VERTICAL",
+        "layoutWrap": "NO_WRAP",
+        "primaryAxisSizingMode": "AUTO",
+        "counterAxisSizingMode": "FIXED",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "paddingLeft": 24,
+        "paddingTop": 24,
+        "paddingRight": 24,
+        "paddingBottom": 24,
+        "itemSpacing": 24
+      }
+    }
+  ]
+}

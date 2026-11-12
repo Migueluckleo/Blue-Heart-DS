@@ -1,0 +1,1034 @@
+[
+  {
+    "id": "APP-SHELL-001",
+    "slug": "app-shell",
+    "name": "App Shell",
+    "module": "app-shell",
+    "exports": [
+      "AppShell",
+      "AppShellGridItem"
+    ],
+    "category": "navegación",
+    "notes": "Compón Header, Sidebar y Section Header. Elige Grid o Flex según las relaciones del contenido de Body.",
+    "base": "specs/components/app-shell.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Body admite composición reemplazable en cuatro variantes"
+    },
+    "qa": "qa/implementations/app-shell.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/app-shell.contract.v1.0.0.md": "6e4514e91f96d44d8478142518e827a09ebd2d7fdda64255aa0d827bd8650492"
+    },
+    "api": "export type AppShellBodyLayout = 'grid' | 'flex';\n\nexport interface AppShellProps {\n  header: HeaderProps;\n  sidebar: SidebarProps;\n  sectionHeader: SectionHeaderProps;\n  children: ReactNode;\n  bodyLayout?: AppShellBodyLayout;\n  contentAs?: 'main' | 'section';\n  contentLabel?: string;\n  className?: string;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function AppShellExample() {\n  const [collapsed, setCollapsed] = useState(true);\n  const [bodyLayout, setBodyLayout] = useState<AppShellBodyLayout>('grid');\n  const [action, setAction] = useState('');\n  const moduleStyle = 'grow basis-0 rounded-lg bg-slate-100 p-4';\n  return <div className=\"my-4 space-y-4\">\n    <label className=\"inline-flex items-center gap-2\">\n      Distribución del contenido\n      <select className=\"rounded border px-2 py-1\" value={bodyLayout}\n        onChange={event => setBodyLayout(event.currentTarget.value === 'grid' ? 'grid' : 'flex')}>\n        <option value=\"grid\">Grid</option>\n        <option value=\"flex\">Flex</option>\n      </select>\n    </label>\n    <div className=\"overflow-x-auto\">\n      <AppShell className=\"w-[1440px] min-h-[1024px]\" bodyLayout={bodyLayout}\n        contentAs=\"section\" contentLabel=\"Área de trabajo de muestra\"\n        header={{actions:{actions:3,onAction:next => setAction(next)}}}\n        sidebar={{label:'Navegación del área de trabajo',collapsed,onCollapsedChange:setCollapsed,\n          collapsedMenuItems:<MenuItem label=\"Inicio del área\" href=\"#demo-shell-heading\" current showRightIcon={false} showBeta={false}/>,\n          expandedMenuItems:<MenuItem type=\"expanded\" label=\"Inicio del área\" href=\"#demo-shell-heading\" current showRightIcon={false} showBeta={false}/>}}\n        sectionHeader={{title:'Resumen contable',headingLevel:3,\n          description:'Revisa los comprobantes del periodo y su estado de conciliación.'}}>\n        <div className={bodyLayout === 'grid' ? 'contents' : 'flex gap-[var(--bh-app-shell-gap)]'}>\n          <AppShellGridItem span={2} className={moduleStyle}>\n            <h4>Comprobantes registrados</h4>\n            <p>128 en el periodo</p>\n          </AppShellGridItem>\n          <AppShellGridItem span={2} className={moduleStyle}>\n            <h4>Por conciliar</h4>\n            <p>7 pendientes</p>\n          </AppShellGridItem>\n        </div>\n        <AppShellGridItem span={4} className={moduleStyle}>\n          <h4 id=\"demo-shell-heading\">Revisión del periodo</h4>\n          <Input id=\"demo-shell-note\" label=\"Nota de revisión\" placeholder=\"Añade una nota\"\n            required={false} showIcon={false} className=\"max-w-sm\"/>\n        </AppShellGridItem>\n      </AppShell>\n    </div>\n    <p role=\"status\">{action && `Acción de muestra: ${action}`}</p>\n  </div>;\n}\n",
+    "defaults": [
+      "AppShell: {header, sidebar, sectionHeader, children, bodyLayout = 'grid',\n  contentAs: Content = 'main', contentLabel, className}: AppShellProps",
+      "AppShellGridItem: {span = 1, children, className}: {\n  span?: 1 | 2 | 3 | 4;\n  children: ReactNode;\n  className?: string;\n}"
+    ]
+  },
+  {
+    "id": "AVATAR-001",
+    "slug": "avatar",
+    "name": "Avatar",
+    "module": "avatar",
+    "exports": [
+      "Avatar"
+    ],
+    "category": "identidad",
+    "notes": "Compara fotografía local, iniciales y glyph. La variante de fotografía nativa queda pendiente de autorización de transferencia.",
+    "base": "specs/components/avatar.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Composición fija y propiedades acotadas"
+    },
+    "qa": "qa/implementations/avatar.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/avatar.contract.v1.0.0.md": "70f70507b073c37ca689301ed3617e0f01248affc4e5a65c462537eb1840a11a"
+    },
+    "api": "export type AvatarSize = 'extra-large' | 'large' | 'medium' | 'small';\n\nexport type AvatarPresence = 'active' | 'busy' | 'inactive';\n\nexport interface AvatarProps {\n  name?: string;\n  initials?: string;\n  imageSrc?: string;\n  size?: AvatarSize;\n  icon?: Icon;\n  presence?: AvatarPresence;\n  decorative?: boolean;\n}\n\nconst presenceText: Record<AvatarPresence,string> = {active:'Disponible',busy:'Ocupado',inactive:'Inactivo'};",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function AvatarExample() {\n  return <div className=\"my-4 flex items-center gap-4\">\n    <Avatar name=\"Cuenta de muestra\" imageSrc=\"/assets/avatar-portrait.png\" initials=\"JA\" presence=\"active\"/>\n    <Avatar name=\"Julia Ávila\" initials=\"JÁ\" size=\"large\" presence=\"busy\"/>\n    <Avatar name=\"Cuenta de trabajo\" size=\"medium\"/>\n  </div>;\n}\n",
+    "defaults": [
+      "Avatar: {name, initials, imageSrc, size = 'extra-large', icon: Glyph = UserIcon,\n  presence, decorative = false}: AvatarProps"
+    ]
+  },
+  {
+    "id": "AVATAR-GROUP-001",
+    "slug": "avatar-group",
+    "name": "Avatar group",
+    "module": "avatar-group",
+    "exports": [
+      "AvatarGroup"
+    ],
+    "category": "identidad",
+    "notes": "Siete identidades producen tres representaciones y el contador +4.",
+    "base": "specs/components/avatar-group.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Avatars es un Slot nativo de 2 a 4 instancias"
+    },
+    "qa": "qa/implementations/avatar.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/avatar-group.contract.v1.0.0.md": "43a8a2744c029bdb9b8044c6f78f5d9dda205076ea0d1e57bd3dc71c7dbf62a2"
+    },
+    "api": "export type AvatarGroupPerson = Omit<AvatarProps,'size'|'presence'|'decorative'|'name'> & {\n  id: string;\n  name: string;\n};\n\nexport interface AvatarGroupProps {\n  label: string;\n  size?: AvatarSize;\n  people: readonly [AvatarGroupPerson,AvatarGroupPerson,...AvatarGroupPerson[]];\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function AvatarGroupExample() {\n  return <div className=\"my-4\">\n    <AvatarGroup label=\"Participantes de muestra\" people={[\n      {id:'1',name:'Julia Ávila',initials:'JÁ'},\n      {id:'2',name:'María Álvarez',initials:'MÁ'},\n      {id:'3',name:'Karla Martínez',initials:'KM'},\n      {id:'4',name:'Hugo Lara',initials:'HL'},\n      {id:'5',name:'Sofía Ortega',initials:'SO'},\n      {id:'6',name:'Diego Peña',initials:'DP'},\n      {id:'7',name:'Andrea Núñez',initials:'AN'},\n    ]}/>\n  </div>;\n}\n",
+    "defaults": [
+      "AvatarGroup: {label, size = 'extra-large', people}: AvatarGroupProps"
+    ]
+  },
+  {
+    "id": "BADGE-001",
+    "slug": "badge",
+    "name": "Badge",
+    "module": "badge",
+    "exports": [
+      "Badge"
+    ],
+    "category": "estado",
+    "notes": "Compara una moneda, un estado confirmado y una advertencia. Los iconos son decorativos.",
+    "base": "specs/components/badge.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "El texto y ambos iconos forman una anatomía fija"
+    },
+    "qa": "qa/implementations/badge.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/badge.contract.v1.0.0.md": "98e904066c0387b88dfc1db6679d4b35fc6665a1da266dde8dbac7c8c81a0213"
+    },
+    "api": "export type BadgeType = 'neutral' | 'subtle' | 'info' | 'success' | 'warning' | 'error';\n\nexport type BadgeSize = 'small' | 'medium' | 'large';\n\nexport interface BadgeProps {\n  label?: string;\n  type?: BadgeType;\n  size?: BadgeSize;\n  showLeftIcon?: boolean;\n  showRightIcon?: boolean;\n  leftIcon?: Icon;\n  rightIcon?: Icon;\n  leftWeight?: IconWeight;\n  rightWeight?: IconWeight;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function BadgeExample() {\n  return <div className=\"my-4 flex flex-wrap items-center gap-4\" id=\"demo-badge\">\n    <Badge label=\"MXN\"/>\n    <Badge label=\"Conciliado\" type=\"success\" size=\"medium\"\n      showLeftIcon leftIcon={CheckCircleIcon} leftWeight=\"light\"/>\n    <Badge label=\"Requiere revisión\" type=\"warning\" size=\"large\"/>\n  </div>;\n}\n",
+    "defaults": [
+      "Badge: {label = 'Label', type = 'subtle', size = 'small',\n  showLeftIcon = false, showRightIcon = false, leftIcon: Left = PresentationIcon,\n  rightIcon: Right = PresentationIcon, leftWeight = 'fill', rightWeight = 'fill'}: BadgeProps"
+    ]
+  },
+  {
+    "id": "BREADCRUMB-001",
+    "slug": "breadcrumb",
+    "name": "Breadcrumb",
+    "module": "breadcrumb",
+    "exports": [
+      "Breadcrumb"
+    ],
+    "category": "navegación",
+    "notes": "Abre los niveles anteriores en una ruta de muestra y compara el acceso de retorno compacto.",
+    "base": "specs/components/breadcrumb.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "La matriz nativa define cantidades por variante y expone instancias oficiales"
+    },
+    "qa": "qa/implementations/search-breadcrumb-item.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/breadcrumb.contract.v1.0.0.md": "9ebe8c835f06524e6d08da68d49515e613e06c6ec74b41037778118a5eb1ef50"
+    },
+    "api": "export interface BreadcrumbAncestor {\n  label: string;\n  href: string;\n  type?: 'text' | 'icon';\n}\n\nexport interface BreadcrumbProps {\n  label?: string;\n  ancestors: readonly [BreadcrumbAncestor, ...BreadcrumbAncestor[]];\n  current: string;\n  showBack?: boolean;\n  collapsed?: boolean;\n  compact?: boolean;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function BreadcrumbExample() {\n  const ancestors = [\n    {label:'Inicio', href:'#demo-breadcrumb-root', type:'icon'},\n    {label:'Contabilidad', href:'#demo-breadcrumb-accounting'},\n    {label:'Pólizas', href:'#demo-breadcrumb-parent'},\n  ] as const;\n  return <div className=\"my-4 space-y-4\">\n    <Breadcrumb label=\"Ruta jerárquica de muestra\" ancestors={ancestors} current=\"Póliza P-0458\" collapsed/>\n    <Breadcrumb label=\"Retorno de muestra\" ancestors={ancestors} current=\"Póliza P-0458\" compact/>\n    <div className=\"sr-only\">\n      <span id=\"demo-breadcrumb-root\">Inicio</span>\n      <span id=\"demo-breadcrumb-accounting\">Contabilidad</span>\n      <span id=\"demo-breadcrumb-parent\">Pólizas</span>\n    </div>\n  </div>;\n}\n",
+    "defaults": [
+      "Breadcrumb: {label = 'Ruta de navegación', ancestors, current, showBack = true,\n  collapsed = ancestors.length >= 5, compact = false}: BreadcrumbProps"
+    ]
+  },
+  {
+    "id": "BREADCRUMB-ITEM-001",
+    "slug": "breadcrumb-item",
+    "name": "Breadcrumb item",
+    "module": "breadcrumb-item",
+    "exports": [
+      "BreadcrumbItem"
+    ],
+    "category": "navegación",
+    "notes": "Abre el overflow de ejemplo y consulta el eslabón actual.",
+    "base": "specs/components/breadcrumb-item.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "El eslabón individual tiene tipos fijos; el contenedor decide la composición"
+    },
+    "qa": "qa/implementations/search-breadcrumb-item.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/breadcrumb-item.contract.v1.0.0.md": "8256eb263629bebc8ee7017fc9060e375c5677ccb5b5f759814b3e13c62c8006"
+    },
+    "api": "export type BreadcrumbItemProps =\n  | { type?: 'text'; label: string; current: true }\n  | { type?: 'text'; label: string; current?: false; href: string; disabled?: boolean }\n  | { type: 'icon'; label?: string; href: string; disabled?: boolean }\n  | { type: 'overflow'; label: string; onActivate: () => void; expanded?: boolean; controls?: string; disabled?: boolean };",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function BreadcrumbItemExample() {\n  const [expanded, setExpanded] = useState(false);\n  return <nav className=\"my-4 space-y-2\" aria-label=\"Ruta de muestra\">\n    <ol className=\"flex flex-wrap items-center gap-1\">\n      <BreadcrumbItem type=\"icon\" href=\"#demo-breadcrumb-home\"/>\n      <BreadcrumbItem type=\"overflow\" label=\"Mostrar ancestros de muestra\" expanded={expanded}\n        onActivate={() => setExpanded(value => !value)}/>\n      <BreadcrumbItem label=\"Comprobantes\" current/>\n    </ol>\n    {expanded && <a href=\"#demo-breadcrumb-home\">Documentos</a>}\n    <span className=\"sr-only\" id=\"demo-breadcrumb-home\">Inicio de muestra</span>\n  </nav>;\n}\n",
+    "defaults": [
+      "BreadcrumbItem: props: BreadcrumbItemProps"
+    ]
+  },
+  {
+    "id": "BUTTON-001",
+    "slug": "buttons",
+    "name": "Buttons",
+    "module": "button",
+    "exports": [
+      "Button"
+    ],
+    "category": "acción",
+    "notes": "Activa una acción local y usa Terminar demo para salir de loading.",
+    "base": "specs/components/buttons.contract.v1.0.0.md",
+    "amendments": [
+      "specs/components/buttons.usage.amendment.v1.0.1.md"
+    ],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Label, visibilidad y swaps son propiedades acotadas"
+    },
+    "qa": "qa/implementations/buttons-loader.v1.0.0.review.md",
+    "usage_guide": "specs/components/buttons.usage.amendment.v1.0.1.md",
+    "hashes": {
+      "specs/components/buttons.contract.v1.0.0.md": "f10c3428203f6d083bfa1a67175609ad3890e6ee8826e9121175159cec909b70",
+      "specs/components/buttons.usage.amendment.v1.0.1.md": "39c8b5851fd42cc0e57257faab9c7bdac4d529422eea58378bc81a06f70bded8"
+    },
+    "api": "export type ButtonVariant = typeof buttonVariants[number];\n\nexport type ButtonSize = typeof buttonSizes[number];\n\nexport type ButtonInteraction = 'default' | 'hover' | 'pressed' | 'focus';\n\nexport interface ButtonIcon {\n  /** Official Phosphor icon export. */\n  component: Icon;\n  weight?: 'thin' | 'light' | 'regular' | 'bold' | 'fill' | 'duotone';\n}\n\nexport interface ButtonCommonProps {\n  size?: ButtonSize;\n  label?: string;\n  loadingLabel?: string;\n  loading?: boolean;\n  disabled?: boolean;\n  showLeftIcon?: boolean;\n  showRightIcon?: boolean;\n  leftIcon?: ButtonIcon;\n  rightIcon?: ButtonIcon;\n  describedBy?: string;\n  id?: string;\n  className?: string;\n  /** For an isolated catalogue specimen. */\n  previewState?: ButtonInteraction;\n}\n\nexport type ButtonProps = ButtonCommonProps & (\n  | {variant?: ButtonVariant; href?: never; type?: 'button' | 'submit' | 'reset'; onClick?: (event: MouseEvent<HTMLButtonElement>) => void}\n  | {variant: 'link'; href: string; type?: never; onClick?: (event: MouseEvent<HTMLAnchorElement>) => void}\n);\n",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function ButtonsExample() {\n  const [busy, setBusy] = useState(false);\n  const [activations, setActivations] = useState(0);\n  return (\n    <div className=\"my-4 space-y-4\">\n      <div className=\"flex flex-wrap items-center gap-4\">\n        <Button id=\"demo-primary\" label=\"Guardar cambios\" loadingLabel=\"Guardando…\" loading={busy}\n          showLeftIcon onClick={() => {setActivations(count => count + 1); setBusy(true);}}/>\n        <Button id=\"demo-reset\" variant=\"secondary\" label=\"Terminar demo\" onClick={() => setBusy(false)}/>\n        <Button id=\"demo-disabled\" variant=\"danger\" label=\"Eliminar\" disabled describedBy=\"demo-disabled-note\"/>\n        <Button id=\"demo-link\" variant=\"link\" label=\"Ver indicador\" href=\"#loader-example\"/>\n      </div>\n      <p id=\"demo-disabled-note\">Selecciona un elemento para eliminar.</p>\n      <p role=\"status\" id=\"demo-activations\">Activaciones locales: {activations}</p>\n      <details>\n        <summary>Matriz de 90 variantes</summary>\n        {buttonVariants.map(variant => (\n          <div key={variant} className=\"my-3 overflow-auto\">\n            <h3 className=\"mb-2 font-medium\">{variant}</h3>\n            {buttonSizes.map(size => <div key={size} className=\"mb-3 flex w-max gap-4 p-1\">\n              {states.map(state => <div key={state} className=\"space-y-1\">\n                <p className=\"text-xs\">{size} · {state}</p>\n                <Button variant={variant} size={size} disabled={state === 'disabled'} loading={state === 'loading'}\n                  previewState={state !== 'disabled' && state !== 'loading' ? state : undefined}/>\n              </div>)}\n            </div>)}\n          </div>\n        ))}\n      </details>\n    </div>\n  );\n}\n",
+    "defaults": [
+      "Button: props: ButtonProps"
+    ]
+  },
+  {
+    "id": "CHECKBOX-001",
+    "slug": "checkbox",
+    "name": "Checkbox",
+    "module": "checkbox",
+    "exports": [
+      "Checkbox"
+    ],
+    "category": "selección",
+    "notes": "Activa la opción indeterminada con Espacio; la segunda casilla está deshabilitada.",
+    "base": "specs/components/checkbox.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Control, Box y Label son anatomía fija"
+    },
+    "qa": "qa/implementations/file-upload-checkbox.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/checkbox.contract.v1.0.0.md": "270c19f1bff11fcaa8ba77cc251302a890af236ba78302b572c20128fc2eee6d"
+    },
+    "api": "export type CheckboxSelection = boolean | 'indeterminate';\n\nexport type CheckboxProps = Omit<ComponentPropsWithoutRef<'input'>,\n  'type' | 'role' | 'checked' | 'defaultChecked' | 'onChange' | 'aria-label' | 'aria-checked' | 'aria-invalid'> & {\n  label: string;\n  showLabel?: boolean;\n  selected: CheckboxSelection;\n  invalid?: boolean;\n  onSelectedChange?: (selected: boolean) => void;\n  previewState?: 'hover' | 'focus';\n};",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function CheckboxExample() {\n  const [selected, setSelected] = useState<CheckboxSelection>('indeterminate');\n  return <div className=\"my-4 flex flex-wrap gap-6\">\n    <Checkbox id=\"demo-checkbox\" label=\"Seleccionar comprobantes visibles\" showLabel selected={selected}\n      onSelectedChange={setSelected}/>\n    <Checkbox id=\"demo-checkbox-disabled\" label=\"Selección no disponible\" showLabel selected disabled/>\n  </div>;\n}\n",
+    "defaults": [
+      "Checkbox: {label, showLabel = false, selected, onSelectedChange, invalid, previewState, className, ...input}: CheckboxProps"
+    ]
+  },
+  {
+    "id": "CHIP-001",
+    "slug": "chip",
+    "name": "Chip",
+    "module": "chip",
+    "exports": [
+      "Chip"
+    ],
+    "category": "selection",
+    "notes": "El ejemplo conserva una moneda activa, combina estados independientes y permite retirar filtros con foco restaurado.",
+    "base": "specs/components/chip.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Texto, visibilidad y swaps de glyph cubren la anatomía fija"
+    },
+    "qa": "qa/implementations/chip.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/chip.contract.v1.0.0.md": "10c3a4dbf70aa981dc8e8596a467d263183b3e84ecf32f47695cc3d29206c7f4"
+    },
+    "api": "export type ChipSize = 'large' | 'medium' | 'small' | 'extra-small';\n\nexport type ChipMode =\n  | { mode: 'single'; name: string; value: string; selected: boolean; onSelect: () => void }\n  | { mode: 'multiple'; selected: boolean; onSelectedChange: (selected: boolean) => void }\n  | { mode: 'removable'; onRemove: () => void; removeRef?: Ref<HTMLButtonElement> };\n\nexport type ChipProps = ChipMode & {\n  label: string;\n  size?: ChipSize;\n  counter?: string;\n  leftIcon?: Icon;\n  rightIcon?: Icon;\n  showLeftIcon?: boolean;\n  showRightIcon?: boolean;\n  disabled?: boolean;\n  describedBy?: string;\n  className?: string;\n};",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function ChipExample() {\n  const [currency, setCurrency] = useState('MXN');\n  const [pending, setPending] = useState(false);\n  const [reviewed, setReviewed] = useState(true);\n  const [applied, setApplied] = useState(['Este mes', 'Sucursal Mérida']);\n  const reset = useRef<HTMLButtonElement>(null);\n  const removeButtons = useRef(new Map<string, HTMLButtonElement>());\n  const nextFocus = useRef<string | null>(null);\n  useEffect(() => {\n    if (nextFocus.current === null) return;\n    const next = removeButtons.current.get(nextFocus.current) ?? reset.current;\n    next?.focus();\n    nextFocus.current = null;\n  }, [applied]);\n  function remove(index: number) {\n    nextFocus.current = applied[index + 1] ?? applied[index - 1] ?? '';\n    setApplied(applied.filter((_, current) => current !== index));\n  }\n  return <div className=\"grid gap-5\">\n    <fieldset className=\"min-w-0\">\n      <legend>Moneda del comprobante</legend>\n      <div className=\"mt-2 flex flex-wrap gap-3\">\n        {['MXN','USD'].map(value=><Chip key={value} mode=\"single\" size=\"large\" name=\"chip-example-currency\"\n          label={value} value={value} selected={currency===value} onSelect={()=>setCurrency(value)}/>)}\n      </div>\n    </fieldset>\n    <div role=\"group\" aria-label=\"Estados de comprobantes\" className=\"flex flex-wrap gap-3\">\n      <Chip mode=\"multiple\" label=\"Pendiente\" counter=\"0\" showLeftIcon selected={pending} onSelectedChange={setPending}/>\n      <Chip mode=\"multiple\" label=\"Revisado\" counter=\"12\" showRightIcon selected={reviewed} onSelectedChange={setReviewed}/>\n      <Chip mode=\"multiple\" label=\"Archivado\" selected={false} disabled onSelectedChange={()=>{}}/>\n    </div>\n    <div role=\"group\" aria-label=\"Filtros aplicados\" className=\"flex flex-wrap items-center gap-3\">\n      {applied.map((label,index)=><Chip key={label} mode=\"removable\" size=\"small\" label={label} onRemove={()=>remove(index)}\n        removeRef={node=>{if(node)removeButtons.current.set(label,node);else removeButtons.current.delete(label);}}/>)}\n      <button type=\"button\" ref={reset} className=\"underline\" onClick={()=>setApplied(['Este mes','Sucursal Mérida'])}>Restaurar filtros</button>\n    </div>\n  </div>;\n}\n",
+    "defaults": [
+      "Chip: props: ChipProps"
+    ]
+  },
+  {
+    "id": "COMPANY-SELECTOR-001",
+    "slug": "company-selector",
+    "name": "Company selector",
+    "module": "company-selector",
+    "exports": [
+      "CompanySelector"
+    ],
+    "category": "navegación",
+    "notes": "Abre la lista local y vuelve con Escape.",
+    "base": "specs/components/company-selector.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Anatomía fija y textos acotados"
+    },
+    "qa": "qa/implementations/header-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/company-selector.contract.v1.0.0.md": "8f25df0524c840e0386cdc279c9afbb05993f18a5f029868f0f4baa9dcd4b2f5"
+    },
+    "api": "export interface CompanySelectorProps {\n  id?: string;\n  companyName: string;\n  rfc: string;\n  open?: boolean;\n  controls?: string;\n  onToggle?: () => void;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function CompanySelectorExample() {\n  const [open, setOpen] = useState(false);\n  const close = () => {setOpen(false);document.getElementById('demo-company-selector')?.focus();};\n  useEffect(()=>{if(open)document.getElementById('demo-company-option')?.focus();},[open]);\n  return <div className=\"my-4 space-y-2\" onKeyDown={event=>{if(open&&event.key==='Escape')close();}}>\n    <CompanySelector id=\"demo-company-selector\" companyName=\"Empresa de muestra\" rfc=\"XAXX010101000\"\n      open={open} onToggle={()=>setOpen(value=>!value)} controls=\"demo-company-list\"/>\n    <ul id=\"demo-company-list\" role=\"listbox\" aria-label=\"Empresas de muestra\" hidden={!open}>\n      <li id=\"demo-company-option\" role=\"option\" aria-selected=\"true\" tabIndex={0}\n        onClick={close} onKeyDown={event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();close();}}}>\n        Empresa de muestra\n      </li>\n    </ul>\n  </div>;\n}\n",
+    "defaults": [
+      "CompanySelector: {id,companyName,rfc,open=false,controls,onToggle}:CompanySelectorProps"
+    ]
+  },
+  {
+    "id": "DOT-001",
+    "slug": "dot",
+    "name": "Dot",
+    "module": "dot",
+    "exports": [
+      "Dot"
+    ],
+    "category": "estado",
+    "notes": "Consulta presencia y conteos en el contexto de su anfitrión.",
+    "base": "specs/components/dot.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Count y Max count son propiedades acotadas de texto"
+    },
+    "qa": "qa/implementations/dot-toggle-radio.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/dot.contract.v1.0.0.md": "c4418c9807ff26e4b52b6e18c997f07ad06fd4fa68fbf13c474ad08b974a318a"
+    },
+    "api": "export type DotSize = 'large' | 'medium' | 'small';\n\nexport type DotColor = 'default' | 'brand' | 'neutral' | 'white';\n\nexport type DotProps =\n  | { type: 'active' | 'busy' | 'inactive' | 'notification'; size?: DotSize; color?: 'default'; count?: never; maxCount?: never }\n  | { type: 'count'; size?: Exclude<DotSize, 'small'>; color?: DotColor; count?: string; maxCount?: never }\n  | { type: 'count-expand'; size?: Exclude<DotSize, 'small'>; color?: DotColor; maxCount?: string; count?: never };",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function DotExample() {\n  return <ul id=\"demo-dot\" className=\"my-4 flex flex-wrap items-center gap-6\">\n    <li className=\"flex items-center gap-2\"><Dot type=\"active\"/> Atención disponible</li>\n    <li className=\"flex items-center gap-2\">\n      <Dot type=\"count\" color=\"brand\" count=\"7\"/>\n      <span><span className=\"sr-only\">7 </span>Pendientes</span>\n    </li>\n    <li className=\"flex items-center gap-2\">\n      <Dot type=\"count-expand\" color=\"white\" maxCount=\"99+\"/>\n      <span><span className=\"sr-only\">Más de 99 </span>Mensajes</span>\n    </li>\n  </ul>;\n}\n",
+    "defaults": [
+      "Dot: {type, size = 'large', color = 'default', count = '1', maxCount = '99+'}: DotProps"
+    ]
+  },
+  {
+    "id": "DROPDOWN-ITEM-001",
+    "slug": "dropdown-item",
+    "name": "Dropdown item",
+    "module": "dropdown-item",
+    "exports": [
+      "DropdownItem"
+    ],
+    "category": "formularios",
+    "notes": "Usa Option para elegir. Header y Divider organizan el contenido.",
+    "base": "specs/components/dropdown-item.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Option, Header y Divider tienen posiciones fijas"
+    },
+    "qa": "qa/implementations/dropdown-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/dropdown-item.contract.v1.0.0.md": "19b5fb01a5e2a2e61cb5de983552f72435914b88c1d6d954748f5ddef19b79e3"
+    },
+    "api": "export type DropdownSize = 'large' | 'medium' | 'small';\n\nexport interface DropdownOption {\n  id: string;\n  type: 'option';\n  label: string;\n  description?: string;\n  icon?: Icon;\n  showLeftIcon?: boolean;\n  disabled?: boolean;\n}\n\nexport type DropdownEntry = DropdownOption\n  | {id: string; type: 'header'; label: string}\n  | {id: string; type: 'divider'};\n\nexport type DropdownItemProps = {\n  entry: DropdownEntry;\n  size?: DropdownSize;\n  id?: string;\n  active?: boolean;\n  selected?: boolean;\n  onMouseDown?: MouseEventHandler<HTMLDivElement>;\n  onActivate?: () => void;\n};",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function DropdownItemExample() {\n  const [selected,setSelected]=useState('general');\n  return <div className=\"my-4 max-w-[320px]\">\n    <DropdownField label=\"Tipo de comprobante\" size=\"small\" selectedId={selected} onSelectionChange={setSelected}\n      entries={[\n        {id:'group',type:'header',label:'Clasificación'},\n        {id:'general',type:'option',label:'General',description:'Disponible para todos los comprobantes',showLeftIcon:true},\n        {id:'operations',type:'option',label:'Operaciones',description:'Aplicable a revisiones del periodo'},\n        {id:'archived',type:'option',label:'Archivado',disabled:true},\n        {id:'line',type:'divider'},\n        {id:'other',type:'option',label:'Otro tipo'},\n      ]}/>\n  </div>;\n}\n",
+    "defaults": [
+      "DropdownItem: {entry,size='large',id,active,selected,onMouseDown,onActivate}: DropdownItemProps"
+    ]
+  },
+  {
+    "id": "DROPDOWN-MENU-001",
+    "slug": "dropdown-menu",
+    "name": "Dropdown menu",
+    "module": "dropdown-menu",
+    "exports": [
+      "DropdownMenu",
+      "DropdownField"
+    ],
+    "category": "formularios",
+    "notes": "DropdownField coordina el combobox de solo selección con el listbox. El host controla los datos y la selección.",
+    "base": "specs/components/dropdown-menu.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Options admite insertar, quitar y reordenar ítems oficiales"
+    },
+    "qa": "qa/implementations/dropdown-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/dropdown-menu.contract.v1.0.0.md": "d064ff4c024858d9fd9bf7448aaf0227b214a837d63700855880351e8effa766"
+    },
+    "api": "export interface DropdownMenuProps {\n  id: string;\n  label: string;\n  entries: readonly DropdownEntry[];\n  size?: DropdownSize;\n  selectedId?: string;\n  activeId?: string;\n  onSelectionChange: (id: string) => void;\n  maxHeight?: number;\n  hidden?: boolean;\n}\n\nexport interface DropdownFieldProps extends Omit<DropdownMenuProps,'id'|'activeId'|'hidden'> {\n  placeholder?: string;\n  disabled?: boolean;\n  className?: string;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function DropdownMenuExample() {\n  const [currency,setCurrency]=useState('MXN');\n  const names=[['MXN','Peso mexicano'],['USD','Dólar estadounidense'],['EUR','Euro'],\n    ['CAD','Dólar canadiense'],['BRL','Real brasileño'],['COP','Peso colombiano'],\n    ['CLP','Peso chileno'],['PEN','Sol peruano'],['JPY','Yen japonés'],['GBP','Libra esterlina']] as const;\n  const entries: DropdownEntry[]=[\n    {id:'group',type:'header',label:'Monedas'},\n    ...names.map(([id,description])=>({id,type:'option' as const,label:id,description,disabled:id==='EUR'})),\n  ];\n  return <div className=\"my-4 grid max-w-[320px] gap-4\">\n    <DropdownField label=\"Moneda del comprobante\" entries={entries} selectedId={currency}\n      onSelectionChange={setCurrency}/>\n    <p id=\"demo-dropdown-currency\" role=\"status\">Moneda elegida: {currency}</p>\n  </div>;\n}\n",
+    "defaults": [
+      "DropdownMenu: {id,label,entries,size='medium',selectedId,activeId,onSelectionChange,maxHeight,hidden}: DropdownMenuProps",
+      "DropdownField: {label,entries,size='medium',selectedId,onSelectionChange,maxHeight,\n  placeholder='Selecciona una opción',disabled,className}: DropdownFieldProps"
+    ]
+  },
+  {
+    "id": "FILE-UPLOAD-001",
+    "slug": "file-upload",
+    "name": "File Upload",
+    "module": "file-upload",
+    "exports": [
+      "FileUpload"
+    ],
+    "category": "entrada",
+    "notes": "Selecciona o arrastra un archivo de muestra para ver feedback local.",
+    "base": "specs/components/file-upload.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Zona, Button opcional y ayuda tienen anatomía fija"
+    },
+    "qa": "qa/implementations/file-upload-checkbox.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/file-upload.contract.v1.0.0.md": "30bc060028616c419b828e453f0743210e8e744ad2c4988be8751b136b6ad5c4"
+    },
+    "api": "export type FileUploadState = 'default' | 'hover' | 'focus' | 'error' | 'success' | 'disabled';\n\nexport interface FileUploadProps {\n  id?: string;\n  label?: string;\n  state?: FileUploadState;\n  formats?: string;\n  supportingText?: string;\n  showButton?: boolean;\n  showHelper?: boolean;\n  accept?: string;\n  multiple?: boolean;\n  onFiles?: (files: File[]) => void;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function FileUploadExample() {\n  const [state, setState] = useState<FileUploadState>('default');\n  const [feedback, setFeedback] = useState('Selecciona un archivo de muestra. El archivo permanece en tu dispositivo.');\n  return <div className=\"my-4 space-y-4\">\n    <FileUpload id=\"demo-file-upload\" state={state} showButton\n      formats=\"Formatos de muestra: XLS, XLSX o CSV\"\n      supportingText={feedback} onFiles={([file]) => {\n        if (!file) return;\n        const accepted = /\\.(xls|xlsx|csv)$/i.test(file.name);\n        setState(accepted ? 'success' : 'error');\n        setFeedback(accepted ? 'Selección de muestra confirmada. No se transfirió ningún archivo.'\n          : 'Para esta muestra elige un archivo XLS, XLSX o CSV.');\n      }}/>\n    <FileUpload id=\"demo-file-upload-disabled\" label=\"Selección no disponible\" state=\"disabled\" showHelper={false}/>\n  </div>;\n}\n",
+    "defaults": [
+      "FileUpload: {id, label = 'Seleccionar archivos', state = 'default',\n  formats = 'Supported formats: XLS, XLSX or CSV · Max 50 MB', supportingText = 'Optional helper text',\n  showButton = false, showHelper = true, accept, multiple = false, onFiles}: FileUploadProps"
+    ]
+  },
+  {
+    "id": "FLOATING-ACTIONS-001",
+    "slug": "floating-actions",
+    "name": "Floating Actions",
+    "module": "floating-actions",
+    "exports": [
+      "FloatingActions"
+    ],
+    "category": "feedback",
+    "notes": "Muestra el resumen y las acciones de la selección vigente. El anfitrión controla conteo, selección y cierre.",
+    "base": "specs/components/floating-actions.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "General actions admite reemplazar y reordenar controles"
+    },
+    "qa": "qa/implementations/actions-notification.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/floating-actions.contract.v1.0.0.md": "0aa666a17d76d5a049abad0c834748e3bb63e19d3760c8fa43b84f8d17fce8f0"
+    },
+    "api": "export interface FloatingActionsProps {\n  count: string;\n  label: string;\n  actions?: ReactNode;\n  selectAll?: {label: string; onSelect: () => void};\n  onDismiss?: () => void;\n  dismissLabel?: string;\n  className?: string;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function FloatingActionsExample() {\n  const [count,setCount]=useState(3);\n  const [message,setMessage]=useState('');\n  return <div className=\"my-4 space-y-3\">\n    <Button id=\"demo-floating-open\" label=\"Preparar selección\" onClick={()=>{setCount(3);setMessage('');}}/>\n    {count>0&&<div className=\"overflow-x-auto\">\n      <FloatingActions className=\"w-[1024px]\" count={String(count)} label=\"Elementos seleccionados\"\n        selectAll={count<8?{label:'Seleccionar todos (8)',onSelect:()=>{\n          setCount(8);document.getElementById('demo-floating-review')?.focus();\n        }}:undefined}\n        actions={<Button id=\"demo-floating-review\" variant=\"text\" label=\"Marcar como revisados\" showLeftIcon\n          onClick={()=>setMessage(`Se marcaron ${count} comprobantes de muestra.`)}/>}\n        onDismiss={()=>{setCount(0);document.getElementById('demo-floating-open')?.focus();}}/>\n    </div>}\n    <p id=\"demo-floating-result\" role=\"status\">{message}</p>\n  </div>;\n}\n",
+    "defaults": [
+      "FloatingActions: {count,label,actions,selectAll,onDismiss,dismissLabel='Cerrar acciones de selección',\n  className}: FloatingActionsProps"
+    ]
+  },
+  {
+    "id": "HEADER-001",
+    "slug": "header",
+    "name": "Header",
+    "module": "header",
+    "exports": [
+      "Header"
+    ],
+    "category": "navegación",
+    "notes": "Compone el logo oficial, la versión y las opciones locales de empresa y cuenta.",
+    "base": "specs/components/header.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Regiones fijas con visibilidad booleana"
+    },
+    "qa": "qa/implementations/header-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/header.contract.v1.0.0.md": "cbac0551a47cc1c755f7db8440b49610ed0574bca0b07a7124fba3151759c044"
+    },
+    "api": "export interface HeaderProps {\n  version?: string;\n  showVersion?: boolean;\n  showReleaseBadge?: boolean;\n  showCompany?: boolean;\n  showActions?: boolean;\n  showUser?: boolean;\n  badge?: Pick<BadgeProps,'label'|'showLeftIcon'|'showRightIcon'|'leftIcon'|'rightIcon'>;\n  company?: CompanySelectorProps;\n  actions?: HeaderActionsProps;\n  user?: UserSelectorProps;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function HeaderExample() {\n  const [open, setOpen] = useState<'company'|'user'>();\n  const [message, setMessage] = useState('');\n  const toggle = (next:'company'|'user') => setOpen(current=>current===next ? undefined : next);\n  const close = () => {\n    if (open) document.getElementById(`demo-header-${open}`)?.focus();\n    setOpen(undefined);\n  };\n  useEffect(()=>{if(open)document.getElementById(`demo-header-${open}-option`)?.focus();},[open]);\n  return <div className=\"my-4 space-y-2\" onKeyDown={event=>{if(open&&event.key==='Escape')close();}}>\n    <div className=\"overflow-x-auto\">\n      <Header company={{id:'demo-header-company',companyName:'Empresa de muestra',rfc:'XAXX010101000',\n        open:open==='company',onToggle:()=>toggle('company'),controls:'demo-header-company-list'}}\n        user={{id:'demo-header-user',name:'Julia Ávila',avatar:{initials:'JÁ'},\n          open:open==='user',onToggle:()=>toggle('user'),controls:'demo-header-user-menu'}}\n        actions={{actions:5,onAction:action=>setMessage(`Acción de muestra: ${action}`)}}/>\n    </div>\n    <ul id=\"demo-header-company-list\" role=\"listbox\" aria-label=\"Empresas del encabezado\" hidden={open!=='company'}>\n      <li id=\"demo-header-company-option\" role=\"option\" aria-selected=\"true\" tabIndex={0}\n        onClick={close} onKeyDown={event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();close();}}}>\n        Empresa de muestra\n      </li>\n    </ul>\n    <div id=\"demo-header-user-menu\" role=\"menu\" aria-label=\"Cuenta del encabezado\" hidden={open!=='user'}>\n      <button id=\"demo-header-user-option\" type=\"button\" role=\"menuitem\" onClick={close}>Preferencias</button>\n    </div>\n    <p role=\"status\">{message}</p>\n  </div>;\n}\n",
+    "defaults": [
+      "Header: {version='2.0.0',showVersion=true,showReleaseBadge=true,showCompany=true,\n  showActions=true,showUser=true,badge,company,actions,user}:HeaderProps"
+    ]
+  },
+  {
+    "id": "HEADER-ACTIONS-001",
+    "slug": "header-actions",
+    "name": "Header actions",
+    "module": "header-actions",
+    "exports": [
+      "HeaderActions"
+    ],
+    "category": "acción",
+    "notes": "Compara el conjunto de cuatro y activa la demostración de notificaciones.",
+    "base": "specs/components/header-actions.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Cinco conjuntos fijos por variante"
+    },
+    "qa": "qa/implementations/header-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/header-actions.contract.v1.0.0.md": "78401d643bb90f88b3ed67fd73a0c9be2bf8d132da626bc7c773dd886c015ec5"
+    },
+    "api": "export type HeaderAction = 'sync' | 'academy' | 'support' | 'apps' | 'notifications';\n\nexport interface HeaderActionsProps {\n  actions?: 1 | 2 | 3 | 4 | 5;\n  notifications?: number;\n  onAction?: (action: HeaderAction) => void;\n}\n\nconst actionOrder = {\n  5:['sync','academy','support','apps','notifications'],\n  4:['sync','support','apps','notifications'],\n  3:['sync','apps','notifications'],\n  2:['apps','notifications'],\n  1:['notifications'],\n} as const;\nconst glyphs = {\n  sync:[ArrowsCounterClockwiseIcon,'Sincronizar'],\n  academy:[GraduationCapIcon,'Academia'],\n  support:[HeadsetIcon,'Soporte'],\n  apps:[AppWindowIcon,'Aplicaciones'],\n  notifications:[BellIcon,'Notificaciones'],\n} as const;",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function HeaderActionsExample() {\n  const [last, setLast] = useState('');\n  return <div className=\"my-4 space-y-2\">\n    <HeaderActions actions={4} notifications={103} onAction={setLast}/>\n    <p id=\"demo-header-action-status\" role=\"status\">{last && `Acción de muestra: ${last}`}</p>\n  </div>;\n}\n",
+    "defaults": [
+      "HeaderActions: {actions=5,notifications=1,onAction}:HeaderActionsProps"
+    ]
+  },
+  {
+    "id": "ICON-BUTTON-001",
+    "slug": "icon-button",
+    "name": "Icon Button",
+    "module": "icon-button",
+    "exports": [
+      "IconButton"
+    ],
+    "category": "acción",
+    "notes": "Alterna notificaciones con teclado y comprueba el nombre accesible.",
+    "base": "specs/components/icon-button.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Glyph intercambiable y Dot son partes fijas"
+    },
+    "qa": "qa/implementations/sidebar-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/icon-button.contract.v1.0.0.md": "26ea2e8769d17dfb87285d886e13771fa37d0ebdbcb633358b0172ec27f75493"
+    },
+    "api": "export type IconButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';\n\nexport type IconButtonSize = 'small' | 'medium' | 'large';\n\nexport type IconButtonState = 'default' | 'hover' | 'pressed' | 'focus' | 'disabled';\n\nexport type IconButtonProps = Omit<ComponentPropsWithoutRef<'button'>,\n  'children' | 'type' | 'aria-label' | 'aria-pressed' | 'onFocus' | 'onBlur' |\n  'onPointerEnter' | 'onPointerLeave' | 'onPointerDown' | 'onPointerUp' | 'onPointerCancel'> & {\n  label: string;\n  variant?: IconButtonVariant;\n  size?: IconButtonSize;\n  selected?: boolean;\n  icon?: Icon;\n  showBadge?: boolean;\n  badgeCount?: string;\n  badgeMaxCount?: string;\n  previewState?: Exclude<IconButtonState, 'disabled'>;\n};",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function IconButtonExample() {\n  const [selected, setSelected] = useState(false);\n  return <div className=\"my-4 flex flex-wrap items-center gap-6\">\n    <IconButton id=\"demo-icon-button\" variant=\"secondary\" label=\"Alternar notificaciones\" selected={selected}\n      showBadge badgeCount=\"7\" onClick={() => setSelected(value => !value)}/>\n    <IconButton id=\"demo-icon-button-disabled\" variant=\"ghost\" label=\"Notificaciones no disponibles\" disabled/>\n  </div>;\n}\n",
+    "defaults": [
+      "IconButton: {label, variant = 'primary', size = 'large', selected, icon: Glyph = BellIcon,\n  showBadge = false, badgeCount, badgeMaxCount, disabled = false, previewState, className, ...attrs}: IconButtonProps"
+    ]
+  },
+  {
+    "id": "INLINE-NOTIFICATION-001",
+    "slug": "inline-notification",
+    "name": "Inline Notification",
+    "module": "inline-notification",
+    "exports": [
+      "InlineNotification"
+    ],
+    "category": "feedback",
+    "notes": "Usa el tipo según gravedad, agrega un destino real si hay enlace y deja al anfitrión el cierre.",
+    "base": "specs/components/inline-notification.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Contenido, indicador y cierre tienen posiciones fijas"
+    },
+    "qa": "qa/implementations/actions-notification.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/inline-notification.contract.v1.0.0.md": "622aca6f7fe4eaa960deee54d581971ffe46941364744de678d3480db269c661"
+    },
+    "api": "export type InlineNotificationType = keyof typeof glyphs;\n\nexport interface InlineNotificationProps {\n  type?: InlineNotificationType;\n  title?: string;\n  description?: string;\n  link?: {label: string; href: string};\n  showTitle?: boolean;\n  showDescription?: boolean;\n  showIcon?: boolean;\n  showDismiss?: boolean;\n  onDismiss?: () => void;\n  dismissLabel?: string;\n  className?: string;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function InlineNotificationExample() {\n  const [show,setShow]=useState(true);\n  return <div className=\"my-4 grid max-w-[602px] gap-3\">\n    <Button id=\"demo-inline-restore\" variant=\"secondary\" label=\"Mostrar aviso informativo\" onClick={()=>setShow(true)}/>\n    {show&&<InlineNotification type=\"info\" title=\"Actualización disponible\"\n      description=\"Consulta el historial de la revisión.\" link={{href:'#demo-inline-details',label:'Ver historial'}}\n      dismissLabel=\"Cerrar aviso informativo\"\n      onDismiss={()=>{setShow(false);document.getElementById('demo-inline-restore')?.focus();}}/>}\n    <InlineNotification type=\"neutral\" title=\"Resumen\" description=\"Los datos corresponden al periodo seleccionado.\"/>\n    <InlineNotification type=\"success\" title=\"Conciliación completa\" description=\"Puedes continuar con la siguiente revisión.\"/>\n    <InlineNotification type=\"warning\" title=\"Revisión pendiente\" description=\"Hay comprobantes que requieren atención.\"/>\n    <InlineNotification type=\"error\" title=\"Archivo pendiente\" description=\"Adjunta el archivo para completar el registro.\" showDismiss={false}/>\n    <p id=\"demo-inline-details\">Historial de revisión del catálogo.</p>\n  </div>;\n}\n",
+    "defaults": [
+      "InlineNotification: {type='neutral',title,description,link,showTitle=true,showDescription=true,\n  showIcon=true,showDismiss=true,onDismiss,dismissLabel='Cerrar notificación',className}: InlineNotificationProps"
+    ]
+  },
+  {
+    "id": "INPUT-001",
+    "slug": "input",
+    "name": "Input",
+    "module": "input",
+    "exports": [
+      "Input"
+    ],
+    "category": "formularios",
+    "notes": "Captura una línea con etiqueta y ayuda vinculadas. El host controla la validación. Badge subtle indica una unidad.",
+    "base": "specs/components/input.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Etiqueta, campo, ayuda y accesorios ocupan posiciones fijas"
+    },
+    "qa": "qa/implementations/input.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/input.contract.v1.0.0.md": "38943f5018664f4353163bc990d049e08fbbd247cf9d858a35ca2666681bddaa"
+    },
+    "api": "export type InputSize = 'large' | 'medium' | 'small';\n\nexport type InputStatus = 'default' | 'hover' | 'focus' | 'success' | 'error' | 'read-only' | 'disabled';\n\nexport interface InputProps {\n  id?: string;\n  name?: string;\n  type?: Extract<HTMLInputTypeAttribute, 'text' | 'email' | 'search' | 'url' | 'tel' | 'password'>;\n  size?: InputSize;\n  status?: InputStatus;\n  label: string;\n  placeholder?: string;\n  helperText?: string;\n  value?: string;\n  defaultValue?: string;\n  onValueChange?: (value: string, event: ChangeEvent<HTMLInputElement>) => void;\n  onBlur?: (event: FocusEvent<HTMLInputElement>) => void;\n  required?: boolean;\n  showLabel?: boolean;\n  showPlaceholder?: boolean;\n  showHelper?: boolean;\n  showTooltip?: boolean;\n  showIcon?: boolean;\n  icon?: Icon;\n  showBadge?: boolean;\n  badgeLabel?: string;\n  className?: string;\n}\n",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function InputExample() {\n  const [amount, setAmount] = useState('');\n  const [attempted, setAttempted] = useState(false);\n  const invalid = attempted && !/^\\d+(\\.\\d{2})?$/.test(amount);\n  const sizes: InputSize[] = ['large','medium','small'];\n  const statuses: InputStatus[] = ['default','hover','focus','success','error','read-only','disabled'];\n  return <div className=\"my-4 space-y-4\">\n    <form className=\"grid max-w-[464px] justify-items-start gap-4\" noValidate\n      onSubmit={event => {event.preventDefault();setAttempted(true);}}>\n      <Input className=\"w-full\" id=\"demo-input-amount\" name=\"amount\" label=\"Importe\" value={amount}\n        onValueChange={next => {setAmount(next);setAttempted(false);}} placeholder=\"1200.00\"\n        helperText={invalid ? 'Escribe el importe con dos decimales o sin centavos.' : 'Usa un punto para separar los centavos.'}\n        status={invalid ? 'error' : attempted ? 'success' : 'default'} showBadge/>\n      <Button label=\"Comprobar importe\" type=\"submit\"/>\n    </form>\n    <div className=\"grid max-w-[464px] gap-4\">\n      <Input id=\"demo-input-read-only\" label=\"Folio de consulta\" defaultValue=\"A-2026-183\" size=\"medium\"\n        status=\"read-only\" showIcon={false} required={false}/>\n      <Input id=\"demo-input-disabled\" label=\"Referencia externa\" size=\"small\" status=\"disabled\"\n        helperText=\"Disponible al vincular una cuenta.\" showIcon={false} required={false}/>\n    </div>\n    <details>\n      <summary>Matriz de 42 variantes</summary>\n      <div className=\"grid max-w-[464px] gap-4 p-2\">\n        {[false,true].flatMap(filled => sizes.flatMap(size => statuses.map(status => {\n          const label = `${filled ? 'Con valor' : 'Vacío'} · ${size} · ${status}`;\n          return <Input key={label} label={label} size={size} status={status} placeholder=\"Ejemplo\"\n            defaultValue={filled ? 'A-2026-183' : ''} helperText=\"Texto de ayuda\"/>;\n        })))}\n      </div>\n    </details>\n  </div>;\n}\n",
+    "defaults": [
+      "Input: {id, name, type = 'text', size = 'large', status = 'default', label,\n  placeholder, helperText, value, defaultValue = '', onValueChange, onBlur, required = true,\n  showLabel = true, showPlaceholder = true, showHelper = true, showTooltip = false,\n  showIcon = true, icon: Glyph = CaretDownIcon, showBadge = false, badgeLabel = 'MXN', className}: InputProps"
+    ]
+  },
+  {
+    "id": "LINEAR-PROGRESS-001",
+    "slug": "linear-progress",
+    "name": "Linear Progress Bar",
+    "module": "linear-progress",
+    "exports": [
+      "LinearProgress"
+    ],
+    "category": "estado",
+    "notes": "Completa cuatro pasos de muestra para ver el avance controlado. El segundo indicador representa un total desconocido.",
+    "base": "specs/components/linear-progress.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Header, riel y ayuda tienen anatomía fija"
+    },
+    "qa": "qa/implementations/linear-progress.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/linear-progress.contract.v1.0.0.md": "4b2d43ab2ede543322ca177340d290b2e8e232abb5503d1f061ab64302fb1ad7"
+    },
+    "api": "export type LinearProgressType = 'primary' | 'success' | 'warning' | 'error';\n\nexport type LinearProgressSize = 'small' | 'medium' | 'large';\n\nexport interface LinearProgressProps {\n  id?: string;\n  label: string;\n  helperText?: string;\n  /** Omit while the total is unknown. */\n  value?: number;\n  valueText?: string;\n  size?: LinearProgressSize;\n  type?: LinearProgressType;\n  showLabel?: boolean;\n  showValue?: boolean;\n  showHelperText?: boolean;\n  /** Collapse the reserved header when showing only the rail. */\n  showHeader?: boolean;\n  className?: string;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function LinearProgressExample() {\n  const [value, setValue] = useState(0);\n  return <div className=\"my-4 max-w-md space-y-4\">\n    <LinearProgress id=\"demo-progress\" label=\"Cargando comprobantes\" size=\"medium\"\n      value={value} type={value === 100 ? 'success' : 'primary'}\n      helperText={value === 100 ? 'Carga de muestra completada' : `${value / 25} de 4 comprobantes`}/>\n    <button type=\"button\" className=\"rounded border px-3 py-2\" disabled={value === 100}\n      onClick={() => setValue(current => Math.min(100, current + 25))}>Completar siguiente paso de muestra</button>\n    <LinearProgress id=\"demo-progress-unknown\" label=\"Calculando total\" size=\"large\"/>\n  </div>;\n}\n",
+    "defaults": [
+      "LinearProgress: {id, label, helperText, value, valueText, size = 'small', type = 'primary',\n  showLabel = true, showValue = true, showHelperText = true, showHeader = true, className}: LinearProgressProps"
+    ]
+  },
+  {
+    "id": "LOADER-001",
+    "slug": "loader",
+    "name": "Loader",
+    "module": "loader",
+    "exports": [
+      "Loader"
+    ],
+    "category": "estado",
+    "notes": "Indicador indeterminado con tamaños y roles observados.",
+    "base": "specs/components/loader.contract.v1.0.0.md",
+    "amendments": [
+      "specs/components/loader.usage.amendment.v1.0.1.md"
+    ],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Riel, arco y fases constituyen composición fija"
+    },
+    "qa": "qa/implementations/buttons-loader.v1.0.0.review.md",
+    "usage_guide": "specs/components/loader.usage.amendment.v1.0.1.md",
+    "hashes": {
+      "specs/components/loader.contract.v1.0.0.md": "b6bc0b64db1ebaefef508c2070add1d0f312d2e5b4cc20960b7d859b6bed0d55",
+      "specs/components/loader.usage.amendment.v1.0.1.md": "ec3dbe238868278bace0c7afe9c2d638f0fd7e2183b565d65bf515f76230192a"
+    },
+    "api": "export type LoaderSize = typeof loaderSizes[number];\n\nexport type LoaderColor = typeof loaderColors[number];\n\nexport interface LoaderProps {\n  size?: LoaderSize;\n  color?: LoaderColor;\n  /** Set when this instance provides the host's status announcement. */\n  label?: string;\n  className?: string;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function LoaderExample() {\n  return (\n    <div id=\"loader-example\" className=\"my-4 space-y-4\">\n      <Loader size=\"small\" label=\"Cargando archivos…\"/>\n      <details>\n        <summary>Matriz de 24 variantes</summary>\n        {loaderSizes.map(size => <div className=\"my-3 flex flex-wrap items-center gap-4\" key={size}>\n          <span className=\"w-28\">{size}</span>\n          {loaderColors.map(color => <span key={color} className={color === 'on-color' ? 'bg-slate-900 p-2 text-white' : 'p-2'}>\n            <Loader size={size} color={color}/>\n            <span className=\"ml-2\">{color}</span>\n          </span>)}\n        </div>)}\n      </details>\n    </div>\n  );\n}\n",
+    "defaults": [
+      "Loader: {size = 'extra-small', color = 'brand', label, className}: LoaderProps"
+    ]
+  },
+  {
+    "id": "MENU-ITEM-001",
+    "slug": "menu-item",
+    "name": "Menu item",
+    "module": "menu-item",
+    "exports": [
+      "MenuItem"
+    ],
+    "category": "navegación",
+    "notes": "Navega al destino o despliega la rama por teclado.",
+    "base": "specs/components/menu-item.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Los hijos y los intercambios de icono forman una anatomía fija"
+    },
+    "qa": "qa/implementations/sidebar-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/menu-item.contract.v1.0.0.md": "99c7968ebc13a059c0482d64c99944fc878da6f518805d41f3528b6080537868"
+    },
+    "api": "export type MenuItemPresentation =\n  | { orientation?: 'vertical'; type?: 'collapsed' | 'expanded' | 'sub-menu' }\n  | { orientation: 'horizontal'; type?: 'collapsed' };\n\nexport type MenuItemAction =\n  | { href: string; current?: boolean; expanded?: never; controls?: never; onActivate?: never }\n  | { href?: never; current?: never; expanded?: boolean; controls?: string; onActivate: () => void };\n\nexport type MenuItemProps = MenuItemPresentation & MenuItemAction & {\n  label: string;\n  active?: boolean;\n  showRightIcon?: boolean;\n  showBeta?: boolean;\n  fillIcon?: Icon;\n  lightIcon?: Icon;\n  tooltipLabel?: string;\n};",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function MenuItemExample() {\n  const [open, setOpen] = useState(false);\n  return <nav aria-label=\"Menú de muestra\" className=\"my-4 flex flex-wrap items-start gap-6\">\n    <MenuItem label=\"Inicio\" href=\"#demo-menu-home\" current tooltipLabel=\"Página de inicio\"/>\n    <div>\n      <MenuItem label=\"Documentos\" type=\"expanded\" expanded={open} controls=\"demo-menu-children\"\n        onActivate={() => setOpen(value => !value)}/>\n      <div id=\"demo-menu-children\" hidden={!open}>\n        <MenuItem label=\"Comprobantes\" type=\"sub-menu\" href=\"#demo-menu-home\" active={false}/>\n      </div>\n    </div>\n    <span id=\"demo-menu-home\" className=\"sr-only\">Destino de muestra</span>\n  </nav>;\n}\n",
+    "defaults": [
+      "MenuItem: {label, orientation = 'vertical', type = 'collapsed', active = true,\n  showRightIcon = true, showBeta = true, fillIcon = HouseLineIcon, lightIcon = HouseLineIcon,\n  tooltipLabel = label, href, current, expanded, controls, onActivate}: MenuItemProps"
+    ]
+  },
+  {
+    "id": "PAGINATION-001",
+    "slug": "pagination",
+    "name": "Pagination",
+    "module": "pagination",
+    "exports": [
+      "Pagination"
+    ],
+    "category": "navegación",
+    "notes": "Mantiene una página actual y recibe opciones de filas del anfitrión. Compact puede ampliar targets a 44 px.",
+    "base": "specs/components/pagination.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Pages admite inserción, retiro y orden de ítems"
+    },
+    "qa": "qa/implementations/pagination-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/pagination.contract.v1.0.0.md": "a41e1cba8b736289575af08a6db2ca01a44112ccc6eaf190618345b7f5e4cb65"
+    },
+    "api": "export interface PaginationProps {\n  currentPage: number;\n  totalPages: number;\n  onPageChange: (page: number) => void;\n  type?: 'default' | 'compact';\n  label?: string;\n  range?: string;\n  pageLabel?: string;\n  touchTargets?: boolean;\n  rows?: {\n    label?: string;\n    value: number;\n    options: readonly number[];\n    onChange: (value: number) => void;\n  };\n}\n",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function PaginationExample() {\n  const [page, setPage] = useState(5);\n  const [rows, setRows] = useState(20);\n  const [compactPage, setCompactPage] = useState(1);\n  const results = useRef<HTMLHeadingElement>(null);\n  const total = 240;\n  return <div className=\"my-4 space-y-4\">\n    <h3 id=\"demo-pagination-results\" ref={results} tabIndex={-1}>Comprobantes de la página {page}</h3>\n    <div className=\"overflow-x-auto\">\n      <Pagination label=\"Paginación de comprobantes\" currentPage={page} totalPages={Math.ceil(total / rows)}\n        onPageChange={next => {setPage(next);results.current?.focus();}}\n        range={`${(page - 1) * rows + 1}–${Math.min(page * rows,total)} de ${total}`}\n        rows={{value:rows,options:[20,50,100],onChange:next=>{setRows(next);setPage(1);}}}/>\n    </div>\n    <Pagination label=\"Paginación de vista compacta\" type=\"compact\" currentPage={compactPage}\n      totalPages={3} onPageChange={setCompactPage} touchTargets/>\n  </div>;\n}\n",
+    "defaults": [
+      "Pagination: {currentPage, totalPages, onPageChange, type = 'default', label = 'Paginación',\n  range, pageLabel, touchTargets = false, rows}: PaginationProps"
+    ]
+  },
+  {
+    "id": "PAGINATION-ITEM-001",
+    "slug": "pagination-item",
+    "name": "Pagination item",
+    "module": "pagination-item",
+    "exports": [
+      "PaginationItem"
+    ],
+    "category": "navegación",
+    "notes": "Distingue número, flecha y elipsis. Usa un nombre accesible para las flechas.",
+    "base": "specs/components/pagination-item.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Número, icono y elipsis son alternativas de anatomía fija"
+    },
+    "qa": "qa/implementations/pagination-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/pagination-item.contract.v1.0.0.md": "3a8eff67b8f00d435faae568c0181afb267691611b845515ad19d4cf56913e85"
+    },
+    "api": "export type PaginationDirection = 'first' | 'previous' | 'next' | 'last';\n\nconst carets = {\n  first: CaretDoubleLeftIcon,\n  previous: CaretLeftIcon,\n  next: CaretRightIcon,\n  last: CaretDoubleRightIcon,\n};\n\nexport type PaginationItemProps =\n  | {type: 'page'; label: string; accessibleLabel?: string; selected?: boolean; onActivate: () => void; touchTarget?: boolean}\n  | {type: 'icon'; direction: PaginationDirection; accessibleLabel: string; disabled?: boolean; onActivate: () => void; touchTarget?: boolean}\n  | {type: 'ellipsis'};",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function PaginationItemExample() {\n  const [page, setPage] = useState(1);\n  return <div className=\"my-4 flex items-center gap-2\">\n    <PaginationItem type=\"icon\" direction=\"previous\" accessibleLabel=\"Anterior de la muestra\"\n      disabled={page===1} onActivate={()=>setPage(1)}/>\n    <PaginationItem type=\"page\" label=\"1\" selected={page===1} onActivate={()=>setPage(1)}/>\n    <PaginationItem type=\"ellipsis\"/>\n    <PaginationItem type=\"page\" label=\"12345\" selected={page===12345} onActivate={()=>setPage(12345)}/>\n    <PaginationItem type=\"icon\" direction=\"next\" accessibleLabel=\"Siguiente de la muestra\"\n      disabled={page===12345} onActivate={()=>setPage(12345)}/>\n  </div>;\n}\n",
+    "defaults": [
+      "PaginationItem: props: PaginationItemProps"
+    ]
+  },
+  {
+    "id": "RADIO-001",
+    "slug": "radio",
+    "name": "Radio",
+    "module": "radio",
+    "exports": [
+      "Radio"
+    ],
+    "category": "selección",
+    "notes": "Elige el medio de entrega por teclado o puntero.",
+    "base": "specs/components/radio.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Label y Show label son propiedades acotadas del Radio individual"
+    },
+    "qa": "qa/implementations/dot-toggle-radio.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/radio.contract.v1.0.0.md": "d23b3e151a7d530f3611b8a9f2d2b86c095861622412ea59692b31dd07900fef"
+    },
+    "api": "export type RadioProps = Omit<ComponentPropsWithoutRef<'input'>,\n  'type' | 'role' | 'checked' | 'defaultChecked' | 'onChange' | 'aria-label' | 'aria-invalid' | 'name' | 'value' | 'onSelect'> & {\n  name: string;\n  value: string;\n  label: string;\n  showLabel?: boolean;\n  selected: boolean;\n  invalid?: boolean;\n  onSelect?: (value: string) => void;\n  previewState?: 'hover' | 'focus';\n};",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function RadioExample() {\n  const [delivery, setDelivery] = useState('email');\n  return <fieldset className=\"my-4 space-y-3\">\n    <legend>Entrega del comprobante</legend>\n    <div className=\"flex flex-wrap gap-6\">\n      <Radio showLabel id=\"demo-radio-email\" name=\"delivery\" value=\"email\" label=\"Correo electrónico\"\n        selected={delivery === 'email'} onSelect={setDelivery}/>\n      <Radio showLabel id=\"demo-radio-download\" name=\"delivery\" value=\"download\" label=\"Descarga\"\n        selected={delivery === 'download'} onSelect={setDelivery}/>\n      <Radio showLabel id=\"demo-radio-post\" name=\"delivery\" value=\"post\" label=\"Correo postal\" selected={false} disabled/>\n    </div>\n    <p id=\"demo-radio-hint\">Selecciona un medio de entrega disponible.</p>\n  </fieldset>;\n}\n",
+    "defaults": [
+      "Radio: {name, value, label, showLabel = false, selected, invalid, onSelect, previewState, className, ...input}: RadioProps"
+    ]
+  },
+  {
+    "id": "RADIO-GROUP-001",
+    "slug": "radio-group",
+    "name": "Radio group",
+    "module": "radio-group",
+    "exports": [
+      "RadioGroup"
+    ],
+    "category": "selección",
+    "notes": "Selecciona un medio de entrega. La segunda muestra conserva el mensaje fijo de error.",
+    "base": "specs/components/radio-group.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Options es Slot Figma; la lista tipada controla cardinalidad y selección en web"
+    },
+    "qa": "qa/implementations/radio-group.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/radio-group.contract.v1.0.0.md": "640f7616ccc82c29e5c134fa887d97cfeb65235af0448f1cdcfa8e93988850cb"
+    },
+    "api": "export interface RadioGroupOption {\n  value: string;\n  label: string;\n  disabled?: boolean;\n}\n\nexport interface RadioGroupProps {\n  name: string;\n  title: string;\n  showTitle?: boolean;\n  helperText?: string;\n  showHelperText?: boolean;\n  direction?: 'vertical' | 'horizontal';\n  state?: 'default' | 'error';\n  options: readonly RadioGroupOption[];\n  value?: string;\n  onValueChange?: (value: string) => void;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function RadioGroupExample() {\n  const [value, setValue] = useState<string>();\n  return <div className=\"my-4 space-y-6\">\n    <RadioGroup name=\"receipt-delivery\" title=\"Entrega del comprobante\" helperText=\"Elige una alternativa.\"\n      options={[{value:'email', label:'Correo electrónico'}, {value:'download', label:'Descarga'}]}\n      value={value} onValueChange={setValue}/>\n    <RadioGroup name=\"receipt-format\" title=\"Formato del archivo\" state=\"error\" direction=\"horizontal\"\n      options={[{value:'pdf', label:'PDF'}, {value:'xml', label:'XML'}]}/>\n  </div>;\n}\n",
+    "defaults": [
+      "RadioGroup: {name, title, showTitle = true, helperText, showHelperText = true,\n  direction = 'vertical', state = 'default', options, value, onValueChange}: RadioGroupProps"
+    ]
+  },
+  {
+    "id": "SEARCH-001",
+    "slug": "search",
+    "name": "Search",
+    "module": "search",
+    "exports": [
+      "Search"
+    ],
+    "category": "búsqueda",
+    "notes": "Introduce una consulta, pulsa Enter y usa Limpiar búsqueda para devolver el foco al campo.",
+    "base": "specs/components/search.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Label, control y X forman una anatomía fija"
+    },
+    "qa": "qa/implementations/search-breadcrumb-item.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/search.contract.v1.0.0.md": "229c8301f0151604052def3951424823588392a5c9165c01352daaa0e39829ed"
+    },
+    "api": "export type SearchSize = 'small' | 'medium' | 'large';\n\nexport interface SearchProps {\n  id?: string;\n  label: string;\n  showLabel?: boolean;\n  placeholder?: string;\n  value: string;\n  size?: SearchSize;\n  disabled?: boolean;\n  onValueChange?: (value: string) => void;\n  onSearch?: (value: string) => void;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function SearchExample() {\n  const [value, setValue] = useState('');\n  const [submitted, setSubmitted] = useState('');\n  return <div className=\"my-4 max-w-md space-y-2\">\n    <Search id=\"demo-search\" label=\"Buscar comprobantes\" showLabel\n      placeholder=\"Nombre, RFC o folio\" size=\"medium\" value={value}\n      onValueChange={setValue} onSearch={setSubmitted}/>\n    <p id=\"demo-search-status\" role=\"status\">{submitted ? `Consulta de muestra: ${submitted}` : 'Escribe una consulta y pulsa Enter.'}</p>\n  </div>;\n}\n",
+    "defaults": [
+      "Search: {id, label, showLabel = false, placeholder = 'Search', value, size = 'large',\n  disabled = false, onValueChange, onSearch}: SearchProps"
+    ]
+  },
+  {
+    "id": "SECTION-HEADER-001",
+    "slug": "section-header",
+    "name": "Section Header",
+    "module": "section-header",
+    "exports": [
+      "SectionHeader"
+    ],
+    "category": "navegación",
+    "notes": "Selecciona el nivel del título según la página y compón Breadcrumb, Metadata, Inputs y General actions con los controles del anfitrión.",
+    "base": "specs/components/section-header.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Tres regiones independientes admiten listas abiertas"
+    },
+    "qa": "qa/implementations/section-header.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/section-header.contract.v1.0.0.md": "240b8713839c0099525bffbd08545a99d5894e57344a33df6b112f6085a91836"
+    },
+    "api": "export interface SectionHeaderProps {\n  title: string;\n  headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;\n  description?: string;\n  breadcrumbs?: ReactNode;\n  metadata?: ReactNode;\n  inputs?: ReactNode;\n  actions?: ReactNode;\n  showBreadcrumbs?: boolean;\n  showDescription?: boolean;\n  showMetadata?: boolean;\n  showActions?: boolean;\n  className?: string;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function SectionHeaderExample() {\n  const [message, setMessage] = useState('');\n  const metadata = <><Badge type=\"success\" size=\"small\" label=\"Actualizado\"/><time dateTime=\"2026-11-11\">11 nov 2026</time></>;\n  return <div className=\"my-4 space-y-4\">\n    <SectionHeader className=\"max-w-[1225px]\" title=\"Comprobantes\" headingLevel={3}\n      description=\"Consulta los comprobantes registrados y ajusta los filtros del listado.\"\n      breadcrumbs={<Breadcrumb ancestors={[{label:'Inicio',href:'#demo-section-start'}]} current=\"Comprobantes\"/>}\n      metadata={metadata}\n      inputs={['Periodo','Empresa','Tipo','Moneda','Ejercicio'].map(label =>\n        <Input key={label} label={label} placeholder={label} showLabel={false} showHelper={false} required={false}/>)}\n      actions={<>\n        <IconButton label=\"Configurar filtros\" variant=\"secondary\" size=\"large\" icon={GearIcon}\n          onClick={()=>setMessage('Configuración de filtros abierta.')}/>\n        <Button label=\"Aplicar filtros\" onClick={()=>setMessage('Filtros aplicados.')}/>\n      </>}/>\n    <p id=\"demo-section-action-status\" role=\"status\">{message}</p>\n    <div id=\"demo-section-start\" className=\"max-w-[640px]\">\n      <SectionHeader title=\"Comprobantes recientes\" headingLevel={3} metadata={metadata}\n        description=\"Revisa los registros del periodo seleccionado.\"\n        inputs={<Input label=\"Periodo reciente\" placeholder=\"Periodo\" showLabel={false} showHelper={false} required={false}/>}\n        actions={<Button label=\"Consultar periodo\" onClick={()=>setMessage('Consulta de muestra ejecutada.')}/>}/>\n    </div>\n  </div>;\n}\n",
+    "defaults": [
+      "SectionHeader: {title, headingLevel = 2, description, breadcrumbs, metadata, inputs, actions,\n  showBreadcrumbs = true, showDescription = true, showMetadata = true, showActions = true,\n  className}: SectionHeaderProps"
+    ]
+  },
+  {
+    "id": "SIDEBAR-001",
+    "slug": "sidebar",
+    "name": "Sidebar",
+    "module": "sidebar",
+    "exports": [
+      "Sidebar"
+    ],
+    "category": "navegación",
+    "notes": "El control de expansión y contracción usa Icon Button Secondary small en Figma y en el ejemplo web. Conserva el foco y actualiza su nombre accesible al alternar.",
+    "base": "specs/components/sidebar.contract.v1.0.0.md",
+    "amendments": [
+      "specs/components/sidebar.secondary-control.amendment.v1.0.1.md"
+    ],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Cuatro Slots independientes permiten editar ambas presentaciones"
+    },
+    "qa": "qa/implementations/sidebar-secondary-control.v1.0.1.review.md",
+    "usage_guide": "specs/components/sidebar.secondary-control.amendment.v1.0.1.md",
+    "hashes": {
+      "specs/components/sidebar.contract.v1.0.0.md": "0cfcf88001c7bbba68ad8011197bc3ff049e8dad5ab320dbfa5e149a68cf57f0",
+      "specs/components/sidebar.secondary-control.amendment.v1.0.1.md": "d6a628fc853ee2223064511ec4244d61edc16965dd6e86c169ffd8eab2bdf0ad"
+    },
+    "api": "export interface SidebarProps {\n  label: string;\n  collapsed: boolean;\n  onCollapsedChange: (collapsed: boolean) => void;\n  collapsedMenuItems?: ReactNode;\n  collapsedLowerOptions?: ReactNode;\n  expandedMenuItems?: ReactNode;\n  expandedLowerOptions?: ReactNode;\n  className?: string;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function SidebarExample() {\n  const [collapsed, setCollapsed] = useState(true);\n  return <div className=\"my-4\">\n    <Sidebar label=\"Navegación lateral de muestra\" collapsed={collapsed} onCollapsedChange={setCollapsed} className=\"h-72\"\n      collapsedMenuItems={<MenuItem label=\"Inicio\" href=\"#demo-sidebar-target\" current/>}\n      collapsedLowerOptions={<MenuItem label=\"Ayuda\" href=\"#demo-sidebar-target\" active={false}\n        fillIcon={QuestionIcon} lightIcon={QuestionIcon}/>}\n      expandedMenuItems={<>\n        <MenuItem label=\"Inicio\" type=\"expanded\" href=\"#demo-sidebar-target\" current showRightIcon={false}/>\n        <MenuItem label=\"Comprobantes\" type=\"expanded\" href=\"#demo-sidebar-target\" active={false} showRightIcon={false}/>\n      </>}\n      expandedLowerOptions={<MenuItem label=\"Ayuda\" type=\"expanded\" href=\"#demo-sidebar-target\" active={false}\n        fillIcon={QuestionIcon} lightIcon={QuestionIcon} showRightIcon={false}/>}/>\n    <span id=\"demo-sidebar-target\" className=\"sr-only\">Destino de muestra</span>\n  </div>;\n}\n",
+    "defaults": [
+      "Sidebar: {label, collapsed, onCollapsedChange, collapsedMenuItems, collapsedLowerOptions,\n  expandedMenuItems, expandedLowerOptions, className}: SidebarProps"
+    ]
+  },
+  {
+    "id": "TAB-001",
+    "slug": "tab",
+    "name": "Tab",
+    "module": "tab",
+    "exports": [
+      "Tab"
+    ],
+    "category": "navegación",
+    "notes": "Mantén una etiqueta visible y proporciona el significado accesible del conteo.",
+    "base": "specs/components/tab.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Etiqueta, icono y Dot tienen posiciones fijas"
+    },
+    "qa": "qa/implementations/tabs-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/tab.contract.v1.0.0.md": "040d848dfd98d26731f00cad747680b67ea36457b8e1a74e3031314f481ab804"
+    },
+    "api": "export type TabType = 'underline' | 'pill' | 'segmented';\n\nexport interface TabProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>,\n  'type' | 'role' | 'children' | 'aria-selected'> {\n  label: string;\n  type?: TabType;\n  selected?: boolean;\n  icon?: Icon;\n  showIcon?: boolean;\n  badgeCount?: string;\n  ref?: Ref<HTMLButtonElement>;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function TabExample() {\n  const [selected, setSelected] = useState('summary');\n  return <div className=\"my-4\">\n    <Tabs type=\"segmented\" label=\"Vistas de la cuenta\" selectedId={selected} onSelectionChange={setSelected}\n      items={[\n        {id:'summary',label:'Resumen',accessibleLabel:'Resumen, 12 pendientes',icon:ImageSquareIcon,badgeCount:'12',\n          panel:<p className=\"pt-3\">Doce comprobantes requieren revisión.</p>},\n        {id:'documents',label:'Documentos',panel:<p className=\"pt-3\">Documentos registrados de la cuenta.</p>},\n      ]}/>\n  </div>;\n}\n",
+    "defaults": [
+      "Tab: {label, type = 'underline', selected = false, disabled = false,\n  icon, showIcon = Boolean(icon), badgeCount, className, style, onFocus, onBlur, onPointerEnter, onPointerLeave, ...attrs}: TabProps"
+    ]
+  },
+  {
+    "id": "TABLE-001",
+    "slug": "table",
+    "name": "Table",
+    "module": "table",
+    "exports": [
+      "Table"
+    ],
+    "notes": "El anfitrión mantiene filas, orden y paginación. El viewport desplaza ambos ejes y Pagination queda fuera del área desplazable.",
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Rows admite una cabecera y cantidad variable de filas con identidad estable"
+    },
+    "category": "data",
+    "base": "specs/components/table.contract.v1.0.0.md",
+    "amendments": [],
+    "qa": "qa/implementations/table-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/table.contract.v1.0.0.md": "c806d0f7971730c058a181c33ba05550ea9c943315d0a0d5bb0dffc559c9f46e"
+    },
+    "api": "export interface TableProps {\n  label: string;\n  viewportLabel?: string;\n  viewportHeight?: number;\n  columnWidths?: readonly number[];\n  children: ReactNode;\n  pagination?: PaginationProps;\n  className?: string;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function TableExample() {\n  const [rows,setRows] = useState(() => Array.from({length:12},(_,index)=>index+1));\n  const [page,setPage] = useState(1);\n  const [pageSize,setPageSize] = useState(4);\n  const [selected,setSelected] = useState<number[]>([]);\n  const [reversed,setReversed] = useState(false);\n  const [nextRow,setNextRow] = useState(13);\n  const totalPages=Math.max(1,Math.ceil(rows.length/pageSize));\n  const current=Math.min(page,totalPages);\n  const ordered=reversed ? [...rows].reverse() : rows;\n  const start=(current-1)*pageSize;\n  const visible=ordered.slice(start,start+pageSize);\n  return <div className=\"grid min-w-0 gap-3\">\n    <div className=\"flex flex-wrap gap-2\">\n      <Button variant=\"secondary\" size=\"small\" label=\"Invertir orden\" onClick={()=>{setReversed(value=>!value);setPage(1);}}/>\n      <Button variant=\"secondary\" size=\"small\" label=\"Agregar fila de muestra\" onClick={()=>{\n        setRows(value=>[...value,nextRow]);setNextRow(value=>value+1);setPage(1);\n      }}/>\n      <Button variant=\"secondary\" size=\"small\" label=\"Retirar primera fila\" disabled={rows.length===0} onClick={()=>{\n        const first=ordered[0];setRows(value=>value.filter(row=>row!==first));setSelected(value=>value.filter(row=>row!==first));setPage(1);\n      }}/>\n    </div>\n    <p id=\"demo-table-selection\" role=\"status\">{selected.length} seleccionados de {rows.length} comprobantes</p>\n    <Table label=\"Comprobantes ficticios\" className=\"max-w-[560px]\" viewportHeight={124}\n      columnWidths={[100,148,220,280]}\n      pagination={{currentPage:current,totalPages,onPageChange:setPage,label:'Páginas de comprobantes',\n        range:rows.length ? `${start+1}–${Math.min(start+pageSize,rows.length)} de ${rows.length}` : undefined,\n        rows:{value:pageSize,options:[4,6],onChange:value=>{setPageSize(value);setPage(1);}}}}>\n      <thead><tr>\n        <TableCell item=\"header\" label=\"Selección\"/>\n        <TableCell item=\"header\" label=\"Folio\" sort={reversed ? 'descending' : 'ascending'}/>\n        <TableCell item=\"header\" label=\"Proveedor\"/>\n        <TableCell item=\"header\" label=\"Concepto\"/>\n      </tr></thead>\n      <tbody>{visible.map(row=>{\n        const checked=selected.includes(row);\n        const state=checked ? 'selected' : 'default';\n        return <tr key={row}>\n          <TableCell kind=\"checkbox\" state={state}>\n            <Checkbox label={`Seleccionar folio ${row}`} selected={checked} onSelectedChange={value=>setSelected(prev=>value?[...prev,row]:prev.filter(id=>id!==row))}/>\n          </TableCell>\n          <TableCell label={`Folio ${row}`} state={state}/>\n          <TableCell label={`Proveedor ficticio ${row}`} state={state}/>\n          <TableCell label=\"Servicios de conciliación contable del periodo de muestra\" state={state}/>\n        </tr>;\n      })}</tbody>\n    </Table>\n  </div>;\n}\n",
+    "defaults": [
+      "Table: {label, viewportLabel = `Desplazamiento de ${label}`, viewportHeight = 360,\n  columnWidths, children, pagination, className}: TableProps"
+    ]
+  },
+  {
+    "id": "TABLE-CELL-001",
+    "slug": "table-cell",
+    "name": "Table cell",
+    "module": "table-cell",
+    "exports": [
+      "TableCell",
+      "TableCaptureCell"
+    ],
+    "notes": "El ejemplo muestra el valor de captura, un enlace real, selección y una acción de fila. Los controles se componen con sus APIs propietarias.",
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Cada tipo usa una anatomía fija y los swaps cubren el auxiliar de hasta cuatro acciones"
+    },
+    "category": "data",
+    "base": "specs/components/table-cell.contract.v1.0.0.md",
+    "amendments": [],
+    "qa": "qa/implementations/table-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/table-cell.contract.v1.0.0.md": "9c8ff9ef9633413c2addd283b4022c88a0014db013a71f00828036660b595d99"
+    },
+    "api": "export type TableCellState = 'default' | 'selected' | 'hover' | 'focus';\n\nexport interface TableCellAction {\n  id: string;\n  label: string;\n  icon: Icon;\n  weight?: 'light' | 'regular';\n  onActivate: () => void;\n}\n\n\nexport type TableCellProps = CellContent & CellVariant & {\n  avatar?: Omit<AvatarProps, 'size'>;\n  href?: string;\n  children?: ReactNode;\n  actions?: readonly [TableCellAction, TableCellAction?, TableCellAction?, TableCellAction?];\n};\n\nexport interface TableCaptureCellProps extends CellContent {\n  capture?: boolean;\n  state?: TableCellState;\n}\n",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function TableCellExample() {\n  const [selected, setSelected] = useState(false);\n  const [edited, setEdited] = useState(false);\n  const [enabled, setEnabled] = useState(true);\n  return <div className=\"grid gap-3\">\n    <Table label=\"Ejemplos de celdas de comprobantes\" viewportHeight={88} columnWidths={[64,154,190,100,110,100]}>\n      <thead><tr>\n        <TableCell item=\"header\" label=\"Selección\"/>\n        <TableCell item=\"header\" label=\"Comprobante\"/>\n        <TableCell item=\"header\" label=\"Moneda\"/>\n        <TableCell item=\"header\" label=\"Visible\"/>\n        <TableCell item=\"header\" label=\"Validación\"/>\n        <TableCell item=\"header\" label=\"Acciones\"/>\n      </tr></thead>\n      <tbody><tr>\n        <TableCell kind=\"checkbox\" state={selected ? 'selected' : 'default'}>\n          <Checkbox label=\"Seleccionar FAC-001\" selected={selected} onSelectedChange={setSelected}/>\n        </TableCell>\n        <TableCell kind=\"link\" label=\"FAC-001\" href=\"#demo-table-cell-details\"/>\n        <TableCaptureCell capture={edited} label={edited ? 'MXN' : 'Selecciona moneda'} showRightIcon/>\n        <TableCell kind=\"toggle\"><Toggle label=\"Mostrar FAC-001\" selected={enabled} onSelectedChange={setEnabled}/></TableCell>\n        <TableCell kind=\"badge\" showRightIcon={edited}>\n          <Badge type={edited ? 'success' : 'error'} size=\"medium\" label={edited ? 'Listo' : 'Pendiente'}/>\n        </TableCell>\n        <TableCell kind=\"action\" actions={[{id:'edit',label:'Editar moneda de FAC-001',icon:PencilSimpleIcon,\n          onActivate:()=>setEdited(value=>!value)}]}/>\n      </tr></tbody>\n    </Table>\n    <p id=\"demo-table-cell-details\">FAC-001 · Comprobante ficticio de la muestra</p>\n  </div>;\n}\n",
+    "defaults": [
+      "TableCell: {item = 'concept', kind = 'default', state = 'default', avatar, href, children, actions, sort,\n  showVerticalDivider = false, showHorizontalBorders = true, showRightIcon = false, ...text}: TableCellProps",
+      "TableCaptureCell: {capture = false, state = 'default', showVerticalDivider = false,\n  showHorizontalBorders = true, ...text}: TableCaptureCellProps"
+    ]
+  },
+  {
+    "id": "TABS-001",
+    "slug": "tabs",
+    "name": "Tabs",
+    "module": "tabs",
+    "exports": [
+      "Tabs"
+    ],
+    "category": "navegación",
+    "notes": "Mantén selección controlada e IDs estables. Flechas mueven foco y Enter o Espacio cambia el panel.",
+    "base": "specs/components/tabs.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Tabs admite inserción, retirada y reordenamiento de instancias Tab"
+    },
+    "qa": "qa/implementations/tabs-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/tabs.contract.v1.0.0.md": "ffa4637ae231721e77ab9be88d4c3c0c951c6c978e9d2c546ca67f12bcb0e446"
+    },
+    "api": "export interface TabsItem {\n  id: string;\n  label: string;\n  accessibleLabel?: string;\n  icon?: TabProps['icon'];\n  badgeCount?: string;\n  disabled?: boolean;\n  panel: ReactNode;\n}\n\nexport interface TabsProps {\n  label: string;\n  items: readonly TabsItem[];\n  selectedId: string;\n  onSelectionChange: (id: string) => void;\n  type?: TabType;\n  className?: string;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function TabsExample() {\n  const [selected, setSelected] = useState('invoices');\n  return <div className=\"my-4\">\n    <Tabs label=\"Tipos de comprobante\" selectedId={selected} onSelectionChange={setSelected}\n      items={[\n        {id:'invoices',label:'Facturas',panel:<p className=\"pt-3\">Facturas del periodo seleccionado.</p>},\n        {id:'payments',label:'Pagos',disabled:true,panel:<p className=\"pt-3\">Los pagos no están disponibles.</p>},\n        {id:'credit-notes',label:'Notas de crédito',panel:<p className=\"pt-3\">Notas de crédito registradas.</p>},\n        {id:'complements',label:'Complementos',panel:<p className=\"pt-3\">Complementos del periodo.</p>},\n      ]}/>\n  </div>;\n}\n",
+    "defaults": [
+      "Tabs: {label, items, selectedId, onSelectionChange, type = 'underline', className}: TabsProps"
+    ]
+  },
+  {
+    "id": "TEXT-AREA-001",
+    "slug": "text-area",
+    "name": "Text Area",
+    "module": "text-area",
+    "exports": [
+      "TextArea"
+    ],
+    "category": "formularios",
+    "notes": "Usa una etiqueta visible y elige el límite y altura en el anfitrión. Helper y Counter se asocian al control.",
+    "base": "specs/components/text-area.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Etiqueta, campo, ayuda, contador y muesca tienen anatomía fija"
+    },
+    "qa": "qa/implementations/text-area.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/text-area.contract.v1.0.0.md": "4462e6f71b9e5371383f6ae604e7d1002af36f6743a33e94754a982b38b54d48"
+    },
+    "api": "export type TextAreaState = 'default' | 'focus' | 'error' | 'disabled';\n\nexport interface TextAreaProps {\n  id?: string;\n  name?: string;\n  label: string;\n  placeholder?: string;\n  helperText?: string;\n  showHelper?: boolean;\n  showCounter?: boolean;\n  maxLength?: number;\n  required?: boolean;\n  value?: string;\n  defaultValue?: string;\n  onValueChange?: (value: string) => void;\n  state?: TextAreaState;\n  fieldHeight?: number;\n  resizable?: boolean;\n  className?: string;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function TextAreaExample() {\n  const [value, setValue] = useState('');\n  const [attempted, setAttempted] = useState(false);\n  const [expanded, setExpanded] = useState(false);\n  const error = attempted && !value.trim();\n  return <div className=\"my-4 space-y-4\">\n    <form className=\"grid w-full max-w-[305px] justify-items-start gap-3\" noValidate\n      onSubmit={event=>{event.preventDefault();setAttempted(true);}}>\n      <TextArea id=\"demo-text-area\" label=\"Comentarios de revisión\" value={value}\n        onValueChange={next=>{setValue(next);setAttempted(false);}} placeholder=\"Describe la situación\"\n        helperText={error ? 'Escribe un comentario antes de continuar.' : 'Incluye los datos útiles para la revisión.'}\n        state={error ? 'error' : 'default'} maxLength={300} className=\"w-full\" fieldHeight={expanded ? 180 : undefined}/>\n      <div className=\"flex flex-wrap gap-2\">\n        <Button label=\"Comprobar comentario\" type=\"submit\"/>\n        <Button label={expanded ? 'Reducir campo' : 'Ampliar campo'} variant=\"secondary\" onClick={()=>setExpanded(!expanded)}/>\n      </div>\n    </form>\n    <TextArea id=\"demo-text-area-disabled\" label=\"Comentario archivado\" defaultValue=\"Revisión concluida.\"\n      state=\"disabled\" helperText=\"El periodo está cerrado.\" className=\"max-w-[305px]\"/>\n  </div>;\n}\n",
+    "defaults": [
+      "TextArea: {id, name, label, placeholder, helperText, showHelper = true, maxLength,\n  showCounter = maxLength !== undefined, required = false, value, defaultValue = '', onValueChange,\n  state = 'default', fieldHeight, resizable = false, className}: TextAreaProps"
+    ]
+  },
+  {
+    "id": "TOGGLE-001",
+    "slug": "toggle",
+    "name": "Toggle",
+    "module": "toggle",
+    "exports": [
+      "Toggle"
+    ],
+    "category": "selección",
+    "notes": "Cambia una preferencia local. La segunda opción está deshabilitada.",
+    "base": "specs/components/toggle.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Label y Show label son propiedades acotadas"
+    },
+    "qa": "qa/implementations/dot-toggle-radio.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/toggle.contract.v1.0.0.md": "18fd1f9c1e182511bfd22d431d360e809cd095879d2d31d8ad4bb01799e5f29c"
+    },
+    "api": "export type ToggleProps = Omit<ComponentPropsWithoutRef<'input'>,\n  'type' | 'role' | 'checked' | 'defaultChecked' | 'onChange' | 'aria-label'> & {\n  label: string;\n  showLabel?: boolean;\n  selected: boolean;\n  onSelectedChange?: (selected: boolean) => void;\n  previewState?: 'hover' | 'focus';\n};",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function ToggleExample() {\n  const [enabled, setEnabled] = useState(false);\n  return <div className=\"my-4 flex flex-wrap items-center gap-6\">\n    <Toggle showLabel id=\"demo-toggle\" label=\"Notificaciones\" selected={enabled} onSelectedChange={setEnabled}/>\n    <Toggle showLabel id=\"demo-toggle-disabled\" label=\"Alertas del sistema\" selected disabled/>\n  </div>;\n}\n",
+    "defaults": [
+      "Toggle: {label, showLabel = false, selected, onSelectedChange, previewState, className, ...input}: ToggleProps"
+    ]
+  },
+  {
+    "id": "TOOLTIP-001",
+    "slug": "tooltip",
+    "name": "Tooltip",
+    "module": "tooltip",
+    "exports": [
+      "Tooltip"
+    ],
+    "category": "ayuda",
+    "notes": "Enfoca o pasa el puntero sobre Panel de actividad. Escape cierra la ayuda; el disparador conserva el foco.",
+    "base": "specs/components/tooltip.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Body, textos y flecha forman una anatomía fija"
+    },
+    "qa": "qa/implementations/tooltip.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/tooltip.contract.v1.0.0.md": "55730a20b256c59cd0287afb0f70d3d23836af988ae6ddc6d8e8a5787c91ca9c"
+    },
+    "api": "export interface TooltipProps {\n  id: string;\n  label?: string;\n  title?: string;\n  type?: 'simple' | 'rich';\n  placement?: 'top' | 'bottom' | 'left' | 'right';\n  arrow?: 'start' | 'center' | 'end';\n  hidden?: boolean;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function TooltipExample() {\n  const [visible, setVisible] = useState(false);\n  const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);\n  const close = () => {\n    clearTimeout(timer.current);\n    setVisible(false);\n  };\n  useEffect(() => () => clearTimeout(timer.current), []);\n  useEffect(() => {\n    if (!visible) return;\n    const dismiss = (event: KeyboardEvent) => {\n      if (event.key === 'Escape') close();\n    };\n    window.addEventListener('keydown', dismiss);\n    return () => window.removeEventListener('keydown', dismiss);\n  }, [visible]);\n  return <div className=\"my-4 space-y-4\">\n    <span className=\"relative inline-block\" onMouseEnter={() => {\n      clearTimeout(timer.current);\n      timer.current = setTimeout(() => setVisible(true), 300);\n    }} onMouseLeave={event => {\n      if (!event.currentTarget.contains(document.activeElement)) close();\n    }}>\n      <button type=\"button\" id=\"demo-tooltip-trigger\" className=\"rounded border px-3 py-2\"\n        aria-describedby=\"demo-tooltip\" onFocus={() => {\n          clearTimeout(timer.current);\n          setVisible(true);\n        }} onBlur={close}>\n        Panel de actividad\n      </button>\n      <span className=\"absolute left-0 top-full z-10\">\n        <Tooltip id=\"demo-tooltip\" placement=\"bottom\" type=\"rich\" title=\"Movimientos recientes\"\n          label=\"Consulta la actividad del periodo\" hidden={!visible}/>\n      </span>\n    </span>\n  </div>;\n}\n",
+    "defaults": [
+      "Tooltip: {id, label = 'Tooltip', title = 'Title', type = 'simple',\n  placement = 'top', arrow = 'start', hidden = false}: TooltipProps"
+    ]
+  },
+  {
+    "id": "TOP-BAR-001",
+    "slug": "top-bar",
+    "name": "Top bar",
+    "module": "top-bar",
+    "exports": [
+      "TopBar"
+    ],
+    "category": "navegación",
+    "notes": "Usa el área desplazable del anfitrión para consultar las secciones.",
+    "base": "specs/components/top-bar.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Menu items admite una lista abierta"
+    },
+    "qa": "qa/implementations/sidebar-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/top-bar.contract.v1.0.0.md": "5219c7be83a50e7b035eccc8c317528d2821b3e66df1710895e7f53ac1188470"
+    },
+    "api": "export type TopBarItem = MenuItemAction & {\n  id: string;\n  label: string;\n  active?: boolean;\n  showRightIcon?: boolean;\n};\n\nexport interface TopBarProps {\n  label: string;\n  items: readonly TopBarItem[];\n  className?: string;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function TopBarExample() {\n  return <div className=\"my-4 overflow-x-auto\">\n    <TopBar label=\"Secciones de muestra\" items={[\n      {id:'home',label:'Inicio',href:'#demo-top-bar-target',active:true,current:true,showRightIcon:false},\n      {id:'sales',label:'Ventas',href:'#demo-top-bar-target',active:false,showRightIcon:false},\n      {id:'reports',label:'Reportes',href:'#demo-top-bar-target',active:false,showRightIcon:false},\n    ]}/>\n    <span id=\"demo-top-bar-target\" className=\"sr-only\">Destino de muestra</span>\n  </div>;\n}\n",
+    "defaults": [
+      "TopBar: {label, items, className}: TopBarProps"
+    ]
+  },
+  {
+    "id": "USER-SELECTOR-001",
+    "slug": "user-selector",
+    "name": "User selector",
+    "module": "user-selector",
+    "exports": [
+      "UserSelector"
+    ],
+    "category": "navegación",
+    "notes": "Abre el menú local de cuenta con el Avatar y nombre accesible.",
+    "base": "specs/components/user-selector.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Avatar y caret tienen composición fija"
+    },
+    "qa": "qa/implementations/header-chain.v1.0.0.review.md",
+    "hashes": {
+      "specs/components/user-selector.contract.v1.0.0.md": "03032f86629b08c0f51410c729e7494266f1daef35ea5a44c9705db47e0720c5"
+    },
+    "api": "export interface UserSelectorProps {\n  id?: string;\n  name: string;\n  avatar?: Pick<AvatarProps,'initials'|'imageSrc'|'icon'>;\n  open?: boolean;\n  controls?: string;\n  onToggle?: () => void;\n}",
+    "example": "'use client';\n\nimport { useEffect, useRef, useState } from 'react';\nimport { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';\nimport { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';\nimport { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';\nimport { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';\nimport { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';\nimport { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';\n\nconst states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];\n\nexport function UserSelectorExample() {\n  const [open, setOpen] = useState(false);\n  const close = () => {setOpen(false);document.getElementById('demo-user-selector')?.focus();};\n  useEffect(()=>{if(open)document.getElementById('demo-user-option')?.focus();},[open]);\n  return <div className=\"my-4 space-y-2\" onKeyDown={event=>{if(open&&event.key==='Escape')close();}}>\n    <UserSelector id=\"demo-user-selector\" name=\"Julia Ávila\" avatar={{initials:'JÁ'}}\n      open={open} onToggle={()=>setOpen(value=>!value)} controls=\"demo-user-menu\"/>\n    <div id=\"demo-user-menu\" role=\"menu\" aria-label=\"Cuenta de muestra\" hidden={!open}>\n      <button id=\"demo-user-option\" type=\"button\" role=\"menuitem\" onClick={close}>Preferencias de muestra</button>\n    </div>\n  </div>;\n}\n",
+    "defaults": [
+      "UserSelector: {id,name,avatar,open=false,controls,onToggle}:UserSelectorProps"
+    ]
+  }
+]

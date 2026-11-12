@@ -1,0 +1,1497 @@
+{
+  "fileKey": "98xEw6sK8FRVNEhopM5SSz",
+  "records": [
+    {
+      "id": "826:188",
+      "type": "COMPONENT_SET",
+      "name": "__Table/Cell actions",
+      "key": "8e580a1fb72288ed11f2e63b1f4d0ed527419067",
+      "page": "825:2",
+      "pageName": "Table",
+      "layoutMode": "NONE",
+      "width": 600,
+      "height": 84,
+      "x": 100,
+      "y": 100,
+      "clipsContent": false,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "props": {
+        "Icon 1#826:0": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "826:5",
+          "preferredValues": []
+        },
+        "Icon 2#826:5": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "826:43",
+          "preferredValues": []
+        },
+        "Icon 3#826:10": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "826:81",
+          "preferredValues": []
+        },
+        "Icon 4#826:15": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "826:122",
+          "preferredValues": []
+        },
+        "amount": {
+          "type": "VARIANT",
+          "defaultValue": "4",
+          "variantOptions": [
+            "4",
+            "3",
+            "2",
+            "1"
+          ]
+        }
+      },
+      "slots": [],
+      "vars": [
+        [
+          "826:164",
+          "amount=4"
+        ],
+        [
+          "826:173",
+          "amount=3"
+        ],
+        [
+          "826:180",
+          "amount=2"
+        ],
+        [
+          "826:185",
+          "amount=1"
+        ]
+      ]
+    },
+    {
+      "id": "826:459",
+      "type": "COMPONENT_SET",
+      "name": "Table cell",
+      "key": "b48a543e6247ac28e3b476a976cf2c2f66720363",
+      "page": "825:2",
+      "pageName": "Table",
+      "layoutMode": "NONE",
+      "width": 1510,
+      "height": 444,
+      "x": 100,
+      "y": 350,
+      "clipsContent": false,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "props": {
+        "Show right icon#826:20": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show left icon#826:51": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show avatar#826:82": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Label#826:113": {
+          "type": "TEXT",
+          "defaultValue": "Escribe información "
+        },
+        "Show vertical divider#826:144": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show horizontal borders#826:175": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Left icon#826:206": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "282:30",
+          "preferredValues": []
+        },
+        "Right icon#826:237": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "282:30",
+          "preferredValues": []
+        },
+        "item": {
+          "type": "VARIANT",
+          "defaultValue": "concept",
+          "variantOptions": [
+            "concept",
+            "header"
+          ]
+        },
+        "type": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "link",
+            "checkbox",
+            "toggle",
+            "badge",
+            "action"
+          ]
+        },
+        "state": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "selected",
+            "hover",
+            "focus"
+          ]
+        }
+      },
+      "slots": [],
+      "vars": [
+        [
+          "826:189",
+          "item=concept, type=default, state=default"
+        ],
+        [
+          "826:200",
+          "item=header, type=default, state=default"
+        ],
+        [
+          "826:211",
+          "item=concept, type=link, state=default"
+        ],
+        [
+          "826:219",
+          "item=concept, type=checkbox, state=default"
+        ],
+        [
+          "826:227",
+          "item=header, type=checkbox, state=default"
+        ],
+        [
+          "826:235",
+          "item=concept, type=toggle, state=default"
+        ],
+        [
+          "826:243",
+          "item=header, type=toggle, state=default"
+        ],
+        [
+          "826:251",
+          "item=concept, type=badge, state=default"
+        ],
+        [
+          "826:264",
+          "item=concept, type=action, state=default"
+        ],
+        [
+          "826:276",
+          "item=concept, type=default, state=selected"
+        ],
+        [
+          "826:287",
+          "item=concept, type=link, state=selected"
+        ],
+        [
+          "826:295",
+          "item=concept, type=checkbox, state=selected"
+        ],
+        [
+          "826:303",
+          "item=concept, type=toggle, state=selected"
+        ],
+        [
+          "826:311",
+          "item=concept, type=badge, state=selected"
+        ],
+        [
+          "826:322",
+          "item=concept, type=action, state=selected"
+        ],
+        [
+          "826:334",
+          "item=concept, type=default, state=hover"
+        ],
+        [
+          "826:345",
+          "item=concept, type=link, state=hover"
+        ],
+        [
+          "826:353",
+          "item=concept, type=checkbox, state=hover"
+        ],
+        [
+          "826:361",
+          "item=concept, type=toggle, state=hover"
+        ],
+        [
+          "826:369",
+          "item=concept, type=badge, state=hover"
+        ],
+        [
+          "826:380",
+          "item=concept, type=action, state=hover"
+        ],
+        [
+          "826:392",
+          "item=concept, type=default, state=focus"
+        ],
+        [
+          "826:401",
+          "item=header, type=default, state=focus"
+        ],
+        [
+          "826:410",
+          "item=concept, type=link, state=focus"
+        ],
+        [
+          "826:416",
+          "item=concept, type=checkbox, state=focus"
+        ],
+        [
+          "826:422",
+          "item=header, type=checkbox, state=focus"
+        ],
+        [
+          "826:428",
+          "item=concept, type=toggle, state=focus"
+        ],
+        [
+          "826:434",
+          "item=header, type=toggle, state=focus"
+        ],
+        [
+          "826:440",
+          "item=concept, type=badge, state=focus"
+        ],
+        [
+          "826:449",
+          "item=concept, type=action, state=focus"
+        ]
+      ]
+    },
+    {
+      "id": "826:528",
+      "type": "COMPONENT_SET",
+      "name": "Table capture cell",
+      "key": "3bc364264da185197ca99000ee85dd999da091e3",
+      "page": "825:2",
+      "pageName": "Table",
+      "layoutMode": "NONE",
+      "width": 600,
+      "height": 320,
+      "x": 100,
+      "y": 900,
+      "clipsContent": false,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "props": {
+        "Show right icon#826:268": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Label#826:277": {
+          "type": "TEXT",
+          "defaultValue": "Please Pick Something"
+        },
+        "Show vertical divider#826:286": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show horizontal borders#826:295": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Right icon#826:304": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "282:30",
+          "preferredValues": []
+        },
+        "Show left icon#826:313": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Left icon#826:322": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "282:30",
+          "preferredValues": []
+        },
+        "cell capture": {
+          "type": "VARIANT",
+          "defaultValue": "off",
+          "variantOptions": [
+            "off",
+            "on"
+          ]
+        },
+        "state": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "selected",
+            "hover",
+            "focus"
+          ]
+        }
+      },
+      "slots": [],
+      "vars": [
+        [
+          "826:460",
+          "cell capture=off, state=default"
+        ],
+        [
+          "826:469",
+          "cell capture=on, state=default"
+        ],
+        [
+          "826:478",
+          "cell capture=off, state=selected"
+        ],
+        [
+          "826:487",
+          "cell capture=on, state=selected"
+        ],
+        [
+          "826:496",
+          "cell capture=off, state=hover"
+        ],
+        [
+          "826:505",
+          "cell capture=on, state=hover"
+        ],
+        [
+          "826:514",
+          "cell capture=off, state=focus"
+        ],
+        [
+          "826:521",
+          "cell capture=on, state=focus"
+        ]
+      ]
+    },
+    {
+      "id": "841:2760",
+      "type": "COMPONENT",
+      "name": "__Table/Scrollbar thumb",
+      "key": "887da1f8593fa979b3510cbeae964bb7c301eda4",
+      "page": "825:2",
+      "pageName": "Table",
+      "layoutMode": "HORIZONTAL",
+      "width": 8,
+      "height": 8,
+      "x": 700,
+      "y": 1300,
+      "clipsContent": false,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "props": {},
+      "slots": [],
+      "vars": [
+        [
+          "841:2760",
+          "__Table/Scrollbar thumb"
+        ]
+      ]
+    },
+    {
+      "id": "827:98",
+      "type": "COMPONENT_SET",
+      "name": "__Table/Scrollbar medium",
+      "key": "d90a27ad940b58ff8624492fb25dc3b20a320f1a",
+      "page": "825:2",
+      "pageName": "Table",
+      "layoutMode": "NONE",
+      "width": 400,
+      "height": 340,
+      "x": 100,
+      "y": 1300,
+      "clipsContent": false,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "props": {
+        "Horizontal thumb#842:3": {
+          "type": "SLOT",
+          "description": "Private derived initial indicator;fit replaces this Slot content with a linked thumb of calculated length.",
+          "slotSettings": {
+            "stretchChildOnInsert": false,
+            "displayEmptyByDefault": false,
+            "minChildren": 1,
+            "maxChildren": 1,
+            "allowPreferredValuesOnly": true
+          },
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "887da1f8593fa979b3510cbeae964bb7c301eda4"
+            }
+          ]
+        },
+        "Vertical thumb#842:6": {
+          "type": "SLOT",
+          "description": "Private derived initial indicator;fit replaces this Slot content with a linked thumb of calculated length.",
+          "slotSettings": {
+            "stretchChildOnInsert": false,
+            "displayEmptyByDefault": false,
+            "minChildren": 1,
+            "maxChildren": 1,
+            "allowPreferredValuesOnly": true
+          },
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "887da1f8593fa979b3510cbeae964bb7c301eda4"
+            }
+          ]
+        },
+        "orientation": {
+          "type": "VARIANT",
+          "defaultValue": "horizontal",
+          "variantOptions": [
+            "horizontal",
+            "vertical"
+          ]
+        }
+      },
+      "slots": [
+        [
+          "842:2176",
+          "Horizontal thumb",
+          "HORIZONTAL",
+          68,
+          8,
+          false,
+          "NONE",
+          {
+            "slotContentId": "Horizontal thumb#842:3"
+          },
+          1
+        ],
+        [
+          "842:2180",
+          "Vertical thumb",
+          "VERTICAL",
+          8,
+          68,
+          false,
+          "NONE",
+          {
+            "slotContentId": "Vertical thumb#842:6"
+          },
+          1
+        ]
+      ],
+      "vars": [
+        [
+          "827:92",
+          "orientation=horizontal"
+        ],
+        [
+          "827:95",
+          "orientation=vertical"
+        ]
+      ]
+    },
+    {
+      "id": "827:99",
+      "type": "COMPONENT",
+      "name": "Table",
+      "key": "0cea74018fd8d56c6fa56f882a773726bd538ef9",
+      "page": "825:2",
+      "pageName": "Table",
+      "layoutMode": "VERTICAL",
+      "width": 1711,
+      "height": 432,
+      "x": 1800,
+      "y": 100,
+      "clipsContent": true,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "HUG",
+      "props": {
+        "Rows#827:0": {
+          "type": "SLOT",
+          "description": "First header row, then0..n body rows. Re-run fit-instance after content/viewport edits.",
+          "slotSettings": {
+            "stretchChildOnInsert": false,
+            "displayEmptyByDefault": false,
+            "minChildren": 1,
+            "maxChildren": null,
+            "allowPreferredValuesOnly": false
+          },
+          "preferredValues": []
+        },
+        "Show horizontal scrollbar#827:1": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show vertical scrollbar#827:2": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        }
+      },
+      "slots": [
+        [
+          "827:101",
+          "Rows",
+          "VERTICAL",
+          1711,
+          360,
+          true,
+          "BOTH",
+          {
+            "slotContentId": "Rows#827:0"
+          },
+          9
+        ],
+        [
+          "I827:102;842:2180",
+          "Vertical thumb",
+          "VERTICAL",
+          8,
+          352,
+          false,
+          "NONE",
+          {
+            "slotContentId": "Vertical thumb#842:6"
+          },
+          1
+        ],
+        [
+          "I827:105;842:2176",
+          "Horizontal thumb",
+          "HORIZONTAL",
+          1703,
+          8,
+          false,
+          "NONE",
+          {
+            "slotContentId": "Horizontal thumb#842:3"
+          },
+          1
+        ],
+        [
+          "I827:108;585:49",
+          "Pages",
+          "HORIZONTAL",
+          392,
+          32,
+          false,
+          "NONE",
+          {
+            "slotContentId": "Pages#585:21"
+          },
+          11
+        ]
+      ],
+      "vars": [
+        [
+          "827:99",
+          "Table"
+        ]
+      ]
+    }
+  ],
+  "avatarConsumers": [
+    [
+      "828:188",
+      "826:227",
+      false,
+      null
+    ],
+    [
+      "828:204",
+      "826:200",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:220",
+      "826:200",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:232",
+      "826:200",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:244",
+      "826:200",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:256",
+      "826:200",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:268",
+      "826:200",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:280",
+      "826:200",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:292",
+      "826:200",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:304",
+      "826:200",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:316",
+      "826:200",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:328",
+      "826:200",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:341",
+      "826:219",
+      false,
+      null
+    ],
+    [
+      "828:357",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:372",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:383",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:394",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:405",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:416",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:427",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:438",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:449",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:460",
+      "826:235",
+      false,
+      null
+    ],
+    [
+      "828:469",
+      "826:264",
+      false,
+      null
+    ],
+    [
+      "828:482",
+      "826:219",
+      false,
+      null
+    ],
+    [
+      "828:496",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:507",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:518",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:529",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:540",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:551",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:562",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:573",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:584",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:595",
+      "826:235",
+      false,
+      null
+    ],
+    [
+      "828:603",
+      "826:264",
+      false,
+      null
+    ],
+    [
+      "828:616",
+      "826:219",
+      false,
+      null
+    ],
+    [
+      "828:624",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:635",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:646",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:657",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:668",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:679",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:690",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:701",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:712",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:723",
+      "826:235",
+      false,
+      null
+    ],
+    [
+      "828:731",
+      "826:264",
+      false,
+      null
+    ],
+    [
+      "828:744",
+      "826:219",
+      false,
+      null
+    ],
+    [
+      "828:752",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:763",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:774",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:785",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:796",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:807",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:818",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:829",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:840",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:851",
+      "826:235",
+      false,
+      null
+    ],
+    [
+      "828:859",
+      "826:264",
+      false,
+      null
+    ],
+    [
+      "828:872",
+      "826:219",
+      false,
+      null
+    ],
+    [
+      "828:880",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:891",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:902",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:913",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:924",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:935",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:946",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:957",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:968",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:979",
+      "826:235",
+      false,
+      null
+    ],
+    [
+      "828:987",
+      "826:264",
+      false,
+      null
+    ],
+    [
+      "828:1000",
+      "826:219",
+      false,
+      null
+    ],
+    [
+      "828:1008",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1019",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1030",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1041",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1052",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1063",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1074",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1085",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1096",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1107",
+      "826:235",
+      false,
+      null
+    ],
+    [
+      "828:1115",
+      "826:264",
+      false,
+      null
+    ],
+    [
+      "828:1128",
+      "826:219",
+      false,
+      null
+    ],
+    [
+      "828:1136",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1147",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1158",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1169",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1180",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1191",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1202",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1213",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1224",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1235",
+      "826:235",
+      false,
+      null
+    ],
+    [
+      "828:1243",
+      "826:264",
+      false,
+      null
+    ],
+    [
+      "828:1256",
+      "826:219",
+      false,
+      null
+    ],
+    [
+      "828:1264",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1275",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1286",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1297",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1308",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1319",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1330",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1341",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1352",
+      "826:189",
+      false,
+      [
+        "Avatar",
+        false
+      ]
+    ],
+    [
+      "828:1363",
+      "826:235",
+      false,
+      null
+    ],
+    [
+      "828:1371",
+      "826:264",
+      false,
+      null
+    ]
+  ]
+}

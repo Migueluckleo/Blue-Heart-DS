@@ -1,0 +1,532 @@
+---
+{
+  "schema_version": 1,
+  "id": "CHECKBOX-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-029"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/checkbox-request.json",
+      "sha256": "0d804b24f9e637433f3135c82fe5856c14f0e4feaf197285e450122b73f77ea0"
+    },
+    {
+      "id": "SRC-IDENTITY",
+      "path": "evidence/checkbox-pilot/source/identity.json",
+      "sha256": "2eb6e952463cb618e5b94ddc821349290a1afbdca01c1b3222a7546914560b81"
+    },
+    {
+      "id": "SRC-VARIABLES",
+      "path": "evidence/checkbox-pilot/source/variables-and-assets.json",
+      "sha256": "440132e4b6e987c380022a5c8df6c2af18d1902889e4fdbe912ec128001479b3"
+    },
+    {
+      "id": "SRC-EXAMPLES",
+      "path": "evidence/checkbox-pilot/source/label-examples.json",
+      "sha256": "b70673e92054c638b5f87b281d2289f6d8f0f9c8f01a8beda8c61c8880fdc14d"
+    },
+    {
+      "id": "SRC-FALSE",
+      "path": "evidence/checkbox-pilot/source/selected-false.json",
+      "sha256": "022fa5c4a224d22c1e135e700c3f4acea03f08274c7e63ee902e0ca191997523"
+    },
+    {
+      "id": "SRC-TRUE",
+      "path": "evidence/checkbox-pilot/source/selected-true.json",
+      "sha256": "930b35ab562e6abf1df88142e95dd9133204dae1d8603519092c65e0479dbd04"
+    },
+    {
+      "id": "SRC-INDETERMINATE",
+      "path": "evidence/checkbox-pilot/source/selected-indeterminate.json",
+      "sha256": "54d14c39e4069325cbfc4558c2d775e8fb05e45e16028d2e319733e60108657c"
+    },
+    {
+      "id": "SRC-API",
+      "path": "evidence/checkbox-pilot/multiline-api-probe.json",
+      "sha256": "0f2ae898c4227f3b2bae68f678459ad0ac9e7727bbbdec84f4dcd18e21b691b2"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "checkbox.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.spacing-label-gap",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.size-control",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.size-box",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.radius-box",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-bg-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.border-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-stroke-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-text-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.font-label-style",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.font-size",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.font-line-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.font-letter-spacing",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.size-label-max",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-stroke-primary-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-stroke-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.radius-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-bg-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-stroke-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-text-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-stroke-error",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-bg-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.size-indicator",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-indicator-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-bg-primary-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-bg-selected-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-indicator-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "checkbox.color-bg-error",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-EXAMPLES",
+        "SRC-FALSE",
+        "SRC-TRUE",
+        "SRC-INDETERMINATE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API con fuentes, receta y comprobante del destino autorizado."
+      ]
+    },
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-EXAMPLES",
+        "SRC-FALSE",
+        "SRC-TRUE",
+        "SRC-INDETERMINATE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ANATOMY con fuentes, receta y comprobante del destino autorizado."
+      ]
+    },
+    {
+      "id": "REQ-GEOMETRY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-EXAMPLES",
+        "SRC-FALSE",
+        "SRC-TRUE",
+        "SRC-INDETERMINATE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-GEOMETRY con fuentes, receta y comprobante del destino autorizado."
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-EXAMPLES",
+        "SRC-FALSE",
+        "SRC-TRUE",
+        "SRC-INDETERMINATE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TYPOGRAPHY con fuentes, receta y comprobante del destino autorizado."
+      ]
+    },
+    {
+      "id": "REQ-MULTILINE",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-EXAMPLES",
+        "SRC-FALSE",
+        "SRC-TRUE",
+        "SRC-INDETERMINATE",
+        "SRC-API"
+      ],
+      "acceptance": [
+        "Contrastar REQ-MULTILINE con fuentes, receta y comprobante del destino autorizado."
+      ]
+    },
+    {
+      "id": "REQ-COLOR",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-EXAMPLES",
+        "SRC-FALSE",
+        "SRC-TRUE",
+        "SRC-INDETERMINATE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-COLOR con fuentes, receta y comprobante del destino autorizado."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-EXAMPLES",
+        "SRC-FALSE",
+        "SRC-TRUE",
+        "SRC-INDETERMINATE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS con fuentes, receta y comprobante del destino autorizado."
+      ]
+    },
+    {
+      "id": "REQ-FUNCTION",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-EXAMPLES",
+        "SRC-FALSE",
+        "SRC-TRUE",
+        "SRC-INDETERMINATE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-FUNCTION con fuentes, receta y comprobante del destino autorizado."
+      ]
+    },
+    {
+      "id": "REQ-CONTENT",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-EXAMPLES",
+        "SRC-FALSE",
+        "SRC-TRUE",
+        "SRC-INDETERMINATE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-CONTENT con fuentes, receta y comprobante del destino autorizado."
+      ]
+    },
+    {
+      "id": "REQ-A11Y",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-EXAMPLES",
+        "SRC-FALSE",
+        "SRC-TRUE",
+        "SRC-INDETERMINATE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-A11Y con fuentes, receta y comprobante del destino autorizado."
+      ]
+    },
+    {
+      "id": "REQ-PROTOTYPE",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-EXAMPLES",
+        "SRC-FALSE",
+        "SRC-TRUE",
+        "SRC-INDETERMINATE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-PROTOTYPE con fuentes, receta y comprobante del destino autorizado."
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-EXAMPLES",
+        "SRC-FALSE",
+        "SRC-TRUE",
+        "SRC-INDETERMINATE"
+      ],
+      "acceptance": [
+        "Contrastar REQ-DEPENDENCIES con fuentes, receta y comprobante del destino autorizado."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-IDENTITY",
+        "SRC-VARIABLES",
+        "SRC-EXAMPLES",
+        "SRC-FALSE",
+        "SRC-TRUE",
+        "SRC-INDETERMINATE",
+        "SRC-API"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA con fuentes, receta y comprobante del destino autorizado."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Control",
+      "Box",
+      "Check | Minus",
+      "Focus ring",
+      "Label wrapper",
+      "Label"
+    ],
+    "composition": "fixed-no-slots",
+    "accessibility": "defined-host-runtime-not-implemented"
+  }
+}
+---
+# CHECKBOX-001 · Checkbox 1.0.0
+
+### REQ-API
+
+Checkbox expone selected VARIANT con cadenas false | true | indeterminate; state VARIANT default | hover | focus | disabled | error; Label TEXT y Show label BOOLEAN. Existen exactamente quince combinaciones (3×5), sin tamaños ni ejes de icono adicionales. Default false/default, Label="Label" y Show label=false, como la raíz. Mantener ambas propiedades al cambiar variantes. La etiqueta se oculta únicamente cuando el consumidor aporta un nombre accesible equivalente, como una fila de tabla.
+
+### REQ-ANATOMY
+
+Root horizontal contiene Control y Label wrapper; la región de etiqueta aloja un único texto Label. Control aloja Box; Box incorpora Check en true o Minus en indeterminate, y Focus ring en focus. False no tiene indicador. Check Outline/Light y Minus Outline/Regular son instancias Phosphor vinculadas de 12 px; no sustituir por otros pesos, texto, SVG locales o imágenes. Son dependencias fijas determinadas por selected, no controles swap públicos ni variantes nuevas por icono. Label wrapper es una adaptación técnica del destino para el límite aprobado; no existe en el origen. La anatomía es fija y no requiere Slots. Los diez fondos invisibles de los contenedores de icono no renderizan ni tienen control público; se omiten, preservando los glyphs.
+
+### REQ-GEOMETRY
+
+Root HORIZONTAL HUG en ambos ejes, alineación MIN/MIN, padding 0 y gap 8. Label wrapper tiene layout horizontal HUG, padding/gap cero y maxWidth vinculado; su texto rellena el ancho y crece en alto. Control mide 24×24 y centra Box 18×18; Box centra el indicador 12×12. Los ceros de padding/gap de Control y Box comparten spacing/none. Radio Box 4; unchecked tiene stroke interior 2, strokesIncludedInLayout=true. Selected/indeterminate no tienen trazo de Box. Focus ring es hijo absoluto de Box, x=y=-4, 26×26 iniciales, trazo interior 2, radio 8, constraints STRETCH/STRETCH; su tamaño deriva del padre +8, sin crear un token de 26 ni posiciones no vinculables. No se fija el alto de Root a 24 cuando Label crece. Conservar clipping observado y mantener el foco sin recorte.
+
+### REQ-TYPOGRAPHY
+
+Manrope Regular 14 px, interlineado 24 PIXELS, tracking 0 PIXELS, sin truncamiento, subrayado ni límite de líneas. Crear/aplicar un único estilo checkbox/label con cinco bindings tipográficos propios, incluido fontStyle mediante semantic.font-weight-regular; el source conserva Regular literal sin ese binding. Los estilos de otras familias con valores semejantes tienen tokens de propietario distinto y no crean una dependencia de Checkbox. Color se vincula por estado fuera del estilo. Label conserva su propiedad TEXT y la visibilidad pública.
+
+### REQ-MULTILINE
+
+Decisión humana: región de etiqueta HUG de ancho natural hasta un máximo de 320 px; después envuelve y crece en alto. La API disponible rechaza binding de maxWidth en TEXT. Por ello el token se aplica a Label wrapper FRAME; el texto usa HEIGHT/FILL y hereda esa restricción, sin un límite literal paralelo. La prueba nativa conserva 35×24 para Label y envuelve el ejemplo largo en 320×96. Control queda arriba, alineado a la primera línea de 24 px. La primitiva/semántico nuevos de 320 y el token size/label-max gobiernan maxWidth del contenedor de etiqueta. La raíz no lo implementa: sus labels WIDTH_AND_HEIGHT sin maxWidth llegan a 977 px en el ejemplo largo. Blue Heart corrige ese defecto por autorización explícita, sin modificar el origen. Texto corto mantiene su ancho natural; no reservar siempre 320 px. No hay breakpoint numérico. Si el contenedor es más estrecho, el consumidor puede asignar ancho al instance y a la región de etiqueta FILL manteniendo maxWidth; acreditar esa adaptación antes de prometer ajuste automático. El caso vacío debe conservar geometría pero no acredita un nombre accesible válido.
+
+### REQ-COLOR
+
+Roles THEMED: Box seleccionado/indeterminate primary-default en default/focus, primary-hover en hover; borde de Box sin seleccionar primary-hover en hover. Reutilizar sus vectores completos Contable/Administrativo/Servicios/Personas. Foco usa el mismo alias fijo Contable en los cuatro modos; error, disabled, fondos sin seleccionar, Label e indicador son INVARIANT. No extender el morado fijo de Tabs ni convertir todo el componente en temático. Check/Minus son marcas de selección sobre Box, sin texto visible contraparte: su rol es indicador, no icono acompañante de Label. Conservar on-brand blanco en estados activos y tono disabled en inactivos conforme al criterio de roles explícitos de BH-P06. El estado de selección, el estado de interacción y el tema son dimensiones distintas. Aliases y valores viven únicamente en el token set.
+
+### REQ-TOKENS
+
+Aplicar BH-P07 para mínimo, nombres, scopes y tres colecciones. Checkbox declara 29 firmas directas, agrupadas una sola vez bajo checkbox/ en component. Se comparten tokens por firma completa: padding y gaps cero, ancho/alto de cada medida, stroke 2 de borde/foco y todos los estados con aliases completos iguales. Las dos nuevas cadenas numéricas generales primitive.size-18→semantic.size-18 y primitive.size-320→semantic.size-320 añaden solo cuatro Foundations con scopes vacíos. La primera acredita Box observado; la segunda la decisión humana. No duplicar colores semánticos, crear literals para ahorrar tokens, añadir modos de estado ni ampliar scopes. Rutas Figma en la tabla; nombres lógicos, WEB y aliases pertenecen al conjunto seleccionado.
+
+| ID lógico | Ruta Figma |
+|---|---|
+| checkbox.spacing-none | checkbox/spacing/none |
+| checkbox.spacing-label-gap | checkbox/spacing/label-gap |
+| checkbox.size-control | checkbox/size/control |
+| checkbox.size-box | checkbox/size/box |
+| checkbox.radius-box | checkbox/radius/box |
+| checkbox.color-bg-default | checkbox/color/bg/default |
+| checkbox.border-width | checkbox/border/width |
+| checkbox.color-stroke-default | checkbox/color/stroke/default |
+| checkbox.color-text-default | checkbox/color/text/default |
+| checkbox.font-family | checkbox/font/family |
+| checkbox.font-label-style | checkbox/font/label-style |
+| checkbox.font-size | checkbox/font/size |
+| checkbox.font-line-height | checkbox/font/line-height |
+| checkbox.font-letter-spacing | checkbox/font/letter-spacing |
+| checkbox.size-label-max | checkbox/size/label-max |
+| checkbox.color-stroke-primary-hover | checkbox/color/stroke/primary-hover |
+| checkbox.color-stroke-focus | checkbox/color/stroke/focus |
+| checkbox.radius-focus | checkbox/radius/focus |
+| checkbox.color-bg-disabled | checkbox/color/bg/disabled |
+| checkbox.color-stroke-disabled | checkbox/color/stroke/disabled |
+| checkbox.color-text-disabled | checkbox/color/text/disabled |
+| checkbox.color-stroke-error | checkbox/color/stroke/error |
+| checkbox.color-bg-primary-default | checkbox/color/bg/primary-default |
+| checkbox.size-indicator | checkbox/size/indicator |
+| checkbox.color-indicator-default | checkbox/color/indicator/default |
+| checkbox.color-bg-primary-hover | checkbox/color/bg/primary-hover |
+| checkbox.color-bg-selected-disabled | checkbox/color/bg/selected-disabled |
+| checkbox.color-indicator-disabled | checkbox/color/indicator/disabled |
+| checkbox.color-bg-error | checkbox/color/bg/error |
+
+### REQ-FUNCTION
+
+Permite opciones independientes, aceptación y selección de elementos para acciones en lote. Click en casilla o etiqueta alterna false/true; desde indeterminate pasa a true. En un maestro de tabla, el host calcula mixed y selecciona las filas del conjunto aplicable; el componente aislado solo comunica su valor, no conoce filas, filtros o permisos. Error se muestra tras intentar continuar y debe acompañarse de mensaje explicativo externo. El host valida y retira el error; la reproducción local conserva state al alternar, sin inventar validación automática. Disabled no cambia y su motivo se explica cerca. Exclusión mutua corresponde a Radio y aplicación inmediata a Toggle, sin incorporarlos al encargo.
+
+### REQ-CONTENT
+
+Etiqueta afirmativa, específica y en sentence case, con contenido real del contexto; permitir español/portugués y texto largo sin elipsis. No marcar por defecto consentimientos ni cobros. Un enlace al aviso completo y mensajes como "Debes aceptar el aviso de privacidad para continuar" pertenecen al host, con sus destinos/datos y revisión de contenido; el ejemplo no certifica requisitos legales. Sin Label visible, el host conserva el nombre accesible de la fila/opción. No inferir límites de cantidad de filas desde los ejemplos.
+
+### REQ-A11Y
+
+En desarrollo futuro, usar un control con nombre accesible asociado a la opción y una representación de true/false/mixed; permitir teclado y foco visible. El host vincula error con aria-invalid y aria-describedby, aporta texto de error, agrupación y nombre aun cuando Label se oculte. No depender solo de rojo para comunicar error. La geometría visual de Control es 24 px; adaptaciones de área táctil adicional corresponden al consumidor y no cambian el único tamaño observado. Medir contraste de texto, marcas y borde activo en cada tema sobre superficies conocidas; disabled es inactivo y no se declara AA. Figma/estados visuales no acreditan teclado, ARIA, accesibilidad web ni aprobación independiente.
+
+### REQ-PROTOTYPE
+
+La raíz no contiene reacciones. El destino añade una reproducción local derivada y adoptada en ADR-029: ON_CLICK en todos los estados salvo disabled apunta al selected opuesto (indeterminate→true), conservando state. En default, MOUSE_ENTER lleva a hover del mismo selected; en hover, MOUSE_LEAVE lleva a default del mismo selected. Por ello un click durante hover no revierte la selección al salir. Focus y error conservan sus estados; no se inventan estados compuestos ni borrado de error por click. El área incluye la etiqueta. La reproducción no implementa navegación, validación de formulario, lógica de maestro/filas ni teclado. Registrar por separado grafo nativo y prueba visible en el presentador cuando se ejecute.
+
+### REQ-DEPENDENCIES
+
+La auditoría inversa de las diez páginas existentes no detectó principales, instancias o helpers de Checkbox; no hay sustituciones directas ni transitivas pendientes. Sus únicos componentes remotos son Check y Minus de Phosphor. No forzar Button ni Input como dependencia por semejanza funcional. Los mensajes de error y datos de grupos son responsabilidades del consumidor, no dependencias de diseño resueltas que la raíz no aporta. Origen y proyecto anterior permanecen en solo lectura.
+
+### REQ-QA
+
+Validar las quince combinaciones desde instancias en cuatro modos y con Show label true/false. Comprobar dimensiones 24/18/12, borde/radios/anillo, estilos, aliases y los 544 bindings de la receta. Ejercitar Label corta, larga, vacía y no divisible, cambio de selected/state, restauración y foco con etiqueta multilínea. Verificar que los roles fijos no cambian con el tema y que los tres roles temáticos sí siguen su vector. Probar click/hover y disabled desde consumidor; distinguir inspección de reacciones de reproducción en presentador. Verificar ausencia de residuos de pruebas y contraste con tolerancia de color 1e-6 y geometría .01 px. QA documental/infraestructura no acredita implementación web o revisión independiente.

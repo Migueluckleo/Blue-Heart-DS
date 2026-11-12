@@ -1,0 +1,380 @@
+{
+  "nodes": [
+    {
+      "id": "implementations_web_src_styles_progress_css",
+      "label": "Proporciones de la barra y movimiento reducido",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L316",
+      "rationale": "El valor controlado dimensiona el indicador. El indeterminado usa un segmento de la fuente y se detiene con reduced motion."
+    },
+    {
+      "id": "implementations_web_src_styles_checkbox_css",
+      "label": "Marca nativa de Checkbox y foco en Box",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L398",
+      "rationale": "Control y Box tienen medidas vinculadas. Label envuelve conservando alineación a la primera línea."
+    },
+    {
+      "id": "implementations_web_src_styles_upload_css",
+      "label": "Zona de File Upload, foco y colores por estado",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L486",
+      "rationale": "Los roles de superficie, borde, mensaje y texto siguen los tokens del componente."
+    },
+    {
+      "id": "implementations_web_src_styles_tooltip_css",
+      "label": "Tooltip limita Body y orienta su flecha propia",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L243",
+      "rationale": "Los aliases controlan tamaño, contraste y tipografía. El placement orienta la flecha sin lógica de colisiones."
+    },
+    {
+      "id": "implementations_web_src_styles_dot_css",
+      "label": "Dot usa geometría, borde y tipografía de los aliases del tema",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L56",
+      "rationale": "El punto acompaña al texto del anfitrión y el contador conserva tamaño mínimo."
+    },
+    {
+      "id": "implementations_web_src_styles_selection_css",
+      "label": "Foco y estados de selección sobre controles HTML nativos",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L69",
+      "rationale": "El CSS refleja checked, disabled, invalid y focus-visible de los inputs."
+    },
+    {
+      "id": "implementations_web_src_styles_group_css",
+      "label": "Dirección y roles de texto del Radio group web",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/web/src/styles.css",
+      "source_location": "L203",
+      "rationale": "La dirección usa espacios propios y el mensaje de error conserva su rol semántico."
+    },
+    {
+      "id": "qa_contracts_file_upload_checkbox_v1_0_0_review_upload_checkbox_doc",
+      "label": "Delegación de File Upload y Checkbox",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/contracts/file-upload-checkbox.v1.0.0.review.md",
+      "source_location": "L5",
+      "rationale": "Capturas respaldan propiedades acotadas, composición oficial y Phosphor por key."
+    },
+    {
+      "id": "qa_contracts_linear_progress_v1_0_0_review_progress_doc",
+      "label": "Delegación del indicador lineal y el auxiliar",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/contracts/linear-progress.v1.0.0.review.md",
+      "source_location": "L5",
+      "rationale": "Siete capturas resuelven 84 variantes y 22 roles. File Upload es consumidor."
+    },
+    {
+      "id": "qa_implementations_file_upload_checkbox_v1_0_0_review_linked_native_qa",
+      "label": "File Upload y Checkbox verificados con iconos Phosphor vinculados",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/file-upload-checkbox.v1.0.0.review.md",
+      "source_location": "L5",
+      "rationale": "La matriz verifica estilos, 18 reacciones de Checkbox, 2 de File Upload y siete instancias oficiales del sistema."
+    },
+    {
+      "id": "qa_implementations_file_upload_checkbox_v1_0_0_review_linked_consumer_qa",
+      "label": "Checkbox multilínea y File Upload en tres anchuras",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/file-upload-checkbox.v1.0.0.review.md",
+      "source_location": "L7",
+      "rationale": "La prueba temporal verificó overrides y preservó las páginas de maestros."
+    },
+    {
+      "id": "qa_implementations_file_upload_checkbox_v1_0_0_review_linked_web_qa",
+      "label": "Checkbox mixto y selección nativa de archivos en Chrome",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/file-upload-checkbox.v1.0.0.review.md",
+      "source_location": "L9",
+      "rationale": "La prueba ejercita Espacio, Enter, rechazo, arrastre y resultado local."
+    },
+    {
+      "id": "qa_implementations_linear_progress_v1_0_0_review_progress_native_qa",
+      "label": "Cuatro sets y 100 comprobaciones de Linear Progress",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/linear-progress.v1.0.0.review.md",
+      "source_location": "L5",
+      "rationale": "Se verificaron reacciones, clipping, escalado, visibilidad independiente y riel para File Upload."
+    },
+    {
+      "id": "qa_implementations_linear_progress_v1_0_0_review_progress_web_qa",
+      "label": "Barra controlada e indeterminada en web",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/linear-progress.v1.0.0.review.md",
+      "source_location": "L7",
+      "rationale": "Chrome verifica rango, tamaños, parada y movimiento reducido."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_census",
+      "label": "Censo de maestros públicos, auxiliares y demo de la raíz",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L3",
+      "rationale": "29 páginas y 66 IDs, incluido un demo fuera de alcance."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_rebuild_progress",
+      "label": "Reconstrucción verificable por identidad de fuente",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L13",
+      "rationale": "23 maestros comprobados y 42 pendientes."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_tooltip_dependency",
+      "label": "Tooltip verificado habilita Menu item",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L19",
+      "rationale": "Menu item precede a tres maestros de Sidebar."
+    },
+    {
+      "id": "registry_root_families_2026_11_11_root_progress_dependency",
+      "label": "File Upload reutiliza Linear Progress y Button",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L17",
+      "rationale": "La composición se conserva en Figma y React."
+    },
+    {
+      "id": "sources_figma_snapshots_root_families_2026_11_11_checkbox_1_0_0_md_checkbox_source",
+      "label": "Selección independiente y valor indeterminado calculado por el anfitrión",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/sources/figma-snapshots/root-families-2026-11-11/checkbox.1.0.0.md.txt",
+      "source_location": "L510",
+      "rationale": "Al activar mixed pasa a true. El error y las filas aplicables pertenecen al anfitrión."
+    },
+    {
+      "id": "sources_figma_snapshots_root_families_2026_11_11_file_upload_1_0_1_md_upload_source",
+      "label": "File Upload reutiliza Button secondary y el riel oficial",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/sources/figma-snapshots/root-families-2026-11-11/file-upload.1.0.1.md.txt",
+      "source_location": "L566",
+      "rationale": "Success utiliza el riel large al 100 con Header y textos ocultos."
+    },
+    {
+      "id": "sources_figma_snapshots_root_families_2026_11_11_linear_progress_1_0_1_md_progress_source",
+      "label": "Prototipo determinado y ciclo auxiliar indeterminado",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/sources/figma-snapshots/root-families-2026-11-11/linear-progress.1.0.1.md.txt",
+      "source_location": "L412",
+      "rationale": "Las fases son muestras; el host web entrega el valor real y decide cuándo comunicar un resultado."
+    },
+    {
+      "id": "specs_components_checkbox_contract_v1_0_0_checkbox_guide",
+      "label": "Checkbox para decisiones independientes y acciones en lote",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/checkbox.contract.v1.0.0.md",
+      "source_location": "L25",
+      "rationale": "Un control nativo conserva nombre, foco y estado mixto; el mensaje de error se asocia desde el host."
+    },
+    {
+      "id": "specs_components_file_upload_contract_v1_0_0_upload_guide",
+      "label": "Seleccionar o arrastrar archivos con alternativa de teclado",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/file-upload.contract.v1.0.0.md",
+      "source_location": "L25",
+      "rationale": "El anfitrión define formatos, verifica la selección y comunica el resultado."
+    },
+    {
+      "id": "specs_components_linear_progress_contract_v1_0_0_progress_guide",
+      "label": "Mostrar avance real o espera indeterminada",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/linear-progress.contract.v1.0.0.md",
+      "source_location": "L25",
+      "rationale": "Los colores de resultado requieren explicación textual y confirmación del proceso."
+    },
+    {
+      "id": "specs_components_linear_progress_contract_v1_0_0_progress_aux",
+      "label": "Riel de tamaños oficiales y auxiliar privado único",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/linear-progress.contract.v1.0.0.md",
+      "source_location": "L38",
+      "rationale": "El auxiliar se usa en 12 variantes, con un grafo de fases distinto del progreso determinado."
+    }
+  ],
+  "edges": [
+    {
+      "source": "registry_root_families_2026_11_11_root_rebuild_progress",
+      "target": "registry_root_families_2026_11_11_root_census",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_rebuild_progress",
+      "target": "registry_root_families_2026_11_11_root_progress_dependency",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_progress_dependency",
+      "target": "specs_components_file_upload_contract_v1_0_0_upload_guide",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "registry_root_families_2026_11_11_root_progress_dependency",
+      "target": "specs_components_linear_progress_contract_v1_0_0_progress_aux",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/registry/root-families-2026-11-11.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_file_upload_contract_v1_0_0_upload_guide",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_file_upload_1_0_1_md_upload_source",
+      "relation": "derives_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/file-upload.contract.v1.0.0.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_linear_progress_contract_v1_0_0_progress_aux",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_linear_progress_1_0_1_md_progress_source",
+      "relation": "derives_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/linear-progress.contract.v1.0.0.md",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_checkbox_contract_v1_0_0_checkbox_guide",
+      "target": "sources_figma_snapshots_root_families_2026_11_11_checkbox_1_0_0_md_checkbox_source",
+      "relation": "derives_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/checkbox.contract.v1.0.0.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_file_upload_contract_v1_0_0_upload_guide",
+      "target": "specs_components_linear_progress_contract_v1_0_0_progress_aux",
+      "relation": "depends_on",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/file-upload.contract.v1.0.0.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_contracts_linear_progress_v1_0_0_review_progress_doc",
+      "target": "specs_components_linear_progress_contract_v1_0_0_progress_guide",
+      "relation": "validates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/contracts/linear-progress.v1.0.0.review.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_contracts_file_upload_checkbox_v1_0_0_review_upload_checkbox_doc",
+      "target": "specs_components_checkbox_contract_v1_0_0_checkbox_guide",
+      "relation": "validates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/contracts/file-upload-checkbox.v1.0.0.review.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_contracts_file_upload_checkbox_v1_0_0_review_upload_checkbox_doc",
+      "target": "specs_components_file_upload_contract_v1_0_0_upload_guide",
+      "relation": "validates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/contracts/file-upload-checkbox.v1.0.0.review.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_implementations_file_upload_checkbox_v1_0_0_review_linked_native_qa",
+      "target": "qa_contracts_file_upload_checkbox_v1_0_0_review_upload_checkbox_doc",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/file-upload-checkbox.v1.0.0.review.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_implementations_file_upload_checkbox_v1_0_0_review_linked_consumer_qa",
+      "target": "qa_implementations_file_upload_checkbox_v1_0_0_review_linked_native_qa",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/file-upload-checkbox.v1.0.0.review.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_implementations_file_upload_checkbox_v1_0_0_review_linked_web_qa",
+      "target": "implementations_web_src_styles_checkbox_css",
+      "relation": "validates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/file-upload-checkbox.v1.0.0.review.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_implementations_file_upload_checkbox_v1_0_0_review_linked_web_qa",
+      "target": "implementations_web_src_styles_upload_css",
+      "relation": "validates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/file-upload-checkbox.v1.0.0.review.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_implementations_linear_progress_v1_0_0_review_progress_native_qa",
+      "target": "specs_components_linear_progress_contract_v1_0_0_progress_aux",
+      "relation": "validates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/linear-progress.v1.0.0.review.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "qa_implementations_linear_progress_v1_0_0_review_progress_web_qa",
+      "target": "implementations_web_src_styles_progress_css",
+      "relation": "validates",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/qa/implementations/linear-progress.v1.0.0.review.md",
+      "source_location": "L7",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": null,
+  "output_tokens": null,
+  "usage_status": "UNAVAILABLE"
+}

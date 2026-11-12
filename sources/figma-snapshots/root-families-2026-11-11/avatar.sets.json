@@ -1,0 +1,148 @@
+{
+  "sets": [
+    {
+      "id": "145:106",
+      "page": "145:42",
+      "pageName": "Avatars",
+      "type": "COMPONENT_SET",
+      "name": "Avatar",
+      "x": 4200,
+      "y": 1050,
+      "width": 600,
+      "height": 420,
+      "props": {
+        "Initials#145:0": {
+          "type": "TEXT",
+          "defaultValue": "JA"
+        },
+        "Icon#145:13": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "145:59",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "77a821b72c03fcfbd0ca9b2910c3fb5c98ed210f"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ac05f135edf1318580f23b4e20de17744d0453f7"
+            }
+          ]
+        },
+        "Show status#145:26": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "type": {
+          "type": "VARIANT",
+          "defaultValue": "image",
+          "variantOptions": [
+            "image",
+            "icon",
+            "text"
+          ]
+        },
+        "size": {
+          "type": "VARIANT",
+          "defaultValue": "extra-large",
+          "variantOptions": [
+            "extra-large",
+            "large",
+            "medium",
+            "small"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "145:94",
+          "type=image, size=extra-large"
+        ],
+        [
+          "145:95",
+          "type=image, size=large"
+        ],
+        [
+          "145:96",
+          "type=image, size=medium"
+        ],
+        [
+          "145:97",
+          "type=image, size=small"
+        ],
+        [
+          "145:98",
+          "type=icon, size=extra-large"
+        ],
+        [
+          "145:99",
+          "type=icon, size=large"
+        ],
+        [
+          "145:100",
+          "type=icon, size=medium"
+        ],
+        [
+          "145:101",
+          "type=icon, size=small"
+        ],
+        [
+          "145:102",
+          "type=text, size=extra-large"
+        ],
+        [
+          "145:103",
+          "type=text, size=large"
+        ],
+        [
+          "145:104",
+          "type=text, size=medium"
+        ],
+        [
+          "145:105",
+          "type=text, size=small"
+        ]
+      ]
+    }
+  ],
+  "swaps": {
+    "Icon#145:13": {
+      "id": "145:59",
+      "key": "77a821b72c03fcfbd0ca9b2910c3fb5c98ed210f",
+      "name": "Format=Outline, Weight=Light",
+      "remote": true
+    }
+  },
+  "children": [
+    [
+      "145:106",
+      "Avatar",
+      "COMPONENT_SET"
+    ],
+    [
+      "145:147",
+      "Avatar group",
+      "COMPONENT_SET"
+    ],
+    [
+      "154:54",
+      "Overview",
+      "FRAME"
+    ],
+    [
+      "154:255",
+      "Variants & states",
+      "FRAME"
+    ],
+    [
+      "154:268",
+      "Avatar · matriz de referencia",
+      "FRAME"
+    ],
+    [
+      "161:281",
+      "Avatar · Uso y QA",
+      "FRAME"
+    ]
+  ]
+}

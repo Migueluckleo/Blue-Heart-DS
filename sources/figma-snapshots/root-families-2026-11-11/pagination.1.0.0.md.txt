@@ -1,0 +1,428 @@
+---
+{
+  "schema_version": 1,
+  "id": "PAGINATION-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-038"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/pagination-request.json",
+      "sha256": "8fc493311e436d46df56caaa67ea6f7717e7d93694f97b2ebd331e20fd422e6e"
+    },
+    {
+      "id": "SRC-CHOICES",
+      "path": "evidence/authorization/pagination-source-decisions.json",
+      "sha256": "a01b0f5c2021a0374de627706f113f211746012dbf0a1409269a09805e74892e"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/pagination-pilot/source/capture-manifest.json",
+      "sha256": "af2af64f7926cda1458b4cb4448beeb999699deb195c9020de880c27aecc1ce3"
+    },
+    {
+      "id": "SRC-MODEL",
+      "path": "evidence/pagination-pilot/source/pagination-component-contract.yaml",
+      "sha256": "8b9361c9f4823d4680fec4a25f40afda58787ebed2c1c0bc9cd22e438b9655fc"
+    },
+    {
+      "id": "SRC-IDENTITY",
+      "path": "evidence/pagination-pilot/source/page-index.json",
+      "sha256": "e96b86494ac9b558552ea6694f1151a9f399301ef36eea2bccabd047ee97070b"
+    },
+    {
+      "id": "SRC-PLAN",
+      "path": "evidence/pagination-pilot/build-plan.json",
+      "sha256": "e23838d69ceed2a9035252ddb4bb2d39e5bc4abb79dc6e877373fbbe5b898c5e"
+    },
+    {
+      "id": "SRC-AUDIT",
+      "path": "evidence/pagination-pilot/reverse-dependencies.json",
+      "sha256": "e4289ad9807f379559cc9fbc4ac5d29c3de768f02fe19c97d433c6ef53e605e3"
+    },
+    {
+      "id": "SRC-ASSETS",
+      "path": "evidence/pagination-pilot/source/official-phosphor.json",
+      "sha256": "f8b0d05d87cd7f5ec574865567070434ecfeafdffe86fc825b97466f41a227f1"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "contract",
+      "id": "PAGINATION-ITEM-001",
+      "version": "1.0.0",
+      "relation": "composition"
+    },
+    {
+      "kind": "contract",
+      "id": "INPUT-001",
+      "version": "2.0.1",
+      "relation": "composition"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.spacing-top",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.spacing-container",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.color-bg-surface-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.color-text-secondary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.font-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.font-size",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.font-line-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.font-tracking",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.spacing-items",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.size-rows-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.spacing-compact",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.color-text-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "pagination.font-medium",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ANATOMY contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-COMPOSITION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-COMPOSITION contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-SLOT",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-SLOT contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-LAYOUT contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TYPOGRAPHY contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-THEME contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-CONTENT",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-CONTENT contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-BEHAVIOR",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-BEHAVIOR contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-ACCESSIBILITY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-ACCESSIBILITY contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-CONSUMPTION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-CONSUMPTION contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CHOICES",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-ASSETS"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA contra receta, fuentes y evidencia ejecutada, preservando adaptaciones adoptadas y límites."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Root",
+      "Range",
+      "Pages Slot",
+      "Rows per page Input",
+      "Page label",
+      "Directional items"
+    ],
+    "composition": "Native Pages Slot and pinned official Item/Input; no child token copies.",
+    "accessibility": "Host semantics/keyboard/44px touch target; source contrast measured, no global AA claim."
+  }
+}
+---
+# PAGINATION-0011.0.0
+
+### REQ-ANATOMY
+
+Dos variantes reales default y compact. Default contiene Range opcional derivado, Pages nativo y Rows per page; compact conserva Left, Page label y Right. No crear una variante por página, cantidad de resultados o tamaño de dataset. Los ejemplos son composiciones del consumidor.
+
+### REQ-API
+
+El responsable adopta completar la descripción. Exponer Pages como SLOT editable y Range TEXT/Show range BOOLEAN false y Show rows per page BOOLEAN true, aplicables a default; Page label TEXT se aplica a compact y conserva inicialmente Page 5 of 12. El rango inicial1–20 de240 permanece oculto y el selector muestra20. Guardar keys reales y matriz de aplicabilidad; no afirmar que propiedades exclusivas de default cambian compact.
+
+### REQ-COMPOSITION
+
+PAGINATION-ITEM-001@1.0.0 gobierna todos los números/flechas/ellipsis. INPUT-001@2.0.1 small/filled/default, sin label/helper/tooltip/badge y con CaretDown oficial, es el disparador de Rows per page, ancho88 gobernado por token del padre. Badge queda transitivo del Input aun oculto. No replicar sus tokens, dibujar otro input ni crear Select temporal. Opciones20/50/100 y su apertura son del host o de un Dropdown menu oficial en muestra.
+
+### REQ-SLOT
+
+Pages es Slot horizontal HUG, gap4, mínimo1 y sin máximo de muestra; solo acepta instancias de Pagination item. Conservar referencias y permitir insertar, retirar y reordenar desde instancia sin detach. No fijar11 como cardinalidad. El host mantiene exactamente una página selected, orden coherente y extremos/ellipsis; Figma no ejecuta ese algoritmo automáticamente. Vacío es inválido: si no hay paginación aplicable, el host retira el contenedor.
+
+### REQ-LAYOUT
+
+Preservar muestra default552×72 y compact213×72. Padding top16, lados24 e inferior24; gap default24 y compact12. Default Pages mide392 con11ítems de muestra y el Input88. Altura HUG y ancho HUG, sin wrapping automático. Rango oculto inicialmente preserva geometría. Para pie de tabla, el host establece ancho disponible y distribución space-between; no prometer centro geométrico exacto ni compact automático por breakpoint. Idiomas/texto largo pueden aumentar el ancho.
+
+### REQ-TYPOGRAPHY
+
+Page label usa Manrope Medium14/20; Range derivado usa Regular14/20 y texto secundario, tracking0. Aplicar dos estilos propios compartidos, con bindings; copiar estos roles no mueve la tipografía de Input/Item a tokens del padre. Las cadenas inglesas fuente son editables; muestras localizadas no cambian la API.
+
+### REQ-TOKENS
+
+La receta adopta15 firmas para30usos propios: incluye Range derivado y ancho88 del Input como decisión de layout del padre. No duplicar colores, fuentes, estados o tamaños internos de los hijos. Todos los tokens se agrupan en pagination/ con calificador group- en el último rol para evitar colisiones, conservando categorías color/bg, color/text, font, spacing y size. BH-P07 es el propietario de las reglas de mínimo/scope/colecciones.
+
+### REQ-THEME
+
+Todos los roles propios del contenedor son invariantes y repiten alias en los cuatro modos. La selección temática pertenece exclusivamente a Pagination item; Input conserva su propio contrato. El contenedor selecciona el modo component que heredan sus hijos. No añadir temas o modos para páginas o estados.
+
+### REQ-CONTENT
+
+Rango localizado con en dash y de, separadores según el país; Page label editable. El host calcula rangos/total y opciones20/50/100 con datos válidos. Usar en listados con más de una página; no combinar con scroll infinito. Conservar filtros/orden al cambiar página y devolver foco al inicio del listado son responsabilidades del host futuro, no efectos nativos demostrados por estos componentes.
+
+### REQ-BEHAVIOR
+
+Default se recomienda para puntero fino y compact para interacción táctil; la elección no depende automáticamente del breakpoint. El host mantiene primera/última, vecinos y ellipsis cuando hay más de7páginas; flechas dobles simples se deshabilitan en extremos. No deshabilitar toda la paginación. Changing rows puede reiniciar la página en la muestra, pero el componente no contiene negocio ni un motor de consultas. Construir enlaces reales de reproducción con datos ficticios, distinguiéndolos de la lógica de datos.
+
+### REQ-ACCESSIBILITY
+
+El host web aporta nav con aria-label Paginación, secuencia Tab, activación Enter/Espacio, aria-current y foco del listado, conforme a los contratos hijos. Compact no amplía por sí solo sus controles32 a44; el host provee target táctil sin alterar silenciosamente el principal. No acreditar accesibilidad web ni interacción táctil física por capturas o ratón.
+
+### REQ-CONSUMPTION
+
+Consumir ID/versión/hash/modo antes de construir. Si el cierre transitivo excede65536bytes, mantener BLOCKED y usar paquete de todos los requisitos del padre con cadenas de tokens y referencias tipadas íntegras a hijos. No truncar reglas, quitar pins ni subir presupuesto; expandir hijos desde sus guías al modificar su interior. El mapa inverso registra cero consumidores anteriores y las instancias nuevas del hijo, sin ciclos normativos.
+
+### REQ-QA
+
+Verificar dos variantes,15variables/60aliases,30bindings y Slot real. Desde instancias probar cantidades menores/mayores que11, orden, Label largo, cambio de variante, flags/rango, Input20/50/100, cuatro modos y vínculo oficial de hijos. Vacío debe violar min1, no pasar silenciosamente. Documentar límite de ancho/no wrapping y responsabilidad44 táctil. Revisar guía editable y navegación visible; infraestructura no valida Figma. Fuente/proyecto anterior solo lectura; React/negocio/ARIA/teclado diferidos.
+

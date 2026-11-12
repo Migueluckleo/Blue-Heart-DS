@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:evolution-lab:consumption-query:1",
+  "title": "Graph-First query protocol 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "component", "intent"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "component": {"type": "string", "minLength": 1},
+    "intent": {"enum": ["component", "dependencies", "evidence", "tokens", "variants", "states"]},
+    "token": {"type": ["string", "null"]},
+    "max_documents": {"type": "integer", "minimum": 1, "maximum": 128},
+    "max_bytes": {"type": "integer", "minimum": 1, "maximum": 2000000}
+  },
+  "$defs": {
+    "response": {
+      "type": "object",
+      "required": ["schema_version", "status", "reason"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "status": {"enum": ["PASS", "FALLBACK", "BLOCKED"]},
+        "mode": {"enum": ["graph", "fallback"]},
+        "reason": {"type": ["string", "null"]},
+        "snapshot": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "nodes": {"type": "array"},
+        "relations": {"type": "array"},
+        "documents": {"type": "array"},
+        "tokens": {"type": "array"},
+        "metrics": {"type": "object"},
+        "coverage": {"enum": ["DIRECT_REFERENCES", "CONTRACT_AND_AMENDMENTS_ONLY"]}
+      }
+    },
+    "index": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "status", "ds_digest", "source_commit", "source_graph_sha256", "documents", "relations", "components", "tokens"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "status": {"const": "CURRENT"},
+        "ds_digest": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "source_commit": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+        "source_graph_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "documents": {"type": "object", "minProperties": 1},
+        "relations": {"type": "array"},
+        "components": {"type": "object"},
+        "tokens": {"type": "object"}
+      }
+    }
+  }
+}

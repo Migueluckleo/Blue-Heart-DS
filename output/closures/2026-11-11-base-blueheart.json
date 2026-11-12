@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "run": "2026-11-11-base-blueheart",
+  "status": "NEEDS_SEMANTICS",
+  "started": 1794425368.551734,
+  "invocations": 1,
+  "retry_attempts": 0,
+  "previous_attempts": [],
+  "phases": [
+    {
+      "name": "documents",
+      "seconds": 1.475,
+      "status": "PASS",
+      "result": {
+        "status": "PASS",
+        "files": 107,
+        "findings": 0,
+        "timings": {
+          "inventory": 0.144,
+          "metadata": 1.277,
+          "status": 0.012,
+          "validation": 0.036
+        }
+      }
+    },
+    {
+      "name": "graph_plan",
+      "seconds": 0.07,
+      "status": "PASS",
+      "result": {
+        "status": "PREPARED",
+        "run": "2026-11-11-base-blueheart",
+        "semantic_files": 55,
+        "chunks": 3,
+        "next": "Extraer cada chunk según la skill Graphify y después ejecutar scripts/ds graph close --run 2026-11-11-base-blueheart"
+      }
+    }
+  ],
+  "usage_start": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "usage_end": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "agent_tokens": "UNAVAILABLE",
+  "agent_tool_calls": "UNAVAILABLE",
+  "command_phase_calls": 2,
+  "publication": "NOT_RUN",
+  "graph_run": "2026-11-11-base-blueheart",
+  "missing": [
+    "chunk-00.json",
+    "chunk-01.json",
+    "chunk-02.json"
+  ],
+  "next_command": "scripts/ds close --run 2026-11-11-base-blueheart",
+  "elapsed_seconds": 1.728,
+  "concurrent_attempts": 0,
+  "reuse": {
+    "ds_core.corpus": {
+      "executed": 1,
+      "reused": 1
+    },
+    "yaml_files": {
+      "executed": 53,
+      "reused": 0,
+      "persisted_reused": 0
+    },
+    "ds_core.generate_status": {
+      "executed": 1,
+      "reused": 0
+    },
+    "ds_core.documentation_check": {
+      "executed": 1,
+      "reused": 0
+    }
+  },
+  "hash_reads": 123
+}

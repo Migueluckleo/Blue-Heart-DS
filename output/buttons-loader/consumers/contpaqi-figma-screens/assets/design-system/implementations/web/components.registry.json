@@ -1,0 +1,38 @@
+[
+  {
+    "id": "BUTTON-001",
+    "slug": "buttons",
+    "name": "Buttons",
+    "module": "button",
+    "exports": [
+      "Button"
+    ],
+    "category": "acción",
+    "notes": "Activa una acción local y usa Terminar demo para salir de loading.",
+    "base": "specs/components/buttons.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Label, visibilidad y swaps son propiedades acotadas"
+    },
+    "qa": "qa/implementations/buttons-loader.v1.0.0.review.md"
+  },
+  {
+    "id": "LOADER-001",
+    "slug": "loader",
+    "name": "Loader",
+    "module": "loader",
+    "exports": [
+      "Loader"
+    ],
+    "category": "estado",
+    "notes": "Indicador indeterminado con tamaños y roles observados.",
+    "base": "specs/components/loader.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Riel, arco y fases constituyen composición fija"
+    },
+    "qa": "qa/implementations/buttons-loader.v1.0.0.review.md"
+  }
+]

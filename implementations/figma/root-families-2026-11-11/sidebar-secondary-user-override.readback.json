@@ -1,0 +1,136 @@
+{
+  "fileKey": "yZsIpXywybsPDytjolwcP4",
+  "page": {
+    "id": "54:2",
+    "name": "Sidebar",
+    "children": [
+      [
+        "54:129",
+        "Menu item"
+      ],
+      [
+        "58:40",
+        "Top bar"
+      ],
+      [
+        "60:166",
+        "__Sidebar/Help"
+      ],
+      [
+        "61:426",
+        "Sidebar"
+      ]
+    ]
+  },
+  "setId": "61:426",
+  "description": "SIDEBAR-001 · Usa Sidebar para navegación lateral persistente. Mantén un control de expansión con nombre accesible. Organiza Menu items y opciones inferiores en los Slots de cada presentación. Evita asumir que se sincronizan. Ejemplo: navegación con ayuda al pie. Ficha local: Sidebar / SIDEBAR-001.",
+  "documentationLinks": [
+    {
+      "uri": "https://www.figma.com/design/98xEw6sK8FRVNEhopM5SSz?node-id=754-153"
+    }
+  ],
+  "variants": [
+    {
+      "id": "61:219",
+      "name": "state=collapsed",
+      "records": [
+        {
+          "id": "61:221",
+          "name": "Expand Icon Button",
+          "visible": true,
+          "width": 32,
+          "height": 32,
+          "main": {
+            "id": "61:455",
+            "name": "size=small, selected=false, state=default",
+            "key": "ab9ba358d971782a7a181d867baaa51ee4811f3e",
+            "setId": "61:477",
+            "setName": "Icon Button/secondary"
+          },
+          "glyph": {
+            "id": "47:83",
+            "key": "e2fc671298e81c590f5a4a5272d9c97709515666",
+            "name": "Format=Outline, Weight=Light"
+          },
+          "properties": {
+            "Show badge#61:49": {
+              "type": "BOOLEAN",
+              "value": false
+            },
+            "Icon#61:42": {
+              "type": "INSTANCE_SWAP",
+              "value": "47:83",
+              "preferredValues": []
+            },
+            "size": {
+              "value": "small",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "selected": {
+              "value": "false",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "state": {
+              "value": "default",
+              "type": "VARIANT",
+              "boundVariables": {}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "61:309",
+      "name": "state=expanded",
+      "records": [
+        {
+          "id": "61:311",
+          "name": "Collapse Icon Button",
+          "visible": true,
+          "width": 32,
+          "height": 32,
+          "main": {
+            "id": "61:455",
+            "name": "size=small, selected=false, state=default",
+            "key": "ab9ba358d971782a7a181d867baaa51ee4811f3e",
+            "setId": "61:477",
+            "setName": "Icon Button/secondary"
+          },
+          "glyph": {
+            "id": "61:319",
+            "key": "4472d4a157a44ccd6e7e4911b4c9dcad1dc04b34",
+            "name": "Format=Outline, Weight=Light"
+          },
+          "properties": {
+            "Show badge#61:49": {
+              "type": "BOOLEAN",
+              "value": false
+            },
+            "Icon#61:42": {
+              "type": "INSTANCE_SWAP",
+              "value": "61:319",
+              "preferredValues": []
+            },
+            "size": {
+              "value": "small",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "selected": {
+              "value": "false",
+              "type": "VARIANT",
+              "boundVariables": {}
+            },
+            "state": {
+              "value": "default",
+              "type": "VARIANT",
+              "boundVariables": {}
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

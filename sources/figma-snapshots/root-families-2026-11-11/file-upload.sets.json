@@ -1,0 +1,97 @@
+{
+  "sets": [
+    {
+      "id": "471:155",
+      "page": "471:57",
+      "name": "File Upload",
+      "x": 1500,
+      "y": 100,
+      "width": 1120,
+      "height": 770,
+      "vars": [
+        [
+          "471:149",
+          "state=default"
+        ],
+        [
+          "471:150",
+          "state=hover"
+        ],
+        [
+          "471:151",
+          "state=focus"
+        ],
+        [
+          "471:152",
+          "state=error"
+        ],
+        [
+          "471:153",
+          "state=success"
+        ],
+        [
+          "471:154",
+          "state=disabled"
+        ]
+      ],
+      "props": {
+        "Helper text#471:0": {
+          "type": "TEXT",
+          "defaultValue": "Supported formats: XLS, XLSX or CSV · Max 50 MB"
+        },
+        "Show button#471:7": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show helper#471:14": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "state": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "focus",
+            "error",
+            "success",
+            "disabled"
+          ]
+        }
+      },
+      "all": [
+        [
+          "471:155",
+          "File Upload",
+          "COMPONENT_SET"
+        ],
+        [
+          "477:12",
+          "File Upload / Guía",
+          "FRAME"
+        ],
+        [
+          "477:175",
+          "File Upload / Inicio de muestra",
+          "FRAME"
+        ],
+        [
+          "477:204",
+          "File Upload / Selección de muestra",
+          "FRAME"
+        ],
+        [
+          "477:227",
+          "File Upload / Resultado de muestra",
+          "FRAME"
+        ],
+        [
+          "477:246",
+          "File Upload / Error de muestra",
+          "FRAME"
+        ]
+      ]
+    }
+  ]
+}

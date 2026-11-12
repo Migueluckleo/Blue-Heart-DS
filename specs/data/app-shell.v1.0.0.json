@@ -1,0 +1,3863 @@
+{
+  "family": "app-shell",
+  "sourceFileKey": "98xEw6sK8FRVNEhopM5SSz",
+  "sourcePageId": "940:2",
+  "sourceNorm": "sources/figma-snapshots/root-families-2026-11-11/app-shell.1.0.0.md.txt",
+  "sourceNormSha256": "d2c7befaaed98cdc02864b2478f7d4fe396959f3dbfc1955bb9ab4f83ca37c29",
+  "sourceParts": {
+    "sources/figma-snapshots/root-families-2026-11-11/app-shell-0.packed.json": "49da97988ed783c6113da0a1a2b7089314fd1091daafb1d9b20b01935956edc1",
+    "sources/figma-snapshots/root-families-2026-11-11/app-shell-1.packed.json": "d2d96ffd9da746728967e32400f9c4b740c18b52dd792a4cebeccaf5fc88bceb",
+    "sources/figma-snapshots/root-families-2026-11-11/app-shell-2.packed.json": "7ae77b56ed464b5d4280b3a52432ae39c840bcb6e20f3b123290eced4d3b98dd",
+    "sources/figma-snapshots/root-families-2026-11-11/app-shell-3.packed.json": "2d13f4f65a5997d1d98c25ba6d05f563f1b315e2e6f1c70f9aee6f2df4641ce9",
+    "sources/figma-snapshots/root-families-2026-11-11/app-shell.sets.json": "50e2854b66dc678664ae17d302d8ad54176f0cd85bfb46dd3ec1923ca2ad9f4d"
+  },
+  "styles": {},
+  "tokens": {
+    "VariableID:499:6": {
+      "name": "header/spacing/padding",
+      "targetId": "VariableID:8:745",
+      "css": "--header-spacing-padding",
+      "type": "FLOAT"
+    },
+    "VariableID:499:7": {
+      "name": "header/size/min-width",
+      "targetId": "VariableID:8:746",
+      "css": "--header-size-min-width",
+      "type": "FLOAT"
+    },
+    "VariableID:499:8": {
+      "name": "header/color/bg/default",
+      "targetId": "VariableID:8:747",
+      "css": "--header-color-bg-default",
+      "type": "COLOR"
+    },
+    "VariableID:746:51": {
+      "name": "sidebar/spacing/none",
+      "targetId": "VariableID:13:257",
+      "css": "--sidebar-spacing-none",
+      "type": "FLOAT"
+    },
+    "VariableID:746:52": {
+      "name": "sidebar/size/collapsed-width",
+      "targetId": "VariableID:13:258",
+      "css": "--sidebar-size-collapsed-width",
+      "type": "FLOAT"
+    },
+    "VariableID:746:53": {
+      "name": "sidebar/radius/container",
+      "targetId": "VariableID:13:259",
+      "css": "--sidebar-radius-container",
+      "type": "FLOAT"
+    },
+    "VariableID:746:54": {
+      "name": "sidebar/color/bg/collapsed",
+      "targetId": "VariableID:13:260",
+      "css": "--sidebar-color-bg-collapsed",
+      "type": "COLOR"
+    },
+    "VariableID:891:13": {
+      "name": "section-header/spacing/section-gap",
+      "targetId": "VariableID:13:321",
+      "css": "--section-header-spacing-section-gap",
+      "type": "FLOAT"
+    },
+    "VariableID:891:12": {
+      "name": "section-header/spacing/container-padding",
+      "targetId": "VariableID:13:320",
+      "css": "--section-header-spacing-container-padding",
+      "type": "FLOAT"
+    },
+    "VariableID:891:11": {
+      "name": "section-header/radius/container",
+      "targetId": "VariableID:13:319",
+      "css": "--section-header-radius-container",
+      "type": "FLOAT"
+    },
+    "VariableID:891:8": {
+      "name": "section-header/color/bg/default",
+      "targetId": "VariableID:13:316",
+      "css": "--section-header-color-bg-default",
+      "type": "COLOR"
+    },
+    "VariableID:746:60": {
+      "name": "sidebar/size/expanded-width",
+      "targetId": "VariableID:13:266",
+      "css": "--sidebar-size-expanded-width",
+      "type": "FLOAT"
+    },
+    "VariableID:746:61": {
+      "name": "sidebar/color/bg/expanded",
+      "targetId": "VariableID:13:267",
+      "css": "--sidebar-color-bg-expanded",
+      "type": "COLOR"
+    }
+  },
+  "sets": [
+    {
+      "id": "940:1376",
+      "key": "a9899a246f2c56cd0a87f3407388a06d9656a1af",
+      "page": "940:2",
+      "pageName": "App Shell",
+      "type": "COMPONENT_SET",
+      "name": "App Shell",
+      "x": -666,
+      "y": -226,
+      "width": 3008,
+      "height": 2176,
+      "props": {
+        "Body#940:5": {
+          "type": "SLOT",
+          "description": "Sustituye los ejemplos por contenido de la pantalla. Mantén la rejilla o la composición de filas que corresponda.",
+          "slotSettings": {
+            "stretchChildOnInsert": false,
+            "displayEmptyByDefault": false,
+            "minChildren": null,
+            "maxChildren": null,
+            "allowPreferredValuesOnly": false
+          },
+          "preferredValues": []
+        },
+        "menu": {
+          "type": "VARIANT",
+          "defaultValue": "collapsed",
+          "variantOptions": [
+            "collapsed",
+            "expanded"
+          ]
+        },
+        "body layout": {
+          "type": "VARIANT",
+          "defaultValue": "grid",
+          "variantOptions": [
+            "grid",
+            "flex"
+          ]
+        }
+      },
+      "variants": [
+        {
+          "id": "940:3",
+          "name": "menu=collapsed, body layout=grid",
+          "type": "COMPONENT",
+          "x": 32,
+          "y": 32,
+          "width": 1440,
+          "height": 1024,
+          "rotation": 0,
+          "visible": true,
+          "layoutMode": "VERTICAL",
+          "layoutPositioning": "AUTO",
+          "layoutSizingHorizontal": "FIXED",
+          "layoutSizingVertical": "FIXED",
+          "minWidth": null,
+          "maxWidth": null,
+          "minHeight": null,
+          "maxHeight": null,
+          "primaryAxisSizingMode": "FIXED",
+          "counterAxisSizingMode": "FIXED",
+          "primaryAxisAlignItems": "MIN",
+          "counterAxisAlignItems": "MIN",
+          "paddingTop": 0,
+          "paddingRight": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "itemSpacing": 8,
+          "strokesIncludedInLayout": true,
+          "clipsContent": true,
+          "cornerRadius": 0,
+          "cornerSmoothing": 0,
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "dashPattern": [],
+          "effectStyleId": "",
+          "reactions": [],
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              }
+            }
+          ],
+          "strokes": [],
+          "b": {},
+          "children": [
+            {
+              "id": "940:4",
+              "name": "Header",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 96,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "FILL",
+              "layoutSizingVertical": "HUG",
+              "minWidth": 1152,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "FIXED",
+              "counterAxisSizingMode": "AUTO",
+              "primaryAxisAlignItems": "SPACE_BETWEEN",
+              "counterAxisAlignItems": "CENTER",
+              "paddingTop": 24,
+              "paddingRight": 24,
+              "paddingBottom": 24,
+              "paddingLeft": 24,
+              "itemSpacing": 0,
+              "strokesIncludedInLayout": false,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "cornerSmoothing": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "effectStyleId": "",
+              "reactions": [],
+              "main": {
+                "id": "500:1189",
+                "key": "9a2acb11ca6fadfaadf859613697c1a9d9197d8e",
+                "remote": false,
+                "name": "Header"
+              },
+              "instanceProperties": {
+                "Version#500:33": {
+                  "type": "TEXT",
+                  "value": "2.0.0"
+                },
+                "Show release badge#500:32": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show user#500:31": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show actions#500:30": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show company#500:29": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show version#500:28": {
+                  "type": "BOOLEAN",
+                  "value": true
+                }
+              },
+              "isExposedInstance": false,
+              "instanceVisibility": [
+                [
+                  "contables",
+                  true
+                ],
+                [
+                  "Content",
+                  true
+                ]
+              ],
+              "swapAssets": {},
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  }
+                }
+              ],
+              "strokes": [],
+              "b": {
+                "paddingLeft": "VariableID:499:6",
+                "paddingTop": "VariableID:499:6",
+                "paddingRight": "VariableID:499:6",
+                "paddingBottom": "VariableID:499:6",
+                "minWidth": "VariableID:499:7",
+                "fills": "VariableID:499:8"
+              }
+            },
+            {
+              "id": "940:245",
+              "name": "Content",
+              "type": "FRAME",
+              "x": 0,
+              "y": 104,
+              "width": 1440,
+              "height": 920,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "FILL",
+              "layoutSizingVertical": "FILL",
+              "minWidth": null,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "FIXED",
+              "counterAxisSizingMode": "FIXED",
+              "primaryAxisAlignItems": "MIN",
+              "counterAxisAlignItems": "MIN",
+              "paddingTop": 32,
+              "paddingRight": 32,
+              "paddingBottom": 32,
+              "paddingLeft": 32,
+              "itemSpacing": 32,
+              "strokesIncludedInLayout": true,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "cornerSmoothing": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "effectStyleId": "",
+              "reactions": [],
+              "fills": [],
+              "strokes": [],
+              "b": {},
+              "children": [
+                {
+                  "id": "940:246",
+                  "name": "Sidebar",
+                  "type": "INSTANCE",
+                  "x": 32,
+                  "y": 32,
+                  "width": 72,
+                  "height": 856,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "FIXED",
+                  "layoutSizingVertical": "FILL",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "FIXED",
+                  "counterAxisSizingMode": "FIXED",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "MAX",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 0,
+                  "strokesIncludedInLayout": false,
+                  "clipsContent": false,
+                  "cornerRadius": 16,
+                  "cornerSmoothing": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "effectStyleId": "",
+                  "reactions": [],
+                  "main": {
+                    "id": "749:63",
+                    "key": "191386d6589bf1f80802b4533b5a9d8245c407b7",
+                    "remote": false,
+                    "name": "state=collapsed"
+                  },
+                  "instanceProperties": {
+                    "Expanded lower options#749:8": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "Expanded menu items#749:7": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "Collapsed lower options#749:6": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "Collapsed menu items#749:5": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "state": {
+                      "value": "collapsed",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": false,
+                  "instanceVisibility": [
+                    [
+                      "Expand control",
+                      true
+                    ],
+                    [
+                      "Collapsed menu items",
+                      true
+                    ],
+                    [
+                      "Collapsed lower options",
+                      true
+                    ]
+                  ],
+                  "swapAssets": {},
+                  "nestedTooltip": {
+                    "Title#708:25": {
+                      "type": "TEXT",
+                      "value": "Title"
+                    },
+                    "Label#708:0": {
+                      "type": "TEXT",
+                      "value": "Home"
+                    },
+                    "placement": {
+                      "value": "right",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "arrow": {
+                      "value": "center",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "type": {
+                      "value": "simple",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.19607843458652496,
+                        "g": 0.3333333432674408,
+                        "b": 0.9686274528503418
+                      }
+                    }
+                  ],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:746:51",
+                    "paddingLeft": "VariableID:746:51",
+                    "paddingTop": "VariableID:746:51",
+                    "paddingRight": "VariableID:746:51",
+                    "paddingBottom": "VariableID:746:51",
+                    "width": "VariableID:746:52",
+                    "topLeftRadius": "VariableID:746:53",
+                    "topRightRadius": "VariableID:746:53",
+                    "bottomLeftRadius": "VariableID:746:53",
+                    "bottomRightRadius": "VariableID:746:53",
+                    "fills": "VariableID:746:54"
+                  }
+                },
+                {
+                  "id": "940:327",
+                  "name": "Main",
+                  "type": "FRAME",
+                  "x": 136,
+                  "y": 32,
+                  "width": 1272,
+                  "height": 856,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "FILL",
+                  "layoutSizingVertical": "FILL",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "FIXED",
+                  "counterAxisSizingMode": "FIXED",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "MIN",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 32,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "cornerSmoothing": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "effectStyleId": "",
+                  "reactions": [],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {},
+                  "children": [
+                    {
+                      "id": "940:328",
+                      "name": "Section Header",
+                      "type": "INSTANCE",
+                      "x": 0,
+                      "y": 0,
+                      "width": 1272,
+                      "height": 219,
+                      "rotation": 0,
+                      "visible": true,
+                      "layoutMode": "VERTICAL",
+                      "layoutPositioning": "AUTO",
+                      "layoutSizingHorizontal": "FILL",
+                      "layoutSizingVertical": "HUG",
+                      "minWidth": null,
+                      "maxWidth": null,
+                      "minHeight": null,
+                      "maxHeight": null,
+                      "primaryAxisSizingMode": "AUTO",
+                      "counterAxisSizingMode": "FIXED",
+                      "primaryAxisAlignItems": "MIN",
+                      "counterAxisAlignItems": "MIN",
+                      "paddingTop": 24,
+                      "paddingRight": 24,
+                      "paddingBottom": 24,
+                      "paddingLeft": 24,
+                      "itemSpacing": 16,
+                      "strokesIncludedInLayout": true,
+                      "clipsContent": true,
+                      "cornerRadius": 16,
+                      "cornerSmoothing": 0,
+                      "strokeWeight": 1,
+                      "strokeAlign": "INSIDE",
+                      "constraints": {
+                        "horizontal": "MIN",
+                        "vertical": "MIN"
+                      },
+                      "dashPattern": [],
+                      "effectStyleId": "",
+                      "reactions": [],
+                      "main": {
+                        "id": "891:28",
+                        "key": "688a6dc97157385c76e76484815654ea8b735502",
+                        "remote": false,
+                        "name": "Section Header"
+                      },
+                      "instanceProperties": {
+                        "General actions#899:0": {
+                          "type": "SLOT",
+                          "preferredValues": []
+                        },
+                        "Inputs#891:7": {
+                          "type": "SLOT",
+                          "preferredValues": []
+                        },
+                        "Metadata#891:6": {
+                          "type": "SLOT",
+                          "preferredValues": []
+                        },
+                        "Show actions#891:5": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Show metadata#891:4": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Show breadcrumbs#891:2": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Show description#891:3": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Description#891:1": {
+                          "type": "TEXT",
+                          "value": "Lorem ipsum dolor sit amet consectetur. Etiam non ut id enim risus pharetra sollicitudin et. Dolor non convallis eget nibh. Amet neque pretium feugiat feugiat."
+                        },
+                        "Title#891:0": {
+                          "type": "TEXT",
+                          "value": "Lorem ipsum dolor sit amet"
+                        }
+                      },
+                      "isExposedInstance": false,
+                      "instanceVisibility": [
+                        [
+                          "Content",
+                          true
+                        ],
+                        [
+                          "Main actions",
+                          true
+                        ]
+                      ],
+                      "swapAssets": {},
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "visible": true,
+                          "opacity": 1,
+                          "blendMode": "NORMAL",
+                          "color": {
+                            "r": 0.9450980424880981,
+                            "g": 0.9607843160629272,
+                            "b": 0.9764705896377563
+                          }
+                        }
+                      ],
+                      "strokes": [],
+                      "b": {
+                        "itemSpacing": "VariableID:891:13",
+                        "paddingLeft": "VariableID:891:12",
+                        "paddingTop": "VariableID:891:12",
+                        "paddingRight": "VariableID:891:12",
+                        "paddingBottom": "VariableID:891:12",
+                        "topLeftRadius": "VariableID:891:11",
+                        "topRightRadius": "VariableID:891:11",
+                        "bottomLeftRadius": "VariableID:891:11",
+                        "bottomRightRadius": "VariableID:891:11",
+                        "fills": "VariableID:891:8"
+                      }
+                    },
+                    {
+                      "id": "940:475",
+                      "name": "Body",
+                      "type": "SLOT",
+                      "x": 0,
+                      "y": 251,
+                      "width": 1272,
+                      "height": 605,
+                      "rotation": 0,
+                      "visible": true,
+                      "layoutMode": "VERTICAL",
+                      "layoutPositioning": "AUTO",
+                      "layoutSizingHorizontal": "FILL",
+                      "layoutSizingVertical": "FILL",
+                      "minWidth": null,
+                      "maxWidth": null,
+                      "minHeight": null,
+                      "maxHeight": null,
+                      "primaryAxisSizingMode": "FIXED",
+                      "counterAxisSizingMode": "FIXED",
+                      "primaryAxisAlignItems": "MIN",
+                      "counterAxisAlignItems": "MIN",
+                      "paddingTop": 0,
+                      "paddingRight": 0,
+                      "paddingBottom": 0,
+                      "paddingLeft": 0,
+                      "itemSpacing": 32,
+                      "strokesIncludedInLayout": true,
+                      "clipsContent": true,
+                      "cornerRadius": 0,
+                      "cornerSmoothing": 0,
+                      "strokeWeight": 1,
+                      "strokeAlign": "INSIDE",
+                      "constraints": {
+                        "horizontal": "MIN",
+                        "vertical": "MIN"
+                      },
+                      "dashPattern": [],
+                      "effectStyleId": "",
+                      "fills": [],
+                      "strokes": [],
+                      "b": {},
+                      "refs": {
+                        "slotContentId": "Body#940:5"
+                      },
+                      "children": [
+                        {
+                          "id": "940:476",
+                          "name": "Grid · 4 columnas",
+                          "type": "FRAME",
+                          "x": 0,
+                          "y": 0,
+                          "width": 1272,
+                          "height": 605,
+                          "rotation": 0,
+                          "visible": true,
+                          "layoutMode": "GRID",
+                          "layoutPositioning": "AUTO",
+                          "layoutSizingHorizontal": "FILL",
+                          "layoutSizingVertical": "FILL",
+                          "minWidth": null,
+                          "maxWidth": null,
+                          "minHeight": null,
+                          "maxHeight": null,
+                          "primaryAxisSizingMode": "FIXED",
+                          "counterAxisSizingMode": "FIXED",
+                          "primaryAxisAlignItems": "MIN",
+                          "counterAxisAlignItems": "MIN",
+                          "paddingTop": 0,
+                          "paddingRight": 0,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "itemSpacing": 0,
+                          "strokesIncludedInLayout": true,
+                          "clipsContent": false,
+                          "cornerRadius": 0,
+                          "cornerSmoothing": 0,
+                          "strokeWeight": 1,
+                          "strokeAlign": "INSIDE",
+                          "constraints": {
+                            "horizontal": "MIN",
+                            "vertical": "MIN"
+                          },
+                          "dashPattern": [],
+                          "effectStyleId": "",
+                          "reactions": [],
+                          "gridRowCount": 4,
+                          "gridRowGap": 32,
+                          "gridRowSizes": [
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            },
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            },
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            },
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            }
+                          ],
+                          "gridColumnCount": 4,
+                          "gridColumnGap": 32,
+                          "gridColumnSizes": [
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            },
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            },
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            },
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            }
+                          ],
+                          "fills": [],
+                          "strokes": [],
+                          "b": {},
+                          "children": [
+                            {
+                              "id": "940:477",
+                              "name": "Ejemplo · 4 columnas",
+                              "type": "RECTANGLE",
+                              "x": 0,
+                              "y": 0,
+                              "width": 1272,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 0,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 0,
+                              "gridColumnSpan": 4,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:478",
+                              "name": "Ejemplo · 1 columna",
+                              "type": "RECTANGLE",
+                              "x": 0,
+                              "y": 159.25,
+                              "width": 294,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 1,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 0,
+                              "gridColumnSpan": 1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:479",
+                              "name": "Ejemplo · 1 columna",
+                              "type": "RECTANGLE",
+                              "x": 326,
+                              "y": 159.25,
+                              "width": 294,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 1,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 1,
+                              "gridColumnSpan": 1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:480",
+                              "name": "Ejemplo · 1 columna",
+                              "type": "RECTANGLE",
+                              "x": 652,
+                              "y": 159.25,
+                              "width": 294,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 1,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 2,
+                              "gridColumnSpan": 1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:481",
+                              "name": "Ejemplo · 1 columna",
+                              "type": "RECTANGLE",
+                              "x": 978,
+                              "y": 159.25,
+                              "width": 294,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 1,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 3,
+                              "gridColumnSpan": 1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:482",
+                              "name": "Ejemplo · 2 columnas",
+                              "type": "RECTANGLE",
+                              "x": 0,
+                              "y": 318.5,
+                              "width": 620,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 2,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 0,
+                              "gridColumnSpan": 2,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:483",
+                              "name": "Ejemplo · 2 columnas",
+                              "type": "RECTANGLE",
+                              "x": 652,
+                              "y": 318.5,
+                              "width": 620,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 2,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 2,
+                              "gridColumnSpan": 2,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:484",
+                              "name": "Ejemplo · 3 columnas",
+                              "type": "RECTANGLE",
+                              "x": 0,
+                              "y": 477.75,
+                              "width": 946,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 3,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 0,
+                              "gridColumnSpan": 3,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:485",
+                              "name": "Ejemplo · 1 columna",
+                              "type": "RECTANGLE",
+                              "x": 978,
+                              "y": 477.75,
+                              "width": 294,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 3,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 3,
+                              "gridColumnSpan": 1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "940:486",
+          "name": "menu=expanded, body layout=grid",
+          "type": "COMPONENT",
+          "x": 1536,
+          "y": 32,
+          "width": 1440,
+          "height": 1024,
+          "rotation": 0,
+          "visible": true,
+          "layoutMode": "VERTICAL",
+          "layoutPositioning": "AUTO",
+          "layoutSizingHorizontal": "FIXED",
+          "layoutSizingVertical": "FIXED",
+          "minWidth": null,
+          "maxWidth": null,
+          "minHeight": null,
+          "maxHeight": null,
+          "primaryAxisSizingMode": "FIXED",
+          "counterAxisSizingMode": "FIXED",
+          "primaryAxisAlignItems": "MIN",
+          "counterAxisAlignItems": "MIN",
+          "paddingTop": 0,
+          "paddingRight": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "itemSpacing": 8,
+          "strokesIncludedInLayout": true,
+          "clipsContent": true,
+          "cornerRadius": 0,
+          "cornerSmoothing": 0,
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "dashPattern": [],
+          "effectStyleId": "",
+          "reactions": [],
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              }
+            }
+          ],
+          "strokes": [],
+          "b": {},
+          "children": [
+            {
+              "id": "940:487",
+              "name": "Header",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 96,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "FILL",
+              "layoutSizingVertical": "HUG",
+              "minWidth": 1152,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "FIXED",
+              "counterAxisSizingMode": "AUTO",
+              "primaryAxisAlignItems": "SPACE_BETWEEN",
+              "counterAxisAlignItems": "CENTER",
+              "paddingTop": 24,
+              "paddingRight": 24,
+              "paddingBottom": 24,
+              "paddingLeft": 24,
+              "itemSpacing": 0,
+              "strokesIncludedInLayout": false,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "cornerSmoothing": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "effectStyleId": "",
+              "reactions": [],
+              "main": {
+                "id": "500:1189",
+                "key": "9a2acb11ca6fadfaadf859613697c1a9d9197d8e",
+                "remote": false,
+                "name": "Header"
+              },
+              "instanceProperties": {
+                "Version#500:33": {
+                  "type": "TEXT",
+                  "value": "2.0.0"
+                },
+                "Show release badge#500:32": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show user#500:31": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show actions#500:30": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show company#500:29": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show version#500:28": {
+                  "type": "BOOLEAN",
+                  "value": true
+                }
+              },
+              "isExposedInstance": false,
+              "instanceVisibility": [
+                [
+                  "contables",
+                  true
+                ],
+                [
+                  "Content",
+                  true
+                ]
+              ],
+              "swapAssets": {},
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  }
+                }
+              ],
+              "strokes": [],
+              "b": {
+                "paddingLeft": "VariableID:499:6",
+                "paddingTop": "VariableID:499:6",
+                "paddingRight": "VariableID:499:6",
+                "paddingBottom": "VariableID:499:6",
+                "minWidth": "VariableID:499:7",
+                "fills": "VariableID:499:8"
+              }
+            },
+            {
+              "id": "940:601",
+              "name": "Content",
+              "type": "FRAME",
+              "x": 0,
+              "y": 104,
+              "width": 1440,
+              "height": 920,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "FILL",
+              "layoutSizingVertical": "FILL",
+              "minWidth": null,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "FIXED",
+              "counterAxisSizingMode": "FIXED",
+              "primaryAxisAlignItems": "MIN",
+              "counterAxisAlignItems": "MIN",
+              "paddingTop": 32,
+              "paddingRight": 32,
+              "paddingBottom": 32,
+              "paddingLeft": 32,
+              "itemSpacing": 32,
+              "strokesIncludedInLayout": true,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "cornerSmoothing": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "effectStyleId": "",
+              "reactions": [],
+              "fills": [],
+              "strokes": [],
+              "b": {},
+              "children": [
+                {
+                  "id": "940:602",
+                  "name": "Sidebar",
+                  "type": "INSTANCE",
+                  "x": 32,
+                  "y": 32,
+                  "width": 234,
+                  "height": 856,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "FIXED",
+                  "layoutSizingVertical": "FILL",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "FIXED",
+                  "counterAxisSizingMode": "FIXED",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "MAX",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 0,
+                  "strokesIncludedInLayout": false,
+                  "clipsContent": false,
+                  "cornerRadius": 16,
+                  "cornerSmoothing": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "effectStyleId": "",
+                  "reactions": [],
+                  "main": {
+                    "id": "749:145",
+                    "key": "f9009083f4a8a637a98ca57ed9ff811c9e13e423",
+                    "remote": false,
+                    "name": "state=expanded"
+                  },
+                  "instanceProperties": {
+                    "Collapsed lower options#749:6": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "Collapsed menu items#749:5": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "Expanded lower options#749:8": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "Expanded menu items#749:7": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "state": {
+                      "value": "expanded",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": false,
+                  "instanceVisibility": [
+                    [
+                      "Collapse control",
+                      true
+                    ],
+                    [
+                      "Expanded menu items",
+                      true
+                    ],
+                    [
+                      "Expanded lower options",
+                      true
+                    ]
+                  ],
+                  "swapAssets": {},
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.9372549057006836,
+                        "g": 0.9529411792755127,
+                        "b": 1
+                      }
+                    }
+                  ],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:746:51",
+                    "paddingLeft": "VariableID:746:51",
+                    "paddingTop": "VariableID:746:51",
+                    "paddingRight": "VariableID:746:51",
+                    "paddingBottom": "VariableID:746:51",
+                    "width": "VariableID:746:60",
+                    "topLeftRadius": "VariableID:746:53",
+                    "topRightRadius": "VariableID:746:53",
+                    "bottomLeftRadius": "VariableID:746:53",
+                    "bottomRightRadius": "VariableID:746:53",
+                    "fills": "VariableID:746:61"
+                  }
+                },
+                {
+                  "id": "940:754",
+                  "name": "Main",
+                  "type": "FRAME",
+                  "x": 298,
+                  "y": 32,
+                  "width": 1110,
+                  "height": 856,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "FILL",
+                  "layoutSizingVertical": "FILL",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "FIXED",
+                  "counterAxisSizingMode": "FIXED",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "MIN",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 32,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "cornerSmoothing": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "effectStyleId": "",
+                  "reactions": [],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {},
+                  "children": [
+                    {
+                      "id": "940:755",
+                      "name": "Section Header",
+                      "type": "INSTANCE",
+                      "x": 0,
+                      "y": 0,
+                      "width": 1110,
+                      "height": 219,
+                      "rotation": 0,
+                      "visible": true,
+                      "layoutMode": "VERTICAL",
+                      "layoutPositioning": "AUTO",
+                      "layoutSizingHorizontal": "FILL",
+                      "layoutSizingVertical": "HUG",
+                      "minWidth": null,
+                      "maxWidth": null,
+                      "minHeight": null,
+                      "maxHeight": null,
+                      "primaryAxisSizingMode": "AUTO",
+                      "counterAxisSizingMode": "FIXED",
+                      "primaryAxisAlignItems": "MIN",
+                      "counterAxisAlignItems": "MIN",
+                      "paddingTop": 24,
+                      "paddingRight": 24,
+                      "paddingBottom": 24,
+                      "paddingLeft": 24,
+                      "itemSpacing": 16,
+                      "strokesIncludedInLayout": true,
+                      "clipsContent": true,
+                      "cornerRadius": 16,
+                      "cornerSmoothing": 0,
+                      "strokeWeight": 1,
+                      "strokeAlign": "INSIDE",
+                      "constraints": {
+                        "horizontal": "MIN",
+                        "vertical": "MIN"
+                      },
+                      "dashPattern": [],
+                      "effectStyleId": "",
+                      "reactions": [],
+                      "main": {
+                        "id": "891:28",
+                        "key": "688a6dc97157385c76e76484815654ea8b735502",
+                        "remote": false,
+                        "name": "Section Header"
+                      },
+                      "instanceProperties": {
+                        "General actions#899:0": {
+                          "type": "SLOT",
+                          "preferredValues": []
+                        },
+                        "Inputs#891:7": {
+                          "type": "SLOT",
+                          "preferredValues": []
+                        },
+                        "Metadata#891:6": {
+                          "type": "SLOT",
+                          "preferredValues": []
+                        },
+                        "Show actions#891:5": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Show metadata#891:4": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Show breadcrumbs#891:2": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Show description#891:3": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Description#891:1": {
+                          "type": "TEXT",
+                          "value": "Lorem ipsum dolor sit amet consectetur. Etiam non ut id enim risus pharetra sollicitudin et. Dolor non convallis eget nibh. Amet neque pretium feugiat feugiat."
+                        },
+                        "Title#891:0": {
+                          "type": "TEXT",
+                          "value": "Lorem ipsum dolor sit amet"
+                        }
+                      },
+                      "isExposedInstance": false,
+                      "instanceVisibility": [
+                        [
+                          "Content",
+                          true
+                        ],
+                        [
+                          "Main actions",
+                          true
+                        ]
+                      ],
+                      "swapAssets": {},
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "visible": true,
+                          "opacity": 1,
+                          "blendMode": "NORMAL",
+                          "color": {
+                            "r": 0.9450980424880981,
+                            "g": 0.9607843160629272,
+                            "b": 0.9764705896377563
+                          }
+                        }
+                      ],
+                      "strokes": [],
+                      "b": {
+                        "itemSpacing": "VariableID:891:13",
+                        "paddingLeft": "VariableID:891:12",
+                        "paddingTop": "VariableID:891:12",
+                        "paddingRight": "VariableID:891:12",
+                        "paddingBottom": "VariableID:891:12",
+                        "topLeftRadius": "VariableID:891:11",
+                        "topRightRadius": "VariableID:891:11",
+                        "bottomLeftRadius": "VariableID:891:11",
+                        "bottomRightRadius": "VariableID:891:11",
+                        "fills": "VariableID:891:8"
+                      }
+                    },
+                    {
+                      "id": "940:835",
+                      "name": "Body",
+                      "type": "SLOT",
+                      "x": 0,
+                      "y": 251,
+                      "width": 1110,
+                      "height": 605,
+                      "rotation": 0,
+                      "visible": true,
+                      "layoutMode": "VERTICAL",
+                      "layoutPositioning": "AUTO",
+                      "layoutSizingHorizontal": "FILL",
+                      "layoutSizingVertical": "FILL",
+                      "minWidth": null,
+                      "maxWidth": null,
+                      "minHeight": null,
+                      "maxHeight": null,
+                      "primaryAxisSizingMode": "FIXED",
+                      "counterAxisSizingMode": "FIXED",
+                      "primaryAxisAlignItems": "MIN",
+                      "counterAxisAlignItems": "MIN",
+                      "paddingTop": 0,
+                      "paddingRight": 0,
+                      "paddingBottom": 0,
+                      "paddingLeft": 0,
+                      "itemSpacing": 32,
+                      "strokesIncludedInLayout": true,
+                      "clipsContent": true,
+                      "cornerRadius": 0,
+                      "cornerSmoothing": 0,
+                      "strokeWeight": 1,
+                      "strokeAlign": "INSIDE",
+                      "constraints": {
+                        "horizontal": "MIN",
+                        "vertical": "MIN"
+                      },
+                      "dashPattern": [],
+                      "effectStyleId": "",
+                      "fills": [],
+                      "strokes": [],
+                      "b": {},
+                      "refs": {
+                        "slotContentId": "Body#940:5"
+                      },
+                      "children": [
+                        {
+                          "id": "940:836",
+                          "name": "Grid · 4 columnas",
+                          "type": "FRAME",
+                          "x": 0,
+                          "y": 0,
+                          "width": 1110,
+                          "height": 605,
+                          "rotation": 0,
+                          "visible": true,
+                          "layoutMode": "GRID",
+                          "layoutPositioning": "AUTO",
+                          "layoutSizingHorizontal": "FILL",
+                          "layoutSizingVertical": "FILL",
+                          "minWidth": null,
+                          "maxWidth": null,
+                          "minHeight": null,
+                          "maxHeight": null,
+                          "primaryAxisSizingMode": "FIXED",
+                          "counterAxisSizingMode": "FIXED",
+                          "primaryAxisAlignItems": "MIN",
+                          "counterAxisAlignItems": "MIN",
+                          "paddingTop": 0,
+                          "paddingRight": 0,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "itemSpacing": 0,
+                          "strokesIncludedInLayout": true,
+                          "clipsContent": false,
+                          "cornerRadius": 0,
+                          "cornerSmoothing": 0,
+                          "strokeWeight": 1,
+                          "strokeAlign": "INSIDE",
+                          "constraints": {
+                            "horizontal": "MIN",
+                            "vertical": "MIN"
+                          },
+                          "dashPattern": [],
+                          "effectStyleId": "",
+                          "reactions": [],
+                          "gridRowCount": 4,
+                          "gridRowGap": 32,
+                          "gridRowSizes": [
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            },
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            },
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            },
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            }
+                          ],
+                          "gridColumnCount": 4,
+                          "gridColumnGap": 32,
+                          "gridColumnSizes": [
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            },
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            },
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            },
+                            {
+                              "type": "FLEX",
+                              "value": 1
+                            }
+                          ],
+                          "fills": [],
+                          "strokes": [],
+                          "b": {},
+                          "children": [
+                            {
+                              "id": "940:837",
+                              "name": "Ejemplo · 4 columnas",
+                              "type": "RECTANGLE",
+                              "x": 0,
+                              "y": 0,
+                              "width": 1110,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 0,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 0,
+                              "gridColumnSpan": 4,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:838",
+                              "name": "Ejemplo · 1 columna",
+                              "type": "RECTANGLE",
+                              "x": 0,
+                              "y": 159.25,
+                              "width": 253.5,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 1,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 0,
+                              "gridColumnSpan": 1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:839",
+                              "name": "Ejemplo · 1 columna",
+                              "type": "RECTANGLE",
+                              "x": 285.5,
+                              "y": 159.25,
+                              "width": 253.5,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 1,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 1,
+                              "gridColumnSpan": 1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:840",
+                              "name": "Ejemplo · 1 columna",
+                              "type": "RECTANGLE",
+                              "x": 571,
+                              "y": 159.25,
+                              "width": 253.5,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 1,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 2,
+                              "gridColumnSpan": 1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:841",
+                              "name": "Ejemplo · 1 columna",
+                              "type": "RECTANGLE",
+                              "x": 856.5,
+                              "y": 159.25,
+                              "width": 253.5,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 1,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 3,
+                              "gridColumnSpan": 1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:842",
+                              "name": "Ejemplo · 2 columnas",
+                              "type": "RECTANGLE",
+                              "x": 0,
+                              "y": 318.5,
+                              "width": 539,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 2,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 0,
+                              "gridColumnSpan": 2,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:843",
+                              "name": "Ejemplo · 2 columnas",
+                              "type": "RECTANGLE",
+                              "x": 571,
+                              "y": 318.5,
+                              "width": 539,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 2,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 2,
+                              "gridColumnSpan": 2,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:844",
+                              "name": "Ejemplo · 3 columnas",
+                              "type": "RECTANGLE",
+                              "x": 0,
+                              "y": 477.75,
+                              "width": 824.5,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 3,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 0,
+                              "gridColumnSpan": 3,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:845",
+                              "name": "Ejemplo · 1 columna",
+                              "type": "RECTANGLE",
+                              "x": 856.5,
+                              "y": 477.75,
+                              "width": 253.5,
+                              "height": 127.25,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "gridRowAnchorIndex": 3,
+                              "gridRowSpan": 1,
+                              "gridColumnAnchorIndex": 3,
+                              "gridColumnSpan": 1,
+                              "gridChildHorizontalAlign": "AUTO",
+                              "gridChildVerticalAlign": "AUTO",
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "940:846",
+          "name": "menu=collapsed, body layout=flex",
+          "type": "COMPONENT",
+          "x": 32,
+          "y": 1120,
+          "width": 1440,
+          "height": 1024,
+          "rotation": 0,
+          "visible": true,
+          "layoutMode": "VERTICAL",
+          "layoutPositioning": "AUTO",
+          "layoutSizingHorizontal": "FIXED",
+          "layoutSizingVertical": "FIXED",
+          "minWidth": null,
+          "maxWidth": null,
+          "minHeight": null,
+          "maxHeight": null,
+          "primaryAxisSizingMode": "FIXED",
+          "counterAxisSizingMode": "FIXED",
+          "primaryAxisAlignItems": "MIN",
+          "counterAxisAlignItems": "MIN",
+          "paddingTop": 0,
+          "paddingRight": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "itemSpacing": 8,
+          "strokesIncludedInLayout": true,
+          "clipsContent": true,
+          "cornerRadius": 0,
+          "cornerSmoothing": 0,
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "dashPattern": [],
+          "effectStyleId": "",
+          "reactions": [],
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              }
+            }
+          ],
+          "strokes": [],
+          "b": {},
+          "children": [
+            {
+              "id": "940:847",
+              "name": "Header",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 96,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "FILL",
+              "layoutSizingVertical": "HUG",
+              "minWidth": 1152,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "FIXED",
+              "counterAxisSizingMode": "AUTO",
+              "primaryAxisAlignItems": "SPACE_BETWEEN",
+              "counterAxisAlignItems": "CENTER",
+              "paddingTop": 24,
+              "paddingRight": 24,
+              "paddingBottom": 24,
+              "paddingLeft": 24,
+              "itemSpacing": 0,
+              "strokesIncludedInLayout": false,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "cornerSmoothing": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "effectStyleId": "",
+              "reactions": [],
+              "main": {
+                "id": "500:1189",
+                "key": "9a2acb11ca6fadfaadf859613697c1a9d9197d8e",
+                "remote": false,
+                "name": "Header"
+              },
+              "instanceProperties": {
+                "Version#500:33": {
+                  "type": "TEXT",
+                  "value": "2.0.0"
+                },
+                "Show release badge#500:32": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show user#500:31": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show actions#500:30": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show company#500:29": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show version#500:28": {
+                  "type": "BOOLEAN",
+                  "value": true
+                }
+              },
+              "isExposedInstance": false,
+              "instanceVisibility": [
+                [
+                  "contables",
+                  true
+                ],
+                [
+                  "Content",
+                  true
+                ]
+              ],
+              "swapAssets": {},
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  }
+                }
+              ],
+              "strokes": [],
+              "b": {
+                "paddingLeft": "VariableID:499:6",
+                "paddingTop": "VariableID:499:6",
+                "paddingRight": "VariableID:499:6",
+                "paddingBottom": "VariableID:499:6",
+                "minWidth": "VariableID:499:7",
+                "fills": "VariableID:499:8"
+              }
+            },
+            {
+              "id": "940:961",
+              "name": "Content",
+              "type": "FRAME",
+              "x": 0,
+              "y": 104,
+              "width": 1440,
+              "height": 920,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "FILL",
+              "layoutSizingVertical": "FILL",
+              "minWidth": null,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "FIXED",
+              "counterAxisSizingMode": "FIXED",
+              "primaryAxisAlignItems": "MIN",
+              "counterAxisAlignItems": "MIN",
+              "paddingTop": 32,
+              "paddingRight": 32,
+              "paddingBottom": 32,
+              "paddingLeft": 32,
+              "itemSpacing": 32,
+              "strokesIncludedInLayout": true,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "cornerSmoothing": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "effectStyleId": "",
+              "reactions": [],
+              "fills": [],
+              "strokes": [],
+              "b": {},
+              "children": [
+                {
+                  "id": "940:962",
+                  "name": "Sidebar",
+                  "type": "INSTANCE",
+                  "x": 32,
+                  "y": 32,
+                  "width": 72,
+                  "height": 856,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "FIXED",
+                  "layoutSizingVertical": "FILL",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "FIXED",
+                  "counterAxisSizingMode": "FIXED",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "MAX",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 0,
+                  "strokesIncludedInLayout": false,
+                  "clipsContent": false,
+                  "cornerRadius": 16,
+                  "cornerSmoothing": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "effectStyleId": "",
+                  "reactions": [],
+                  "main": {
+                    "id": "749:63",
+                    "key": "191386d6589bf1f80802b4533b5a9d8245c407b7",
+                    "remote": false,
+                    "name": "state=collapsed"
+                  },
+                  "instanceProperties": {
+                    "Expanded lower options#749:8": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "Expanded menu items#749:7": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "Collapsed lower options#749:6": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "Collapsed menu items#749:5": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "state": {
+                      "value": "collapsed",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": false,
+                  "instanceVisibility": [
+                    [
+                      "Expand control",
+                      true
+                    ],
+                    [
+                      "Collapsed menu items",
+                      true
+                    ],
+                    [
+                      "Collapsed lower options",
+                      true
+                    ]
+                  ],
+                  "swapAssets": {},
+                  "nestedTooltip": {
+                    "Title#708:25": {
+                      "type": "TEXT",
+                      "value": "Title"
+                    },
+                    "Label#708:0": {
+                      "type": "TEXT",
+                      "value": "Home"
+                    },
+                    "placement": {
+                      "value": "right",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "arrow": {
+                      "value": "center",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    },
+                    "type": {
+                      "value": "simple",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.19607843458652496,
+                        "g": 0.3333333432674408,
+                        "b": 0.9686274528503418
+                      }
+                    }
+                  ],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:746:51",
+                    "paddingLeft": "VariableID:746:51",
+                    "paddingTop": "VariableID:746:51",
+                    "paddingRight": "VariableID:746:51",
+                    "paddingBottom": "VariableID:746:51",
+                    "width": "VariableID:746:52",
+                    "topLeftRadius": "VariableID:746:53",
+                    "topRightRadius": "VariableID:746:53",
+                    "bottomLeftRadius": "VariableID:746:53",
+                    "bottomRightRadius": "VariableID:746:53",
+                    "fills": "VariableID:746:54"
+                  }
+                },
+                {
+                  "id": "940:1007",
+                  "name": "Main",
+                  "type": "FRAME",
+                  "x": 136,
+                  "y": 32,
+                  "width": 1272,
+                  "height": 856,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "FILL",
+                  "layoutSizingVertical": "FILL",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "FIXED",
+                  "counterAxisSizingMode": "FIXED",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "MIN",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 32,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "cornerSmoothing": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "effectStyleId": "",
+                  "reactions": [],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {},
+                  "children": [
+                    {
+                      "id": "940:1008",
+                      "name": "Section Header",
+                      "type": "INSTANCE",
+                      "x": 0,
+                      "y": 0,
+                      "width": 1272,
+                      "height": 219,
+                      "rotation": 0,
+                      "visible": true,
+                      "layoutMode": "VERTICAL",
+                      "layoutPositioning": "AUTO",
+                      "layoutSizingHorizontal": "FILL",
+                      "layoutSizingVertical": "HUG",
+                      "minWidth": null,
+                      "maxWidth": null,
+                      "minHeight": null,
+                      "maxHeight": null,
+                      "primaryAxisSizingMode": "AUTO",
+                      "counterAxisSizingMode": "FIXED",
+                      "primaryAxisAlignItems": "MIN",
+                      "counterAxisAlignItems": "MIN",
+                      "paddingTop": 24,
+                      "paddingRight": 24,
+                      "paddingBottom": 24,
+                      "paddingLeft": 24,
+                      "itemSpacing": 16,
+                      "strokesIncludedInLayout": true,
+                      "clipsContent": true,
+                      "cornerRadius": 16,
+                      "cornerSmoothing": 0,
+                      "strokeWeight": 1,
+                      "strokeAlign": "INSIDE",
+                      "constraints": {
+                        "horizontal": "MIN",
+                        "vertical": "MIN"
+                      },
+                      "dashPattern": [],
+                      "effectStyleId": "",
+                      "reactions": [],
+                      "main": {
+                        "id": "891:28",
+                        "key": "688a6dc97157385c76e76484815654ea8b735502",
+                        "remote": false,
+                        "name": "Section Header"
+                      },
+                      "instanceProperties": {
+                        "General actions#899:0": {
+                          "type": "SLOT",
+                          "preferredValues": []
+                        },
+                        "Inputs#891:7": {
+                          "type": "SLOT",
+                          "preferredValues": []
+                        },
+                        "Metadata#891:6": {
+                          "type": "SLOT",
+                          "preferredValues": []
+                        },
+                        "Show actions#891:5": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Show metadata#891:4": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Show breadcrumbs#891:2": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Show description#891:3": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Description#891:1": {
+                          "type": "TEXT",
+                          "value": "Lorem ipsum dolor sit amet consectetur. Etiam non ut id enim risus pharetra sollicitudin et. Dolor non convallis eget nibh. Amet neque pretium feugiat feugiat."
+                        },
+                        "Title#891:0": {
+                          "type": "TEXT",
+                          "value": "Lorem ipsum dolor sit amet"
+                        }
+                      },
+                      "isExposedInstance": false,
+                      "instanceVisibility": [
+                        [
+                          "Content",
+                          true
+                        ],
+                        [
+                          "Main actions",
+                          true
+                        ]
+                      ],
+                      "swapAssets": {},
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "visible": true,
+                          "opacity": 1,
+                          "blendMode": "NORMAL",
+                          "color": {
+                            "r": 0.9450980424880981,
+                            "g": 0.9607843160629272,
+                            "b": 0.9764705896377563
+                          }
+                        }
+                      ],
+                      "strokes": [],
+                      "b": {
+                        "itemSpacing": "VariableID:891:13",
+                        "paddingLeft": "VariableID:891:12",
+                        "paddingTop": "VariableID:891:12",
+                        "paddingRight": "VariableID:891:12",
+                        "paddingBottom": "VariableID:891:12",
+                        "topLeftRadius": "VariableID:891:11",
+                        "topRightRadius": "VariableID:891:11",
+                        "bottomLeftRadius": "VariableID:891:11",
+                        "bottomRightRadius": "VariableID:891:11",
+                        "fills": "VariableID:891:8"
+                      }
+                    },
+                    {
+                      "id": "940:1088",
+                      "name": "Body",
+                      "type": "SLOT",
+                      "x": 0,
+                      "y": 251,
+                      "width": 1272,
+                      "height": 605,
+                      "rotation": 0,
+                      "visible": true,
+                      "layoutMode": "VERTICAL",
+                      "layoutPositioning": "AUTO",
+                      "layoutSizingHorizontal": "FILL",
+                      "layoutSizingVertical": "FIXED",
+                      "minWidth": null,
+                      "maxWidth": null,
+                      "minHeight": null,
+                      "maxHeight": null,
+                      "primaryAxisSizingMode": "FIXED",
+                      "counterAxisSizingMode": "FIXED",
+                      "primaryAxisAlignItems": "MIN",
+                      "counterAxisAlignItems": "MIN",
+                      "paddingTop": 0,
+                      "paddingRight": 0,
+                      "paddingBottom": 0,
+                      "paddingLeft": 0,
+                      "itemSpacing": 32,
+                      "strokesIncludedInLayout": true,
+                      "clipsContent": true,
+                      "cornerRadius": 0,
+                      "cornerSmoothing": 0,
+                      "strokeWeight": 1,
+                      "strokeAlign": "INSIDE",
+                      "constraints": {
+                        "horizontal": "MIN",
+                        "vertical": "MIN"
+                      },
+                      "dashPattern": [],
+                      "effectStyleId": "",
+                      "fills": [],
+                      "strokes": [],
+                      "b": {},
+                      "refs": {
+                        "slotContentId": "Body#940:5"
+                      },
+                      "children": [
+                        {
+                          "id": "940:1089",
+                          "name": "Fila · dos regiones",
+                          "type": "FRAME",
+                          "x": 0,
+                          "y": 0,
+                          "width": 1272,
+                          "height": 286.5,
+                          "rotation": 0,
+                          "visible": true,
+                          "layoutMode": "HORIZONTAL",
+                          "layoutPositioning": "AUTO",
+                          "layoutSizingHorizontal": "FILL",
+                          "layoutSizingVertical": "FILL",
+                          "minWidth": null,
+                          "maxWidth": null,
+                          "minHeight": null,
+                          "maxHeight": null,
+                          "primaryAxisSizingMode": "FIXED",
+                          "counterAxisSizingMode": "FIXED",
+                          "primaryAxisAlignItems": "MIN",
+                          "counterAxisAlignItems": "MIN",
+                          "paddingTop": 0,
+                          "paddingRight": 0,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "itemSpacing": 32,
+                          "strokesIncludedInLayout": true,
+                          "clipsContent": false,
+                          "cornerRadius": 0,
+                          "cornerSmoothing": 0,
+                          "strokeWeight": 1,
+                          "strokeAlign": "INSIDE",
+                          "constraints": {
+                            "horizontal": "MIN",
+                            "vertical": "MIN"
+                          },
+                          "dashPattern": [],
+                          "effectStyleId": "",
+                          "reactions": [],
+                          "fills": [],
+                          "strokes": [],
+                          "b": {},
+                          "children": [
+                            {
+                              "id": "940:1090",
+                              "name": "Ejemplo · primera región",
+                              "type": "RECTANGLE",
+                              "x": 0,
+                              "y": 0,
+                              "width": 620,
+                              "height": 286.5,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:1091",
+                              "name": "Ejemplo · segunda región",
+                              "type": "RECTANGLE",
+                              "x": 652,
+                              "y": 0,
+                              "width": 620,
+                              "height": 286.5,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            }
+                          ]
+                        },
+                        {
+                          "id": "940:1092",
+                          "name": "Ejemplo · ancho completo",
+                          "type": "RECTANGLE",
+                          "x": 0,
+                          "y": 318.5,
+                          "width": 1272,
+                          "height": 286.5,
+                          "rotation": 0,
+                          "visible": true,
+                          "layoutPositioning": "AUTO",
+                          "layoutSizingHorizontal": "FILL",
+                          "layoutSizingVertical": "FILL",
+                          "minWidth": null,
+                          "maxWidth": null,
+                          "minHeight": null,
+                          "maxHeight": null,
+                          "cornerRadius": 0,
+                          "cornerSmoothing": 0,
+                          "strokeWeight": 1,
+                          "strokeAlign": "INSIDE",
+                          "constraints": {
+                            "horizontal": "MIN",
+                            "vertical": "MIN"
+                          },
+                          "dashPattern": [],
+                          "effectStyleId": "",
+                          "reactions": [],
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "visible": true,
+                              "opacity": 1,
+                              "blendMode": "NORMAL",
+                              "color": {
+                                "r": 0.8509804010391235,
+                                "g": 0.8509804010391235,
+                                "b": 0.8509804010391235
+                              }
+                            }
+                          ],
+                          "strokes": [],
+                          "b": {}
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "940:1093",
+          "name": "menu=expanded, body layout=flex",
+          "type": "COMPONENT",
+          "x": 1536,
+          "y": 1120,
+          "width": 1440,
+          "height": 1024,
+          "rotation": 0,
+          "visible": true,
+          "layoutMode": "VERTICAL",
+          "layoutPositioning": "AUTO",
+          "layoutSizingHorizontal": "FIXED",
+          "layoutSizingVertical": "FIXED",
+          "minWidth": null,
+          "maxWidth": null,
+          "minHeight": null,
+          "maxHeight": null,
+          "primaryAxisSizingMode": "FIXED",
+          "counterAxisSizingMode": "FIXED",
+          "primaryAxisAlignItems": "MIN",
+          "counterAxisAlignItems": "MIN",
+          "paddingTop": 0,
+          "paddingRight": 0,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "itemSpacing": 8,
+          "strokesIncludedInLayout": true,
+          "clipsContent": true,
+          "cornerRadius": 0,
+          "cornerSmoothing": 0,
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "constraints": {
+            "horizontal": "MIN",
+            "vertical": "MIN"
+          },
+          "dashPattern": [],
+          "effectStyleId": "",
+          "reactions": [],
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              }
+            }
+          ],
+          "strokes": [],
+          "b": {},
+          "children": [
+            {
+              "id": "940:1094",
+              "name": "Header",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 96,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "FILL",
+              "layoutSizingVertical": "HUG",
+              "minWidth": 1152,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "FIXED",
+              "counterAxisSizingMode": "AUTO",
+              "primaryAxisAlignItems": "SPACE_BETWEEN",
+              "counterAxisAlignItems": "CENTER",
+              "paddingTop": 24,
+              "paddingRight": 24,
+              "paddingBottom": 24,
+              "paddingLeft": 24,
+              "itemSpacing": 0,
+              "strokesIncludedInLayout": false,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "cornerSmoothing": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "effectStyleId": "",
+              "reactions": [],
+              "main": {
+                "id": "500:1189",
+                "key": "9a2acb11ca6fadfaadf859613697c1a9d9197d8e",
+                "remote": false,
+                "name": "Header"
+              },
+              "instanceProperties": {
+                "Version#500:33": {
+                  "type": "TEXT",
+                  "value": "2.0.0"
+                },
+                "Show release badge#500:32": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show user#500:31": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show actions#500:30": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show company#500:29": {
+                  "type": "BOOLEAN",
+                  "value": true
+                },
+                "Show version#500:28": {
+                  "type": "BOOLEAN",
+                  "value": true
+                }
+              },
+              "isExposedInstance": false,
+              "instanceVisibility": [
+                [
+                  "contables",
+                  true
+                ],
+                [
+                  "Content",
+                  true
+                ]
+              ],
+              "swapAssets": {},
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  }
+                }
+              ],
+              "strokes": [],
+              "b": {
+                "paddingLeft": "VariableID:499:6",
+                "paddingTop": "VariableID:499:6",
+                "paddingRight": "VariableID:499:6",
+                "paddingBottom": "VariableID:499:6",
+                "minWidth": "VariableID:499:7",
+                "fills": "VariableID:499:8"
+              }
+            },
+            {
+              "id": "940:1208",
+              "name": "Content",
+              "type": "FRAME",
+              "x": 0,
+              "y": 104,
+              "width": 1440,
+              "height": 920,
+              "rotation": 0,
+              "visible": true,
+              "layoutMode": "HORIZONTAL",
+              "layoutPositioning": "AUTO",
+              "layoutSizingHorizontal": "FILL",
+              "layoutSizingVertical": "FILL",
+              "minWidth": null,
+              "maxWidth": null,
+              "minHeight": null,
+              "maxHeight": null,
+              "primaryAxisSizingMode": "FIXED",
+              "counterAxisSizingMode": "FIXED",
+              "primaryAxisAlignItems": "MIN",
+              "counterAxisAlignItems": "MIN",
+              "paddingTop": 32,
+              "paddingRight": 32,
+              "paddingBottom": 32,
+              "paddingLeft": 32,
+              "itemSpacing": 32,
+              "strokesIncludedInLayout": true,
+              "clipsContent": false,
+              "cornerRadius": 0,
+              "cornerSmoothing": 0,
+              "strokeWeight": 1,
+              "strokeAlign": "INSIDE",
+              "constraints": {
+                "horizontal": "MIN",
+                "vertical": "MIN"
+              },
+              "dashPattern": [],
+              "effectStyleId": "",
+              "reactions": [],
+              "fills": [],
+              "strokes": [],
+              "b": {},
+              "children": [
+                {
+                  "id": "940:1209",
+                  "name": "Sidebar",
+                  "type": "INSTANCE",
+                  "x": 32,
+                  "y": 32,
+                  "width": 234,
+                  "height": 856,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "FIXED",
+                  "layoutSizingVertical": "FILL",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "FIXED",
+                  "counterAxisSizingMode": "FIXED",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "MAX",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 0,
+                  "strokesIncludedInLayout": false,
+                  "clipsContent": false,
+                  "cornerRadius": 16,
+                  "cornerSmoothing": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "effectStyleId": "",
+                  "reactions": [],
+                  "main": {
+                    "id": "749:145",
+                    "key": "f9009083f4a8a637a98ca57ed9ff811c9e13e423",
+                    "remote": false,
+                    "name": "state=expanded"
+                  },
+                  "instanceProperties": {
+                    "Collapsed lower options#749:6": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "Collapsed menu items#749:5": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "Expanded lower options#749:8": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "Expanded menu items#749:7": {
+                      "type": "SLOT",
+                      "preferredValues": [
+                        {
+                          "type": "COMPONENT_SET",
+                          "key": "d55406c7fb816717cfeef14130aff77a614a267d"
+                        }
+                      ]
+                    },
+                    "state": {
+                      "value": "expanded",
+                      "type": "VARIANT",
+                      "boundVariables": {}
+                    }
+                  },
+                  "isExposedInstance": false,
+                  "instanceVisibility": [
+                    [
+                      "Collapse control",
+                      true
+                    ],
+                    [
+                      "Expanded menu items",
+                      true
+                    ],
+                    [
+                      "Expanded lower options",
+                      true
+                    ]
+                  ],
+                  "swapAssets": {},
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.9372549057006836,
+                        "g": 0.9529411792755127,
+                        "b": 1
+                      }
+                    }
+                  ],
+                  "strokes": [],
+                  "b": {
+                    "itemSpacing": "VariableID:746:51",
+                    "paddingLeft": "VariableID:746:51",
+                    "paddingTop": "VariableID:746:51",
+                    "paddingRight": "VariableID:746:51",
+                    "paddingBottom": "VariableID:746:51",
+                    "width": "VariableID:746:60",
+                    "topLeftRadius": "VariableID:746:53",
+                    "topRightRadius": "VariableID:746:53",
+                    "bottomLeftRadius": "VariableID:746:53",
+                    "bottomRightRadius": "VariableID:746:53",
+                    "fills": "VariableID:746:61"
+                  }
+                },
+                {
+                  "id": "940:1290",
+                  "name": "Main",
+                  "type": "FRAME",
+                  "x": 298,
+                  "y": 32,
+                  "width": 1110,
+                  "height": 856,
+                  "rotation": 0,
+                  "visible": true,
+                  "layoutMode": "VERTICAL",
+                  "layoutPositioning": "AUTO",
+                  "layoutSizingHorizontal": "FILL",
+                  "layoutSizingVertical": "FILL",
+                  "minWidth": null,
+                  "maxWidth": null,
+                  "minHeight": null,
+                  "maxHeight": null,
+                  "primaryAxisSizingMode": "FIXED",
+                  "counterAxisSizingMode": "FIXED",
+                  "primaryAxisAlignItems": "MIN",
+                  "counterAxisAlignItems": "MIN",
+                  "paddingTop": 0,
+                  "paddingRight": 0,
+                  "paddingBottom": 0,
+                  "paddingLeft": 0,
+                  "itemSpacing": 32,
+                  "strokesIncludedInLayout": true,
+                  "clipsContent": false,
+                  "cornerRadius": 0,
+                  "cornerSmoothing": 0,
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "constraints": {
+                    "horizontal": "MIN",
+                    "vertical": "MIN"
+                  },
+                  "dashPattern": [],
+                  "effectStyleId": "",
+                  "reactions": [],
+                  "fills": [],
+                  "strokes": [],
+                  "b": {},
+                  "children": [
+                    {
+                      "id": "940:1291",
+                      "name": "Section Header",
+                      "type": "INSTANCE",
+                      "x": 0,
+                      "y": 0,
+                      "width": 1110,
+                      "height": 219,
+                      "rotation": 0,
+                      "visible": true,
+                      "layoutMode": "VERTICAL",
+                      "layoutPositioning": "AUTO",
+                      "layoutSizingHorizontal": "FILL",
+                      "layoutSizingVertical": "HUG",
+                      "minWidth": null,
+                      "maxWidth": null,
+                      "minHeight": null,
+                      "maxHeight": null,
+                      "primaryAxisSizingMode": "AUTO",
+                      "counterAxisSizingMode": "FIXED",
+                      "primaryAxisAlignItems": "MIN",
+                      "counterAxisAlignItems": "MIN",
+                      "paddingTop": 24,
+                      "paddingRight": 24,
+                      "paddingBottom": 24,
+                      "paddingLeft": 24,
+                      "itemSpacing": 16,
+                      "strokesIncludedInLayout": true,
+                      "clipsContent": true,
+                      "cornerRadius": 16,
+                      "cornerSmoothing": 0,
+                      "strokeWeight": 1,
+                      "strokeAlign": "INSIDE",
+                      "constraints": {
+                        "horizontal": "MIN",
+                        "vertical": "MIN"
+                      },
+                      "dashPattern": [],
+                      "effectStyleId": "",
+                      "reactions": [],
+                      "main": {
+                        "id": "891:28",
+                        "key": "688a6dc97157385c76e76484815654ea8b735502",
+                        "remote": false,
+                        "name": "Section Header"
+                      },
+                      "instanceProperties": {
+                        "General actions#899:0": {
+                          "type": "SLOT",
+                          "preferredValues": []
+                        },
+                        "Inputs#891:7": {
+                          "type": "SLOT",
+                          "preferredValues": []
+                        },
+                        "Metadata#891:6": {
+                          "type": "SLOT",
+                          "preferredValues": []
+                        },
+                        "Show actions#891:5": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Show metadata#891:4": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Show breadcrumbs#891:2": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Show description#891:3": {
+                          "type": "BOOLEAN",
+                          "value": true
+                        },
+                        "Description#891:1": {
+                          "type": "TEXT",
+                          "value": "Lorem ipsum dolor sit amet consectetur. Etiam non ut id enim risus pharetra sollicitudin et. Dolor non convallis eget nibh. Amet neque pretium feugiat feugiat."
+                        },
+                        "Title#891:0": {
+                          "type": "TEXT",
+                          "value": "Lorem ipsum dolor sit amet"
+                        }
+                      },
+                      "isExposedInstance": false,
+                      "instanceVisibility": [
+                        [
+                          "Content",
+                          true
+                        ],
+                        [
+                          "Main actions",
+                          true
+                        ]
+                      ],
+                      "swapAssets": {},
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "visible": true,
+                          "opacity": 1,
+                          "blendMode": "NORMAL",
+                          "color": {
+                            "r": 0.9450980424880981,
+                            "g": 0.9607843160629272,
+                            "b": 0.9764705896377563
+                          }
+                        }
+                      ],
+                      "strokes": [],
+                      "b": {
+                        "itemSpacing": "VariableID:891:13",
+                        "paddingLeft": "VariableID:891:12",
+                        "paddingTop": "VariableID:891:12",
+                        "paddingRight": "VariableID:891:12",
+                        "paddingBottom": "VariableID:891:12",
+                        "topLeftRadius": "VariableID:891:11",
+                        "topRightRadius": "VariableID:891:11",
+                        "bottomLeftRadius": "VariableID:891:11",
+                        "bottomRightRadius": "VariableID:891:11",
+                        "fills": "VariableID:891:8"
+                      }
+                    },
+                    {
+                      "id": "940:1371",
+                      "name": "Body",
+                      "type": "SLOT",
+                      "x": 0,
+                      "y": 251,
+                      "width": 1110,
+                      "height": 605,
+                      "rotation": 0,
+                      "visible": true,
+                      "layoutMode": "VERTICAL",
+                      "layoutPositioning": "AUTO",
+                      "layoutSizingHorizontal": "FILL",
+                      "layoutSizingVertical": "FIXED",
+                      "minWidth": null,
+                      "maxWidth": null,
+                      "minHeight": null,
+                      "maxHeight": null,
+                      "primaryAxisSizingMode": "FIXED",
+                      "counterAxisSizingMode": "FIXED",
+                      "primaryAxisAlignItems": "MIN",
+                      "counterAxisAlignItems": "MIN",
+                      "paddingTop": 0,
+                      "paddingRight": 0,
+                      "paddingBottom": 0,
+                      "paddingLeft": 0,
+                      "itemSpacing": 32,
+                      "strokesIncludedInLayout": true,
+                      "clipsContent": true,
+                      "cornerRadius": 0,
+                      "cornerSmoothing": 0,
+                      "strokeWeight": 1,
+                      "strokeAlign": "INSIDE",
+                      "constraints": {
+                        "horizontal": "MIN",
+                        "vertical": "MIN"
+                      },
+                      "dashPattern": [],
+                      "effectStyleId": "",
+                      "fills": [],
+                      "strokes": [],
+                      "b": {},
+                      "refs": {
+                        "slotContentId": "Body#940:5"
+                      },
+                      "children": [
+                        {
+                          "id": "940:1372",
+                          "name": "Fila · dos regiones",
+                          "type": "FRAME",
+                          "x": 0,
+                          "y": 0,
+                          "width": 1110,
+                          "height": 286.5,
+                          "rotation": 0,
+                          "visible": true,
+                          "layoutMode": "HORIZONTAL",
+                          "layoutPositioning": "AUTO",
+                          "layoutSizingHorizontal": "FILL",
+                          "layoutSizingVertical": "FILL",
+                          "minWidth": null,
+                          "maxWidth": null,
+                          "minHeight": null,
+                          "maxHeight": null,
+                          "primaryAxisSizingMode": "FIXED",
+                          "counterAxisSizingMode": "FIXED",
+                          "primaryAxisAlignItems": "MIN",
+                          "counterAxisAlignItems": "MIN",
+                          "paddingTop": 0,
+                          "paddingRight": 0,
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "itemSpacing": 32,
+                          "strokesIncludedInLayout": true,
+                          "clipsContent": false,
+                          "cornerRadius": 0,
+                          "cornerSmoothing": 0,
+                          "strokeWeight": 1,
+                          "strokeAlign": "INSIDE",
+                          "constraints": {
+                            "horizontal": "MIN",
+                            "vertical": "MIN"
+                          },
+                          "dashPattern": [],
+                          "effectStyleId": "",
+                          "reactions": [],
+                          "fills": [],
+                          "strokes": [],
+                          "b": {},
+                          "children": [
+                            {
+                              "id": "940:1373",
+                              "name": "Ejemplo · primera región",
+                              "type": "RECTANGLE",
+                              "x": 0,
+                              "y": 0,
+                              "width": 539,
+                              "height": 286.5,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            },
+                            {
+                              "id": "940:1374",
+                              "name": "Ejemplo · segunda región",
+                              "type": "RECTANGLE",
+                              "x": 571,
+                              "y": 0,
+                              "width": 539,
+                              "height": 286.5,
+                              "rotation": 0,
+                              "visible": true,
+                              "layoutPositioning": "AUTO",
+                              "layoutSizingHorizontal": "FILL",
+                              "layoutSizingVertical": "FILL",
+                              "minWidth": null,
+                              "maxWidth": null,
+                              "minHeight": null,
+                              "maxHeight": null,
+                              "cornerRadius": 0,
+                              "cornerSmoothing": 0,
+                              "strokeWeight": 1,
+                              "strokeAlign": "INSIDE",
+                              "constraints": {
+                                "horizontal": "MIN",
+                                "vertical": "MIN"
+                              },
+                              "dashPattern": [],
+                              "effectStyleId": "",
+                              "reactions": [],
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "visible": true,
+                                  "opacity": 1,
+                                  "blendMode": "NORMAL",
+                                  "color": {
+                                    "r": 0.8509804010391235,
+                                    "g": 0.8509804010391235,
+                                    "b": 0.8509804010391235
+                                  }
+                                }
+                              ],
+                              "strokes": [],
+                              "b": {}
+                            }
+                          ]
+                        },
+                        {
+                          "id": "940:1375",
+                          "name": "Ejemplo · ancho completo",
+                          "type": "RECTANGLE",
+                          "x": 0,
+                          "y": 318.5,
+                          "width": 1110,
+                          "height": 286.5,
+                          "rotation": 0,
+                          "visible": true,
+                          "layoutPositioning": "AUTO",
+                          "layoutSizingHorizontal": "FILL",
+                          "layoutSizingVertical": "FILL",
+                          "minWidth": null,
+                          "maxWidth": null,
+                          "minHeight": null,
+                          "maxHeight": null,
+                          "cornerRadius": 0,
+                          "cornerSmoothing": 0,
+                          "strokeWeight": 1,
+                          "strokeAlign": "INSIDE",
+                          "constraints": {
+                            "horizontal": "MIN",
+                            "vertical": "MIN"
+                          },
+                          "dashPattern": [],
+                          "effectStyleId": "",
+                          "reactions": [],
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "visible": true,
+                              "opacity": 1,
+                              "blendMode": "NORMAL",
+                              "color": {
+                                "r": 0.8509804010391235,
+                                "g": 0.8509804010391235,
+                                "b": 0.8509804010391235
+                              }
+                            }
+                          ],
+                          "strokes": [],
+                          "b": {}
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

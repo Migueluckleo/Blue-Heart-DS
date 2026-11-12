@@ -1,0 +1,79 @@
+{
+  "fileKey": "yZsIpXywybsPDytjolwcP4",
+  "pageId": "32:26",
+  "setId": "32:33",
+  "createdNodeIds": [
+    "32:34",
+    "32:35",
+    "32:36",
+    "32:37"
+  ],
+  "mutatedNodeIds": [
+    "32:26",
+    "32:33"
+  ],
+  "nodes": {
+    "201:1548": "32:34",
+    "201:1549": "32:35",
+    "201:1550": "32:36",
+    "201:1551": "32:37"
+  },
+  "textStyles": {},
+  "styles": {
+    "S:c7b993aaf2886c49480873fee83c9f00cc83e324,": "S:bd163b7da9eb30937eee922045799f56c1427460,",
+    "S:69e9b2d42eeae84931453a60f63d937351f3d86d,": "S:8e7ce39f62bb67591fcd35208dabad9007ce4791,"
+  },
+  "variants": [
+    {
+      "id": "32:34",
+      "name": "type=busy, size=medium, color=default"
+    },
+    {
+      "id": "32:35",
+      "name": "type=busy, size=small, color=default"
+    },
+    {
+      "id": "32:36",
+      "name": "type=inactive, size=large, color=default"
+    },
+    {
+      "id": "32:37",
+      "name": "type=inactive, size=medium, color=default"
+    }
+  ],
+  "properties": {
+    "Count#32:0": {
+      "type": "TEXT",
+      "defaultValue": "1"
+    },
+    "Max count#32:5": {
+      "type": "TEXT",
+      "defaultValue": "99+"
+    },
+    "type": {
+      "type": "VARIANT",
+      "defaultValue": "active",
+      "variantOptions": [
+        "active",
+        "busy",
+        "inactive"
+      ]
+    },
+    "size": {
+      "type": "VARIANT",
+      "defaultValue": "large",
+      "variantOptions": [
+        "large",
+        "medium",
+        "small"
+      ]
+    },
+    "color": {
+      "type": "VARIANT",
+      "defaultValue": "default",
+      "variantOptions": [
+        "default"
+      ]
+    }
+  }
+}

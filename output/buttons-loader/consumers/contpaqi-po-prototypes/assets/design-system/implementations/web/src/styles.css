@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import "@fontsource-variable/manrope";
+@import "./generated/tokens.css";
+@import "./generated/typography.css";
+
+@layer components {
+  .bh-button {
+    position: relative;
+    display: inline-grid;
+    place-items: center;
+    vertical-align: middle;
+    max-inline-size: 100%;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .bh-button[aria-disabled="true"] { cursor: default; }
+  .bh-button:focus-visible { outline: none; }
+  .bh-button[data-focus="true"]::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: -4px;
+    border: var(--bh-focus-width) solid var(--bh-focus-color);
+    border-radius: var(--bh-focus-radius);
+  }
+  .bh-button-reserve { display: inline-grid; }
+  .bh-button-layer {
+    grid-area: 1 / 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--bh-button-gap);
+  }
+  .bh-button-layer[data-inactive="true"] { visibility: hidden; }
+  .bh-button-icon { display: inline-flex; flex: none; }
+  .bh-loader { display: inline-flex; flex: none; vertical-align: middle; }
+  .bh-loader-ring {
+    r: calc(50% - var(--bh-loader-stroke) / 2);
+    stroke-width: var(--bh-loader-stroke);
+  }
+  .bh-loader-arc {
+    transform-origin: 50% 50%;
+    animation: bh-loader-spin .8s steps(24, end) infinite;
+  }
+  @keyframes bh-loader-spin {
+    from { transform: rotate(-90deg); }
+    to { transform: rotate(270deg); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .bh-loader-arc { animation-duration: 1.6s; }
+  }
+}

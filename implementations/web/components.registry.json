@@ -1,0 +1,716 @@
+[
+  {
+    "id": "APP-SHELL-001",
+    "slug": "app-shell",
+    "name": "App Shell",
+    "module": "app-shell",
+    "exports": [
+      "AppShell",
+      "AppShellGridItem"
+    ],
+    "category": "navegación",
+    "notes": "Compón Header, Sidebar y Section Header. Elige Grid o Flex según las relaciones del contenido de Body.",
+    "base": "specs/components/app-shell.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Body admite composición reemplazable en cuatro variantes"
+    },
+    "qa": "qa/implementations/app-shell.v1.0.0.review.md"
+  },
+  {
+    "id": "AVATAR-001",
+    "slug": "avatar",
+    "name": "Avatar",
+    "module": "avatar",
+    "exports": [
+      "Avatar"
+    ],
+    "category": "identidad",
+    "notes": "Compara fotografía local, iniciales y glyph. La variante de fotografía nativa queda pendiente de autorización de transferencia.",
+    "base": "specs/components/avatar.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Composición fija y propiedades acotadas"
+    },
+    "qa": "qa/implementations/avatar.v1.0.0.review.md"
+  },
+  {
+    "id": "AVATAR-GROUP-001",
+    "slug": "avatar-group",
+    "name": "Avatar group",
+    "module": "avatar-group",
+    "exports": [
+      "AvatarGroup"
+    ],
+    "category": "identidad",
+    "notes": "Siete identidades producen tres representaciones y el contador +4.",
+    "base": "specs/components/avatar-group.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Avatars es un Slot nativo de 2 a 4 instancias"
+    },
+    "qa": "qa/implementations/avatar.v1.0.0.review.md"
+  },
+  {
+    "id": "BADGE-001",
+    "slug": "badge",
+    "name": "Badge",
+    "module": "badge",
+    "exports": [
+      "Badge"
+    ],
+    "category": "estado",
+    "notes": "Compara una moneda, un estado confirmado y una advertencia. Los iconos son decorativos.",
+    "base": "specs/components/badge.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "El texto y ambos iconos forman una anatomía fija"
+    },
+    "qa": "qa/implementations/badge.v1.0.0.review.md"
+  },
+  {
+    "id": "BREADCRUMB-001",
+    "slug": "breadcrumb",
+    "name": "Breadcrumb",
+    "module": "breadcrumb",
+    "exports": [
+      "Breadcrumb"
+    ],
+    "category": "navegación",
+    "notes": "Abre los niveles anteriores en una ruta de muestra y compara el acceso de retorno compacto.",
+    "base": "specs/components/breadcrumb.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "La matriz nativa define cantidades por variante y expone instancias oficiales"
+    },
+    "qa": "qa/implementations/search-breadcrumb-item.v1.0.0.review.md"
+  },
+  {
+    "id": "BREADCRUMB-ITEM-001",
+    "slug": "breadcrumb-item",
+    "name": "Breadcrumb item",
+    "module": "breadcrumb-item",
+    "exports": [
+      "BreadcrumbItem"
+    ],
+    "category": "navegación",
+    "notes": "Abre el overflow de ejemplo y consulta el eslabón actual.",
+    "base": "specs/components/breadcrumb-item.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "El eslabón individual tiene tipos fijos; el contenedor decide la composición"
+    },
+    "qa": "qa/implementations/search-breadcrumb-item.v1.0.0.review.md"
+  },
+  {
+    "id": "BUTTON-001",
+    "slug": "buttons",
+    "name": "Buttons",
+    "module": "button",
+    "exports": [
+      "Button"
+    ],
+    "category": "acción",
+    "notes": "Activa una acción local y usa Terminar demo para salir de loading.",
+    "base": "specs/components/buttons.contract.v1.0.0.md",
+    "amendments": [
+      "specs/components/buttons.usage.amendment.v1.0.1.md"
+    ],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Label, visibilidad y swaps son propiedades acotadas"
+    },
+    "qa": "qa/implementations/buttons-loader.v1.0.0.review.md",
+    "usage_guide": "specs/components/buttons.usage.amendment.v1.0.1.md"
+  },
+  {
+    "id": "CHECKBOX-001",
+    "slug": "checkbox",
+    "name": "Checkbox",
+    "module": "checkbox",
+    "exports": [
+      "Checkbox"
+    ],
+    "category": "selección",
+    "notes": "Activa la opción indeterminada con Espacio; la segunda casilla está deshabilitada.",
+    "base": "specs/components/checkbox.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Control, Box y Label son anatomía fija"
+    },
+    "qa": "qa/implementations/file-upload-checkbox.v1.0.0.review.md"
+  },
+  {
+    "id": "CHIP-001",
+    "slug": "chip",
+    "name": "Chip",
+    "module": "chip",
+    "exports": [
+      "Chip"
+    ],
+    "category": "selection",
+    "notes": "El ejemplo conserva una moneda activa, combina estados independientes y permite retirar filtros con foco restaurado.",
+    "base": "specs/components/chip.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Texto, visibilidad y swaps de glyph cubren la anatomía fija"
+    },
+    "qa": "qa/implementations/chip.v1.0.0.review.md"
+  },
+  {
+    "id": "COMPANY-SELECTOR-001",
+    "slug": "company-selector",
+    "name": "Company selector",
+    "module": "company-selector",
+    "exports": [
+      "CompanySelector"
+    ],
+    "category": "navegación",
+    "notes": "Abre la lista local y vuelve con Escape.",
+    "base": "specs/components/company-selector.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Anatomía fija y textos acotados"
+    },
+    "qa": "qa/implementations/header-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "DOT-001",
+    "slug": "dot",
+    "name": "Dot",
+    "module": "dot",
+    "exports": [
+      "Dot"
+    ],
+    "category": "estado",
+    "notes": "Consulta presencia y conteos en el contexto de su anfitrión.",
+    "base": "specs/components/dot.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Count y Max count son propiedades acotadas de texto"
+    },
+    "qa": "qa/implementations/dot-toggle-radio.v1.0.0.review.md"
+  },
+  {
+    "id": "DROPDOWN-ITEM-001",
+    "slug": "dropdown-item",
+    "name": "Dropdown item",
+    "module": "dropdown-item",
+    "exports": [
+      "DropdownItem"
+    ],
+    "category": "formularios",
+    "notes": "Usa Option para elegir. Header y Divider organizan el contenido.",
+    "base": "specs/components/dropdown-item.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Option, Header y Divider tienen posiciones fijas"
+    },
+    "qa": "qa/implementations/dropdown-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "DROPDOWN-MENU-001",
+    "slug": "dropdown-menu",
+    "name": "Dropdown menu",
+    "module": "dropdown-menu",
+    "exports": [
+      "DropdownMenu",
+      "DropdownField"
+    ],
+    "category": "formularios",
+    "notes": "DropdownField coordina el combobox de solo selección con el listbox. El host controla los datos y la selección.",
+    "base": "specs/components/dropdown-menu.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Options admite insertar, quitar y reordenar ítems oficiales"
+    },
+    "qa": "qa/implementations/dropdown-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "FILE-UPLOAD-001",
+    "slug": "file-upload",
+    "name": "File Upload",
+    "module": "file-upload",
+    "exports": [
+      "FileUpload"
+    ],
+    "category": "entrada",
+    "notes": "Selecciona o arrastra un archivo de muestra para ver feedback local.",
+    "base": "specs/components/file-upload.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Zona, Button opcional y ayuda tienen anatomía fija"
+    },
+    "qa": "qa/implementations/file-upload-checkbox.v1.0.0.review.md"
+  },
+  {
+    "id": "FLOATING-ACTIONS-001",
+    "slug": "floating-actions",
+    "name": "Floating Actions",
+    "module": "floating-actions",
+    "exports": [
+      "FloatingActions"
+    ],
+    "category": "feedback",
+    "notes": "Muestra el resumen y las acciones de la selección vigente. El anfitrión controla conteo, selección y cierre.",
+    "base": "specs/components/floating-actions.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "General actions admite reemplazar y reordenar controles"
+    },
+    "qa": "qa/implementations/actions-notification.v1.0.0.review.md"
+  },
+  {
+    "id": "HEADER-001",
+    "slug": "header",
+    "name": "Header",
+    "module": "header",
+    "exports": [
+      "Header"
+    ],
+    "category": "navegación",
+    "notes": "Compone el logo oficial, la versión y las opciones locales de empresa y cuenta.",
+    "base": "specs/components/header.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Regiones fijas con visibilidad booleana"
+    },
+    "qa": "qa/implementations/header-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "HEADER-ACTIONS-001",
+    "slug": "header-actions",
+    "name": "Header actions",
+    "module": "header-actions",
+    "exports": [
+      "HeaderActions"
+    ],
+    "category": "acción",
+    "notes": "Compara el conjunto de cuatro y activa la demostración de notificaciones.",
+    "base": "specs/components/header-actions.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Cinco conjuntos fijos por variante"
+    },
+    "qa": "qa/implementations/header-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "ICON-BUTTON-001",
+    "slug": "icon-button",
+    "name": "Icon Button",
+    "module": "icon-button",
+    "exports": [
+      "IconButton"
+    ],
+    "category": "acción",
+    "notes": "Alterna notificaciones con teclado y comprueba el nombre accesible.",
+    "base": "specs/components/icon-button.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Glyph intercambiable y Dot son partes fijas"
+    },
+    "qa": "qa/implementations/sidebar-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "INLINE-NOTIFICATION-001",
+    "slug": "inline-notification",
+    "name": "Inline Notification",
+    "module": "inline-notification",
+    "exports": [
+      "InlineNotification"
+    ],
+    "category": "feedback",
+    "notes": "Usa el tipo según gravedad, agrega un destino real si hay enlace y deja al anfitrión el cierre.",
+    "base": "specs/components/inline-notification.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Contenido, indicador y cierre tienen posiciones fijas"
+    },
+    "qa": "qa/implementations/actions-notification.v1.0.0.review.md"
+  },
+  {
+    "id": "INPUT-001",
+    "slug": "input",
+    "name": "Input",
+    "module": "input",
+    "exports": [
+      "Input"
+    ],
+    "category": "formularios",
+    "notes": "Captura una línea con etiqueta y ayuda vinculadas. El host controla la validación. Badge subtle indica una unidad.",
+    "base": "specs/components/input.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Etiqueta, campo, ayuda y accesorios ocupan posiciones fijas"
+    },
+    "qa": "qa/implementations/input.v1.0.0.review.md"
+  },
+  {
+    "id": "LINEAR-PROGRESS-001",
+    "slug": "linear-progress",
+    "name": "Linear Progress Bar",
+    "module": "linear-progress",
+    "exports": [
+      "LinearProgress"
+    ],
+    "category": "estado",
+    "notes": "Completa cuatro pasos de muestra para ver el avance controlado. El segundo indicador representa un total desconocido.",
+    "base": "specs/components/linear-progress.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Header, riel y ayuda tienen anatomía fija"
+    },
+    "qa": "qa/implementations/linear-progress.v1.0.0.review.md"
+  },
+  {
+    "id": "LOADER-001",
+    "slug": "loader",
+    "name": "Loader",
+    "module": "loader",
+    "exports": [
+      "Loader"
+    ],
+    "category": "estado",
+    "notes": "Indicador indeterminado con tamaños y roles observados.",
+    "base": "specs/components/loader.contract.v1.0.0.md",
+    "amendments": [
+      "specs/components/loader.usage.amendment.v1.0.1.md"
+    ],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Riel, arco y fases constituyen composición fija"
+    },
+    "qa": "qa/implementations/buttons-loader.v1.0.0.review.md",
+    "usage_guide": "specs/components/loader.usage.amendment.v1.0.1.md"
+  },
+  {
+    "id": "MENU-ITEM-001",
+    "slug": "menu-item",
+    "name": "Menu item",
+    "module": "menu-item",
+    "exports": [
+      "MenuItem"
+    ],
+    "category": "navegación",
+    "notes": "Navega al destino o despliega la rama por teclado.",
+    "base": "specs/components/menu-item.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Los hijos y los intercambios de icono forman una anatomía fija"
+    },
+    "qa": "qa/implementations/sidebar-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "PAGINATION-001",
+    "slug": "pagination",
+    "name": "Pagination",
+    "module": "pagination",
+    "exports": [
+      "Pagination"
+    ],
+    "category": "navegación",
+    "notes": "Mantiene una página actual y recibe opciones de filas del anfitrión. Compact puede ampliar targets a 44 px.",
+    "base": "specs/components/pagination.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Pages admite inserción, retiro y orden de ítems"
+    },
+    "qa": "qa/implementations/pagination-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "PAGINATION-ITEM-001",
+    "slug": "pagination-item",
+    "name": "Pagination item",
+    "module": "pagination-item",
+    "exports": [
+      "PaginationItem"
+    ],
+    "category": "navegación",
+    "notes": "Distingue número, flecha y elipsis. Usa un nombre accesible para las flechas.",
+    "base": "specs/components/pagination-item.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Número, icono y elipsis son alternativas de anatomía fija"
+    },
+    "qa": "qa/implementations/pagination-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "RADIO-001",
+    "slug": "radio",
+    "name": "Radio",
+    "module": "radio",
+    "exports": [
+      "Radio"
+    ],
+    "category": "selección",
+    "notes": "Elige el medio de entrega por teclado o puntero.",
+    "base": "specs/components/radio.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Label y Show label son propiedades acotadas del Radio individual"
+    },
+    "qa": "qa/implementations/dot-toggle-radio.v1.0.0.review.md"
+  },
+  {
+    "id": "RADIO-GROUP-001",
+    "slug": "radio-group",
+    "name": "Radio group",
+    "module": "radio-group",
+    "exports": [
+      "RadioGroup"
+    ],
+    "category": "selección",
+    "notes": "Selecciona un medio de entrega. La segunda muestra conserva el mensaje fijo de error.",
+    "base": "specs/components/radio-group.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Options es Slot Figma; la lista tipada controla cardinalidad y selección en web"
+    },
+    "qa": "qa/implementations/radio-group.v1.0.0.review.md"
+  },
+  {
+    "id": "SEARCH-001",
+    "slug": "search",
+    "name": "Search",
+    "module": "search",
+    "exports": [
+      "Search"
+    ],
+    "category": "búsqueda",
+    "notes": "Introduce una consulta, pulsa Enter y usa Limpiar búsqueda para devolver el foco al campo.",
+    "base": "specs/components/search.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Label, control y X forman una anatomía fija"
+    },
+    "qa": "qa/implementations/search-breadcrumb-item.v1.0.0.review.md"
+  },
+  {
+    "id": "SECTION-HEADER-001",
+    "slug": "section-header",
+    "name": "Section Header",
+    "module": "section-header",
+    "exports": [
+      "SectionHeader"
+    ],
+    "category": "navegación",
+    "notes": "Selecciona el nivel del título según la página y compón Breadcrumb, Metadata, Inputs y General actions con los controles del anfitrión.",
+    "base": "specs/components/section-header.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Tres regiones independientes admiten listas abiertas"
+    },
+    "qa": "qa/implementations/section-header.v1.0.0.review.md"
+  },
+  {
+    "id": "SIDEBAR-001",
+    "slug": "sidebar",
+    "name": "Sidebar",
+    "module": "sidebar",
+    "exports": [
+      "Sidebar"
+    ],
+    "category": "navegación",
+    "notes": "El control de expansión y contracción usa Icon Button Secondary small en Figma y en el ejemplo web. Conserva el foco y actualiza su nombre accesible al alternar.",
+    "base": "specs/components/sidebar.contract.v1.0.0.md",
+    "amendments": [
+      "specs/components/sidebar.secondary-control.amendment.v1.0.1.md"
+    ],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Cuatro Slots independientes permiten editar ambas presentaciones"
+    },
+    "qa": "qa/implementations/sidebar-secondary-control.v1.0.1.review.md",
+    "usage_guide": "specs/components/sidebar.secondary-control.amendment.v1.0.1.md"
+  },
+  {
+    "id": "TAB-001",
+    "slug": "tab",
+    "name": "Tab",
+    "module": "tab",
+    "exports": [
+      "Tab"
+    ],
+    "category": "navegación",
+    "notes": "Mantén una etiqueta visible y proporciona el significado accesible del conteo.",
+    "base": "specs/components/tab.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Etiqueta, icono y Dot tienen posiciones fijas"
+    },
+    "qa": "qa/implementations/tabs-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "TABLE-001",
+    "slug": "table",
+    "name": "Table",
+    "module": "table",
+    "exports": [
+      "Table"
+    ],
+    "notes": "El anfitrión mantiene filas, orden y paginación. El viewport desplaza ambos ejes y Pagination queda fuera del área desplazable.",
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Rows admite una cabecera y cantidad variable de filas con identidad estable"
+    },
+    "category": "data",
+    "base": "specs/components/table.contract.v1.0.0.md",
+    "amendments": [],
+    "qa": "qa/implementations/table-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "TABLE-CELL-001",
+    "slug": "table-cell",
+    "name": "Table cell",
+    "module": "table-cell",
+    "exports": [
+      "TableCell",
+      "TableCaptureCell"
+    ],
+    "notes": "El ejemplo muestra el valor de captura, un enlace real, selección y una acción de fila. Los controles se componen con sus APIs propietarias.",
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Cada tipo usa una anatomía fija y los swaps cubren el auxiliar de hasta cuatro acciones"
+    },
+    "category": "data",
+    "base": "specs/components/table-cell.contract.v1.0.0.md",
+    "amendments": [],
+    "qa": "qa/implementations/table-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "TABS-001",
+    "slug": "tabs",
+    "name": "Tabs",
+    "module": "tabs",
+    "exports": [
+      "Tabs"
+    ],
+    "category": "navegación",
+    "notes": "Mantén selección controlada e IDs estables. Flechas mueven foco y Enter o Espacio cambia el panel.",
+    "base": "specs/components/tabs.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Tabs admite inserción, retirada y reordenamiento de instancias Tab"
+    },
+    "qa": "qa/implementations/tabs-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "TEXT-AREA-001",
+    "slug": "text-area",
+    "name": "Text Area",
+    "module": "text-area",
+    "exports": [
+      "TextArea"
+    ],
+    "category": "formularios",
+    "notes": "Usa una etiqueta visible y elige el límite y altura en el anfitrión. Helper y Counter se asocian al control.",
+    "base": "specs/components/text-area.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Etiqueta, campo, ayuda, contador y muesca tienen anatomía fija"
+    },
+    "qa": "qa/implementations/text-area.v1.0.0.review.md"
+  },
+  {
+    "id": "TOGGLE-001",
+    "slug": "toggle",
+    "name": "Toggle",
+    "module": "toggle",
+    "exports": [
+      "Toggle"
+    ],
+    "category": "selección",
+    "notes": "Cambia una preferencia local. La segunda opción está deshabilitada.",
+    "base": "specs/components/toggle.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Label y Show label son propiedades acotadas"
+    },
+    "qa": "qa/implementations/dot-toggle-radio.v1.0.0.review.md"
+  },
+  {
+    "id": "TOOLTIP-001",
+    "slug": "tooltip",
+    "name": "Tooltip",
+    "module": "tooltip",
+    "exports": [
+      "Tooltip"
+    ],
+    "category": "ayuda",
+    "notes": "Enfoca o pasa el puntero sobre Panel de actividad. Escape cierra la ayuda; el disparador conserva el foco.",
+    "base": "specs/components/tooltip.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Body, textos y flecha forman una anatomía fija"
+    },
+    "qa": "qa/implementations/tooltip.v1.0.0.review.md"
+  },
+  {
+    "id": "TOP-BAR-001",
+    "slug": "top-bar",
+    "name": "Top bar",
+    "module": "top-bar",
+    "exports": [
+      "TopBar"
+    ],
+    "category": "navegación",
+    "notes": "Usa el área desplazable del anfitrión para consultar las secciones.",
+    "base": "specs/components/top-bar.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Menu items admite una lista abierta"
+    },
+    "qa": "qa/implementations/sidebar-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "USER-SELECTOR-001",
+    "slug": "user-selector",
+    "name": "User selector",
+    "module": "user-selector",
+    "exports": [
+      "UserSelector"
+    ],
+    "category": "navegación",
+    "notes": "Abre el menú local de cuenta con el Avatar y nombre accesible.",
+    "base": "specs/components/user-selector.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Avatar y caret tienen composición fija"
+    },
+    "qa": "qa/implementations/header-chain.v1.0.0.review.md"
+  }
+]

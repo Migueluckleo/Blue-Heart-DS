@@ -1,0 +1,177 @@
+{
+  "sets": [
+    {
+      "id": "748:40",
+      "page": "741:2",
+      "pageName": "Sidebar",
+      "type": "COMPONENT_SET",
+      "name": "Menu item",
+      "x": 100,
+      "y": 100,
+      "width": 900,
+      "height": 1030,
+      "props": {
+        "Label#748:0": {
+          "type": "TEXT",
+          "defaultValue": "Home"
+        },
+        "Show right icon#748:23": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Fill icon#748:46": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "747:7",
+          "preferredValues": []
+        },
+        "Light icon#748:69": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "747:5",
+          "preferredValues": []
+        },
+        "Show beta#748:92": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "orientation": {
+          "type": "VARIANT",
+          "defaultValue": "vertical",
+          "variantOptions": [
+            "vertical",
+            "horizontal"
+          ]
+        },
+        "type": {
+          "type": "VARIANT",
+          "defaultValue": "collapsed",
+          "variantOptions": [
+            "expanded",
+            "collapsed",
+            "sub-menu"
+          ]
+        },
+        "status": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "focus",
+            "hover"
+          ]
+        },
+        "isActive": {
+          "type": "VARIANT",
+          "defaultValue": "true",
+          "variantOptions": [
+            "true",
+            "false"
+          ]
+        }
+      },
+      "vars": [
+        [
+          "747:64",
+          "orientation=vertical, type=collapsed, status=default, isActive=true"
+        ],
+        [
+          "747:55",
+          "orientation=vertical, type=expanded, status=default, isActive=true"
+        ],
+        [
+          "747:73",
+          "orientation=vertical, type=collapsed, status=default, isActive=false"
+        ],
+        [
+          "747:81",
+          "orientation=vertical, type=collapsed, status=focus, isActive=true"
+        ],
+        [
+          "747:90",
+          "orientation=vertical, type=collapsed, status=focus, isActive=false"
+        ],
+        [
+          "747:98",
+          "orientation=vertical, type=collapsed, status=hover, isActive=true"
+        ],
+        [
+          "747:107",
+          "orientation=vertical, type=collapsed, status=hover, isActive=false"
+        ],
+        [
+          "747:115",
+          "orientation=vertical, type=expanded, status=default, isActive=false"
+        ],
+        [
+          "747:121",
+          "orientation=vertical, type=sub-menu, status=default, isActive=false"
+        ],
+        [
+          "747:127",
+          "orientation=vertical, type=sub-menu, status=default, isActive=true"
+        ],
+        [
+          "747:134",
+          "orientation=vertical, type=sub-menu, status=hover, isActive=true"
+        ],
+        [
+          "747:141",
+          "orientation=vertical, type=sub-menu, status=hover, isActive=false"
+        ],
+        [
+          "747:147",
+          "orientation=vertical, type=expanded, status=hover, isActive=true"
+        ],
+        [
+          "747:156",
+          "orientation=vertical, type=expanded, status=focus, isActive=true"
+        ],
+        [
+          "747:165",
+          "orientation=vertical, type=expanded, status=hover, isActive=false"
+        ],
+        [
+          "747:171",
+          "orientation=vertical, type=expanded, status=focus, isActive=false"
+        ],
+        [
+          "747:177",
+          "orientation=horizontal, type=collapsed, status=default, isActive=true"
+        ],
+        [
+          "747:184",
+          "orientation=horizontal, type=collapsed, status=default, isActive=false"
+        ],
+        [
+          "747:190",
+          "orientation=horizontal, type=collapsed, status=hover, isActive=true"
+        ],
+        [
+          "747:197",
+          "orientation=horizontal, type=collapsed, status=hover, isActive=false"
+        ],
+        [
+          "747:203",
+          "orientation=horizontal, type=collapsed, status=focus, isActive=true"
+        ],
+        [
+          "747:210",
+          "orientation=horizontal, type=collapsed, status=focus, isActive=false"
+        ]
+      ]
+    }
+  ],
+  "swaps": {
+    "Fill icon#748:46": {
+      "id": "747:7",
+      "key": "7de3e2b6dd8bfe526ed1ec72cc2df4052c42c2de",
+      "name": "Format=Outline, Weight=Fill",
+      "remote": true
+    },
+    "Light icon#748:69": {
+      "id": "747:5",
+      "key": "090ff24ab3485ba51fe71427dd00328da0afe68f",
+      "name": "Format=Outline, Weight=Light",
+      "remote": true
+    }
+  }
+}

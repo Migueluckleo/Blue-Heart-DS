@@ -1,0 +1,333 @@
+---
+{
+  "schema_version": 1,
+  "id": "FLOATING-ACTIONS-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-048"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-REQUEST",
+      "path": "evidence/authorization/floating-actions-dot-request.json",
+      "sha256": "7164fd46faf9ee34eca82beec17df73e7a01bc1f22bdf0ab830d9e7908426f7a"
+    },
+    {
+      "id": "SRC-FIGMA",
+      "path": "evidence/floating-actions-pilot/source/nodes.json",
+      "sha256": "4e938339d3fe503d7655f1be84caac74577d7f5f6360abaf168b44a3160575ca"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "floating-actions.color-bg-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.color-text-label",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.color-text-select-all",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.color-shape-divider",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.color-effect-shadow",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.size-shadow-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.size-shadow-offset-y",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.size-divider-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.size-divider-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.radius-surface",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.spacing-content",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.spacing-actions",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.spacing-surface",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.font-style-label",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.font-style-select-all",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.font-size",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.font-line-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "floating-actions.font-letter-spacing",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "DOT-001",
+      "version": "1.1.0",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "BUTTON-001",
+      "version": "4.0.1",
+      "relation": "uses"
+    },
+    {
+      "kind": "contract",
+      "id": "ICON-BUTTON-001",
+      "version": "1.0.0",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-SCOPE",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-FIGMA"
+      ],
+      "acceptance": [
+        "Contrastar REQ-SCOPE con el ledger y el comprobante nativo."
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-FIGMA"
+      ],
+      "acceptance": [
+        "Contrastar REQ-API con el ledger y el comprobante nativo."
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-FIGMA"
+      ],
+      "acceptance": [
+        "Contrastar REQ-LAYOUT con el ledger y el comprobante nativo."
+      ]
+    },
+    {
+      "id": "REQ-COMPOSITION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-FIGMA"
+      ],
+      "acceptance": [
+        "Contrastar REQ-COMPOSITION con el ledger y el comprobante nativo."
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-FIGMA"
+      ],
+      "acceptance": [
+        "Contrastar REQ-THEME con el ledger y el comprobante nativo."
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-FIGMA"
+      ],
+      "acceptance": [
+        "Contrastar REQ-TOKENS con el ledger y el comprobante nativo."
+      ]
+    },
+    {
+      "id": "REQ-BEHAVIOR",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-FIGMA"
+      ],
+      "acceptance": [
+        "Contrastar REQ-BEHAVIOR con el ledger y el comprobante nativo."
+      ]
+    },
+    {
+      "id": "REQ-A11Y",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-FIGMA"
+      ],
+      "acceptance": [
+        "Contrastar REQ-A11Y con el ledger y el comprobante nativo."
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-REQUEST",
+        "SRC-FIGMA"
+      ],
+      "acceptance": [
+        "Contrastar REQ-QA con el ledger y el comprobante nativo."
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Surface",
+      "Selection summary",
+      "Selected count",
+      "Label",
+      "Select all",
+      "General actions Slot",
+      "Divider",
+      "Close"
+    ],
+    "composition": "Dot, Button/text and Icon Button/ghost via native Slot and exposed instance.",
+    "accessibility": "Host owns selection announcements, focus, keyboard and accessible action names."
+  }
+}
+---
+# FLOATING-ACTIONS-001 · Floating Actions 1.0.0
+
+### REQ-SCOPE
+
+Floating Actions reúne un resumen de selección y una región de acciones. La referencia visual es Laboratorio 27:5129 y el destino es Blue Heart DS. La vista inicial reproduce 1024 × 96 px, con datos de ejemplo.
+
+### REQ-API
+
+Label y Select all son textos editables. Show select all permite ocultar el enlace. Selected count es una instancia expuesta de Dot count/large/neutral, con muestra inicial 3. General actions es un Slot horizontal nativo de 0..n. Sus cuatro botones, el divisor y el cierre son contenido inicial del Slot y pueden sustituirse, eliminarse o reordenarse desde cada instancia.
+
+### REQ-LAYOUT
+
+Barra horizontal con dos regiones FILL de 488 px en el ejemplo, padding 24, radio 16 y alineación vertical centrada. El resumen usa gap 8; General actions usa gap 16. El divisor visual mide 1 × 48. Mantener sombra de radio 4, offset (4, 6), expansión 0 y color shadow-md. El host proporciona ancho suficiente para los textos y acciones. La barra no añade saltos ni desbordamiento automático.
+
+### REQ-COMPOSITION
+
+Reutilizar Dot oficial con color neutral, Button/text large default con icono PlusCircle Outline Light y un Icon Button/ghost large default con X Outline Light de Phosphor. El set original de cada dependencia conserva la propiedad sobre sus interacciones y tokens. Las acciones y el cierre permanecen dentro del Slot como en la referencia.
+
+### REQ-THEME
+
+Superficie blanca, contador neutral y demás detalles fijos. El texto del enlace de selección sigue el semántico de marca de cada tema. Label usa neutral-maximum, el neutral más oscuro del sistema para sustituir el negro literal de la referencia. Todos los colores se enlazan a la capa semántica con tokens de componente.
+
+### REQ-TOKENS
+
+Usar 19 firmas propias en component/floating-actions. Radio y offset horizontal de sombra comparten firma. Heredar los colores y tamaños de Dot, Button e Icon Button desde sus instancias. El registro no requiere primitivas ni semánticos adicionales.
+
+### REQ-BEHAVIOR
+
+En Figma el contador y los textos se editan manualmente. El host decide cuándo mostrar la barra, qué se selecciona, qué ejecutan Seleccionar todos y las acciones, y cómo se cierra. La barra no calcula conteos ni contiene destinos de prototipo propios. Los botones conservan el comportamiento de sus principales oficiales.
+
+### REQ-A11Y
+
+El host nombra las acciones e identifica el cierre, gestiona teclado y foco y anuncia los cambios de selección cuando corresponda. El enlace subrayado conserva una señal adicional al color. Comprobar contraste de las combinaciones propias en los cuatro temas.
+
+### REQ-QA
+
+Validar geometría de referencia, bindings de texto, superficie, espaciado y sombra, cuatro modos, dependencias oficiales y el Slot desde una instancia. Acreditar por separado edición de texto, inserción, retirada y reordenación de acciones.
+
+### Rutas de tokens
+
+| Token lógico | Ruta Figma |
+| --- | --- |
+| floating-actions.color-bg-default | floating-actions/color/bg/default |
+| floating-actions.color-text-label | floating-actions/color/text/label |
+| floating-actions.color-text-select-all | floating-actions/color/text/select-all |
+| floating-actions.color-shape-divider | floating-actions/color/shape/divider |
+| floating-actions.color-effect-shadow | floating-actions/color/effect/shadow |
+| floating-actions.size-shadow-regular | floating-actions/size/shadow-regular |
+| floating-actions.size-shadow-offset-y | floating-actions/size/shadow-offset-y |
+| floating-actions.size-divider-height | floating-actions/size/divider-height |
+| floating-actions.size-divider-width | floating-actions/size/divider-width |
+| floating-actions.radius-surface | floating-actions/radius/surface |
+| floating-actions.spacing-content | floating-actions/spacing/content |
+| floating-actions.spacing-actions | floating-actions/spacing/actions |
+| floating-actions.spacing-surface | floating-actions/spacing/surface |
+| floating-actions.font-family | floating-actions/font/family |
+| floating-actions.font-style-label | floating-actions/font/style-label |
+| floating-actions.font-style-select-all | floating-actions/font/style-select-all |
+| floating-actions.font-size | floating-actions/font/size |
+| floating-actions.font-line-height | floating-actions/font/line-height |
+| floating-actions.font-letter-spacing | floating-actions/font/letter-spacing |

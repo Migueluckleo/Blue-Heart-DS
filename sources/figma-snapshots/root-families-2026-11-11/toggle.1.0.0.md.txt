@@ -1,0 +1,426 @@
+---
+{
+  "schema_version": 1,
+  "id": "TOGGLE-001",
+  "version": "1.0.0",
+  "profile": "component",
+  "status": "ELIGIBLE",
+  "authority": {
+    "kind": "DELEGATED",
+    "decision_id": "ADR-042"
+  },
+  "targets": [
+    "figma",
+    "documentation"
+  ],
+  "readiness": {
+    "figma": "READY",
+    "documentation": "READY"
+  },
+  "sources": [
+    {
+      "id": "SRC-USER",
+      "path": "evidence/authorization/toggle-request.json",
+      "sha256": "784470c67e957d4a4b7801f3c3907d645317ed014499db41e1770d812c744172"
+    },
+    {
+      "id": "SRC-CAPTURE",
+      "path": "evidence/toggle-pilot/source/capture-manifest.json",
+      "sha256": "373c8a6d30942393c05a3ec8aa2b6b11531b1436fb5fb6b9b654764f1901d7f1"
+    },
+    {
+      "id": "SRC-MODEL",
+      "path": "evidence/toggle-pilot/source/toggle-component-contract.yaml",
+      "sha256": "efe77d97aea540d18134505a28da4384486e53f48282efdd23fa1c39fa1823eb"
+    },
+    {
+      "id": "SRC-PLAN",
+      "path": "evidence/toggle-pilot/build-plan.json",
+      "sha256": "604db86e93cc0c42d42eb8d6aca072460d89da0bb72402385599cd1d721b48a3"
+    },
+    {
+      "id": "SRC-AUDIT",
+      "path": "evidence/toggle-pilot/reverse-dependencies.json",
+      "sha256": "63984a239c2a0d263ed2cf0a7193422f2ead926449ee86509d1241dd28eeed01"
+    },
+    {
+      "id": "SRC-CONTRAST",
+      "path": "evidence/toggle-pilot/contrast-analysis.json",
+      "sha256": "c72e9dafc8812aaaf6cd0b0a4c86f81c1808a5029b45bfce084602bee14d3592"
+    }
+  ],
+  "dependencies": [
+    {
+      "kind": "token",
+      "id": "toggle.spacing-none",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.spacing-label",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.size-track-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.size-track-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.radius-full",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.color-track-off-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.size-thumb",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.color-thumb-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.size-label-max-width",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.color-text-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.font-family",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.font-regular",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.font-size",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.font-line-height",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.font-tracking",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.color-track-off-hover",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.border-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.color-stroke-focus",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.color-track-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.color-thumb-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.color-text-disabled",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.color-track-primary-default",
+      "relation": "uses"
+    },
+    {
+      "kind": "token",
+      "id": "toggle.color-track-primary-hover",
+      "relation": "uses"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-ANATOMY",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-ANATOMY"
+      ]
+    },
+    {
+      "id": "REQ-API",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-API"
+      ]
+    },
+    {
+      "id": "REQ-LAYOUT",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-LAYOUT"
+      ]
+    },
+    {
+      "id": "REQ-FOCUS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-FOCUS"
+      ]
+    },
+    {
+      "id": "REQ-TYPOGRAPHY",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-TYPOGRAPHY"
+      ]
+    },
+    {
+      "id": "REQ-TOKENS",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-TOKENS"
+      ]
+    },
+    {
+      "id": "REQ-THEME",
+      "force": "MUST",
+      "provenance": "OBSERVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-THEME"
+      ]
+    },
+    {
+      "id": "REQ-INTERACTION",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-INTERACTION"
+      ]
+    },
+    {
+      "id": "REQ-HOST",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-HOST"
+      ]
+    },
+    {
+      "id": "REQ-ACCESSIBILITY",
+      "force": "MUST",
+      "provenance": "EXPLICIT",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-ACCESSIBILITY"
+      ]
+    },
+    {
+      "id": "REQ-DEPENDENCIES",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-DEPENDENCIES"
+      ]
+    },
+    {
+      "id": "REQ-QA",
+      "force": "MUST",
+      "provenance": "DERIVED",
+      "sources": [
+        "SRC-USER",
+        "SRC-CAPTURE",
+        "SRC-MODEL",
+        "SRC-PLAN",
+        "SRC-AUDIT",
+        "SRC-CONTRAST"
+      ],
+      "acceptance": [
+        "Comparar contrato,receta y evidencia ejecutada: REQ-QA"
+      ]
+    }
+  ],
+  "profile_data": {
+    "anatomy": [
+      "Root",
+      "Track",
+      "Thumb",
+      "Focus ring",
+      "Label wrapper",
+      "Label"
+    ],
+    "composition": "Own binary switch geometry; no nested components or icons.",
+    "accessibility": "Host supplies switch semantics,Space,accessible name,touch area and product persistence; Figma proves only visual interactions."
+  }
+}
+---
+# TOGGLE-001 · 1.0.0
+
+### REQ-ANATOMY
+
+Ocho combinaciones reales selected=false/true × state=default/hover/focus/disabled. Root horizontal contiene Track con Thumb ELLIPSE y Focus ring solo focus, seguido de Label opcional. No añadir pressed,error,loading,tamaños,grupo exclusivo ni componentes hijos por analogía. Sin sombras ni iconos; la perilla es geometría propia.
+
+### REQ-API
+
+Conservar selected y state como ejes VARIANT y Label TEXT inicialmente Label/Show label BOOLEAN inicialmente false. Default público false/default. Resolver las keys reales desde ledger. Etiqueta describe lo activado en sentence case,sin prefijos Activar/Desactivar ni textos Sí/No u On/Off junto al control. Ocultarla requiere que el host aporte nombre accesible equivalente. Las frases fiscales de muestra no son reglas de negocio ni autorizaciones de servicio.
+
+### REQ-LAYOUT
+
+Root HORIZONTAL HUG/HUG,gap8,padding0,alineación primaria MIN y secundaria CENTER. Track40×24 fijo y Thumb20 a x2 apagado/x18 encendido,y2,con constraints MIN/MAX respectivamente y CENTER vertical. Es canvas geométrico de selección,no layout de contenido; conservarlo sin crear tokens para x/y no vinculables. Radio full en Track/anillo; perilla es elipse nativa. No estirar el riel al cambiar texto. Label original tiene maxWidth320 real: mover ese límite a Label wrapper FRAME HUG/maxWidth vinculado y texto HEIGHT/FILL,quitando el cap literal de TEXT para que gobierne la variable. Show label oculta wrapper completo y elimina gap sobrante. Inicial40×24 sin etiqueta; con Label corto ancho natural. Multilínea conserva CENTER de raíz: no importar FIRST_LINE de Checkbox. Host estrecho fija ancho del root y pone wrapper en FILL; mantiene alto HUG y máximo320. El principal no inventa mínimo de ancho del host ni recorta el foco.
+
+### REQ-FOCUS
+
+Focus ring es FRAME vacío hijo de Track,48×32,x/y−4,radio full,trazo2 INSIDE y constraints STRETCH en ambos ejes. La separación transparente visible es2px;4px es el desplazamiento del borde exterior respecto del riel. Conservar esa geometría real,corrigiendo la ambigüedad de la descripción fuente. No usar caja del Label como contorno ni ampliar silenciosamente halo a52×36. Track/root/host de muestra no recortan el halo.
+
+### REQ-TYPOGRAPHY
+
+Un estilo compartido Manrope Regular14/24px,tracking0. Fuente,tamaño,línea y tracking observados vinculados; añadir fontStyle STRING desde semantic.font-weight-regular para hacer consumible el literal Regular observado. Mantener ID de estilo aplicado y bindings en ocho textos y consumidores; no convertir fontStyle a peso numérico ni cambiar unidades. La primera línea24 coincide con altura del control,pero la alineación multilínea sigue CENTER.
+
+### REQ-TOKENS
+
+Aplicar BH-P07:23firmas únicas para198bindings,bajo toggle/ de component y un scope concreto por token. Tipos,unidades,scope y vectores completos de cuatro aliases gobiernan la firma; no duplicar por selected/state ni copiar tokens de Checkbox/Radio. Cero primitivas/semánticos nuevos: los990anteriores permanecen íntegros y totalizan1013. Mantener nombre lógico,ruta Figma,ID/key y WEB. Los8wrappers añaden usos,no variables redundantes. Posición de perilla y geometría derivada de foco no son variables de coordenadas no soportadas.
+
+### REQ-THEME
+
+Únicamente Track primary-default y primary-hover en selected=true siguen Contable,Administrativo,Servicios y Personas. Selected/focus reutiliza el mismo riel de selected/default. Off-default/off-hover,Label,Thumb,disabled y focus/ring son invariantes. Los dos selected disabled usan igual paleta: la posición de la perilla conserva la distinción no cromática. Focus comparte un alias con hover Contable,pero su vector fijo no se fusiona con el hover temático. No heredar excepciones de Tab/Search por parecido visual.
+
+### REQ-INTERACTION
+
+La fuente no contiene reactions. Adoptar en destino diez aristas de CHANGE_TO: ON_CLICK invierte selected en default/hover/focus conservando state; disabled no responde. MOUSE_ENTER default→hover y MOUSE_LEAVE hover→default conservan selected. Usar eventos explícitos,no hover automático que pueda restaurar la selección anterior al salir. Toda la superficie del principal,incluida Label visible,participa del clic. Verificar clic en riel y Label,salida después de alternar,alternancia repetida e inercia disabled mediante reproducción visible. Foco es variante visual; estos eventos no acreditan foco real ni teclado.
+
+### REQ-HOST
+
+Toggle corresponde a preferencias que se aplican sin Guardar. El host mantiene valor,ejecuta y persiste el cambio,anuncia resultado y define asincronía. Si tarda,compone Loader junto al control y ante fallo revierte a valor previo y presenta Inline Notification; no inventar loading/error dentro de Toggle ni hacer de esos hijos dependencias obligatorias de su anatomía. Si requiere confirmación o Guardar,elegir el patrón adecuado del consumidor. La muestra Figma no llama PAC,correo,servicios ni almacena preferencias. Cambiar estado visual no equivale a éxito de negocio.
+
+### REQ-ACCESSIBILITY
+
+Host futuro aporta role=switch,aria-checked,nombre accesible y Espacio para alternar; decide foco/blur,tabulación,anuncios y persistencia de errores con implementación y QA propios. Label ausente no puede dejar control sin nombre. Visual40×24 y etiqueta corta de alto24 requieren área táctil del host de mínimo44×44; no afirmar que Label por sí sola la entrega. Medir cada rol sobre fondo real; análisis adjunto usa host blanco y reporta disabled separado. La posición aporta señal no cromática; no declarar AA global ni acreditar teclado/lector/toque físico desde Figma.
+
+### REQ-DEPENDENCIES
+
+Auditoría previa de22páginas/6624instancias: cero consumidores,helpers,principales o referencias Toggle/Switch por nombre/key; cero sustituciones y retiros. No compone Checkbox/Radio/Input ni Phosphor: ELLIPSE nativa es marca de selección,no icono acompañante de Label y no aplica paridad icono/texto. Dependencias opcionales de muestras pertenecen al host y se registran aparte. Cierre completo de reglas/tokens debe caber65536bytes sin truncar ni ampliar presupuesto. Fuente/proyecto anterior siguen solo lectura; React/Graphify diferidos.
+
+### REQ-QA
+
+Validar ocho variantes,23variables/92aliases,198bindings,un estilo/ocho textos y diez aristas. Cuatro temas,propiedades independientes,visibilidad y contenido corto/largo/vacío,cambios selected/state con overrides,ancho160/240/640 desde consumidor,cap320 y CENTER multilínea,perilla20 con posiciones/constraints reales,halo sin clip y colores resueltos por parte. Comparar990objetos anteriores; tolerancia0.05px de geometría y0.000001color,números Figma normalizados float32,identidades/aliases exactos. Guía editable y reproducción visible autónoma separadas de infraestructura. QA del ejecutor,sin revisor independiente; no valida productos,React,ARIA/teclado ni toque físico.
+
