@@ -12,7 +12,7 @@ const key = ([id, t]) => figma.variables.getVariableByIdAsync(t.targetId).then(v
   return [id,v];
 });
 const vars = Object.fromEntries(await Promise.all(Object.entries(DATA.tokens).map(key)));
-const fonts = [...new Map(Object.values(DATA.styles).map(s => [s.fontName.family+'/'+s.fontName.style,s.fontName])).values()];
+const fonts = [...new Map([...Object.values(DATA.styles).map(s=>s.fontName),...(DATA.fonts??[])].map(font=>[font.family+'/'+font.style,font])).values()];
 await Promise.all(fonts.map(({family,style}) => figma.loadFontAsync({family,style})));
 const styles = {};
 const existingStyles = await figma.getLocalTextStylesAsync();

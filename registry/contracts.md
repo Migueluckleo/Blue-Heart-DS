@@ -37,3 +37,5 @@ Las guías de [Buttons](../specs/components/buttons.usage.amendment.v1.0.1.md) y
 [Chip](../specs/components/chip.contract.v1.0.0.md) · DELEGATED_FOR_BUILD con QA documental. Delega 40 variantes, anatomía fija y tres modos web.
 
 [Table cell](../specs/components/table-cell.contract.v1.0.0.md) y [Table](../specs/components/table.contract.v1.0.0.md) · DELEGATED_FOR_BUILD con QA documental. Cubre Table, 30 variantes de Cell, Capture y los auxiliares. Table reutiliza Pagination y depende de Avatar a través de Cell.
+
+[Stepper](../specs/components/stepper.contract.v1.0.0.md) · DELEGATED_FOR_BUILD. Conserva dos orientaciones, tres estados, tres posiciones, un conector privado y aliases de los cuatro temas.

@@ -1,7 +1,8 @@
 {
   "kind": "DERIVED_NOT_AUTHORITY",
   "sources": {
-    "specs/tokens/blueheart-variables.v0.1.2.json": "09a96d3707735fa129e3cfa99de6ccac1a9d94ccf5cc19fa5d282de867629993"
+    "specs/tokens/blueheart-variables.v0.1.2.json": "09a96d3707735fa129e3cfa99de6ccac1a9d94ccf5cc19fa5d282de867629993",
+    "specs/data/stepper.tokens.v1.0.0.json": "06a625977b6be2c051407fec969ce91db5859e21001e3e14e4c3e7f09e84e1ef"
   },
   "modes": [
     "Contable",
@@ -20714,6 +20715,202 @@
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:228"
         }
+      }
+    },
+    {
+      "name": "stepper/color/accent",
+      "collection": "component",
+      "css": "--stepper-color-accent",
+      "source": "specs/data/stepper.tokens.v1.0.0.json",
+      "amendments": [],
+      "description": "Superficie del paso completado y tramo del conector con acento.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:152"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:162"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:176"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:181"
+        }
+      }
+    },
+    {
+      "name": "stepper/color/base",
+      "collection": "component",
+      "css": "--stepper-color-base",
+      "source": "specs/data/stepper.tokens.v1.0.0.json",
+      "amendments": [],
+      "description": "Glifo sobre marca y superficie base del terminal horizontal.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        }
+      }
+    },
+    {
+      "name": "stepper/color/brand",
+      "collection": "component",
+      "css": "--stepper-color-brand",
+      "source": "specs/data/stepper.tokens.v1.0.0.json",
+      "amendments": [],
+      "description": "Superficie de la marca actual y glifo de comprobación sobre acento.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:154"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:163"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:177"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:184"
+        }
+      }
+    },
+    {
+      "name": "stepper/color/caption",
+      "collection": "component",
+      "css": "--stepper-color-caption",
+      "source": "specs/data/stepper.tokens.v1.0.0.json",
+      "amendments": [],
+      "description": "Texto complementario Caption.",
+      "scopes": [
+        "TEXT_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        }
+      }
+    },
+    {
+      "name": "stepper/color/medium",
+      "collection": "component",
+      "css": "--stepper-color-medium",
+      "source": "specs/data/stepper.tokens.v1.0.0.json",
+      "amendments": [],
+      "description": "Texto principal, etiqueta de paso y glifo inactivo.",
+      "scopes": [
+        "SHAPE_FILL",
+        "TEXT_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        }
+      }
+    },
+    {
+      "name": "stepper/color/muted",
+      "collection": "component",
+      "css": "--stepper-color-muted",
+      "source": "specs/data/stepper.tokens.v1.0.0.json",
+      "amendments": [],
+      "description": "Superficie inactiva y tramo neutro del conector.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        }
+      }
+    },
+    {
+      "name": "stepper/size/line-inline",
+      "collection": "component",
+      "css": "--stepper-size-line-inline",
+      "source": "specs/data/stepper.tokens.v1.0.0.json",
+      "amendments": [],
+      "description": "Longitud horizontal de 80 px observada en el conector.",
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "values": {
+        "Contable": 80,
+        "Administrativo": 80,
+        "Servicios": 80,
+        "Personas": 80
       }
     },
     {

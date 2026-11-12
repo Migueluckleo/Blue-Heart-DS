@@ -21,3 +21,7 @@ El usuario confirmó los roles el 11 de noviembre de 2026. Blue Heart DS queda c
 ## Buttons, Loader y Phosphor
 
 [Manifiesto de lectura](../sources/figma-snapshots/buttons-loader-2026-11-11/manifest.json) de Buttons `11:128` y Loader `245:19` en la raíz. Las versiones fuente indicadas por sus descripciones están preservadas por hash. [Regla Phosphor](../references/PHOSPHOR-ICONS.md) y [lectura de la key vinculada](../implementations/figma/buttons-loader-2026-11-11/phosphor-import.readback.json).
+
+## Stepper · 2026-11-12
+
+La [captura del nodo 1020:530](../sources/figma-snapshots/root-families-2026-11-11/stepper-source.json) conserva el set de 18 variantes, el ejemplo de cuatro pasos, el auxiliar remoto y los bindings por instancia. [Phosphor oficial](../sources/figma-snapshots/root-families-2026-11-11/phosphor-stepper.json) confirma CheckFat e Image Fill.

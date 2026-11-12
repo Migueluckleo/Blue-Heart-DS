@@ -32,6 +32,7 @@ export const examples: Record<string, ComponentType> = {
   "search": Examples.SearchExample,
   "section-header": Examples.SectionHeaderExample,
   "sidebar": Examples.SidebarExample,
+  "stepper": Examples.StepperExample,
   "tab": Examples.TabExample,
   "table": Examples.TableExample,
   "table-cell": Examples.TableCellExample,

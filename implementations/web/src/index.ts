@@ -76,3 +76,5 @@ export { Table } from './components/table';
 export type { TableProps } from './components/table';
 export { TableCell, TableCaptureCell } from './components/table-cell';
 export type { TableCellProps, TableCaptureCellProps, TableCellState, TableCellAction } from './components/table-cell';
+export { Stepper, StepperItem } from './components/stepper';
+export type { StepperItemProps, StepperOrientation, StepperPosition, StepperProps, StepperState, StepperStep } from './components/stepper';

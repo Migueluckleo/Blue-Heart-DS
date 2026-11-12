@@ -6,7 +6,7 @@ import { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';
 import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
 import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
 import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
-import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from './index';
+import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from './index';
 
 const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];
 
@@ -781,5 +781,40 @@ export function TableExample() {
         </tr>;
       })}</tbody>
     </Table>
+  </div>;
+}
+
+// example: stepper
+export function StepperExample() {
+  const steps = [
+    {id:'company',title:'Datos de la empresa',caption:'Identificación'},
+    {id:'tax',title:'Datos fiscales',caption:'Configuración'},
+    {id:'access',title:'Accesos',caption:'Personas'},
+    {id:'review',title:'Revisión',caption:'Confirmación'},
+  ];
+  const [current,setCurrent] = useState(1);
+  const [orientation,setOrientation] = useState<StepperOrientation>('horizontal');
+  const heading = useRef<HTMLHeadingElement>(null);
+  const changedStep = useRef(false);
+  useEffect(()=>{
+    if (changedStep.current) heading.current?.focus();
+  },[current]);
+  const go = (index: number) => {
+    changedStep.current = true;
+    setCurrent(index);
+  };
+  return <div className="grid gap-4">
+    <label className="flex items-center gap-2">Orientación del progreso
+      <select value={orientation} onChange={event=>setOrientation(event.target.value as StepperOrientation)}>
+        <option value="horizontal">Horizontal</option>
+        <option value="vertical">Vertical</option>
+      </select>
+    </label>
+    <Stepper label="Progreso del registro de empresa" steps={steps} currentStep={steps[current].id} orientation={orientation}/>
+    <h3 ref={heading} tabIndex={-1}>{steps[current].title}</h3>
+    <div className="flex flex-wrap gap-2">
+      <Button variant="secondary" size="small" label="Volver al paso anterior" disabled={current===0} onClick={()=>go(current-1)}/>
+      <Button size="small" label="Continuar registro" disabled={current===steps.length-1} onClick={()=>go(current+1)}/>
+    </div>
   </div>;
 }

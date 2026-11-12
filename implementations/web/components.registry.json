@@ -551,6 +551,25 @@
     "usage_guide": "specs/components/sidebar.secondary-control.amendment.v1.0.1.md"
   },
   {
+    "id": "STEPPER-001",
+    "slug": "stepper",
+    "name": "Stepper",
+    "module": "stepper",
+    "exports": [
+      "Stepper",
+      "StepperItem"
+    ],
+    "category": "navegación",
+    "notes": "Progreso orientativo de un registro de empresa. Los controles del anfitrión cambian el paso y mueven el foco al título.",
+    "base": "specs/components/stepper.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Cada paso tiene anatomía fija. El anfitrión aporta la colección."
+    },
+    "qa": "qa/implementations/stepper.v1.0.0.review.md"
+  },
+  {
     "id": "TAB-001",
     "slug": "tab",
     "name": "Tab",

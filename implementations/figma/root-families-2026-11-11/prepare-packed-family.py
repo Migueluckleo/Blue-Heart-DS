@@ -10,23 +10,26 @@ start, limit = int(start), int(limit)
 icon_button = part.startswith('icon-button-')
 input_field = part in ('input-empty','input-filled')
 chip = part.startswith('chip-')
+stepper = part in ('stepper-item','stepper-line')
 table_cell = part in ('table-cell-actions','table-capture-cell','table-cell')
 table_scrollbar = part in ('table-scrollbar-thumb','table-scrollbar-medium')
 table_main = part == 'table-main'
 table = table_cell or table_scrollbar or table_main
-linked = icon_button or input_field or chip or table or part in ('avatar','avatar-group','company-selector','user-selector','header-actions','header',
+linked = icon_button or input_field or chip or stepper or table or part in ('avatar','avatar-group','company-selector','user-selector','header-actions','header',
                                  'section-header','app-shell','pagination-item','pagination','tab','tabs','text-area',
                                  'dropdown-item','dropdown-scrollbar','dropdown-menu',
                                  'floating-actions','inline-notification',
                                  'badge','file-upload','checkbox','search','breadcrumb-item','breadcrumb',
                                  'menu-item','top-bar','sidebar-help','sidebar')
-slug = 'icon-button' if icon_button else 'input' if input_field else 'chip' if chip else 'table-cell' if table_cell else 'table' if table_scrollbar or table_main else part if linked else 'linear-progress'
+slug = 'icon-button' if icon_button else 'input' if input_field else 'chip' if chip else 'stepper' if stepper else 'table-cell' if table_cell else 'table' if table_scrollbar or table_main else part if linked else 'linear-progress'
 spec = json.loads((root / f'specs/data/{slug}.v1.0.0.json').read_text())
 contract_slug = {'sidebar-help':'sidebar','dropdown-scrollbar':'dropdown-menu'}.get(part,slug)
 contract = (root / f'specs/components/{contract_slug}.contract.v1.0.0.md').read_text()
 receipt_pattern = f'{slug}-[0-9]*.mutation.json' if linked and not (icon_button or input_field or chip) else f'{slug}-*.mutation.json'
 if table:
     receipt_pattern = 'table-*.mutation.json'
+if stepper:
+    receipt_pattern = 'stepper-*-*.mutation.json'
 receipts = [json.loads(path.read_text()) for path in here.glob(receipt_pattern)
             if not table or path.name.removesuffix('.mutation.json').rsplit('-',1)[-1].isdigit()]
 set_name = {'badge':'Badge','file-upload':'File Upload','checkbox':'Checkbox','search':'Search','breadcrumb-item':'Breadcrumb item','breadcrumb':'Breadcrumb','menu-item':'Menu item',
@@ -38,6 +41,7 @@ set_name = {'badge':'Badge','file-upload':'File Upload','checkbox':'Checkbox','s
             'top-bar':'Top bar','sidebar-help':'__Sidebar/Help','sidebar':'Sidebar',
             'table-cell-actions':'__Table/Cell actions','table-capture-cell':'Table capture cell','table-cell':'Table cell',
             'table-main':'Table','table-scrollbar-thumb':'__Table/Scrollbar thumb','table-scrollbar-medium':'__Table/Scrollbar medium',
+            'stepper-item':'Stepper','stepper-line':'__Stepper/Progress line',
             'helper':'__Linear Progress/Indeterminate'}.get(part,f'Linear Progress Bar/{part}')
 if icon_button:
     set_name = 'Icon Button/' + part.removeprefix('icon-button-')
@@ -51,7 +55,7 @@ ids = {entry['setName']: entry['setId'] for entry in receipts}
 nodes = {src: dst for entry in receipts for src, dst in entry['nodes'].items()}
 styles = {src: dst for entry in receipts for src, dst in entry['styles'].items()}
 description_section = contract.split('## Description exacta')[1].split('##')[0].strip()
-description = description_section if linked and part not in ('sidebar','sidebar-help','dropdown-menu','dropdown-scrollbar') and not (icon_button or input_field or chip or table) else next(
+description = description_section if linked and part not in ('sidebar','sidebar-help','dropdown-menu','dropdown-scrollbar') and not (icon_button or input_field or chip or stepper or table) else next(
     row.split(' | ')[1] for row in description_section.splitlines() if row.startswith(f'| {set_name} |')
 ).removesuffix(' |')
 guide = {'badge':'332-234','file-upload':'477-12','checkbox':'382-12','search':'648-20','breadcrumb-item':'363-67','breadcrumb':'363-67','menu-item':'754-153',
@@ -72,8 +76,18 @@ if chip:
     guide = '434-2'
 if table:
     guide = '846-2773'
+if stepper:
+    guide = '1020-589'
 links = [{'uri': f"https://www.figma.com/design/{spec['sourceFileKey']}?node-id={guide}"}]
 page_name = family_set.get('pageName') or (set_name if linked else 'Linear Progress Bar')
+if stepper:
+    ledger = json.loads((here.parent/'variables-2026-11-11/id-map.json').read_text())
+    foundation = json.loads((root/'specs/tokens/blueheart-variables.v0.1.2.json').read_text())
+    resolved = {v['targetPath']:v['targetId'] for v in ledger['variables']}
+    spec['tokens'] = {v['name']:dict(name=v['name'],targetId=resolved[v['name']],type=v['resolvedType'])
+                      for c in foundation['collections'] if c['name']=='semantic' for v in c['variables']}
+    receipt = json.loads((here/'stepper-variables.readback.json').read_text())
+    spec['tokens'].update({name:dict(name=name,targetId=v['id'],type=v['type']) for name,v in receipt['variables'].items()})
 data = dict(targetFileKey=target_key, fileKey=target_key, pageName=page_name,
             pageId=receipts[0]['pageId'] if receipts else None, setName=set_name, setId=ids.get(set_name),
             allowedSiblingIds=list(ids.values()), description=description, links=links, tokens=spec['tokens'],
@@ -85,7 +99,7 @@ if 'layout' in family_set:
 
 if linked:
     avatar_header = ('avatar','avatar-group','company-selector','user-selector','header-actions','header')
-    icon_capture = 'avatar-header' if part in avatar_header else 'chip' if chip else 'table' if table else {
+    icon_capture = 'avatar-header' if part in avatar_header else 'chip' if chip else 'stepper' if stepper else 'table' if table else {
         'badge':'badge','file-upload':'file-upload-checkbox','checkbox':'file-upload-checkbox',
         'input-empty':'input','input-filled':'input','section-header':'section-header',
         'pagination-item':'pagination','pagination':'pagination','tab':'tabs','tabs':'tabs','text-area':'text-area',
@@ -108,8 +122,10 @@ if linked:
             data['effectStyles'] = spec['effectStyles']
             if operation == 'audit':
                 data['effectStyleIds'] = {src:dst for entry in receipts for src,dst in entry['effectStyles'].items()}
-    if chip or table_cell:
+    if chip or stepper or table_cell:
         data['swaps'] = spec['swaps']
+    if stepper:
+        data['ignoreVariantOptionOrder'] = ['type','state','position']
     if part == 'table-cell':
         for family in ('avatar','checkbox','toggle','badge'):
             for path in here.glob(f'{family}-[0-9]*.mutation.json'):
@@ -335,6 +351,12 @@ else:
         if not selected:
             raise ValueError('No missing Table cell variants')
     flattened = [row for variant in selected for row in flatten(variant)]
+    if stepper:
+        used = {name for row in flattened for part in [row, *row.get('linkedFills',[]), *row.get('vectorFills',[])]
+                for name in part.get('b',{}).values()}
+        data['tokens'] = {name:spec['tokens'][name] for name in used}
+        data['fonts'] = list({(row['fontName']['family'],row['fontName']['style']):row['fontName']
+                              for row in flattened if row.get('fontName')}.values())
     required_ids = {row['id'] for row in flattened} | {variant['id'] for variant in family_set['variants']}
     external = {row['main']['id'] for row in flattened if row.get('main') and not row['main']['remote']}
     external.update(action['destinationId'] for row in flattened for reaction in row.get('reactions',[])

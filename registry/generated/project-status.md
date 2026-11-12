@@ -37,6 +37,7 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 | SEARCH-001 | [1.0.0](../../specs/components/search.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | SECTION-HEADER-001 | [1.0.0](../../specs/components/section-header.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | SIDEBAR-001 | [1.0.0](../../specs/components/sidebar.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 2 registros por alcance |
+| STEPPER-001 | [1.0.0](../../specs/components/stepper.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | TAB-001 | [1.0.0](../../specs/components/tab.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | TABLE-001 | [1.0.0](../../specs/components/table.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | TABLE-CELL-001 | [1.0.0](../../specs/components/table-cell.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
@@ -460,6 +461,19 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Enmienda: [specs/components/sidebar.secondary-control.amendment.v1.0.1.md](../../specs/components/sidebar.secondary-control.amendment.v1.0.1.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
 - Implementación: [implementations/figma/root-families-2026-11-11/sidebar-secondary-user-override.readback.json](../../implementations/figma/root-families-2026-11-11/sidebar-secondary-user-override.readback.json) — {}.
 - Implementación: [implementations/figma/root-families-2026-11-11/sidebar-secondary-user-override.source.json](../../implementations/figma/root-families-2026-11-11/sidebar-secondary-user-override.source.json) — {}.
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## STEPPER-001
+
+Base: [specs/components/stepper.contract.v1.0.0.md](../../specs/components/stepper.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/components/stepper.contract.v1.0.0.md](../../specs/components/stepper.contract.v1.0.0.md).
+- Página declarada: Steppers en [specs/components/stepper.contract.v1.0.0.md](../../specs/components/stepper.contract.v1.0.0.md).
+- Preparación: UNKNOWN.
+- Slots: NOT_APPLICABLE en [specs/components/stepper.contract.v1.0.0.md](../../specs/components/stepper.contract.v1.0.0.md).
+- Revisión de implementación declarada: UNKNOWN.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 

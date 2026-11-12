@@ -37,3 +37,5 @@ El corte inicial cubre documentación, catálogo React/Next vacío, integridad d
 [Chip](../qa/implementations/chip.v1.0.0.review.md) · PASS en cuatro sets, 40 variantes, 53 controles nativos y Chrome dirigido.
 
 [Table y Table cell](../qa/implementations/table-chain.v1.0.0.review.md) · PASS en Figma y web. Table cell tiene 30 variantes. Table pasó lectura de 108 celdas y QA de Rows desde instancias.
+
+[Stepper](../qa/implementations/stepper.v1.0.0.review.md) · PASS en Figma y web. Lecturas nativas en los cuatro modos y Chrome con teclado, foco y semántica de progreso.

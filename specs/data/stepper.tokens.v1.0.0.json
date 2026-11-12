@@ -1,0 +1,201 @@
+{
+  "collection": "component",
+  "variables": [
+    {
+      "name": "stepper/color/brand",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:154"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:163"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:177"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:184"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--stepper-color-brand)"
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "description": "Superficie de la marca actual y glifo de comprobación sobre acento."
+    },
+    {
+      "name": "stepper/color/accent",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:152"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:162"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:176"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:181"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--stepper-color-accent)"
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "description": "Superficie del paso completado y tramo del conector con acento."
+    },
+    {
+      "name": "stepper/color/muted",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--stepper-color-muted)"
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "description": "Superficie inactiva y tramo neutro del conector."
+    },
+    {
+      "name": "stepper/color/medium",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--stepper-color-medium)"
+      },
+      "scopes": [
+        "SHAPE_FILL",
+        "TEXT_FILL"
+      ],
+      "description": "Texto principal, etiqueta de paso y glifo inactivo."
+    },
+    {
+      "name": "stepper/color/caption",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--stepper-color-caption)"
+      },
+      "scopes": [
+        "TEXT_FILL"
+      ],
+      "description": "Texto complementario Caption."
+    },
+    {
+      "name": "stepper/color/base",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--stepper-color-base)"
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "description": "Glifo sobre marca y superficie base del terminal horizontal."
+    },
+    {
+      "name": "stepper/size/line-inline",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "Contable": 80,
+        "Administrativo": 80,
+        "Servicios": 80,
+        "Personas": 80
+      },
+      "codeSyntax": {
+        "WEB": "var(--stepper-size-line-inline)"
+      },
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "description": "Longitud horizontal de 80 px observada en el conector."
+    }
+  ]
+}

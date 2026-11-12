@@ -10,7 +10,7 @@ El estado por maestro se actualiza en la evidencia de cada lote. INVENTORIED acr
 
 ## Estado del destino y continuidad
 
-El [registro por maestro](root-families-status-2026-11-11.json) reconcilia los 66 IDs de fuente con el destino. Los 65 maestros en alcance quedan VALIDATED con 851 variantes o componentes individuales. El demo host de Tooltip conserva EXCLUDED_DEMO con 12 variantes.
+El [registro por maestro](root-families-status-2026-11-11.json) reconcilia la captura inicial y la ampliación del 12 de noviembre. Los 67 maestros en alcance quedan VALIDATED con 877 variantes o componentes individuales. El demo host de Tooltip conserva EXCLUDED_DEMO con 12 variantes.
 
 El corte anterior incorporó Dot, Toggle, Radio, Radio group y Tooltip. Los destinos son `32:33`, `32:97`, `32:142`, `35:108` y `38:22`. Las páginas oficiales se conservan sin exhibidores ni notas. Radio group prueba un único Options nativo reutilizando Radio. Las cinco familias están en el catálogo web con React/TypeScript, Tailwind, Next y QA. El inventario histórico `initialState` preserva el momento de captura y el registro por maestro contiene el avance verificado.
 
@@ -43,3 +43,5 @@ Chip queda validado en los cuatro tamaños `126:60`, `126:163`, `126:266` y `126
 Table cierra Cell actions `826:188` → `128:191`, Capture cell `826:528` → `128:228`, Thumb `841:2760` → `128:261` y Scrollbar medium `827:98` → `128:264`. Son 15 definiciones auxiliares y de captura verificadas.
 
 La autorización explícita habilitó la foto original en los cuatro fills de Avatar `83:18`. Las seis variantes que [consumen Avatar image/medium](../sources/figma-snapshots/root-families-2026-11-11/table-cell-avatar-dependency.json) completaron Table cell en `129:44`, con las 30 variantes y el orden fuente. Table `827:99` → `142:92` quedó validado con Rows nativo, nueve filas de muestra, 108 celdas y Pagination oficial. El QA probó edición desde instancias, los cuatro temas y el fit de ambos indicadores. [QA final](../qa/implementations/table-chain.v1.0.0.review.md)
+
+Stepper `1020:594` → `156:131` y Progress line privado `1020:562` → `155:19` agregan 26 variantes. Los cuatro modos se cotejaron desde instancias y en Chrome. [QA de Stepper](../qa/implementations/stepper.v1.0.0.review.md)

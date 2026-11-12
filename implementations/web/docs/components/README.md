@@ -32,6 +32,7 @@
 - [Search](search.md) · SEARCH-001
 - [Section Header](section-header.md) · SECTION-HEADER-001
 - [Sidebar](sidebar.md) · SIDEBAR-001
+- [Stepper](stepper.md) · STEPPER-001
 - [Tab](tab.md) · TAB-001
 - [Table](table.md) · TABLE-001
 - [Table cell](table-cell.md) · TABLE-CELL-001
