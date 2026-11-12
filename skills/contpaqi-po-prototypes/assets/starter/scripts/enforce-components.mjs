@@ -1,14 +1,15 @@
 import {readFileSync,writeFileSync} from 'node:fs';
 import {auditComponentHtml,projectComponentAudit} from './component-enforcer.mjs';
+import {prototypeOutput} from './prototype-output.mjs';
 
 const recordBuild = process.argv[2] === '--record-build';
-const [htmlPath='render.html', briefPath='brief.json', snapshotPath='references/snapshot-manifest.json', reportPath] = recordBuild ? [] : process.argv.slice(2);
+const [htmlPath, briefPath='brief.json', snapshotPath='references/snapshot-manifest.json', reportPath] = recordBuild ? [] : process.argv.slice(2);
 const read = path => readFileSync(path,'utf8');
 const rawBrief = read(briefPath);
 const brief = JSON.parse(briefPath.endsWith('.md')
   ? [...rawBrief.matchAll(/^```json\s*\n([\s\S]*?)^```/gm)].at(-1)?.[1] ?? ''
   : rawBrief);
-const html = readFileSync(htmlPath);
+const html = readFileSync(htmlPath ?? prototypeOutput(brief).html);
 const report = process.argv.length === 2 || recordBuild ? projectComponentAudit(html,brief,recordBuild) : auditComponentHtml(html, brief, JSON.parse(read(snapshotPath)));
 if (reportPath) writeFileSync(reportPath, JSON.stringify(report,null,2)+'\n');
 const grouped = new Map();

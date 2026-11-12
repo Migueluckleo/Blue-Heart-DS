@@ -5,19 +5,21 @@ import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {componentCatalog,projectComponentAudit,usagePlan} from './component-enforcer.mjs';
 import {verifyComponentPlan} from './component-plan.mjs';
+import {prototypeOutput} from './prototype-output.mjs';
 import {inspectBrowserComponents} from './component-browser.mjs';
 
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const canonical=value=>JSON.stringify(value&&typeof value==='object'?Array.isArray(value)?value.map(item=>JSON.parse(canonical(item))):Object.fromEntries(Object.keys(value).sort().map(key=>[key,JSON.parse(canonical(value[key]))])):value);
 const briefBytes=readFileSync('brief.json');
 const brief=JSON.parse(briefBytes);
-const html=readFileSync('render.html');
-const manifest=JSON.parse(readFileSync('render.manifest.json'));
+const output=prototypeOutput(brief);
+const html=readFileSync(output.html);
+const manifest=JSON.parse(readFileSync(output.manifest));
 const catalog=componentCatalog(JSON.parse(readFileSync('references/snapshot-manifest.json')));
 const plan=usagePlan(brief,catalog,verifyComponentPlan(brief));
-if(hash(html)!==manifest.sha256) throw new Error('HTML alterado después del build.');
+if(manifest.file!==output.html||hash(html)!==manifest.sha256) throw new Error('HTML alterado después del build.');
 if(!brief.screens?.length||!brief.viewports?.length) throw new Error('Completar screens y viewports antes de capturar.');
-const report={schema_version:1,html_sha256:hash(html),brief_sha256:hash(briefBytes),status:'NOT_RUN',network:'HTTP(S) blocked; isolated renamed file with no neighboring assets',browser:null,states:[],errors:[],generated_at:new Date().toISOString()};
+const report={schema_version:1,html_file:output.html,html_sha256:hash(html),brief_sha256:hash(briefBytes),status:'NOT_RUN',network:'HTTP(S) blocked; isolated delivered filename with no neighboring assets',browser:null,states:[],errors:[],generated_at:new Date().toISOString()};
 mkdirSync('capture',{recursive:true});
 const save=()=>writeFileSync('capture/report.json',JSON.stringify(report,null,2)+'\n');
 report.component_enforcement=projectComponentAudit(html,brief);
@@ -28,8 +30,8 @@ if(report.component_enforcement.status!=='PASS'){
   throw new Error('Conformidad BlueHeart FAIL. Ver capture/report.json.');
 }
 const isolated=mkdtempSync(path.join(tmpdir(),'contpaqi-file-qa-'));
-const portable=path.join(isolated,'prototipo renombrado.html');
-copyFileSync('render.html',portable);
+const portable=path.join(isolated,output.html);
+copyFileSync(output.html,portable);
 let browser;
 try {
   let chromium;

@@ -5,7 +5,7 @@ description: Construye prototipos BlueHeart con React, TypeScript, Tailwind y Ne
 
 # Prototipos BlueHeart para producto
 
-Entrega `entrega/render.html` y `entrega/replicar-en-figma.md`, con referencias y
+Entrega un HTML con nombre del producto o flujo, como `entrega/emision-de-facturas.html`, y `entrega/replicar-en-figma.md`, con referencias y
 capturas. El usuario abre el HTML directamente, sin Node, servidor ni red. La
 fuente editable permanece fuera de la entrega. Preparar el Markdown no ejecuta
 Figma: invoca **`$contpaqi-figma-screens`** en la futura sesión del diseñador.
@@ -29,8 +29,7 @@ Para una composición, consulta `--intent dependencies` por familia anfitriona. 
 2. Lee [consumo del DS](references/design-system.md) y contratos/enmiendas de las
    familias utilizadas. Usa sus componentes, CSS, artwork y tokens incluidos.
    Conserva la tipografía que define cada componente en su contrato y datos delegados. Registra las métricas del texto visible en el traspaso.
-   Para algo no cubierto, compón componentes existentes y documenta la decisión
-   local; no la declares variante o componente oficial ni inventes una aprobación.
+   Busca por propósito, comportamiento y estado aunque el brief use otro nombre. Si falta cobertura, documenta qué necesidad no cubre cada alternativa pertinente y compón los componentes disponibles; no la declares variante o componente oficial ni inventes una aprobación.
 3. Lee [build y QA offline](references/build.md). Ejecuta
    `node <runtime>/scripts/init.mjs <proyecto-nuevo>` con la ruta absoluta del campo
    `runtime` que devolvió el cargador en `PASS`. El proyecto requiere una carpeta

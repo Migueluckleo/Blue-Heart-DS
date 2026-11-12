@@ -3,6 +3,7 @@ import {readFileSync,writeFileSync} from 'node:fs';
 import htmlParser from 'next/dist/compiled/node-html-parser/index.js';
 import postcss from 'postcss';
 import {verifyComponentPlan,verifyComponentSourceReceipt} from './component-plan.mjs';
+import {prototypeOutput} from './prototype-output.mjs';
 
 export const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 const read = file => JSON.parse(readFileSync(file, 'utf8'));
@@ -233,7 +234,7 @@ export function projectComponentAudit(html, brief, recordBuild = false) {
   const source = verifyComponentSourceReceipt(coverage);
   const report = {...auditComponentHtml(html, brief, read('references/snapshot-manifest.json'), coverage),
     plan_sha256:source.plan_sha256,source_sha256:sha256(JSON.stringify(source))};
-  const stamp = {html_sha256:report.html_sha256,plan_sha256:report.plan_sha256,source_sha256:report.source_sha256};
+  const stamp = {html_file:prototypeOutput(brief).html,html_sha256:report.html_sha256,plan_sha256:report.plan_sha256,source_sha256:report.source_sha256};
   const path = 'references/component-build.json';
   if (recordBuild && report.status === 'PASS') writeFileSync(path,JSON.stringify(stamp,null,2)+'\n');
   if (!recordBuild && JSON.stringify(read(path)) !== JSON.stringify(stamp)) {

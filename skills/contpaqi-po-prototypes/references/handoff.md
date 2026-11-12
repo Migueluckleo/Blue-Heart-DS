@@ -1,13 +1,13 @@
 # Evidencia y prompt para Figma
 
 Completa `brief.json` según lo implementado; nunca copies la demostración como si
-fuera el resultado. `npm run handoff` entrega HTML, Markdown, referencias/handoff.json
+fuera el resultado. `npm run handoff` entrega el HTML con nombre de producto o flujo, el Markdown, referencias/handoff.json
 y capturas. El Markdown invoca `$contpaqi-figma-screens`; no ejecuta esa habilidad.
 Incluye un bloque JSON autosuficiente para pegar únicamente el Markdown en la
 habilidad de Figma. HTML/PNG/archivos de referencia son adjuntos opcionales; si no
 están disponibles no se afirma comparación visual contra ellos.
 
-- `title`, `objective`, `theme`: tema oficial con mayúscula inicial.
+- `title`, `objective`, `theme`: tema oficial con mayúscula inicial. El exportador usa el nombre de producto existente o el título o función principal del brief para derivar el nombre portable del HTML. El manifiesto, la captura y el traspaso registran el mismo archivo y su SHA-256.
 - `viewports`: lista de `{width,height}` enteros positivos.
 - `screens`: `{id,name,entry,hash?,layout,content,states}`. IDs estables sin espacios.
   Layout explica medidas, jerarquía, espaciado, alineación, overflow y responsive.
@@ -28,6 +28,7 @@ están disponibles no se afirma comparación visual contra ellos.
   del manifiesto, no de nombres visualmente parecidos.
 - `componentFamilyTracking` incluye exactamente una entrada `{componentId, applicability, reason}` por familia devuelta por `npm run inventory`. La lista se reconcilia con el manifiesto y las Specs del corte. Usa `APPLIES` si el brief requiere la familia y `NOT_APPLICABLE` con el motivo cuando no la usa. Cada familia aplicable requiere al menos un control mapeado. El resultado final se calcula como `VERIFIED`, `NOT_APPLICABLE` o `EXCEPTION` a partir del mapa, el código verificado y las instancias observadas en captura PASS.
 - `componentRequirements` se escribe desde el brief antes del código. Cada entrada usa `{instanceId, role, componentId, coverage, exportName, reason, evidence}`. `role` describe lo que hace el control. `evidence` es una ruta del contrato, enmienda o ficha web de la familia en el corte. Para `COMPATIBLE`, indica el export real y explica qué parte del API satisface el brief. Para `SPEC_WITHOUT_WEB`, conserva la familia y su spec. Para `WEB_INCOMPATIBLE`, identifica qué variante, propiedad o comportamiento requerido falta en el API disponible. Ambas excepciones usan `exportName: null`. Para `NO_SPEC`, usa `componentId: null`, `exportName: null` y `evidence: "implementations/web/components.registry.json"`, con el alcance y términos de la búsqueda. Si la vista carece de controles, justifícalo en `controlsAbsent`.
+- Toda excepción añade `localCoverage: {search, candidates}`. `search` documenta el propósito, el comportamiento o el estado buscado en el inventario completo. Cada alternativa relevante usa `{componentId, gap, unmet, evidence}`. Usa `PURPOSE`, `BEHAVIOR`, `STATE` o `NO_WEB_EXPORT`; `unmet` describe la necesidad concreta y `evidence` localiza su spec, enmienda o ficha web. Si una alternativa cubre el control, selecciona su export como `COMPATIBLE`. Un hallazgo compatible impide cerrar una excepción. El `NO_SPEC` puede dejar candidatos vacíos si la búsqueda funcional carece de familias pertinentes.
 - `npm run plan` fija `references/component-plan.json` al manifiesto verificado. Resuelve las dependencias transitivas declaradas en contratos y sus enmiendas, conserva hashes y exports disponibles. Al escribir el código, incluye cada control del mapa en `components` y en `nodes` de al menos un estado de captura. Para una excepción usa `kind: 'local-composition'`, el mismo `reason` y `compositionOf` con las familias web reutilizadas, si aplica. Para `SPEC_WITHOUT_WEB` o `WEB_INCOMPATIBLE`, añade `exception: {componentIds: [componentId], reason, source: evidence}`. Para `NO_SPEC`, la búsqueda y su evidencia quedan en el mapa. La excepción debe reflejar la carencia concreta de ese control.
 - Antes del traspaso, revisa el código, el HTML y los estados contra el mapa. El build verifica los imports de `DSNode`, el export elegido y el inventario. El enforcer detecta además roles y estructuras reconocibles. Corrige toda sustitución de un export compatible. El traspaso conserva el mapa, el cotejo del build, las excepciones con fuentes y los hashes del código de prototipo y HTML.
 - Títulos, textos, adornos y contenido local fuera de una instancia DS llevan su

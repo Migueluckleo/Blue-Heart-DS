@@ -129,6 +129,31 @@ export function createComponentPlan(brief) {
   need(!missing.length, `Familias omitidas: ${missing.join(', ')}.`);
   const requirements = brief.componentRequirements;
   need(Array.isArray(requirements) && (requirements.length || brief.controlsAbsent?.trim()), 'Completa el mapa del brief o justifica una pantalla sin controles.');
+  const evidenceFor = (family, evidence) => {
+    const docs = `implementations/web/docs/components/${catalog.get(family.componentId).slug}.md`;
+    need([family.contract.path,...family.amendments.map(item=>item.path),docs].includes(evidence), `La evidencia debe corresponder a ${family.componentId}.`);
+    return source(evidence);
+  };
+  const assessLocalCoverage = entry => {
+    const {localCoverage,instanceId,componentId,coverage} = entry;
+    need(localCoverage?.search?.trim() && Array.isArray(localCoverage.candidates), `Documenta la búsqueda funcional y las alternativas de ${instanceId}.`);
+    const seen = new Set();
+    const candidates = localCoverage.candidates.map(candidate=>{
+      const {componentId:id,gap,unmet,evidence} = candidate;
+      need(catalog.has(id) && !seen.has(id), `Candidato ajeno o repetido en ${instanceId}: ${id}.`);
+      seen.add(id);
+      need(gap !== 'COMPATIBLE', `Usa la alternativa compatible ${id} para ${instanceId}.`);
+      const family = mapFamily(id);
+      need(['PURPOSE','BEHAVIOR','STATE','NO_WEB_EXPORT'].includes(gap) && unmet?.trim(), `Identifica la necesidad concreta que ${id} no cubre.`);
+      need(gap !== 'NO_WEB_EXPORT' || !family.exports.length, `${id} sí tiene exports web; documenta la carencia semántica real.`);
+      return {...family,gap,unmet,evidence:evidenceFor(family,evidence)};
+    });
+    if (componentId !== null) {
+      const primary = candidates.find(candidate=>candidate.componentId===componentId);
+      need(primary && (primary.gap === 'NO_WEB_EXPORT') === (coverage === 'SPEC_WITHOUT_WEB'), `Falta la evaluación aplicable a ${componentId} en ${instanceId}.`);
+    }
+    return {search:localCoverage.search,candidates};
+  };
   const seen = new Set();
   const controls = requirements.map(entry=>{
     const {instanceId, role, componentId, exportName, coverage, reason, evidence} = entry;
@@ -137,13 +162,11 @@ export function createComponentPlan(brief) {
     need(reason?.trim(), `Documenta el criterio de compatibilidad de ${instanceId}.`);
     if (coverage === 'NO_SPEC') {
       need(componentId === null && !exportName && evidence === registryPath, `Registra la búsqueda de ${instanceId} contra el catálogo del corte.`);
-      return {instanceId,role,componentId,coverage,reason,evidence:registry,dependencies:[]};
+      return {instanceId,role,componentId,coverage,reason,evidence:registry,localCoverage:assessLocalCoverage(entry),dependencies:[]};
     }
     need(catalog.has(componentId), `Familia no localizada para ${instanceId}.`);
     need(tracked.get(componentId).applicability === 'APPLIES', `La familia ${componentId} se usa en el brief y debe marcarse APPLIES.`);
     const family = mapFamily(componentId);
-    const docs = `implementations/web/docs/components/${catalog.get(componentId).slug}.md`;
-    need([family.contract.path,...family.amendments.map(item=>item.path),docs].includes(evidence), `La evidencia de ${instanceId} debe corresponder a ${componentId}.`);
     need(coverage === 'COMPATIBLE' && family.exports.includes(exportName)
       || coverage === 'SPEC_WITHOUT_WEB' && !family.exports.length && !exportName
       || coverage === 'WEB_INCOMPATIBLE' && family.exports.length && !exportName, `Cobertura o export incorrecto para ${instanceId}.`);
@@ -156,7 +179,8 @@ export function createComponentPlan(brief) {
       dependencies.set(id,mapped);
       pending.push(...mapped.dependencies);
     }
-    return {...family,instanceId,role,exportName:exportName??null,coverage,reason,evidence:source(evidence),dependencies:[...dependencies.values()]};
+    const localCoverage = coverage === 'COMPATIBLE' ? null : assessLocalCoverage(entry);
+    return {...family,instanceId,role,exportName:exportName??null,coverage,reason,evidence:evidenceFor(family,evidence),localCoverage,dependencies:[...dependencies.values()]};
   });
   const families = [...tracked.values()].sort((a,b)=>a.componentId.localeCompare(b.componentId)).map(row=>{
     const {contract,amendments,exports} = mapFamily(row.componentId);

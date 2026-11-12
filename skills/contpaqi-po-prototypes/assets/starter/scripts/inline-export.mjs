@@ -2,8 +2,10 @@ import { readFileSync, writeFileSync, realpathSync } from 'node:fs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 
+import {prototypeOutput} from './prototype-output.mjs';
+
 const input = path.resolve(process.argv[2] ?? 'out/index.html');
-const output = path.resolve(process.argv[3] ?? 'render.html');
+const output = path.resolve(process.argv[3] ?? prototypeOutput(JSON.parse(readFileSync('brief.json','utf8'))).html);
 const root = realpathSync(path.dirname(input));
 const files = new Map();
 const hydrationResources = new Map();

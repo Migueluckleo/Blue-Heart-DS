@@ -58,7 +58,7 @@ generada por este motor. El diagnóstico informa ambas cosas por separado.
 `capture.mjs` usa Playwright sin servidor. Por defecto busca Chromium instalado;
 `PLAYWRIGHT_CHANNEL=chrome npm run capture` permite usar Chrome disponible. Si falta
 capacidad informa NOT_RUN, no instala un navegador automáticamente. La copia
-aislada solo contiene el HTML renombrado; HTTP(S) y Service Workers se bloquean.
+aislada solo contiene el HTML con el mismo nombre que se entrega; HTTP(S) y Service Workers se bloquean.
 Espera hidratación React, fuentes e imágenes; detecta archivos vecinos, errores,
 imágenes rotas, identidad/props inconsistentes y aserciones fallidas. Verifica
 fondo y anatomía del Header, y fondo, ancho, altura disponible, pie y expansión

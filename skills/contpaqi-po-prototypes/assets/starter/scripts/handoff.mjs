@@ -3,6 +3,7 @@ import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {projectComponentAudit,webComponents} from './component-enforcer.mjs';
 import {verifyComponentPlan,verifyFamilyTracking} from './component-plan.mjs';
+import {prototypeOutput} from './prototype-output.mjs';
 
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const read=file=>JSON.parse(readFileSync(file,'utf8'));
@@ -85,9 +86,10 @@ const components=brief.components.map(component=>{
 });
 for(const screen of brief.screens)for(const state of screen.states)for(const id of state.nodes)if(!instanceIds.has(id))throw new Error(`Estado referencia instancia desconocida: ${id}`);
 if(brief.figmaTarget!==null&&(typeof brief.figmaTarget!=='string'||!/^https:\/\/(www\.)?figma\.com\//.test(brief.figmaTarget)))throw new Error('Destino Figma debe ser URL proporcionada o null.');
-const html=readFileSync('render.html');
-const exportManifest=read('render.manifest.json');
-if(hash(html)!==exportManifest.sha256)throw new Error('HTML alterado: volver a compilar.');
+const output=prototypeOutput(brief);
+const html=readFileSync(output.html);
+const exportManifest=read(output.manifest);
+if(exportManifest.file!==output.html||hash(html)!==exportManifest.sha256)throw new Error('HTML alterado: volver a compilar.');
 const componentEnforcement=projectComponentAudit(html,brief);
 if(componentEnforcement.status!=='PASS') throw new Error('Conformidad BlueHeart FAIL. Ejecuta npm run enforce.');
 source(coverage.registry.path);
@@ -102,6 +104,7 @@ for (const entry of coverage.controls) {
   if (family.contract) source(family.contract.path);
   for (const amendment of family.amendments ?? []) source(amendment.path);
  }
+ for (const candidate of entry.localCoverage?.candidates ?? []) source(candidate.evidence.path);
 }
 let capture={status:'NOT_RUN',states:[],errors:['No hay captura real; no afirmar funcionalidad ni medidas verificadas.']};
 if(existsSync('capture/report.json')){
@@ -112,7 +115,7 @@ if(existsSync('capture/report.json')){
    ||capture.component_enforcement.plan_sha256!==componentEnforcement.plan_sha256
    ||capture.component_enforcement.source_sha256!==componentEnforcement.source_sha256)throw new Error('Captura sin enforcer del mismo HTML y corte. Repetir capture.');
  if(capture.status==='FAIL')throw new Error('La captura contiene fallos. Revisar capture/report.json antes del traspaso.');
- if(capture.html_sha256!==hash(html)||capture.brief_sha256!==hash(readFileSync('brief.json')))throw new Error('Captura obsoleta: repetir capture tras cambios.');
+ if(capture.html_file!==output.html||capture.html_sha256!==hash(html)||capture.brief_sha256!==hash(readFileSync('brief.json')))throw new Error('Captura obsoleta: repetir capture tras cambios.');
  for(const state of capture.states){
   if(state.screenshot&&hash(readFileSync(path.join('capture',state.screenshot)))!==state.screenshot_sha256)throw new Error('Captura visual alterada.');
  }
@@ -137,20 +140,20 @@ for(const component of components){
 }
 const familyTracking=verifyFamilyTracking(coverage,components,capture);
 for(const check of brief.checks){text(check.name,'check.name');text(check.evidence,'check.evidence');if(!['PASS','FAIL','BLOCKED','NOT_RUN'].includes(check.status))throw new Error('Estado QA inválido.');}
-const handoff={schema_version:1,producer_skill:release.skill_name,consumer_skill:release.companion_skill,package_version:release.version,engine_version:release.engine_version,catalog_url:release.catalog_url,figma_library:figmaLibrary,ds_digest:release.ds_digest,html_sha256:hash(html),title:brief.title,objective:brief.objective,theme:brief.theme,viewports:brief.viewports,figmaTarget:brief.figmaTarget,sources:[...sourceFiles].sort().map(source),screens:brief.screens,transitions:brief.transitions,components,decisions:brief.decisions,limitations:brief.limitations,checks:brief.checks,component_requirements:brief.componentRequirements??[],component_plan:coverage,component_family_tracking:familyTracking,component_enforcement:componentEnforcement,typography,capture};
+const handoff={schema_version:1,producer_skill:release.skill_name,consumer_skill:release.companion_skill,package_version:release.version,engine_version:release.engine_version,catalog_url:release.catalog_url,figma_library:figmaLibrary,ds_digest:release.ds_digest,html_file:output.html,html_sha256:hash(html),title:brief.title,objective:brief.objective,theme:brief.theme,viewports:brief.viewports,figmaTarget:brief.figmaTarget,sources:[...sourceFiles].sort().map(source),screens:brief.screens,transitions:brief.transitions,components,decisions:brief.decisions,limitations:brief.limitations,checks:brief.checks,component_requirements:brief.componentRequirements??[],component_plan:coverage,component_family_tracking:familyTracking,component_enforcement:componentEnforcement,typography,capture};
 const destination='entrega';
 if(existsSync(destination)&&!existsSync(path.join(destination,'.contpaqi-handoff')))throw new Error('entrega pertenece a otro proceso.');
 // Replace only this generator's marked output; avoid stale screenshots or references.
 rmSync(destination,{recursive:true,force:true});mkdirSync(destination,{recursive:true});
 writeFileSync(path.join(destination,'.contpaqi-handoff'),`${release.skill_name}/${release.version}\n`);
-cpSync('render.html',path.join(destination,'render.html'));
-cpSync('render.manifest.json',path.join(destination,'render.manifest.json'));
+cpSync(output.html,path.join(destination,output.html));
+cpSync(output.manifest,path.join(destination,output.manifest));
 cpSync('references',path.join(destination,'referencias'),{recursive:true});
 if(existsSync('capture'))cpSync('capture',path.join(destination,'capturas'),{recursive:true});
 writeFileSync(path.join(destination,'referencias/handoff.json'),JSON.stringify(handoff,null,2)+'\n');
 const literal=value=>'`'+String(value).replaceAll('`','\\`')+'`';
 const list=items=>items.length?items.map(item=>'- '+item).join('\n'):'- Ninguna declarada.';
-let md=`# Replicar en Figma · ${brief.title}\n\nUsa $contpaqi-figma-screens para reproducir este prototipo BlueHeart en Figma con capas editables, instancias reales y Auto Layout. Abrir [render.html](render.html) directamente; no levantar un servidor. La preparación de este paquete no ejecutó Figma.\n\n- Objetivo: ${brief.objective}\n- Release: ${release.version}; DS SHA-256: ${literal(release.ds_digest)}.\n- HTML SHA-256: ${literal(handoff.html_sha256)}.\n- Tema: ${brief.theme??'sin modo configurado'}; viewports: ${brief.viewports.map(v=>`${v.width}×${v.height}`).join(', ')}.\n- Destino: ${brief.figmaTarget??'No proporcionado; resolver en la sesión de Figma antes de escribir.'}\n- Enforcer BlueHeart: **${componentEnforcement.status}** estático · ${componentEnforcement.family_count} familias del corte.\n- QA file:// sin red: **${capture.status}**. ${capture.status==='PASS'?'Las acciones y aserciones enumeradas pasaron. La captura no prueba fidelidad Figma ni conformidad visual total.':'No afirmar que el archivo sea funcional ni que las medidas estén verificadas.'}\n\n[Identidades, propiedades y mediciones completas](referencias/handoff.json) · [Snapshot y hashes](referencias/snapshot-manifest.json). Este Markdown contiene el traspaso estructurado completo y puede pegarse solo en la habilidad de Figma. HTML, referencias y capturas son evidencia adicional opcional; si no están adjuntos no afirmar comparación visual con ellos.\n\n## Reglas y autoridad\n\nEl HTML gobierna composición local y textos. Los contratos y sus enmiendas gobiernan el DS; conservar estados de aprobación y registrar cualquier discrepancia. Verificar versión y digest compartidos, o hashes de todas las fuentes usadas. No reemplazar el DS por su apariencia, no crear primitivas nuevas, no usar primitivas directamente ni modificar el maestro. Las composiciones locales documentadas no se convierten en componentes oficiales.\n\nEl campo identity.figma conserva únicamente evidencia incluida; null exige resolver el identificador real. figmaProperties representa un mapeo declarado que debe contrastarse con el componente disponible. Reutilizar instancias y bindings, respetar variantes y Slots; children de React no prueba Slots nativos. Representar el comportamiento mediante estados/conexiones, sin prometer JavaScript en Figma.\n\n## Pantallas y estados\n\n`;
+let md=`# Replicar en Figma · ${brief.title}\n\nUsa $contpaqi-figma-screens para reproducir este prototipo BlueHeart en Figma con capas editables, instancias reales y Auto Layout. Abrir [${output.html}](${output.html}) directamente; no levantar un servidor. La preparación de este paquete no ejecutó Figma.\n\n- Objetivo: ${brief.objective}\n- Release: ${release.version}; DS SHA-256: ${literal(release.ds_digest)}.\n- HTML SHA-256: ${literal(handoff.html_sha256)}.\n- Tema: ${brief.theme??'sin modo configurado'}; viewports: ${brief.viewports.map(v=>`${v.width}×${v.height}`).join(', ')}.\n- Destino: ${brief.figmaTarget??'No proporcionado; resolver en la sesión de Figma antes de escribir.'}\n- Enforcer BlueHeart: **${componentEnforcement.status}** estático · ${componentEnforcement.family_count} familias del corte.\n- QA file:// sin red: **${capture.status}**. ${capture.status==='PASS'?'Las acciones y aserciones enumeradas pasaron. La captura no prueba fidelidad Figma ni conformidad visual total.':'No afirmar que el archivo sea funcional ni que las medidas estén verificadas.'}\n\n[Identidades, propiedades y mediciones completas](referencias/handoff.json) · [Snapshot y hashes](referencias/snapshot-manifest.json). Este Markdown contiene el traspaso estructurado completo y puede pegarse solo en la habilidad de Figma. HTML, referencias y capturas son evidencia adicional opcional; si no están adjuntos no afirmar comparación visual con ellos.\n\n## Reglas y autoridad\n\nEl HTML gobierna composición local y textos. Los contratos y sus enmiendas gobiernan el DS; conservar estados de aprobación y registrar cualquier discrepancia. Verificar versión y digest compartidos, o hashes de todas las fuentes usadas. No reemplazar el DS por su apariencia, no crear primitivas nuevas, no usar primitivas directamente ni modificar el maestro. Las composiciones locales documentadas no se convierten en componentes oficiales.\n\nEl campo identity.figma conserva únicamente evidencia incluida; null exige resolver el identificador real. figmaProperties representa un mapeo declarado que debe contrastarse con el componente disponible. Reutilizar instancias y bindings, respetar variantes y Slots; children de React no prueba Slots nativos. Representar el comportamiento mediante estados/conexiones, sin prometer JavaScript en Figma.\n\n## Pantallas y estados\n\n`;
 for(const screen of brief.screens){
  md+=`### ${screen.id} · ${screen.name}\n\n- Acceso: ${screen.entry}\n- Layout declarado: ${screen.layout}\n- Contenido: ${screen.content}\n\n`;
  for(const state of screen.states){
@@ -174,6 +177,12 @@ if(coverage.controlsAbsent) md+=`${coverage.controlsAbsent}\n\n`;
 for(const item of coverage.controls){
  const dependencies=item.dependencies.map(dependency=>dependency.componentId).join(', ');
  md+=`- ${item.instanceId} · ${item.role} · ${item.coverage}${item.exportName?' · '+item.exportName:''}. ${item.reason} [Evidencia](referencias/design-system/${item.evidence.path})${dependencies?' · Dependencias '+dependencies:''}.\n`;
+ if(item.localCoverage){
+  md+=`  - Búsqueda funcional: ${item.localCoverage.search}\n`;
+  for(const candidate of item.localCoverage.candidates){
+   md+=`  - ${candidate.componentId} · ${candidate.gap}. ${candidate.unmet} [Fuente](referencias/design-system/${candidate.evidence.path})\n`;
+  }
+ }
 }
 md+='\n';
 for(const component of components){

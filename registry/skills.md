@@ -1,5 +1,9 @@
 # Releases de las skills BlueHeart
 
+## v1.0.3 · 2026-11-12
+
+Parche local del motor PO. Las composiciones locales registran la búsqueda funcional y las carencias concretas de cada alternativa relevante, con fuentes del corte. El HTML descargable deriva su nombre del producto o flujo del brief y conserva el mismo nombre y hash en el manifiesto, la captura y el traspaso. Los paquetes v1.0.2 se conservan como releases históricos.
+
 ## v1.0.2 · 2026-11-12
 
 Parche local del motor PO. El mapa previo de controles y dependencias y el seguimiento exhaustivo por familia quedan ligados al corte GitHub verificado. Cada familia registra uso verificado, no aplicabilidad o excepción sustentada. El build y el traspaso comprueban el uso de exports, documentan la falta de implementación web y registran excepciones con evidencia de la familia. Se conserva `init.mjs` desde el runtime resuelto. La evidencia del cierre y las pruebas se registra en `output/closures/`.

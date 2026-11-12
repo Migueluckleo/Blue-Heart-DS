@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "version": "1.0.3",
+  "date": "2026-11-12T18:55:34.620329+00:00",
+  "publication": "NOT_RUN",
+  "installation": "NOT_RUN",
+  "release_1_0_2": "ZIP SHA-256 preserved",
+  "resolver_live": {
+    "contpaqi-po-prototypes": {
+      "status": "PASS",
+      "engine_version": "1.0.3",
+      "ds_version": "0.0.0+ds.6d3735cb4a539e47",
+      "ds_digest": "6d3735cb4a539e47abc5df4539560e8d75ae2ea601bb909f6ddbe3c150108a71",
+      "manifest_sha256": "7af7125a0258fcf91cb43aa78e6966b0ffb40af78eebe40957e282359772a3e9",
+      "files": 1122,
+      "graph": {
+        "mode": "graph",
+        "reason": null
+      },
+      "catalog_url": "https://raw.githubusercontent.com/Migueluckleo/Blue-Heart-DS/main/catalog/current.json",
+      "figma_library_file_key": "yZsIpXywybsPDytjolwcP4"
+    },
+    "contpaqi-figma-screens": {
+      "status": "PASS",
+      "engine_version": "1.0.3",
+      "ds_version": "0.0.0+ds.6d3735cb4a539e47",
+      "ds_digest": "6d3735cb4a539e47abc5df4539560e8d75ae2ea601bb909f6ddbe3c150108a71",
+      "manifest_sha256": "7af7125a0258fcf91cb43aa78e6966b0ffb40af78eebe40957e282359772a3e9",
+      "files": 1122,
+      "graph": {
+        "mode": "graph",
+        "reason": null
+      },
+      "catalog_url": "https://raw.githubusercontent.com/Migueluckleo/Blue-Heart-DS/main/catalog/current.json",
+      "figma_library_file_key": "yZsIpXywybsPDytjolwcP4"
+    }
+  },
+  "packages": {
+    "contpaqi-po-prototypes": "c3b2c0806a1004d9ae5b81417f5472802833b2791d6772f65175510e5ae8b78c",
+    "contpaqi-figma-screens": "6c355a23996fad86d20d34c9b0c655a8a62debe37d3eafff461df1404ac45502"
+  },
+  "closure": "output/closures/2026-11-12-po-semantic-filename-1-0-3.json",
+  "tests": [
+    "complete family inventory and omission/duplicate/unknown-ID rejection",
+    "five compatible local substitutions rejected",
+    "no web implementation tracked",
+    "unobserved applicable instance blocked",
+    "supported local exception and compatible candidate blocked",
+    "filename from product, legacy title, explicit flow and screen fallback"
+  ],
+  "offline_prototype": {
+    "status": "PASS",
+    "files": {
+      "html": "emision-de-facturas.html",
+      "manifest": "emision-de-facturas.manifest.json"
+    },
+    "html_sha256": "282fb852f9a094965b48990e6d4062c22ce1a5636499296045ca4b2cc0d81de0",
+    "capture_states": 2,
+    "network_requests": 0,
+    "manifest_sha256": "3cd224d9d2ec2917638324667ab3f6c6411ab2e402caab35db425db99bd098de",
+    "family_tracking": {
+      "NOT_APPLICABLE": 35,
+      "VERIFIED": 4,
+      "EXCEPTION": 1
+    },
+    "local_exception": {
+      "search": "Selección múltiple de sucursales desde un menú con estado persistente.",
+      "candidates": [
+        {
+          "componentId": "DROPDOWN-MENU-001",
+          "contract": {
+            "path": "specs/components/dropdown-menu.contract.v1.0.0.md",
+            "sha256": "d064ff4c024858d9fd9bf7448aaf0227b214a837d63700855880351e8effa766"
+          },
+          "amendments": [],
+          "exports": [
+            "DropdownMenu",
+            "DropdownField"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "DROPDOWN-ITEM-001",
+            "INPUT-001"
+          ],
+          "gap": "BEHAVIOR",
+          "unmet": "El export selecciona un solo ID, mientras el brief necesita varios a la vez.",
+          "evidence": {
+            "path": "specs/components/dropdown-menu.contract.v1.0.0.md",
+            "sha256": "d064ff4c024858d9fd9bf7448aaf0227b214a837d63700855880351e8effa766"
+          }
+        },
+        {
+          "componentId": "MENU-ITEM-001",
+          "contract": {
+            "path": "specs/components/menu-item.contract.v1.0.0.md",
+            "sha256": "99c7968ebc13a059c0482d64c99944fc878da6f518805d41f3528b6080537868"
+          },
+          "amendments": [],
+          "exports": [
+            "MenuItem"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "TOOLTIP-001"
+          ],
+          "gap": "PURPOSE",
+          "unmet": "Un ítem de navegación o activación no conserva un conjunto de valores seleccionados.",
+          "evidence": {
+            "path": "specs/components/menu-item.contract.v1.0.0.md",
+            "sha256": "99c7968ebc13a059c0482d64c99944fc878da6f518805d41f3528b6080537868"
+          }
+        }
+      ]
+    },
+    "handoff_match": true
+  },
+  "account_usage": "UNAVAILABLE",
+  "published_catalog_inventory": {
+    "manifest_sha256": "7af7125a0258fcf91cb43aa78e6966b0ffb40af78eebe40957e282359772a3e9",
+    "families": 41,
+    "verified_spec_without_web": {
+      "component_id": "LOGOS-001",
+      "contract": "specs/components/logos.contract.v1.0.0.md",
+      "exports": []
+    }
+  }
+}

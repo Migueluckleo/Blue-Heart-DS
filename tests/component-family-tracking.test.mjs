@@ -31,7 +31,7 @@ write('references/release.json',JSON.stringify({manifest_sha256:sha(raw),ds_dige
 const catalog = componentCatalog(manifest);
 function brief(active = ['PAGINATION-001','LOGOS-001']) {
   return {componentFamilyTracking:families.map(componentId=>({componentId,applicability:active.includes(componentId)?'APPLIES':'NOT_APPLICABLE',reason:active.includes(componentId)?'El brief incluye este control.':'El brief no requiere este control.'})),
-    componentRequirements:active.map(componentId=>({instanceId:componentId,role:componentId,componentId,coverage:componentId==='LOGOS-001'?'SPEC_WITHOUT_WEB':'COMPATIBLE',exportName:catalog.families.get(componentId)?.[0]??null,reason:'La spec define el alcance de la instancia.',evidence:contract(componentId)})),
+    componentRequirements:active.map(componentId=>({instanceId:componentId,role:componentId,componentId,coverage:componentId==='LOGOS-001'?'SPEC_WITHOUT_WEB':'COMPATIBLE',exportName:catalog.families.get(componentId)?.[0]??null,reason:'La spec define el alcance de la instancia.',evidence:contract(componentId),...(componentId==='LOGOS-001'?{localCoverage:{search:'Marca del producto en un control web',candidates:[{componentId,gap:'NO_WEB_EXPORT',unmet:'La marca no tiene export web para usarla en este control.',evidence:contract(componentId)}]}}:{})})),
     screens:[{states:[{nodes:active}]}],components:active.map(componentId=>componentId==='LOGOS-001'?{instanceId:componentId,componentId:'LOCAL-Logo',kind:'local-composition',compositionOf:[],reason:'La spec define el alcance de la instancia.',exception:{componentIds:[componentId],source:contract(componentId),reason:'La spec define el alcance de la instancia.'}}:{instanceId:componentId,componentId,kind:'ds',exportName:catalog.families.get(componentId)[0]})};
 }
 
@@ -62,4 +62,21 @@ test('reconcilia una spec sin registro web y conserva familias que no aplican',(
   assert.equal(results.get('PAGINATION-001'),'VERIFIED');
   capture.states[0].nodes.shift();
   assert.throws(()=>verifyFamilyTracking(plan,data.components,capture),/sin instancia verificada/);
+});
+
+
+test('excepción semántica exige evidencia de alternativas y cede a un componente compatible',()=>{
+  const data = brief(['DROPDOWN-MENU-001']);
+  const requirement = data.componentRequirements[0];
+  Object.assign(requirement,{coverage:'WEB_INCOMPATIBLE',exportName:null,reason:'La selección múltiple persiste varias sucursales.'});
+  assert.throws(()=>createComponentPlan(data),/búsqueda funcional/);
+  const primary={componentId:'DROPDOWN-MENU-001',gap:'BEHAVIOR',unmet:'El API selecciona una sola sucursal.',evidence:contract('DROPDOWN-MENU-001')};
+  const alternative={componentId:'PAGINATION-001',gap:'PURPOSE',unmet:'Cambia página y no mantiene una selección de sucursales.',evidence:contract('PAGINATION-001')};
+  requirement.localCoverage={search:'Selección múltiple y persistencia de sucursales, aunque el brief la llame filtro rápido.',candidates:[primary,alternative]};
+  data.components[0]={instanceId:'DROPDOWN-MENU-001',kind:'local-composition',componentId:'LOCAL-Sucursal',compositionOf:[],reason:requirement.reason,exception:{componentIds:[requirement.componentId],reason:requirement.reason,source:requirement.evidence}};
+  const plan=createComponentPlan(data);
+  assert.deepEqual(usagePlan(data,catalog,plan).findings,[]);
+  assert.equal(plan.controls[0].localCoverage.candidates[1].evidence.sha256,files[alternative.evidence]);
+  alternative.gap='COMPATIBLE';
+  assert.throws(()=>createComponentPlan(data),/Usa la alternativa compatible/);
 });
