@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "checks": [
+    "symlinked installed entry fails with runtime instructions and no partial output",
+    "local catalog resolves and initializes starter with recorded identities",
+    "existing target rejected",
+    "modified snapshot rejected before creating target"
+  ],
+  "files": 1086,
+  "graph": {
+    "mode": "graph",
+    "reason": null
+  },
+  "ds_digest": "97a451d4a418951c8009e44701603839d7d2abc935216d74a15b215571e55910",
+  "manifest_sha256": "eb7580ca89af70da98d730d7bf44f5ee3f3a8ed8095ab69cdee51e7f6fd70b13",
+  "baseline_engine": "1.0.0",
+  "test_engine": "temporary 1.0.0 tree with corrected editable files",
+  "node": "v24.22.1",
+  "seconds": 2.496,
+  "remote_catalog": "NOT_RUN",
+  "remote_installation": "NOT_RUN",
+  "user_audit": "NOT_REQUIRED",
+  "human_review_policy": "OPTIONAL_NON_BLOCKING",
+  "existing_release_workaround": {
+    "status": "PASS",
+    "node": "v24.22.1",
+    "engine": "1.0.0"
+  },
+  "release": {
+    "status": "BLOCKED",
+    "observed": "STEPPER-001 appears in selected component contracts and is absent from the web registry",
+    "graph_plan": "NEEDS_SEMANTICS",
+    "existing_catalog_and_packages": "PRESERVED"
+  },
+  "inputs_reviewed": [
+    "P05",
+    "P06",
+    "P08",
+    "DEC-AI-TECHNICAL-CLOSURE-001",
+    "DEC-EFFICIENT-CLOSURE-001",
+    "resolve_ds.py",
+    "published engine 1.0.0",
+    "local current catalog"
+  ],
+  "source_changes": [
+    "skills/contpaqi-po-prototypes/SKILL.md",
+    "skills/contpaqi-po-prototypes/references/build.md",
+    "skills/contpaqi-po-prototypes/references/remote-source.md",
+    "skills/contpaqi-po-prototypes/scripts/init.mjs",
+    "registry/skills.md"
+  ]
+}

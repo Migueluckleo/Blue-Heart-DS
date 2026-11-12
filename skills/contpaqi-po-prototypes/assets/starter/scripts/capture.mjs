@@ -3,6 +3,8 @@ import {createHash} from 'node:crypto';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
+import {componentCatalog,projectComponentAudit,usagePlan} from './component-enforcer.mjs';
+import {inspectBrowserComponents} from './component-browser.mjs';
 
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const canonical=value=>JSON.stringify(value&&typeof value==='object'?Array.isArray(value)?value.map(item=>JSON.parse(canonical(item))):Object.fromEntries(Object.keys(value).sort().map(key=>[key,JSON.parse(canonical(value[key]))])):value);
@@ -10,11 +12,20 @@ const briefBytes=readFileSync('brief.json');
 const brief=JSON.parse(briefBytes);
 const html=readFileSync('render.html');
 const manifest=JSON.parse(readFileSync('render.manifest.json'));
+const catalog=componentCatalog(JSON.parse(readFileSync('references/snapshot-manifest.json')));
+const plan=usagePlan(brief,catalog);
 if(hash(html)!==manifest.sha256) throw new Error('HTML alterado después del build.');
 if(!brief.screens?.length||!brief.viewports?.length) throw new Error('Completar screens y viewports antes de capturar.');
 const report={schema_version:1,html_sha256:hash(html),brief_sha256:hash(briefBytes),status:'NOT_RUN',network:'HTTP(S) blocked; isolated renamed file with no neighboring assets',browser:null,states:[],errors:[],generated_at:new Date().toISOString()};
 mkdirSync('capture',{recursive:true});
 const save=()=>writeFileSync('capture/report.json',JSON.stringify(report,null,2)+'\n');
+report.component_enforcement=projectComponentAudit(html,brief);
+if(report.component_enforcement.status!=='PASS'){
+  report.status='FAIL';
+  report.errors.push('El enforcer estático detectó sustituciones o falta de procedencia.');
+  save();
+  throw new Error('Conformidad BlueHeart FAIL. Ver capture/report.json.');
+}
 const isolated=mkdtempSync(path.join(tmpdir(),'contpaqi-file-qa-'));
 const portable=path.join(isolated,'prototipo renombrado.html');
 copyFileSync('render.html',portable);
@@ -127,6 +138,8 @@ try {
             if(result.unmapped_text.length)throw new Error('Texto visible sin nodo local-content o instancia DS: '+result.unmapped_text.map(item=>item.text).join(' | '));
             if(result.requests.length)throw new Error('El HTML intentó cargar red o archivos vecinos.');
             if(result.errors.length)throw new Error('Errores de consola o ejecución.');
+            result.component_findings=await inspectBrowserComponents(page,catalog,plan);
+            if(result.component_findings.length)throw new Error('Conformidad BlueHeart FAIL en navegador.');
             result.status='PASS';
           }catch(error){result.errors.push(error.message);}
           const filename=`${screen.id}--${state.id}--${viewport.width}x${viewport.height}.png`;

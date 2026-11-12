@@ -32,17 +32,20 @@ Para una composición, consulta `--intent dependencies` por familia anfitriona. 
    Para algo no cubierto, compón componentes existentes y documenta la decisión
    local; no la declares variante o componente oficial ni inventes una aprobación.
 3. Lee [build y QA offline](references/build.md). Ejecuta
-   `node <skill>/scripts/init.mjs <salida-nueva>`. Edita `prototype/page.tsx`, estilos
+   `node <runtime>/scripts/init.mjs <proyecto-nuevo>` con la ruta absoluta del campo
+   `runtime` que devolvió el cargador en `PASS`. El proyecto requiere una carpeta
+   nueva fuera del runtime. Edita `prototype/page.tsx`, estilos
    locales y `brief.json`; `app/` y `ui/` son derivados regenerados. Todos los pasos
    viven en una entrada cliente, con estado/hash. No abras el catálogo del DS.
-4. Implementa respuestas visibles y estados reales. Conserva API, tokens,
-   geometría y composición. Marca instancias con `DSNode`/`data-ds-node`, identidad
-   contractual y props. Marca también títulos, textos y contenedores locales
-   relevantes; captura estados con acciones/aserciones en `brief.json`.
+4. Declara en `componentRequirements` las instancias que el brief requiere
+   antes de montar. Marca las instancias DS con `DSNode` y el export público
+   como hijo directo. Registra con evidencia cualquier excepción de cobertura.
+   Marca el contenido local y prepara estados con acciones/aserciones en `brief.json`.
    [Esquema de evidencia y handoff](references/handoff.md).
-5. Compila con `npm run build`, luego `npm run capture`. El script abre una copia
-   renombrada del HTML por `file://`, aislada y con HTTP(S) bloqueado; mide nodos y
-   toma capturas. Revisa esas imágenes y prueba el recorrido, teclado, retornos,
+5. Ejecuta `npm run build` y `npm run capture`. El enforcer usa todas las
+   familias del catálogo fijado y valida procedencia, sustituciones y los
+   controles de Header y Sidebar. La captura abre una copia aislada por
+   `file://`, bloquea HTTP(S), mide nodos y toma capturas. Revisa esas imágenes y prueba el recorrido, teclado, retornos,
    contenido largo y viewports solicitados. Capturar no sustituye revisión visual.
 6. Completa decisiones, limitaciones y checks reales; repite captura tras cualquier
    cambio de brief/HTML. Ejecuta `npm run handoff` y revisa el Markdown contra las

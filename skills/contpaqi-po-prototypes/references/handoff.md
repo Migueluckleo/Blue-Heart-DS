@@ -26,10 +26,20 @@ están disponibles no se afirma comparación visual contra ellos.
   en content. `figmaProperties` contiene el mapeo declarado real, si se conoce;
   omitirlo registra pendiente. Contrato, versión, hashes e IDs Figma provienen
   del manifiesto, no de nombres visualmente parecidos.
+- `componentRequirements` fija, desde el brief, pares `{instanceId,componentId}`
+  de instancias requeridas por rol. Incluye la instancia en `nodes` de un estado.
+  El enforcer coteja este plan con el inventario y detecta controles nativos y
+  roles renderizados que sustituyen familias documentadas. Para roles sin
+  semántica reconocible, la cobertura depende de este plan explícito.
 - Si falta una familia usa `kind:'local-composition'`, `componentId:'LOCAL-...'`,
   `reason` y `compositionOf` con IDs DS existentes, además del resto de campos.
   Captura también sus componentes DS hijos. Es una decisión local sin aprobación
-  de biblioteca; registra cualquier incertidumbre de comportamiento.
+  de biblioteca; registra cualquier incertidumbre de comportamiento. Si una
+  composición reemplaza una familia del catálogo por falta de cobertura en una
+  presentación, declara `exception: {componentIds, reason, source}` con los IDs
+  sustituidos, el motivo y la ruta de evidencia del snapshot. Sigue verificando
+  las reglas aplicables a esa familia. Para un Header local conserva el rol de
+  fondo, geometría, bloques de marca y contenido, y el asset oficial.
 - Títulos, textos, adornos y contenido local fuera de una instancia DS llevan su
   propio nodo estable `kind:'local-content'`, `componentId:'LOCAL-...'`, `reason`
   y tokens canónicos (sin compositionOf obligatorio). No basta concatenar todos
@@ -41,7 +51,7 @@ están disponibles no se afirma comparación visual contra ellos.
 - `figmaTarget`: URL proporcionada por el usuario o null. No inventar destino ni
   usar implícitamente el maestro.
 
-Marca instancias con el helper incluido (o atributos equivalentes):
+Importa `DSNode` desde `./evidence` y el componente desde `@contpaqi/ui` o el índice de `ui/`:
 
 ```tsx
 const props = {variant: 'primary' as const, showLeftIcon: false, showRightIcon: false};
@@ -54,8 +64,10 @@ const props = {variant: 'primary' as const, showLeftIcon: false, showRightIcon: 
 composición de varios hermanos marca un contenedor común explícito. Marca también
 los contenedores estructurales relevantes: la captura
 registra parent_id y orden para conservar la jerarquía, además de sus medidas.
-La identidad y props del brief se cotejan con data-ds-node/data-ds-component/data-ds-props;
-esto verifica correspondencia de la declaración, no infiere la API desde píxeles.
+El build comprueba que el hijo directo de cada DSNode oficial sea un export de
+su familia, incluso con alias de importación. Genera `data-ds-export` en la
+salida. La captura coteja identidad, export y props con el inventario y guarda
+los hallazgos por estado.
 Incluye props de estado actual en cada instancia; si cambian entre estados,
 usa instancias distintas o `stateProps` por `screen/state` en la entrada del brief.
 La captura usa texto visible, excluye descendientes ocultos y falla si encuentra

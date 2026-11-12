@@ -1,13 +1,19 @@
 # Build y QA offline
 
-```text
-node <skill>/scripts/init.mjs <salida-nueva>
-cd <salida-nueva>
+```sh
+python3 "$SKILL_INSTALADA/scripts/resolve_ds.py" --output "$RUNTIME"
+# Continúa con status PASS y usa en RUNTIME la ruta absoluta del comprobante.
+node "$RUNTIME/scripts/init.mjs" "$PROYECTO"
+cd "$PROYECTO"
 npm install
 npm run build
 npm run capture
 npm run handoff
 ```
+
+`SKILL_INSTALADA` apunta al motor instalado. `RUNTIME` y `PROYECTO` son rutas
+distintas a carpetas nuevas, con el proyecto fuera del runtime. Si ya resolviste
+el corte para este encargo, reutiliza el `runtime` del comprobante.
 
 El agente necesita Node compatible y dependencias locales; abrir el resultado solo
 requiere navegador con JavaScript. `init` verifica el snapshot y crea package.json
@@ -38,12 +44,23 @@ no sean hash. Next 16.4 necesita el adaptador privado asset-prefix que lee
 data-original-src; actualizar Next exige volver a verificar esta integración.
 No intercepta fetch, history ni errores para ocultar fallos.
 
+El build verifica los imports de cada instancia DS y audita el HTML final con
+el catálogo del corte. `npm run enforce` repite el diagnóstico estático sin
+abrir un navegador. El script acepta HTML, brief JSON o traspaso Markdown,
+manifiesto y una ruta opcional de reporte en ese orden. Un HTML anterior al
+enforcer puede conservar los marcadores del DS y carecer de la procedencia
+generada por este motor. El diagnóstico informa ambas cosas por separado.
+
 `capture.mjs` usa Playwright sin servidor. Por defecto busca Chromium instalado;
 `PLAYWRIGHT_CHANNEL=chrome npm run capture` permite usar Chrome disponible. Si falta
 capacidad informa NOT_RUN, no instala un navegador automáticamente. La copia
 aislada solo contiene el HTML renombrado; HTTP(S) y Service Workers se bloquean.
 Espera hidratación React, fuentes e imágenes; detecta archivos vecinos, errores,
-imágenes rotas, identidad/props inconsistentes y aserciones fallidas.
+imágenes rotas, identidad/props inconsistentes y aserciones fallidas. Verifica
+fondo y anatomía del Header, y fondo, ancho, altura disponible, pie y expansión
+por teclado del Sidebar. El traspaso conserva el informe de conformidad junto
+al hash del HTML. Los controles específicos de las otras familias siguen sus
+contratos y las aserciones declaradas del flujo.
 
 Cada estado parte de una recarga y ejecuta su receta de acciones. Incluye al menos
 un estado tras interacción, teclado y recorridos completos con cancelación/retorno

@@ -1,8 +1,13 @@
 import { cpSync, existsSync, readdirSync, readFileSync, writeFileSync, rmSync } from 'node:fs';
 import path from 'node:path';
 import parser from 'next/dist/compiled/babel/parser.js';
+import {componentCatalog,usagePlan} from './component-enforcer.mjs';
+import {verifyComponentSource} from './component-source.mjs';
 
 const root = process.cwd();
+const catalog = componentCatalog(JSON.parse(readFileSync('references/snapshot-manifest.json','utf8')));
+const plan = usagePlan(JSON.parse(readFileSync('brief.json','utf8')), catalog);
+if (plan.findings.length) throw new Error(JSON.stringify(plan.findings, null, 2));
 const walk = directory => readdirSync(directory,{withFileTypes:true}).flatMap(item=>item.isDirectory()?walk(path.join(directory,item.name)):[path.join(directory,item.name)]);
 const mime={'.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.gif':'image/gif','.avif':'image/avif','.ico':'image/x-icon','.woff':'font/woff','.woff2':'font/woff2','.ttf':'font/ttf'};
 const map={};
@@ -22,7 +27,7 @@ let transformed=0;
 for (const file of [...walk('app'),...walk('ui')].filter(x=>/\.tsx?$/.test(x))) {
   let code=readFileSync(file,'utf8');
   const source=parser.parse(code,{sourceType:'module',plugins:['typescript',...(file.endsWith('.tsx')?['jsx']:[])]});
-  const edits=[];
+  const edits=file.startsWith('app'+path.sep) ? verifyComponentSource(source,file,root,catalog) : [];
   const visit=(node,parent)=>{
     if(!node||typeof node!=='object')return;
     if(node.type==='ImportExpression'||node.type==='CallExpression'&&node.callee?.type==='Import')throw new Error(`Import diferido no soportado: ${file}`);

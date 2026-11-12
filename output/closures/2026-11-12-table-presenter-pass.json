@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "run": "2026-11-12-table-presenter-pass",
+  "status": "BLOCKED",
+  "started": 1794502161.829917,
+  "invocations": 2,
+  "retry_attempts": 0,
+  "previous_attempts": [
+    {
+      "started": 1794502106.20268,
+      "elapsed_seconds": 5.972,
+      "status": "NEEDS_SEMANTICS",
+      "phases": [
+        {
+          "name": "documents",
+          "seconds": 4.501,
+          "status": "PASS",
+          "result": {
+            "status": "PASS",
+            "files": 1137,
+            "findings": 0,
+            "timings": {
+              "inventory": 0.548,
+              "metadata": 3.343,
+              "status": 0.222,
+              "validation": 0.317
+            }
+          }
+        },
+        {
+          "name": "graph_plan",
+          "seconds": 0.553,
+          "status": "PASS",
+          "result": {
+            "status": "PREPARED",
+            "run": "2026-11-12-table-presenter-pass",
+            "semantic_files": 14,
+            "chunks": 1,
+            "next": "Extraer cada chunk según la skill Graphify y después ejecutar scripts/ds graph close --run 2026-11-12-table-presenter-pass"
+          }
+        }
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "name": "documents",
+      "seconds": 1.265,
+      "status": "PASS",
+      "result": {
+        "status": "PASS",
+        "files": 1137,
+        "findings": 0,
+        "timings": {
+          "inventory": 0.574,
+          "metadata": 0.025,
+          "status": 0.253,
+          "validation": 0.34
+        }
+      }
+    },
+    {
+      "name": "graph_plan",
+      "seconds": 0.497,
+      "status": "PASS",
+      "result": {
+        "status": "PREPARED",
+        "run": "2026-11-12-table-presenter-pass",
+        "semantic_files": 14,
+        "chunks": 1
+      }
+    },
+    {
+      "name": "graph",
+      "seconds": 18.57,
+      "status": "BLOCKED",
+      "error": "Fuentes cambiaron después de prepare. Preparar otro lote; no certificar hashes nuevos con extracción antigua."
+    }
+  ],
+  "usage_start": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "usage_end": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "agent_tokens": "UNAVAILABLE",
+  "agent_tool_calls": "UNAVAILABLE",
+  "command_phase_calls": 3,
+  "publication": "NOT_RUN",
+  "error": "Fuentes cambiaron después de prepare. Preparar otro lote; no certificar hashes nuevos con extracción antigua.",
+  "elapsed_seconds": 21.222,
+  "concurrent_attempts": 0,
+  "reuse": {
+    "ds_core.corpus": {
+      "executed": 2,
+      "reused": 3
+    },
+    "yaml_files": {
+      "executed": 0,
+      "reused": 304,
+      "persisted_reused": 152
+    },
+    "ds_core.generate_status": {
+      "executed": 1,
+      "reused": 1
+    },
+    "ds_core.documentation_check": {
+      "executed": 2,
+      "reused": 0
+    }
+  },
+  "hash_reads": 1245
+}

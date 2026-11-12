@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "run": "2026-11-12-table-presenter",
+  "status": "BLOCKED",
+  "started": 1794501828.489942,
+  "invocations": 2,
+  "retry_attempts": 0,
+  "previous_attempts": [
+    {
+      "started": 1794501658.94133,
+      "elapsed_seconds": 4.179,
+      "status": "NEEDS_SEMANTICS",
+      "phases": [
+        {
+          "name": "documents",
+          "seconds": 2.237,
+          "status": "PASS",
+          "result": {
+            "status": "PASS",
+            "files": 1134,
+            "findings": 0,
+            "timings": {
+              "inventory": 0.489,
+              "metadata": 1.171,
+              "status": 0.222,
+              "validation": 0.291
+            }
+          }
+        },
+        {
+          "name": "graph_plan",
+          "seconds": 1.069,
+          "status": "PASS",
+          "result": {
+            "status": "PREPARED",
+            "run": "2026-11-12-table-presenter",
+            "semantic_files": 13,
+            "chunks": 1,
+            "next": "Extraer cada chunk según la skill Graphify y después ejecutar scripts/ds graph close --run 2026-11-12-table-presenter"
+          }
+        }
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "name": "documents",
+      "seconds": 1.133,
+      "status": "PASS",
+      "result": {
+        "status": "PASS",
+        "files": 1136,
+        "findings": 0,
+        "timings": {
+          "inventory": 0.496,
+          "metadata": 0.021,
+          "status": 0.221,
+          "validation": 0.322
+        }
+      }
+    },
+    {
+      "name": "graph_plan",
+      "seconds": 0.684,
+      "status": "BLOCKED",
+      "error": "Lote previo tiene otro corte; usa un nuevo --run. Se conserva su evidencia."
+    }
+  ],
+  "usage_start": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "usage_end": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "agent_tokens": "UNAVAILABLE",
+  "agent_tool_calls": "UNAVAILABLE",
+  "command_phase_calls": 2,
+  "publication": "NOT_RUN",
+  "error": "Lote previo tiene otro corte; usa un nuevo --run. Se conserva su evidencia.",
+  "elapsed_seconds": 2.654,
+  "concurrent_attempts": 0,
+  "reuse": {
+    "ds_core.corpus": {
+      "executed": 1,
+      "reused": 1
+    },
+    "yaml_files": {
+      "executed": 0,
+      "reused": 152,
+      "persisted_reused": 152
+    },
+    "ds_core.generate_status": {
+      "executed": 1,
+      "reused": 0
+    },
+    "ds_core.documentation_check": {
+      "executed": 1,
+      "reused": 0
+    }
+  },
+  "hash_reads": 1242
+}

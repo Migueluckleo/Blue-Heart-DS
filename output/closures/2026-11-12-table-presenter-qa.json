@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "run": "2026-11-12-table-presenter-qa",
+  "status": "NEEDS_SEMANTICS",
+  "started": 1794501849.273578,
+  "invocations": 1,
+  "retry_attempts": 0,
+  "previous_attempts": [],
+  "phases": [
+    {
+      "name": "documents",
+      "seconds": 1.077,
+      "status": "PASS",
+      "result": {
+        "status": "PASS",
+        "files": 1136,
+        "findings": 0,
+        "timings": {
+          "inventory": 0.486,
+          "metadata": 0.031,
+          "status": 0.223,
+          "validation": 0.271
+        }
+      }
+    },
+    {
+      "name": "graph_plan",
+      "seconds": 1.158,
+      "status": "PASS",
+      "result": {
+        "status": "PREPARED",
+        "run": "2026-11-12-table-presenter-qa",
+        "semantic_files": 13,
+        "chunks": 1,
+        "next": "Extraer cada chunk según la skill Graphify y después ejecutar scripts/ds graph close --run 2026-11-12-table-presenter-qa"
+      }
+    }
+  ],
+  "usage_start": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "usage_end": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "agent_tokens": "UNAVAILABLE",
+  "agent_tool_calls": "UNAVAILABLE",
+  "command_phase_calls": 2,
+  "publication": "NOT_RUN",
+  "graph_run": "2026-11-12-table-presenter-qa",
+  "missing": [
+    "chunk-00.json"
+  ],
+  "next_command": "scripts/ds close --run 2026-11-12-table-presenter-qa",
+  "elapsed_seconds": 2.55,
+  "concurrent_attempts": 0,
+  "reuse": {
+    "ds_core.corpus": {
+      "executed": 1,
+      "reused": 1
+    },
+    "yaml_files": {
+      "executed": 0,
+      "reused": 152,
+      "persisted_reused": 152
+    },
+    "ds_core.generate_status": {
+      "executed": 1,
+      "reused": 0
+    },
+    "ds_core.documentation_check": {
+      "executed": 1,
+      "reused": 0
+    }
+  },
+  "hash_reads": 1242
+}
