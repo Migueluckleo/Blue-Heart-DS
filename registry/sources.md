@@ -25,3 +25,7 @@ El usuario confirmó los roles el 11 de noviembre de 2026. Blue Heart DS queda c
 ## Stepper · 2026-11-12
 
 La [captura del nodo 1020:530](../sources/figma-snapshots/root-families-2026-11-11/stepper-source.json) conserva el set de 18 variantes, el ejemplo de cuatro pasos, el auxiliar remoto y los bindings por instancia. [Phosphor oficial](../sources/figma-snapshots/root-families-2026-11-11/phosphor-stepper.json) confirma CheckFat e Image Fill.
+
+## Logos · 2026-11-12
+
+El usuario autorizó la [página Logos de Librería v1.1.0](https://www.figma.com/design/9zs5RMR8LB5wHjW9Bd59BA/Libreria-v1.1.0?node-id=40-93) como fuente de solo lectura para consumo en AI Blueheart DS. La [captura original](../sources/figma-snapshots/logos-2026-11-12/inventory.json) identifica 5 sets, 68 variantes y 12 marcos sueltos. El [JSON delegado](../specs/data/logos.v1.0.0.json) conserva el hash de la captura y la selección parametrizada.

@@ -26,20 +26,10 @@ están disponibles no se afirma comparación visual contra ellos.
   en content. `figmaProperties` contiene el mapeo declarado real, si se conoce;
   omitirlo registra pendiente. Contrato, versión, hashes e IDs Figma provienen
   del manifiesto, no de nombres visualmente parecidos.
-- `componentRequirements` fija, desde el brief, pares `{instanceId,componentId}`
-  de instancias requeridas por rol. Incluye la instancia en `nodes` de un estado.
-  El enforcer coteja este plan con el inventario y detecta controles nativos y
-  roles renderizados que sustituyen familias documentadas. Para roles sin
-  semántica reconocible, la cobertura depende de este plan explícito.
-- Si falta una familia usa `kind:'local-composition'`, `componentId:'LOCAL-...'`,
-  `reason` y `compositionOf` con IDs DS existentes, además del resto de campos.
-  Captura también sus componentes DS hijos. Es una decisión local sin aprobación
-  de biblioteca; registra cualquier incertidumbre de comportamiento. Si una
-  composición reemplaza una familia del catálogo por falta de cobertura en una
-  presentación, declara `exception: {componentIds, reason, source}` con los IDs
-  sustituidos, el motivo y la ruta de evidencia del snapshot. Sigue verificando
-  las reglas aplicables a esa familia. Para un Header local conserva el rol de
-  fondo, geometría, bloques de marca y contenido, y el asset oficial.
+- `componentFamilyTracking` incluye exactamente una entrada `{componentId, applicability, reason}` por familia devuelta por `npm run inventory`. La lista se reconcilia con el manifiesto y las Specs del corte. Usa `APPLIES` si el brief requiere la familia y `NOT_APPLICABLE` con el motivo cuando no la usa. Cada familia aplicable requiere al menos un control mapeado. El resultado final se calcula como `VERIFIED`, `NOT_APPLICABLE` o `EXCEPTION` a partir del mapa, el código verificado y las instancias observadas en captura PASS.
+- `componentRequirements` se escribe desde el brief antes del código. Cada entrada usa `{instanceId, role, componentId, coverage, exportName, reason, evidence}`. `role` describe lo que hace el control. `evidence` es una ruta del contrato, enmienda o ficha web de la familia en el corte. Para `COMPATIBLE`, indica el export real y explica qué parte del API satisface el brief. Para `SPEC_WITHOUT_WEB`, conserva la familia y su spec. Para `WEB_INCOMPATIBLE`, identifica qué variante, propiedad o comportamiento requerido falta en el API disponible. Ambas excepciones usan `exportName: null`. Para `NO_SPEC`, usa `componentId: null`, `exportName: null` y `evidence: "implementations/web/components.registry.json"`, con el alcance y términos de la búsqueda. Si la vista carece de controles, justifícalo en `controlsAbsent`.
+- `npm run plan` fija `references/component-plan.json` al manifiesto verificado. Resuelve las dependencias transitivas declaradas en contratos y sus enmiendas, conserva hashes y exports disponibles. Al escribir el código, incluye cada control del mapa en `components` y en `nodes` de al menos un estado de captura. Para una excepción usa `kind: 'local-composition'`, el mismo `reason` y `compositionOf` con las familias web reutilizadas, si aplica. Para `SPEC_WITHOUT_WEB` o `WEB_INCOMPATIBLE`, añade `exception: {componentIds: [componentId], reason, source: evidence}`. Para `NO_SPEC`, la búsqueda y su evidencia quedan en el mapa. La excepción debe reflejar la carencia concreta de ese control.
+- Antes del traspaso, revisa el código, el HTML y los estados contra el mapa. El build verifica los imports de `DSNode`, el export elegido y el inventario. El enforcer detecta además roles y estructuras reconocibles. Corrige toda sustitución de un export compatible. El traspaso conserva el mapa, el cotejo del build, las excepciones con fuentes y los hashes del código de prototipo y HTML.
 - Títulos, textos, adornos y contenido local fuera de una instancia DS llevan su
   propio nodo estable `kind:'local-content'`, `componentId:'LOCAL-...'`, `reason`
   y tokens canónicos (sin compositionOf obligatorio). No basta concatenar todos

@@ -4,6 +4,7 @@ import {tmpdir} from 'node:os';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {componentCatalog,projectComponentAudit,usagePlan} from './component-enforcer.mjs';
+import {verifyComponentPlan} from './component-plan.mjs';
 import {inspectBrowserComponents} from './component-browser.mjs';
 
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
@@ -13,7 +14,7 @@ const brief=JSON.parse(briefBytes);
 const html=readFileSync('render.html');
 const manifest=JSON.parse(readFileSync('render.manifest.json'));
 const catalog=componentCatalog(JSON.parse(readFileSync('references/snapshot-manifest.json')));
-const plan=usagePlan(brief,catalog);
+const plan=usagePlan(brief,catalog,verifyComponentPlan(brief));
 if(hash(html)!==manifest.sha256) throw new Error('HTML alterado después del build.');
 if(!brief.screens?.length||!brief.viewports?.length) throw new Error('Completar screens y viewports antes de capturar.');
 const report={schema_version:1,html_sha256:hash(html),brief_sha256:hash(briefBytes),status:'NOT_RUN',network:'HTTP(S) blocked; isolated renamed file with no neighboring assets',browser:null,states:[],errors:[],generated_at:new Date().toISOString()};
@@ -86,7 +87,7 @@ try {
                 const rect=root.getBoundingClientRect();
                 const css=getComputedStyle(root);
                 const visible=rect.width>0&&rect.height>0&&css.visibility!=='hidden'&&!root.closest('[hidden]');
-                return {id:element.getAttribute('data-ds-node'),parent_id:element.parentElement?.closest('[data-ds-node]')?.getAttribute('data-ds-node')??null,order,component:element.getAttribute('data-ds-component'),declared_props:JSON.parse(element.getAttribute('data-ds-props')??'{}'),tag:root.tagName,text:visible?(root.innerText??root.textContent):'',bounding_box:{x:rect.x,y:rect.y,width:rect.width,height:rect.height},visible,computed_style:Object.fromEntries(styleKeys.map(key=>[key,css[key]])),text_runs:[],tokens:Object.fromEntries([...css].filter(key=>key.startsWith('--ds-')&&key!=='--ds-type-style-id').map(key=>[key,css.getPropertyValue(key).trim()]))};
+                return {id:element.getAttribute('data-ds-node'),parent_id:element.parentElement?.closest('[data-ds-node]')?.getAttribute('data-ds-node')??null,order,component:element.getAttribute('data-ds-component'),export:element.getAttribute('data-ds-export'),declared_props:JSON.parse(element.getAttribute('data-ds-props')??'{}'),tag:root.tagName,text:visible?(root.innerText??root.textContent):'',bounding_box:{x:rect.x,y:rect.y,width:rect.width,height:rect.height},visible,computed_style:Object.fromEntries(styleKeys.map(key=>[key,css[key]])),text_runs:[],tokens:Object.fromEntries([...css].filter(key=>key.startsWith('--ds-')&&key!=='--ds-type-style-id').map(key=>[key,css.getPropertyValue(key).trim()]))};
               });
               const unmapped_text=[];
               const nodeById=new Map(nodes.map(node=>[node.id,node]));
@@ -122,7 +123,7 @@ try {
               }
               const faces=[...document.fonts].map(face=>({family:face.family,status:face.status,weight:face.weight,style:face.style}));
               return {nodes,unmapped_text,theme:document.querySelector('[data-ds-theme]')?.getAttribute('data-ds-theme')??null,broken_images:[...document.images].filter(img=>!img.complete||img.naturalWidth===0).map(img=>img.alt||img.src.slice(0,120)),fonts:{status:document.fonts.status,faces},page:{width:document.documentElement.scrollWidth,height:document.documentElement.scrollHeight}};
-            },brief.components.filter(component=>['ds','local-content'].includes(component.kind)).map(component=>component.instanceId));
+            },brief.components.filter(component=>['ds','local-content','local-composition'].includes(component.kind)).map(component=>component.instanceId));
             Object.assign(result,measured);
             const visibleIds=result.nodes.filter(node=>node.visible).map(node=>node.id);
             if(new Set(result.nodes.map(node=>node.id)).size!==result.nodes.length)throw new Error('data-ds-node duplicado.');
@@ -131,7 +132,7 @@ try {
               const declared=brief.components.find(item=>item.instanceId===node.id);
               if(!declared)throw new Error(`Nodo sin identidad en brief: ${node.id}`);
               const expectedProps=declared.stateProps?.[screen.id+'/'+state.id]??declared.props;
-              if(declared.componentId!==node.component||canonical(expectedProps)!==canonical(node.declared_props))throw new Error(`Identidad/props no coinciden: ${node.id}`);
+              if(declared.componentId!==node.component||(declared.kind==='ds'&&declared.exportName!==node.export)||canonical(expectedProps)!==canonical(node.declared_props))throw new Error(`Identidad/props no coinciden: ${node.id}`);
             }
             if(result.theme!==(brief.theme?.toLowerCase() ?? null))throw new Error('Tema renderizado distinto del brief.');
             if(result.broken_images.length)throw new Error(`Imágenes incompletas: ${result.broken_images.join(', ')}`);

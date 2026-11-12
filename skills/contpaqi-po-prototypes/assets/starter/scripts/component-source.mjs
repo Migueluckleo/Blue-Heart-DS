@@ -2,7 +2,7 @@ import path from 'node:path';
 import babelTraverse from 'next/dist/compiled/babel/traverse.js';
 
 const traverse = babelTraverse.default;
-const nativeControls = new Set(['button','input','textarea','select','table','td','th']);
+const nativeControls = new Set(['button','input','textarea','select','table','td','th','nav']);
 const literal = node => node?.type === 'StringLiteral' ? node.value
   : node?.type === 'JSXExpressionContainer' ? literal(node.expression) : undefined;
 

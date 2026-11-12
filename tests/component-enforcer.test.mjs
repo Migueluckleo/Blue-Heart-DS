@@ -22,6 +22,20 @@ const jsx = content => verifyComponentSource(parser.parse(content, {sourceType:'
 const verifiedButton = entry('save','BUTTON-001','Button');
 const localButton = {instanceId:'save',componentId:'LOCAL-Save',kind:'local-content'};
 
+test('una familia exclusiva de Figma no se admite en el prototipador web', () => {
+  const family = {id:'LOGOS-001',consumption_targets:['figma'],exports:[]};
+  const scoped = componentCatalog({...manifest,
+    components:[...manifest.components.filter(row=>row.id!==family.id),family]});
+  assert.equal(scoped.families.has(family.id),false);
+  assert.ok(scoped.families.get('BUTTON-001').includes('Button'));
+  const brief = {components:[entry('logo',family.id,'Logos')],
+    componentRequirements:[{instanceId:'logo',componentId:family.id}],
+    screens:[{states:[{nodes:['logo']}]}]};
+  const codes = usagePlan(brief,scoped).findings.map(finding=>finding.code);
+  assert.ok(codes.includes('UNKNOWN_EXPORT'));
+  assert.ok(codes.includes('UNKNOWN_REQUIREMENT'));
+});
+
 test('cada export del catálogo tiene la misma prueba de procedencia', () => {
   for (const [family, exports] of catalog.families) for (const exported of exports) {
     const imports = `import {DSNode as Mark} from './evidence'; import {${exported} as Verified} from '@contpaqi/ui';`;

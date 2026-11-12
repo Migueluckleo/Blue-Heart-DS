@@ -10,6 +10,8 @@ La solicitud [DEC-WEB-COMPONENTS-001](../registry/decisions.md) activa una bibli
 
 Cada componente nuevo del DS debe contar con su implementación web y documentación técnica. Una ampliación de un componente existente debe actualizar el mismo entregable. No basta una imagen, un snippet sin dependencias ni una ficha vacía. Esta obligación no autoriza cambios de diseño, backend, publicación o instalaciones globales.
 
+Cuando la solicitud limita explícitamente una familia a Figma, el contrato declara `consumption_targets: [figma]`. El catálogo general conserva su ficha y sus localizadores Figma con exports vacíos. La galería Next y el prototipador PO ofrecen las familias habilitadas para web. [Logos · LOGOS-001](../specs/components/logos.contract.v1.0.0.md) tiene este alcance exclusivo.
+
 ## 2. Fuentes y alcance por componente
 
 Identificar contrato base, enmiendas aplicables, datos canónicos y dependencias por identidad y hash. Usar contratos vigentes para reglas visuales; el JSON referenciado gobierna los tokens. Conservar las excepciones de personajes y logos. Figma puede aportar evidencia adicional, pero no es requisito para ejecutar o consumir el código.

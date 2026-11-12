@@ -34,19 +34,9 @@ Para una composición, consulta `--intent dependencies` por familia anfitriona. 
 3. Lee [build y QA offline](references/build.md). Ejecuta
    `node <runtime>/scripts/init.mjs <proyecto-nuevo>` con la ruta absoluta del campo
    `runtime` que devolvió el cargador en `PASS`. El proyecto requiere una carpeta
-   nueva fuera del runtime. Edita `prototype/page.tsx`, estilos
-   locales y `brief.json`; `app/` y `ui/` son derivados regenerados. Todos los pasos
-   viven en una entrada cliente, con estado/hash. No abras el catálogo del DS.
-4. Declara en `componentRequirements` las instancias que el brief requiere
-   antes de montar. Marca las instancias DS con `DSNode` y el export público
-   como hijo directo. Registra con evidencia cualquier excepción de cobertura.
-   Marca el contenido local y prepara estados con acciones/aserciones en `brief.json`.
-   [Esquema de evidencia y handoff](references/handoff.md).
-5. Ejecuta `npm run build` y `npm run capture`. El enforcer usa todas las
-   familias del catálogo fijado y valida procedencia, sustituciones y los
-   controles de Header y Sidebar. La captura abre una copia aislada por
-   `file://`, bloquea HTTP(S), mide nodos y toma capturas. Revisa esas imágenes y prueba el recorrido, teclado, retornos,
-   contenido largo y viewports solicitados. Capturar no sustituye revisión visual.
+   nueva fuera del runtime. Ejecuta `npm run inventory` y completa `componentFamilyTracking` en `brief.json` para todas las familias del corte, indicando cuáles aplican al brief y el motivo. Completa también `componentRequirements` desde el brief original. Inventaría los controles por propósito y estado, incluidos menús y sus ítems, desplegables, paginación, breadcrumbs y avisos. Para cada uno, contrasta la spec, sus enmiendas, sus dependencias y el API web del corte. Registra el export compatible o la causa concreta y su evidencia. Ejecuta `npm run plan` y exige que pase antes de escribir `prototype/`.
+4. Implementa desde ese mapa. Usa `DSNode` con el export público como hijo directo en las instancias oficiales. Ejercita cada control en un estado de captura. Si cambia el alcance, actualiza y vuelve a verificar el mapa antes de implementar el cambio. Consulta el [esquema de evidencia](references/handoff.md).
+5. Ejecuta `npm run build`, `npm run enforce` y `npm run capture`. Coteja todo el código y los estados contra el mapa, incluidas las composiciones locales y los controles de contenido condicional. Si encuentras un sustituto para un export compatible, corrige el código y repite el build y la captura. Revisa cada excepción contra la fuente aplicable y consérvala en el traspaso. La captura comprueba el HTML aislado por `file://` con HTTP(S) bloqueado.
 6. Completa decisiones, limitaciones y checks reales; repite captura tras cualquier
    cambio de brief/HTML. Ejecuta `npm run handoff` y revisa el Markdown contra las
    capturas. Incluye IDs/contratos/hashes/props y omisiones reales; nunca inventes
@@ -54,7 +44,7 @@ Para una composición, consulta `--intent dependencies` por familia anfitriona. 
 
 Entrega enlaces al HTML, Markdown y carpeta/ZIP completos. Abre el HTML si el visor
 disponible admite JavaScript; de lo contrario indica doble clic en navegador.
-Si falta capacidad de navegador, conserva `NOT_RUN` y describe la limitación. Si
+Si falta capacidad de navegador, registra `NOT_RUN` y entrega el diagnóstico de los controles pendientes. La entrega final de controles aplicables exige observaciones PASS. Si
 la ejecución falla, conserva `FAIL` y corrige; no presentes el prototipo como
 funcional ni uses localhost para cubrir el fallo. No publicar, ejecutar Figma ni
 modificar el maestro o las habilidades instaladas durante este flujo.

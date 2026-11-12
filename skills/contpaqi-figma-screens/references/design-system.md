@@ -36,6 +36,8 @@ Prefiere importar variables de biblioteca verificadas. Si hace falta materializa
 
 Conserva los assets de identidad que el contrato indique y verifica su fuente vigente.
 
+Para `LOGOS-001`, consulta la familia en el catálogo y usa una instancia nativa del set exacto de la página Logos de AI Blueheart DS. En producto usa `product` y `type`. En `CONTPAQi` usa las parejas `product` y `Mode` observadas. Verifica el arte fijo y cero bindings al leer la instancia.
+
 Usa logos e identidad desde los assets y manifiestos canónicos incluidos y las enmiendas de la familia. No los redibujes, recolorees, recortes ni sustituyas por texto o imágenes generadas por conveniencia. Una imagen de referencia no demuestra el asset, el token ni la fuente exactos; registra lo que no pueda identificarse.
 
 La decisión de iconografía Phosphor en `assets/design-system/references/PHOSPHOR-ICONS.md` se aplica a todo BlueHeart. Consume la key oficial verificada en Figma y el paquete oficial en React. Conserva peso, tamaño y variables del componente consumidor.

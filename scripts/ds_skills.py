@@ -125,9 +125,14 @@ def component_index(root, paths, project):
     if data["issues"]:
         raise ValueError("Unresolved source status: " + json.dumps(data["issues"], ensure_ascii=False))
     families = {f["id"]: f for f in data["families"] if f["base"] and f["base"]["metadata"].get("type") != "tooling" and not f["id"].startswith(("FOUNDATIONS-", "MIGRATION-"))}
+    figma_only = {family_id: family for family_id, family in families.items()
+                  if family["base"]["metadata"].get("consumption_targets") == ["figma"]}
     ids = [r["id"] for r in registry]
-    if len(ids) != len(set(ids)) or set(ids) != set(families):
+    if len(ids) != len(set(ids)) or set(ids) != set(families) - figma_only.keys():
         raise ValueError("Skill family coverage differs from current contract registry")
+    registry += [{"id": family_id, "slug": family_id.lower().removesuffix("-001"),
+                  "name": family["base"]["metadata"]["name"], "base": family["base"]["path"],
+                  "amendments": [], "exports": []} for family_id, family in figma_only.items()]
     result = []
     for row in sorted(registry, key=lambda x: x["id"]):
         family = families[row["id"]]
@@ -148,6 +153,8 @@ def component_index(root, paths, project):
                        "contract": row["base"], "base": row["base"], "amendments": amendments,
                        "exports": row["exports"], "exportName": row["exports"][0] if row["exports"] else None,
                        "version": meta.get("version"), "figma": figma or None})
+        if row["id"] in figma_only:
+            result[-1]["consumption_targets"] = ["figma"]
     return result
 
 

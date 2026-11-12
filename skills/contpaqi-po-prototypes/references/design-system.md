@@ -36,3 +36,4 @@ mezcles versiones silenciosamente. La actualización del paquete es un release
 separado, no una modificación improvisada dentro de este flujo de prototipado.
 
 La decisión de iconografía Phosphor en `assets/design-system/references/PHOSPHOR-ICONS.md` se aplica a todo BlueHeart. Consume la key oficial verificada en Figma y el paquete oficial en React. Conserva peso, tamaño y variables del componente consumidor.
+Las familias con `consumption_targets: [figma]` se consultan como referencia del traspaso al diseñador. `LOGOS-001` se instancia en AI Blueheart DS desde la skill Figma. El inventario, la conformidad y el handoff del HTML admiten únicamente familias habilitadas para web. Para Header aplica el alcance y el asset de su contrato.

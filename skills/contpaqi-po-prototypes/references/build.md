@@ -6,7 +6,11 @@ python3 "$SKILL_INSTALADA/scripts/resolve_ds.py" --output "$RUNTIME"
 node "$RUNTIME/scripts/init.mjs" "$PROYECTO"
 cd "$PROYECTO"
 npm install
+npm run inventory
+# Completar componentFamilyTracking y componentRequirements antes de escribir prototype/.
+npm run plan
 npm run build
+npm run enforce
 npm run capture
 npm run handoff
 ```

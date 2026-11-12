@@ -3,10 +3,13 @@ import path from 'node:path';
 import parser from 'next/dist/compiled/babel/parser.js';
 import {componentCatalog,usagePlan} from './component-enforcer.mjs';
 import {verifyComponentSource} from './component-source.mjs';
+import {recordComponentSource,verifyComponentPlan} from './component-plan.mjs';
 
 const root = process.cwd();
 const catalog = componentCatalog(JSON.parse(readFileSync('references/snapshot-manifest.json','utf8')));
-const plan = usagePlan(JSON.parse(readFileSync('brief.json','utf8')), catalog);
+const brief = JSON.parse(readFileSync('brief.json','utf8'));
+const coverage = verifyComponentPlan(brief);
+const plan = usagePlan(brief, catalog, coverage);
 if (plan.findings.length) throw new Error(JSON.stringify(plan.findings, null, 2));
 const walk = directory => readdirSync(directory,{withFileTypes:true}).flatMap(item=>item.isDirectory()?walk(path.join(directory,item.name)):[path.join(directory,item.name)]);
 const mime={'.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.gif':'image/gif','.avif':'image/avif','.ico':'image/x-icon','.woff':'font/woff','.woff2':'font/woff2','.ttf':'font/ttf'};
@@ -53,4 +56,5 @@ for (const file of [...walk('app'),...walk('ui')].filter(x=>/\.tsx?$/.test(x))) 
   }
   writeFileSync(file,code);
 }
+recordComponentSource(coverage);
 console.log(`Preparación offline: ${Object.keys(map).length} assets incluidos; ${transformed} módulos con src/poster resueltos. Fuente editable intacta en prototype/.`);

@@ -1,7 +1,8 @@
 import {readFileSync,writeFileSync,mkdirSync,cpSync,existsSync,realpathSync,rmSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
-import {projectComponentAudit} from './component-enforcer.mjs';
+import {projectComponentAudit,webComponents} from './component-enforcer.mjs';
+import {verifyComponentPlan,verifyFamilyTracking} from './component-plan.mjs';
 
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const read=file=>JSON.parse(readFileSync(file,'utf8'));
@@ -9,8 +10,10 @@ const text=(value,label)=>{if(typeof value!=='string'||!value.trim())throw new E
 const array=(value,label,required=false)=>{if(!Array.isArray(value)||(required&&!value.length))throw new Error(`Completar ${label}`);};
 const object=(value,label)=>{if(!value||typeof value!=='object'||Array.isArray(value))throw new Error(`Completar ${label}`);};
 const brief=read('brief.json');
+const coverage=verifyComponentPlan(brief);
 const release=read('references/release.json');
 const manifest=read('references/snapshot-manifest.json');
+const webFamilies=new Map(webComponents(manifest).map(family=>[family.id,family]));
 const snapshot=realpathSync('references/design-system');
 const sourceFiles=new Set();
 function source(relative){
@@ -66,15 +69,15 @@ const components=brief.components.map(component=>{
   return {...component,tokens,identity:null,authority:'LOCAL_PROTOTYPE_ONLY'};
  }
  if(component.kind==='local-composition'){
-  text(component.reason,'local.reason');array(component.compositionOf,'local.compositionOf',true);
+  text(component.reason,'local.reason');array(component.compositionOf,'local.compositionOf');
   const compositionReferences=component.compositionOf.map(id=>{
-   const base=manifest.components.find(item=>item.id===id);if(!base)throw new Error(`Componente base desconocido: ${id}`);
+   const base=webFamilies.get(id);if(!base)throw new Error(`Componente base fuera del alcance web: ${id}`);
    return {id,contract:base.contract??base.base,version:base.version??null,amendments:base.amendments??[],sources:[base.contract??base.base,...(base.amendments??[])].map(source),figma:base.figma??null};
   });
   return {...component,tokens,identity:null,compositionReferences,authority:'LOCAL_PROTOTYPE_ONLY'};
  }
  if(component.kind!=='ds')throw new Error('component.kind debe ser ds, local-content o local-composition.');
- const identity=manifest.components.find(item=>item.id===component.componentId);
+ const identity=webFamilies.get(component.componentId);
  if(!identity)throw new Error(`Identidad DS desconocida: ${component.componentId}`);
  if(!(identity.exports??[identity.exportName]).includes(component.exportName))throw new Error(`Export no pertenece a contrato: ${component.exportName}`);
  const sources=[identity.contract??identity.base,...(identity.amendments??[])].map(source);
@@ -87,13 +90,27 @@ const exportManifest=read('render.manifest.json');
 if(hash(html)!==exportManifest.sha256)throw new Error('HTML alterado: volver a compilar.');
 const componentEnforcement=projectComponentAudit(html,brief);
 if(componentEnforcement.status!=='PASS') throw new Error('Conformidad BlueHeart FAIL. Ejecuta npm run enforce.');
-for(const component of components)if(component.exception)source(component.exception.source);
+source(coverage.registry.path);
+source(coverage.exportsIndex.path);
+for (const family of coverage.families) {
+ source(family.contract.path);
+ for (const amendment of family.amendments) source(amendment.path);
+}
+for (const entry of coverage.controls) {
+ source(entry.evidence.path);
+ for (const family of [entry,...entry.dependencies]) {
+  if (family.contract) source(family.contract.path);
+  for (const amendment of family.amendments ?? []) source(amendment.path);
+ }
+}
 let capture={status:'NOT_RUN',states:[],errors:['No hay captura real; no afirmar funcionalidad ni medidas verificadas.']};
 if(existsSync('capture/report.json')){
  capture=read('capture/report.json');
  if(capture.component_enforcement?.status!=='PASS'
    ||capture.component_enforcement.html_sha256!==componentEnforcement.html_sha256
-   ||capture.component_enforcement.ds_digest!==componentEnforcement.ds_digest)throw new Error('Captura sin enforcer del mismo HTML y corte. Repetir capture.');
+   ||capture.component_enforcement.ds_digest!==componentEnforcement.ds_digest
+   ||capture.component_enforcement.plan_sha256!==componentEnforcement.plan_sha256
+   ||capture.component_enforcement.source_sha256!==componentEnforcement.source_sha256)throw new Error('Captura sin enforcer del mismo HTML y corte. Repetir capture.');
  if(capture.status==='FAIL')throw new Error('La captura contiene fallos. Revisar capture/report.json antes del traspaso.');
  if(capture.html_sha256!==hash(html)||capture.brief_sha256!==hash(readFileSync('brief.json')))throw new Error('Captura obsoleta: repetir capture tras cambios.');
  for(const state of capture.states){
@@ -118,8 +135,9 @@ for(const component of components){
  if(!observed.length)component.omissions.push('Instancia declarada sin captura visible PASS; propiedades y medidas no verificadas.');
  if(unobservedStateProps.length)component.omissions.push('Props por estado sin captura visible PASS: '+unobservedStateProps.join(', '));
 }
+const familyTracking=verifyFamilyTracking(coverage,components,capture);
 for(const check of brief.checks){text(check.name,'check.name');text(check.evidence,'check.evidence');if(!['PASS','FAIL','BLOCKED','NOT_RUN'].includes(check.status))throw new Error('Estado QA inválido.');}
-const handoff={schema_version:1,producer_skill:release.skill_name,consumer_skill:release.companion_skill,package_version:release.version,engine_version:release.engine_version,catalog_url:release.catalog_url,figma_library:figmaLibrary,ds_digest:release.ds_digest,html_sha256:hash(html),title:brief.title,objective:brief.objective,theme:brief.theme,viewports:brief.viewports,figmaTarget:brief.figmaTarget,sources:[...sourceFiles].sort().map(source),screens:brief.screens,transitions:brief.transitions,components,decisions:brief.decisions,limitations:brief.limitations,checks:brief.checks,component_requirements:brief.componentRequirements??[],component_enforcement:componentEnforcement,typography,capture};
+const handoff={schema_version:1,producer_skill:release.skill_name,consumer_skill:release.companion_skill,package_version:release.version,engine_version:release.engine_version,catalog_url:release.catalog_url,figma_library:figmaLibrary,ds_digest:release.ds_digest,html_sha256:hash(html),title:brief.title,objective:brief.objective,theme:brief.theme,viewports:brief.viewports,figmaTarget:brief.figmaTarget,sources:[...sourceFiles].sort().map(source),screens:brief.screens,transitions:brief.transitions,components,decisions:brief.decisions,limitations:brief.limitations,checks:brief.checks,component_requirements:brief.componentRequirements??[],component_plan:coverage,component_family_tracking:familyTracking,component_enforcement:componentEnforcement,typography,capture};
 const destination='entrega';
 if(existsSync(destination)&&!existsSync(path.join(destination,'.contpaqi-handoff')))throw new Error('entrega pertenece a otro proceso.');
 // Replace only this generator's marked output; avoid stale screenshots or references.
@@ -146,6 +164,18 @@ for(const screen of brief.screens){
 }
 md+='## Componentes y composición\n\n';
 md+=`Tipografía por contrato de componente: **${typography.status}**. La captura registró ${typography.text_run_count} rangos visibles con sus métricas. Biblioteca Figma de referencia: [${master.name}](${master.url}).\n\n`;
+md+='### Seguimiento de familias del corte\n\n';
+for(const family of familyTracking){
+ md+=`- ${family.componentId} · ${family.result}. ${family.reason} [Spec](referencias/design-system/${family.contract.path})${family.instances.length?' · Instancias '+family.instances.join(', '):''}.\n`;
+}
+md+='\n';
+md+='### Cobertura del brief\n\n';
+if(coverage.controlsAbsent) md+=`${coverage.controlsAbsent}\n\n`;
+for(const item of coverage.controls){
+ const dependencies=item.dependencies.map(dependency=>dependency.componentId).join(', ');
+ md+=`- ${item.instanceId} · ${item.role} · ${item.coverage}${item.exportName?' · '+item.exportName:''}. ${item.reason} [Evidencia](referencias/design-system/${item.evidence.path})${dependencies?' · Dependencias '+dependencies:''}.\n`;
+}
+md+='\n';
 for(const component of components){
  md+=`### ${component.instanceId} · ${component.exportName}\n\n- Identidad: ${component.componentId}; ${component.kind}.\n- Ubicación: ${component.placement}.\n- Props declaradas${component.evidence.status==='PASS'?' y cotejadas con los atributos de evidencia del HTML':' (cotejo '+component.evidence.status+')'}: ${literal(JSON.stringify(component.props))}.\n- Propiedades Figma declaradas: ${literal(JSON.stringify(component.figmaProperties??null))}.\n- Tokens: ${component.tokens.map(token=>literal(token.name)).join(', ')||'Sin tokens adicionales declarados; consultar contrato.'}\n- Slots/composición: ${literal(JSON.stringify(component.slots))}.\n`;
  if(component.identity){md+=`- Contrato: [${component.identity.contract}](referencias/design-system/${component.identity.contract}); versión ${component.identity.version??'no declarada en origen'}.\n- Figma observado: ${literal(JSON.stringify(component.identity.figma))}.\n`;for(const item of component.identity.sources)md+=`- Fuente ${item.path} · SHA-256 ${literal(item.sha256)}.\n`;}

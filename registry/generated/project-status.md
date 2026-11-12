@@ -29,6 +29,7 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 | INPUT-001 | [1.0.0](../../specs/components/input.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | LINEAR-PROGRESS-001 | [1.0.0](../../specs/components/linear-progress.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | LOADER-001 | [1.0.0](../../specs/components/loader.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 1 registros por alcance |
+| LOGOS-001 | [1.0.0](../../specs/components/logos.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | MENU-ITEM-001 | [1.0.0](../../specs/components/menu-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | PAGINATION-001 | [1.0.0](../../specs/components/pagination.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | PAGINATION-ITEM-001 | [1.0.0](../../specs/components/pagination-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
@@ -354,6 +355,19 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Enmienda: [specs/components/loader.usage.amendment.v1.0.1.md](../../specs/components/loader.usage.amendment.v1.0.1.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
 - Implementación: [implementations/figma/buttons-loader-2026-11-11/loader.state.json](../../implementations/figma/buttons-loader-2026-11-11/loader.state.json) — {"status": "VALIDATED", "scope": "Figma structural, binding and stored prototype QA", "user_audit": "OPTIONAL_PENDING", "publication": "HOLD", "qa": "qa/implementations/buttons-loader.v1.0.0.review.md"}.
 - QA por alcance: [qa/implementations/buttons-loader.v1.0.0.review.md](../../qa/implementations/buttons-loader.v1.0.0.review.md).
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## LOGOS-001
+
+Base: [specs/components/logos.contract.v1.0.0.md](../../specs/components/logos.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/components/logos.contract.v1.0.0.md](../../specs/components/logos.contract.v1.0.0.md).
+- Página declarada: Logos en [specs/components/logos.contract.v1.0.0.md](../../specs/components/logos.contract.v1.0.0.md).
+- Preparación: UNKNOWN.
+- Slots: NOT_APPLICABLE en [specs/components/logos.contract.v1.0.0.md](../../specs/components/logos.contract.v1.0.0.md).
+- Revisión de implementación declarada: UNKNOWN.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 

@@ -1,7 +1,8 @@
 import {createHash} from 'node:crypto';
-import {readFileSync} from 'node:fs';
+import {readFileSync,writeFileSync} from 'node:fs';
 import htmlParser from 'next/dist/compiled/node-html-parser/index.js';
 import postcss from 'postcss';
+import {verifyComponentPlan,verifyComponentSourceReceipt} from './component-plan.mjs';
 
 export const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 const read = file => JSON.parse(readFileSync(file, 'utf8'));
@@ -9,15 +10,20 @@ const own = (node, key) => node.getAttribute(key);
 const normalized = value => value?.trim().replace(/\s+/g, ' ');
 const firstElement = node => node?.childNodes?.find(child => child.tagName);
 
-export function componentCatalog(manifest) {
-  const families = new Map(manifest.components.map(row => [row.id, row.exports ?? [row.exportName]]));
-  return {families, sources:manifest.files, ds_digest:manifest.ds_digest};
+export function webComponents(manifest) {
+  return manifest.components.filter(row => row.consumption_targets?.includes('web') ?? true);
 }
 
-export function usagePlan(brief, catalog) {
+export function componentCatalog(manifest) {
+  const families = new Map(webComponents(manifest).map(row => [row.id, row.exports ?? [row.exportName]]));
+  return {families, specs:new Set(manifest.components.map(row=>row.id)), sources:manifest.files, ds_digest:manifest.ds_digest};
+}
+
+export function usagePlan(brief, catalog, coverage) {
   const findings = [];
   const declared = new Map();
   const requirements = new Map();
+  const specs = coverage ? new Set(coverage.families.map(row=>row.componentId)) : catalog.specs;
   const add = (code, id, detail) => findings.push({code, id, detail});
   for (const entry of brief.components ?? []) {
     if (declared.has(entry.instanceId)) add('DUPLICATE_INSTANCE', entry.instanceId, 'ID repetido en el inventario.');
@@ -28,20 +34,38 @@ export function usagePlan(brief, catalog) {
     if (entry.exception) {
       const {componentIds, reason, source} = entry.exception;
       if (entry.kind !== 'local-composition' || !Array.isArray(componentIds) || !componentIds.length
-        || componentIds.some(id => !catalog.families.has(id)) || typeof reason !== 'string' || !reason.trim()
-        || !Object.hasOwn(catalog.sources, source ?? '') || !Array.isArray(entry.compositionOf) || !entry.compositionOf.length
+        || componentIds.some(id => !specs.has(id)) || typeof reason !== 'string' || !reason.trim()
+        || !Object.hasOwn(catalog.sources, source ?? '') || !Array.isArray(entry.compositionOf) || (!coverage && !entry.compositionOf.length)
         || entry.compositionOf.some(id => !catalog.families.has(id))) {
         add('INVALID_EXCEPTION', entry.instanceId, 'La excepción requiere familias del catálogo, composición, motivo y ruta de evidencia del corte.');
       }
     }
   }
-  for (const requirement of brief.componentRequirements ?? brief.component_requirements ?? []) {
+  const mapped = new Set(coverage?.controls.map(entry=>entry.instanceId));
+  if (coverage) for (const entry of declared.values()) {
+    if ((entry.kind === 'ds' || entry.kind === 'local-composition' || entry.exception) && !mapped.has(entry.instanceId)) {
+      add('UNPLANNED_CONTROL', entry.instanceId, 'Incluye este control en el mapa previo del brief.');
+    }
+  }
+  for (const requirement of coverage?.controls ?? brief.componentRequirements ?? brief.component_requirements ?? []) {
     const {instanceId, componentId} = requirement;
     const entry = declared.get(instanceId);
     const expected = requirements.get(instanceId) ?? new Set();
     expected.add(componentId);
     requirements.set(instanceId, expected);
-    if (!catalog.families.has(componentId) || !entry) {
+    if (coverage) {
+      if (!entry) add('UNKNOWN_REQUIREMENT', instanceId, 'El control del mapa carece de instancia implementada.');
+      else if (requirement.coverage === 'COMPATIBLE') {
+        if (entry.kind !== 'ds' || entry.componentId !== componentId || entry.exportName !== requirement.exportName) {
+          add('COMPONENT_SUBSTITUTED', instanceId, `Usa el export compatible ${requirement.exportName} de ${componentId}.`);
+        }
+      } else if (entry.kind !== 'local-composition' || !Array.isArray(entry.compositionOf) || entry.reason !== requirement.reason
+        || (requirement.coverage === 'NO_SPEC' ? entry.exception !== undefined
+          : entry.exception?.componentIds?.length !== 1 || !entry.exception.componentIds.includes(componentId)
+            || entry.exception.reason !== requirement.reason || entry.exception.source !== requirement.evidence.path)) {
+        add('UNVERIFIED_EXCEPTION', instanceId, 'La excepción implementada debe coincidir con el motivo y la evidencia del mapa.');
+      }
+    } else if (!catalog.families.has(componentId) || !entry) {
       add('UNKNOWN_REQUIREMENT', instanceId, `Requisito sin instancia o familia del catálogo: ${componentId}.`);
     } else if (!uses(entry, componentId)) {
       add('COMPONENT_SUBSTITUTED', instanceId, `El brief requiere ${componentId}; se declaró ${entry.componentId}.`);
@@ -78,8 +102,14 @@ function isAncestor(ancestor,node) {
 function semanticFamily(node) {
   const tag = node.tagName;
   const type = own(node, 'type');
+  const role = own(node,'role');
+  if (tag === 'NAV' || own(node,'role') === 'navigation') {
+    const label = (own(node,'aria-label') ?? '').normalize('NFD').replace(/\p{Diacritic}/gu,'').toLowerCase();
+    if (/paginat|paginac/.test(label)) return 'PAGINATION-001';
+    if (/breadcrumb|migas de pan|ruta de navegacion/.test(label)) return 'BREADCRUMB-001';
+  }
   if (tag === 'INPUT') return type === 'hidden' ? undefined : inputTypes[type] ?? 'INPUT-001';
-  return tags[tag?.toLowerCase()] ?? roles[own(node,'role')];
+  return roles[role] ?? tags[tag?.toLowerCase()];
 }
 
 export function inspectComponentMarkup(html, catalog, plan) {
@@ -118,7 +148,7 @@ export function inspectComponentMarkup(html, catalog, plan) {
   };
   const isLibrary = node => node.closest('[data-blueheart]')
     || trusted.has(scope(node)) && firstElement(scope(node)) === node;
-  for (const control of document.querySelectorAll('button,input,textarea,select,table,td,th,[role]')) {
+  for (const control of document.querySelectorAll('button,input,textarea,select,table,td,th,nav,[role]')) {
     const family = semanticFamily(control);
     if (family && (own(control,'data-ds-authored') === 'true' || !isLibrary(control))) reportRole(control, family);
   }
@@ -188,9 +218,9 @@ export function inspectComponentHtml(html, catalog, plan) {
 
 const unique = values => [...new Map(values.map(value => [JSON.stringify(value), value])).values()];
 
-export function auditComponentHtml(html, brief, manifest) {
+export function auditComponentHtml(html, brief, manifest, coverage) {
   const catalog = componentCatalog(manifest);
-  const plan = usagePlan(brief, catalog);
+  const plan = usagePlan(brief, catalog, coverage);
   const markup = inspectComponentHtml(html.toString(), catalog, plan);
   const findings = [...plan.findings, ...markup.findings];
   return {schema_version:1, status:findings.length ? 'FAIL' : 'PASS',
@@ -198,6 +228,16 @@ export function auditComponentHtml(html, brief, manifest) {
     export_count:[...catalog.families.values()].flat().length, catalog_families:Object.fromEntries(catalog.families), findings:unique(findings), observations:unique(markup.observations)};
 }
 
-export function projectComponentAudit(html, brief) {
-  return auditComponentHtml(html, brief, read('references/snapshot-manifest.json'));
+export function projectComponentAudit(html, brief, recordBuild = false) {
+  const coverage = verifyComponentPlan(brief);
+  const source = verifyComponentSourceReceipt(coverage);
+  const report = {...auditComponentHtml(html, brief, read('references/snapshot-manifest.json'), coverage),
+    plan_sha256:source.plan_sha256,source_sha256:sha256(JSON.stringify(source))};
+  const stamp = {html_sha256:report.html_sha256,plan_sha256:report.plan_sha256,source_sha256:report.source_sha256};
+  const path = 'references/component-build.json';
+  if (recordBuild && report.status === 'PASS') writeFileSync(path,JSON.stringify(stamp,null,2)+'\n');
+  if (!recordBuild && JSON.stringify(read(path)) !== JSON.stringify(stamp)) {
+    throw new Error('DS_PLAN: El HTML, el mapa o el código difieren del build aprobado. Ejecuta npm run build y repite captura.');
+  }
+  return report;
 }

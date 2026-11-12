@@ -1,5 +1,9 @@
 # Releases de las skills BlueHeart
 
+## v1.0.2 · 2026-11-12
+
+Parche local del motor PO. El mapa previo de controles y dependencias y el seguimiento exhaustivo por familia quedan ligados al corte GitHub verificado. Cada familia registra uso verificado, no aplicabilidad o excepción sustentada. El build y el traspaso comprueban el uso de exports, documentan la falta de implementación web y registran excepciones con evidencia de la familia. Se conserva `init.mjs` desde el runtime resuelto. La evidencia del cierre y las pruebas se registra en `output/closures/`.
+
 ## v1.0.1 · 2026-11-12
 
 Parche del motor de consumo. `contpaqi-po-prototypes` verifica en build el export de cada instancia DS, detecta sustituciones en el HTML y comprueba Header y Sidebar en Chromium. El traspaso conserva la evidencia ligada al HTML y al snapshot. La regresión usa la entrega original de Genspark y una composición oficial. [QA de consumo](../qa/skills/component-enforcer.v1.0.1.review.md). El motor compañero conserva el corte común del paquete. Comprobantes del cierre e instalación local en `output/closures/`.

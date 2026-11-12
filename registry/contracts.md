@@ -39,3 +39,6 @@ Las guías de [Buttons](../specs/components/buttons.usage.amendment.v1.0.1.md) y
 [Table cell](../specs/components/table-cell.contract.v1.0.0.md) y [Table](../specs/components/table.contract.v1.0.0.md) · DELEGATED_FOR_BUILD con QA documental. Cubre Table, 30 variantes de Cell, Capture y los auxiliares. Table reutiliza Pagination y depende de Avatar a través de Cell.
 
 [Stepper](../specs/components/stepper.contract.v1.0.0.md) · DELEGATED_FOR_BUILD. Conserva dos orientaciones, tres estados, tres posiciones, un conector privado y aliases de los cuatro temas.
+## Logos · LOGOS-001
+
+[Contrato v1.0.0](../specs/components/logos.contract.v1.0.0.md) · DELEGATED_FOR_BUILD · [QA documental PASS](../qa/contracts/logos.v1.0.0.review.md). Alcance Figma en AI Blueheart DS, página Logos. Web NOT_APPLICABLE por la solicitud explícita. Datos vinculados en la spec.

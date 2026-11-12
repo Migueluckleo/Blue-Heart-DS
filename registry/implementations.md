@@ -9,3 +9,7 @@ AI Blueheart DS · tres colecciones locales · `VALIDATED` para variables. [Mapa
 ## Buttons y Loader
 
 Maestro AI Blueheart DS. [Página Buttons](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=22-3) y [página Loader](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=22-2). [IDs Buttons](../implementations/figma/buttons-loader-2026-11-11/buttons.state.json) y [IDs Loader](../implementations/figma/buttons-loader-2026-11-11/loader.state.json). El catálogo local Next.js exporta ambas familias.
+
+## Logos · LOGOS-001
+
+[Logos en AI Blueheart DS](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=170-2) · Figma VALIDATED_WITH_EXCEPTIONS por redondeo subpíxel documentado. Cinco sets y 68 variantes transferidos con copia nativa desde Librería v1.1.0. [Ficha, localizadores y matriz](../implementations/figma/logos-2026-11-12/README.md) · [Lectura final](../implementations/figma/logos-2026-11-12/fidelity.readback.json). Web NOT_APPLICABLE.

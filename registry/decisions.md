@@ -49,3 +49,7 @@ El usuario autorizó enriquecer las guías de Buttons y Loader y continuar por d
 ## DEC-SIDEBAR-SECONDARY-CONTROL-001 · 2026-11-11
 
 El usuario cambió ambos controles de Sidebar en AI Blueheart DS a Icon Button/secondary y extendió explícitamente el cambio a React y al catálogo Next. La raíz fuente conserva Ghost. [Enmienda](../specs/components/sidebar.secondary-control.amendment.v1.0.1.md).
+
+## DEC-LOGOS-FIGMA-SCOPE-001
+
+2026-11-12 · Solicitud explícita del usuario. Los cinco sets de la [selección Logos de Librería v1.1.0](https://www.figma.com/design/9zs5RMR8LB5wHjW9Bd59BA/Libreria-v1.1.0?node-id=40-93) se consumen desde AI Blueheart DS en Figma. Conservan los parámetros fuente y el arte fijo con cero bindings a variables o tokens. Web y el prototipador PO quedan fuera del alcance de esta familia. [Contrato LOGOS-001](../specs/components/logos.contract.v1.0.0.md)
