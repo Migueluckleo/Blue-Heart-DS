@@ -57,7 +57,7 @@ const components=brief.components.map(component=>{
  for(const slot of component.slots){text(slot.name,'slot.name');text(slot.content,'slot.content');if(!['REQUIRED','NOT_APPLICABLE','UNRESOLVED'].includes(slot.status))throw new Error('Estado de Slots no válido.');}
  const tokens=component.tokens.map(name=>{
   const token=knownTokens.get(name);if(!token)throw new Error(`Token desconocido: ${name}`);
-  if(token.collection==='primitive')throw new Error('No aplicar primitivas directamente a componentes.');
+  if(['primitive','primitives'].includes(token.collection))throw new Error('No aplicar primitivas directamente a componentes.');
   source(token.source);return {name,collection:token.collection,css:token.css,source:source(token.source)};
  });
  if(component.kind==='local-content'){
@@ -97,38 +97,11 @@ if(capture.status==='PASS'){
  const actual=capture.states.map(state=>`${state.screen_id}/${state.state_id}/${state.viewport.width}x${state.viewport.height}`);
  if(expected.length!==actual.length||expected.some(key=>!actual.includes(key))||capture.states.some(state=>state.status!=='PASS'))throw new Error('Cobertura de captura incompleta.');
 }
-// Schema1 additions: keep marker identity separate from measured metrics.
-// A known inherited marker does not prove that descendant overrides match it.
-const observedTypeIds=new Set(),unidentifiedText=[];
-let textRunCount=0,legacyCaptureNodes=0;
-for(const state of capture.states)for(const node of state.nodes){
- if(node.typography_style_id)observedTypeIds.add(node.typography_style_id);
- if(!Array.isArray(node.text_runs)){if(node.visible&&node.text?.trim())legacyCaptureNodes++;continue;}
- for(const run of node.text_runs){
-  textRunCount++;
-  if(run.typography_style_id)observedTypeIds.add(run.typography_style_id);
-  else unidentifiedText.push({screen_id:state.screen_id,state_id:state.state_id,viewport:state.viewport,node_id:node.id,text:run.text,kind:run.kind});
- }
-}
-const typography={status:textRunCount?unidentifiedText.length||legacyCaptureNodes?'PARTIAL':'IDENTIFIED':'NOT_RUN',identity_origin:'getComputedStyle().getPropertyValue(--ds-type-style-id); observed, not inferred from font size',metric_validation:'NOT_PERFORMED; compare measured metrics and inherited overrides with the canonical recipe before Figma application',text_run_count:textRunCount,legacy_capture_nodes:legacyCaptureNodes,unidentified_text:unidentifiedText,styles:[]};
-// Normative dependencies remain necessary even when capture is NOT_RUN.
-// Family-specific amendments are already included through component identities.
-const webInputs=read(path.join(snapshot,'config/web-inputs.json'));
-const catalogPath=webInputs.typography_catalog;
-const catalogSource=catalogPath ? source(catalogPath) : null;
-const contractSource=webInputs.typography_contract ? source(webInputs.typography_contract) : null;
-typography.catalog=catalogSource;
-typography.contract=contractSource;
-typography.amendments=(webInputs.typography_amendments ?? []).map(source);
-typography.native_inheritance=null;
-const catalog=catalogPath ? read(path.join(snapshot,catalogPath)) : {styles:[]};
-if(observedTypeIds.size){
- for(const id of [...observedTypeIds].sort()){
-  const style=catalog.styles.find(style=>style.id===id);
-  if(!style)throw new Error(`Identidad tipográfica capturada fuera del catálogo: ${id}`);
-  typography.styles.push({id,name:style.name,category:style.category,source:catalogSource,contract:contractSource,derived_from:style.derivedFrom??null});
- }
-}
+const textRunCount=capture.states.reduce((total,state)=>total+state.nodes.reduce((count,node)=>count+(node.text_runs?.length??0),0),0);
+const typography={source:'COMPONENT_CONTRACTS',status:textRunCount?'OBSERVED':'NOT_RUN',text_run_count:textRunCount};
+const figmaConfig=source('config/figma-links.json');
+const master=read(path.join(snapshot,figmaConfig.path)).master_destination;
+const figmaLibrary={file_key:master.file_key,url:master.url,source:figmaConfig};
 for(const component of components){
  const observed=capture.states.filter(state=>state.status==='PASS'&&state.nodes.some(node=>node.id===component.instanceId&&node.visible));
  const observedStates=[...new Set(observed.map(state=>state.screen_id+'/'+state.state_id))];
@@ -138,7 +111,7 @@ for(const component of components){
  if(unobservedStateProps.length)component.omissions.push('Props por estado sin captura visible PASS: '+unobservedStateProps.join(', '));
 }
 for(const check of brief.checks){text(check.name,'check.name');text(check.evidence,'check.evidence');if(!['PASS','FAIL','BLOCKED','NOT_RUN'].includes(check.status))throw new Error('Estado QA inválido.');}
-const handoff={schema_version:1,producer_skill:release.skill_name,consumer_skill:release.companion_skill,package_version:release.version,ds_digest:release.ds_digest,html_sha256:hash(html),title:brief.title,objective:brief.objective,theme:brief.theme,viewports:brief.viewports,figmaTarget:brief.figmaTarget,sources:[...sourceFiles].sort().map(source),screens:brief.screens,transitions:brief.transitions,components,decisions:brief.decisions,limitations:brief.limitations,checks:brief.checks,typography,capture};
+const handoff={schema_version:1,producer_skill:release.skill_name,consumer_skill:release.companion_skill,package_version:release.version,engine_version:release.engine_version,catalog_url:release.catalog_url,figma_library:figmaLibrary,ds_digest:release.ds_digest,html_sha256:hash(html),title:brief.title,objective:brief.objective,theme:brief.theme,viewports:brief.viewports,figmaTarget:brief.figmaTarget,sources:[...sourceFiles].sort().map(source),screens:brief.screens,transitions:brief.transitions,components,decisions:brief.decisions,limitations:brief.limitations,checks:brief.checks,typography,capture};
 const destination='entrega';
 if(existsSync(destination)&&!existsSync(path.join(destination,'.contpaqi-handoff')))throw new Error('entrega pertenece a otro proceso.');
 // Replace only this generator's marked output; avoid stale screenshots or references.
@@ -158,13 +131,13 @@ for(const screen of brief.screens){
   md+=`**${state.id} · ${state.name}** · nodos: ${state.nodes.join(', ')}.\n\nAcciones reproducibles: ${literal(JSON.stringify(state.actions))}.\n\n`;
   for(const measured of capture.states.filter(item=>item.screen_id===screen.id&&item.state_id===state.id)){
    md+=`Captura ${measured.viewport.width}×${measured.viewport.height}: **${measured.status}** · [imagen real](capturas/${measured.screenshot}).\n\n`;
-   for(const node of measured.nodes.filter(item=>item.visible))md+=`- ${literal(node.id)}: ${literal(JSON.stringify(node.bounding_box))}; fuente ${node.computed_style.fontFamily} ${node.computed_style.fontSize}/${node.computed_style.lineHeight}; estilo tipográfico raíz ${literal(node.typography_style_id??'sin marker')}; roles internos ${literal([...new Set((node.text_runs??[]).map(run=>run.typography_style_id??'sin marker'))].join(', '))}; color ${node.computed_style.color}; fondo ${node.computed_style.backgroundColor}; gap ${node.computed_style.gap}.\n`;
+   for(const node of measured.nodes.filter(item=>item.visible))md+=`- ${literal(node.id)}: ${literal(JSON.stringify(node.bounding_box))}; fuente ${node.computed_style.fontFamily} ${node.computed_style.fontSize}/${node.computed_style.lineHeight}; ${node.text_runs?.length??0} rangos de texto medidos; color ${node.computed_style.color}; fondo ${node.computed_style.backgroundColor}; gap ${node.computed_style.gap}.\n`;
    md+='\n';
   }
  }
 }
 md+='## Componentes y composición\n\n';
-md+=`Identidad tipográfica observada: **${typography.status}**; ${typography.text_run_count} fragmentos visibles, ${typography.unidentified_text.length} sin marker y ${typography.legacy_capture_nodes} nodos de captura anterior sin fragmentos. Los IDs se cotejan con el catálogo; las métricas calculadas se conservan por raíz y fragmento. Un marker heredado no acredita conformidad de métricas si un descendiente las sobrescribe.\n\n`;
+md+=`Tipografía por contrato de componente: **${typography.status}**. La captura registró ${typography.text_run_count} rangos visibles con sus métricas. Biblioteca Figma de referencia: [${master.name}](${master.url}).\n\n`;
 for(const component of components){
  md+=`### ${component.instanceId} · ${component.exportName}\n\n- Identidad: ${component.componentId}; ${component.kind}.\n- Ubicación: ${component.placement}.\n- Props declaradas${component.evidence.status==='PASS'?' y cotejadas con los atributos de evidencia del HTML':' (cotejo '+component.evidence.status+')'}: ${literal(JSON.stringify(component.props))}.\n- Propiedades Figma declaradas: ${literal(JSON.stringify(component.figmaProperties??null))}.\n- Tokens: ${component.tokens.map(token=>literal(token.name)).join(', ')||'Sin tokens adicionales declarados; consultar contrato.'}\n- Slots/composición: ${literal(JSON.stringify(component.slots))}.\n`;
  if(component.identity){md+=`- Contrato: [${component.identity.contract}](referencias/design-system/${component.identity.contract}); versión ${component.identity.version??'no declarada en origen'}.\n- Figma observado: ${literal(JSON.stringify(component.identity.figma))}.\n`;for(const item of component.identity.sources)md+=`- Fuente ${item.path} · SHA-256 ${literal(item.sha256)}.\n`;}

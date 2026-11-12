@@ -15,30 +15,13 @@ fija escrita en las instrucciones.
 `src/components/` y `src/generated/` contienen recetas y geometrías originales.
 `src/styles.css` aplica Tailwind y los tokens configurados del corte.
 `src/generated/tokens.manifest.json` remite a JSON canónico y extensiones.
-Consulta la configuración de tipografía y las referencias de la spec activa para identificar roles y recetas.
-
-Antes de construir, lee `registry/contracts.md` y `registry/implementations.md`.
-El catálogo conserva 79 estilos; la excepción nativa0.1.2 tiene evidencia y QA
-por consumidor. Un reporte `VALIDATION_PENDING` no significa PASS. Los fallos
-históricos no bloquean automáticamente otras familias y el QA web no valida
-Figma; transmite los límites pertinentes de la futura reproducción.
-
-Los tres IDs con `derivedFrom` conservan métricas materializadas: consume su
-clase sin multiplicar por `scaleFactor` ni añadir otra transformación. La receta
-se compara con `recipeScale=1`. La enmienda nativa distingue esa identidad métrica
-del estilo real del principal y `nativeScale` en Figma. No pidas asignar el estilo
-materializado a la instancia nativa ni aceptar un ID vacío sin cadena real y
-pruebas. El handoff debe incluir la enmienda y evidencia del overlay para las
-familias afectadas, conservando el estado observado y futura ejecución NOT_RUN.
-No generalices estos estilos a otros consumidores ni crees más derivados.
+La tipografía de cada componente se conserva desde su contrato, datos delegados e implementación React. Comprueba familia, peso, tamaño, altura de línea, espaciado y decoración cuando apliquen. Documenta como local la decisión tipográfica de un texto propio sin regla aplicable.
 
 No edites el snapshot ni las recetas para decorar una pantalla; usa Tailwind
 para composición local con roles semánticos. No sobrescribas `.ds-*` ni sustituyas
 componentes/íconos/artwork por aproximaciones dibujadas.
 
-Aplica un modo únicamente cuando esté definido por los datos delegados del corte. Respeta cualquier excepción de identidad que esté respaldada por el contrato: tokens directos de la colección fija
-`character-identity`, sin alias semántico ni variación por tema. Es una excepción
-limitada, no permiso para usar primitivas o colores fijos en el resto de la UI.
+Aplica los modos y las excepciones de identidad que estén definidos en el contrato y en sus datos delegados.
 
 Revisa Slots por región: `REQUIRED`, `NOT_APPLICABLE` justificado o `UNRESOLVED`.
 No limites cardinalidad por la cantidad del ejemplo. Registra contenido permitido,

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "payload_sha256": "96b8087a3b18c21e093ef7a2f7f9f7a436bba54def8b180ef019961678e3dc76",
+  "payload_sha256": "ead0697e9c60b632ce7962f8026ee037b564dbcfdec1ffa36cee8534b4af3130",
   "rows": {
     "AGENTS.md": {
       "content_sha256": "02dfaa9de8e04eaf0f778c96ac89ba432713b54a47d60c0de6e154a513643bba",
@@ -2745,7 +2745,7 @@
       "result": null
     },
     "protocols/08-SKILLS-AND-RELEASES.md": {
-      "content_sha256": "2f112b45c9a53b9cfe4c5b24c899914656937621375510ed9eb8ab2124ce65ae",
+      "content_sha256": "dba11e7ff1cac162afb1c3a15912d7c283a03e67f0eec5e661d2855bdf51a33a",
       "parser_sha256": "ffd23461122eae70c83e5f3dd62949417f41d6881b41a2420ddadb597ca1d8bd4b6988b42d298abcfdd4378dbebae3f9e840383caf44dbdf0fd8db3476fb76b0",
       "result": null
     },
@@ -2851,7 +2851,7 @@
       "result": null
     },
     "registry/skills.md": {
-      "content_sha256": "60bfcf0145c789fa64abee215ee289f93dda65345d7836830d1bd0064c3406c7",
+      "content_sha256": "59b3ad12cd19bdf34ed1f3394c2e72d1d8f10060b432dec20c23f6fc401052e1",
       "parser_sha256": "ffd23461122eae70c83e5f3dd62949417f41d6881b41a2420ddadb597ca1d8bd4b6988b42d298abcfdd4378dbebae3f9e840383caf44dbdf0fd8db3476fb76b0",
       "result": null
     },
@@ -2861,19 +2861,19 @@
       "result": null
     },
     "skills/contpaqi-figma-screens/SKILL.md": {
-      "content_sha256": "4246dd9a2650a339c8bcc48d4db4edab492537a3f166a9c837d3034619e6554d",
+      "content_sha256": "da7a6ffe8873acefae13c0e5ab87b11b6abcbb1d263ae938f821965a33cdba97",
       "parser_sha256": "ffd23461122eae70c83e5f3dd62949417f41d6881b41a2420ddadb597ca1d8bd4b6988b42d298abcfdd4378dbebae3f9e840383caf44dbdf0fd8db3476fb76b0",
       "result": {
         "path": "skills/contpaqi-figma-screens/SKILL.md",
         "value": {
           "name": "contpaqi-figma-screens",
-          "description": "Crea o modifica pantallas y flujos editables en Figma desde prompts, imágenes o entregas de contpaqi-po-prototypes, consultando las Specs y tokens BlueHeart del catálogo local. Reutiliza componentes existentes y crea componentes locales del prototipo cuando falte cobertura; no modifica la biblioteca maestra."
+          "description": "Crea o modifica pantallas y flujos editables en Figma desde prompts, imágenes o entregas de contpaqi-po-prototypes, consultando las Specs y tokens BlueHeart del catálogo Blue-Heart-DS en GitHub. Reutiliza componentes existentes y crea componentes locales del prototipo cuando falte cobertura; no modifica la biblioteca maestra."
         },
         "errors": []
       }
     },
     "skills/contpaqi-figma-screens/agents/openai.yaml": {
-      "content_sha256": "dbb3661427f308448c94e91fdc128e40e7e7cb0dd86f60d87ab61899fde83c94",
+      "content_sha256": "3e9388ee0bf3b11640a13e3c1c26a72b19638a94562472e0e8658fdd9b04939b",
       "parser_sha256": "ffd23461122eae70c83e5f3dd62949417f41d6881b41a2420ddadb597ca1d8bd4b6988b42d298abcfdd4378dbebae3f9e840383caf44dbdf0fd8db3476fb76b0",
       "result": {
         "path": "skills/contpaqi-figma-screens/agents/openai.yaml",
@@ -2881,7 +2881,7 @@
           "interface": {
             "display_name": "Pantallas BlueHeart en Figma",
             "short_description": "Crea pantallas editables con el DS BlueHeart",
-            "default_prompt": "Usa $contpaqi-figma-screens para crear estas pantallas editables en Figma consultando el corte local BlueHeart; exige los gates de preflight y readback antes del cierre."
+            "default_prompt": "Usa $contpaqi-figma-screens para crear estas pantallas editables en Figma consultando el catálogo Blue-Heart-DS de GitHub; exige los gates de preflight y readback antes del cierre."
           },
           "policy": {
             "allow_implicit_invocation": true
@@ -2891,22 +2891,22 @@
       }
     },
     "skills/contpaqi-figma-screens/references/design-system.md": {
-      "content_sha256": "359898e7938006154881346264134a8fa7b805d97ef5ecfd4e59aee2bf677937",
+      "content_sha256": "34bb5388df027da0d5259a14272baee093d15869186dcd82d162b4aba2c23297",
       "parser_sha256": "ffd23461122eae70c83e5f3dd62949417f41d6881b41a2420ddadb597ca1d8bd4b6988b42d298abcfdd4378dbebae3f9e840383caf44dbdf0fd8db3476fb76b0",
       "result": null
     },
     "skills/contpaqi-figma-screens/references/figma-usage-gates.md": {
-      "content_sha256": "395c682b0edb5c92166953073ffbf8d51d7cc54efb2b8931d696c053989c2eb1",
+      "content_sha256": "e5f77929c024c33c244eb47fcfab5db027b958be3dd1b54dffb0b396f12da9f2",
       "parser_sha256": "ffd23461122eae70c83e5f3dd62949417f41d6881b41a2420ddadb597ca1d8bd4b6988b42d298abcfdd4378dbebae3f9e840383caf44dbdf0fd8db3476fb76b0",
       "result": null
     },
     "skills/contpaqi-figma-screens/references/figma-workflow.md": {
-      "content_sha256": "e2a11f2a1b01724454e25c312e7104cfb04949028ae138c846d6350ce52f111d",
+      "content_sha256": "fbff2a05ddf530c17d7cc2f232b5252d194169fb942ab1571dfc7d5fa98e100c",
       "parser_sha256": "ffd23461122eae70c83e5f3dd62949417f41d6881b41a2420ddadb597ca1d8bd4b6988b42d298abcfdd4378dbebae3f9e840383caf44dbdf0fd8db3476fb76b0",
       "result": null
     },
     "skills/contpaqi-figma-screens/references/handoff-and-qa.md": {
-      "content_sha256": "74337fdbafc48452de1d23b679ac9e76075edb4c9e0ebdc3ca9c36e38c61256d",
+      "content_sha256": "22f16aa638e2d4f7a0e04efc7376ac401872580d51859bb6caddd26e74ba8005",
       "parser_sha256": "ffd23461122eae70c83e5f3dd62949417f41d6881b41a2420ddadb597ca1d8bd4b6988b42d298abcfdd4378dbebae3f9e840383caf44dbdf0fd8db3476fb76b0",
       "result": null
     },
@@ -2916,12 +2916,12 @@
       "result": null
     },
     "skills/contpaqi-figma-screens/references/remote-source.md": {
-      "content_sha256": "8f7faa91ad5cb5b3ff89d19a6a0054970cf8c7d1d3d32862f79955442b7a4d9a",
+      "content_sha256": "2578db209d5f4b0bf67e36102840e186c7ab2f04a7e97041b340746a8be6c1b6",
       "parser_sha256": "ffd23461122eae70c83e5f3dd62949417f41d6881b41a2420ddadb597ca1d8bd4b6988b42d298abcfdd4378dbebae3f9e840383caf44dbdf0fd8db3476fb76b0",
       "result": null
     },
     "skills/contpaqi-po-prototypes/SKILL.md": {
-      "content_sha256": "ae5c017055dd3a68c6fa71b811d7342628cb690a951c246da9e66efccff4114a",
+      "content_sha256": "c17521e1310dfdf787384abe70035b93dc154aa7247d8b259f9601eedfe40e39",
       "parser_sha256": "ffd23461122eae70c83e5f3dd62949417f41d6881b41a2420ddadb597ca1d8bd4b6988b42d298abcfdd4378dbebae3f9e840383caf44dbdf0fd8db3476fb76b0",
       "result": {
         "path": "skills/contpaqi-po-prototypes/SKILL.md",
@@ -2953,17 +2953,17 @@
       "result": null
     },
     "skills/contpaqi-po-prototypes/references/design-system.md": {
-      "content_sha256": "53673adacb6206b7d02e17050cde605199e4bb2c804d09ad7880f53c1bb0b5d6",
+      "content_sha256": "2c700318db88d0307aba6720c83101d9bfcd135580cc0154160f65f95f388a77",
       "parser_sha256": "ffd23461122eae70c83e5f3dd62949417f41d6881b41a2420ddadb597ca1d8bd4b6988b42d298abcfdd4378dbebae3f9e840383caf44dbdf0fd8db3476fb76b0",
       "result": null
     },
     "skills/contpaqi-po-prototypes/references/handoff.md": {
-      "content_sha256": "e7a25a4c761040383b1e510dc02bfbd2fa57e64aac500a4cbb7b16e2e3b06972",
+      "content_sha256": "a52a969564a0fa34e6d10277a8ca5f204dae6455facd02410e62321da9a2cad8",
       "parser_sha256": "ffd23461122eae70c83e5f3dd62949417f41d6881b41a2420ddadb597ca1d8bd4b6988b42d298abcfdd4378dbebae3f9e840383caf44dbdf0fd8db3476fb76b0",
       "result": null
     },
     "skills/contpaqi-po-prototypes/references/remote-source.md": {
-      "content_sha256": "8f7faa91ad5cb5b3ff89d19a6a0054970cf8c7d1d3d32862f79955442b7a4d9a",
+      "content_sha256": "2578db209d5f4b0bf67e36102840e186c7ab2f04a7e97041b340746a8be6c1b6",
       "parser_sha256": "ffd23461122eae70c83e5f3dd62949417f41d6881b41a2420ddadb597ca1d8bd4b6988b42d298abcfdd4378dbebae3f9e840383caf44dbdf0fd8db3476fb76b0",
       "result": null
     },

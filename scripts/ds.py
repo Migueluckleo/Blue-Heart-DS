@@ -33,6 +33,7 @@ def main():
     skills.add_argument("--json", action="store_true")
     closing = subs.add_parser('close', help='Cierre local coordinado, incremental y medido; reanudable.')
     closing.add_argument('--run', required=True)
+    closing.add_argument('--bump', choices=['patch', 'minor', 'major'], default='patch', help='Incremento del motor si cambia el paquete.')
     closing.add_argument('--install', action='store_true', help='Actualizar las copias locales gestionadas autorizadas.')
     closing.add_argument('--usage-start', type=Path)
     closing.add_argument('--usage-end', type=Path)

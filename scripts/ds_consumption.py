@@ -46,6 +46,30 @@ def location(value):
     return 'L'+str(value) if type(value) is int and value > 0 else value if isinstance(value,str) else ''
 
 
+def declared_dependency_targets(texts, metadata, components):
+    """Resolve only contract IDs explicitly declared in root YAML metadata."""
+    targets = {c['id']: c['contract'] for c in components}
+    for path, row in metadata.items():
+        meta = row.get('value') or {}
+        if path.startswith('specs/foundations/') and meta.get('contract_id'):
+            targets[meta['contract_id']] = path
+    references = {}
+    for path, row in metadata.items():
+        dependencies = (row.get('value') or {}).get('dependencies', [])
+        if not dependencies:
+            continue
+        match = re.search(r'^dependencies\s*:', texts[path], re.M)
+        if not isinstance(dependencies, list) or match is None:
+            raise ValueError('Invalid contract dependencies: ' + path)
+        line = texts[path].count('\n', 0, match.start()) + 1
+        for dependency in dependencies:
+            target = targets.get(dependency)
+            if target not in texts:
+                raise ValueError(f'Unresolved declared dependency {dependency} in {path}')
+            references.setdefault(path, set()).add((line, target))
+    return references
+
+
 def project(root, state, graph, commit):
     """Project only independently verifiable, public fields; no free graph text escapes."""
     root = Path(root)
@@ -89,7 +113,8 @@ def project(root, state, graph, commit):
     for doc in documents.values():
         doc['sections'].sort(key=lambda s:(s['line'],s['kind']))
     refs = {p:reference_targets(root,p,texts[p]) for p in documents if p.endswith('.md')}
-    relationships = set()
+    declared = declared_dependency_targets(texts, metadata, state['components'])
+    relationships = {(path, target, line) for path, refs_for_path in declared.items() for line, target in refs_for_path}
     for edge in edges:
         a,b = nodes[edge['source']],nodes[edge['target']]
         pa,pb = a.get('source_file'),b.get('source_file')
@@ -133,6 +158,8 @@ def validate_sources(root,state,index):
         if digest(safe(root,path).read_bytes()) != node['sha256']:
             raise ValueError('Source differs from preparation')
     metadata = yaml_documents(sorted(index['documents']),root)
+    texts = {path: safe(root,path).read_text() for path in metadata}
+    declared = declared_dependency_targets(texts, metadata, state['components'])
     for path,node in index['documents'].items():
         meta = metadata.get(path,{}).get('value',{}) or {}
         version = meta.get('version')
@@ -159,9 +186,13 @@ def validate_sources(root,state,index):
     refs = {}
     for edge in index['relations']:
         p = edge['source']
-        if p not in refs: refs[p] = reference_targets(root,p,safe(root,p).read_text())
+        if p not in refs:
+            refs[p] = reference_targets(root,p,safe(root,p).read_text()) | declared.get(p, set())
         if (edge['line'],edge['target']) not in refs[p]:
             raise ValueError('Unverifiable public relationship')
+    actual = {(edge['source'], edge['line'], edge['target']) for edge in index['relations']}
+    if any((path, line, target) not in actual for path, values in declared.items() for line, target in values):
+        raise ValueError('Declared dependency missing from consumption graph')
     return index
 
 

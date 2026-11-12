@@ -89,9 +89,10 @@ def close(args):
                 missing = [f'chunk-{i:02d}.json' for i in range(len(plan['chunks']))
                            if not (run / f'chunk-{i:02d}.json').exists()]
                 if missing:
+                    bump_option = '' if args.bump == 'patch' else ' --bump ' + args.bump
                     report.update(status='WAITING_FOR_SEMANTICS' if graph['status'] == 'PREPARED_SHARED'
                                   else 'NEEDS_SEMANTICS', graph_run=run.name, missing=missing,
-                                  next_command='scripts/ds close --run ' + args.run)
+                                  next_command='scripts/ds close --run ' + args.run + bump_option)
                     return report
                 step('graph', lambda: ds_graph.close(config, run.name))
             import ds_consumption, ds_remote, ds_skills
@@ -109,7 +110,7 @@ def close(args):
                 return ds_remote.build(ROOT)
             step('catalog', catalog)
             # sync already exports immutable ZIPs; a second export repeats sync.
-            step('skills_sync_export', lambda: ds_skills.sync(ROOT))
+            step('skills_sync_export', lambda: ds_skills.sync(ROOT, bump=args.bump))
             step('skills_integrity', lambda: ds_skills.check(ROOT))
             if args.install:
                 step('installation', lambda: ds_skills.install(ROOT))

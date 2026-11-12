@@ -75,7 +75,7 @@ try {
                 const rect=root.getBoundingClientRect();
                 const css=getComputedStyle(root);
                 const visible=rect.width>0&&rect.height>0&&css.visibility!=='hidden'&&!root.closest('[hidden]');
-                return {id:element.getAttribute('data-ds-node'),parent_id:element.parentElement?.closest('[data-ds-node]')?.getAttribute('data-ds-node')??null,order,component:element.getAttribute('data-ds-component'),declared_props:JSON.parse(element.getAttribute('data-ds-props')??'{}'),tag:root.tagName,text:visible?(root.innerText??root.textContent):'',bounding_box:{x:rect.x,y:rect.y,width:rect.width,height:rect.height},visible,computed_style:Object.fromEntries(styleKeys.map(key=>[key,css[key]])),typography_style_id:css.getPropertyValue('--ds-type-style-id').trim()||null,text_runs:[],tokens:Object.fromEntries([...css].filter(key=>key.startsWith('--ds-')&&key!=='--ds-type-style-id').map(key=>[key,css.getPropertyValue(key).trim()]))};
+                return {id:element.getAttribute('data-ds-node'),parent_id:element.parentElement?.closest('[data-ds-node]')?.getAttribute('data-ds-node')??null,order,component:element.getAttribute('data-ds-component'),declared_props:JSON.parse(element.getAttribute('data-ds-props')??'{}'),tag:root.tagName,text:visible?(root.innerText??root.textContent):'',bounding_box:{x:rect.x,y:rect.y,width:rect.width,height:rect.height},visible,computed_style:Object.fromEntries(styleKeys.map(key=>[key,css[key]])),text_runs:[],tokens:Object.fromEntries([...css].filter(key=>key.startsWith('--ds-')&&key!=='--ds-type-style-id').map(key=>[key,css.getPropertyValue(key).trim()]))};
               });
               const unmapped_text=[];
               const nodeById=new Map(nodes.map(node=>[node.id,node]));
@@ -88,7 +88,7 @@ try {
                   // Read the actual text parent: a component root can contain
                   // several subroles, and a descendant may override inherited metrics.
                   const css=getComputedStyle(parent);
-                  owner.text_runs.push({text,kind,tag:parent.tagName,typography_style_id:css.getPropertyValue('--ds-type-style-id').trim()||null,computed_style:Object.fromEntries(typeKeys.map(key=>[key,css[key]])),bounding_boxes:rects.map(rect=>({x:rect.x,y:rect.y,width:rect.width,height:rect.height}))});
+                  owner.text_runs.push({text,kind,tag:parent.tagName,computed_style:Object.fromEntries(typeKeys.map(key=>[key,css[key]])),bounding_boxes:rects.map(rect=>({x:rect.x,y:rect.y,width:rect.width,height:rect.height}))});
                 }
               };
               const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);

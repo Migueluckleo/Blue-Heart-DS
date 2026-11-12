@@ -1,3 +1,3 @@
-# Fuente de consumo local
+# Fuente de consumo BlueHeart en GitHub
 
-Usa `python3 scripts/resolve_ds.py --catalog RAIZ_BLUEHEART --output NUEVA_CARPETA`. El resolver verifica puntero, hashes y catálogo. El canal remoto queda pendiente.
+Ejecuta `python3 scripts/resolve_ds.py --output NUEVA_CARPETA` desde la skill instalada. El catálogo proviene de [Blue-Heart-DS](https://github.com/Migueluckleo/Blue-Heart-DS) en `main`. El cargador verifica los hashes del corte y la identidad del maestro Figma. Reutiliza el runtime durante el encargo y consulta el puntero de nuevo al comenzar otro trabajo.

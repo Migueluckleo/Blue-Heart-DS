@@ -178,7 +178,7 @@ def source_inputs(root=ROOT):
                 raise ValueError("Generated snapshot in template: " + rel)
             entries[rel] = digest(path.read_bytes())
         templates[name] = dict(sorted(entries.items()))
-    tool_files = ["schemas/consumption-query.v1.schema.json", "scripts/consumer_graph.py", "scripts/ds_skills.py", "scripts/ds_core.py", "scripts/ds_yaml.rb", "config/ds-skills.json", "config/ds-project.json"]
+    tool_files = ["schemas/consumption-query.v1.schema.json", "scripts/consumer_graph.py", "scripts/resolve_ds.py", "scripts/ds_skills.py", "scripts/ds_core.py", "scripts/ds_yaml.rb", "config/ds-skills.json", "config/ds-project.json"]
     fingerprint = {"files": files, "templates": templates, "components": components, "excluded_links": omissions,
                    "tooling": {p: digest(safe(root, p).read_bytes()) for p in tool_files}}
     return {"root": root, "config": config, "files": files, "templates": templates,
@@ -188,11 +188,19 @@ def source_inputs(root=ROOT):
 
 def inputs(root=ROOT):
     state = source_inputs(root)
-    if state["config"].get("delivery") == "local-catalog-v1":
+    if state["config"].get("delivery") == "github-live-v1":
         # The installed engine changes only with its own instructions/tooling.
         # DS content has an independent catalog identity in catalog/current.json.
-        fingerprint = {"templates": state["templates"], "tooling": state["fingerprint"]["tooling"]}
-        state.update(files={}, components=[], excluded_links=[], ds_digest="LOCAL_CATALOG",
+        figma = read_json(safe(state["root"], "config/figma-links.json"))
+        master_key = figma["master_destination"]["file_key"]
+        if not re.fullmatch(r"[A-Za-z0-9]+", master_key) or master_key == figma["root_source"]["file_key"]:
+            raise ValueError("Invalid BlueHeart master file key")
+        channel = state["config"]["channel"]
+        if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", channel["repository"]) or not re.fullmatch(r"[A-Za-z0-9_-]+", channel["branch"]):
+            raise ValueError("Invalid GitHub catalog channel")
+        fingerprint = {"templates": state["templates"], "tooling": state["fingerprint"]["tooling"],
+                       "figma_library_file_key": master_key}
+        state.update(files={}, components=[], excluded_links=[], ds_digest="REMOTE",
                      fingerprint=fingerprint, input_digest=digest(compact(fingerprint)))
     return state
 
@@ -200,12 +208,14 @@ def inputs(root=ROOT):
 def package_files(state, version, name):
     root = state["root"]
     result = {p: safe(root, "skills/" + name + "/" + p) for p in state["templates"][name]}
-    if state["config"].get("delivery") == "local-catalog-v1":
+    if state["config"].get("delivery") == "github-live-v1":
+        result["scripts/resolve_ds.py"] = safe(root, "scripts/resolve_ds.py")
         result["scripts/consumer_graph.py"] = safe(root, "scripts/consumer_graph.py")
         result["references/consumption-query.v1.schema.json"] = safe(root, "schemas/consumption-query.v1.schema.json")
         result["assets/engine.json"] = encoded({"engine_protocol": 1, "version": version,
             "skill_name": name, "companion_skill": next(n for n in state["config"]["skills"] if n != name),
-            "delivery": state["config"]["delivery"]})
+            "delivery": state["config"]["delivery"], **state["config"]["channel"],
+            "figma_library_file_key": state["fingerprint"]["figma_library_file_key"]})
         return dict(sorted(result.items()))
     result.update({"assets/design-system/" + p: safe(root, p) for p in state["files"]})
     manifest = {"schema_version": 1, "package_version": version, "ds_digest": state["ds_digest"],
@@ -310,11 +320,11 @@ def check(root=ROOT, state=None):
         errors = inspect_tree(safe(state["root"], state["config"]["output"] + "/" + version), expected)
         if current != pointer(manifest):
             errors.append("current.json does not match release manifest")
-        if state["config"].get("delivery") == "local-catalog-v1":
+        if state["config"].get("delivery") == "github-live-v1":
             from ds_remote import check_catalog
             catalog = check_catalog(state["root"])
             if catalog["status"] != "CURRENT":
-                errors.extend(catalog.get("errors", ["Local catalog is stale"]))
+                errors.extend(catalog.get("errors", ["GitHub catalog source is stale"]))
         return {"status": "STALE" if errors else "CURRENT", "version": version,
                 "ds_digest": state["ds_digest"], "components": len(state["components"]), "errors": errors,
                 "scope": "Package integrity and source freshness; no design approval or live Figma/web QA"}

@@ -20,7 +20,9 @@ const styleCache = new Map();
 async function textStyles(n) {
   const texts=n.type==='TEXT'?[n]:('findAllWithCriteria'in n?n.findAllWithCriteria({types:['TEXT']}):[]);
   const keys=new Set();let unstyled=0;const text_runs=[];
-  for(const t of texts){const indices=[];let part=t;while(part.id!==n.id){const parent=part.parent;if(!parent||!('children'in parent))throw new Error('Text outside inspected subtree');indices.unshift(parent.children.findIndex(c=>c.id===part.id));part=parent;}const entry={path:indices.join('/'),style_keys:[]};text_runs.push(entry);for(const run of t.getStyledTextSegments(['textStyleId'])){
+  for(const t of texts){const indices=[];let part=t;while(part.id!==n.id){const parent=part.parent;if(!parent||!('children'in parent))throw new Error('Text outside inspected subtree');indices.unshift(parent.children.findIndex(c=>c.id===part.id));part=parent;}const entry={path:indices.join('/'),style_keys:[],font_metrics:[]};text_runs.push(entry);for(const run of t.getStyledTextSegments(['textStyleId','fontName','fontSize','lineHeight','letterSpacing','textDecoration'])){
+    const {fontName,fontSize,lineHeight,letterSpacing,textDecoration}=run;
+    entry.font_metrics.push({fontName,fontSize,lineHeight,letterSpacing,textDecoration});
     if(!run.textStyleId){unstyled++;entry.style_keys.push(null);continue;}
     if(!styleCache.has(run.textStyleId)){const style=await figma.getStyleByIdAsync(run.textStyleId);styleCache.set(run.textStyleId,style?style.key:null);}
     const key=styleCache.get(run.textStyleId);entry.style_keys.push(key);if(key)keys.add(key);else unstyled++;

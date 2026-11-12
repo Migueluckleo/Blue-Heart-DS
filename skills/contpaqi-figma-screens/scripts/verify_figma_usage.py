@@ -62,16 +62,30 @@ def issue(out, code, message, use=None, node=None):
     out['findings'].append({'code': code, 'usage_id': use, 'node_id': node, 'message': message})
 
 
-def preflight(runtime, plan, base):
-    config = read(runtime / 'assets/design-system/config/figma-links.json')
+def file_roles(reader, plan):
+    path = 'config/figma-links.json'
+    raw = safe(reader.snapshot, path).read_bytes()
+    need(sha(raw) == reader.manifest['files'][path], 'Figma roles differ from the verified catalog')
+    config = parse(raw)
     master = (config.get('master_destination') or {}).get('file_key')
-    sandbox = (config.get('consumption_sandbox') or {}).get('file_key')
-    need(master and sandbox and master != sandbox, 'Confirmed master and consumption sandbox required')
+    source = (config.get('root_source') or {}).get('file_key')
+    destination = plan.get('destination_file_key')
+    need(master and source and master != source, 'Distinct BlueHeart source and master required')
+    need(isinstance(destination, str) and re.fullmatch(r'[A-Za-z0-9]+', destination)
+         and destination not in {master, source}, 'Use a prototype file separate from the BlueHeart master and root')
+    configured = (config.get('consumption_sandbox') or {}).get('file_key')
+    if destination != configured:
+        url = plan.get('destination_url', '')
+        match = re.fullmatch(r'https://(?:www\.)?figma\.com/design/([A-Za-z0-9]+)(?:/branch/([A-Za-z0-9]+))?(?:[/?#].*)?', url)
+        need(match and (match[2] or match[1]) == destination, 'Include the authorized Figma prototype URL matching the destination key')
+    return master, destination
+
+
+def preflight(runtime, plan, base):
     reader = Reader(runtime)  # Verifies pinned remote manifest/receipt, even without optional graph.
     need(plan.get('schema_version') == SCHEMA, 'Unsupported plan schema')
-    need(plan.get('snapshot') == reader.identity, 'Plan snapshot differs from verified local snapshot')
-    destination = plan.get('destination_file_key')
-    need(isinstance(destination, str) and destination and destination == sandbox, 'Prototype destination required; master is read-only')
+    need(plan.get('snapshot') == reader.identity, 'Plan snapshot differs from verified catalog')
+    master, destination = file_roles(reader, plan)
     screens = plan.get('screens')
     need(isinstance(screens, list) and screens and all(isinstance(s, str) and s for s in screens)
          and len(screens) == len(set(screens)), 'Unique logical screens required')
@@ -96,7 +110,8 @@ def preflight(runtime, plan, base):
                 need(isinstance(node.get(field), list) and all(isinstance(v, str) for v in node[field]), 'Missing source ' + field)
             for run in rows(node.get('text_runs'), 'source text ranges'):
                 need(isinstance(run.get('path'), str) and isinstance(run.get('style_keys'), list)
-                     and all(k is None or isinstance(k, str) for k in run['style_keys']), 'Malformed source text ranges')
+                     and all(k is None or isinstance(k, str) for k in run['style_keys'])
+                     and isinstance(run.get('font_metrics'), list), 'Malformed source text ranges')
             need(len({r['path'] for r in node['text_runs']}) == len(node['text_runs']), 'Duplicate source text path')
             source_nodes[node_id] = node
     out = {'schema_version': SCHEMA, 'stage': 'preflight', 'status': 'BLOCKED', 'findings': [],
@@ -244,21 +259,29 @@ def verify(runtime, plan, base, receipt, readbacks):
             need(isinstance(actual_runs, list), 'Missing target text ranges')
             by_path = {}
             for run in rows(actual_runs, 'target text ranges'):
-                need(isinstance(run.get('path'), str) and run['path'] not in by_path and isinstance(run.get('style_keys'), list), 'Ambiguous target text ranges')
-                by_path[run['path']] = run['style_keys']
+                need(isinstance(run.get('path'), str) and run['path'] not in by_path
+                     and isinstance(run.get('style_keys'), list) and isinstance(run.get('font_metrics'), list), 'Ambiguous target text ranges')
+                by_path[run['path']] = run
             for run in expected_runs:
-                actual = by_path.get(run['path'])
+                target_run = by_path.get(run['path'], {})
+                actual = target_run.get('style_keys')
                 expected = run['style_keys']
                 if actual is None or not set(k for k in expected if k) <= set(actual) or actual.count(None) > expected.count(None):
                     issue(out, 'TEXT_RANGE_STYLE_LOST', run['path'], use_id, node_id)
+                if run['font_metrics'] and {canonical(metrics) for metrics in run['font_metrics']} != {
+                    canonical(metrics) for metrics in target_run.get('font_metrics', [])
+                }:
+                    issue(out, 'TEXT_RANGE_METRICS_CHANGED', run['path'], use_id, node_id)
             for key, val in use.get('variant_properties', {}).items():
                 if node.get('variant_properties', {}).get(key) != val:
                     issue(out, 'VARIANT_MISMATCH', key, use_id, node_id)
         elif use['kind'] == 'local-content':
             if node.get('type') not in {'TEXT', 'VECTOR', 'RECTANGLE', 'ELLIPSE'}:
                 issue(out, 'INVALID_LOCAL_CONTENT', 'Content cannot hide a control/container', use_id, node_id)
-            if node.get('type') == 'TEXT' and (not node.get('text_style_keys') or node.get('unstyled_text_runs', 0)):
-                issue(out, 'LOCAL_TEXT_STYLE_MISSING', 'Every local text range needs a shared style', use_id, node_id)
+            if node.get('type') == 'TEXT':
+                runs = rows(node.get('text_runs'), 'local text ranges')
+                if not runs or any(not run.get('font_metrics') for run in runs):
+                    issue(out, 'LOCAL_TEXT_METRICS_MISSING', 'Read font metrics for editable local text', use_id, node_id)
         elif use['kind'] == 'local-composition':
             if node.get('layout_mode') not in {'HORIZONTAL', 'VERTICAL', 'GRID'}:
                 issue(out, 'LOCAL_LAYOUT_MISSING', 'Structural composition requires Auto Layout', use_id, node_id)
@@ -285,13 +308,10 @@ def main():
         if args.stage == 'collect':
             need(args.request is not None, 'Collector request required')
             request = read(args.request)
-            config = read(args.runtime / 'assets/design-system/config/figma-links.json')
-            master = (config.get('master_destination') or {}).get('file_key')
-            sandbox = (config.get('consumption_sandbox') or {}).get('file_key')
-            need(master and sandbox and master != sandbox, 'Confirmed master and consumption sandbox required')
+            reader = Reader(args.runtime)
+            master, sandbox = file_roles(reader, plan)
             request['master_file_key'] = master
             need(request.get('file_key') == (master if request.get('kind') == 'source' else sandbox), 'Request does not match configured file role')
-            Reader(args.runtime)
             request['plan_sha256'] = sha(canonical(plan))
             request['official_component_keys'] = [u['component_key'] for u in plan.get('uses', []) if u.get('kind') == 'ds-instance' and isinstance(u.get('component_key'), str)]
             manifest = read(args.runtime / 'assets/snapshot-manifest.json')

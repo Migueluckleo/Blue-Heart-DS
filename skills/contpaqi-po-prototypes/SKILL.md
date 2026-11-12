@@ -12,17 +12,15 @@ Figma: invoca **`$contpaqi-figma-screens`** en la futura sesión del diseñador.
 
 El motor instalado y el contenido del DS tienen versiones independientes. Los contratos conservan su autoridad y sus estados; descargarlos no aprueba documentos ni valida implementaciones.
 
-## Resolver el catálogo local antes de cada trabajo
+## Resolver BlueHeart antes de cada trabajo
 
-Resuelve primero el corte con `python3 scripts/resolve_ds.py --catalog RAIZ_BLUEHEART --output NUEVA_CARPETA`.
-
-El resultado debe ser `PASS`. Desde ese momento, **todas las rutas de scripts, referencias, assets y snapshot de esta guía se resuelven respecto de la carpeta de ejecución devuelta**, no de la instalación. No vuelvas a ejecutar el cargador desde esa carpeta durante el mismo trabajo. La carpeta contiene una copia temporal verificada del corte local, fijado para evitar mezclar versiones; el siguiente trabajo vuelve a resolver el corte local. Registra digest, identidad del catálogo y versión del motor. Lee solo los contratos necesarios, aunque el paquete incluya el corpus completo.
-
-Si falta Python o el catálogo local no resuelve, registra el bloqueo y su comprobante.
+Desde el motor instalado, ejecuta `python3 scripts/resolve_ds.py --output NUEVA_CARPETA`. El cargador consulta `Migueluckleo/Blue-Heart-DS` en GitHub, verifica el manifiesto y fija su corte durante el encargo. Usa los scripts y referencias desde la carpeta de ejecución devuelta en `PASS`. Registra la URL del catálogo, el digest, el manifiesto y la versión del motor. Si falla la consulta, revisa el comprobante y la [fuente remota](references/remote-source.md).
 
 ## Consultas dirigidas al índice de consumo
 
 Después de resolver el snapshot, ejecuta `python3 scripts/consumer_graph.py --component ID_CANONICO --intent component` desde la carpeta de ejecución, sustituyendo el ID por la identidad canónica necesaria. El adaptador compartido valida el índice del mismo manifiesto y devuelve referencias, enmiendas, documentos y métricas. Usa `--intent dependencies`, `evidence`, `variants`, `states` o `tokens`; para un token concreto agrega `--token <nombre-exacto-o-id>`.
+
+Para una composición, consulta `--intent dependencies` por familia anfitriona. Por ejemplo, `APP-SHELL-001` recupera Header, Sidebar, su enmienda y Section Header. Abre los contratos de las familias que realmente utilices y sus dependencias declaradas.
 
 `PASS` con `mode: graph` acredita navegación dirigida, no aprobación de diseño. `FALLBACK` incluye motivo y cobertura limitada a contrato y enmiendas del snapshot validado: completa dependencias por lectura selectiva de las referencias originales antes de construir. `BLOCKED` no permite usar un contexto parcial; resuelve conflicto, integridad, cobertura o límite indicado. No descargues `graphify-out/graph.json` ni reindexes el repositorio. Lee las fuentes recuperadas para verificar reglas; el índice no decide precedencia normativa.
 
@@ -30,10 +28,7 @@ Después de resolver el snapshot, ejecuta `python3 scripts/consumer_graph.py --c
    decisiones materiales faltantes. En ausencia de indicación registra el viewport provisional y omite el modo si no está definido en el corte. Emplea datos ficticios y memoria.
 2. Lee [consumo del DS](references/design-system.md) y contratos/enmiendas de las
    familias utilizadas. Usa sus componentes, CSS, artwork y tokens incluidos.
-   Incluye la enmienda tipográfica de cada familia y el catálogo activo para
-   resolver estilo, rol, variante y decoración sin inventar recetas locales.
-   Conserva la diferencia entre receta materializada web y vínculo nativo Figma;
-   incluye la enmienda de herencia y su evidencia cuando el componente la consuma.
+   Conserva la tipografía que define cada componente en su contrato y datos delegados. Registra las métricas del texto visible en el traspaso.
    Para algo no cubierto, compón componentes existentes y documenta la decisión
    local; no la declares variante o componente oficial ni inventes una aprobación.
 3. Lee [build y QA offline](references/build.md). Ejecuta

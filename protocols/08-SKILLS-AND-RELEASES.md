@@ -54,17 +54,17 @@ Si cambia el starter o empaquetador web, probar build, apertura del HTML movido 
 
 Los paquetes e informes son outputs del cierre; las reglas de diseño siguen en sus fuentes canónicas. Una pantalla producida con cualquiera de las skills conserva su propia procedencia y QA.
 
-## 6. Catálogo local y motor independiente
+## 6. Catálogo GitHub y motor independiente
 
-Cada skill resuelve un corte verificado mediante `scripts/resolve_ds.py --catalog RAIZ --output NUEVA_CARPETA`. El puntero local, su manifiesto, el paquete de datos y el índice de consumo comparten procedencia por hashes. Un cambio compatible del catálogo conserva el protocolo del motor. El canal remoto queda pendiente y requiere una decisión y comprobaciones explícitas.
+Cada motor v1.0 resuelve un corte con `scripts/resolve_ds.py --output NUEVA_CARPETA`. El canal autorizado usa `catalog/current.json` de `Migueluckleo/Blue-Heart-DS` en `main`. El puntero, manifiesto, paquete de datos e índice de consumo se verifican por hash. Ambos motores verifican la clave del maestro Figma del corte. Un cambio de datos compatible conserva la versión del motor.
 
 ## Índice de consumo Graph-First · 2026-10-23
 
-El índice reducido se prepara localmente después del cierre P05 CURRENT mediante `scripts/ds_consumption.py --prepare`, usando el intérprete configurado para Graphify. `scripts/ds_consumption.py` sin argumentos valida la preparación sin ejecutar extracción. Luego `scripts/ds_remote.py` ensambla catálogo e índice como una unidad y `--check` verifica su vigencia. GitHub Actions ejecuta únicamente pruebas, validación y publicación; no crea conocimiento semántico ni repara un índice STALE. Si falta preparación o difieren fuentes/herramientas, conserva el puntero anterior.
+El cierre local prepara el índice reducido desde Graphify CURRENT y ensambla el catálogo y su índice como una unidad. Antes de publicar, valida el resultado con `scripts/ds_consumption.py --publication-check` y `scripts/ds_remote.py --check`. Publica fuentes, puntero y objetos por hash en el mismo commit autorizado. Si falta preparación o difieren fuentes o herramientas, conserva el puntero anterior.
 
-Una sola fuente `scripts/consumer_graph.py` se distribuye por el empaquetador en ambos motores. La versión del índice es independiente del protocolo compatible del catálogo. El grafo sigue siendo derivado; cada resultado remite al snapshot y documentos originales. Fallback registrado sobre fuentes verificadas; conflictos y límites nunca producen éxito parcial. Los comprobantes preparados viven en `catalog/prepared/`, excluidos del corpus Graphify como los demás derivados del catálogo.
+Los dos motores comparten `scripts/resolve_ds.py` y `scripts/consumer_graph.py`. El índice incluye las referencias verificadas de Graphify y las dependencias declaradas por ID en los contratos. La consulta de dependencias agrega las enmiendas de las familias directamente relacionadas. Cada resultado remite al corte y a los documentos originales. Los comprobantes preparados viven en `catalog/prepared/`.
 
-El workflow usa `scripts/ds_consumption.py --publication-check`: una `publication_policy` explícita que comience por `HOLD` bloquea la publicación remota aunque el corte local sea íntegro. Esta comprobación no concede revisión humana ni cambia la política del documento. Preparar datos locales y autorizar publicación remota son estados separados.
+Una `publication_policy` explícita que comience por `HOLD` bloquea la publicación remota aunque el corte local sea íntegro. La autorización del canal BlueHeart consta en [decisiones](../registry/decisions.md).
 
 ## Cierre coordinado e incremental · 2026-10-23
 

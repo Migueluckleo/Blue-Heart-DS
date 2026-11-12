@@ -1,23 +1,21 @@
 ---
 name: contpaqi-figma-screens
-description: Crea o modifica pantallas y flujos editables en Figma desde prompts, imágenes o entregas de contpaqi-po-prototypes, consultando las Specs y tokens BlueHeart del catálogo local. Reutiliza componentes existentes y crea componentes locales del prototipo cuando falte cobertura; no modifica la biblioteca maestra.
+description: Crea o modifica pantallas y flujos editables en Figma desde prompts, imágenes o entregas de contpaqi-po-prototypes, consultando las Specs y tokens BlueHeart del catálogo Blue-Heart-DS en GitHub. Reutiliza componentes existentes y crea componentes locales del prototipo cuando falte cobertura; no modifica la biblioteca maestra.
 ---
 
 # Pantallas BlueHeart en Figma
 
-Construye el prototipo solicitado con componentes, textos, propiedades y estructura editables. El motor instalado consulta el corte local verificado; no incluye una copia fija de los specs. El prompt define el producto y las imágenes aportan referencias de composición. Ninguno reemplaza las reglas del DS ni convierte una decisión del prototipo en norma compartida.
+Construye el prototipo solicitado con componentes, textos, propiedades y estructura editables. El motor instalado consulta el catálogo Blue-Heart-DS en GitHub; no incluye una copia fija de los specs. El prompt define el producto y las imágenes aportan referencias de composición. Ninguno reemplaza las reglas del DS ni convierte una decisión del prototipo en norma compartida.
 
-## Resolver el catálogo local antes de cada trabajo
+## Resolver BlueHeart antes de cada trabajo
 
-Resuelve primero el corte con `python3 scripts/resolve_ds.py --catalog RAIZ_BLUEHEART --output NUEVA_CARPETA`.
-
-El resultado debe ser `PASS`. Desde ese momento, **todas las rutas de scripts, referencias, assets y snapshot de esta guía se resuelven respecto de la carpeta de ejecución devuelta**, no de la instalación. No vuelvas a ejecutar el cargador desde esa carpeta durante el mismo trabajo. La carpeta contiene una copia temporal verificada del corte local, fijado para evitar mezclar versiones; el siguiente trabajo vuelve a resolver el corte local. Registra digest, identidad del catálogo y versión del motor. Lee solo los contratos necesarios, aunque el paquete incluya el corpus completo.
-
-Si falta Python o el catálogo local no resuelve, registra el bloqueo y su comprobante.
+Desde el motor instalado, ejecuta `python3 scripts/resolve_ds.py --output NUEVA_CARPETA`. El cargador consulta `Migueluckleo/Blue-Heart-DS` en GitHub, verifica el manifiesto y fija su corte durante el encargo. Usa los scripts y referencias desde la carpeta de ejecución devuelta en `PASS`. Registra la URL del catálogo, el digest, el manifiesto y la versión del motor. Si falla la consulta, revisa el comprobante y la [fuente remota](references/remote-source.md).
 
 ## Consultas dirigidas al índice de consumo
 
 Después de resolver el snapshot, ejecuta `python3 scripts/consumer_graph.py --component ID_CANONICO --intent component` desde la carpeta de ejecución, sustituyendo el ID por la identidad canónica necesaria. El adaptador compartido valida el índice del mismo manifiesto y devuelve referencias, enmiendas, documentos y métricas. Usa `--intent dependencies`, `evidence`, `variants`, `states` o `tokens`; para un token concreto agrega `--token <nombre-exacto-o-id>`.
+
+Para una composición, consulta `--intent dependencies` por familia anfitriona. Por ejemplo, `APP-SHELL-001` recupera Header, Sidebar, su enmienda y Section Header. Abre los contratos de las familias que realmente utilices y sus dependencias declaradas.
 
 `PASS` con `mode: graph` acredita navegación dirigida, no aprobación de diseño. `FALLBACK` incluye motivo y cobertura limitada a contrato y enmiendas del snapshot validado: completa dependencias por lectura selectiva de las referencias originales antes de construir. `BLOCKED` no permite usar un contexto parcial; resuelve conflicto, integridad, cobertura o límite indicado. No descargues `graphify-out/graph.json` ni reindexes el repositorio. Lee las fuentes recuperadas para verificar reglas; el índice no decide precedencia normativa.
 
@@ -39,10 +37,10 @@ Si la conexión existe pero falta acceso al archivo, señala el permiso necesari
 ## Preparar la entrada y el destino
 
 1. Lee `assets/release.json` y ejecuta `python3 scripts/verify_snapshot.py` desde la carpeta de ejecución verificada. Verifica el resultado antes de tratar el paquete como íntegro.
-2. Resuelve únicamente las familias, dependencias y tokens necesarios siguiendo [fuentes y autoridad](references/design-system.md). Incluye la enmienda tipográfica de cada familia para seleccionar estilos por texto, rol y variante. `references/components.json` es un índice generado, no la especificación.
+2. Resuelve únicamente las familias, dependencias y tokens necesarios siguiendo [fuentes y autoridad](references/design-system.md). Conserva la tipografía definida por cada componente, incluidos rangos y bindings cuando correspondan. `references/components.json` es un índice generado, no la especificación.
 3. Desde un prompt, extrae contenido, tareas, pantallas, estados y viewport; decide detalles ordinarios de composición con el DS y registra supuestos locales. Desde imágenes, inspecciónalas y separa lo observado de lo no visible. Desde un MD de `contpaqi-po-prototypes`, incluso pegado en el chat, aplica [handoff y QA](references/handoff-and-qa.md): consume su bloque JSON autosuficiente y resuelve las fuentes desde el snapshot de esta skill. El HTML, el JSON externo y las capturas son complementos opcionales; no los exijas para construir si el MD aporta los datos necesarios.
 4. El usuario debe designar el archivo de prototipo mediante su enlace o pedir expresamente uno nuevo. Si falta el destino, informa: «Indica el enlace del archivo de Figma donde quieres que construya las pantallas, o dime si quieres que cree uno nuevo». Conserva la preparación; no escribas hasta resolver el destino. Si pide uno nuevo, créalo con la skill oficial `figma-create-new-file` y registra su enlace real.
-5. Antes de escribir, comprueba la identidad del sandbox y del maestro en el corte. Exige destinos distintos y permiso real de escritura. Si los enlaces están pendientes, detén la construcción editable.
+5. Antes de escribir, confirma la identidad y el permiso de escritura del archivo de prototipo autorizado. El maestro es [AI Blueheart DS](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=0-1), indicado en el catálogo como fuente de instancias. El prototipo debe ser un archivo distinto del maestro y de la raíz histórica. Registra su URL real en el plan.
 
 No conviertas datos de ejemplo en reglas de negocio ni en límites de cardinalidad. Cuando falte una decisión material, conserva `UNRESOLVED` y continúa las partes independientes.
 
@@ -59,7 +57,7 @@ Usa las herramientas Figma disponibles; no generes un HTML como sustituto del re
 - Carga la skill oficial `figma-use` antes de cada llamada `use_figma` y cumple sus referencias/API vigentes. Carga también `figma-generate-design` para pantallas y `figma-generate-library` si creas un componente local. Antes de `create_new_file`, carga `figma-create-new-file`. Sigue sus metadatos `skillNames` cuando apliquen. Descubre estas skills en el entorno; no dependas de una ruta del equipo del autor.
 - Aplica esos manuales dentro del alcance **prototipo local**. Sus ejemplos de crear foundations no autorizan inventar tokens, cambiar aliases ni ampliar esta tarea a una biblioteca.
 - Inspecciona archivo, componentes, variables y fuentes tipográficas. Resuelve claves e IDs reales; un ID histórico, un nombre coincidente o un resultado vacío de variables locales no demuestra disponibilidad o ausencia.
-- Aplica estilos completos por rango siguiendo el flujo Figma, con decoración canónica y sin setters posteriores de formato. Para la excepción nativa documentada, verifica el estilo del principal, cadena y escala sin asignar el derivado materializado a la instancia. Conserva los pendientes del consumidor afectado; el catálogo o un ID local vacío no prueban consumo correcto.
+- Conserva la tipografía nativa de los componentes vinculados. En el texto propio del prototipo, usa la tipografía que indiquen sus fuentes y registra la decisión local si el brief deja abierto el rol. Sigue el [flujo Figma](references/figma-workflow.md) para comprobar estilos, métricas y rangos.
 - Conserva instancias vinculadas, propiedades admitidas, modos, roles semánticos, aliases y assets oficiales. No desacoples una instancia para resolver una limitación ni sustituyas un componente accesible por una imitación.
 - Usa Auto Layout para relaciones estructurales, texto editable con fuentes verificadas y regiones de contenido acordes con P-SLOTS. Las imágenes completas de pantallas son referencias, nunca la pantalla entregada.
 - Conserva un registro local de IDs y decisiones, construye en lotes recuperables y lee el resultado real. Si una llamada falla, sigue la recuperación de la herramienta antes de repetir escrituras.

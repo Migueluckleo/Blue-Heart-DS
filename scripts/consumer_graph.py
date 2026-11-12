@@ -192,6 +192,16 @@ class Reader:
                 # One explicit dependency hop, never traverse a global registry or all families.
                 result['relations'] = [e for e in self.index['relations'] if e['source'] in paths]
                 paths.update(e['target'] for e in result['relations'])
+                if request['intent'] == 'dependencies':
+                    for related in self.manifest['components']:
+                        if related['contract'] in paths:
+                            paths.update(related['amendments'])
+                if request['intent'] == 'tokens':
+                    foundation_data = [e for e in self.index['relations']
+                                       if e['source'] in paths and e['source'].startswith('specs/foundations/')
+                                       and e['target'].endswith('.json')]
+                    result['relations'].extend(e for e in foundation_data if e not in result['relations'])
+                    paths.update(e['target'] for e in foundation_data)
             selected_tokens = {}
             if use_graph and request['intent'] == 'tokens':
                 selected_tokens = {k:t for k,t in self.index['tokens'].items()
@@ -213,7 +223,7 @@ class Reader:
                     raise ValueError('LIMIT_EXCEEDED')
                 if sha(data) != self.manifest['files'][path]:
                     raise ValueError('INTEGRITY')
-                node = self.index['documents'][path] if use_graph else None
+                node = self.index['documents'].get(path) if use_graph else None
                 if node and path in roots and node['status'] in {'SUPERSEDED','REJECTED'}:
                     raise ValueError('OBSOLETE_REFERENCE')
                 if node and node['status'] == 'CONFLICT':

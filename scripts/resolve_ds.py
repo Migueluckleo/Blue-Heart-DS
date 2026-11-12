@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Resolve a verified local data release into a new execution folder. Stdlib only."""
+"""Resolve the GitHub catalog into a verified execution folder. Stdlib only."""
 from __future__ import annotations
 import argparse
 import hashlib
@@ -10,6 +10,9 @@ import re
 import shutil
 import tarfile
 import tempfile
+from time import time_ns
+from urllib.parse import quote
+from urllib.request import HTTPRedirectHandler, Request, build_opener
 
 HEX = re.compile(r'[a-f0-9]{64}\Z')
 MAX_JSON = 16 * 1024 * 1024
@@ -46,17 +49,25 @@ def relative(name):
         raise ValueError('Unsafe data path')
     return name
 
-def local_transport(catalog):
-    root = Path(catalog).resolve()
+class NoRedirect(HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        raise ValueError('Unexpected redirect from the configured GitHub origin')
+
+
+def github_transport(base):
+    opener = build_opener(NoRedirect)
+
     def transport(name, limit):
-        target = (root / relative(name)).resolve(strict=True)
-        if not target.is_relative_to(root) or not target.is_file():
-            raise ValueError('Invalid local catalog path')
-        with target.open('rb') as source:
-            data = source.read(limit + 1)
+        url = base + quote(relative(name), safe='/')
+        if name == 'catalog/current.json':
+            url += f'?fresh={time_ns()}'
+        request = Request(url, headers={'User-Agent': 'BlueHeart-Skill/1', 'Cache-Control': 'no-cache'})
+        with opener.open(request, timeout=45) as response:
+            data = response.read(limit + 1)
         if len(data) > limit:
             raise ValueError('Catalog object exceeds size limit')
         return data
+
     return transport
 
 def checked(name, expected, limit, cache, transport):
@@ -106,15 +117,20 @@ def extract(bundle, manifest, target):
     if seen != set(files):
         raise ValueError('Incomplete data bundle')
 
-def resolve(engine, output, cache, transport):
+def resolve(engine, output, cache, transport=None):
     engine = Path(engine).resolve()
     output = Path(output).absolute()
     if output.exists() or output.is_symlink() or output.resolve().is_relative_to(engine):
         raise ValueError('Execution folder must be new and outside the installed skill')
     info = unique_json((engine / 'assets/engine.json').read_bytes())
-    if info.get('engine_protocol') != 1 or info.get('delivery') != 'local-catalog-v1':
+    if info.get('engine_protocol') != 1 or info.get('delivery') != 'github-live-v1':
         raise ValueError('Unsupported engine configuration')
-    # Read the selected local pointer directly before consulting the content cache.
+    repository, branch = info['repository'], info['branch']
+    if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repository) or not re.fullmatch(r'[A-Za-z0-9_-]+', branch):
+        raise ValueError('Invalid GitHub origin')
+    base = f'https://raw.githubusercontent.com/{repository}/{branch}/'
+    transport = transport if transport is not None else github_transport(base)
+    # Verify a fresh pointer before using cached immutable objects.
     pointer_bytes = transport('catalog/current.json', MAX_JSON)
     if len(pointer_bytes) > MAX_JSON:
         raise ValueError('Catalog too large')
@@ -139,7 +155,7 @@ def resolve(engine, output, cache, transport):
     if len(bundle) != pointer.get('bundle_bytes'):
         raise ValueError('Bundle length mismatch')
     output.parent.mkdir(parents=True, exist_ok=True)
-    staging = Path(tempfile.mkdtemp(prefix='.evolution-', dir=output.parent))
+    staging = Path(tempfile.mkdtemp(prefix='.blueheart-', dir=output.parent))
     try:
         # Copy trusted installed tools; remote data never replaces engine instructions or scripts.
         for src in engine.rglob('*'):
@@ -152,6 +168,10 @@ def resolve(engine, output, cache, transport):
                 shutil.copyfile(src, dst)
         snapshot = staging / 'assets/design-system'
         extract(bundle, manifest, snapshot)
+        figma = unique_json((snapshot / 'config/figma-links.json').read_bytes())
+        master = figma['master_destination']['file_key']
+        if not re.fullmatch(r'[A-Za-z0-9]+', master) or master != info['figma_library_file_key'] or master == figma['root_source']['file_key']:
+            raise ValueError('Catalog Figma master differs from the engine configuration')
         (staging / 'assets/snapshot-manifest.json').write_bytes(data)
         # Optional graph failure never bypasses source/bundle integrity. Data only.
         graph_status = {'mode': 'fallback', 'reason': 'MISSING'}
@@ -173,7 +193,7 @@ def resolve(engine, output, cache, transport):
         (staging / 'references/components.json').write_bytes(encoded(manifest['components']))
         release = {**info, 'version': manifest['package_version'], 'engine_version': info['version'],
                    'ds_digest': manifest['ds_digest'], 'manifest_sha256': identity,
-                   'catalog_pointer': 'catalog/current.json'}
+                   'catalog_url': base + 'catalog/current.json'}
         (staging / 'assets/release.json').write_bytes(encoded(release))
         (staging / 'assets/remote-receipt.json').write_bytes(encoded(pointer))
         if output.exists():
@@ -184,17 +204,17 @@ def resolve(engine, output, cache, transport):
             shutil.rmtree(staging)
     return {'status': 'PASS', 'runtime': str(output), 'engine_version': info['version'],
             'ds_version': manifest['package_version'], 'ds_digest': manifest['ds_digest'],
-            'manifest_sha256': identity, 'files': len(manifest['files']), 'graph': graph_status}
+            'manifest_sha256': identity, 'files': len(manifest['files']), 'graph': graph_status,
+            'catalog_url': release['catalog_url'], 'figma_library_file_key': master}
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--output', required=True, type=Path)
     p.add_argument('--cache', type=Path)
-    p.add_argument('--catalog', required=True, type=Path, help='Raíz de la base BlueHeart con catalog/current.json')
     args = p.parse_args()
     try:
         result = resolve(Path(__file__).resolve().parents[1], args.output,
-                         args.cache or args.output.absolute().parent / '.blueheart-cache', local_transport(args.catalog))
+                         args.cache or args.output.absolute().parent / '.blueheart-cache')
     except (OSError, ValueError, KeyError, TypeError, tarfile.TarError) as error:
         print(json.dumps({'status': 'BLOCKED', 'error': str(error), 'offline_fallback': False}, ensure_ascii=False))
         raise SystemExit(1)

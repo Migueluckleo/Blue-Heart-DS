@@ -1,6 +1,6 @@
 # Controles obligatorios de consumo Figma
 
-Ejecutar desde el runtime devuelto por `resolve_ds.py`. el catálogo y el snapshot deben pasar antes de resolver componentes. El `PASS` del cargador acredita datos; los siguientes controles acreditan el alcance declarado en Figma. Una skill no intercepta herramientas MCP externas: exige estos comprobantes y prohíbe construir o declarar el cierre si faltan o fallan. No presentar el control como una garantía de ejecución frente a un agente que omita el flujo.
+Ejecutar desde el runtime devuelto por `resolve_ds.py`. El catálogo y el snapshot deben pasar antes de resolver componentes. El `PASS` del cargador acredita datos; los siguientes controles acreditan el alcance declarado en Figma. Una skill no intercepta herramientas MCP externas: exige estos comprobantes y prohíbe construir o declarar el cierre si faltan o fallan. No presentar el control como una garantía de ejecución frente a un agente que omita el flujo.
 
 ## Preparar fuentes y mapa
 
@@ -12,7 +12,7 @@ Solicitud fuente en un archivo JSON: `{"kind":"source","master_file_key":"FILE_K
 
 Crear un plan JSON v1 fuera del snapshot, junto a sus readbacks. Campos:
 
-- `schema_version: 1`, `snapshot`: `manifest_sha256` del recibo remoto, `destination_file_key`: prototipo autorizado, `screens`: IDs lógicos únicos.
+- `schema_version: 1`, `snapshot`: `manifest_sha256` del recibo remoto, `destination_file_key`: prototipo autorizado, `destination_url`: su URL Figma si el catálogo carece de sandbox aplicable, `screens`: IDs lógicos únicos.
 - `requirements`: familias canónicas necesarias. La matriz no puede omitir controles solicitados para hacer pasar el gate.
 - `source_readbacks: [{path, sha256}]`: rutas relativas al plan y hashes de los JSON reales del colector fuente.
 - `uses`: una entrada por instancia prevista o contenido/composición local: `id`, `screen`, `kind`, `family`.
@@ -47,7 +47,7 @@ python3 scripts/verify_figma_usage.py verify --runtime . --plan trabajo/plan.jso
 
 Repetir `--readback` para otras pantallas. El readback debe ser posterior al preflight, del mismo destino y plan. El colector inventaría las instancias superiores y candidatos con nombres/IDs de familias conocidas dentro del frame, sin tratar el interior heredado de una instancia DS verificada como controles independientes. El interior de instancias locales y el contenido de Slots sí se inventaría; mapear también sus controles e instancias (incluidos defaults conservados). Nombres solo descubren candidatos: su identidad se prueba por el principal y su clave. Todo candidato o instancia inventariado debe tener una entrada coherente; renombrar un control para evadirlo no está autorizado. Controles de semántica desconocida requieren revisión del mapa: el colector no interpreta cualquier intención visual o textual.
 
-El gate detecta frames/rectángulos que reemplazan instancias conocidas, claves/variantes incorrectas, pantallas/usos omitidos, pérdida de campos vinculados, estilos compartidos y layout frente al principal fuente. Compara también cada texto/rango por su ruta relativa; conservar una clave agregada no oculta la pérdida de estilo en otro texto. Para texto local verifica estilos por rango; para composiciones verifica Auto Layout y descendencia real de sus dependencias.
+El gate detecta frames/rectángulos que reemplazan instancias conocidas, claves/variantes incorrectas, pantallas/usos omitidos, pérdida de campos vinculados, estilos compartidos y layout frente al principal fuente. Compara también cada texto/rango por su ruta relativa; conservar una clave agregada no oculta la pérdida de estilo en otro texto. Para texto local exige lectura de métricas por rango; para composiciones verifica Auto Layout y descendencia real de sus dependencias.
 
 La comparación de bindings comprueba presencia de los campos; no demuestra por sí sola rol, alias, valores o modos. Los estilos se comparan por clave; una réplica técnica autorizada con otra clave requiere su mapeo y QA específico. Las excepciones nativas, Slots variables y cambios contractuales que alteren esos conjuntos requieren evidencia específica: conservar `BLOCKED` en vez de borrar restricciones para obtener un PASS.
 

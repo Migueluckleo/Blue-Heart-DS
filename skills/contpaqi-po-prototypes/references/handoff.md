@@ -61,37 +61,7 @@ usa instancias distintas o `stateProps` por `screen/state` en la entrada del bri
 La captura usa texto visible, excluye descendientes ocultos y falla si encuentra
 texto visible fuera de una instancia DS o nodo local-content explícito.
 
-La captura añade `typography_style_id` leído de la propiedad CSS calculada
-`--ds-type-style-id`; no deduce la identidad por tamaño o apariencia. `text_runs`
-conserva texto visible y métricas de cada fragmento interno, incluidos valores y
-placeholders de controles, porque una raíz puede contener varios roles. El
-handoff coteja los IDs presentes con el catálogo y adjunta sus hashes en el
-Markdown autosuficiente. Comprueba que `sources` incluya el catálogo activo 0.1.2,
-la enmienda de formato y las enmiendas tipográficas de las familias utilizadas,
-además de sus bases y dependencias. `typography.status` distingue IDENTIFIED, PARTIAL y
-NOT_RUN; un marker ausente queda explícito y una captura anterior sin fragmentos
-no acredita esta cobertura. IDENTIFIED verifica IDs, no conformidad de métricas:
-un descendiente puede sobrescribir una propiedad manteniendo un marker heredado.
-Compara métricas y decoración calculadas con la receta canónica antes de Figma;
-un dato no capturado queda pendiente, no se infiere. Los cuatro estilos con
-`derivedFormattingFrom` incorporan UNDERLINE: conserva su ID completo, no el ID
-de origen más una instrucción para añadir subrayado. El consumidor Figma debe
-aplicar el TextStyle completo mediante `setRangeTextStyleIdAsync(start,end,id)`
-según su flujo y el rango real del destino, sin setters posteriores de formato;
-este handoff no ejecuta esa escritura.
-
-Conserva en `limitations` el estado específico de los consumidores utilizados,
-según registros y enmiendas. Para la excepción nativa0.1.2, distingue el ID de
-receta materializada web del TextStyle real del principal y su escala nativa.
-`typography.native_inheritance` conserva fuente/hash del overlay y el estado
-reportado, con `destination_validation: NOT_RUN`; la evidencia del DS no valida
-la instancia del diseñador. El generador exige esta fuente si la familia incluye
-la enmienda nativa o captura un estilo con `derivedFrom`, incluso sin captura
-cuando la familia la necesita. No omitir la dependencia si falta: resolver el
-snapshot o conservar el bloqueo. Un ID local vacío no demuestra herencia; no
-pedir asignar el derivado a la instancia, escalarlo otra vez o restablecerla.
-Los estados `VALIDATION_PENDING`/`BLOCKED` se transmiten como tales. El QA web,
-un piloto o los 79 estilos no prueban aceptación Figma global ni del prototipo.
+La captura registra familia, peso, tamaño, altura de línea, espaciado y decoración en `computed_style` y `text_runs`, incluidos valores y placeholders. `typography` indica si se observaron rangos de texto. Cada instancia conserva su contrato y enmiendas por hash. Compara las medidas con esas fuentes y conserva las diferencias para el traspaso. Cuando se trate de texto propio, registra el criterio local y las métricas observadas.
 
 El handoff conserva digest/versión compartidos, fuentes por hash, HTML SHA-256,
 contratos, enmiendas, props, tokens, Slots, decisiones y capturas con mediciones.
