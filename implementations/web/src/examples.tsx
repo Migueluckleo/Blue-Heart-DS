@@ -6,7 +6,7 @@ import { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';
 import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
 import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
 import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
-import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from './index';
+import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from './index';
 
 const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];
 
@@ -439,9 +439,14 @@ export function InputExample() {
 // example: section-header
 export function SectionHeaderExample() {
   const [message, setMessage] = useState('');
+  const [showLogo, setShowLogo] = useState(false);
   const metadata = <><Badge type="success" size="small" label="Actualizado"/><time dateTime="2026-11-11">11 nov 2026</time></>;
   return <div className="my-4 space-y-4">
-    <SectionHeader className="max-w-[1225px]" title="Comprobantes" headingLevel={3}
+    <label className="flex items-center gap-2">
+      <input type="checkbox" checked={showLogo} onChange={event => setShowLogo(event.target.checked)}/>
+      Mostrar el logo en lugar del título
+    </label>
+    <SectionHeader className="max-w-[1225px]" title={showLogo ? "Beni" : "Comprobantes"} headingLevel={3} logoInsteadTitle={showLogo}
       description="Consulta los comprobantes registrados y ajusta los filtros del listado."
       breadcrumbs={<Breadcrumb ancestors={[{label:'Inicio',href:'#demo-section-start'}]} current="Comprobantes"/>}
       metadata={metadata}
@@ -467,25 +472,48 @@ export function AppShellExample() {
   const [collapsed, setCollapsed] = useState(true);
   const [bodyLayout, setBodyLayout] = useState<AppShellBodyLayout>('grid');
   const [action, setAction] = useState('');
+  const [tool, setTool] = useState<ChatSidebarProps['view']>('none');
+  const [draft, setDraft] = useState('');
+  const [messages, setMessages] = useState<string[]>([]);
+  const inConversation = bodyLayout === 'conversation';
+  const composer = {label:'Redactar en conversación de App Shell',value:draft,onValueChange:setDraft,
+    onSend:(text: string) => {
+      if (!text.trim()) return;
+      setMessages(current => [...current,text]);
+      setDraft('');
+    }};
+  const rightSidebar = <>
+    {tool !== 'none' && <ChatSidebar view={tool} onViewChange={setTool} onCollapse={() => setTool('none')}>
+      {tool === 'Chats' && messages.length > 0 && <ChatSidebarSection title="Recientes">
+        <ChatHistoryItem title={messages[0]} selected onSelect={() => setAction(messages[0])}/>
+      </ChatSidebarSection>}
+    </ChatSidebar>}
+    <ChatSidebar mode="rail" view={tool} onViewChange={setTool} plan={{plan:'Pro Plan',used:42,limit:150}}/>
+  </>;
   const moduleStyle = 'grow basis-0 rounded-lg bg-slate-100 p-4';
   return <div className="my-4 space-y-4">
     <label className="inline-flex items-center gap-2">
       Distribución del contenido
       <select className="rounded border px-2 py-1" value={bodyLayout}
-        onChange={event => setBodyLayout(event.currentTarget.value === 'grid' ? 'grid' : 'flex')}>
+        onChange={event => setBodyLayout(event.currentTarget.value as AppShellBodyLayout)}>
         <option value="grid">Grid</option>
         <option value="flex">Flex</option>
+        <option value="conversation">Conversación</option>
       </select>
     </label>
     <div className="overflow-x-auto">
       <AppShell className="w-[1440px] min-h-[1024px]" bodyLayout={bodyLayout}
-        contentAs="section" contentLabel="Área de trabajo de muestra"
+        contentAs="section" contentLabel="Área de trabajo de muestra" rightSidebar={rightSidebar}
         header={{actions:{actions:3,onAction:next => setAction(next)}}}
         sidebar={{label:'Navegación del área de trabajo',collapsed,onCollapsedChange:setCollapsed,
           collapsedMenuItems:<MenuItem label="Inicio del área" href="#demo-shell-heading" current showRightIcon={false} showBeta={false}/>,
           expandedMenuItems:<MenuItem type="expanded" label="Inicio del área" href="#demo-shell-heading" current showRightIcon={false} showBeta={false}/>}}
-        sectionHeader={{title:'Resumen contable',headingLevel:3,
-          description:'Revisa los comprobantes del periodo y su estado de conciliación.'}}>
+        sectionHeader={{title:inConversation ? 'Beni' : 'Resumen contable',headingLevel:3,
+          logoInsteadTitle:inConversation,description:inConversation ? 'Asistente de CONTPAQi'
+            : 'Revisa los comprobantes del periodo y su estado de conciliación.'}}>
+        {inConversation ? (messages.length ? <Chat state="started" composer={composer} messages={messages.map((text,index) =>
+          <UserMessage key={index} message={text}/>)}/> : <Chat userName="Bruce Wayne" composer={composer}
+          onSuggestion={setDraft} suggestions={['Muéstrame mis ingresos del mes','¿Cuánto IVA tengo por pagar?']}/>) : <>
         <div className={bodyLayout === 'grid' ? 'contents' : 'flex gap-[var(--bh-app-shell-gap)]'}>
           <AppShellGridItem span={2} className={moduleStyle}>
             <h4>Comprobantes registrados</h4>
@@ -501,6 +529,7 @@ export function AppShellExample() {
           <Input id="demo-shell-note" label="Nota de revisión" placeholder="Añade una nota"
             required={false} showIcon={false} className="max-w-sm"/>
         </AppShellGridItem>
+        </>}
       </AppShell>
     </div>
     <p role="status">{action && `Acción de muestra: ${action}`}</p>

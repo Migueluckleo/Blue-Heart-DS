@@ -12,7 +12,7 @@ Maestro AI Blueheart DS. [Página Buttons](https://www.figma.com/design/yZsIpXyw
 
 ## Logos · LOGOS-001
 
-[Logos en AI Blueheart DS](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=170-2) · Figma VALIDATED_WITH_EXCEPTIONS por redondeo subpíxel documentado. Cinco sets y 68 variantes transferidos con copia nativa desde Librería v1.1.0. [Ficha, localizadores y matriz](../implementations/figma/logos-2026-11-12/README.md) · [Lectura final](../implementations/figma/logos-2026-11-12/fidelity.readback.json). Web NOT_APPLICABLE.
+[Logos en AI Blueheart DS](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=170-2) · Figma VALIDATED_WITH_EXCEPTIONS por redondeo subpíxel documentado. Cinco sets y 68 variantes proceden de Librería v1.1.0. El set local [Beni y Navi](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=277-76) añade cuatro variantes verificadas, para un total de 6 sets y 72 variantes. [Lectura de Beni y Navi](../implementations/figma/logos-beni-navi-2026-11-13/readback.json). [Ficha, localizadores y matriz](../implementations/figma/logos-2026-11-12/README.md) · [Lectura final](../implementations/figma/logos-2026-11-12/fidelity.readback.json). Web NOT_APPLICABLE.
 
 ## Characters · CHARACTERS-001
 
@@ -29,3 +29,15 @@ Maestro AI Blueheart DS. [Página Buttons](https://www.figma.com/design/yZsIpXyw
 ## Consumo de tokens de componente · 2026-11-12
 
 App Shell, Conversation Composer, Conversation Response y Stepper consumen los aliases de componente de la corrección. [Lectura posterior](../implementations/figma/component-token-layer-correction/readback.json) · [Mapa delegado](../specs/tokens/component-layer.correction.json).
+
+## User message · USER-MESSAGE-001
+
+[Maestro 237:19](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=237-19) en la página 237:20. [Lectura y QA de bindings](../implementations/figma/user-message-2026-11-13/readback.json) · [Ficha web](../implementations/web/docs/components/user-message.md).
+
+## Chat · CHAT-001
+
+[Set oficial 242:437](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=242-437) en la página Chat 242:658. [Lectura de los estados y Slots](../implementations/figma/chat-2026-11-13/readback.json) · [Ficha web](../implementations/web/docs/components/chat.md).
+
+## Chat Sidebar · CHAT-SIDEBAR-001
+
+[Set oficial 258:3326](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=258-3326) · [Lectura de Figma](../implementations/figma/chat-sidebar-2026-11-13/readback.json) · [Ficha web](../implementations/web/docs/components/chat-sidebar.md).

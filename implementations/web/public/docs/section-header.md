@@ -18,7 +18,7 @@ Usa Section Header para orientar dentro de una sección y colocar los controles 
 
 ## Uso sin backend
 
-Selecciona el nivel del título según la página y compón Breadcrumb, Metadata, Inputs y General actions con los controles del anfitrión.
+Selecciona el nivel del título según la página y compón Breadcrumb, Metadata, Inputs y General actions con los controles del anfitrión. Activa `logoInsteadTitle` para mostrar el logo de Beni en el lugar del título. Pasa `title` para el nombre accesible del encabezado.
 
 ```tsx
 'use client';
@@ -29,15 +29,20 @@ import { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';
 import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
 import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
 import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
-import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
+import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
 
 const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];
 
 export function SectionHeaderExample() {
   const [message, setMessage] = useState('');
+  const [showLogo, setShowLogo] = useState(false);
   const metadata = <><Badge type="success" size="small" label="Actualizado"/><time dateTime="2026-11-11">11 nov 2026</time></>;
   return <div className="my-4 space-y-4">
-    <SectionHeader className="max-w-[1225px]" title="Comprobantes" headingLevel={3}
+    <label className="flex items-center gap-2">
+      <input type="checkbox" checked={showLogo} onChange={event => setShowLogo(event.target.checked)}/>
+      Mostrar el logo en lugar del título
+    </label>
+    <SectionHeader className="max-w-[1225px]" title={showLogo ? "Beni" : "Comprobantes"} headingLevel={3} logoInsteadTitle={showLogo}
       description="Consulta los comprobantes registrados y ajusta los filtros del listado."
       breadcrumbs={<Breadcrumb ancestors={[{label:'Inicio',href:'#demo-section-start'}]} current="Comprobantes"/>}
       metadata={metadata}
@@ -68,6 +73,7 @@ Importar desde [src/index.ts](../../src/index.ts), con `@/index` dentro del cat�
 ```tsx
 export interface SectionHeaderProps {
   title: string;
+  logoInsteadTitle?: boolean;
   headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;
   description?: string;
   breadcrumbs?: ReactNode;
@@ -87,7 +93,7 @@ export interface SectionHeaderProps {
 Las firmas siguientes se extraen de las funciones, incluidos sus valores por defecto. Una prop sin asignación `=` es obligatoria o permanece undefined según su tipo; no se rellena con reglas de negocio.
 
 ```tsx
-SectionHeader: {title, headingLevel = 2, description, breadcrumbs, metadata, inputs, actions,
+SectionHeader: {title, headingLevel = 2, logoInsteadTitle = false, description, breadcrumbs, metadata, inputs, actions,
   showBreadcrumbs = true, showDescription = true, showMetadata = true, showActions = true,
   className}: SectionHeaderProps
 ```
@@ -106,7 +112,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [section-header.contract.v1.0.0.md](../../../../specs/components/section-header.contract.v1.0.0.md) · SHA-256 `240b8713839c0099525bffbd08545a99d5894e57344a33df6b112f6085a91836`.
+- [section-header.contract.v1.0.0.md](../../../../specs/components/section-header.contract.v1.0.0.md) · SHA-256 `3f7aa013f0cac29445386ae0fb9e7d524f5a1308df1ff3ece9bb4ebe144616fe`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

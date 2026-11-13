@@ -9,12 +9,12 @@
       "AppShellGridItem"
     ],
     "category": "navegación",
-    "notes": "Compón Header, Sidebar y Section Header. Elige Grid o Flex según las relaciones del contenido de Body.",
+    "notes": "Compón Header, Sidebar y Section Header. Elige Grid, Flex o Conversación. En Conversación, pasa Chat en children y el Rail y Panel opcional en rightSidebar.",
     "base": "specs/components/app-shell.contract.v1.0.0.md",
     "amendments": [],
     "slots": {
       "status": "REQUIRED",
-      "reason": "Body admite composición reemplazable en cuatro variantes"
+      "reason": "Body admite composición reemplazable. El modo de conversación añade la región Right sidebar."
     },
     "qa": "qa/implementations/app-shell.v1.0.0.review.md"
   },
@@ -147,6 +147,120 @@
       "reason": "Anatomía vectorial fija de identidad"
     },
     "qa": "qa/implementations/characters.v1.0.0.review.md"
+  },
+  {
+    "id": "CHAT-001",
+    "slug": "chat",
+    "name": "Chat",
+    "module": "chat",
+    "exports": [
+      "Chat"
+    ],
+    "category": "conversación",
+    "notes": "Recorre la bienvenida, elige una sugerencia y envía un texto al historial local.",
+    "base": "specs/components/chat.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Messages admite composición de historial en Started"
+    },
+    "qa": "qa/implementations/chat.v1.0.0.review.md",
+    "example_source": "separate"
+  },
+  {
+    "id": "CHAT-HISTORY-ITEM-001",
+    "slug": "chat-history-item",
+    "name": "Chat History Item",
+    "module": "chat-sidebar",
+    "exports": [
+      "ChatHistoryItem"
+    ],
+    "category": "conversación",
+    "notes": "Composición y acciones de muestra del panel lateral.",
+    "base": "specs/components/chat-history-item.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Región de contenido reemplazable"
+    },
+    "qa": "qa/implementations/chat-sidebar.v1.0.0.review.md",
+    "example_source": "separate"
+  },
+  {
+    "id": "CHAT-PLAN-USAGE-001",
+    "slug": "chat-plan-usage",
+    "name": "Chat Plan Usage",
+    "module": "chat-sidebar",
+    "exports": [
+      "ChatPlanUsage"
+    ],
+    "category": "conversación",
+    "notes": "Composición y acciones de muestra del panel lateral.",
+    "base": "specs/components/chat-plan-usage.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "El uso del plan tiene contenido fijo"
+    },
+    "qa": "qa/implementations/chat-sidebar.v1.0.0.review.md",
+    "example_source": "separate"
+  },
+  {
+    "id": "CHAT-SIDEBAR-001",
+    "slug": "chat-sidebar",
+    "name": "Chat Sidebar",
+    "module": "chat-sidebar",
+    "exports": [
+      "ChatSidebar"
+    ],
+    "category": "conversación",
+    "notes": "Composición y acciones de muestra del panel lateral.",
+    "base": "specs/components/chat-sidebar.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Región de contenido reemplazable"
+    },
+    "qa": "qa/implementations/chat-sidebar.v1.0.0.review.md",
+    "example_source": "separate"
+  },
+  {
+    "id": "CHAT-SIDEBAR-SECTION-001",
+    "slug": "chat-sidebar-section",
+    "name": "Chat Sidebar Section",
+    "module": "chat-sidebar",
+    "exports": [
+      "ChatSidebarSection"
+    ],
+    "category": "conversación",
+    "notes": "Composición y acciones de muestra del panel lateral.",
+    "base": "specs/components/chat-sidebar-section.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Región de contenido reemplazable"
+    },
+    "qa": "qa/implementations/chat-sidebar.v1.0.0.review.md",
+    "example_source": "separate"
+  },
+  {
+    "id": "CHAT-TOOL-ITEM-001",
+    "slug": "chat-tool-item",
+    "name": "Chat Tool Item",
+    "module": "chat-sidebar",
+    "exports": [
+      "ChatToolItem"
+    ],
+    "category": "conversación",
+    "notes": "Composición y acciones de muestra del panel lateral.",
+    "base": "specs/components/chat-tool-item.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Región de contenido reemplazable"
+    },
+    "qa": "qa/implementations/chat-sidebar.v1.0.0.review.md",
+    "example_source": "separate"
   },
   {
     "id": "CHECKBOX-001",
@@ -579,7 +693,7 @@
       "SectionHeader"
     ],
     "category": "navegación",
-    "notes": "Selecciona el nivel del título según la página y compón Breadcrumb, Metadata, Inputs y General actions con los controles del anfitrión.",
+    "notes": "Selecciona el nivel del título según la página y compón Breadcrumb, Metadata, Inputs y General actions con los controles del anfitrión. Activa `logoInsteadTitle` para mostrar el logo de Beni en el lugar del título. Pasa `title` para el nombre accesible del encabezado.",
     "base": "specs/components/section-header.contract.v1.0.0.md",
     "amendments": [],
     "slots": {
@@ -772,6 +886,25 @@
       "reason": "Menu items admite una lista abierta"
     },
     "qa": "qa/implementations/sidebar-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "USER-MESSAGE-001",
+    "slug": "user-message",
+    "name": "User message",
+    "module": "user-message",
+    "exports": [
+      "UserMessage"
+    ],
+    "category": "conversación",
+    "notes": "Burbuja con el mensaje enviado por la persona. Conserva el texto y permite el reflujo en el ancho disponible.",
+    "base": "specs/components/user-message.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "La burbuja contiene una propiedad de texto"
+    },
+    "qa": "qa/implementations/user-message.v1.0.0.review.md",
+    "example_source": "separate"
   },
   {
     "id": "USER-SELECTOR-001",

@@ -1,0 +1,151 @@
+{
+  "nodes": [
+    {
+      "id": "specs_components_chat_sidebar_contract_v1_0_0_chat_sidebar_rail_parity",
+      "label": "Paridad Figma y React de Chat Sidebar",
+      "author": null,
+      "captured_at": null,
+      "contributor": null,
+      "file_type": "concept",
+      "rationale": "Cuatro paneles y cinco rails. View=none admite cuatro botones sin selección y el medidor compacto.",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/chat-sidebar.contract.v1.0.0.md",
+      "source_location": "L27",
+      "source_url": null
+    },
+    {
+      "id": "specs_components_chat_sidebar_contract_v1_0_0_section_header_brand_switch_review",
+      "label": "Rail sin selección en Chat Sidebar",
+      "author": null,
+      "captured_at": null,
+      "contributor": null,
+      "file_type": "concept",
+      "rationale": "Cuatro paneles y cinco rails. View=none admite cuatro botones sin selección y el medidor compacto.",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/chat-sidebar.contract.v1.0.0.md",
+      "source_location": "L29",
+      "source_url": null
+    },
+    {
+      "id": "specs_components_chat_sidebar_contract_v1_0_0_sidebar",
+      "label": "Chat Sidebar",
+      "author": null,
+      "captured_at": null,
+      "contributor": null,
+      "file_type": "concept",
+      "rationale": "Cuatro vistas en Panel y Rail, ocho variantes. Content contiene las secciones vinculadas; el rail usa icon buttons y el plan compacto.",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/chat-sidebar.contract.v1.0.0.md",
+      "source_location": "L23",
+      "source_url": null
+    },
+    {
+      "id": "implementations_figma_chat_playground_2026_11_13_readme_desktop_chat_layouts",
+      "label": "Seis layouts de Chat en Playground",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/figma/chat-playground-2026-11-13/README.md",
+      "source_location": "L5",
+      "rationale": "Identifica la composición inicial, la conversación abierta y las cuatro selecciones del Rail con sus paneles.",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "implementations_figma_chat_playground_2026_11_13_readme_chat_geometry_and_prototype",
+      "label": "Sizing y enlaces de los frames de chat",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/figma/chat-playground-2026-11-13/README.md",
+      "source_location": "L14",
+      "rationale": "Chat inicial usa Fill con solapamiento de cajas. Los paneles abiertos fijan Chat en 961 px; los seis frames no tienen enlaces entre sí.",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "specs_components_chat_sidebar_contract_v1_0_0_playground_compositions",
+      "label": "Consumo de Chat Sidebar en los layouts",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/chat-sidebar.contract.v1.0.0.md",
+      "source_location": "L29",
+      "rationale": "El Rail neutral se usa en la composición inicial y el Panel corresponde a la selección de cada muestra.",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "specs_components_chat_sidebar_contract_v1_0_0_section_header_brand_switch_review",
+      "target": "specs_components_section_header_contract_v1_0_0_section_header_brand_switch_review",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/chat-sidebar.contract.v1.0.0.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_chat_sidebar_contract_v1_0_0_sidebar",
+      "target": "specs_components_chat_history_item_contract_v1_0_0_history_item",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/chat-sidebar.contract.v1.0.0.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_chat_sidebar_contract_v1_0_0_sidebar",
+      "target": "specs_components_chat_plan_usage_contract_v1_0_0_plan_usage",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/chat-sidebar.contract.v1.0.0.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_chat_sidebar_contract_v1_0_0_sidebar",
+      "target": "specs_components_chat_sidebar_section_contract_v1_0_0_sidebar_section",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/chat-sidebar.contract.v1.0.0.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_chat_sidebar_contract_v1_0_0_sidebar",
+      "target": "specs_components_chat_tool_item_contract_v1_0_0_tool_item",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/chat-sidebar.contract.v1.0.0.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_chat_sidebar_contract_v1_0_0_playground_compositions",
+      "target": "implementations_figma_chat_playground_2026_11_13_readme_desktop_chat_layouts",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/chat-sidebar.contract.v1.0.0.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "implementations_figma_chat_playground_2026_11_13_readme_desktop_chat_layouts",
+      "target": "implementations_figma_chat_playground_2026_11_13_readme_chat_geometry_and_prototype",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/implementations/figma/chat-playground-2026-11-13/README.md",
+      "source_location": "L5",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

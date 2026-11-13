@@ -1,0 +1,3332 @@
+{
+  "data": {
+    "roles": [
+      [
+        "spacing/none",
+        "spacing-none",
+        "FLOAT",
+        "GAP",
+        "Inset cero de la estructura de Chat."
+      ],
+      [
+        "spacing/compact",
+        "spacing-sm",
+        "FLOAT",
+        "GAP",
+        "Separación de saludo, historial y estado."
+      ],
+      [
+        "spacing/suggestions",
+        "spacing-lg",
+        "FLOAT",
+        "GAP",
+        "Separación y salto de fila de sugerencias."
+      ],
+      [
+        "spacing/section",
+        "spacing-2xl",
+        "FLOAT",
+        "GAP",
+        "Separación e inset superior de las regiones."
+      ],
+      [
+        "color/text/greeting",
+        "neutral-maximum",
+        "COLOR",
+        "TEXT_FILL",
+        "Texto principal del saludo."
+      ],
+      [
+        "color/text/name",
+        [
+          "brand-default",
+          "brand-administrativo-default",
+          "brand-servicios-default",
+          "brand-personas-default"
+        ],
+        "COLOR",
+        "TEXT_FILL",
+        "Nombre de la persona con el color de marca del tema."
+      ],
+      [
+        "color/text/subtitle",
+        "neutral-strong",
+        "COLOR",
+        "TEXT_FILL",
+        "Subtítulo de la bienvenida."
+      ],
+      [
+        "color/text/status",
+        "neutral-medium",
+        "COLOR",
+        "TEXT_FILL",
+        "Estado informativo de la conversación."
+      ],
+      [
+        "font/family",
+        "font-family-base",
+        "STRING",
+        "FONT_FAMILY",
+        "Familia tipográfica de Chat."
+      ],
+      [
+        "font/regular",
+        "font-weight-regular",
+        "STRING",
+        "FONT_STYLE",
+        "Peso del subtítulo y estado."
+      ],
+      [
+        "font/bold",
+        "font-weight-bold",
+        "STRING",
+        "FONT_STYLE",
+        "Peso del saludo."
+      ],
+      [
+        "font/tracking",
+        "font-letter-spacing-normal",
+        "FLOAT",
+        "LETTER_SPACING",
+        "Tracking de los textos de Chat."
+      ],
+      [
+        "font/title-size",
+        "font-size-2xl",
+        "FLOAT",
+        "FONT_SIZE",
+        "Tamaño del saludo."
+      ],
+      [
+        "font/title-line-height",
+        "font-line-height-2xl",
+        "FLOAT",
+        "LINE_HEIGHT",
+        "Interlineado del saludo."
+      ],
+      [
+        "font/subtitle-size",
+        "font-size-lg",
+        "FLOAT",
+        "FONT_SIZE",
+        "Tamaño del subtítulo."
+      ],
+      [
+        "font/subtitle-line-height",
+        "font-line-height-lg",
+        "FLOAT",
+        "LINE_HEIGHT",
+        "Interlineado del subtítulo."
+      ],
+      [
+        "font/status-size",
+        "font-size-sm",
+        "FLOAT",
+        "FONT_SIZE",
+        "Tamaño del estado."
+      ],
+      [
+        "font/status-line-height",
+        "font-line-height-sm",
+        "FLOAT",
+        "LINE_HEIGHT",
+        "Interlineado del estado."
+      ],
+      [
+        "size/max-width",
+        "size-816",
+        "FLOAT",
+        "WIDTH_HEIGHT",
+        "Ancho máximo del contenedor Chat."
+      ]
+    ],
+    "description": "Chat · CHAT-001. Compone la bienvenida y una conversación. Usa Standby para la bienvenida y Started para el historial. Edita Messages desde una instancia. El anfitrión gestiona el borrador y el estado.",
+    "guide": "https://github.com/Migueluckleo/Blue-Heart-DS/blob/main/specs/components/chat.contract.v1.0.0.md#guía-semántica-normativa",
+    "mapping": {
+      "spacing/none": "spacing/none",
+      "spacing/sm": "spacing/compact",
+      "spacing/lg": "spacing/suggestions",
+      "spacing/2xl": "spacing/section",
+      "color/text/primary": "color/text/greeting",
+      "color/text/brand": "color/text/name",
+      "color/text/secondary": "color/text/subtitle",
+      "color/text/tertiary": "color/text/status",
+      "font/family/base": "font/family",
+      "font/weight/regular": "font/regular",
+      "font/weight/bold": "font/bold",
+      "font/letter-spacing/normal": "font/tracking",
+      "font/size/2xl": "font/title-size",
+      "font/line-height/2xl": "font/title-line-height",
+      "font/size/lg": "font/subtitle-size",
+      "font/line-height/lg": "font/subtitle-line-height",
+      "font/size/sm": "font/status-size",
+      "font/line-height/sm": "font/status-line-height"
+    },
+    "sourceId": "238:2236"
+  },
+  "standby": {
+    "rows": [
+      {
+        "id": "238:2235",
+        "n": "Property 1=Standby",
+        "t": "COMPONENT",
+        "d": 0,
+        "b": [
+          16,
+          16,
+          750,
+          601.739990234375
+        ],
+        "visible": true,
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 32,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": 816,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "CENTER",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:822683fdadbc2e6cf5b287d4a451a1ddbe131084/15:131"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:822683fdadbc2e6cf5b287d4a451a1ddbe131084/15:131"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ]
+        ]
+      },
+      {
+        "id": "238:1255",
+        "n": "Welcome",
+        "t": "FRAME",
+        "d": 1,
+        "b": [
+          0,
+          32,
+          750,
+          271.739990234375
+        ],
+        "visible": true,
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "CENTER",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:822683fdadbc2e6cf5b287d4a451a1ddbe131084/15:131"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ]
+        ]
+      },
+      {
+        "id": "238:1899",
+        "n": "BENI Standby",
+        "t": "INSTANCE",
+        "d": 2,
+        "b": [
+          290.6300048828125,
+          0,
+          168.739990234375,
+          163.739990234375
+        ],
+        "visible": true,
+        "layoutMode": "NONE",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "itemSpacing": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [],
+        "reactions": [
+          [
+            {
+              "type": "AFTER_TIMEOUT",
+              "timeout": 2
+            },
+            [
+              [
+                "NODE",
+                "CHANGE_TO",
+                "187:21"
+              ]
+            ]
+          ]
+        ],
+        "main": [
+          "187:15",
+          "Frame=01",
+          "BENI Standby",
+          false
+        ],
+        "props": {
+          "Frame": "01"
+        }
+      },
+      {
+        "id": "238:1257",
+        "n": "Greeting block",
+        "t": "FRAME",
+        "d": 2,
+        "b": [
+          0,
+          195.739990234375,
+          750,
+          76
+        ],
+        "visible": true,
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ]
+        ]
+      },
+      {
+        "id": "238:1258",
+        "n": "Greeting line",
+        "t": "FRAME",
+        "d": 3,
+        "b": [
+          0,
+          0,
+          750,
+          40
+        ],
+        "visible": true,
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "CENTER",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "counterAxisSpacing",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ]
+        ]
+      },
+      {
+        "id": "238:1259",
+        "n": "Greeting",
+        "t": "TEXT",
+        "d": 4,
+        "b": [
+          230.5,
+          0,
+          80,
+          40
+        ],
+        "visible": true,
+        "layoutSizingHorizontal": "HUG",
+        "layoutSizingVertical": "HUG",
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutPositioning": "AUTO",
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "characters": "Hola,",
+        "fontName": {
+          "family": "Manrope",
+          "style": "Bold",
+          "variationSettings": {
+            "wght": 700
+          }
+        },
+        "fontSize": 32,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 40
+        },
+        "letterSpacing": {
+          "unit": "PIXELS",
+          "value": 0
+        },
+        "textStyleId": "S:711fbb388c69ce8d554ef531ebd946cae14a0080,982:605",
+        "textAlignHorizontal": "LEFT",
+        "fills": [
+          [
+            "SOLID",
+            {
+              "r": 0.05882352963089943,
+              "g": 0.09019608050584793,
+              "b": 0.16470588743686676
+            },
+            "VariableID:bc42b776e7baffd38a38005f7d6758c9260c7052/16:103"
+          ]
+        ],
+        "bindings": [
+          [
+            "fills",
+            "VariableID:bc42b776e7baffd38a38005f7d6758c9260c7052/16:103"
+          ],
+          [
+            "letterSpacing",
+            "VariableID:495a59bf37956ada84cf31a56f36a8af207dbfa4/15:59"
+          ],
+          [
+            "fontSize",
+            "VariableID:41642e9b36332a80ae764644871c666518902777/15:7"
+          ],
+          [
+            "fontStyle",
+            "VariableID:68071bf73ebd5934ca05ffb1dd26fb91deb782da/14:19"
+          ],
+          [
+            "fontFamily",
+            "VariableID:e414ecda73fcc59277f2ff185fc7d4384b53f5f3/14:3"
+          ],
+          [
+            "lineHeight",
+            "VariableID:344a5dab23cc482780fa11679b70ee66516f7ea0/15:43"
+          ]
+        ]
+      },
+      {
+        "id": "238:1260",
+        "n": "User name",
+        "t": "TEXT",
+        "d": 4,
+        "b": [
+          318.5,
+          0,
+          201,
+          40
+        ],
+        "visible": true,
+        "layoutSizingHorizontal": "HUG",
+        "layoutSizingVertical": "HUG",
+        "minWidth": null,
+        "maxWidth": 542,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutPositioning": "AUTO",
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "characters": "Bruce Wayne",
+        "fontName": {
+          "family": "Manrope",
+          "style": "Bold",
+          "variationSettings": {
+            "wght": 700
+          }
+        },
+        "fontSize": 32,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 40
+        },
+        "letterSpacing": {
+          "unit": "PIXELS",
+          "value": 0
+        },
+        "textStyleId": "S:711fbb388c69ce8d554ef531ebd946cae14a0080,982:605",
+        "textAlignHorizontal": "LEFT",
+        "fills": [
+          [
+            "SOLID",
+            {
+              "r": 0.19607843458652496,
+              "g": 0.3333333432674408,
+              "b": 0.9686274528503418
+            },
+            "VariableID:4c664b84b945c467c10429e3834408bc1cf69cd7/16:123"
+          ]
+        ],
+        "bindings": [
+          [
+            "fills",
+            "VariableID:4c664b84b945c467c10429e3834408bc1cf69cd7/16:123"
+          ],
+          [
+            "letterSpacing",
+            "VariableID:495a59bf37956ada84cf31a56f36a8af207dbfa4/15:59"
+          ],
+          [
+            "fontSize",
+            "VariableID:41642e9b36332a80ae764644871c666518902777/15:7"
+          ],
+          [
+            "fontStyle",
+            "VariableID:68071bf73ebd5934ca05ffb1dd26fb91deb782da/14:19"
+          ],
+          [
+            "fontFamily",
+            "VariableID:e414ecda73fcc59277f2ff185fc7d4384b53f5f3/14:3"
+          ],
+          [
+            "lineHeight",
+            "VariableID:344a5dab23cc482780fa11679b70ee66516f7ea0/15:43"
+          ]
+        ]
+      },
+      {
+        "id": "238:1261",
+        "n": "Subtitle",
+        "t": "TEXT",
+        "d": 3,
+        "b": [
+          0,
+          48,
+          750,
+          28
+        ],
+        "visible": true,
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutPositioning": "AUTO",
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "characters": "¿En qué necesitas que te ayude?",
+        "fontName": {
+          "family": "Manrope",
+          "style": "Regular",
+          "variationSettings": {
+            "wght": 400
+          }
+        },
+        "fontSize": 20,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 28
+        },
+        "letterSpacing": {
+          "unit": "PIXELS",
+          "value": 0
+        },
+        "textStyleId": "S:4f627d060dffc9ff20afafa2c8a3adc468a669f6,982:519",
+        "textAlignHorizontal": "CENTER",
+        "fills": [
+          [
+            "SOLID",
+            {
+              "r": 0.27843138575553894,
+              "g": 0.3333333432674408,
+              "b": 0.4117647111415863
+            },
+            "VariableID:d368e7be8df104dd3306d748e4764bbdf13b917c/16:107"
+          ]
+        ],
+        "bindings": [
+          [
+            "fills",
+            "VariableID:d368e7be8df104dd3306d748e4764bbdf13b917c/16:107"
+          ],
+          [
+            "letterSpacing",
+            "VariableID:495a59bf37956ada84cf31a56f36a8af207dbfa4/15:59"
+          ],
+          [
+            "fontSize",
+            "VariableID:c5dd7d2ee70e024d0478735593ea6414ba5be8c5/14:39"
+          ],
+          [
+            "fontStyle",
+            "VariableID:9c325e7633542b965a42305ef2fa1287641e7891/14:7"
+          ],
+          [
+            "fontFamily",
+            "VariableID:e414ecda73fcc59277f2ff185fc7d4384b53f5f3/14:3"
+          ],
+          [
+            "lineHeight",
+            "VariableID:ba925ffb7da3ff79133acf48d63b7807b7294cff/15:35"
+          ]
+        ]
+      },
+      {
+        "id": "238:1262",
+        "n": "Conversation region",
+        "t": "FRAME",
+        "d": 1,
+        "b": [
+          0,
+          335.739990234375,
+          542,
+          100
+        ],
+        "visible": false,
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ]
+        ]
+      },
+      {
+        "id": "238:1263",
+        "n": "Messages",
+        "t": "FRAME",
+        "d": 2,
+        "b": [
+          0,
+          0,
+          542,
+          72
+        ],
+        "visible": true,
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "MAX",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ]
+        ]
+      },
+      {
+        "id": "238:1264",
+        "n": "Demo message",
+        "t": "INSTANCE",
+        "d": 3,
+        "b": [
+          0,
+          0,
+          542,
+          72
+        ],
+        "visible": true,
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MAX",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ]
+        ],
+        "main": [
+          "238:233",
+          "Conversation Message",
+          null,
+          true
+        ],
+        "props": {
+          "Message text#765:1": "¿Cuánto le debo al SAT este mes por IVA y cómo se compara con septiembre?"
+        }
+      },
+      {
+        "id": "238:1265",
+        "n": "Status text",
+        "t": "TEXT",
+        "d": 2,
+        "b": [
+          0,
+          80,
+          542,
+          20
+        ],
+        "visible": true,
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutPositioning": "AUTO",
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "characters": "Leyendo la información...",
+        "fontName": {
+          "family": "Manrope",
+          "style": "Regular",
+          "variationSettings": {
+            "wght": 400
+          }
+        },
+        "fontSize": 14,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "letterSpacing": {
+          "unit": "PIXELS",
+          "value": 0
+        },
+        "textStyleId": "S:1e79e86d57bf4121e3824ddf6dc9cf0a2466d947,982:214",
+        "textAlignHorizontal": "LEFT",
+        "fills": [
+          [
+            "SOLID",
+            {
+              "r": 0.3921568691730499,
+              "g": 0.45490196347236633,
+              "b": 0.545098066329956
+            },
+            "VariableID:2084313fd93be5bfba80030831d62dd20326fadc/16:111"
+          ]
+        ],
+        "bindings": [
+          [
+            "fills",
+            "VariableID:2084313fd93be5bfba80030831d62dd20326fadc/16:111"
+          ],
+          [
+            "letterSpacing",
+            "VariableID:495a59bf37956ada84cf31a56f36a8af207dbfa4/15:59"
+          ],
+          [
+            "fontSize",
+            "VariableID:5260f5a70c6e212d601f2c350c9039b2419cb916/14:31"
+          ],
+          [
+            "fontStyle",
+            "VariableID:9c325e7633542b965a42305ef2fa1287641e7891/14:7"
+          ],
+          [
+            "fontFamily",
+            "VariableID:e414ecda73fcc59277f2ff185fc7d4384b53f5f3/14:3"
+          ],
+          [
+            "lineHeight",
+            "VariableID:e1a027b54d7d53090ec4c9f4619033e10dafdfd3/15:27"
+          ]
+        ]
+      },
+      {
+        "id": "238:1357",
+        "n": "Conversation Composer",
+        "t": "INSTANCE",
+        "d": 1,
+        "b": [
+          67,
+          335.739990234375,
+          616,
+          138
+        ],
+        "visible": true,
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 4,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:227:4"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:227:5"
+          ],
+          [
+            "paddingTop",
+            "VariableID:227:5"
+          ],
+          [
+            "paddingRight",
+            "VariableID:227:5"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:227:5"
+          ]
+        ],
+        "main": [
+          "216:66",
+          "Conversation Composer",
+          "Conversation Composer",
+          false
+        ],
+        "props": {
+          "show extra actions#206:4": true,
+          "show disclaimer#206:1": true,
+          "show message#206:0": false
+        }
+      },
+      {
+        "id": "238:1267",
+        "n": "Suggestions",
+        "t": "FRAME",
+        "d": 1,
+        "b": [
+          0,
+          505.739990234375,
+          750,
+          96
+        ],
+        "visible": true,
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 16,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "CENTER",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:e037f662b9562e129ba597712cb57b973720054f/15:123"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "counterAxisSpacing",
+            "VariableID:e037f662b9562e129ba597712cb57b973720054f/15:123"
+          ]
+        ]
+      },
+      {
+        "id": "238:1406",
+        "n": "Chip/medium",
+        "t": "INSTANCE",
+        "d": 2,
+        "b": [
+          137,
+          0,
+          240,
+          40
+        ],
+        "visible": true,
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "HUG",
+        "layoutSizingVertical": "FIXED",
+        "itemSpacing": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "CENTER",
+        "primaryAxisAlignItems": "CENTER",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 9999,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "fills": [
+          [
+            "SOLID",
+            {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "VariableID:8:647"
+          ]
+        ],
+        "strokes": [
+          [
+            "SOLID",
+            {
+              "r": 0.3921568691730499,
+              "g": 0.45490196347236633,
+              "b": 0.545098066329956
+            },
+            "VariableID:8:649"
+          ]
+        ],
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:8:659"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:8:642"
+          ],
+          [
+            "paddingTop",
+            "VariableID:8:644"
+          ],
+          [
+            "paddingRight",
+            "VariableID:8:642"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:8:644"
+          ],
+          [
+            "height",
+            "VariableID:8:663"
+          ],
+          [
+            "topLeftRadius",
+            "VariableID:8:646"
+          ],
+          [
+            "topRightRadius",
+            "VariableID:8:646"
+          ],
+          [
+            "bottomLeftRadius",
+            "VariableID:8:646"
+          ],
+          [
+            "bottomRightRadius",
+            "VariableID:8:646"
+          ],
+          [
+            "strokeTopWeight",
+            "VariableID:8:648"
+          ],
+          [
+            "strokeBottomWeight",
+            "VariableID:8:648"
+          ],
+          [
+            "strokeLeftWeight",
+            "VariableID:8:648"
+          ],
+          [
+            "strokeRightWeight",
+            "VariableID:8:648"
+          ],
+          [
+            "fills",
+            "VariableID:8:647"
+          ],
+          [
+            "strokes",
+            "VariableID:8:649"
+          ]
+        ],
+        "reactions": [
+          [
+            {
+              "type": "MOUSE_ENTER",
+              "delay": 0
+            },
+            [
+              [
+                "NODE",
+                "CHANGE_TO",
+                "126:122"
+              ]
+            ]
+          ]
+        ],
+        "main": [
+          "126:112",
+          "size=medium, selected=false, state=default",
+          "Chip/medium",
+          false
+        ],
+        "props": {
+          "Left icon#126:124": "23:684",
+          "Show remove#126:118": false,
+          "Right icon#126:130": "23:684",
+          "Show counter#126:112": false,
+          "Show right icon#126:106": false,
+          "Show left icon#126:100": false,
+          "Counter#126:94": "12",
+          "Label#126:88": "Muéstrame mis ingresos del mes",
+          "size": "medium",
+          "selected": "false",
+          "state": "default"
+        }
+      },
+      {
+        "id": "238:1412",
+        "n": "Chip/medium",
+        "t": "INSTANCE",
+        "d": 2,
+        "b": [
+          393,
+          0,
+          220,
+          40
+        ],
+        "visible": true,
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "HUG",
+        "layoutSizingVertical": "FIXED",
+        "itemSpacing": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "CENTER",
+        "primaryAxisAlignItems": "CENTER",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 9999,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "fills": [
+          [
+            "SOLID",
+            {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "VariableID:8:647"
+          ]
+        ],
+        "strokes": [
+          [
+            "SOLID",
+            {
+              "r": 0.3921568691730499,
+              "g": 0.45490196347236633,
+              "b": 0.545098066329956
+            },
+            "VariableID:8:649"
+          ]
+        ],
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:8:659"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:8:642"
+          ],
+          [
+            "paddingTop",
+            "VariableID:8:644"
+          ],
+          [
+            "paddingRight",
+            "VariableID:8:642"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:8:644"
+          ],
+          [
+            "height",
+            "VariableID:8:663"
+          ],
+          [
+            "topLeftRadius",
+            "VariableID:8:646"
+          ],
+          [
+            "topRightRadius",
+            "VariableID:8:646"
+          ],
+          [
+            "bottomLeftRadius",
+            "VariableID:8:646"
+          ],
+          [
+            "bottomRightRadius",
+            "VariableID:8:646"
+          ],
+          [
+            "strokeTopWeight",
+            "VariableID:8:648"
+          ],
+          [
+            "strokeBottomWeight",
+            "VariableID:8:648"
+          ],
+          [
+            "strokeLeftWeight",
+            "VariableID:8:648"
+          ],
+          [
+            "strokeRightWeight",
+            "VariableID:8:648"
+          ],
+          [
+            "fills",
+            "VariableID:8:647"
+          ],
+          [
+            "strokes",
+            "VariableID:8:649"
+          ]
+        ],
+        "reactions": [
+          [
+            {
+              "type": "MOUSE_ENTER",
+              "delay": 0
+            },
+            [
+              [
+                "NODE",
+                "CHANGE_TO",
+                "126:122"
+              ]
+            ]
+          ]
+        ],
+        "main": [
+          "126:112",
+          "size=medium, selected=false, state=default",
+          "Chip/medium",
+          false
+        ],
+        "props": {
+          "Left icon#126:124": "23:684",
+          "Show remove#126:118": false,
+          "Right icon#126:130": "23:684",
+          "Show counter#126:112": false,
+          "Show right icon#126:106": false,
+          "Show left icon#126:100": false,
+          "Counter#126:94": "12",
+          "Label#126:88": "¿Cuánto IVA tengo por pagar?",
+          "size": "medium",
+          "selected": "false",
+          "state": "default"
+        }
+      },
+      {
+        "id": "238:1421",
+        "n": "Chip/medium",
+        "t": "INSTANCE",
+        "d": 2,
+        "b": [
+          210.5,
+          56,
+          329,
+          40
+        ],
+        "visible": true,
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "HUG",
+        "layoutSizingVertical": "FIXED",
+        "itemSpacing": 4,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "CENTER",
+        "primaryAxisAlignItems": "CENTER",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 9999,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "fills": [
+          [
+            "SOLID",
+            {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "VariableID:8:647"
+          ]
+        ],
+        "strokes": [
+          [
+            "SOLID",
+            {
+              "r": 0.3921568691730499,
+              "g": 0.45490196347236633,
+              "b": 0.545098066329956
+            },
+            "VariableID:8:649"
+          ]
+        ],
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:8:659"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:8:642"
+          ],
+          [
+            "paddingTop",
+            "VariableID:8:644"
+          ],
+          [
+            "paddingRight",
+            "VariableID:8:642"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:8:644"
+          ],
+          [
+            "height",
+            "VariableID:8:663"
+          ],
+          [
+            "topLeftRadius",
+            "VariableID:8:646"
+          ],
+          [
+            "topRightRadius",
+            "VariableID:8:646"
+          ],
+          [
+            "bottomLeftRadius",
+            "VariableID:8:646"
+          ],
+          [
+            "bottomRightRadius",
+            "VariableID:8:646"
+          ],
+          [
+            "strokeTopWeight",
+            "VariableID:8:648"
+          ],
+          [
+            "strokeBottomWeight",
+            "VariableID:8:648"
+          ],
+          [
+            "strokeLeftWeight",
+            "VariableID:8:648"
+          ],
+          [
+            "strokeRightWeight",
+            "VariableID:8:648"
+          ],
+          [
+            "fills",
+            "VariableID:8:647"
+          ],
+          [
+            "strokes",
+            "VariableID:8:649"
+          ]
+        ],
+        "reactions": [
+          [
+            {
+              "type": "MOUSE_ENTER",
+              "delay": 0
+            },
+            [
+              [
+                "NODE",
+                "CHANGE_TO",
+                "126:122"
+              ]
+            ]
+          ]
+        ],
+        "main": [
+          "126:112",
+          "size=medium, selected=false, state=default",
+          "Chip/medium",
+          false
+        ],
+        "props": {
+          "Left icon#126:124": "23:684",
+          "Show remove#126:118": false,
+          "Right icon#126:130": "23:684",
+          "Show counter#126:112": false,
+          "Show right icon#126:106": false,
+          "Show left icon#126:100": false,
+          "Counter#126:94": "12",
+          "Label#126:88": "Revisa que facturas están pendientes de pago",
+          "size": "medium",
+          "selected": "false",
+          "state": "default"
+        }
+      }
+    ],
+    "vars": [
+      [
+        "VariableID:822683fdadbc2e6cf5b287d4a451a1ddbe131084/15:131",
+        [
+          "spacing/2xl",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67",
+        [
+          "spacing/none",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115",
+        [
+          "spacing/sm",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:bc42b776e7baffd38a38005f7d6758c9260c7052/16:103",
+        [
+          "color/text/primary",
+          true,
+          "COLOR"
+        ]
+      ],
+      [
+        "VariableID:495a59bf37956ada84cf31a56f36a8af207dbfa4/15:59",
+        [
+          "font/letter-spacing/normal",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:41642e9b36332a80ae764644871c666518902777/15:7",
+        [
+          "font/size/2xl",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:68071bf73ebd5934ca05ffb1dd26fb91deb782da/14:19",
+        [
+          "font/weight/bold",
+          true,
+          "STRING"
+        ]
+      ],
+      [
+        "VariableID:e414ecda73fcc59277f2ff185fc7d4384b53f5f3/14:3",
+        [
+          "font/family/base",
+          true,
+          "STRING"
+        ]
+      ],
+      [
+        "VariableID:344a5dab23cc482780fa11679b70ee66516f7ea0/15:43",
+        [
+          "font/line-height/2xl",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:4c664b84b945c467c10429e3834408bc1cf69cd7/16:123",
+        [
+          "color/text/brand",
+          true,
+          "COLOR"
+        ]
+      ],
+      [
+        "VariableID:d368e7be8df104dd3306d748e4764bbdf13b917c/16:107",
+        [
+          "color/text/secondary",
+          true,
+          "COLOR"
+        ]
+      ],
+      [
+        "VariableID:c5dd7d2ee70e024d0478735593ea6414ba5be8c5/14:39",
+        [
+          "font/size/lg",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:9c325e7633542b965a42305ef2fa1287641e7891/14:7",
+        [
+          "font/weight/regular",
+          true,
+          "STRING"
+        ]
+      ],
+      [
+        "VariableID:ba925ffb7da3ff79133acf48d63b7807b7294cff/15:35",
+        [
+          "font/line-height/lg",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:2084313fd93be5bfba80030831d62dd20326fadc/16:111",
+        [
+          "color/text/tertiary",
+          true,
+          "COLOR"
+        ]
+      ],
+      [
+        "VariableID:5260f5a70c6e212d601f2c350c9039b2419cb916/14:31",
+        [
+          "font/size/sm",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:e1a027b54d7d53090ec4c9f4619033e10dafdfd3/15:27",
+        [
+          "font/line-height/sm",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:227:4",
+        [
+          "conversation-composer/spacing/disclaimer-gap",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:227:5",
+        [
+          "conversation-composer/spacing/none",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:e037f662b9562e129ba597712cb57b973720054f/15:123",
+        [
+          "spacing/lg",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:8:659",
+        [
+          "chip/spacing/xs",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:8:642",
+        [
+          "chip/spacing/md",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:8:644",
+        [
+          "chip/spacing/sm",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:8:663",
+        [
+          "chip/size/height-medium",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:8:646",
+        [
+          "chip/radius/container",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:8:648",
+        [
+          "chip/border/width",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:8:647",
+        [
+          "chip/color/bg/default",
+          false,
+          "COLOR"
+        ]
+      ],
+      [
+        "VariableID:8:649",
+        [
+          "chip/color/stroke/default",
+          false,
+          "COLOR"
+        ]
+      ]
+    ],
+    "defs": {
+      "Messages#238:0": {
+        "type": "SLOT",
+        "description": "",
+        "slotSettings": {
+          "stretchChildOnInsert": false,
+          "displayEmptyByDefault": false,
+          "minChildren": null,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": false
+        },
+        "preferredValues": []
+      },
+      "Property 1": {
+        "type": "VARIANT",
+        "defaultValue": "Standby",
+        "variantOptions": [
+          "Standby",
+          "Started"
+        ]
+      }
+    }
+  },
+  "started": {
+    "rows": [
+      {
+        "id": "238:2234",
+        "n": "Property 1=Started",
+        "t": "COMPONENT",
+        "d": 0,
+        "b": [
+          874,
+          16,
+          750,
+          683
+        ],
+        "visible": true,
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 32,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": 816,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "CENTER",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:822683fdadbc2e6cf5b287d4a451a1ddbe131084/15:131"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:822683fdadbc2e6cf5b287d4a451a1ddbe131084/15:131"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ]
+        ]
+      },
+      {
+        "id": "238:2080",
+        "n": "Welcome",
+        "t": "FRAME",
+        "d": 1,
+        "b": [
+          0,
+          32,
+          542,
+          271.739990234375
+        ],
+        "visible": false,
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "CENTER",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:822683fdadbc2e6cf5b287d4a451a1ddbe131084/15:131"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ]
+        ]
+      },
+      {
+        "id": "238:2081",
+        "n": "BENI welcome",
+        "t": "INSTANCE",
+        "d": 2,
+        "b": [
+          186.6300048828125,
+          0,
+          168.739990234375,
+          163.739990234375
+        ],
+        "visible": true,
+        "layoutMode": "NONE",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ]
+        ],
+        "main": [
+          "238:198",
+          ".Chat / BENI Welcome",
+          null,
+          true
+        ],
+        "props": {}
+      },
+      {
+        "id": "238:2082",
+        "n": "Greeting block",
+        "t": "FRAME",
+        "d": 2,
+        "b": [
+          0,
+          195.739990234375,
+          542,
+          76
+        ],
+        "visible": true,
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ]
+        ]
+      },
+      {
+        "id": "238:2083",
+        "n": "Greeting line",
+        "t": "FRAME",
+        "d": 3,
+        "b": [
+          0,
+          0,
+          542,
+          40
+        ],
+        "visible": true,
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "CENTER",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "counterAxisSpacing",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ]
+        ]
+      },
+      {
+        "id": "238:2084",
+        "n": "Greeting",
+        "t": "TEXT",
+        "d": 4,
+        "b": [
+          126.5,
+          0,
+          80,
+          40
+        ],
+        "visible": true,
+        "layoutSizingHorizontal": "HUG",
+        "layoutSizingVertical": "HUG",
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutPositioning": "AUTO",
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "characters": "Hola,",
+        "fontName": {
+          "family": "Manrope",
+          "style": "Bold",
+          "variationSettings": {
+            "wght": 700
+          }
+        },
+        "fontSize": 32,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 40
+        },
+        "letterSpacing": {
+          "unit": "PIXELS",
+          "value": 0
+        },
+        "textStyleId": "S:711fbb388c69ce8d554ef531ebd946cae14a0080,982:605",
+        "textAlignHorizontal": "LEFT",
+        "fills": [
+          [
+            "SOLID",
+            {
+              "r": 0.05882352963089943,
+              "g": 0.09019608050584793,
+              "b": 0.16470588743686676
+            },
+            "VariableID:bc42b776e7baffd38a38005f7d6758c9260c7052/16:103"
+          ]
+        ],
+        "bindings": [
+          [
+            "fills",
+            "VariableID:bc42b776e7baffd38a38005f7d6758c9260c7052/16:103"
+          ],
+          [
+            "letterSpacing",
+            "VariableID:495a59bf37956ada84cf31a56f36a8af207dbfa4/15:59"
+          ],
+          [
+            "fontSize",
+            "VariableID:41642e9b36332a80ae764644871c666518902777/15:7"
+          ],
+          [
+            "fontStyle",
+            "VariableID:68071bf73ebd5934ca05ffb1dd26fb91deb782da/14:19"
+          ],
+          [
+            "fontFamily",
+            "VariableID:e414ecda73fcc59277f2ff185fc7d4384b53f5f3/14:3"
+          ],
+          [
+            "lineHeight",
+            "VariableID:344a5dab23cc482780fa11679b70ee66516f7ea0/15:43"
+          ]
+        ]
+      },
+      {
+        "id": "238:2085",
+        "n": "User name",
+        "t": "TEXT",
+        "d": 4,
+        "b": [
+          214.5,
+          0,
+          201,
+          40
+        ],
+        "visible": true,
+        "layoutSizingHorizontal": "HUG",
+        "layoutSizingVertical": "HUG",
+        "minWidth": null,
+        "maxWidth": 542,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutPositioning": "AUTO",
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "characters": "Bruce Wayne",
+        "fontName": {
+          "family": "Manrope",
+          "style": "Bold",
+          "variationSettings": {
+            "wght": 700
+          }
+        },
+        "fontSize": 32,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 40
+        },
+        "letterSpacing": {
+          "unit": "PIXELS",
+          "value": 0
+        },
+        "textStyleId": "S:711fbb388c69ce8d554ef531ebd946cae14a0080,982:605",
+        "textAlignHorizontal": "LEFT",
+        "fills": [
+          [
+            "SOLID",
+            {
+              "r": 0.19607843458652496,
+              "g": 0.3333333432674408,
+              "b": 0.9686274528503418
+            },
+            "VariableID:4c664b84b945c467c10429e3834408bc1cf69cd7/16:123"
+          ]
+        ],
+        "bindings": [
+          [
+            "fills",
+            "VariableID:4c664b84b945c467c10429e3834408bc1cf69cd7/16:123"
+          ],
+          [
+            "letterSpacing",
+            "VariableID:495a59bf37956ada84cf31a56f36a8af207dbfa4/15:59"
+          ],
+          [
+            "fontSize",
+            "VariableID:41642e9b36332a80ae764644871c666518902777/15:7"
+          ],
+          [
+            "fontStyle",
+            "VariableID:68071bf73ebd5934ca05ffb1dd26fb91deb782da/14:19"
+          ],
+          [
+            "fontFamily",
+            "VariableID:e414ecda73fcc59277f2ff185fc7d4384b53f5f3/14:3"
+          ],
+          [
+            "lineHeight",
+            "VariableID:344a5dab23cc482780fa11679b70ee66516f7ea0/15:43"
+          ]
+        ]
+      },
+      {
+        "id": "238:2086",
+        "n": "Subtitle",
+        "t": "TEXT",
+        "d": 3,
+        "b": [
+          0,
+          48,
+          542,
+          28
+        ],
+        "visible": true,
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutPositioning": "AUTO",
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "characters": "¿En qué necesitas que te ayude?",
+        "fontName": {
+          "family": "Manrope",
+          "style": "Regular",
+          "variationSettings": {
+            "wght": 400
+          }
+        },
+        "fontSize": 20,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 28
+        },
+        "letterSpacing": {
+          "unit": "PIXELS",
+          "value": 0
+        },
+        "textStyleId": "S:4f627d060dffc9ff20afafa2c8a3adc468a669f6,982:519",
+        "textAlignHorizontal": "CENTER",
+        "fills": [
+          [
+            "SOLID",
+            {
+              "r": 0.27843138575553894,
+              "g": 0.3333333432674408,
+              "b": 0.4117647111415863
+            },
+            "VariableID:d368e7be8df104dd3306d748e4764bbdf13b917c/16:107"
+          ]
+        ],
+        "bindings": [
+          [
+            "fills",
+            "VariableID:d368e7be8df104dd3306d748e4764bbdf13b917c/16:107"
+          ],
+          [
+            "letterSpacing",
+            "VariableID:495a59bf37956ada84cf31a56f36a8af207dbfa4/15:59"
+          ],
+          [
+            "fontSize",
+            "VariableID:c5dd7d2ee70e024d0478735593ea6414ba5be8c5/14:39"
+          ],
+          [
+            "fontStyle",
+            "VariableID:9c325e7633542b965a42305ef2fa1287641e7891/14:7"
+          ],
+          [
+            "fontFamily",
+            "VariableID:e414ecda73fcc59277f2ff185fc7d4384b53f5f3/14:3"
+          ],
+          [
+            "lineHeight",
+            "VariableID:ba925ffb7da3ff79133acf48d63b7807b7294cff/15:35"
+          ]
+        ]
+      },
+      {
+        "id": "238:2087",
+        "n": "Conversation region",
+        "t": "FRAME",
+        "d": 1,
+        "b": [
+          0,
+          32,
+          750,
+          481
+        ],
+        "visible": true,
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ]
+        ]
+      },
+      {
+        "id": "238:2088",
+        "n": "Messages",
+        "t": "SLOT",
+        "d": 2,
+        "b": [
+          0,
+          0,
+          750,
+          453
+        ],
+        "visible": true,
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "MAX",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {
+          "slotContentId": "Messages#238:0"
+        },
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ]
+        ]
+      },
+      {
+        "id": "238:2145",
+        "n": "User message",
+        "t": "INSTANCE",
+        "d": 3,
+        "b": [
+          0,
+          135,
+          750,
+          52
+        ],
+        "visible": true,
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MAX",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:237:4"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:237:5"
+          ],
+          [
+            "paddingTop",
+            "VariableID:237:5"
+          ],
+          [
+            "paddingRight",
+            "VariableID:237:5"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:237:5"
+          ]
+        ],
+        "main": [
+          "237:19",
+          "User message",
+          "User message",
+          false
+        ],
+        "props": {
+          "Message#237:0": "Muéstrame facturas de personas físicas con IVA retenido en marzo 2025"
+        }
+      },
+      {
+        "id": "238:2148",
+        "n": "Conversation Response",
+        "t": "INSTANCE",
+        "d": 3,
+        "b": [
+          0,
+          195,
+          750,
+          258
+        ],
+        "visible": true,
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 8,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:227:33"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:227:34"
+          ],
+          [
+            "paddingTop",
+            "VariableID:227:32"
+          ],
+          [
+            "paddingRight",
+            "VariableID:227:34"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:227:32"
+          ]
+        ],
+        "main": [
+          "222:73",
+          "Agent=BENI",
+          "Conversation Response",
+          false
+        ],
+        "props": {
+          "Show secondary content#766:4": true,
+          "Show additional actions#766:6": true,
+          "Show previews#766:2": true,
+          "Agent": "BENI"
+        }
+      },
+      {
+        "id": "238:2090",
+        "n": "Status text",
+        "t": "TEXT",
+        "d": 2,
+        "b": [
+          0,
+          461,
+          750,
+          20
+        ],
+        "visible": true,
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "layoutPositioning": "AUTO",
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "characters": "Leyendo la información...",
+        "fontName": {
+          "family": "Manrope",
+          "style": "Regular",
+          "variationSettings": {
+            "wght": 400
+          }
+        },
+        "fontSize": 14,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "letterSpacing": {
+          "unit": "PIXELS",
+          "value": 0
+        },
+        "textStyleId": "S:1e79e86d57bf4121e3824ddf6dc9cf0a2466d947,982:214",
+        "textAlignHorizontal": "LEFT",
+        "fills": [
+          [
+            "SOLID",
+            {
+              "r": 0.3921568691730499,
+              "g": 0.45490196347236633,
+              "b": 0.545098066329956
+            },
+            "VariableID:2084313fd93be5bfba80030831d62dd20326fadc/16:111"
+          ]
+        ],
+        "bindings": [
+          [
+            "fills",
+            "VariableID:2084313fd93be5bfba80030831d62dd20326fadc/16:111"
+          ],
+          [
+            "letterSpacing",
+            "VariableID:495a59bf37956ada84cf31a56f36a8af207dbfa4/15:59"
+          ],
+          [
+            "fontSize",
+            "VariableID:5260f5a70c6e212d601f2c350c9039b2419cb916/14:31"
+          ],
+          [
+            "fontStyle",
+            "VariableID:9c325e7633542b965a42305ef2fa1287641e7891/14:7"
+          ],
+          [
+            "fontFamily",
+            "VariableID:e414ecda73fcc59277f2ff185fc7d4384b53f5f3/14:3"
+          ],
+          [
+            "lineHeight",
+            "VariableID:e1a027b54d7d53090ec4c9f4619033e10dafdfd3/15:27"
+          ]
+        ]
+      },
+      {
+        "id": "238:2202",
+        "n": "Conversation Composer",
+        "t": "INSTANCE",
+        "d": 1,
+        "b": [
+          0,
+          545,
+          750,
+          138
+        ],
+        "visible": true,
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 4,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:227:4"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:227:5"
+          ],
+          [
+            "paddingTop",
+            "VariableID:227:5"
+          ],
+          [
+            "paddingRight",
+            "VariableID:227:5"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:227:5"
+          ]
+        ],
+        "main": [
+          "216:66",
+          "Conversation Composer",
+          "Conversation Composer",
+          false
+        ],
+        "props": {
+          "show extra actions#206:4": true,
+          "show disclaimer#206:1": true,
+          "show message#206:0": false
+        }
+      },
+      {
+        "id": "238:2092",
+        "n": "Suggestions",
+        "t": "FRAME",
+        "d": 1,
+        "b": [
+          0,
+          314,
+          542,
+          40
+        ],
+        "visible": false,
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 16,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "MIN",
+        "primaryAxisAlignItems": "CENTER",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:e037f662b9562e129ba597712cb57b973720054f/15:123"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingTop",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingRight",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67"
+          ],
+          [
+            "counterAxisSpacing",
+            "VariableID:e037f662b9562e129ba597712cb57b973720054f/15:123"
+          ]
+        ]
+      },
+      {
+        "id": "238:2093",
+        "n": "Chat Suggestion",
+        "t": "INSTANCE",
+        "d": 2,
+        "b": [
+          14,
+          0,
+          235,
+          36
+        ],
+        "visible": true,
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "HUG",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 8,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "CENTER",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 9999,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "fills": [
+          [
+            "SOLID",
+            {
+              "r": 0.9372549057006836,
+              "g": 0.9529411792755127,
+              "b": 1
+            },
+            "VariableID:a0ea253d8eb011b1031aeb6321a7f92f3fd653cd/16:271"
+          ]
+        ],
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:4e3a82a46ec486c78358ed5b929445b7bfd80cc8/15:119"
+          ],
+          [
+            "paddingTop",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingRight",
+            "VariableID:4e3a82a46ec486c78358ed5b929445b7bfd80cc8/15:119"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "topLeftRadius",
+            "VariableID:8d0388354e36a3664a9710cad6ebadacb7eaf56f/16:39"
+          ],
+          [
+            "topRightRadius",
+            "VariableID:8d0388354e36a3664a9710cad6ebadacb7eaf56f/16:39"
+          ],
+          [
+            "bottomLeftRadius",
+            "VariableID:8d0388354e36a3664a9710cad6ebadacb7eaf56f/16:39"
+          ],
+          [
+            "bottomRightRadius",
+            "VariableID:8d0388354e36a3664a9710cad6ebadacb7eaf56f/16:39"
+          ],
+          [
+            "fills",
+            "VariableID:a0ea253d8eb011b1031aeb6321a7f92f3fd653cd/16:271"
+          ]
+        ],
+        "reactions": [
+          [
+            {
+              "type": "ON_HOVER"
+            },
+            [
+              [
+                "NODE",
+                "CHANGE_TO",
+                "238:1062"
+              ]
+            ]
+          ]
+        ],
+        "main": [
+          "238:1059",
+          "State=Default",
+          "Chat Suggestion",
+          true
+        ],
+        "props": {
+          "Character visible#1314:0": false,
+          "Character#784:0": "238:1049",
+          "Label#784:1": "Muéstrame mis ingresos del mes",
+          "State": "Default"
+        }
+      },
+      {
+        "id": "238:2094",
+        "n": "Chat Suggestion",
+        "t": "INSTANCE",
+        "d": 2,
+        "b": [
+          289,
+          0,
+          215,
+          36
+        ],
+        "visible": true,
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "HUG",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 8,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "CENTER",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 9999,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "fills": [
+          [
+            "SOLID",
+            {
+              "r": 0.9372549057006836,
+              "g": 0.9529411792755127,
+              "b": 1
+            },
+            "VariableID:a0ea253d8eb011b1031aeb6321a7f92f3fd653cd/16:271"
+          ]
+        ],
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:4e3a82a46ec486c78358ed5b929445b7bfd80cc8/15:119"
+          ],
+          [
+            "paddingTop",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingRight",
+            "VariableID:4e3a82a46ec486c78358ed5b929445b7bfd80cc8/15:119"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "topLeftRadius",
+            "VariableID:8d0388354e36a3664a9710cad6ebadacb7eaf56f/16:39"
+          ],
+          [
+            "topRightRadius",
+            "VariableID:8d0388354e36a3664a9710cad6ebadacb7eaf56f/16:39"
+          ],
+          [
+            "bottomLeftRadius",
+            "VariableID:8d0388354e36a3664a9710cad6ebadacb7eaf56f/16:39"
+          ],
+          [
+            "bottomRightRadius",
+            "VariableID:8d0388354e36a3664a9710cad6ebadacb7eaf56f/16:39"
+          ],
+          [
+            "fills",
+            "VariableID:a0ea253d8eb011b1031aeb6321a7f92f3fd653cd/16:271"
+          ]
+        ],
+        "reactions": [
+          [
+            {
+              "type": "ON_HOVER"
+            },
+            [
+              [
+                "NODE",
+                "CHANGE_TO",
+                "238:1062"
+              ]
+            ]
+          ]
+        ],
+        "main": [
+          "238:1059",
+          "State=Default",
+          "Chat Suggestion",
+          true
+        ],
+        "props": {
+          "Character visible#1314:0": false,
+          "Character#784:0": "238:1049",
+          "Label#784:1": "¿Cuánto IVA tengo por pagar?",
+          "State": "Default"
+        }
+      },
+      {
+        "id": "238:2095",
+        "n": "Chat Suggestion",
+        "t": "INSTANCE",
+        "d": 2,
+        "b": [
+          98,
+          52,
+          322,
+          36
+        ],
+        "visible": true,
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "HUG",
+        "layoutSizingVertical": "HUG",
+        "itemSpacing": 8,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "counterAxisAlignItems": "CENTER",
+        "primaryAxisAlignItems": "MIN",
+        "layoutPositioning": "AUTO",
+        "clipsContent": false,
+        "cornerRadius": 9999,
+        "strokeWeight": 1,
+        "componentPropertyReferences": {},
+        "fills": [
+          [
+            "SOLID",
+            {
+              "r": 0.9372549057006836,
+              "g": 0.9529411792755127,
+              "b": 1
+            },
+            "VariableID:a0ea253d8eb011b1031aeb6321a7f92f3fd653cd/16:271"
+          ]
+        ],
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingLeft",
+            "VariableID:4e3a82a46ec486c78358ed5b929445b7bfd80cc8/15:119"
+          ],
+          [
+            "paddingTop",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "paddingRight",
+            "VariableID:4e3a82a46ec486c78358ed5b929445b7bfd80cc8/15:119"
+          ],
+          [
+            "paddingBottom",
+            "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115"
+          ],
+          [
+            "topLeftRadius",
+            "VariableID:8d0388354e36a3664a9710cad6ebadacb7eaf56f/16:39"
+          ],
+          [
+            "topRightRadius",
+            "VariableID:8d0388354e36a3664a9710cad6ebadacb7eaf56f/16:39"
+          ],
+          [
+            "bottomLeftRadius",
+            "VariableID:8d0388354e36a3664a9710cad6ebadacb7eaf56f/16:39"
+          ],
+          [
+            "bottomRightRadius",
+            "VariableID:8d0388354e36a3664a9710cad6ebadacb7eaf56f/16:39"
+          ],
+          [
+            "fills",
+            "VariableID:a0ea253d8eb011b1031aeb6321a7f92f3fd653cd/16:271"
+          ]
+        ],
+        "reactions": [
+          [
+            {
+              "type": "ON_HOVER"
+            },
+            [
+              [
+                "NODE",
+                "CHANGE_TO",
+                "238:1062"
+              ]
+            ]
+          ]
+        ],
+        "main": [
+          "238:1059",
+          "State=Default",
+          "Chat Suggestion",
+          true
+        ],
+        "props": {
+          "Character visible#1314:0": false,
+          "Character#784:0": "238:905",
+          "Label#784:1": "Revisa que facturas están pendientes de pago",
+          "State": "Default"
+        }
+      }
+    ],
+    "vars": [
+      [
+        "VariableID:822683fdadbc2e6cf5b287d4a451a1ddbe131084/15:131",
+        [
+          "spacing/2xl",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:fc7fa771c3f0d1d813e1a8e83baacaf7bee76d50/15:67",
+        [
+          "spacing/none",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:a8d685f7e485d2544df2baaf3bc2a44d9ea22d2f/15:115",
+        [
+          "spacing/sm",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:bc42b776e7baffd38a38005f7d6758c9260c7052/16:103",
+        [
+          "color/text/primary",
+          true,
+          "COLOR"
+        ]
+      ],
+      [
+        "VariableID:495a59bf37956ada84cf31a56f36a8af207dbfa4/15:59",
+        [
+          "font/letter-spacing/normal",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:41642e9b36332a80ae764644871c666518902777/15:7",
+        [
+          "font/size/2xl",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:68071bf73ebd5934ca05ffb1dd26fb91deb782da/14:19",
+        [
+          "font/weight/bold",
+          true,
+          "STRING"
+        ]
+      ],
+      [
+        "VariableID:e414ecda73fcc59277f2ff185fc7d4384b53f5f3/14:3",
+        [
+          "font/family/base",
+          true,
+          "STRING"
+        ]
+      ],
+      [
+        "VariableID:344a5dab23cc482780fa11679b70ee66516f7ea0/15:43",
+        [
+          "font/line-height/2xl",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:4c664b84b945c467c10429e3834408bc1cf69cd7/16:123",
+        [
+          "color/text/brand",
+          true,
+          "COLOR"
+        ]
+      ],
+      [
+        "VariableID:d368e7be8df104dd3306d748e4764bbdf13b917c/16:107",
+        [
+          "color/text/secondary",
+          true,
+          "COLOR"
+        ]
+      ],
+      [
+        "VariableID:c5dd7d2ee70e024d0478735593ea6414ba5be8c5/14:39",
+        [
+          "font/size/lg",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:9c325e7633542b965a42305ef2fa1287641e7891/14:7",
+        [
+          "font/weight/regular",
+          true,
+          "STRING"
+        ]
+      ],
+      [
+        "VariableID:ba925ffb7da3ff79133acf48d63b7807b7294cff/15:35",
+        [
+          "font/line-height/lg",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:237:4",
+        [
+          "user-message/spacing/gap",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:237:5",
+        [
+          "user-message/spacing/none",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:227:33",
+        [
+          "conversation-response/spacing/stack",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:227:34",
+        [
+          "conversation-response/spacing/inset",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:227:32",
+        [
+          "conversation-response/spacing/none",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:2084313fd93be5bfba80030831d62dd20326fadc/16:111",
+        [
+          "color/text/tertiary",
+          true,
+          "COLOR"
+        ]
+      ],
+      [
+        "VariableID:5260f5a70c6e212d601f2c350c9039b2419cb916/14:31",
+        [
+          "font/size/sm",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:e1a027b54d7d53090ec4c9f4619033e10dafdfd3/15:27",
+        [
+          "font/line-height/sm",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:227:4",
+        [
+          "conversation-composer/spacing/disclaimer-gap",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:227:5",
+        [
+          "conversation-composer/spacing/none",
+          false,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:e037f662b9562e129ba597712cb57b973720054f/15:123",
+        [
+          "spacing/lg",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:4e3a82a46ec486c78358ed5b929445b7bfd80cc8/15:119",
+        [
+          "spacing/md",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:8d0388354e36a3664a9710cad6ebadacb7eaf56f/16:39",
+        [
+          "radius/full",
+          true,
+          "FLOAT"
+        ]
+      ],
+      [
+        "VariableID:a0ea253d8eb011b1031aeb6321a7f92f3fd653cd/16:271",
+        [
+          "color/surface/brand",
+          true,
+          "COLOR"
+        ]
+      ]
+    ],
+    "defs": {
+      "Messages#238:0": {
+        "type": "SLOT",
+        "description": "",
+        "slotSettings": {
+          "stretchChildOnInsert": false,
+          "displayEmptyByDefault": false,
+          "minChildren": null,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": false
+        },
+        "preferredValues": []
+      },
+      "Property 1": {
+        "type": "VARIANT",
+        "defaultValue": "Standby",
+        "variantOptions": [
+          "Standby",
+          "Started"
+        ]
+      }
+    }
+  },
+  "brand": {
+    "a": [
+      [
+        "6:0",
+        "color/blue/400"
+      ],
+      [
+        "6:1",
+        "color/green/500"
+      ],
+      [
+        "6:2",
+        "color/orange/500"
+      ],
+      [
+        "6:3",
+        "color/purple/500"
+      ]
+    ],
+    "max": [
+      816,
+      816
+    ],
+    "setBounds": [
+      1640,
+      715
+    ]
+  }
+}

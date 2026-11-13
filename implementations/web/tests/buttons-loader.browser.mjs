@@ -6,9 +6,12 @@ import { extname, resolve, sep } from 'node:path';
 import { verifyCharacters } from './characters.browser.mjs';
 import { verifyConversationComposer } from './conversation-composer.browser.mjs';
 import { verifyConversationResponse } from './conversation-response.browser.mjs';
+import { verifyUserMessage } from './user-message.browser.mjs';
+import { verifyChat } from './chat.browser.mjs';
+import { verifyChatSidebar } from './chat-sidebar.browser.mjs';
 
 const root = resolve('out');
-const types = {'.html':'text/html', '.js':'text/javascript', '.css':'text/css', '.woff2':'font/woff2'};
+const types = {'.html':'text/html', '.js':'text/javascript', '.css':'text/css', '.woff2':'font/woff2', '.svg':'image/svg+xml'};
 const server = createServer(async (request, response) => {
   const pathname = new URL(request.url, 'http://localhost').pathname;
   const file = resolve(root, '.' + (pathname === '/' ? '/index.html' : pathname));
@@ -353,6 +356,23 @@ try {
   await settings.focus();
   await page.keyboard.press('Space');
   assert.equal(await page.locator('#demo-section-action-status').textContent(),'Configuración de filtros abierta.');
+  const brandSwitch = page.getByRole('checkbox',{name:'Mostrar el logo en lugar del título'});
+  await brandSwitch.focus();
+  await page.keyboard.press('Space');
+  const brandHeading = page.getByRole('heading',{name:'Beni',exact:true,level:3});
+  const brand = brandHeading.getByRole('img',{name:'Beni',exact:true});
+  const brandMetrics = await brand.evaluate(async img=>{
+    await img.decode();
+    const rect = img.getBoundingClientRect();
+    return [rect.width, rect.height, img.naturalWidth > 0];
+  });
+  assert.deepEqual(brandMetrics,[87,32,true]);
+  assert.equal(await brandHeading.textContent(),'');
+  assert.equal(await section.count(),0);
+  assert.equal(await brandHeading.locator('xpath=ancestor::header').getByRole('button',{name:'Configurar filtros'}).count(),1);
+  await page.keyboard.press('Space');
+  assert.equal(await section.count(),1);
+  assert.equal(await brandHeading.count(),0);
   const narrowSection = page.locator('#demo-section-start [data-blueheart=section-header]');
   assert.equal((await narrowSection.boundingBox()).width,640);
   assert.equal(await narrowSection.locator('.bh-section-header-inputs input').count(),1);
@@ -387,6 +407,26 @@ try {
   assert.equal(await shellBodyInput.inputValue(),'Conservar esta nota');
   assert.deepEqual(await shellBody.getByRole('heading').allTextContents(),
     ['Comprobantes registrados','Por conciliar','Revisión del periodo']);
+  await distribution.selectOption('conversation');
+  const conversationBody = shell.locator('[data-slot=body]');
+  const rightSidebar = shell.locator('[data-slot=right-sidebar]');
+  const shellRail = rightSidebar.locator('[data-mode=rail]');
+  const shellPanel = rightSidebar.locator('[data-mode=panel]');
+  assert.equal((await conversationBody.boundingBox()).width,1193);
+  assert.equal(await shellRail.getByRole('button',{pressed:true}).count(),0);
+  assert.equal(await shellPanel.count(),0);
+  await shellRail.getByRole('button',{name:'Chats',exact:true}).focus();
+  await page.keyboard.press('Space');
+  assert.equal((await shellPanel.boundingBox()).width,264);
+  assert.equal((await conversationBody.boundingBox()).width,929);
+  const compose = conversationBody.getByRole('textbox',{name:'Redactar en conversación de App Shell'});
+  await compose.fill('Conversación de muestra');
+  await conversationBody.getByRole('button',{name:'Enviar mensaje'}).click();
+  assert.equal(await conversationBody.locator('[data-state=started] [data-slot=messages]').innerText(),'Conversación de muestra');
+  await shellPanel.getByRole('button',{name:'Cerrar panel'}).focus();
+  await page.keyboard.press('Space');
+  assert.equal((await conversationBody.boundingBox()).width,1193);
+  assert.equal(await shellRail.getByRole('button',{pressed:true}).count(),0);
   const pagination = page.getByRole('navigation',{name:'Paginación de comprobantes'});
   assert.equal(await pagination.locator('[aria-current=page]').getAttribute('aria-label'),'Página 5');
   assert.equal(await pagination.locator('[data-type=ellipsis][aria-hidden=true]').count(),2);
@@ -705,6 +745,9 @@ try {
   const characters = await verifyCharacters(page);
   const conversationComposer = await verifyConversationComposer(page);
   const conversationResponse = await verifyConversationResponse(page);
+  const userMessage = await verifyUserMessage(page);
+  const chat = await verifyChat(page);
+  const chatSidebar = await verifyChatSidebar(page);
   assert.deepEqual(errors,[]);
   console.log(JSON.stringify({status:'PASS',height,width,font,colors,keyboard:true,duplicateActivationsBlocked:true,
     reset:true,disabled:true,navigation:true,loaderWidth:24,reducedMotion:'1.6s',
@@ -713,7 +756,7 @@ try {
     searchKeyboardAndClear:true,breadcrumbNavigation:true,sidebarSlotsAndKeyboard:true,sidebarSecondary:true,iconButtonPressed:true,warningContrast,
     localAvatarImage:true,avatarOverflow:true,headerKeyboard:true,inputMatrix:42,inputEmptyBorderContrast,sectionHeader:true,appShell:true,pagination:true,tabs:true,tabContrasts:tabContrasts[0],
     textArea:true,textAreaBorderContrast,dropdown:true,dropdownContrasts,floatingActions:true,inlineWarningContrast,
-    chip:true,chipContrasts:chipContrasts[0],table:true,tableLinkHoverContrast,characters,conversationComposer,conversationResponse}));
+    chip:true,chipContrasts:chipContrasts[0],table:true,tableLinkHoverContrast,characters,conversationComposer,conversationResponse,userMessage,chat,chatSidebar}));
 } finally {
   await browser?.close();
   server.close();

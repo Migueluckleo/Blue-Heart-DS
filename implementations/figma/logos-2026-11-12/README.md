@@ -11,5 +11,8 @@ Selecciona el set del producto, inserta una instancia y elige `product` y `type`
 | Personas | [personas](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=171-1987) | 12 |
 | Servicios | [servicios](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=171-2293) | 6 |
 | Identidad corporativa | [CONTPAQi](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=171-2535) | 5 |
+| Identidad de asistentes | [Beni y Navi](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=277-76) | 4 |
+
+Para Beni y Navi, elige `product` y `Firma`. El set ofrece las cuatro combinaciones. [Lectura y QA](../logos-beni-navi-2026-11-13/readback.json).
 
 El arte es fijo y conserva sus vectores, máscaras y fills de imagen. Para elegir un logo usa sus parámetros nativos. Web y el prototipador PO tienen alcance NOT_APPLICABLE para LOGOS-001.

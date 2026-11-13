@@ -1,8 +1,15 @@
 'use client';
 import * as Examples from '../examples';
 import * as Example_characters from '../examples/characters';
+import * as Example_chat from '../examples/chat';
+import * as Example_chat_history_item from '../examples/chat-history-item';
+import * as Example_chat_plan_usage from '../examples/chat-plan-usage';
+import * as Example_chat_sidebar from '../examples/chat-sidebar';
+import * as Example_chat_sidebar_section from '../examples/chat-sidebar-section';
+import * as Example_chat_tool_item from '../examples/chat-tool-item';
 import * as Example_conversation_composer from '../examples/conversation-composer';
 import * as Example_conversation_response from '../examples/conversation-response';
+import * as Example_user_message from '../examples/user-message';
 import type { ComponentType } from 'react';
 export const examples: Record<string, ComponentType> = {
   "app-shell": Examples.AppShellExample,
@@ -13,6 +20,12 @@ export const examples: Record<string, ComponentType> = {
   "breadcrumb-item": Examples.BreadcrumbItemExample,
   "buttons": Examples.ButtonsExample,
   "characters": Example_characters.CharactersExample,
+  "chat": Example_chat.ChatExample,
+  "chat-history-item": Example_chat_history_item.ChatHistoryItemExample,
+  "chat-plan-usage": Example_chat_plan_usage.ChatPlanUsageExample,
+  "chat-sidebar": Example_chat_sidebar.ChatSidebarExample,
+  "chat-sidebar-section": Example_chat_sidebar_section.ChatSidebarSectionExample,
+  "chat-tool-item": Example_chat_tool_item.ChatToolItemExample,
   "checkbox": Examples.CheckboxExample,
   "chip": Examples.ChipExample,
   "company-selector": Examples.CompanySelectorExample,
@@ -47,5 +60,6 @@ export const examples: Record<string, ComponentType> = {
   "toggle": Examples.ToggleExample,
   "tooltip": Examples.TooltipExample,
   "top-bar": Examples.TopBarExample,
+  "user-message": Example_user_message.UserMessageExample,
   "user-selector": Examples.UserSelectorExample,
 };

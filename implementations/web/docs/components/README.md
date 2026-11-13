@@ -10,6 +10,12 @@
 - [Breadcrumb item](breadcrumb-item.md) · BREADCRUMB-ITEM-001
 - [Buttons](buttons.md) · BUTTON-001
 - [Characters](characters.md) · CHARACTERS-001
+- [Chat](chat.md) · CHAT-001
+- [Chat History Item](chat-history-item.md) · CHAT-HISTORY-ITEM-001
+- [Chat Plan Usage](chat-plan-usage.md) · CHAT-PLAN-USAGE-001
+- [Chat Sidebar](chat-sidebar.md) · CHAT-SIDEBAR-001
+- [Chat Sidebar Section](chat-sidebar-section.md) · CHAT-SIDEBAR-SECTION-001
+- [Chat Tool Item](chat-tool-item.md) · CHAT-TOOL-ITEM-001
 - [Checkbox](checkbox.md) · CHECKBOX-001
 - [Chip](chip.md) · CHIP-001
 - [Company selector](company-selector.md) · COMPANY-SELECTOR-001
@@ -44,4 +50,5 @@
 - [Toggle](toggle.md) · TOGGLE-001
 - [Tooltip](tooltip.md) · TOOLTIP-001
 - [Top bar](top-bar.md) · TOP-BAR-001
+- [User message](user-message.md) · USER-MESSAGE-001
 - [User selector](user-selector.md) · USER-SELECTOR-001

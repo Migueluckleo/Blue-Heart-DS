@@ -18,7 +18,7 @@ Usa App Shell para reunir navegación global y el contenido principal de una pan
 
 ## Uso sin backend
 
-Compón Header, Sidebar y Section Header. Elige Grid o Flex según las relaciones del contenido de Body.
+Compón Header, Sidebar y Section Header. Elige Grid, Flex o Conversación. En Conversación, pasa Chat en children y el Rail y Panel opcional en rightSidebar.
 
 ```tsx
 'use client';
@@ -29,7 +29,7 @@ import { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';
 import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
 import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
 import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
-import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
+import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
 
 const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];
 
@@ -37,25 +37,48 @@ export function AppShellExample() {
   const [collapsed, setCollapsed] = useState(true);
   const [bodyLayout, setBodyLayout] = useState<AppShellBodyLayout>('grid');
   const [action, setAction] = useState('');
+  const [tool, setTool] = useState<ChatSidebarProps['view']>('none');
+  const [draft, setDraft] = useState('');
+  const [messages, setMessages] = useState<string[]>([]);
+  const inConversation = bodyLayout === 'conversation';
+  const composer = {label:'Redactar en conversación de App Shell',value:draft,onValueChange:setDraft,
+    onSend:(text: string) => {
+      if (!text.trim()) return;
+      setMessages(current => [...current,text]);
+      setDraft('');
+    }};
+  const rightSidebar = <>
+    {tool !== 'none' && <ChatSidebar view={tool} onViewChange={setTool} onCollapse={() => setTool('none')}>
+      {tool === 'Chats' && messages.length > 0 && <ChatSidebarSection title="Recientes">
+        <ChatHistoryItem title={messages[0]} selected onSelect={() => setAction(messages[0])}/>
+      </ChatSidebarSection>}
+    </ChatSidebar>}
+    <ChatSidebar mode="rail" view={tool} onViewChange={setTool} plan={{plan:'Pro Plan',used:42,limit:150}}/>
+  </>;
   const moduleStyle = 'grow basis-0 rounded-lg bg-slate-100 p-4';
   return <div className="my-4 space-y-4">
     <label className="inline-flex items-center gap-2">
       Distribución del contenido
       <select className="rounded border px-2 py-1" value={bodyLayout}
-        onChange={event => setBodyLayout(event.currentTarget.value === 'grid' ? 'grid' : 'flex')}>
+        onChange={event => setBodyLayout(event.currentTarget.value as AppShellBodyLayout)}>
         <option value="grid">Grid</option>
         <option value="flex">Flex</option>
+        <option value="conversation">Conversación</option>
       </select>
     </label>
     <div className="overflow-x-auto">
       <AppShell className="w-[1440px] min-h-[1024px]" bodyLayout={bodyLayout}
-        contentAs="section" contentLabel="Área de trabajo de muestra"
+        contentAs="section" contentLabel="Área de trabajo de muestra" rightSidebar={rightSidebar}
         header={{actions:{actions:3,onAction:next => setAction(next)}}}
         sidebar={{label:'Navegación del área de trabajo',collapsed,onCollapsedChange:setCollapsed,
           collapsedMenuItems:<MenuItem label="Inicio del área" href="#demo-shell-heading" current showRightIcon={false} showBeta={false}/>,
           expandedMenuItems:<MenuItem type="expanded" label="Inicio del área" href="#demo-shell-heading" current showRightIcon={false} showBeta={false}/>}}
-        sectionHeader={{title:'Resumen contable',headingLevel:3,
-          description:'Revisa los comprobantes del periodo y su estado de conciliación.'}}>
+        sectionHeader={{title:inConversation ? 'Beni' : 'Resumen contable',headingLevel:3,
+          logoInsteadTitle:inConversation,description:inConversation ? 'Asistente de CONTPAQi'
+            : 'Revisa los comprobantes del periodo y su estado de conciliación.'}}>
+        {inConversation ? (messages.length ? <Chat state="started" composer={composer} messages={messages.map((text,index) =>
+          <UserMessage key={index} message={text}/>)}/> : <Chat userName="Bruce Wayne" composer={composer}
+          onSuggestion={setDraft} suggestions={['Muéstrame mis ingresos del mes','¿Cuánto IVA tengo por pagar?']}/>) : <>
         <div className={bodyLayout === 'grid' ? 'contents' : 'flex gap-[var(--bh-app-shell-gap)]'}>
           <AppShellGridItem span={2} className={moduleStyle}>
             <h4>Comprobantes registrados</h4>
@@ -71,6 +94,7 @@ export function AppShellExample() {
           <Input id="demo-shell-note" label="Nota de revisión" placeholder="Añade una nota"
             required={false} showIcon={false} className="max-w-sm"/>
         </AppShellGridItem>
+        </>}
       </AppShell>
     </div>
     <p role="status">{action && `Acción de muestra: ${action}`}</p>
@@ -85,13 +109,14 @@ Ejemplo compilado en [examples.tsx](../../src/examples.tsx). Usa React state en 
 Importar desde [src/index.ts](../../src/index.ts), con `@/index` dentro del catálogo. Código propietario: [app-shell.tsx](../../src/components/app-shell.tsx). Los atributos HTML heredados mantienen los tipos de React; callbacks y datos controlados pertenecen a la pantalla.
 
 ```tsx
-export type AppShellBodyLayout = 'grid' | 'flex';
+export type AppShellBodyLayout = 'grid' | 'flex' | 'conversation';
 
 export interface AppShellProps {
   header: HeaderProps;
   sidebar: SidebarProps;
   sectionHeader: SectionHeaderProps;
   children: ReactNode;
+  rightSidebar?: ReactNode;
   bodyLayout?: AppShellBodyLayout;
   contentAs?: 'main' | 'section';
   contentLabel?: string;
@@ -104,7 +129,7 @@ export interface AppShellProps {
 Las firmas siguientes se extraen de las funciones, incluidos sus valores por defecto. Una prop sin asignación `=` es obligatoria o permanece undefined según su tipo; no se rellena con reglas de negocio.
 
 ```tsx
-AppShell: {header, sidebar, sectionHeader, children, bodyLayout = 'grid',
+AppShell: {header, sidebar, sectionHeader, children, rightSidebar, bodyLayout = 'grid',
   contentAs: Content = 'main', contentLabel, className}: AppShellProps
 AppShellGridItem: {span = 1, children, className}: {
   span?: 1 | 2 | 3 | 4;
@@ -117,7 +142,7 @@ Props `on…` son callbacks locales. No atribuyen autorización, carga, guardado
 
 ## Composición y Slots
 
-P-SLOTS: **REQUIRED**. Body admite composición reemplazable en cuatro variantes. ReactNode/listas tipadas son la traducción web de las regiones, no evidencia de Slots Figma. El anfitrión conserva el orden y los IDs de listas; las cantidades de las demos no son límites de producto.
+P-SLOTS: **REQUIRED**. Body admite composición reemplazable. El modo de conversación añade la región Right sidebar. ReactNode/listas tipadas son la traducción web de las regiones, no evidencia de Slots Figma. El anfitrión conserva el orden y los IDs de listas; las cantidades de las demos no son límites de producto.
 
 ## Estilos y Next.js
 
@@ -127,7 +152,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [app-shell.contract.v1.0.0.md](../../../../specs/components/app-shell.contract.v1.0.0.md) · SHA-256 `cc7b171748a247b1d6a911cfe4c084404a243a8727b06a7ace52fceddab56603`.
+- [app-shell.contract.v1.0.0.md](../../../../specs/components/app-shell.contract.v1.0.0.md) · SHA-256 `76e50e29b3b397729ab40689d90044f5d233efbd63e1074275b024ae599e1528`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

@@ -86,3 +86,12 @@ export type { ConversationComposerProps } from './components/conversation-compos
 
 export { ConversationResponse, ConversationResponseCopyIcon, ConversationResponsePreview } from './components/conversation-response';
 export type { ConversationResponseProps, ConversationResponseCopyIconProps, ConversationResponsePreviewProps } from './components/conversation-response';
+
+export { UserMessage } from './components/user-message';
+export type { UserMessageProps } from './components/user-message';
+
+export { Chat } from './components/chat';
+export type { ChatProps } from './components/chat';
+
+export { ChatSidebar, ChatToolItem, ChatHistoryItem, ChatSidebarSection, ChatPlanUsage } from './components/chat-sidebar';
+export type { ChatSidebarProps, ChatToolItemProps, ChatHistoryItemProps, ChatSidebarSectionProps, ChatPlanUsageProps } from './components/chat-sidebar';

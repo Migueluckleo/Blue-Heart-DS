@@ -11,3 +11,7 @@ La [prueba desde instancias](../../implementations/figma/root-families-2026-11-1
 ## Web
 
 TypeScript, nueve pruebas Node y build de Next pasaron. [Chrome en localhost](../../implementations/web/tests/buttons-loader.browser.mjs) comprobó Grid y Flex, anchos 1272/1110 con Shell de 1440, pistas 294/253.5, Enter y Espacio en Sidebar, Secondary y foco conservado. El valor editado y el orden de Body persistieron en los cuatro estados. La muestra de catálogo usa una región nombrada porque el catálogo ya tiene su propio main. App Shell usa main por defecto en una página anfitriona.
+
+## Layout de conversación · 2026-11-13
+
+PASS. Se verificaron seis variantes, el default Grid y la propiedad Body original. En una instancia de Figma se añadió y retiró el Panel de Chats desde Right sidebar. A 1440 px, Body pasó de 1193 a 929 px. Con el panel abierto y el frame a 1280 px, Body y su instancia Chat quedaron en 769 px. TOKEN-QA-01 pasó con 82 bindings y 22 overrides. En Chrome pasaron Grid, Flex y Conversation, la apertura y cierre del panel por teclado, el ancho disponible y el envío de un mensaje local. [Lectura y QA](../../implementations/figma/app-shell-conversation/readback.json).

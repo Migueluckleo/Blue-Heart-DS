@@ -20,7 +20,7 @@ El corte inicial cubre documentación, catálogo React/Next vacío, integridad d
 
 [Input](../qa/implementations/input.v1.0.0.review.md) · PASS en 42 variantes Figma, edición nativa y Chrome. Contraste del borde vacío heredado 2.564:1.
 
-[Section Header](../qa/implementations/section-header.v1.0.0.review.md) · PASS en lectura, Slots y Chrome a 640 px. La excepción fuente de Updated queda registrada.
+[Section Header](../qa/implementations/section-header.v1.0.0.review.md) · PASS en lectura, Slots y Chrome a 640 px. La excepción de Updated queda registrada. La sustitución del título por el logo pasó en Figma y Chrome. [Evidencia](../implementations/figma/section-header-logo-replacement/readback.json).
 
 [App Shell](../qa/implementations/app-shell.v1.0.0.review.md) · PASS en cuatro variantes, rejilla nativa, edición de Body y Chrome.
 
@@ -40,7 +40,7 @@ El corte inicial cubre documentación, catálogo React/Next vacío, integridad d
 
 [Stepper](../qa/implementations/stepper.v1.0.0.review.md) · PASS en Figma y web. Lecturas nativas en los cuatro modos y Chrome con teclado, foco y semántica de progreso.
 
-[Logos](../qa/implementations/logos.v1.0.0.review.md) · PASS en selección nativa de 68 variantes, fidelidad visual y cero bindings. Redondeo subpíxel cuantificado. Web NOT_APPLICABLE.
+[Logos](../qa/implementations/logos.v1.0.0.review.md) · PASS en 6 sets y 72 variantes, con pruebas de selección y redondeo subpíxel cuantificado. Las cuatro variantes de Beni y Navi tienen cero bindings, estilos vinculados e instancias externas. [Lectura de Figma](../implementations/figma/logos-beni-navi-2026-11-13/readback.json). Web NOT_APPLICABLE.
 
 [Characters](../qa/implementations/characters.v1.0.0.review.md) · Figma PASS en 13 fases y reacciones, 188 resoluciones de color en cuatro modos y reproducción nativa. Web PASS en ambos ciclos, cuatro temas y movimiento reducido. La evidencia registra el redondeo de cinco trazados sin relleno.
 
@@ -61,3 +61,15 @@ El corte inicial cubre documentación, catálogo React/Next vacío, integridad d
 ## Control recurrente de tokens y orden de páginas
 
 TOKEN-QA-01 se probó en seis maestros y auxiliares corregidos. Leyó 1.326 bindings y 86 registros de overrides sin hallazgos. TOKEN-QA-02 pasa en el catálogo y rechaza una receta con consumo directo de neutral-medium. El listado guardado de Figma termina en Toggle, Tooltip, separador y Playground. [Lectura Figma](../implementations/figma/qa/token-gate-and-page-order.readback.json).
+
+## User message · USER-MESSAGE-001
+
+[QA documental](../qa/contracts/user-message.v1.0.0.review.md) y [QA Figma y web](../qa/implementations/user-message.v1.0.0.review.md) · PASS.
+
+## Chat · CHAT-001
+
+[QA documental](../qa/contracts/chat.v1.0.0.review.md) y [QA Figma y web](../qa/implementations/chat.v1.0.0.review.md).
+
+## Chat Sidebar · CHAT-SIDEBAR-001
+
+[QA documental](../qa/contracts/chat-sidebar.v1.0.0.review.md) · [QA Figma y web](../qa/implementations/chat-sidebar.v1.0.0.review.md).

@@ -1,0 +1,135 @@
+{
+  "figma": {
+    "default": "105:3",
+    "ids": [
+      [
+        "105:3",
+        "menu=collapsed, body layout=grid"
+      ],
+      [
+        "105:4",
+        "menu=expanded, body layout=grid"
+      ],
+      [
+        "105:5",
+        "menu=collapsed, body layout=flex"
+      ],
+      [
+        "105:6",
+        "menu=expanded, body layout=flex"
+      ],
+      [
+        "299:1332",
+        "menu=collapsed, body layout=conversation"
+      ],
+      [
+        "299:2120",
+        "menu=expanded, body layout=conversation"
+      ]
+    ],
+    "settings": {
+      "Body#105:0": {
+        "type": "SLOT",
+        "description": "Sustituye los ejemplos por contenido de la pantalla. Mantén la rejilla o la composición de filas que corresponda.",
+        "slotSettings": {
+          "stretchChildOnInsert": false,
+          "displayEmptyByDefault": false,
+          "minChildren": null,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": false
+        },
+        "preferredValues": []
+      },
+      "Right sidebar#299:7": {
+        "type": "SLOT",
+        "description": "Panel opcional seguido del Rail de Chat Sidebar.",
+        "preferredValues": []
+      },
+      "menu": {
+        "type": "VARIANT",
+        "defaultValue": "collapsed",
+        "variantOptions": [
+          "collapsed",
+          "expanded"
+        ]
+      },
+      "body layout": {
+        "type": "VARIANT",
+        "defaultValue": "grid",
+        "variantOptions": [
+          "grid",
+          "flex",
+          "conversation"
+        ]
+      }
+    },
+    "checks": [
+      [
+        "neutral",
+        1193,
+        79,
+        1193
+      ],
+      [
+        "panel",
+        929,
+        343,
+        929,
+        [
+          [
+            "Chat Sidebar",
+            264,
+            717
+          ],
+          [
+            "Chat Sidebar",
+            79,
+            717
+          ]
+        ]
+      ],
+      [
+        "1280",
+        769,
+        343,
+        769
+      ],
+      [
+        "removed",
+        1033,
+        79,
+        1033
+      ]
+    ],
+    "deletedNodeIds": [
+      "300:1990",
+      "300:2864"
+    ]
+  },
+  "tokenQA": {
+    "status": "PASS",
+    "owners": [
+      {
+        "id": "105:7",
+        "name": "App Shell"
+      }
+    ],
+    "bindingCount": 82,
+    "overrideCount": 22,
+    "findings": []
+  },
+  "web": {
+    "build": "PASS",
+    "chrome": "PASS",
+    "rightSidebar": [
+      79,
+      343
+    ],
+    "bodyWithCollapsedMenu": [
+      1193,
+      929
+    ],
+    "keyboard": true,
+    "localMessage": true
+  }
+}

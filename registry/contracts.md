@@ -20,7 +20,7 @@ Las guías de [Buttons](../specs/components/buttons.usage.amendment.v1.0.1.md) y
 
 [Input](../specs/components/input.contract.v1.0.0.md) · DELEGATED_FOR_BUILD con QA documental. Delega dos sets de 21 variantes, Badge subtle/small y los estilos de foco.
 
-[Section Header](../specs/components/section-header.contract.v1.0.0.md) · DELEGATED_FOR_BUILD con QA documental. Delega tres Slots y dependencias oficiales de navegación y acciones.
+[Section Header](../specs/components/section-header.contract.v1.0.0.md) · DELEGATED_FOR_BUILD con QA documental. Registra tres Slots, los controles de navegación y acciones, y la propiedad de marca que sustituye el título por el logo local de Beni en Figma y React.
 
 [App Shell](../specs/components/app-shell.contract.v1.0.0.md) · DELEGATED_FOR_BUILD con QA documental. Delega cuatro variantes de escritorio y un Body compartido.
 
@@ -41,7 +41,7 @@ Las guías de [Buttons](../specs/components/buttons.usage.amendment.v1.0.1.md) y
 [Stepper](../specs/components/stepper.contract.v1.0.0.md) · DELEGATED_FOR_BUILD. Conserva dos orientaciones, tres estados, tres posiciones, un conector privado y aliases de los cuatro temas.
 ## Logos · LOGOS-001
 
-[Contrato v1.0.0](../specs/components/logos.contract.v1.0.0.md) · DELEGATED_FOR_BUILD · [QA documental PASS](../qa/contracts/logos.v1.0.0.review.md). Alcance Figma en AI Blueheart DS, página Logos. Web NOT_APPLICABLE por la solicitud explícita. Datos vinculados en la spec.
+[Contrato v1.0.0](../specs/components/logos.contract.v1.0.0.md) · DELEGATED_FOR_BUILD · [QA documental PASS](../qa/contracts/logos.v1.0.0.review.md). Alcance Figma en AI Blueheart DS, página Logos. Web NOT_APPLICABLE por la solicitud explícita. La matriz registra 6 sets y 72 variantes, incluidas Beni y Navi con y sin firma CONTPAQi.
 
 [Characters](../specs/components/characters.contract.v1.0.0.md) · DELEGATED_FOR_BUILD con [QA documental](../qa/contracts/characters.v1.0.0.review.md). Dos sets y 13 fases. [Enmienda de identidad](../specs/foundations/characters.identity-chain.amendment.v1.0.0.md) para la cadena de color en las tres colecciones.
 
@@ -52,3 +52,15 @@ v1.0.0 · DELEGATED_FOR_BUILD con [QA documental PASS](../qa/contracts/conversat
 ## Conversation Response · CONVERSATION-RESPONSE-001
 
 v1.0.0 · DELEGATED_FOR_BUILD con [QA documental PASS](../qa/contracts/conversation-response.v1.0.0.review.md). [Contrato](../specs/components/conversation-response.contract.v1.0.0.md).
+
+## User message · USER-MESSAGE-001
+
+v1.0.0 · DELEGATED_FOR_BUILD. [Contrato](../specs/components/user-message.contract.v1.0.0.md) · [QA documental](../qa/contracts/user-message.v1.0.0.review.md).
+
+## Chat · CHAT-001
+
+v1.0.0 · DELEGATED_FOR_BUILD. [Contrato](../specs/components/chat.contract.v1.0.0.md) · [QA documental](../qa/contracts/chat.v1.0.0.review.md).
+
+## Chat Sidebar · CHAT-SIDEBAR-001
+
+[Chat Sidebar](../specs/components/chat-sidebar.contract.v1.0.0.md) y cuatro átomos delegados v1.0.0 · [Chat Tool Item](../specs/components/chat-tool-item.contract.v1.0.0.md) · [Chat History Item](../specs/components/chat-history-item.contract.v1.0.0.md) · [Chat Sidebar Section](../specs/components/chat-sidebar-section.contract.v1.0.0.md) · [Chat Plan Usage](../specs/components/chat-plan-usage.contract.v1.0.0.md).

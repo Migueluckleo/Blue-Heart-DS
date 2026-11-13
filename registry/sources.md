@@ -28,7 +28,7 @@ La [captura del nodo 1020:530](../sources/figma-snapshots/root-families-2026-11-
 
 ## Logos · 2026-11-12
 
-El usuario autorizó la [página Logos de Librería v1.1.0](https://www.figma.com/design/9zs5RMR8LB5wHjW9Bd59BA/Libreria-v1.1.0?node-id=40-93) como fuente de solo lectura para consumo en AI Blueheart DS. La [captura original](../sources/figma-snapshots/logos-2026-11-12/inventory.json) identifica 5 sets, 68 variantes y 12 marcos sueltos. El [JSON delegado](../specs/data/logos.v1.0.0.json) conserva el hash de la captura y la selección parametrizada.
+El usuario autorizó la [página Logos de Librería v1.1.0](https://www.figma.com/design/9zs5RMR8LB5wHjW9Bd59BA/Libreria-v1.1.0?node-id=40-93) como fuente de solo lectura para consumo en AI Blueheart DS. La [captura original](../sources/figma-snapshots/logos-2026-11-12/inventory.json) identifica 5 sets, 68 variantes y 12 marcos sueltos. El [JSON delegado](../specs/data/logos.v1.0.0.json) conserva el hash de la captura y la selección parametrizada. Los cuatro logos de Beni y Navi proceden de la [selección de Playground](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=273-7961). [Mapa de origen y destino](../implementations/figma/logos-beni-navi-2026-11-13/readback.json).
 
 ## Characters · 2026-11-12
 
@@ -41,3 +41,15 @@ SRC-CONVERSATION-001 · INDEXED · Propuesta observada v0.1.0 en Playground, pri
 ## Conversation Response · 2026-11-12
 
 SRC-CONVERSATION-RESPONSE-001 · INDEXED. Set 218:1236 de Playground y dependencias inspeccionadas. SHA-256 de lectura 13843bbb9bc61bf06f8391247456a77562b1f09e8164c6139f4b41482ccd7d92. [Lectura estructurada](../sources/figma-snapshots/conversation-response-2026-11-12/selection.json).
+
+## User message · 2026-11-13
+
+Propuesta 235:174 en Playground, registrada como fuente de User message. [Lectura estructurada](../sources/figma-snapshots/user-message-2026-11-13/selection.json).
+
+## Chat · 2026-11-13
+
+Set provisional 238:2236 en Playground. [Lectura de Standby y Started](../sources/figma-snapshots/chat-2026-11-13/selection.json).
+
+## Chat Sidebar · CHAT-SIDEBAR-001
+
+Cuatro paneles, cuatro rails y muestras independientes observadas en Playground 203:93. [Selección estructurada](../sources/figma-snapshots/chat-sidebar-2026-11-13/selection.json) · [Manifiesto de SVG](../specs/data/chat-sidebar.assets.v1.0.0.json).

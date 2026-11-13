@@ -1,0 +1,1267 @@
+{
+  "intent": "Review of user changes in Figma",
+  "set": "258:3326",
+  "latest": {
+    "defs": {
+      "Content#258:0": {
+        "type": "SLOT",
+        "description": "Secciones del panel expandido.",
+        "slotSettings": {
+          "stretchChildOnInsert": true,
+          "displayEmptyByDefault": false,
+          "minChildren": null,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": false
+        },
+        "preferredValues": []
+      },
+      "View": {
+        "type": "VARIANT",
+        "defaultValue": "Chats",
+        "variantOptions": [
+          "Chats",
+          "Indicadores",
+          "Papeles de trabajo",
+          "Vinculaciones",
+          "none"
+        ]
+      },
+      "Mode": {
+        "type": "VARIANT",
+        "defaultValue": "Panel",
+        "variantOptions": [
+          "Panel",
+          "Rail"
+        ]
+      }
+    },
+    "rows": [
+      {
+        "id": "258:1820",
+        "name": "View=Chats, Mode=Panel",
+        "size": [
+          264,
+          791
+        ],
+        "position": [
+          0,
+          0
+        ],
+        "limits": [
+          264,
+          310,
+          791,
+          null
+        ],
+        "children": [
+          [
+            "258:1766",
+            "Header",
+            "FRAME",
+            232,
+            32
+          ],
+          [
+            "258:1771",
+            "Frame 2",
+            "FRAME",
+            232,
+            57
+          ],
+          [
+            "258:1773",
+            "Content region",
+            "FRAME",
+            232,
+            638
+          ],
+          [
+            "258:1816",
+            "__Dropdown/Scrollbar small vertical",
+            "INSTANCE",
+            12,
+            638
+          ]
+        ],
+        "refs": []
+      },
+      {
+        "id": "258:2011",
+        "name": "View=Indicadores, Mode=Panel",
+        "size": [
+          264,
+          791
+        ],
+        "position": [
+          296,
+          0
+        ],
+        "limits": [
+          264,
+          310,
+          791,
+          null
+        ],
+        "children": [
+          [
+            "258:1964",
+            "Header",
+            "FRAME",
+            232,
+            32
+          ],
+          [
+            "258:1969",
+            "Frame 2",
+            "FRAME",
+            232,
+            57
+          ],
+          [
+            "258:1971",
+            "Content region",
+            "FRAME",
+            232,
+            638
+          ],
+          [
+            "258:2007",
+            "__Dropdown/Scrollbar small vertical",
+            "INSTANCE",
+            12,
+            638
+          ]
+        ],
+        "refs": []
+      },
+      {
+        "id": "258:2183",
+        "name": "View=Papeles de trabajo, Mode=Panel",
+        "size": [
+          264,
+          791
+        ],
+        "position": [
+          592,
+          0
+        ],
+        "limits": [
+          264,
+          310,
+          791,
+          null
+        ],
+        "children": [
+          [
+            "258:2136",
+            "Header",
+            "FRAME",
+            232,
+            32
+          ],
+          [
+            "258:2141",
+            "Frame 2",
+            "FRAME",
+            232,
+            57
+          ],
+          [
+            "258:2143",
+            "Content region",
+            "FRAME",
+            232,
+            638
+          ],
+          [
+            "258:2179",
+            "__Dropdown/Scrollbar small vertical",
+            "INSTANCE",
+            12,
+            638
+          ]
+        ],
+        "refs": []
+      },
+      {
+        "id": "258:2331",
+        "name": "View=Vinculaciones, Mode=Panel",
+        "size": [
+          264,
+          791
+        ],
+        "position": [
+          888,
+          0
+        ],
+        "limits": [
+          264,
+          310,
+          791,
+          null
+        ],
+        "children": [
+          [
+            "258:2308",
+            "Header",
+            "FRAME",
+            232,
+            32
+          ],
+          [
+            "258:2313",
+            "Frame 2",
+            "FRAME",
+            232,
+            105
+          ],
+          [
+            "258:2326",
+            "Content region",
+            "FRAME",
+            232,
+            60.07997512817383
+          ]
+        ],
+        "refs": []
+      },
+      {
+        "id": "258:2500",
+        "name": "View=none, Mode=Rail",
+        "size": [
+          79,
+          791
+        ],
+        "position": [
+          0,
+          830
+        ],
+        "limits": [
+          79,
+          93,
+          791,
+          null
+        ],
+        "children": [
+          [
+            "258:2446",
+            "Header",
+            "FRAME",
+            47,
+            288
+          ],
+          [
+            "258:2632",
+            "collapsed plan",
+            "INSTANCE",
+            47,
+            47
+          ]
+        ],
+        "refs": [
+          {
+            "id": "258:2637",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:2644",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:2651",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:2658",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:2632",
+            "name": "collapsed plan",
+            "master": "257:620",
+            "variant": "Mode=Compact",
+            "group": "Chat Plan Usage",
+            "visible": true,
+            "size": [
+              47,
+              47
+            ],
+            "sizing": [
+              "FILL",
+              "HUG"
+            ],
+            "actions": []
+          }
+        ]
+      },
+      {
+        "id": "283:8726",
+        "name": "View=Chats, Mode=Rail",
+        "size": [
+          79,
+          791
+        ],
+        "position": [
+          169,
+          827
+        ],
+        "limits": [
+          79,
+          93,
+          791,
+          null
+        ],
+        "children": [
+          [
+            "283:8727",
+            "Header",
+            "FRAME",
+            47,
+            288
+          ],
+          [
+            "283:8732",
+            "collapsed plan",
+            "INSTANCE",
+            47,
+            47
+          ]
+        ],
+        "refs": [
+          {
+            "id": "283:8728",
+            "name": "Sidebar control",
+            "master": "59:205",
+            "variant": "size=large, selected=true, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:222"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "283:8729",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "283:8730",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "283:8731",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "283:8732",
+            "name": "collapsed plan",
+            "master": "257:620",
+            "variant": "Mode=Compact",
+            "group": "Chat Plan Usage",
+            "visible": true,
+            "size": [
+              47,
+              47
+            ],
+            "sizing": [
+              "FILL",
+              "HUG"
+            ],
+            "actions": []
+          }
+        ]
+      },
+      {
+        "id": "258:2720",
+        "name": "View=Indicadores, Mode=Rail",
+        "size": [
+          79,
+          791
+        ],
+        "position": [
+          296,
+          830
+        ],
+        "limits": [
+          79,
+          93,
+          791,
+          null
+        ],
+        "children": [
+          [
+            "258:2666",
+            "Header",
+            "FRAME",
+            47,
+            288
+          ],
+          [
+            "258:2852",
+            "collapsed plan",
+            "INSTANCE",
+            47,
+            47
+          ]
+        ],
+        "refs": [
+          {
+            "id": "258:2857",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:2864",
+            "name": "Sidebar control",
+            "master": "59:205",
+            "variant": "size=large, selected=true, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:222"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:2871",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:2878",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:2852",
+            "name": "collapsed plan",
+            "master": "257:620",
+            "variant": "Mode=Compact",
+            "group": "Chat Plan Usage",
+            "visible": true,
+            "size": [
+              47,
+              47
+            ],
+            "sizing": [
+              "FILL",
+              "HUG"
+            ],
+            "actions": []
+          }
+        ]
+      },
+      {
+        "id": "258:2940",
+        "name": "View=Papeles de trabajo, Mode=Rail",
+        "size": [
+          79,
+          791
+        ],
+        "position": [
+          592,
+          830
+        ],
+        "limits": [
+          79,
+          93,
+          791,
+          null
+        ],
+        "children": [
+          [
+            "258:2886",
+            "Header",
+            "FRAME",
+            47,
+            288
+          ],
+          [
+            "258:3072",
+            "collapsed plan",
+            "INSTANCE",
+            47,
+            47
+          ]
+        ],
+        "refs": [
+          {
+            "id": "258:3077",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:3084",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:3091",
+            "name": "Sidebar control",
+            "master": "59:205",
+            "variant": "size=large, selected=true, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:222"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:3098",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:3072",
+            "name": "collapsed plan",
+            "master": "257:620",
+            "variant": "Mode=Compact",
+            "group": "Chat Plan Usage",
+            "visible": true,
+            "size": [
+              47,
+              47
+            ],
+            "sizing": [
+              "FILL",
+              "HUG"
+            ],
+            "actions": []
+          }
+        ]
+      },
+      {
+        "id": "258:3160",
+        "name": "View=Vinculaciones, Mode=Rail",
+        "size": [
+          79,
+          791
+        ],
+        "position": [
+          888,
+          830
+        ],
+        "limits": [
+          79,
+          93,
+          791,
+          null
+        ],
+        "children": [
+          [
+            "258:3106",
+            "Header",
+            "FRAME",
+            47,
+            288
+          ],
+          [
+            "258:3292",
+            "collapsed plan",
+            "INSTANCE",
+            47,
+            47
+          ]
+        ],
+        "refs": [
+          {
+            "id": "258:3297",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:3304",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:3311",
+            "name": "Sidebar control",
+            "master": "59:3",
+            "variant": "size=large, selected=false, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:47"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:3318",
+            "name": "Sidebar control",
+            "master": "59:205",
+            "variant": "size=large, selected=true, state=default",
+            "group": "Icon Button/ghost",
+            "visible": true,
+            "size": [
+              48,
+              48
+            ],
+            "sizing": [
+              "FIXED",
+              "FIXED"
+            ],
+            "actions": [
+              [
+                "MOUSE_ENTER",
+                [
+                  [
+                    "NODE",
+                    "59:222"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "258:3292",
+            "name": "collapsed plan",
+            "master": "257:620",
+            "variant": "Mode=Compact",
+            "group": "Chat Plan Usage",
+            "visible": true,
+            "size": [
+              47,
+              47
+            ],
+            "sizing": [
+              "FILL",
+              "HUG"
+            ],
+            "actions": []
+          }
+        ]
+      }
+    ]
+  },
+  "linkage": {
+    "data": [
+      {
+        "id": "258:1820",
+        "variant": "View=Chats, Mode=Panel",
+        "glyphs": [],
+        "reactions": 16
+      },
+      {
+        "id": "258:2011",
+        "variant": "View=Indicadores, Mode=Panel",
+        "glyphs": [],
+        "reactions": 13
+      },
+      {
+        "id": "258:2183",
+        "variant": "View=Papeles de trabajo, Mode=Panel",
+        "glyphs": [],
+        "reactions": 13
+      },
+      {
+        "id": "258:2331",
+        "variant": "View=Vinculaciones, Mode=Panel",
+        "glyphs": [],
+        "reactions": 5
+      },
+      {
+        "id": "258:2500",
+        "variant": "View=none, Mode=Rail",
+        "glyphs": [
+          "Chats",
+          "Siren",
+          "Table",
+          "Link",
+          "MagicWand"
+        ],
+        "reactions": 4
+      },
+      {
+        "id": "283:8726",
+        "variant": "View=Chats, Mode=Rail",
+        "glyphs": [
+          "Chats",
+          "Siren",
+          "Table",
+          "Link",
+          "MagicWand"
+        ],
+        "reactions": 4
+      },
+      {
+        "id": "258:2720",
+        "variant": "View=Indicadores, Mode=Rail",
+        "glyphs": [
+          "Chats",
+          "Siren",
+          "Table",
+          "Link",
+          "MagicWand"
+        ],
+        "reactions": 4
+      },
+      {
+        "id": "258:2940",
+        "variant": "View=Papeles de trabajo, Mode=Rail",
+        "glyphs": [
+          "Chats",
+          "Siren",
+          "Table",
+          "Link",
+          "MagicWand"
+        ],
+        "reactions": 4
+      },
+      {
+        "id": "258:3160",
+        "variant": "View=Vinculaciones, Mode=Rail",
+        "glyphs": [
+          "Chats",
+          "Siren",
+          "Table",
+          "Link",
+          "MagicWand"
+        ],
+        "reactions": 4
+      }
+    ],
+    "remote": [
+      [
+        "b0c91d0b43c046b2a817ae2ed32c6e0f75e96f49",
+        "MagnifyingGlass"
+      ],
+      [
+        "c59befd15f17eec89e0943aee375f86e60e00fde",
+        "Sidebar"
+      ],
+      [
+        "aceb0189f7b5f5a8bcb9d647706990f141c8dae7",
+        "Chat"
+      ],
+      [
+        "bc84188a38d95b6865a7c6a57820ee2330e43f34",
+        "CaretDown"
+      ],
+      [
+        "81c10c25593d451160897a03ccc39cd1fc7fad27",
+        "Chats"
+      ],
+      [
+        "a7eab12525396b21f901983db82eecb38841c9ef",
+        "Plus"
+      ],
+      [
+        "b0d66c2c04014490bfbefe7579e0c98cd16db0a2",
+        "PushPin"
+      ],
+      [
+        "33bbf11fec95bfc540e85769b270534f2db07776",
+        "DotsThree"
+      ],
+      [
+        "f590766fe326cbf502d6b3066f5a432e6db19294",
+        "Folder"
+      ],
+      [
+        "90e6fea88275f3f4a8691a863e5a3bbb3bfc17e8",
+        "Table"
+      ],
+      [
+        "fe6b9a04ab933f080e2bffda99b1f92d7a2d4e92",
+        "Link"
+      ],
+      [
+        "9c503743dfd1c4221544004d27ad53c079802dd6",
+        "Siren"
+      ],
+      [
+        "5ff5a3803dcaa55363c76a9c36f06050325b68d1",
+        "MagicWand"
+      ]
+    ],
+    "externalVars": []
+  },
+  "tokenQA": {
+    "status": "PASS",
+    "owners": [
+      {
+        "id": "258:3326",
+        "name": "Chat Sidebar"
+      }
+    ],
+    "bindingCount": 315,
+    "overrideCount": 84,
+    "findings": []
+  },
+  "playground": [
+    [
+      "283:8290",
+      "Header",
+      "App Shell",
+      "90:439",
+      "Header",
+      "Header",
+      1440,
+      96
+    ],
+    [
+      "283:8291",
+      "Content",
+      "App Shell",
+      "FRAME",
+      1440,
+      920
+    ],
+    [
+      "283:8292",
+      "Sidebar",
+      "Content",
+      "61:219",
+      "state=collapsed",
+      "Sidebar",
+      72,
+      856
+    ],
+    [
+      "283:8293",
+      "Main",
+      "Content",
+      "FRAME",
+      1272,
+      856
+    ],
+    [
+      "283:8294",
+      "Section Header",
+      "Main",
+      "287:151",
+      "logo instead title=true",
+      "Section Header",
+      1272,
+      107
+    ],
+    [
+      "283:8920",
+      "Frame 1",
+      "Main",
+      "FRAME",
+      1272,
+      717
+    ],
+    [
+      "283:9016",
+      "Chat",
+      "Frame 1",
+      "242:438",
+      "State=Standby",
+      "Chat",
+      1272,
+      717
+    ],
+    [
+      "283:9162",
+      "Chat Sidebar",
+      "Content",
+      "258:2500",
+      "View=none, Mode=Rail",
+      "Chat Sidebar",
+      79,
+      768
+    ]
+  ],
+  "webGap": "Rail requires a selected view in the current React API"
+}

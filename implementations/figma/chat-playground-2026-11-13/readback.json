@@ -1,0 +1,3853 @@
+{
+  "fileKey": "yZsIpXywybsPDytjolwcP4",
+  "observed": "2026-11-13",
+  "layout": {
+    "page": "203:93",
+    "name": "Playground",
+    "top": [
+      [
+        "283:9471",
+        "Chat initial",
+        "FRAME"
+      ],
+      [
+        "283:9809",
+        "Chat selected | Menú desplegado",
+        "FRAME"
+      ],
+      [
+        "290:11665",
+        "conversación abierta",
+        "FRAME"
+      ],
+      [
+        "283:10148",
+        "Indicadores selected | Menú desplegado",
+        "FRAME"
+      ],
+      [
+        "290:10546",
+        "Papeles de trabajo selected | Menú desplegado",
+        "FRAME"
+      ],
+      [
+        "290:11110",
+        "Vinculaciones selected | Menú desplegado",
+        "FRAME"
+      ]
+    ],
+    "rows": [
+      {
+        "id": "283:9471",
+        "name": "Chat initial",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1440,
+        "height": 1024,
+        "xy": [
+          1539,
+          38
+        ],
+        "parent": "203:93",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": true
+      },
+      {
+        "id": "283:9472",
+        "name": "Header",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 1440,
+        "height": 96,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "283:9471",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "SPACE_BETWEEN",
+        "counterAxisAlignItems": "CENTER",
+        "itemSpacing": 0,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+        "paddingBottom": 24,
+        "minWidth": 1152,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "90:439",
+          "Header",
+          "Header",
+          false
+        ],
+        "props": {
+          "Version": "2.0.0",
+          "Show release badge": true,
+          "Show user": true,
+          "Show actions": true,
+          "Show company": true,
+          "Show version": true
+        }
+      },
+      {
+        "id": "283:9473",
+        "name": "Content",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1440,
+        "height": 920,
+        "xy": [
+          0,
+          104
+        ],
+        "parent": "283:9471",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 32,
+        "paddingRight": 32,
+        "paddingTop": 32,
+        "paddingBottom": 32,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "283:9474",
+        "name": "Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 72,
+        "height": 856,
+        "xy": [
+          32,
+          32
+        ],
+        "parent": "283:9473",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MAX",
+        "itemSpacing": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "61:219",
+          "state=collapsed",
+          "Sidebar",
+          false
+        ],
+        "props": {
+          "Expanded menu items": null,
+          "Collapsed lower options": null,
+          "Expanded lower options": null,
+          "Collapsed menu items": null,
+          "state": "collapsed"
+        }
+      },
+      {
+        "id": "283:9475",
+        "name": "Main",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1272,
+        "height": 856,
+        "xy": [
+          136,
+          32
+        ],
+        "parent": "283:9473",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "283:9476",
+        "name": "Section Header",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 1272,
+        "height": 107,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "283:9475",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 16,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+        "paddingBottom": 24,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": true,
+        "master": [
+          "287:151",
+          "logo instead title=true",
+          "Section Header",
+          false
+        ],
+        "props": {
+          "Metadata": null,
+          "Inputs": null,
+          "Show actions": false,
+          "Title": "Lorem ipsum dolor sit amet",
+          "Show metadata": false,
+          "Show description": true,
+          "Show breadcrumbs": false,
+          "General actions": null,
+          "Description": "Lorem ipsum dolor sit amet consectetur. Etiam non ut id enim risus pharetra sollicitudin et. Dolor non convallis eget nibh. Amet neque pretium feugiat feugiat.",
+          "logo instead title": "true"
+        }
+      },
+      {
+        "id": "283:9477",
+        "name": "Frame 1",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1272,
+        "height": 717,
+        "xy": [
+          0,
+          139
+        ],
+        "parent": "283:9475",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "283:9478",
+        "name": "Chat",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 1272,
+        "height": 717,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "283:9477",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "CENTER",
+        "counterAxisAlignItems": "CENTER",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 32,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "242:438",
+          "State=Standby",
+          "Chat",
+          false
+        ],
+        "props": {
+          "Messages": null,
+          "Status text": "Leyendo la información...",
+          "User name": "Bruce Wayne",
+          "State": "Standby"
+        }
+      },
+      {
+        "id": "283:9479",
+        "name": "Chat Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 79,
+        "height": 749,
+        "xy": [
+          1361,
+          171
+        ],
+        "parent": "283:9473",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "ABSOLUTE",
+        "primaryAxisAlignItems": "SPACE_BETWEEN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "paddingBottom": 16,
+        "minWidth": 79,
+        "maxWidth": 93,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "258:2500",
+          "View=none, Mode=Rail",
+          "Chat Sidebar",
+          false
+        ],
+        "props": {
+          "Content": null,
+          "View": "none",
+          "Mode": "Rail"
+        }
+      },
+      {
+        "id": "283:9809",
+        "name": "Chat selected | Menú desplegado",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1440,
+        "height": 1024,
+        "xy": [
+          3301,
+          38
+        ],
+        "parent": "203:93",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": true
+      },
+      {
+        "id": "283:9810",
+        "name": "Header",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 1440,
+        "height": 96,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "283:9809",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "SPACE_BETWEEN",
+        "counterAxisAlignItems": "CENTER",
+        "itemSpacing": 0,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+        "paddingBottom": 24,
+        "minWidth": 1152,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "90:439",
+          "Header",
+          "Header",
+          false
+        ],
+        "props": {
+          "Version": "2.0.0",
+          "Show release badge": true,
+          "Show user": true,
+          "Show actions": true,
+          "Show company": true,
+          "Show version": true
+        }
+      },
+      {
+        "id": "283:9811",
+        "name": "Content",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1440,
+        "height": 920,
+        "xy": [
+          0,
+          104
+        ],
+        "parent": "283:9809",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 32,
+        "paddingRight": 32,
+        "paddingTop": 32,
+        "paddingBottom": 32,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "283:9812",
+        "name": "Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 72,
+        "height": 856,
+        "xy": [
+          32,
+          32
+        ],
+        "parent": "283:9811",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MAX",
+        "itemSpacing": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "61:219",
+          "state=collapsed",
+          "Sidebar",
+          false
+        ],
+        "props": {
+          "Expanded menu items": null,
+          "Collapsed lower options": null,
+          "Expanded lower options": null,
+          "Collapsed menu items": null,
+          "state": "collapsed"
+        }
+      },
+      {
+        "id": "283:9813",
+        "name": "Main",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1272,
+        "height": 856,
+        "xy": [
+          136,
+          32
+        ],
+        "parent": "283:9811",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "283:9814",
+        "name": "Section Header",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 1272,
+        "height": 107,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "283:9813",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 16,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+        "paddingBottom": 24,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": true,
+        "master": [
+          "287:151",
+          "logo instead title=true",
+          "Section Header",
+          false
+        ],
+        "props": {
+          "Metadata": null,
+          "Inputs": null,
+          "Show actions": false,
+          "Title": "Lorem ipsum dolor sit amet",
+          "Show metadata": false,
+          "Show description": true,
+          "Show breadcrumbs": false,
+          "General actions": null,
+          "Description": "Lorem ipsum dolor sit amet consectetur. Etiam non ut id enim risus pharetra sollicitudin et. Dolor non convallis eget nibh. Amet neque pretium feugiat feugiat.",
+          "logo instead title": "true"
+        }
+      },
+      {
+        "id": "283:9815",
+        "name": "Frame 1",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1272,
+        "height": 717,
+        "xy": [
+          0,
+          139
+        ],
+        "parent": "283:9813",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "283:9816",
+        "name": "Chat",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 961,
+        "height": 717,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "283:9815",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "CENTER",
+        "counterAxisAlignItems": "CENTER",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 32,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "242:438",
+          "State=Standby",
+          "Chat",
+          false
+        ],
+        "props": {
+          "Messages": null,
+          "Status text": "Leyendo la información...",
+          "User name": "Bruce Wayne",
+          "State": "Standby"
+        }
+      },
+      {
+        "id": "283:9817",
+        "name": "Chat Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 79,
+        "height": 749,
+        "xy": [
+          1361,
+          171
+        ],
+        "parent": "283:9811",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "ABSOLUTE",
+        "primaryAxisAlignItems": "SPACE_BETWEEN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "paddingBottom": 16,
+        "minWidth": 79,
+        "maxWidth": 93,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "283:8726",
+          "View=Chats, Mode=Rail",
+          "Chat Sidebar",
+          false
+        ],
+        "props": {
+          "Content": null,
+          "View": "Chats",
+          "Mode": "Rail"
+        }
+      },
+      {
+        "id": "283:10080",
+        "name": "Chat Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 264,
+        "height": 748,
+        "xy": [
+          1097,
+          276
+        ],
+        "parent": "283:9809",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "ABSOLUTE",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "paddingBottom": 16,
+        "minWidth": 264,
+        "maxWidth": 310,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "258:1820",
+          "View=Chats, Mode=Panel",
+          "Chat Sidebar",
+          false
+        ],
+        "props": {
+          "Content": null,
+          "View": "Chats",
+          "Mode": "Panel"
+        }
+      },
+      {
+        "id": "290:11665",
+        "name": "conversación abierta",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1440,
+        "height": 1024,
+        "xy": [
+          5012,
+          38
+        ],
+        "parent": "203:93",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": true
+      },
+      {
+        "id": "290:11666",
+        "name": "Header",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 1440,
+        "height": 96,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "290:11665",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "SPACE_BETWEEN",
+        "counterAxisAlignItems": "CENTER",
+        "itemSpacing": 0,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+        "paddingBottom": 24,
+        "minWidth": 1152,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "90:439",
+          "Header",
+          "Header",
+          false
+        ],
+        "props": {
+          "Version": "2.0.0",
+          "Show release badge": true,
+          "Show user": true,
+          "Show actions": true,
+          "Show company": true,
+          "Show version": true
+        }
+      },
+      {
+        "id": "290:11667",
+        "name": "Content",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1440,
+        "height": 920,
+        "xy": [
+          0,
+          104
+        ],
+        "parent": "290:11665",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 32,
+        "paddingRight": 32,
+        "paddingTop": 32,
+        "paddingBottom": 32,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "290:11668",
+        "name": "Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 72,
+        "height": 856,
+        "xy": [
+          32,
+          32
+        ],
+        "parent": "290:11667",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MAX",
+        "itemSpacing": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "61:219",
+          "state=collapsed",
+          "Sidebar",
+          false
+        ],
+        "props": {
+          "Expanded menu items": null,
+          "Collapsed lower options": null,
+          "Expanded lower options": null,
+          "Collapsed menu items": null,
+          "state": "collapsed"
+        }
+      },
+      {
+        "id": "290:11669",
+        "name": "Main",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1272,
+        "height": 856,
+        "xy": [
+          136,
+          32
+        ],
+        "parent": "290:11667",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "290:11670",
+        "name": "Section Header",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 1272,
+        "height": 107,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "290:11669",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 16,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+        "paddingBottom": 24,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": true,
+        "master": [
+          "287:151",
+          "logo instead title=true",
+          "Section Header",
+          false
+        ],
+        "props": {
+          "Metadata": null,
+          "Inputs": null,
+          "Show actions": false,
+          "Title": "Lorem ipsum dolor sit amet",
+          "Show metadata": false,
+          "Show description": true,
+          "Show breadcrumbs": false,
+          "General actions": null,
+          "Description": "Lorem ipsum dolor sit amet consectetur. Etiam non ut id enim risus pharetra sollicitudin et. Dolor non convallis eget nibh. Amet neque pretium feugiat feugiat.",
+          "logo instead title": "true"
+        }
+      },
+      {
+        "id": "290:11671",
+        "name": "Frame 1",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1272,
+        "height": 717,
+        "xy": [
+          0,
+          139
+        ],
+        "parent": "290:11669",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "290:11672",
+        "name": "Chat",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 961,
+        "height": 717,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "290:11671",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "CENTER",
+        "counterAxisAlignItems": "CENTER",
+        "itemSpacing": 32,
+        "paddingLeft": 32,
+        "paddingRight": 32,
+        "paddingTop": 32,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "242:455",
+          "State=Started",
+          "Chat",
+          false
+        ],
+        "props": {
+          "User name": "Bruce Wayne",
+          "Messages": null,
+          "Status text": "Leyendo la información...",
+          "State": "Started"
+        }
+      },
+      {
+        "id": "290:11673",
+        "name": "Chat Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 79,
+        "height": 749,
+        "xy": [
+          1361,
+          171
+        ],
+        "parent": "290:11667",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "ABSOLUTE",
+        "primaryAxisAlignItems": "SPACE_BETWEEN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "paddingBottom": 16,
+        "minWidth": 79,
+        "maxWidth": 93,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "283:8726",
+          "View=Chats, Mode=Rail",
+          "Chat Sidebar",
+          false
+        ],
+        "props": {
+          "Content": null,
+          "View": "Chats",
+          "Mode": "Rail"
+        }
+      },
+      {
+        "id": "290:11674",
+        "name": "Chat Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 264,
+        "height": 748,
+        "xy": [
+          1097,
+          276
+        ],
+        "parent": "290:11665",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "ABSOLUTE",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "paddingBottom": 16,
+        "minWidth": 264,
+        "maxWidth": 310,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "258:1820",
+          "View=Chats, Mode=Panel",
+          "Chat Sidebar",
+          false
+        ],
+        "props": {
+          "Content": null,
+          "View": "Chats",
+          "Mode": "Panel"
+        }
+      },
+      {
+        "id": "283:10148",
+        "name": "Indicadores selected | Menú desplegado",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1440,
+        "height": 1024,
+        "xy": [
+          3301,
+          1184
+        ],
+        "parent": "203:93",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": true
+      },
+      {
+        "id": "283:10149",
+        "name": "Header",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 1440,
+        "height": 96,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "283:10148",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "SPACE_BETWEEN",
+        "counterAxisAlignItems": "CENTER",
+        "itemSpacing": 0,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+        "paddingBottom": 24,
+        "minWidth": 1152,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "90:439",
+          "Header",
+          "Header",
+          false
+        ],
+        "props": {
+          "Version": "2.0.0",
+          "Show release badge": true,
+          "Show user": true,
+          "Show actions": true,
+          "Show company": true,
+          "Show version": true
+        }
+      },
+      {
+        "id": "283:10150",
+        "name": "Content",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1440,
+        "height": 920,
+        "xy": [
+          0,
+          104
+        ],
+        "parent": "283:10148",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 32,
+        "paddingRight": 32,
+        "paddingTop": 32,
+        "paddingBottom": 32,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "283:10151",
+        "name": "Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 72,
+        "height": 856,
+        "xy": [
+          32,
+          32
+        ],
+        "parent": "283:10150",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MAX",
+        "itemSpacing": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "61:219",
+          "state=collapsed",
+          "Sidebar",
+          false
+        ],
+        "props": {
+          "Expanded menu items": null,
+          "Collapsed lower options": null,
+          "Expanded lower options": null,
+          "Collapsed menu items": null,
+          "state": "collapsed"
+        }
+      },
+      {
+        "id": "283:10152",
+        "name": "Main",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1272,
+        "height": 856,
+        "xy": [
+          136,
+          32
+        ],
+        "parent": "283:10150",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "283:10153",
+        "name": "Section Header",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 1272,
+        "height": 107,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "283:10152",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 16,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+        "paddingBottom": 24,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": true,
+        "master": [
+          "287:151",
+          "logo instead title=true",
+          "Section Header",
+          false
+        ],
+        "props": {
+          "Metadata": null,
+          "Inputs": null,
+          "Show actions": false,
+          "Title": "Lorem ipsum dolor sit amet",
+          "Show metadata": false,
+          "Show description": true,
+          "Show breadcrumbs": false,
+          "General actions": null,
+          "Description": "Lorem ipsum dolor sit amet consectetur. Etiam non ut id enim risus pharetra sollicitudin et. Dolor non convallis eget nibh. Amet neque pretium feugiat feugiat.",
+          "logo instead title": "true"
+        }
+      },
+      {
+        "id": "283:10154",
+        "name": "Frame 1",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1272,
+        "height": 717,
+        "xy": [
+          0,
+          139
+        ],
+        "parent": "283:10152",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "283:10155",
+        "name": "Chat",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 961,
+        "height": 717,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "283:10154",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "CENTER",
+        "counterAxisAlignItems": "CENTER",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 32,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "242:438",
+          "State=Standby",
+          "Chat",
+          false
+        ],
+        "props": {
+          "Messages": null,
+          "Status text": "Leyendo la información...",
+          "User name": "Bruce Wayne",
+          "State": "Standby"
+        }
+      },
+      {
+        "id": "283:10156",
+        "name": "Chat Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 79,
+        "height": 749,
+        "xy": [
+          1361,
+          171
+        ],
+        "parent": "283:10150",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "ABSOLUTE",
+        "primaryAxisAlignItems": "SPACE_BETWEEN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "paddingBottom": 16,
+        "minWidth": 79,
+        "maxWidth": 93,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "258:2720",
+          "View=Indicadores, Mode=Rail",
+          "Chat Sidebar",
+          false
+        ],
+        "props": {
+          "Content": null,
+          "View": "Indicadores",
+          "Mode": "Rail"
+        }
+      },
+      {
+        "id": "283:10157",
+        "name": "Chat Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 264,
+        "height": 748,
+        "xy": [
+          1097,
+          276
+        ],
+        "parent": "283:10148",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "ABSOLUTE",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "paddingBottom": 16,
+        "minWidth": 264,
+        "maxWidth": 310,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "258:2011",
+          "View=Indicadores, Mode=Panel",
+          "Chat Sidebar",
+          false
+        ],
+        "props": {
+          "Content": null,
+          "View": "Indicadores",
+          "Mode": "Panel"
+        }
+      },
+      {
+        "id": "290:10546",
+        "name": "Papeles de trabajo selected | Menú desplegado",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1440,
+        "height": 1024,
+        "xy": [
+          3301,
+          2381
+        ],
+        "parent": "203:93",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": true
+      },
+      {
+        "id": "290:10547",
+        "name": "Header",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 1440,
+        "height": 96,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "290:10546",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "SPACE_BETWEEN",
+        "counterAxisAlignItems": "CENTER",
+        "itemSpacing": 0,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+        "paddingBottom": 24,
+        "minWidth": 1152,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "90:439",
+          "Header",
+          "Header",
+          false
+        ],
+        "props": {
+          "Version": "2.0.0",
+          "Show release badge": true,
+          "Show user": true,
+          "Show actions": true,
+          "Show company": true,
+          "Show version": true
+        }
+      },
+      {
+        "id": "290:10548",
+        "name": "Content",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1440,
+        "height": 920,
+        "xy": [
+          0,
+          104
+        ],
+        "parent": "290:10546",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 32,
+        "paddingRight": 32,
+        "paddingTop": 32,
+        "paddingBottom": 32,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "290:10549",
+        "name": "Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 72,
+        "height": 856,
+        "xy": [
+          32,
+          32
+        ],
+        "parent": "290:10548",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MAX",
+        "itemSpacing": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "61:219",
+          "state=collapsed",
+          "Sidebar",
+          false
+        ],
+        "props": {
+          "Expanded menu items": null,
+          "Collapsed lower options": null,
+          "Expanded lower options": null,
+          "Collapsed menu items": null,
+          "state": "collapsed"
+        }
+      },
+      {
+        "id": "290:10550",
+        "name": "Main",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1272,
+        "height": 856,
+        "xy": [
+          136,
+          32
+        ],
+        "parent": "290:10548",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "290:10551",
+        "name": "Section Header",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 1272,
+        "height": 107,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "290:10550",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 16,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+        "paddingBottom": 24,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": true,
+        "master": [
+          "287:151",
+          "logo instead title=true",
+          "Section Header",
+          false
+        ],
+        "props": {
+          "Metadata": null,
+          "Inputs": null,
+          "Show actions": false,
+          "Title": "Lorem ipsum dolor sit amet",
+          "Show metadata": false,
+          "Show description": true,
+          "Show breadcrumbs": false,
+          "General actions": null,
+          "Description": "Lorem ipsum dolor sit amet consectetur. Etiam non ut id enim risus pharetra sollicitudin et. Dolor non convallis eget nibh. Amet neque pretium feugiat feugiat.",
+          "logo instead title": "true"
+        }
+      },
+      {
+        "id": "290:10552",
+        "name": "Frame 1",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1272,
+        "height": 717,
+        "xy": [
+          0,
+          139
+        ],
+        "parent": "290:10550",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "290:10553",
+        "name": "Chat",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 961,
+        "height": 717,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "290:10552",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "CENTER",
+        "counterAxisAlignItems": "CENTER",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 32,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "242:438",
+          "State=Standby",
+          "Chat",
+          false
+        ],
+        "props": {
+          "Messages": null,
+          "Status text": "Leyendo la información...",
+          "User name": "Bruce Wayne",
+          "State": "Standby"
+        }
+      },
+      {
+        "id": "290:10554",
+        "name": "Chat Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 79,
+        "height": 749,
+        "xy": [
+          1361,
+          171
+        ],
+        "parent": "290:10548",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "ABSOLUTE",
+        "primaryAxisAlignItems": "SPACE_BETWEEN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "paddingBottom": 16,
+        "minWidth": 79,
+        "maxWidth": 93,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "258:2940",
+          "View=Papeles de trabajo, Mode=Rail",
+          "Chat Sidebar",
+          false
+        ],
+        "props": {
+          "Content": null,
+          "View": "Papeles de trabajo",
+          "Mode": "Rail"
+        }
+      },
+      {
+        "id": "290:10555",
+        "name": "Chat Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 264,
+        "height": 748,
+        "xy": [
+          1097,
+          276
+        ],
+        "parent": "290:10546",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "ABSOLUTE",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "paddingBottom": 16,
+        "minWidth": 264,
+        "maxWidth": 310,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "258:2183",
+          "View=Papeles de trabajo, Mode=Panel",
+          "Chat Sidebar",
+          false
+        ],
+        "props": {
+          "Content": null,
+          "View": "Papeles de trabajo",
+          "Mode": "Panel"
+        }
+      },
+      {
+        "id": "290:11110",
+        "name": "Vinculaciones selected | Menú desplegado",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1440,
+        "height": 1024,
+        "xy": [
+          3301,
+          3578
+        ],
+        "parent": "203:93",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": true
+      },
+      {
+        "id": "290:11111",
+        "name": "Header",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 1440,
+        "height": 96,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "290:11110",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "SPACE_BETWEEN",
+        "counterAxisAlignItems": "CENTER",
+        "itemSpacing": 0,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+        "paddingBottom": 24,
+        "minWidth": 1152,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "90:439",
+          "Header",
+          "Header",
+          false
+        ],
+        "props": {
+          "Version": "2.0.0",
+          "Show release badge": true,
+          "Show user": true,
+          "Show actions": true,
+          "Show company": true,
+          "Show version": true
+        }
+      },
+      {
+        "id": "290:11112",
+        "name": "Content",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1440,
+        "height": 920,
+        "xy": [
+          0,
+          104
+        ],
+        "parent": "290:11110",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 32,
+        "paddingRight": 32,
+        "paddingTop": 32,
+        "paddingBottom": 32,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "290:11113",
+        "name": "Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 72,
+        "height": 856,
+        "xy": [
+          32,
+          32
+        ],
+        "parent": "290:11112",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MAX",
+        "itemSpacing": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "61:219",
+          "state=collapsed",
+          "Sidebar",
+          false
+        ],
+        "props": {
+          "Expanded menu items": null,
+          "Collapsed lower options": null,
+          "Expanded lower options": null,
+          "Collapsed menu items": null,
+          "state": "collapsed"
+        }
+      },
+      {
+        "id": "290:11114",
+        "name": "Main",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1272,
+        "height": 856,
+        "xy": [
+          136,
+          32
+        ],
+        "parent": "290:11112",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "290:11115",
+        "name": "Section Header",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 1272,
+        "height": 107,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "290:11114",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 16,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+        "paddingBottom": 24,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": true,
+        "master": [
+          "287:151",
+          "logo instead title=true",
+          "Section Header",
+          false
+        ],
+        "props": {
+          "Metadata": null,
+          "Inputs": null,
+          "Show actions": false,
+          "Title": "Lorem ipsum dolor sit amet",
+          "Show metadata": false,
+          "Show description": true,
+          "Show breadcrumbs": false,
+          "General actions": null,
+          "Description": "Lorem ipsum dolor sit amet consectetur. Etiam non ut id enim risus pharetra sollicitudin et. Dolor non convallis eget nibh. Amet neque pretium feugiat feugiat.",
+          "logo instead title": "true"
+        }
+      },
+      {
+        "id": "290:11116",
+        "name": "Frame 1",
+        "type": "FRAME",
+        "visible": true,
+        "width": 1272,
+        "height": 717,
+        "xy": [
+          0,
+          139
+        ],
+        "parent": "290:11114",
+        "layoutMode": "HORIZONTAL",
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 8,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false
+      },
+      {
+        "id": "290:11117",
+        "name": "Chat",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 961,
+        "height": 717,
+        "xy": [
+          0,
+          0
+        ],
+        "parent": "290:11116",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FILL",
+        "layoutPositioning": "AUTO",
+        "primaryAxisAlignItems": "CENTER",
+        "counterAxisAlignItems": "CENTER",
+        "itemSpacing": 32,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 32,
+        "paddingBottom": 0,
+        "minWidth": null,
+        "maxWidth": null,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "242:438",
+          "State=Standby",
+          "Chat",
+          false
+        ],
+        "props": {
+          "Messages": null,
+          "Status text": "Leyendo la información...",
+          "User name": "Bruce Wayne",
+          "State": "Standby"
+        }
+      },
+      {
+        "id": "290:11118",
+        "name": "Chat Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 79,
+        "height": 749,
+        "xy": [
+          1361,
+          171
+        ],
+        "parent": "290:11112",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "ABSOLUTE",
+        "primaryAxisAlignItems": "SPACE_BETWEEN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 32,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "paddingBottom": 16,
+        "minWidth": 79,
+        "maxWidth": 93,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "258:3160",
+          "View=Vinculaciones, Mode=Rail",
+          "Chat Sidebar",
+          false
+        ],
+        "props": {
+          "Content": null,
+          "View": "Vinculaciones",
+          "Mode": "Rail"
+        }
+      },
+      {
+        "id": "290:11119",
+        "name": "Chat Sidebar",
+        "type": "INSTANCE",
+        "visible": true,
+        "width": 264,
+        "height": 748,
+        "xy": [
+          1097,
+          276
+        ],
+        "parent": "290:11110",
+        "layoutMode": "VERTICAL",
+        "layoutSizingHorizontal": "FIXED",
+        "layoutSizingVertical": "FIXED",
+        "layoutPositioning": "ABSOLUTE",
+        "primaryAxisAlignItems": "MIN",
+        "counterAxisAlignItems": "MIN",
+        "itemSpacing": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "paddingBottom": 16,
+        "minWidth": 264,
+        "maxWidth": 310,
+        "minHeight": null,
+        "maxHeight": null,
+        "clipsContent": false,
+        "master": [
+          "258:2331",
+          "View=Vinculaciones, Mode=Panel",
+          "Chat Sidebar",
+          false
+        ],
+        "props": {
+          "Content": null,
+          "View": "Vinculaciones",
+          "Mode": "Panel"
+        }
+      }
+    ]
+  },
+  "audit": {
+    "rows": [
+      {
+        "id": "283:9471",
+        "nodes": 464,
+        "details": [
+          {
+            "id": "283:9476",
+            "master": "287:151",
+            "size": [
+              1272,
+              107
+            ],
+            "xy": [
+              136,
+              136
+            ],
+            "limits": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "slots": [
+              [
+                "Metadata",
+                294,
+                "FIXED",
+                [
+                  [
+                    "INSTANCE",
+                    "Badge"
+                  ],
+                  [
+                    "TEXT",
+                    "Updated"
+                  ]
+                ]
+              ],
+              [
+                "Inputs",
+                951,
+                "FILL",
+                [
+                  [
+                    "INSTANCE",
+                    "Input 1"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 2"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 3"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 4"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 5"
+                  ]
+                ]
+              ],
+              [
+                "General actions",
+                210,
+                "HUG",
+                [
+                  [
+                    "INSTANCE",
+                    "Settings"
+                  ],
+                  [
+                    "INSTANCE",
+                    "General action"
+                  ]
+                ]
+              ]
+            ],
+            "heading": [
+              [
+                "Beni y Navi",
+                true
+              ],
+              [
+                "Title width",
+                false
+              ]
+            ],
+            "selected": []
+          },
+          {
+            "id": "283:9478",
+            "master": "242:438",
+            "size": [
+              1272,
+              717
+            ],
+            "xy": [
+              136,
+              275
+            ],
+            "limits": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "slots": [],
+            "heading": [],
+            "selected": []
+          },
+          {
+            "id": "283:9479",
+            "master": "258:2500",
+            "size": [
+              79,
+              749
+            ],
+            "xy": [
+              1361,
+              275
+            ],
+            "limits": [
+              79,
+              93,
+              null,
+              null
+            ],
+            "slots": [],
+            "heading": [],
+            "selected": [
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        ],
+        "nav": [
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:47",
+            9
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|90:77",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|90:116",
+            1
+          ],
+          [
+            "ON_CLICK|CHANGE_TO|61:309",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|61:472",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|55:15",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|55:24",
+            6
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|60:118",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|61:460",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|23:742",
+            1
+          ],
+          [
+            "AFTER_TIMEOUT|CHANGE_TO|187:21",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|23:871",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:165",
+            3
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:274",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|126:122",
+            3
+          ]
+        ],
+        "styleIssues": []
+      },
+      {
+        "id": "283:9809",
+        "nodes": 578,
+        "details": [
+          {
+            "id": "283:9814",
+            "master": "287:151",
+            "size": [
+              1272,
+              107
+            ],
+            "xy": [
+              136,
+              136
+            ],
+            "limits": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "slots": [
+              [
+                "Metadata",
+                294,
+                "FIXED",
+                [
+                  [
+                    "INSTANCE",
+                    "Badge"
+                  ],
+                  [
+                    "TEXT",
+                    "Updated"
+                  ]
+                ]
+              ],
+              [
+                "Inputs",
+                951,
+                "FILL",
+                [
+                  [
+                    "INSTANCE",
+                    "Input 1"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 2"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 3"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 4"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 5"
+                  ]
+                ]
+              ],
+              [
+                "General actions",
+                210,
+                "HUG",
+                [
+                  [
+                    "INSTANCE",
+                    "Settings"
+                  ],
+                  [
+                    "INSTANCE",
+                    "General action"
+                  ]
+                ]
+              ]
+            ],
+            "heading": [
+              [
+                "Beni y Navi",
+                true
+              ],
+              [
+                "Title width",
+                false
+              ]
+            ],
+            "selected": []
+          },
+          {
+            "id": "283:9816",
+            "master": "242:438",
+            "size": [
+              961,
+              717
+            ],
+            "xy": [
+              136,
+              275
+            ],
+            "limits": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "slots": [],
+            "heading": [],
+            "selected": []
+          },
+          {
+            "id": "283:9817",
+            "master": "283:8726",
+            "size": [
+              79,
+              749
+            ],
+            "xy": [
+              1361,
+              275
+            ],
+            "limits": [
+              79,
+              93,
+              null,
+              null
+            ],
+            "slots": [],
+            "heading": [],
+            "selected": [
+              true,
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "id": "283:10080",
+            "master": "258:1820",
+            "size": [
+              264,
+              748
+            ],
+            "xy": [
+              1097,
+              276
+            ],
+            "limits": [
+              264,
+              310,
+              null,
+              null
+            ],
+            "slots": [
+              [
+                "Content",
+                232,
+                "FILL",
+                [
+                  [
+                    "INSTANCE",
+                    "Chat Sidebar Section"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Chat Sidebar Section"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Chat Sidebar Section"
+                  ]
+                ]
+              ]
+            ],
+            "heading": [],
+            "selected": []
+          }
+        ],
+        "nav": [
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:47",
+            8
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|90:77",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|90:116",
+            1
+          ],
+          [
+            "ON_CLICK|CHANGE_TO|61:309",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|61:472",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|55:15",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|55:24",
+            6
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|60:118",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|61:460",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|23:742",
+            1
+          ],
+          [
+            "AFTER_TIMEOUT|CHANGE_TO|187:21",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|23:871",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:165",
+            14
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:274",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|126:122",
+            3
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:222",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|257:473",
+            2
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|257:506",
+            3
+          ]
+        ],
+        "styleIssues": []
+      },
+      {
+        "id": "290:11665",
+        "nodes": 606,
+        "details": [
+          {
+            "id": "290:11670",
+            "master": "287:151",
+            "size": [
+              1272,
+              107
+            ],
+            "xy": [
+              136,
+              136
+            ],
+            "limits": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "slots": [
+              [
+                "Metadata",
+                294,
+                "FIXED",
+                [
+                  [
+                    "INSTANCE",
+                    "Badge"
+                  ],
+                  [
+                    "TEXT",
+                    "Updated"
+                  ]
+                ]
+              ],
+              [
+                "Inputs",
+                951,
+                "FILL",
+                [
+                  [
+                    "INSTANCE",
+                    "Input 1"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 2"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 3"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 4"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 5"
+                  ]
+                ]
+              ],
+              [
+                "General actions",
+                210,
+                "HUG",
+                [
+                  [
+                    "INSTANCE",
+                    "Settings"
+                  ],
+                  [
+                    "INSTANCE",
+                    "General action"
+                  ]
+                ]
+              ]
+            ],
+            "heading": [
+              [
+                "Beni y Navi",
+                true
+              ],
+              [
+                "Title width",
+                false
+              ]
+            ],
+            "selected": []
+          },
+          {
+            "id": "290:11672",
+            "master": "242:455",
+            "size": [
+              961,
+              717
+            ],
+            "xy": [
+              136,
+              275
+            ],
+            "limits": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "slots": [
+              [
+                "Messages",
+                897,
+                "FILL",
+                [
+                  [
+                    "INSTANCE",
+                    "User message"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Conversation Response"
+                  ]
+                ]
+              ]
+            ],
+            "heading": [],
+            "selected": []
+          },
+          {
+            "id": "290:11673",
+            "master": "283:8726",
+            "size": [
+              79,
+              749
+            ],
+            "xy": [
+              1361,
+              275
+            ],
+            "limits": [
+              79,
+              93,
+              null,
+              null
+            ],
+            "slots": [],
+            "heading": [],
+            "selected": [
+              true,
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "id": "290:11674",
+            "master": "258:1820",
+            "size": [
+              264,
+              748
+            ],
+            "xy": [
+              1097,
+              276
+            ],
+            "limits": [
+              264,
+              310,
+              null,
+              null
+            ],
+            "slots": [
+              [
+                "Content",
+                232,
+                "FILL",
+                [
+                  [
+                    "INSTANCE",
+                    "Chat Sidebar Section"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Chat Sidebar Section"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Chat Sidebar Section"
+                  ]
+                ]
+              ]
+            ],
+            "heading": [],
+            "selected": []
+          }
+        ],
+        "nav": [
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:47",
+            8
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|90:77",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|90:116",
+            1
+          ],
+          [
+            "ON_CLICK|CHANGE_TO|61:309",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|61:472",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|55:15",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|55:24",
+            6
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|60:118",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|61:460",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|23:742",
+            1
+          ],
+          [
+            "AFTER_TIMEOUT|CHANGE_TO|187:21",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|23:754",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|23:871",
+            2
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:165",
+            17
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:274",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:222",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|257:473",
+            2
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|257:520",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|257:506",
+            2
+          ]
+        ],
+        "styleIssues": []
+      },
+      {
+        "id": "283:10148",
+        "nodes": 563,
+        "details": [
+          {
+            "id": "283:10153",
+            "master": "287:151",
+            "size": [
+              1272,
+              107
+            ],
+            "xy": [
+              136,
+              136
+            ],
+            "limits": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "slots": [
+              [
+                "Metadata",
+                294,
+                "FIXED",
+                [
+                  [
+                    "INSTANCE",
+                    "Badge"
+                  ],
+                  [
+                    "TEXT",
+                    "Updated"
+                  ]
+                ]
+              ],
+              [
+                "Inputs",
+                951,
+                "FILL",
+                [
+                  [
+                    "INSTANCE",
+                    "Input 1"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 2"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 3"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 4"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 5"
+                  ]
+                ]
+              ],
+              [
+                "General actions",
+                210,
+                "HUG",
+                [
+                  [
+                    "INSTANCE",
+                    "Settings"
+                  ],
+                  [
+                    "INSTANCE",
+                    "General action"
+                  ]
+                ]
+              ]
+            ],
+            "heading": [
+              [
+                "Beni y Navi",
+                true
+              ],
+              [
+                "Title width",
+                false
+              ]
+            ],
+            "selected": []
+          },
+          {
+            "id": "283:10155",
+            "master": "242:438",
+            "size": [
+              961,
+              717
+            ],
+            "xy": [
+              136,
+              275
+            ],
+            "limits": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "slots": [],
+            "heading": [],
+            "selected": []
+          },
+          {
+            "id": "283:10156",
+            "master": "258:2720",
+            "size": [
+              79,
+              749
+            ],
+            "xy": [
+              1361,
+              275
+            ],
+            "limits": [
+              79,
+              93,
+              null,
+              null
+            ],
+            "slots": [],
+            "heading": [],
+            "selected": [
+              false,
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "id": "283:10157",
+            "master": "258:2011",
+            "size": [
+              264,
+              748
+            ],
+            "xy": [
+              1097,
+              276
+            ],
+            "limits": [
+              264,
+              310,
+              null,
+              null
+            ],
+            "slots": [
+              [
+                "Content",
+                232,
+                "FILL",
+                [
+                  [
+                    "INSTANCE",
+                    "Chat Sidebar Section"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Chat Sidebar Section"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Chat Sidebar Section"
+                  ]
+                ]
+              ]
+            ],
+            "heading": [],
+            "selected": []
+          }
+        ],
+        "nav": [
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:47",
+            8
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|90:77",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|90:116",
+            1
+          ],
+          [
+            "ON_CLICK|CHANGE_TO|61:309",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|61:472",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|55:15",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|55:24",
+            6
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|60:118",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|61:460",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|23:742",
+            1
+          ],
+          [
+            "AFTER_TIMEOUT|CHANGE_TO|187:21",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|23:871",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:165",
+            12
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:274",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|126:122",
+            3
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:222",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|257:473",
+            2
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|257:506",
+            2
+          ]
+        ],
+        "styleIssues": []
+      },
+      {
+        "id": "290:10546",
+        "nodes": 563,
+        "details": [
+          {
+            "id": "290:10551",
+            "master": "287:151",
+            "size": [
+              1272,
+              107
+            ],
+            "xy": [
+              136,
+              136
+            ],
+            "limits": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "slots": [
+              [
+                "Metadata",
+                294,
+                "FIXED",
+                [
+                  [
+                    "INSTANCE",
+                    "Badge"
+                  ],
+                  [
+                    "TEXT",
+                    "Updated"
+                  ]
+                ]
+              ],
+              [
+                "Inputs",
+                951,
+                "FILL",
+                [
+                  [
+                    "INSTANCE",
+                    "Input 1"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 2"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 3"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 4"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 5"
+                  ]
+                ]
+              ],
+              [
+                "General actions",
+                210,
+                "HUG",
+                [
+                  [
+                    "INSTANCE",
+                    "Settings"
+                  ],
+                  [
+                    "INSTANCE",
+                    "General action"
+                  ]
+                ]
+              ]
+            ],
+            "heading": [
+              [
+                "Beni y Navi",
+                true
+              ],
+              [
+                "Title width",
+                false
+              ]
+            ],
+            "selected": []
+          },
+          {
+            "id": "290:10553",
+            "master": "242:438",
+            "size": [
+              961,
+              717
+            ],
+            "xy": [
+              136,
+              275
+            ],
+            "limits": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "slots": [],
+            "heading": [],
+            "selected": []
+          },
+          {
+            "id": "290:10554",
+            "master": "258:2940",
+            "size": [
+              79,
+              749
+            ],
+            "xy": [
+              1361,
+              275
+            ],
+            "limits": [
+              79,
+              93,
+              null,
+              null
+            ],
+            "slots": [],
+            "heading": [],
+            "selected": [
+              false,
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "id": "290:10555",
+            "master": "258:2183",
+            "size": [
+              264,
+              748
+            ],
+            "xy": [
+              1097,
+              276
+            ],
+            "limits": [
+              264,
+              310,
+              null,
+              null
+            ],
+            "slots": [
+              [
+                "Content",
+                232,
+                "FILL",
+                [
+                  [
+                    "INSTANCE",
+                    "Chat Sidebar Section"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Chat Sidebar Section"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Chat Sidebar Section"
+                  ]
+                ]
+              ]
+            ],
+            "heading": [],
+            "selected": []
+          }
+        ],
+        "nav": [
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:47",
+            8
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|90:77",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|90:116",
+            1
+          ],
+          [
+            "ON_CLICK|CHANGE_TO|61:309",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|61:472",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|55:15",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|55:24",
+            6
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|60:118",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|61:460",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|23:742",
+            1
+          ],
+          [
+            "AFTER_TIMEOUT|CHANGE_TO|187:21",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|23:871",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:165",
+            12
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:274",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|126:122",
+            3
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:222",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|257:473",
+            2
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|257:506",
+            2
+          ]
+        ],
+        "styleIssues": []
+      },
+      {
+        "id": "290:11110",
+        "nodes": 541,
+        "details": [
+          {
+            "id": "290:11115",
+            "master": "287:151",
+            "size": [
+              1272,
+              107
+            ],
+            "xy": [
+              136,
+              136
+            ],
+            "limits": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "slots": [
+              [
+                "Metadata",
+                294,
+                "FIXED",
+                [
+                  [
+                    "INSTANCE",
+                    "Badge"
+                  ],
+                  [
+                    "TEXT",
+                    "Updated"
+                  ]
+                ]
+              ],
+              [
+                "Inputs",
+                951,
+                "FILL",
+                [
+                  [
+                    "INSTANCE",
+                    "Input 1"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 2"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 3"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 4"
+                  ],
+                  [
+                    "INSTANCE",
+                    "Input 5"
+                  ]
+                ]
+              ],
+              [
+                "General actions",
+                210,
+                "HUG",
+                [
+                  [
+                    "INSTANCE",
+                    "Settings"
+                  ],
+                  [
+                    "INSTANCE",
+                    "General action"
+                  ]
+                ]
+              ]
+            ],
+            "heading": [
+              [
+                "Beni y Navi",
+                true
+              ],
+              [
+                "Title width",
+                false
+              ]
+            ],
+            "selected": []
+          },
+          {
+            "id": "290:11117",
+            "master": "242:438",
+            "size": [
+              961,
+              717
+            ],
+            "xy": [
+              136,
+              275
+            ],
+            "limits": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "slots": [],
+            "heading": [],
+            "selected": []
+          },
+          {
+            "id": "290:11118",
+            "master": "258:3160",
+            "size": [
+              79,
+              749
+            ],
+            "xy": [
+              1361,
+              275
+            ],
+            "limits": [
+              79,
+              93,
+              null,
+              null
+            ],
+            "slots": [],
+            "heading": [],
+            "selected": [
+              false,
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "id": "290:11119",
+            "master": "258:2331",
+            "size": [
+              264,
+              748
+            ],
+            "xy": [
+              1097,
+              276
+            ],
+            "limits": [
+              264,
+              310,
+              null,
+              null
+            ],
+            "slots": [
+              [
+                "Content",
+                232,
+                "FILL",
+                [
+                  [
+                    "INSTANCE",
+                    "Chat Sidebar Section"
+                  ]
+                ]
+              ]
+            ],
+            "heading": [],
+            "selected": []
+          }
+        ],
+        "nav": [
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:47",
+            8
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|90:77",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|90:116",
+            1
+          ],
+          [
+            "ON_CLICK|CHANGE_TO|61:309",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|61:472",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|55:15",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|55:24",
+            6
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|60:118",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|61:460",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|23:742",
+            1
+          ],
+          [
+            "AFTER_TIMEOUT|CHANGE_TO|187:21",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|23:871",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:165",
+            6
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:274",
+            1
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|126:122",
+            3
+          ],
+          [
+            "MOUSE_ENTER|CHANGE_TO|59:222",
+            1
+          ],
+          [
+            "ON_HOVER|CHANGE_TO|257:473",
+            2
+          ]
+        ],
+        "styleIssues": []
+      }
+    ],
+    "external": [
+      [
+        "3f0d7ae9a02577d4fb4e615737d09fa1b49ec230",
+        "Presentation"
+      ],
+      [
+        "e8a605a7dc033aeb0586aabb0797d37ef30eac38",
+        "ArrowsCounterClockwise"
+      ],
+      [
+        "f7835a27019ae83c184f9e910f0956c0fc3b992f",
+        "GraduationCap"
+      ],
+      [
+        "312ec28591dbe217188e9d6f8c63e64cff65ba90",
+        "Headset"
+      ],
+      [
+        "5cb5aa74925cb753dc21b23ebd171bea87136e02",
+        "AppWindow"
+      ],
+      [
+        "ef703d88cfc6792cdd17351c4cc923a019b91855",
+        "Bell"
+      ],
+      [
+        "ac05f135edf1318580f23b4e20de17744d0453f7",
+        "Buildings"
+      ],
+      [
+        "bc84188a38d95b6865a7c6a57820ee2330e43f34",
+        "CaretDown"
+      ],
+      [
+        "e2fc671298e81c590f5a4a5272d9c97709515666",
+        "CaretRight"
+      ],
+      [
+        "7de3e2b6dd8bfe526ed1ec72cc2df4052c42c2de",
+        "HouseLine"
+      ],
+      [
+        "090ff24ab3485ba51fe71427dd00328da0afe68f",
+        "HouseLine"
+      ],
+      [
+        "8ebba51c41e3b39511663395803390b9d2e3d3f7",
+        "Question"
+      ],
+      [
+        "395e4dcf16b8451c0b295bb7402a9319d1b4a9f2",
+        "ArrowLeft"
+      ],
+      [
+        "8c085e5256f1c4b805274c58950d738da08eff0b",
+        "Gear"
+      ],
+      [
+        "46d251bb4099700c5852180f2370d265e5166432",
+        "PlusCircle"
+      ],
+      [
+        "a7eab12525396b21f901983db82eecb38841c9ef",
+        "Plus"
+      ],
+      [
+        "e680150da1e51ad1cac1b3cbc753f494f1bdffbb",
+        "Paperclip"
+      ],
+      [
+        "b17b9e0b2b9d8be196330914608d40a05e09ff03",
+        "Microphone"
+      ],
+      [
+        "cd6f99b957372ddd41f6ee00ef2e3edfc62d8fa6",
+        "PaperPlaneTilt"
+      ],
+      [
+        "4046be769b352c4e707a75fd12c03a00eb63f3f4",
+        "X"
+      ],
+      [
+        "81c10c25593d451160897a03ccc39cd1fc7fad27",
+        "Chats"
+      ],
+      [
+        "9c503743dfd1c4221544004d27ad53c079802dd6",
+        "Siren"
+      ],
+      [
+        "90e6fea88275f3f4a8691a863e5a3bbb3bfc17e8",
+        "Table"
+      ],
+      [
+        "fe6b9a04ab933f080e2bffda99b1f92d7a2d4e92",
+        "Link"
+      ],
+      [
+        "5ff5a3803dcaa55363c76a9c36f06050325b68d1",
+        "MagicWand"
+      ],
+      [
+        "b0c91d0b43c046b2a817ae2ed32c6e0f75e96f49",
+        "MagnifyingGlass"
+      ],
+      [
+        "c59befd15f17eec89e0943aee375f86e60e00fde",
+        "Sidebar"
+      ],
+      [
+        "aceb0189f7b5f5a8bcb9d647706990f141c8dae7",
+        "Chat"
+      ],
+      [
+        "b0d66c2c04014490bfbefe7579e0c98cd16db0a2",
+        "PushPin"
+      ],
+      [
+        "33bbf11fec95bfc540e85769b270534f2db07776",
+        "DotsThree"
+      ],
+      [
+        "f590766fe326cbf502d6b3066f5a432e6db19294",
+        "Folder"
+      ],
+      [
+        "db8b8087b494b9d39f05c5923eb7da6944fc1298",
+        "ThumbsUp"
+      ],
+      [
+        "1fd7cabe4ba7ce8c453d5b6e441018894fbe64e0",
+        "ThumbsDown"
+      ]
+    ],
+    "externalVariables": [],
+    "nonComponentOverrides": []
+  }
+}

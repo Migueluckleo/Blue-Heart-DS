@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "run": "2026-11-13-section-header-logo-rail-review",
+  "status": "COMPLETE_LOCAL",
+  "started": 1794608601.409826,
+  "invocations": 5,
+  "retry_attempts": 3,
+  "previous_attempts": [
+    {
+      "started": 1794608455.117474,
+      "elapsed_seconds": 2.932,
+      "status": "NEEDS_SEMANTICS",
+      "phases": [
+        {
+          "name": "documents",
+          "seconds": 1.614,
+          "status": "PASS",
+          "result": {
+            "status": "PASS",
+            "files": 1233,
+            "findings": 0,
+            "timings": {
+              "inventory": 0.628,
+              "metadata": 0.365,
+              "status": 0.235,
+              "validation": 0.317
+            }
+          }
+        },
+        {
+          "name": "graph_plan",
+          "seconds": 0.578,
+          "status": "PASS",
+          "result": {
+            "status": "PREPARED",
+            "run": "2026-11-13-section-header-logo-rail-review",
+            "semantic_files": 9,
+            "chunks": 2,
+            "next": "Extraer cada chunk según la skill Graphify y después ejecutar scripts/ds graph close --run 2026-11-13-section-header-logo-rail-review"
+          }
+        }
+      ]
+    },
+    {
+      "started": 1794608484.9254222,
+      "elapsed_seconds": 19.937,
+      "status": "BLOCKED",
+      "phases": [
+        {
+          "name": "documents",
+          "seconds": 1.385,
+          "status": "PASS",
+          "result": {
+            "status": "PASS",
+            "files": 1233,
+            "findings": 0,
+            "timings": {
+              "inventory": 0.738,
+              "metadata": 0.041,
+              "status": 0.23,
+              "validation": 0.305
+            }
+          }
+        },
+        {
+          "name": "graph_plan",
+          "seconds": 1.299,
+          "status": "PASS",
+          "result": {
+            "status": "PREPARED",
+            "run": "2026-11-13-section-header-logo-rail-review",
+            "semantic_files": 9,
+            "chunks": 2
+          }
+        },
+        {
+          "name": "graph",
+          "seconds": 16.772,
+          "status": "BLOCKED",
+          "error": "['HTML nodes differ from JSON export', 'HTML edges differ from JSON export']"
+        }
+      ]
+    },
+    {
+      "started": 1794608536.2179441,
+      "elapsed_seconds": 10.71,
+      "status": "BLOCKED",
+      "phases": [
+        {
+          "name": "documents",
+          "seconds": 1.395,
+          "status": "PASS",
+          "result": {
+            "status": "PASS",
+            "files": 1233,
+            "findings": 0,
+            "timings": {
+              "inventory": 0.718,
+              "metadata": 0.039,
+              "status": 0.26,
+              "validation": 0.313
+            }
+          }
+        },
+        {
+          "name": "graph_plan",
+          "seconds": 0.675,
+          "status": "PASS",
+          "result": {
+            "status": "PREPARED",
+            "run": "2026-11-13-section-header-logo-rail-review",
+            "semantic_files": 9,
+            "chunks": 2
+          }
+        },
+        {
+          "name": "graph",
+          "seconds": 7.802,
+          "status": "BLOCKED",
+          "error": "Shrink guard refused; backup preserved. Do not force."
+        }
+      ]
+    },
+    {
+      "started": 1794608569.753255,
+      "elapsed_seconds": 13.87,
+      "status": "BLOCKED",
+      "phases": [
+        {
+          "name": "documents",
+          "seconds": 1.454,
+          "status": "PASS",
+          "result": {
+            "status": "PASS",
+            "files": 1233,
+            "findings": 0,
+            "timings": {
+              "inventory": 0.747,
+              "metadata": 0.024,
+              "status": 0.282,
+              "validation": 0.333
+            }
+          }
+        },
+        {
+          "name": "graph_plan",
+          "seconds": 0.848,
+          "status": "PASS",
+          "result": {
+            "status": "PREPARED",
+            "run": "2026-11-13-section-header-logo-rail-review",
+            "semantic_files": 9,
+            "chunks": 2
+          }
+        },
+        {
+          "name": "graph",
+          "seconds": 10.442,
+          "status": "BLOCKED",
+          "error": "['HTML nodes differ from JSON export', 'HTML edges differ from JSON export']"
+        }
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "name": "documents",
+      "seconds": 1.545,
+      "status": "PASS",
+      "result": {
+        "status": "PASS",
+        "files": 1233,
+        "findings": 0,
+        "timings": {
+          "inventory": 0.801,
+          "metadata": 0.043,
+          "status": 0.267,
+          "validation": 0.362
+        }
+      }
+    },
+    {
+      "name": "graph_plan",
+      "seconds": 0.776,
+      "status": "PASS",
+      "result": {
+        "status": "PREPARED",
+        "run": "2026-11-13-section-header-logo-rail-review",
+        "semantic_files": 9,
+        "chunks": 2
+      }
+    },
+    {
+      "name": "graph",
+      "seconds": 10.633,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "run": "2026-11-13-section-header-logo-rail-review",
+        "files": 1233,
+        "nodes": 4747,
+        "edges": 8762,
+        "config_sha256": "64200147d7f8876266bfc3547518007dc7c1a5d29ea83d98bb44712ac6b7b6ed",
+        "output_sha256": {
+          "graph.json": "14a82ac6291d6f2aae92efafef46160e2fd659c930b314ddae41cb9b97064589",
+          "graph.html": "a324ed16051753043a795975e9ffaac7307043af168028f143127f6eac67e3e7",
+          "GRAPH_REPORT.md": "df255c3fba8c7bce20ecc843ef3fd37bf9092b105247f16234e26137f0b0a1d7",
+          "manifest.json": "d2ec6279e9c5921294db9691d11613f61eb9b177bc2c037f5e5b36ab52074d34",
+          ".graphify_health.json": "79a8833a3b08f611e459c38cfddbdaa0b58c092af825be3819dee0156f5c66a4",
+          ".graphify_labels.json": "20d43ab676dd209297ad72dfcdbc10c9ce5b8049ac2ff3f0c3b0bc948d1b3137",
+          ".graphify_labels.json.sig": "c642a68d5212af83a0835f1ac6f3d4b4056506aa05d42e9fbfbc57f44650a451",
+          "cost.json": "19c9640d66e87be0cf1560d71c90d6f9d41f1365995bbabd8facccd64e53d4ae"
+        },
+        "source_link_limitations": 0,
+        "semantic_usage": "UNAVAILABLE; not zero",
+        "scope": "Local corpus freshness, deterministic documentation checks, no Figma QA or design approval",
+        "extraction_tool_sha256": "593eb639d649019c81606b410999b243c76e43ad3b7988ee90a120e973dd8bd7",
+        "extraction_sha256": {
+          "ast.json": "61b33344be281808d7a31b9d4856a565bd586c9fa687394f9746dd915d65ea42",
+          "structural-supplement.json": "42cd35dabd2fbc99aaab538319a1fe5da50359b031e808b8b623510b6975c2a1",
+          "source-plan.json": "a558c4fe3197b05b34b8eb0ebf1d57b6fe9036972710452d08b4c42866fbce05"
+        }
+      }
+    },
+    {
+      "name": "consumption",
+      "seconds": 7.027,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "index_bytes": 367368,
+        "documents": 113,
+        "relations": 263
+      }
+    },
+    {
+      "name": "catalog",
+      "seconds": 1.16,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "files": 1204,
+        "components": 51,
+        "ds_digest": "01658d00a07840c07c8b3485c8b0b2ded62b0dcbc371bb57569f37b860464d33",
+        "bundle_bytes": 5066113
+      }
+    },
+    {
+      "name": "skills_sync_export",
+      "seconds": 0.358,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "version": "1.0.5",
+        "ds_digest": "REMOTE",
+        "components": 0,
+        "errors": [],
+        "scope": "Package integrity and source freshness; no design approval or live Figma/web QA",
+        "operation": "UNCHANGED"
+      }
+    },
+    {
+      "name": "skills_integrity",
+      "seconds": 0.191,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "version": "1.0.5",
+        "ds_digest": "REMOTE",
+        "components": 0,
+        "errors": [],
+        "scope": "Package integrity and source freshness; no design approval or live Figma/web QA"
+      }
+    },
+    {
+      "name": "source_integrity",
+      "seconds": 0.212,
+      "status": "PASS",
+      "result": {
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "graph_integrity",
+      "seconds": 0.543,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "errors": [],
+        "files": 1233,
+        "nodes": 4747,
+        "edges": 8762,
+        "scope": "Graph freshness/integrity, not Figma validation"
+      }
+    }
+  ],
+  "usage_start": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "usage_end": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "agent_tokens": "UNAVAILABLE",
+  "agent_tool_calls": "UNAVAILABLE",
+  "command_phase_calls": 9,
+  "publication": "NOT_RUN",
+  "installation": "NOT_REQUESTED; portable packages verified",
+  "publication_holds": [],
+  "reuse": {
+    "ds_core.corpus": {
+      "executed": 1,
+      "reused": 7
+    },
+    "yaml_files": {
+      "executed": 2,
+      "reused": 898,
+      "persisted_reused": 231
+    },
+    "ds_core.generate_status": {
+      "executed": 2,
+      "reused": 1
+    },
+    "ds_core.documentation_check": {
+      "executed": 2,
+      "reused": 0
+    },
+    "ds_skills.source_inputs": {
+      "executed": 1,
+      "reused": 10
+    },
+    "ds_consumption.validate_sources": {
+      "executed": 1,
+      "reused": 4
+    }
+  },
+  "hash_reads": 2730,
+  "source_fingerprint": "f9399fe8cfafd2394f34cb860de1c5e871f38145205527b8009a194b041e7dfb",
+  "elapsed_seconds": 23.553,
+  "concurrent_attempts": 0
+}

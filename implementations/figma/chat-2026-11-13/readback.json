@@ -1,0 +1,391 @@
+{
+  "initial": {
+    "status": "PASS",
+    "owners": [
+      {
+        "id": "242:437",
+        "name": "chat"
+      }
+    ],
+    "bindingCount": 71,
+    "overrideCount": 6,
+    "findings": [],
+    "checks": {
+      "source": true,
+      "page": true,
+      "metadata": true,
+      "state": true,
+      "order": true,
+      "dependencies": true,
+      "slot": true,
+      "editability": true
+    },
+    "order": [
+      [
+        "0:1",
+        "Thumbnail"
+      ],
+      [
+        "65:274",
+        "----"
+      ],
+      [
+        "105:2",
+        "App Shell"
+      ],
+      [
+        "83:2",
+        "Avatars"
+      ],
+      [
+        "64:2",
+        "Badge"
+      ],
+      [
+        "47:74",
+        "Breadcrumbs"
+      ],
+      [
+        "22:3",
+        "Buttons"
+      ],
+      [
+        "187:14",
+        "Characters"
+      ],
+      [
+        "242:658",
+        "Chat"
+      ],
+      [
+        "42:2",
+        "Checkbox"
+      ],
+      [
+        "126:2",
+        "Chips"
+      ],
+      [
+        "216:109",
+        "Conversation Composer"
+      ],
+      [
+        "222:309",
+        "Conversation Response"
+      ],
+      [
+        "32:26",
+        "Dot"
+      ],
+      [
+        "118:2",
+        "Dropdown"
+      ],
+      [
+        "42:31",
+        "File Upload"
+      ],
+      [
+        "122:2",
+        "Floating Actions"
+      ],
+      [
+        "90:2",
+        "Header"
+      ],
+      [
+        "59:2",
+        "Icon Buttons"
+      ],
+      [
+        "122:49",
+        "Inline Notification"
+      ],
+      [
+        "93:2",
+        "Input"
+      ],
+      [
+        "39:2",
+        "Linear Progress Bar"
+      ],
+      [
+        "22:2",
+        "Loader"
+      ],
+      [
+        "170:2",
+        "Logos"
+      ],
+      [
+        "109:2",
+        "Pagination"
+      ],
+      [
+        "32:119",
+        "Radio Buttons"
+      ],
+      [
+        "47:2",
+        "Search"
+      ],
+      [
+        "96:2",
+        "Section Header"
+      ],
+      [
+        "54:2",
+        "Sidebar"
+      ],
+      [
+        "155:2",
+        "Steppers"
+      ],
+      [
+        "128:2",
+        "Table"
+      ],
+      [
+        "113:2",
+        "Tabs"
+      ],
+      [
+        "116:2",
+        "Text Area"
+      ],
+      [
+        "32:74",
+        "Toggle"
+      ],
+      [
+        "38:2",
+        "Tooltip"
+      ],
+      [
+        "237:20",
+        "User message"
+      ],
+      [
+        "203:92",
+        "----"
+      ],
+      [
+        "203:93",
+        "Playground"
+      ]
+    ],
+    "edits": {
+      "initial": [
+        "User message",
+        "Conversation Response"
+      ],
+      "sizes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reorder": true,
+      "replace": true,
+      "connected": true,
+      "status": "Estado actualizado",
+      "temporary": "243:194"
+    },
+    "linked": {
+      "State=Standby": [
+        "187:15",
+        "216:66",
+        "126:112",
+        "126:112",
+        "126:112"
+      ],
+      "State=Started": [
+        "237:19",
+        "222:73",
+        "216:66"
+      ]
+    },
+    "bounds": [
+      [
+        "242:438",
+        "State=Standby",
+        750,
+        601.739990234375
+      ],
+      [
+        "242:455",
+        "State=Started",
+        750,
+        683
+      ]
+    ]
+  },
+  "narrowBefore": {
+    "name": "Chat",
+    "narrow": [
+      {
+        "state": "State=Standby",
+        "instance": "244:194",
+        "width": 320,
+        "height": 657.739990234375,
+        "name": "Ana Torres",
+        "suggestionWidth": 320,
+        "composerWidth": 616,
+        "connected": true
+      },
+      {
+        "state": "State=Started",
+        "instance": "244:307",
+        "width": 320,
+        "height": 683,
+        "regionWidth": 320,
+        "composerWidth": 320,
+        "connected": true
+      }
+    ],
+    "createdNodeIds": [],
+    "mutatedNodeIds": [
+      "242:437"
+    ]
+  },
+  "correction": {
+    "sizes": [
+      616,
+      616,
+      750,
+      601.739990234375
+    ],
+    "tokens": [
+      "VariableID:245:194",
+      "VariableID:245:195",
+      "VariableID:245:196"
+    ],
+    "createdNodeIds": [],
+    "mutatedNodeIds": [
+      "242:450",
+      "242:438"
+    ]
+  },
+  "final": {
+    "status": "PASS",
+    "owners": [
+      {
+        "id": "242:437",
+        "name": "Chat"
+      }
+    ],
+    "bindingCount": 78,
+    "overrideCount": 7,
+    "findings": [],
+    "sizes": [
+      {
+        "state": "State=Standby",
+        "width": 320,
+        "composer": 320,
+        "connected": true
+      },
+      {
+        "state": "State=Started",
+        "width": 320,
+        "composer": 320,
+        "connected": true
+      }
+    ]
+  },
+  "build": {
+    "page": "242:658",
+    "set": "242:437",
+    "variants": [
+      [
+        "242:438",
+        "State=Standby",
+        750,
+        601.739990234375
+      ],
+      [
+        "242:455",
+        "State=Started",
+        750,
+        683
+      ]
+    ],
+    "props": {
+      "Messages#238:0": {
+        "type": "SLOT",
+        "description": "Historial de la conversación. Inserta, reordena o sustituye mensajes en una instancia Started.",
+        "slotSettings": {
+          "stretchChildOnInsert": false,
+          "displayEmptyByDefault": false,
+          "minChildren": null,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": false
+        },
+        "preferredValues": []
+      },
+      "User name#242:6": {
+        "type": "TEXT",
+        "defaultValue": "Bruce Wayne"
+      },
+      "Status text#242:9": {
+        "type": "TEXT",
+        "defaultValue": "Leyendo la información..."
+      },
+      "State": {
+        "type": "VARIANT",
+        "defaultValue": "Standby",
+        "variantOptions": [
+          "Standby",
+          "Started"
+        ]
+      }
+    },
+    "variables": [
+      "VariableID:242:416",
+      "VariableID:242:417",
+      "VariableID:242:418",
+      "VariableID:242:419",
+      "VariableID:242:420",
+      "VariableID:242:421",
+      "VariableID:242:422",
+      "VariableID:242:423",
+      "VariableID:242:424",
+      "VariableID:242:425",
+      "VariableID:242:426",
+      "VariableID:242:427",
+      "VariableID:242:428",
+      "VariableID:242:429",
+      "VariableID:242:430",
+      "VariableID:242:431",
+      "VariableID:242:432",
+      "VariableID:242:433",
+      "VariableID:242:434",
+      "VariableID:242:435",
+      "VariableID:242:436"
+    ],
+    "createdNodeIds": [
+      "242:658",
+      "242:437",
+      "242:438",
+      "242:439",
+      "242:440",
+      "242:441",
+      "242:442",
+      "242:443",
+      "242:444",
+      "242:445",
+      "242:450",
+      "242:451",
+      "242:452",
+      "242:453",
+      "242:454",
+      "242:455",
+      "242:463",
+      "242:464",
+      "242:465",
+      "242:466",
+      "242:467",
+      "242:468"
+    ],
+    "mutatedNodeIds": []
+  }
+}

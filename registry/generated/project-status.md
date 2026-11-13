@@ -6,7 +6,7 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 
 | Familia | Base | Estado documental | Enmiendas | Evidencia de implementación |
 |---|---|---|---|---|
-| APP-SHELL-001 | [1.0.0](../../specs/components/app-shell.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| APP-SHELL-001 | [1.0.0](../../specs/components/app-shell.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
 | AVATAR-001 | [1.0.0](../../specs/components/avatar.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | AVATAR-GROUP-001 | [1.0.0](../../specs/components/avatar-group.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | BADGE-001 | [1.0.0](../../specs/components/badge.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
@@ -14,6 +14,12 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 | BREADCRUMB-ITEM-001 | [1.0.0](../../specs/components/breadcrumb-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | BUTTON-001 | [1.0.0](../../specs/components/buttons.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 1 registros por alcance |
 | CHARACTERS-001 | [1.0.0](../../specs/components/characters.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| CHAT-001 | [1.0.0](../../specs/components/chat.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| CHAT-HISTORY-ITEM-001 | [1.0.0](../../specs/components/chat-history-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| CHAT-PLAN-USAGE-001 | [1.0.0](../../specs/components/chat-plan-usage.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| CHAT-SIDEBAR-001 | [1.0.0](../../specs/components/chat-sidebar.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
+| CHAT-SIDEBAR-SECTION-001 | [1.0.0](../../specs/components/chat-sidebar-section.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| CHAT-TOOL-ITEM-001 | [1.0.0](../../specs/components/chat-tool-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | CHECKBOX-001 | [1.0.0](../../specs/components/checkbox.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | CHIP-001 | [1.0.0](../../specs/components/chip.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | COMPANY-SELECTOR-001 | [1.0.0](../../specs/components/company-selector.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
@@ -32,14 +38,14 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 | INPUT-001 | [1.0.0](../../specs/components/input.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | LINEAR-PROGRESS-001 | [1.0.0](../../specs/components/linear-progress.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | LOADER-001 | [1.0.0](../../specs/components/loader.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 1 registros por alcance |
-| LOGOS-001 | [1.0.0](../../specs/components/logos.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| LOGOS-001 | [1.0.0](../../specs/components/logos.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
 | MENU-ITEM-001 | [1.0.0](../../specs/components/menu-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | PAGINATION-001 | [1.0.0](../../specs/components/pagination.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | PAGINATION-ITEM-001 | [1.0.0](../../specs/components/pagination-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | RADIO-001 | [1.0.0](../../specs/components/radio.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | RADIO-GROUP-001 | [1.0.0](../../specs/components/radio-group.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | SEARCH-001 | [1.0.0](../../specs/components/search.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| SECTION-HEADER-001 | [1.0.0](../../specs/components/section-header.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| SECTION-HEADER-001 | [1.0.0](../../specs/components/section-header.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
 | SIDEBAR-001 | [1.0.0](../../specs/components/sidebar.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 2 registros por alcance |
 | STEPPER-001 | [1.0.0](../../specs/components/stepper.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | TAB-001 | [1.0.0](../../specs/components/tab.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
@@ -50,6 +56,7 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 | TOGGLE-001 | [1.0.0](../../specs/components/toggle.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | TOOLTIP-001 | [1.0.0](../../specs/components/tooltip.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | TOP-BAR-001 | [1.0.0](../../specs/components/top-bar.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| USER-MESSAGE-001 | [1.0.0](../../specs/components/user-message.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | USER-SELECTOR-001 | [1.0.0](../../specs/components/user-selector.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 
 ## APP-SHELL-001
@@ -62,6 +69,7 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Preparación: UNKNOWN.
 - Slots: REQUIRED en [specs/components/app-shell.contract.v1.0.0.md](../../specs/components/app-shell.contract.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Implementación: [implementations/figma/app-shell-conversation/readback.json](../../implementations/figma/app-shell-conversation/readback.json) — {}.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -155,6 +163,85 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Página declarada: Characters en [specs/components/characters.contract.v1.0.0.md](../../specs/components/characters.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
 - Slots: NOT_APPLICABLE en [specs/components/characters.contract.v1.0.0.md](../../specs/components/characters.contract.v1.0.0.md).
+- Revisión de implementación declarada: UNKNOWN.
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## CHAT-001
+
+Base: [specs/components/chat.contract.v1.0.0.md](../../specs/components/chat.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/components/chat.contract.v1.0.0.md](../../specs/components/chat.contract.v1.0.0.md).
+- Página declarada: Chat en [specs/components/chat.contract.v1.0.0.md](../../specs/components/chat.contract.v1.0.0.md).
+- Preparación: UNKNOWN.
+- Slots: REQUIRED en [specs/components/chat.contract.v1.0.0.md](../../specs/components/chat.contract.v1.0.0.md).
+- Revisión de implementación declarada: UNKNOWN.
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## CHAT-HISTORY-ITEM-001
+
+Base: [specs/components/chat-history-item.contract.v1.0.0.md](../../specs/components/chat-history-item.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/components/chat-history-item.contract.v1.0.0.md](../../specs/components/chat-history-item.contract.v1.0.0.md).
+- Página declarada: Chat History Item en [specs/components/chat-history-item.contract.v1.0.0.md](../../specs/components/chat-history-item.contract.v1.0.0.md).
+- Preparación: UNKNOWN.
+- Slots: REQUIRED en [specs/components/chat-history-item.contract.v1.0.0.md](../../specs/components/chat-history-item.contract.v1.0.0.md).
+- Revisión de implementación declarada: UNKNOWN.
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## CHAT-PLAN-USAGE-001
+
+Base: [specs/components/chat-plan-usage.contract.v1.0.0.md](../../specs/components/chat-plan-usage.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/components/chat-plan-usage.contract.v1.0.0.md](../../specs/components/chat-plan-usage.contract.v1.0.0.md).
+- Página declarada: Chat Plan Usage en [specs/components/chat-plan-usage.contract.v1.0.0.md](../../specs/components/chat-plan-usage.contract.v1.0.0.md).
+- Preparación: UNKNOWN.
+- Slots: NOT_APPLICABLE en [specs/components/chat-plan-usage.contract.v1.0.0.md](../../specs/components/chat-plan-usage.contract.v1.0.0.md).
+- Revisión de implementación declarada: UNKNOWN.
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## CHAT-SIDEBAR-001
+
+Base: [specs/components/chat-sidebar.contract.v1.0.0.md](../../specs/components/chat-sidebar.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/components/chat-sidebar.contract.v1.0.0.md](../../specs/components/chat-sidebar.contract.v1.0.0.md).
+- Página declarada: Chat Sidebar en [specs/components/chat-sidebar.contract.v1.0.0.md](../../specs/components/chat-sidebar.contract.v1.0.0.md).
+- Preparación: UNKNOWN.
+- Slots: REQUIRED en [specs/components/chat-sidebar.contract.v1.0.0.md](../../specs/components/chat-sidebar.contract.v1.0.0.md).
+- Revisión de implementación declarada: UNKNOWN.
+- Implementación: [implementations/figma/chat-sidebar-rail-parity/readback.json](../../implementations/figma/chat-sidebar-rail-parity/readback.json) — {"status": "PASS"}.
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## CHAT-SIDEBAR-SECTION-001
+
+Base: [specs/components/chat-sidebar-section.contract.v1.0.0.md](../../specs/components/chat-sidebar-section.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/components/chat-sidebar-section.contract.v1.0.0.md](../../specs/components/chat-sidebar-section.contract.v1.0.0.md).
+- Página declarada: Chat Sidebar Section en [specs/components/chat-sidebar-section.contract.v1.0.0.md](../../specs/components/chat-sidebar-section.contract.v1.0.0.md).
+- Preparación: UNKNOWN.
+- Slots: REQUIRED en [specs/components/chat-sidebar-section.contract.v1.0.0.md](../../specs/components/chat-sidebar-section.contract.v1.0.0.md).
+- Revisión de implementación declarada: UNKNOWN.
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## CHAT-TOOL-ITEM-001
+
+Base: [specs/components/chat-tool-item.contract.v1.0.0.md](../../specs/components/chat-tool-item.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/components/chat-tool-item.contract.v1.0.0.md](../../specs/components/chat-tool-item.contract.v1.0.0.md).
+- Página declarada: Chat Tool Item en [specs/components/chat-tool-item.contract.v1.0.0.md](../../specs/components/chat-tool-item.contract.v1.0.0.md).
+- Preparación: UNKNOWN.
+- Slots: REQUIRED en [specs/components/chat-tool-item.contract.v1.0.0.md](../../specs/components/chat-tool-item.contract.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
@@ -411,6 +498,7 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Preparación: UNKNOWN.
 - Slots: NOT_APPLICABLE en [specs/components/logos.contract.v1.0.0.md](../../specs/components/logos.contract.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Implementación: [implementations/figma/logos-beni-navi-2026-11-13/readback.json](../../implementations/figma/logos-beni-navi-2026-11-13/readback.json) — {"qa": {"status": "PASS", "page": "170:2", "set": "277:76", "totalSets": 6, "totalVariants": 72, "results": [{"source": "273:7910", "variant": "277:2", "name": "product=Beni, Firma=Sin firma", "dimensions": [421.2406921386719, 155.3499755859375], "vectorCount": 7, "delta": 6.103515625e-05, "linked": 0}, {"source": "273:7945", "variant": "277:12", "name": "product=Navi, Firma=Sin firma", "dimensions": [416.900146484375, 182.82000732421875], "vectorCount": 14, "delta": 6.103515625e-05, "linked": 0}, {"source": "273:7890", "variant": "277:28", "name": "product=Beni, Firma=CONTPAQi", "dimensions": [430.330078125, 197.94012451171875], "vectorCount": 18, "delta": 6.103515625e-05, "linked": 0}, {"source": "273:7919", "variant": "277:49", "name": "product=Navi, Firma=CONTPAQi", "dimensions": [417.22998046875, 183.42999267578125], "vectorCount": 25, "delta": 6.103515625e-05, "linked": 0}], "instance_selection": {"status": "PASS", "deletedNodeIds": ["279:2"], "rows": [{"product": "Beni", "Firma": "Sin firma", "main": "277:2"}, {"product": "Beni", "Firma": "CONTPAQi", "main": "277:28"}, {"product": "Navi", "Firma": "CONTPAQi", "main": "277:49"}, {"product": "Navi", "Firma": "Sin firma", "main": "277:12"}]}}}.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -502,6 +590,7 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Preparación: UNKNOWN.
 - Slots: REQUIRED en [specs/components/section-header.contract.v1.0.0.md](../../specs/components/section-header.contract.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Implementación: [implementations/figma/section-header-logo-replacement/readback.json](../../implementations/figma/section-header-logo-replacement/readback.json) — {"status": "PASS"}.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -634,6 +723,19 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Página declarada: Sidebar en [specs/components/top-bar.contract.v1.0.0.md](../../specs/components/top-bar.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
 - Slots: REQUIRED en [specs/components/top-bar.contract.v1.0.0.md](../../specs/components/top-bar.contract.v1.0.0.md).
+- Revisión de implementación declarada: UNKNOWN.
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## USER-MESSAGE-001
+
+Base: [specs/components/user-message.contract.v1.0.0.md](../../specs/components/user-message.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/components/user-message.contract.v1.0.0.md](../../specs/components/user-message.contract.v1.0.0.md).
+- Página declarada: User message en [specs/components/user-message.contract.v1.0.0.md](../../specs/components/user-message.contract.v1.0.0.md).
+- Preparación: UNKNOWN.
+- Slots: NOT_APPLICABLE en [specs/components/user-message.contract.v1.0.0.md](../../specs/components/user-message.contract.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).

@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 
 export interface SectionHeaderProps {
   title: string;
+  logoInsteadTitle?: boolean;
   headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;
   description?: string;
   breadcrumbs?: ReactNode;
@@ -15,7 +16,7 @@ export interface SectionHeaderProps {
   className?: string;
 }
 
-export function SectionHeader({title, headingLevel = 2, description, breadcrumbs, metadata, inputs, actions,
+export function SectionHeader({title, headingLevel = 2, logoInsteadTitle = false, description, breadcrumbs, metadata, inputs, actions,
   showBreadcrumbs = true, showDescription = true, showMetadata = true, showActions = true,
   className}: SectionHeaderProps) {
   const Heading = (`h${headingLevel}`) as const;
@@ -23,7 +24,11 @@ export function SectionHeader({title, headingLevel = 2, description, breadcrumbs
     <div className="bh-section-header-content">
       <div className="bh-section-header-heading">
         {showBreadcrumbs && breadcrumbs}
-        <Heading className="bh-section-header-title">{title}</Heading>
+        <Heading className={logoInsteadTitle ? 'bh-section-header-logo' : 'bh-section-header-title'}>
+          {logoInsteadTitle
+            ? <img src="/assets/section-header-beni.svg" width={87} height={32} alt={title}/>
+            : title}
+        </Heading>
         {showDescription && description && <p className="bh-section-header-description">{description}</p>}
       </div>
       {showMetadata && metadata && <div className="bh-section-header-metadata">{metadata}</div>}

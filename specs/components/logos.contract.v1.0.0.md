@@ -8,13 +8,13 @@ version: 1.0.0
 figma_page_name: Logos
 figma_page_id: "170:2"
 target_file_key: yZsIpXywybsPDytjolwcP4
-target_node_ids: ["171:13", "171:1289", "171:1987", "171:2293", "171:2535"]
+target_node_ids: ["171:13", "171:1289", "171:1987", "171:2293", "171:2535", "277:76"]
 consumption_targets: [figma]
 user_audit: NOT_REQUIRED
 human_review_policy: OPTIONAL_NON_BLOCKING
 slot_applicability: NOT_APPLICABLE
 source_data_ref: specs/data/logos.v1.0.0.json
-source_data_digest_sha256: 17400028aeb2d6c205130121144bfb4199c0f911bbdc30bb4cc3eb1518335375
+source_data_digest_sha256: 4c0ef44b1cd96c4af0248ddd416cd1ebbcaf00ebc798e421bbb14591dc214c23
 data_refs: [specs/data/logos.v1.0.0.json]
 dependencies: []
 ---
@@ -23,7 +23,7 @@ dependencies: []
 
 ## Fuentes y alcance
 
-La [selección de Librería v1.1.0](https://www.figma.com/design/9zs5RMR8LB5wHjW9Bd59BA/Libreria-v1.1.0?node-id=40-93) es de solo lectura. El alcance de consumo cubre los cinco sets nativos de `Content` (`2415:1934`) y sus 68 variantes. La [captura](../../sources/figma-snapshots/logos-2026-11-12/inventory.json) distingue los cinco maestros parametrizados de la documentación y de doce marcos sueltos sin API de componente. Los marcos se conservan como evidencia de la selección. El [JSON delegado](../data/logos.v1.0.0.json) fija identidades, parámetros, defaults, combinaciones reales y geometría por variante. La página de destino usa el nombre semántico Logos, tomado del nombre de la página fuente sin sus adornos.
+La [selección de Librería v1.1.0](https://www.figma.com/design/9zs5RMR8LB5wHjW9Bd59BA/Libreria-v1.1.0?node-id=40-93) es de solo lectura. El alcance de consumo cubre los cinco sets nativos de `Content` (`2415:1934`) y sus 68 variantes. La [selección de Beni y Navi](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=273-7961) aporta un sexto set con cuatro variantes vectoriales, para un total de 72. La [captura](../../sources/figma-snapshots/logos-2026-11-12/inventory.json) distingue los cinco maestros parametrizados de la documentación y de doce marcos sueltos sin API de componente. Los marcos se conservan como evidencia de la selección. El [JSON delegado](../data/logos.v1.0.0.json) fija identidades, parámetros, defaults, combinaciones reales y geometría por variante. La página de destino usa el nombre semántico Logos, tomado del nombre de la página fuente sin sus adornos.
 
 El usuario autorizó consumo exclusivo desde AI Blueheart DS en Figma. Web y prototipador PO tienen alcance NOT_APPLICABLE para esta familia. Los logos de marca usan esta fuente específica. Las reglas de iconografía Phosphor siguen aplicando a iconos funcionales.
 
@@ -40,6 +40,7 @@ Conserva el arte fuente por instancia, su geometría, vectores, grupos, máscara
 | `personas` | Personas | 12 | `product`, `type`. Default `nominas` / `vertical`. |
 | `servicios` | Servicios | 6 | `product`, `type`. Default `respaldos` / `vertical`. Conserva `VDI` en mayúsculas. |
 | `CONTPAQi` | Marca corporativa | 5 | `product`, `Mode`. Default `Mi CONTPAQi` / `light`. `light2` existe para `CONTPAQi`. |
+| `Beni y Navi` | Identidad de asistentes | 4 | `product=Beni/Navi`, `Firma=Sin firma/CONTPAQi`. Default Beni sin firma. |
 
 Los sets de producto ofrecen `type=vertical`, `horizontal` e `isotipo`. En el set corporativo selecciona únicamente las parejas `product` / `Mode` existentes en el JSON. `Mode` selecciona el arte corporativo y su contraste de fondo. El anfitrión controla el espacio y el nombre accesible si la marca funciona como enlace o acción.
 
@@ -63,9 +64,12 @@ Usa la marca para identificar el producto o a CONTPAQi. Selecciona el set por gr
 | personas | LOGOS-001 · Identidad de productos de Personas. Elige product y type según el producto y el espacio. Conserva el arte y las proporciones de la variante. |
 | servicios | LOGOS-001 · Identidad de productos de Servicios. Elige product y type según el producto y el espacio. Conserva VDI en mayúsculas y las proporciones de la variante. |
 | CONTPAQi | LOGOS-001 · Identidad corporativa CONTPAQi y Mi CONTPAQi. Elige la pareja product y Mode disponible que mantenga legibilidad sobre el fondo. Conserva el arte y las proporciones. |
+| Beni y Navi | LOGOS-001 · Identidad de Beni y Navi. Elige el personaje y si lleva firma CONTPAQi. Conserva el arte y las proporciones. |
 
 ## Aceptación
 
-Leer los cinco sets oficiales y las 68 variantes. Comparar nombres, default, API, geometría, capas, color, máscaras y fills con la fuente. Verificar cero bindings y cero dependencias externas. Instanciar y seleccionar las combinaciones disponibles. La página oficial contiene únicamente los cinco sets y cada set contiene sus variantes. Confirmar alcance Figma en el catálogo y ausencia de export web.
+Leer los seis sets oficiales y las 72 variantes. Comparar nombres, default, API, geometría, capas, color, máscaras y fills con la fuente. Verificar cero bindings y cero dependencias externas. Instanciar y seleccionar las combinaciones disponibles. La página oficial contiene únicamente los seis sets y cada set contiene sus variantes. Confirmar alcance Figma en el catálogo y ausencia de export web.
 
-La [ficha de consumo](../../implementations/figma/logos-2026-11-12/README.md) enlaza los cinco sets del maestro.
+El [readback de Beni y Navi](../../implementations/figma/logos-beni-navi-2026-11-13/readback.json) registra los IDs de las cuatro variantes, sus medidas, la comparación vectorial y la selección comprobada con una instancia.
+
+La [ficha de consumo](../../implementations/figma/logos-2026-11-12/README.md) enlaza los seis sets del maestro.

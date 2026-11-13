@@ -1,0 +1,322 @@
+{
+  "status": "PASS",
+  "set": "258:3326",
+  "props": {
+    "Content#258:0": {
+      "type": "SLOT",
+      "description": "Secciones del panel expandido.",
+      "slotSettings": {
+        "stretchChildOnInsert": true,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "preferredValues": []
+    },
+    "View": {
+      "type": "VARIANT",
+      "defaultValue": "Chats",
+      "variantOptions": [
+        "Chats",
+        "Indicadores",
+        "Papeles de trabajo",
+        "Vinculaciones",
+        "none"
+      ]
+    },
+    "Mode": {
+      "type": "VARIANT",
+      "defaultValue": "Panel",
+      "variantOptions": [
+        "Panel",
+        "Rail"
+      ]
+    }
+  },
+  "variants": [
+    {
+      "id": "258:1820",
+      "name": "View=Chats, Mode=Panel",
+      "size": [
+        264,
+        791
+      ],
+      "buttons": [],
+      "content": [
+        [
+          "258:3327",
+          232,
+          "FILL"
+        ]
+      ]
+    },
+    {
+      "id": "258:2011",
+      "name": "View=Indicadores, Mode=Panel",
+      "size": [
+        264,
+        791
+      ],
+      "buttons": [],
+      "content": [
+        [
+          "258:3366",
+          232,
+          "FILL"
+        ]
+      ]
+    },
+    {
+      "id": "258:2183",
+      "name": "View=Papeles de trabajo, Mode=Panel",
+      "size": [
+        264,
+        791
+      ],
+      "buttons": [],
+      "content": [
+        [
+          "258:3400",
+          232,
+          "FILL"
+        ]
+      ]
+    },
+    {
+      "id": "258:2331",
+      "name": "View=Vinculaciones, Mode=Panel",
+      "size": [
+        264,
+        791
+      ],
+      "buttons": [],
+      "content": [
+        [
+          "258:3434",
+          232,
+          "FILL"
+        ]
+      ]
+    },
+    {
+      "id": "258:2500",
+      "name": "View=none, Mode=Rail",
+      "size": [
+        79,
+        791
+      ],
+      "buttons": [
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ],
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ],
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ],
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ]
+      ],
+      "content": []
+    },
+    {
+      "id": "283:8726",
+      "name": "View=Chats, Mode=Rail",
+      "size": [
+        79,
+        791
+      ],
+      "buttons": [
+        [
+          "59:205",
+          "size=large, selected=true, state=default"
+        ],
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ],
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ],
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ]
+      ],
+      "content": []
+    },
+    {
+      "id": "258:2720",
+      "name": "View=Indicadores, Mode=Rail",
+      "size": [
+        79,
+        791
+      ],
+      "buttons": [
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ],
+        [
+          "59:205",
+          "size=large, selected=true, state=default"
+        ],
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ],
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ]
+      ],
+      "content": []
+    },
+    {
+      "id": "258:2940",
+      "name": "View=Papeles de trabajo, Mode=Rail",
+      "size": [
+        79,
+        791
+      ],
+      "buttons": [
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ],
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ],
+        [
+          "59:205",
+          "size=large, selected=true, state=default"
+        ],
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ]
+      ],
+      "content": []
+    },
+    {
+      "id": "258:3160",
+      "name": "View=Vinculaciones, Mode=Rail",
+      "size": [
+        79,
+        791
+      ],
+      "buttons": [
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ],
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ],
+        [
+          "59:3",
+          "size=large, selected=false, state=default"
+        ],
+        [
+          "59:205",
+          "size=large, selected=true, state=default"
+        ]
+      ],
+      "content": []
+    }
+  ],
+  "external": [
+    [
+      "b0c91d0b43c046b2a817ae2ed32c6e0f75e96f49",
+      "MagnifyingGlass"
+    ],
+    [
+      "c59befd15f17eec89e0943aee375f86e60e00fde",
+      "Sidebar"
+    ],
+    [
+      "aceb0189f7b5f5a8bcb9d647706990f141c8dae7",
+      "Chat"
+    ],
+    [
+      "bc84188a38d95b6865a7c6a57820ee2330e43f34",
+      "CaretDown"
+    ],
+    [
+      "81c10c25593d451160897a03ccc39cd1fc7fad27",
+      "Chats"
+    ],
+    [
+      "a7eab12525396b21f901983db82eecb38841c9ef",
+      "Plus"
+    ],
+    [
+      "b0d66c2c04014490bfbefe7579e0c98cd16db0a2",
+      "PushPin"
+    ],
+    [
+      "33bbf11fec95bfc540e85769b270534f2db07776",
+      "DotsThree"
+    ],
+    [
+      "f590766fe326cbf502d6b3066f5a432e6db19294",
+      "Folder"
+    ],
+    [
+      "90e6fea88275f3f4a8691a863e5a3bbb3bfc17e8",
+      "Table"
+    ],
+    [
+      "fe6b9a04ab933f080e2bffda99b1f92d7a2d4e92",
+      "Link"
+    ],
+    [
+      "9c503743dfd1c4221544004d27ad53c079802dd6",
+      "Siren"
+    ],
+    [
+      "5ff5a3803dcaa55363c76a9c36f06050325b68d1",
+      "MagicWand"
+    ]
+  ],
+  "externalVariables": [],
+  "externalStyles": [],
+  "tokenQA": {
+    "status": "PASS",
+    "owners": [
+      {
+        "id": "258:3326",
+        "name": "Chat Sidebar"
+      },
+      {
+        "id": "257:465",
+        "name": "Chat Tool Item"
+      },
+      {
+        "id": "257:498",
+        "name": "Chat History Item"
+      },
+      {
+        "id": "257:587",
+        "name": "Chat Sidebar Section"
+      },
+      {
+        "id": "257:621",
+        "name": "Chat Plan Usage"
+      }
+    ],
+    "bindingCount": 640,
+    "overrideCount": 124,
+    "findings": []
+  }
+}

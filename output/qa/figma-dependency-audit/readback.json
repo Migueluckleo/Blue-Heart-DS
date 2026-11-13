@@ -1,0 +1,1262 @@
+{
+  "status": "PASS",
+  "fileKey": "yZsIpXywybsPDytjolwcP4",
+  "phosphorFileKey": "xZSksKpcQTp5H3C4dZApBL",
+  "totals": {
+    "pages": 43,
+    "nodes": 13167,
+    "instances": 2855,
+    "owners": 86,
+    "textRanges": 1748,
+    "imageFills": 153,
+    "local": 1422,
+    "collections": [
+      [
+        "semantic",
+        "VariableCollectionId:6:21",
+        false,
+        false,
+        null
+      ],
+      [
+        "component",
+        "VariableCollectionId:6:22",
+        false,
+        false,
+        null
+      ],
+      [
+        "primitives",
+        "VariableCollectionId:10:2",
+        false,
+        false,
+        null
+      ]
+    ],
+    "styles": {
+      "TEXT": 70,
+      "EFFECT": 7
+    },
+    "aliases": 4869,
+    "external": [],
+    "prototypeReactions": 795,
+    "allowedKeys": 57,
+    "findings": 0
+  },
+  "changes": [
+    {
+      "mutatedNodeIds": [
+        "I258:3344;257:602;258:3354;257:468;8899:58200",
+        "I258:3378;257:602;258:3388;257:468;8899:58200",
+        "I258:3412;257:602;258:3422;257:468;8899:58200"
+      ],
+      "changes": [
+        {
+          "id": "I258:3344;257:602;258:3354;257:468;8899:58200",
+          "binding": "VariableID:257:370"
+        },
+        {
+          "id": "I258:3378;257:602;258:3388;257:468;8899:58200",
+          "binding": "VariableID:257:370"
+        },
+        {
+          "id": "I258:3412;257:602;258:3422;257:468;8899:58200",
+          "binding": "VariableID:257:370"
+        }
+      ],
+      "local": "VariableID:257:370"
+    },
+    {
+      "mutatedNodeIds": [
+        "90:1138"
+      ],
+      "master": "171:1523",
+      "dimensions": [
+        176,
+        48,
+        "FIXED",
+        "FIXED"
+      ],
+      "binding": {
+        "height": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:748"
+        }
+      }
+    },
+    {
+      "createdNodeIds": [
+        "272:5584",
+        "272:5583",
+        "272:5581",
+        "272:5582",
+        "272:5579",
+        "272:5580"
+      ],
+      "mutatedNodeIds": [
+        "222:212",
+        "I222:212;59:155"
+      ],
+      "master": "272:5584",
+      "vector": "272:5582",
+      "binding": [
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:830"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "token": "icon-button/color/icon/ghost-default"
+    },
+    {
+      "mutatedNodeIds": [
+        "222:302",
+        "I222:302;59:155"
+      ],
+      "master": "272:5584",
+      "verified": [
+        "222:212",
+        "222:302"
+      ]
+    }
+  ],
+  "externalFindingsBefore": [
+    {
+      "page": [
+        "105:2",
+        "App Shell"
+      ],
+      "kind": "remote-main",
+      "ref": "90:448",
+      "count": 4,
+      "samples": [
+        [
+          "I105:8;90:1138",
+          "contables",
+          "INSTANCE",
+          "getMainComponentAsync"
+        ],
+        [
+          "I105:717;90:1138",
+          "contables",
+          "INSTANCE",
+          "getMainComponentAsync"
+        ],
+        [
+          "I105:1145;90:1138",
+          "contables",
+          "INSTANCE",
+          "getMainComponentAsync"
+        ]
+      ],
+      "detail": [
+        "e1770fa0d28362f0b2f2045caab556a5d18b7158",
+        "product=contabilidad, type=horizontal",
+        true,
+        [
+          "COMPONENT",
+          "COMPONENT_SET"
+        ],
+        null
+      ]
+    },
+    {
+      "page": [
+        "242:658",
+        "Chat"
+      ],
+      "kind": "swap",
+      "ref": "218:1233",
+      "count": 1,
+      "samples": [
+        [
+          "I242:466;222:212",
+          "Copy action",
+          "INSTANCE",
+          "Icon#59:0"
+        ]
+      ],
+      "detail": [
+        "50099234b1b8689a4188d5761a2d1b72394e322d",
+        ".Table / Copy",
+        true,
+        null
+      ]
+    },
+    {
+      "page": [
+        "242:658",
+        "Chat"
+      ],
+      "kind": "remote-main",
+      "ref": "218:1233",
+      "count": 1,
+      "samples": [
+        [
+          "I242:466;222:212;59:155",
+          "Icon",
+          "INSTANCE",
+          "getMainComponentAsync"
+        ]
+      ],
+      "detail": [
+        "50099234b1b8689a4188d5761a2d1b72394e322d",
+        ".Table / Copy",
+        true,
+        [
+          "COMPONENT"
+        ],
+        null
+      ]
+    },
+    {
+      "page": [
+        "258:3325",
+        "Chat Sidebar"
+      ],
+      "kind": "variable",
+      "ref": "VariableID:c315947672ee955cd7e7f8ab6a1b0f072a759ce7/16:75",
+      "count": 6,
+      "samples": [
+        [
+          "I258:3344;257:602;258:3354;257:468;8899:58200",
+          "Vector",
+          "VECTOR",
+          "boundVariables.fills[0]"
+        ],
+        [
+          "I258:3344;257:602;258:3354;257:468;8899:58200",
+          "Vector",
+          "VECTOR",
+          "fills.color"
+        ],
+        [
+          "I258:3378;257:602;258:3388;257:468;8899:58200",
+          "Vector",
+          "VECTOR",
+          "boundVariables.fills[0]"
+        ]
+      ],
+      "detail": [
+        "c315947672ee955cd7e7f8ab6a1b0f072a759ce7",
+        "color/icon/primary",
+        true,
+        "VariableCollectionId:c04a0ffd54a55af31ee830f9e9f3b519f84a4e57/6:4"
+      ]
+    },
+    {
+      "page": [
+        "222:309",
+        "Conversation Response"
+      ],
+      "kind": "swap",
+      "ref": "218:1233",
+      "count": 2,
+      "samples": [
+        [
+          "222:212",
+          "Copy action",
+          "INSTANCE",
+          "Icon#59:0"
+        ],
+        [
+          "222:302",
+          "Copy action",
+          "INSTANCE",
+          "Icon#59:0"
+        ]
+      ],
+      "detail": [
+        "50099234b1b8689a4188d5761a2d1b72394e322d",
+        ".Table / Copy",
+        true,
+        null
+      ]
+    },
+    {
+      "page": [
+        "222:309",
+        "Conversation Response"
+      ],
+      "kind": "remote-main",
+      "ref": "218:1233",
+      "count": 2,
+      "samples": [
+        [
+          "I222:212;59:155",
+          "Icon",
+          "INSTANCE",
+          "getMainComponentAsync"
+        ],
+        [
+          "I222:302;59:155",
+          "Icon",
+          "INSTANCE",
+          "getMainComponentAsync"
+        ]
+      ],
+      "detail": [
+        "50099234b1b8689a4188d5761a2d1b72394e322d",
+        ".Table / Copy",
+        true,
+        [
+          "COMPONENT"
+        ],
+        null
+      ]
+    },
+    {
+      "page": [
+        "90:2",
+        "Header"
+      ],
+      "kind": "remote-main",
+      "ref": "90:448",
+      "count": 1,
+      "samples": [
+        [
+          "90:1138",
+          "contables",
+          "INSTANCE",
+          "getMainComponentAsync"
+        ]
+      ],
+      "detail": [
+        "e1770fa0d28362f0b2f2045caab556a5d18b7158",
+        "product=contabilidad, type=horizontal",
+        true,
+        [
+          "COMPONENT",
+          "COMPONENT_SET"
+        ],
+        null
+      ]
+    }
+  ],
+  "approvedLibraryKeys": [
+    [
+      "aceb0189f7b5f5a8bcb9d647706990f141c8dae7",
+      "Chat"
+    ],
+    [
+      "81c10c25593d451160897a03ccc39cd1fc7fad27",
+      "Chats"
+    ],
+    [
+      "cd6f99b957372ddd41f6ee00ef2e3edfc62d8fa6",
+      "PaperPlaneTilt"
+    ],
+    [
+      "1fd7cabe4ba7ce8c453d5b6e441018894fbe64e0",
+      "ThumbsDown"
+    ],
+    [
+      "db8b8087b494b9d39f05c5923eb7da6944fc1298",
+      "ThumbsUp"
+    ],
+    [
+      "aac149e12fc8ed2da22bd95d2cef764a2b407ad7",
+      "House"
+    ],
+    [
+      "090ff24ab3485ba51fe71427dd00328da0afe68f",
+      "HouseLine"
+    ],
+    [
+      "7de3e2b6dd8bfe526ed1ec72cc2df4052c42c2de",
+      "HouseLine"
+    ],
+    [
+      "312ec28591dbe217188e9d6f8c63e64cff65ba90",
+      "Headset"
+    ],
+    [
+      "514d9f5531e27849e63dd6c19b1989085985eafa",
+      "Image"
+    ],
+    [
+      "f273018f11d7d4e938078bd0b21b0b3a9e7f2634",
+      "ImageSquare"
+    ],
+    [
+      "b17b9e0b2b9d8be196330914608d40a05e09ff03",
+      "Microphone"
+    ],
+    [
+      "27962798645349b2b27ba120b6bb1db551e4c8a3",
+      "Confetti"
+    ],
+    [
+      "e59dc310706bfe83ca2f09b69441d517c7372db1",
+      "Eye"
+    ],
+    [
+      "83ef141671189ffc05d5b1da03149fb76dc4377c",
+      "MagicWand"
+    ],
+    [
+      "5ff5a3803dcaa55363c76a9c36f06050325b68d1",
+      "MagicWand"
+    ],
+    [
+      "d025009814c0137041e0db9b7af3890c46de7cee",
+      "Notches"
+    ],
+    [
+      "407e99584a7dcdd00970ee097f482cc382474687",
+      "PencilSimple"
+    ],
+    [
+      "c59befd15f17eec89e0943aee375f86e60e00fde",
+      "Sidebar"
+    ],
+    [
+      "5cb5aa74925cb753dc21b23ebd171bea87136e02",
+      "AppWindow"
+    ],
+    [
+      "ef703d88cfc6792cdd17351c4cc923a019b91855",
+      "Bell"
+    ],
+    [
+      "b0e1ef9e3dcc90870bbf7ef05b8ee937890eb31d",
+      "Check"
+    ],
+    [
+      "c05dcb9e418a4827e9999640903ed093e850fdc0",
+      "CheckCircle"
+    ],
+    [
+      "984178cc7f83622d3afc7ae09c023c10dbf436b7",
+      "CheckFat"
+    ],
+    [
+      "bd084549a3330f22c6a948731d5df7b242353c7a",
+      "CloudArrowUp"
+    ],
+    [
+      "c327741161110bfde761204a30b65913172539b7",
+      "DotsThree"
+    ],
+    [
+      "33bbf11fec95bfc540e85769b270534f2db07776",
+      "DotsThree"
+    ],
+    [
+      "8c085e5256f1c4b805274c58950d738da08eff0b",
+      "Gear"
+    ],
+    [
+      "fe6b9a04ab933f080e2bffda99b1f92d7a2d4e92",
+      "Link"
+    ],
+    [
+      "b0c91d0b43c046b2a817ae2ed32c6e0f75e96f49",
+      "MagnifyingGlass"
+    ],
+    [
+      "10ad6c579ecb00c883f839281ca2ad812962a324",
+      "Minus"
+    ],
+    [
+      "a7eab12525396b21f901983db82eecb38841c9ef",
+      "Plus"
+    ],
+    [
+      "46d251bb4099700c5852180f2370d265e5166432",
+      "PlusCircle"
+    ],
+    [
+      "90e6fea88275f3f4a8691a863e5a3bbb3bfc17e8",
+      "Table"
+    ],
+    [
+      "4046be769b352c4e707a75fd12c03a00eb63f3f4",
+      "X"
+    ],
+    [
+      "a553df531f5cbc790fbf9481e2d13c0a39c6d540",
+      "XCircle"
+    ],
+    [
+      "f590766fe326cbf502d6b3066f5a432e6db19294",
+      "Folder"
+    ],
+    [
+      "1f315f9a08488d0b413cf8cd97518fe8187d147d",
+      "NotePencil"
+    ],
+    [
+      "e680150da1e51ad1cac1b3cbc753f494f1bdffbb",
+      "Paperclip"
+    ],
+    [
+      "3f0d7ae9a02577d4fb4e615737d09fa1b49ec230",
+      "Presentation"
+    ],
+    [
+      "b0d66c2c04014490bfbefe7579e0c98cd16db0a2",
+      "PushPin"
+    ],
+    [
+      "06f86c2ef36efc28f3a86e82996016a709c1e8bd",
+      "TrashSimple"
+    ],
+    [
+      "ac05f135edf1318580f23b4e20de17744d0453f7",
+      "Buildings"
+    ],
+    [
+      "395e4dcf16b8451c0b295bb7402a9319d1b4a9f2",
+      "ArrowLeft"
+    ],
+    [
+      "e8a605a7dc033aeb0586aabb0797d37ef30eac38",
+      "ArrowsCounterClockwise"
+    ],
+    [
+      "791ac575d3135af604b137c620e66fb2bec69d1c",
+      "CaretDoubleLeft"
+    ],
+    [
+      "e0c3dba96eb798c7b3ca6ddb8bb5bced41505ccc",
+      "CaretDoubleRight"
+    ],
+    [
+      "bc84188a38d95b6865a7c6a57820ee2330e43f34",
+      "CaretDown"
+    ],
+    [
+      "4472d4a157a44ccd6e7e4911b4c9dcad1dc04b34",
+      "CaretLeft"
+    ],
+    [
+      "e2fc671298e81c590f5a4a5272d9c97709515666",
+      "CaretRight"
+    ],
+    [
+      "77a821b72c03fcfbd0ca9b2910c3fb5c98ed210f",
+      "User"
+    ],
+    [
+      "4b8a12b3aa942823e8f1ecea2a3b8af2759cd7cc",
+      "Info"
+    ],
+    [
+      "8ebba51c41e3b39511663395803390b9d2e3d3f7",
+      "Question"
+    ],
+    [
+      "a5f8c0e175f87b18c9c59b90029e64dd9d01a9d1",
+      "Question"
+    ],
+    [
+      "9c503743dfd1c4221544004d27ad53c079802dd6",
+      "Siren"
+    ],
+    [
+      "75ba7898c02f2522c78786982ea96e00a557bec0",
+      "Warning"
+    ],
+    [
+      "f7835a27019ae83c184f9e910f0956c0fc3b992f",
+      "GraduationCap"
+    ]
+  ],
+  "pageCoverage": [
+    {
+      "page": [
+        "0:1",
+        "Thumbnail"
+      ],
+      "nodes": 1,
+      "instances": 0,
+      "owners": 0,
+      "textRanges": 0,
+      "imageFills": 0,
+      "totals": {}
+    },
+    {
+      "page": [
+        "65:274",
+        "----"
+      ],
+      "nodes": 1,
+      "instances": 0,
+      "owners": 0,
+      "textRanges": 0,
+      "imageFills": 0,
+      "totals": {}
+    },
+    {
+      "page": [
+        "105:2",
+        "App Shell"
+      ],
+      "nodes": 1404,
+      "instances": 414,
+      "owners": 1,
+      "textRanges": 212,
+      "imageFills": 4,
+      "totals": {
+        "variable": 7442,
+        "style": 434,
+        "swap": 192,
+        "remote-main": 200,
+        "preferred": 32
+      }
+    },
+    {
+      "page": [
+        "83:2",
+        "Avatars"
+      ],
+      "nodes": 123,
+      "instances": 48,
+      "owners": 2,
+      "textRanges": 20,
+      "imageFills": 4,
+      "totals": {
+        "swap": 17,
+        "preferred": 35,
+        "variable": 1316,
+        "remote-main": 4,
+        "style": 40
+      }
+    },
+    {
+      "page": [
+        "64:2",
+        "Badge"
+      ],
+      "nodes": 110,
+      "instances": 36,
+      "owners": 1,
+      "textRanges": 18,
+      "imageFills": 0,
+      "totals": {
+        "swap": 2,
+        "variable": 588,
+        "remote-main": 36,
+        "style": 36
+      }
+    },
+    {
+      "page": [
+        "47:74",
+        "Breadcrumbs"
+      ],
+      "nodes": 142,
+      "instances": 52,
+      "owners": 2,
+      "textRanges": 27,
+      "imageFills": 0,
+      "totals": {
+        "variable": 695,
+        "style": 54,
+        "remote-main": 34
+      }
+    },
+    {
+      "page": [
+        "22:3",
+        "Buttons"
+      ],
+      "nodes": 561,
+      "instances": 180,
+      "owners": 5,
+      "textRanges": 90,
+      "imageFills": 0,
+      "totals": {
+        "swap": 10,
+        "preferred": 10,
+        "variable": 3174,
+        "remote-main": 150
+      }
+    },
+    {
+      "page": [
+        "187:14",
+        "Characters"
+      ],
+      "nodes": 93,
+      "instances": 0,
+      "owners": 2,
+      "textRanges": 0,
+      "imageFills": 0,
+      "totals": {
+        "variable": 94
+      }
+    },
+    {
+      "page": [
+        "242:658",
+        "Chat"
+      ],
+      "nodes": 196,
+      "instances": 71,
+      "owners": 1,
+      "textRanges": 29,
+      "imageFills": 0,
+      "totals": {
+        "variable": 1272,
+        "swap": 29,
+        "preferred": 8,
+        "remote-main": 32,
+        "style": 16
+      }
+    },
+    {
+      "page": [
+        "257:586",
+        "Chat History Item"
+      ],
+      "nodes": 62,
+      "instances": 24,
+      "owners": 1,
+      "textRanges": 8,
+      "imageFills": 0,
+      "totals": {
+        "variable": 458,
+        "swap": 8,
+        "remote-main": 8
+      }
+    },
+    {
+      "page": [
+        "257:624",
+        "Chat Plan Usage"
+      ],
+      "nodes": 19,
+      "instances": 2,
+      "owners": 1,
+      "textRanges": 4,
+      "imageFills": 0,
+      "totals": {
+        "variable": 94,
+        "remote-main": 2
+      }
+    },
+    {
+      "page": [
+        "258:3325",
+        "Chat Sidebar"
+      ],
+      "nodes": 520,
+      "instances": 205,
+      "owners": 2,
+      "textRanges": 53,
+      "imageFills": 1,
+      "totals": {
+        "variable": 2981,
+        "swap": 56,
+        "remote-main": 75,
+        "style": 32
+      }
+    },
+    {
+      "page": [
+        "257:603",
+        "Chat Sidebar Section"
+      ],
+      "nodes": 10,
+      "instances": 3,
+      "owners": 1,
+      "textRanges": 1,
+      "imageFills": 0,
+      "totals": {
+        "variable": 48,
+        "swap": 1,
+        "remote-main": 1
+      }
+    },
+    {
+      "page": [
+        "257:497",
+        "Chat Tool Item"
+      ],
+      "nodes": 32,
+      "instances": 9,
+      "owners": 1,
+      "textRanges": 3,
+      "imageFills": 0,
+      "totals": {
+        "swap": 1,
+        "variable": 119,
+        "remote-main": 9
+      }
+    },
+    {
+      "page": [
+        "42:2",
+        "Checkbox"
+      ],
+      "nodes": 100,
+      "instances": 10,
+      "owners": 1,
+      "textRanges": 15,
+      "imageFills": 0,
+      "totals": {
+        "variable": 745,
+        "style": 30,
+        "remote-main": 10
+      }
+    },
+    {
+      "page": [
+        "126:2",
+        "Chips"
+      ],
+      "nodes": 413,
+      "instances": 120,
+      "owners": 4,
+      "textRanges": 80,
+      "imageFills": 0,
+      "totals": {
+        "swap": 8,
+        "variable": 2536,
+        "remote-main": 120,
+        "style": 160
+      }
+    },
+    {
+      "page": [
+        "216:109",
+        "Conversation Composer"
+      ],
+      "nodes": 40,
+      "instances": 15,
+      "owners": 1,
+      "textRanges": 5,
+      "imageFills": 0,
+      "totals": {
+        "variable": 287,
+        "swap": 6,
+        "preferred": 2,
+        "remote-main": 6
+      }
+    },
+    {
+      "page": [
+        "222:309",
+        "Conversation Response"
+      ],
+      "nodes": 151,
+      "instances": 52,
+      "owners": 3,
+      "textRanges": 18,
+      "imageFills": 0,
+      "totals": {
+        "variable": 822,
+        "swap": 24,
+        "remote-main": 25,
+        "style": 10,
+        "preferred": 8
+      }
+    },
+    {
+      "page": [
+        "32:26",
+        "Dot"
+      ],
+      "nodes": 46,
+      "instances": 0,
+      "owners": 1,
+      "textRanges": 16,
+      "imageFills": 0,
+      "totals": {
+        "variable": 674,
+        "style": 32
+      }
+    },
+    {
+      "page": [
+        "118:2",
+        "Dropdown"
+      ],
+      "nodes": 204,
+      "instances": 42,
+      "owners": 3,
+      "textRanges": 55,
+      "imageFills": 0,
+      "totals": {
+        "swap": 6,
+        "variable": 1368,
+        "remote-main": 36,
+        "style": 111,
+        "preferred": 1
+      }
+    },
+    {
+      "page": [
+        "42:31",
+        "File Upload"
+      ],
+      "nodes": 94,
+      "instances": 25,
+      "owners": 1,
+      "textRanges": 31,
+      "imageFills": 0,
+      "totals": {
+        "variable": 690,
+        "remote-main": 18,
+        "style": 42,
+        "swap": 12,
+        "preferred": 12
+      }
+    },
+    {
+      "page": [
+        "122:2",
+        "Floating Actions"
+      ],
+      "nodes": 39,
+      "instances": 16,
+      "owners": 1,
+      "textRanges": 8,
+      "imageFills": 0,
+      "totals": {
+        "style": 9,
+        "variable": 252,
+        "swap": 9,
+        "preferred": 8,
+        "remote-main": 9
+      }
+    },
+    {
+      "page": [
+        "90:2",
+        "Header"
+      ],
+      "nodes": 300,
+      "instances": 92,
+      "owners": 4,
+      "textRanges": 37,
+      "imageFills": 1,
+      "totals": {
+        "variable": 1959,
+        "remote-main": 37,
+        "style": 74,
+        "swap": 27,
+        "preferred": 10
+      }
+    },
+    {
+      "page": [
+        "59:2",
+        "Icon Buttons"
+      ],
+      "nodes": 533,
+      "instances": 180,
+      "owners": 4,
+      "textRanges": 60,
+      "imageFills": 0,
+      "totals": {
+        "swap": 4,
+        "variable": 4572,
+        "remote-main": 90,
+        "style": 120
+      }
+    },
+    {
+      "page": [
+        "122:49",
+        "Inline Notification"
+      ],
+      "nodes": 67,
+      "instances": 20,
+      "owners": 1,
+      "textRanges": 15,
+      "imageFills": 0,
+      "totals": {
+        "variable": 481,
+        "remote-main": 10,
+        "style": 20,
+        "swap": 5
+      }
+    },
+    {
+      "page": [
+        "93:2",
+        "Input"
+      ],
+      "nodes": 855,
+      "instances": 210,
+      "owners": 2,
+      "textRanges": 210,
+      "imageFills": 0,
+      "totals": {
+        "swap": 86,
+        "variable": 5675,
+        "style": 429,
+        "remote-main": 168
+      }
+    },
+    {
+      "page": [
+        "39:2",
+        "Linear Progress Bar"
+      ],
+      "nodes": 545,
+      "instances": 12,
+      "owners": 4,
+      "textRanges": 216,
+      "imageFills": 0,
+      "totals": {
+        "variable": 4452,
+        "style": 432
+      }
+    },
+    {
+      "page": [
+        "22:2",
+        "Loader"
+      ],
+      "nodes": 536,
+      "instances": 24,
+      "owners": 7,
+      "textRanges": 0,
+      "imageFills": 0,
+      "totals": {
+        "variable": 2064
+      }
+    },
+    {
+      "page": [
+        "170:2",
+        "Logos"
+      ],
+      "nodes": 2757,
+      "instances": 0,
+      "owners": 5,
+      "textRanges": 0,
+      "imageFills": 54,
+      "totals": {}
+    },
+    {
+      "page": [
+        "109:2",
+        "Pagination"
+      ],
+      "nodes": 84,
+      "instances": 29,
+      "owners": 2,
+      "textRanges": 19,
+      "imageFills": 0,
+      "totals": {
+        "swap": 17,
+        "variable": 758,
+        "style": 38,
+        "remote-main": 14,
+        "preferred": 1
+      }
+    },
+    {
+      "page": [
+        "32:119",
+        "Radio Buttons"
+      ],
+      "nodes": 138,
+      "instances": 12,
+      "owners": 2,
+      "textRanges": 30,
+      "imageFills": 0,
+      "totals": {
+        "variable": 1248,
+        "style": 60,
+        "preferred": 1
+      }
+    },
+    {
+      "page": [
+        "47:2",
+        "Search"
+      ],
+      "nodes": 101,
+      "instances": 18,
+      "owners": 1,
+      "textRanges": 30,
+      "imageFills": 0,
+      "totals": {
+        "variable": 777,
+        "style": 60,
+        "remote-main": 18
+      }
+    },
+    {
+      "page": [
+        "96:2",
+        "Section Header"
+      ],
+      "nodes": 141,
+      "instances": 44,
+      "owners": 1,
+      "textRanges": 33,
+      "imageFills": 0,
+      "totals": {
+        "variable": 882,
+        "remote-main": 27,
+        "style": 64,
+        "swap": 20,
+        "preferred": 2
+      }
+    },
+    {
+      "page": [
+        "54:2",
+        "Sidebar"
+      ],
+      "nodes": 399,
+      "instances": 125,
+      "owners": 4,
+      "textRanges": 55,
+      "imageFills": 0,
+      "totals": {
+        "swap": 62,
+        "variable": 2165,
+        "remote-main": 73,
+        "style": 131,
+        "preferred": 5
+      }
+    },
+    {
+      "page": [
+        "155:2",
+        "Steppers"
+      ],
+      "nodes": 256,
+      "instances": 42,
+      "owners": 2,
+      "textRanges": 54,
+      "imageFills": 0,
+      "totals": {
+        "variable": 1473,
+        "swap": 1,
+        "remote-main": 18
+      }
+    },
+    {
+      "page": [
+        "128:2",
+        "Table"
+      ],
+      "nodes": 1588,
+      "instances": 631,
+      "owners": 6,
+      "textRanges": 147,
+      "imageFills": 89,
+      "totals": {
+        "swap": 383,
+        "variable": 11329,
+        "remote-main": 280,
+        "style": 294,
+        "preferred": 185
+      }
+    },
+    {
+      "page": [
+        "113:2",
+        "Tabs"
+      ],
+      "nodes": 232,
+      "instances": 84,
+      "owners": 2,
+      "textRanges": 72,
+      "imageFills": 0,
+      "totals": {
+        "swap": 13,
+        "variable": 2121,
+        "remote-main": 36,
+        "style": 148,
+        "preferred": 1
+      }
+    },
+    {
+      "page": [
+        "116:2",
+        "Text Area"
+      ],
+      "nodes": 90,
+      "instances": 8,
+      "owners": 1,
+      "textRanges": 32,
+      "imageFills": 0,
+      "totals": {
+        "variable": 680,
+        "style": 64,
+        "remote-main": 8
+      }
+    },
+    {
+      "page": [
+        "32:74",
+        "Toggle"
+      ],
+      "nodes": 44,
+      "instances": 0,
+      "owners": 1,
+      "textRanges": 8,
+      "imageFills": 0,
+      "totals": {
+        "variable": 300,
+        "style": 16
+      }
+    },
+    {
+      "page": [
+        "38:2",
+        "Tooltip"
+      ],
+      "nodes": 134,
+      "instances": 0,
+      "owners": 1,
+      "textRanges": 36,
+      "imageFills": 0,
+      "totals": {
+        "variable": 1056,
+        "style": 96
+      }
+    },
+    {
+      "page": [
+        "237:20",
+        "User message"
+      ],
+      "nodes": 4,
+      "instances": 0,
+      "owners": 1,
+      "textRanges": 1,
+      "imageFills": 0,
+      "totals": {
+        "variable": 29
+      }
+    },
+    {
+      "page": [
+        "203:92",
+        "----"
+      ],
+      "nodes": 1,
+      "instances": 0,
+      "owners": 0,
+      "textRanges": 0,
+      "imageFills": 0,
+      "totals": {}
+    },
+    {
+      "page": [
+        "203:93",
+        "Playground"
+      ],
+      "nodes": 1,
+      "instances": 0,
+      "owners": 0,
+      "textRanges": 0,
+      "imageFills": 0,
+      "totals": {}
+    }
+  ]
+}
