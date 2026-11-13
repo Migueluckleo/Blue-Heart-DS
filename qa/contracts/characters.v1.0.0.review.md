@@ -1,0 +1,3 @@
+# QA documental · Characters
+
+2026-11-12 · CHARACTERS-001 · PASS documental y DELEGATED_FOR_BUILD por autorización explícita. Se cotejaron 6 variantes de BENI, 7 de NAVI y 13 enlaces de cambio de variante con espera, duración, easing y retorno. El inventario preserva 47 fills sólidos, cuatro RGBA, las sombras vacías y sus datos vectoriales. Cada enlace de color tiene un origen comprobado. Se validó la consistencia de los tres niveles y sus cuatro modos de componente. La anatomía fija justifica Slots NOT_APPLICABLE. [Contrato](../../specs/components/characters.contract.v1.0.0.md) · [Enmienda](../../specs/foundations/characters.identity-chain.amendment.v1.0.0.md)

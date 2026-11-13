@@ -1,5 +1,9 @@
 # Releases de las skills BlueHeart
 
+## v1.0.4 · 2026-11-12
+
+Parche local del motor Figma. El preflight reconcilia el manifiesto y las Specs para exigir seguimiento de todas las familias. Las composiciones locales registran alternativas y carencias funcionales con evidencia del corte. El informe de lectura asigna resultados por familia y conserva los nodos observados.
+
 ## v1.0.3 · 2026-11-12
 
 Parche local del motor PO. Las composiciones locales registran la búsqueda funcional y las carencias concretas de cada alternativa relevante, con fuentes del corte. El HTML descargable deriva su nombre del producto o flujo del brief y conserva el mismo nombre y hash en el manifiesto, la captura y el traspaso. Los paquetes v1.0.2 se conservan como releases históricos.
@@ -25,3 +29,15 @@ Se observó `ENOENT` al ejecutar `init.mjs` desde el motor instalado con `github
 - Cada instancia conserva la tipografía definida por su contrato. El traspaso lleva métricas de texto y fuentes por hash. La revisión de un catálogo tipográfico adicional se difiere hasta observar una carencia concreta.
 - Las consultas dirigidas al índice de Graphify incluyen las dependencias declaradas y las enmiendas de las familias relacionadas. Las fuentes del corte siguen gobernando las reglas.
 - El manifiesto de los dos ZIP locales y los comprobantes de ejecución se generan bajo `output/skills/1.0.0` y `output/closures`.
+
+## Corte local Conversation Composer · 2026-11-12
+
+CONVERSATION-001 se incorpora al catálogo común de contpaqi-figma-screens y contpaqi-po-prototypes. La ruta de consumo y la versión de los motores se conservan. La verificación del corte se registra en el comprobante local `output/closures/2026-11-12-conversation-composer-final.json`.
+
+## Corte local Conversation Response · 2026-11-12
+
+CONVERSATION-RESPONSE-001 incorpora la spec, los IDs del set oficial y el export React al catálogo común. El comprobante local del corte está en `output/closures/2026-11-12-conversation-response.json`.
+
+## Corte local de la corrección de tokens · 2026-11-12
+
+El catálogo común incorpora los aliases de componente y las fichas corregidas en sus versiones vigentes. El comprobante local se genera en `output/closures/2026-11-12-component-token-layer.json`.

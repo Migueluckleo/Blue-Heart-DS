@@ -13,15 +13,18 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 | BREADCRUMB-001 | [1.0.0](../../specs/components/breadcrumb.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | BREADCRUMB-ITEM-001 | [1.0.0](../../specs/components/breadcrumb-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | BUTTON-001 | [1.0.0](../../specs/components/buttons.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 1 registros por alcance |
+| CHARACTERS-001 | [1.0.0](../../specs/components/characters.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | CHECKBOX-001 | [1.0.0](../../specs/components/checkbox.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | CHIP-001 | [1.0.0](../../specs/components/chip.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | COMPANY-SELECTOR-001 | [1.0.0](../../specs/components/company-selector.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| CONVERSATION-001 | [1.0.0](../../specs/components/conversation-composer.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| CONVERSATION-RESPONSE-001 | [1.0.0](../../specs/components/conversation-response.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | DOT-001 | [1.0.0](../../specs/components/dot.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | DROPDOWN-ITEM-001 | [1.0.0](../../specs/components/dropdown-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | DROPDOWN-MENU-001 | [1.0.0](../../specs/components/dropdown-menu.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | FILE-UPLOAD-001 | [1.0.0](../../specs/components/file-upload.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | FLOATING-ACTIONS-001 | [1.0.0](../../specs/components/floating-actions.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| FOUNDATIONS-BLUEHEART-VARIABLES-001 | [0.1.2](../../specs/foundations/blueheart-variables.contract.v0.1.2.md) | DELEGATED_FOR_BUILD | 0 | 3 registros por alcance |
+| FOUNDATIONS-BLUEHEART-VARIABLES-001 | [0.1.2](../../specs/foundations/blueheart-variables.contract.v0.1.2.md) | DELEGATED_FOR_BUILD | 1 | 3 registros por alcance |
 | HEADER-001 | [1.0.0](../../specs/components/header.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | HEADER-ACTIONS-001 | [1.0.0](../../specs/components/header-actions.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | ICON-BUTTON-001 | [1.0.0](../../specs/components/icon-button.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
@@ -143,6 +146,19 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
+## CHARACTERS-001
+
+Base: [specs/components/characters.contract.v1.0.0.md](../../specs/components/characters.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/components/characters.contract.v1.0.0.md](../../specs/components/characters.contract.v1.0.0.md).
+- Página declarada: Characters en [specs/components/characters.contract.v1.0.0.md](../../specs/components/characters.contract.v1.0.0.md).
+- Preparación: UNKNOWN.
+- Slots: NOT_APPLICABLE en [specs/components/characters.contract.v1.0.0.md](../../specs/components/characters.contract.v1.0.0.md).
+- Revisión de implementación declarada: UNKNOWN.
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
 ## CHECKBOX-001
 
 Base: [specs/components/checkbox.contract.v1.0.0.md](../../specs/components/checkbox.contract.v1.0.0.md).
@@ -178,6 +194,32 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Página declarada: Header en [specs/components/company-selector.contract.v1.0.0.md](../../specs/components/company-selector.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
 - Slots: NOT_APPLICABLE en [specs/components/company-selector.contract.v1.0.0.md](../../specs/components/company-selector.contract.v1.0.0.md).
+- Revisión de implementación declarada: UNKNOWN.
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## CONVERSATION-001
+
+Base: [specs/components/conversation-composer.contract.v1.0.0.md](../../specs/components/conversation-composer.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/components/conversation-composer.contract.v1.0.0.md](../../specs/components/conversation-composer.contract.v1.0.0.md).
+- Página declarada: Conversation Composer en [specs/components/conversation-composer.contract.v1.0.0.md](../../specs/components/conversation-composer.contract.v1.0.0.md).
+- Preparación: UNKNOWN.
+- Slots: REQUIRED en [specs/components/conversation-composer.contract.v1.0.0.md](../../specs/components/conversation-composer.contract.v1.0.0.md).
+- Revisión de implementación declarada: UNKNOWN.
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## CONVERSATION-RESPONSE-001
+
+Base: [specs/components/conversation-response.contract.v1.0.0.md](../../specs/components/conversation-response.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/components/conversation-response.contract.v1.0.0.md](../../specs/components/conversation-response.contract.v1.0.0.md).
+- Página declarada: Conversation Response en [specs/components/conversation-response.contract.v1.0.0.md](../../specs/components/conversation-response.contract.v1.0.0.md).
+- Preparación: UNKNOWN.
+- Slots: REQUIRED en [specs/components/conversation-response.contract.v1.0.0.md](../../specs/components/conversation-response.contract.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
@@ -252,11 +294,12 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/foundations/blueheart-variables.contract.v0.1.2.md](../../specs/foundations/blueheart-variables.contract.v0.1.2.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/foundations/blueheart-variables.contract.v0.1.2.md](../../specs/foundations/blueheart-variables.contract.v0.1.2.md).
+- Auditoría humana: NOT_REQUIRED en [specs/foundations/blueheart-variables.contract.v0.1.2.md](../../specs/foundations/blueheart-variables.contract.v0.1.2.md); NOT_REQUIRED en [specs/foundations/characters.identity-chain.amendment.v1.0.0.md](../../specs/foundations/characters.identity-chain.amendment.v1.0.0.md).
 - Página declarada: UNKNOWN.
 - Preparación: UNKNOWN.
 - Slots: UNKNOWN.
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/foundations/characters.identity-chain.amendment.v1.0.0.md](../../specs/foundations/characters.identity-chain.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
 - Implementación: [implementations/figma/variables-2026-11-11/blueheart-variables.v0.1.2.state.json](../../implementations/figma/variables-2026-11-11/blueheart-variables.v0.1.2.state.json) — {"status": "VALIDATED", "publication": "HOLD", "qa": "qa/implementations/blueheart-variables.v0.1.2.review.md"}.
 - Implementación: [implementations/figma/variables-2026-11-11/final-collections.readback.json](../../implementations/figma/variables-2026-11-11/final-collections.readback.json) — {}.
 - Implementación: [implementations/figma/variables-2026-11-11/id-map.json](../../implementations/figma/variables-2026-11-11/id-map.json) — {}.

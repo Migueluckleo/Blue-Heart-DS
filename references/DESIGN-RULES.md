@@ -7,3 +7,7 @@ Documenta diferencias entre fuente y destino por propiedad, estado y modo con lo
 Conserva la trazabilidad de la promoción documental y las versiones sustituidas. Las excepciones y matrices del maestro histórico permanecen en el proyecto padre con su alcance original. En el nuevo proyecto, identidad, estilo, aliases, modos y destino se resuelven con las fuentes registradas y las decisiones del alcance.
 
 Para iconos aplica [Phosphor Icons](PHOSPHOR-ICONS.md) en Figma y React. Las partes nativas de indicadores conservan su contrato.
+
+## Consumo de tokens por componente
+
+Los bindings propios de un componente y sus referencias CSS consumen variables de la colección component. Cada variable de componente apunta a un rol semántico por tema y este a una primitiva. Una instancia hereda los roles de su maestro. Si el anfitrión sobrescribe una propiedad, usa un token de componente que exprese ese rol. Conserva las excepciones de arte original documentadas en la spec. La corrección del 12 de noviembre de 2026 se aplica a las versiones vigentes. [Datos de la corrección](../specs/tokens/component-layer.correction.json)

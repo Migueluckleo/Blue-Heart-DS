@@ -1,0 +1,151 @@
+{
+  "nodes": 4140,
+  "edges": 7689,
+  "communities": 879,
+  "gods": [
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_174",
+      "label": "neutral-maximum",
+      "degree": 43
+    },
+    {
+      "id": "ref_react",
+      "label": "react",
+      "degree": 41
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_155",
+      "label": "brand-strong",
+      "degree": 41
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_166",
+      "label": "neutral-base",
+      "degree": 41
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_169",
+      "label": "neutral-soft",
+      "degree": 41
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_154",
+      "label": "brand-default",
+      "degree": 37
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_163",
+      "label": "brand-administrativo-default",
+      "degree": 36
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_184",
+      "label": "brand-personas-default",
+      "degree": 36
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_191",
+      "label": "spacing-none",
+      "degree": 36
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_178",
+      "label": "brand-servicios-strong",
+      "degree": 35
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Asset horizontal oficial de Contabilidad para Header web",
+      "target": "Contrato Header compone contexto global a 96 px de alto",
+      "source_files": [
+        "sources/assets/contabilidad-header.png",
+        "specs/components/header.contract.v1.0.0.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; bridges separate communities; peripheral node `Asset horizontal oficial de Contabilidad para Header web` unexpectedly reaches hub `Contrato Header compone contexto global a 96 px de alto`"
+    },
+    {
+      "source": "Enmienda Sidebar consume Icon Button Secondary small en Figma y React",
+      "target": "Sidebar()",
+      "source_files": [
+        "specs/components/sidebar.secondary-control.amendment.v1.0.1.md",
+        "implementations/web/src/components/sidebar.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "implements",
+      "why": "crosses file types (doc ↔ code); connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "Fotografía de muestra original de Avatar",
+      "target": "Contrato Avatar preserva imagen, iniciales, Phosphor y presencia",
+      "source_files": [
+        "sources/assets/avatar-portrait.png",
+        "specs/components/avatar.contract.v1.0.0.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Fotografía de muestra original de Avatar` unexpectedly reaches hub `Contrato Avatar preserva imagen, iniciales, Phosphor y presencia`"
+    },
+    {
+      "source": "Matriz de los cinco sets nativos de Logos",
+      "target": "Fuente de logos Librería v1.1.0 de solo lectura",
+      "source_files": [
+        "specs/components/logos.contract.v1.0.0.md",
+        "registry/sources.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "shares_data_with",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `Fuente de logos Librería v1.1.0 de solo lectura` unexpectedly reaches hub `Matriz de los cinco sets nativos de Logos`"
+    },
+    {
+      "source": "Stepper root source and icons",
+      "target": "Stepper contract STEPPER-001",
+      "source_files": [
+        "registry/sources.md",
+        "specs/components/stepper.contract.v1.0.0.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "shares_data_with",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Stepper root source and icons` unexpectedly reaches hub `Stepper contract STEPPER-001`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `react` connect `Linear Progress` to `Dropdown Menu`, `Package · Evidencias`, `Input · Evidencias`, `Layout · Evidencias`, `Header Actions`, `Stepper · Evidencias`, `Pagination · Evidencias`, `Examples · Evidencias`, `Page · Evidencias`, `Icon Button`, `Radio Group`, `Tabs · Evidencias`, `Table Cell`, `Menu Item`, `Button · Evidencias`, `App Shell`, `Characters · Evidencias`?",
+      "why": "High betweenness centrality (0.030) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `next` connect `Package · Evidencias` to `Component Enforcer`, `Prepare · Evidencias`?",
+      "why": "High betweenness centrality (0.026) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `postcss` connect `Package · Evidencias` to `Component Enforcer`?",
+      "why": "High betweenness centrality (0.011) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `QA documental de cobertura y dependencias`, `Semántica de botón, enlace y foco`, `Espera indeterminada y anuncio accesible del anfitrión` to the rest of the system?",
+      "why": "139 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Blueheart Variables` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.026732673267326732 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Blueheart Variables` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.05232323232323232 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Trazabilidad y sincronización` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0629399585921325 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

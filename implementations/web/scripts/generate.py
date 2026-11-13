@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 """P07: una familia activa necesita export, API y ejemplo documentado y ejecutable."""
-import argparse, hashlib, json, re, subprocess
+import argparse, base64, hashlib, json, re, subprocess
 from pathlib import Path
 import tokens, typography
+from check_component_tokens import check_component_tokens
 ROOT, WEB=tokens.ROOT,tokens.WEB
 
 def build():
     rows=json.loads((WEB/'components.registry.json').read_text())
     status=json.loads(subprocess.check_output([str(ROOT/'scripts/ds'),'status','--json'],cwd=ROOT,text=True))
-    active={f['id']:f for f in status['families'] if f['base'] and not f['id'].startswith(('FOUNDATIONS-','MIGRATION-','TOOLING-'))}
+    active={f['id']:f for f in status['families'] if f['base']
+            and f['base']['metadata'].get('consumption_targets') != ['figma']
+            and not f['id'].startswith(('FOUNDATIONS-','MIGRATION-','TOOLING-'))}
     ids=[r['id'] for r in rows]
     assert len(ids)==len(set(ids)),'IDs de familia duplicados'
     assert set(ids)==set(active),f'Cobertura P07 pendiente: {set(active)-set(ids)}; entradas obsoletas: {set(ids)-set(active)}'
@@ -24,9 +27,18 @@ def build():
             if hashlib.sha256(raw).hexdigest()!=asset['sha256']:
                 raise ValueError('Hash de asset distinto al delegado')
             output[target.relative_to(WEB).as_posix()]=raw
+    if 'CONVERSATION-RESPONSE-001' in active:
+        copy_asset = (ROOT/'sources/assets/conversation-response/copy.svg').read_bytes()
+        if hashlib.sha256(copy_asset).hexdigest() != '62a69bd06f8223d19d99c2e69c6ecb7e70ac754c46c7c8ce377e40ee3c1ffd47':
+            raise ValueError('El SVG de Copiar no coincide con la fuente aprobada')
+        data_uri = 'data:image/svg+xml;base64,' + base64.b64encode(copy_asset).decode('ascii')
+        output['src/generated/conversation-response-copy.json'] = json.dumps({'dataUri': data_uri}) + '\n'
     output.update(typography.build(token_outputs=output))
     from button_loader import build_recipes
     output.update(build_recipes())
+    if 'CHARACTERS-001' in active:
+        import characters
+        output.update(characters.build(ROOT))
     icon_contract=ROOT/'specs/data/icon-button.v1.0.0.json'
     if icon_contract.is_file() and 'ICON-BUTTON-001' in active:
         data=json.loads(icon_contract.read_text())
@@ -200,8 +212,21 @@ def build():
     examples=(WEB/'src/examples.tsx').read_text()
     parts=re.split(r'// example: ([\w-]+)\n',examples)
     blocks={parts[i]:parts[i+1].strip() for i in range(1,len(parts),2)}
+    headers={slug:parts[0] for slug in blocks}
+    imports=[]
+    example_modules={}
+    for row in rows:
+        if row.get('example_source') == 'separate':
+            slug=row['slug']
+            if not re.fullmatch(r'[a-z0-9-]+',slug) or slug in blocks:
+                raise ValueError('Ruta de ejemplo inválida o duplicada: '+slug)
+            source=(WEB/f'src/examples/{slug}.tsx').read_text()
+            headers[slug],blocks[slug]=source.split(f'// example: {slug}\n',1)
+            alias='Example_'+slug.replace('-','_')
+            imports.append(f"import * as {alias} from '../examples/{slug}';")
+            example_modules[slug]=alias
     assert set(blocks)=={r['slug'] for r in rows},'Ejemplos y familias no coinciden'
-    catalogue=[]; map_lines=["'use client';", "import * as Examples from '../examples';", "import type { ComponentType } from 'react';",'export const examples: Record<string, ComponentType> = {']
+    catalogue=[]; map_lines=["'use client';", "import * as Examples from '../examples';", *imports, "import type { ComponentType } from 'react';",'export const examples: Record<string, ComponentType> = {']
     for row in rows:
         module=WEB/f'src/components/{row["module"]}.tsx';code=module.read_text()
         for name in row['exports']:assert f'export function {name}' in code or f'export const {name}' in code,f'Falta export {name}'
@@ -224,9 +249,12 @@ def build():
                 if any(re.search(r'\b'+re.escape(key)+r'\b',apis.get(n,'')) for n in needed):needed.add(key)
         api='\n\n'.join(apis[n] for n in apis if n in needed)
         assert api,'Falta API tipada '+row['name']
+        example_file=f"examples/{row['slug']}.tsx" if row['slug'] in example_modules else 'examples.tsx'
         block=blocks[row['slug']];function=re.search(r'export function (\w+)',block).group(1)
-        map_lines.append(f'  {json.dumps(row["slug"])}: Examples.{function},')
-        example=parts[0].replace("'./index'","'@/index'").strip()+'\n\n'+block+'\n'
+        module_alias=example_modules.get(row['slug'],'Examples')
+        map_lines.append(f'  {json.dumps(row["slug"])}: {module_alias}.{function},')
+        header=headers[row['slug']].replace("'./index'","'@/index'").replace("'../index'","'@/index'")
+        example=header.strip()+'\n\n'+block.strip()+'\n'
         defaults=[]
         for name in row['exports']:
             m=re.search(r'export function '+name+r'(?:<[^\n]+?>)?\((.*?)\)\s*\{',code,re.S)
@@ -251,7 +279,7 @@ Fuente: [guía del contrato](../../../../{guide_source}#guía-semántica-normati
 {example.rstrip()}
 ```
 
-Ejemplo compilado en [examples.tsx](../../src/examples.tsx). Usa React state en memoria; recargar restaura la muestra. No hay endpoint, credencial ni persistencia implícita.
+Ejemplo compilado en [{example_file}](../../src/{example_file}). Usa React state en memoria; recargar restaura la muestra. No hay endpoint, credencial ni persistencia implícita.
 
 ## API tipada
 
@@ -292,6 +320,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
     map_lines.append('};\n');output['src/generated/example-map.tsx']='\n'.join(map_lines)
     output['src/generated/catalog.json']=json.dumps(catalogue,ensure_ascii=False,indent=2)+'\n'
     output['docs/components/README.md']='# Componentes web\n\nÍndice generado. Cada ficha contiene API, ejemplo ejecutable, Slots, fuentes y límites.\n\n'+'\n'.join(f'- [{r["name"]}]({r["slug"]}.md) · {r["id"]}' for r in rows)+'\n'
+    check_component_tokens(WEB, output)
     return output
 
 def main():

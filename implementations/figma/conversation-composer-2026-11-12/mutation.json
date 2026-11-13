@@ -1,0 +1,308 @@
+{
+  "page": "216:109",
+  "main": "216:66",
+  "createdNodeIds": [
+    "216:109",
+    "216:66",
+    "216:67",
+    "216:68",
+    "216:69",
+    "216:70",
+    "216:71",
+    "216:73",
+    "216:74",
+    "216:75",
+    "216:76",
+    "216:77",
+    "216:78",
+    "216:79",
+    "216:80",
+    "216:81",
+    "216:82",
+    "216:83",
+    "216:100"
+  ],
+  "mutatedNodeIds": [
+    "216:109",
+    "38:2"
+  ],
+  "description": "Conversation Composer · CONVERSATION-001. Redacta un mensaje en una conversación. Usa message para contexto y Tools para acciones secundarias. Reserva el Icon Button primary para la acción principal. El anfitrión define qué hace cada acción.",
+  "links": [
+    {
+      "uri": "https://github.com/Migueluckleo/Blue-Heart-DS/blob/main/specs/components/conversation-composer.contract.v1.0.0.md#guía-semántica-normativa"
+    }
+  ],
+  "props": {
+    "show message#206:0": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "show disclaimer#206:1": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "message#206:2": {
+      "type": "SLOT",
+      "description": "",
+      "slotSettings": {
+        "stretchChildOnInsert": false,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "preferredValues": []
+    },
+    "Tools#206:3": {
+      "type": "SLOT",
+      "description": "",
+      "slotSettings": {
+        "stretchChildOnInsert": false,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "preferredValues": []
+    },
+    "show extra actions#206:4": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    }
+  },
+  "source": "206:1182",
+  "order": [
+    [
+      "0:1",
+      "Thumbnail"
+    ],
+    [
+      "65:274",
+      "----"
+    ],
+    [
+      "105:2",
+      "App Shell"
+    ],
+    [
+      "83:2",
+      "Avatars"
+    ],
+    [
+      "64:2",
+      "Badge"
+    ],
+    [
+      "47:74",
+      "Breadcrumbs"
+    ],
+    [
+      "22:3",
+      "Buttons"
+    ],
+    [
+      "187:14",
+      "Characters"
+    ],
+    [
+      "42:2",
+      "Checkbox"
+    ],
+    [
+      "126:2",
+      "Chips"
+    ],
+    [
+      "216:109",
+      "Conversation Composer"
+    ],
+    [
+      "32:26",
+      "Dot"
+    ],
+    [
+      "118:2",
+      "Dropdown"
+    ],
+    [
+      "42:31",
+      "File Upload"
+    ],
+    [
+      "122:2",
+      "Floating Actions"
+    ],
+    [
+      "90:2",
+      "Header"
+    ],
+    [
+      "59:2",
+      "Icon Buttons"
+    ],
+    [
+      "122:49",
+      "Inline Notification"
+    ],
+    [
+      "93:2",
+      "Input"
+    ],
+    [
+      "39:2",
+      "Linear Progress Bar"
+    ],
+    [
+      "22:2",
+      "Loader"
+    ],
+    [
+      "170:2",
+      "Logos"
+    ],
+    [
+      "109:2",
+      "Pagination"
+    ],
+    [
+      "32:119",
+      "Radio Buttons"
+    ],
+    [
+      "47:2",
+      "Search"
+    ],
+    [
+      "96:2",
+      "Section Header"
+    ],
+    [
+      "54:2",
+      "Sidebar"
+    ],
+    [
+      "155:2",
+      "Steppers"
+    ],
+    [
+      "128:2",
+      "Table"
+    ],
+    [
+      "113:2",
+      "Tabs"
+    ],
+    [
+      "116:2",
+      "Text Area"
+    ],
+    [
+      "32:74",
+      "Toggle"
+    ],
+    [
+      "203:92",
+      "----"
+    ],
+    [
+      "203:93",
+      "Playground"
+    ],
+    [
+      "38:2",
+      "Tooltip"
+    ]
+  ],
+  "children": [
+    [
+      "216:66",
+      "Conversation Composer",
+      "COMPONENT"
+    ],
+    [
+      "216:67",
+      "Disclaimer",
+      "TEXT"
+    ],
+    [
+      "216:68",
+      "input",
+      "FRAME"
+    ],
+    [
+      "216:69",
+      "container",
+      "FRAME"
+    ],
+    [
+      "216:70",
+      "message",
+      "SLOT"
+    ],
+    [
+      "216:71",
+      "description",
+      "TEXT"
+    ],
+    [
+      "216:73",
+      "Composer field",
+      "FRAME"
+    ],
+    [
+      "216:74",
+      "Draft",
+      "FRAME"
+    ],
+    [
+      "216:75",
+      "Placeholder",
+      "TEXT"
+    ],
+    [
+      "216:76",
+      "Divider",
+      "LINE"
+    ],
+    [
+      "216:77",
+      "Composer actions",
+      "FRAME"
+    ],
+    [
+      "216:78",
+      "Icon Button/ghost",
+      "INSTANCE"
+    ],
+    [
+      "216:79",
+      "rightContainer",
+      "FRAME"
+    ],
+    [
+      "216:80",
+      "Tools",
+      "SLOT"
+    ],
+    [
+      "216:81",
+      "Icon Button/ghost",
+      "INSTANCE"
+    ],
+    [
+      "216:82",
+      "Icon Button/ghost",
+      "INSTANCE"
+    ],
+    [
+      "216:83",
+      "Icon Button/primary",
+      "INSTANCE"
+    ]
+  ],
+  "sample": [
+    616,
+    138
+  ],
+  "button": "216:100"
+}

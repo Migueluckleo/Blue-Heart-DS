@@ -130,6 +130,25 @@
     "usage_guide": "specs/components/buttons.usage.amendment.v1.0.1.md"
   },
   {
+    "id": "CHARACTERS-001",
+    "slug": "characters",
+    "name": "Characters",
+    "module": "characters",
+    "example_source": "separate",
+    "exports": [
+      "Characters"
+    ],
+    "category": "identidad",
+    "notes": "BENI Standby y NAVI Analysis reproducen los ciclos observados. El anfitrión controla la reproducción. La selección de fase y la preferencia de movimiento reducido permiten mostrar una pose fija.",
+    "base": "specs/components/characters.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Anatomía vectorial fija de identidad"
+    },
+    "qa": "qa/implementations/characters.v1.0.0.review.md"
+  },
+  {
     "id": "CHECKBOX-001",
     "slug": "checkbox",
     "name": "Checkbox",
@@ -182,6 +201,46 @@
       "reason": "Anatomía fija y textos acotados"
     },
     "qa": "qa/implementations/header-chain.v1.0.0.review.md"
+  },
+  {
+    "id": "CONVERSATION-001",
+    "slug": "conversation-composer",
+    "name": "Conversation Composer",
+    "module": "conversation-composer",
+    "exports": [
+      "ConversationComposer"
+    ],
+    "category": "conversación",
+    "notes": "Redacta varias líneas, muestra un aviso contextual y activa las herramientas. El resultado de cada acción es local a la muestra.",
+    "base": "specs/components/conversation-composer.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "message y Tools admiten edición de composición en una instancia vinculada"
+    },
+    "qa": "qa/implementations/conversation-composer.v1.0.0.review.md",
+    "example_source": "separate"
+  },
+  {
+    "id": "CONVERSATION-RESPONSE-001",
+    "slug": "conversation-response",
+    "name": "Conversation Response",
+    "module": "conversation-response",
+    "exports": [
+      "ConversationResponse",
+      "ConversationResponsePreview",
+      "ConversationResponseCopyIcon"
+    ],
+    "category": "conversación",
+    "notes": "Alterna BENI y NAVI, muestra u oculta regiones y acciona los controles de resultado y valoración.",
+    "base": "specs/components/conversation-response.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "Cinco Slots nativos editables desde una instancia vinculada"
+    },
+    "qa": "qa/implementations/conversation-response.v1.0.0.review.md",
+    "example_source": "separate"
   },
   {
     "id": "DOT-001",

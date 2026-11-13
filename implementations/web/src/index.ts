@@ -78,3 +78,11 @@ export { TableCell, TableCaptureCell } from './components/table-cell';
 export type { TableCellProps, TableCaptureCellProps, TableCellState, TableCellAction } from './components/table-cell';
 export { Stepper, StepperItem } from './components/stepper';
 export type { StepperItemProps, StepperOrientation, StepperPosition, StepperProps, StepperState, StepperStep } from './components/stepper';
+export { Characters } from './components/characters';
+export type { CharacterFrame, CharactersProps } from './components/characters';
+
+export { ConversationComposer } from './components/conversation-composer';
+export type { ConversationComposerProps } from './components/conversation-composer';
+
+export { ConversationResponse, ConversationResponseCopyIcon, ConversationResponsePreview } from './components/conversation-response';
+export type { ConversationResponseProps, ConversationResponseCopyIconProps, ConversationResponsePreviewProps } from './components/conversation-response';

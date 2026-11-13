@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "contract": "CONVERSATION-RESPONSE-001",
+  "version": "1.0.0",
+  "source": {
+    "fileKey": "yZsIpXywybsPDytjolwcP4",
+    "nodeId": "218:1236",
+    "pageId": "203:93",
+    "snapshot": "sources/figma-snapshots/conversation-response-2026-11-12/selection.json"
+  },
+  "pageName": "Conversation Response",
+  "guide": "https://github.com/Migueluckleo/Blue-Heart-DS/blob/main/specs/components/conversation-response.contract.v1.0.0.md#guía-semántica-normativa",
+  "description": "Conversation Response · CONVERSATION-RESPONSE-001. Presenta una respuesta de BENI o NAVI. Usa Body para la respuesta, Previews para resultados y los Slots restantes para contexto y acciones. El anfitrión gestiona la respuesta y la valoración.",
+  "previewDescription": "CONVERSATION-RESPONSE-001. Tarjeta auxiliar para mostrar el título de un resultado tabular. Insértala en Previews de Conversation Response.",
+  "agents": {
+    "BENI": {
+      "label": "Fiscal y contable",
+      "character": "187:15",
+      "source": "218:1237"
+    },
+    "NAVI": {
+      "label": "Super Agente",
+      "character": "187:58",
+      "source": "218:1256"
+    }
+  },
+  "sample": {
+    "width": 616,
+    "previewTitle": "Distribución de facturas de personas físicas con IVA retenido en marzo 2025",
+    "secondary": "Esta solicitud puede convertirse en un indicador. ¿Deseas que lo creemos?"
+  },
+  "slots": [
+    {
+      "name": "Body",
+      "settings": {
+        "stretchChildOnInsert": true,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "initial": 1
+    },
+    {
+      "name": "Previews",
+      "settings": {
+        "stretchChildOnInsert": true,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "initial": 1
+    },
+    {
+      "name": "Secondary content",
+      "settings": {
+        "stretchChildOnInsert": true,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "initial": 1
+    },
+    {
+      "name": "Additional actions",
+      "settings": {
+        "stretchChildOnInsert": false,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "initial": 2
+    },
+    {
+      "name": "Feedback actions",
+      "settings": {
+        "stretchChildOnInsert": false,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "initial": 3
+    }
+  ],
+  "tokens": {
+    "spacing/sm": "spacing-sm",
+    "spacing/lg": "spacing-lg",
+    "spacing/none": "spacing-none",
+    "spacing/xs": "spacing-xs",
+    "radius/md": "radius-md",
+    "stroke/xs": "stroke-xs",
+    "color/background/default": "neutral-base",
+    "color/border/subtle": "brand-accent",
+    "color/text/primary": "neutral-maximum",
+    "font/size/sm": "font-size-sm",
+    "font/size/md": "font-size-md",
+    "font/line-height/sm": "font-line-height-sm",
+    "font/line-height/md": "font-line-height-md",
+    "font/weight/regular": "font-weight-regular",
+    "font/weight/bold": "font-weight-bold",
+    "font/family/base": "font-family-base",
+    "font/letter-spacing/normal": "font-letter-spacing-normal"
+  },
+  "dependencies": {
+    "badge": "64:115",
+    "buttonPrimary": "23:736",
+    "buttonSecondary": "23:853",
+    "ghost": "59:154",
+    "thumbsUp": "218:1208",
+    "thumbsDown": "218:1211",
+    "copy": "218:1233",
+    "table": "218:1205",
+    "preview": "218:1228"
+  }
+}

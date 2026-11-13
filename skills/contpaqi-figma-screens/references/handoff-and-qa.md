@@ -21,6 +21,8 @@ La tipografía observada viaja en `computed_style` y `text_runs`, y las fuentes 
 
 Construye desde ese bloque y el snapshot cuando sean suficientes. Un campo ausente bloquea solo el requisito que depende de él: pide un dato concreto únicamente si no puede resolverse desde los contratos o una decisión local ordinaria. No pidas el paquete completo por rutina. Una imagen de contenido indispensable que no esté en el snapshot ni en las entradas sí es un asset faltante; distingue ese caso de una captura de referencia opcional.
 
+Si el Markdown incluye `component_family_tracking` y `component_plan`, úsalos como entrada para comprobar el brief y sus dependencias. Reevalúa cada familia en el corte Figma. La cobertura web y sus excepciones requieren una decisión propia sobre las instancias y estados nativos antes de escribir.
+
 ## Compatibilidad de versiones
 
 1. Verifica el snapshot de esta skill con su script. Compara `package_version` y `ds_digest` del handoff con `assets/release.json`.

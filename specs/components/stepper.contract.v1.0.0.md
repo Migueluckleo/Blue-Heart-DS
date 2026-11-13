@@ -64,3 +64,7 @@ Usa Stepper para orientar a la persona en una secuencia estable de varias etapas
 ## Aceptación
 
 Cotejar 18 variantes y ocho conectores, los cuatro modos, las identidades Phosphor, el swap y las propiedades de texto y visibilidad. Verificar color y layout en destino y una secuencia web de varios pasos con Anterior y Continuar externos, `aria-current`, y estados accesibles. Registrar resultados de contraste sin alterar los colores solicitados.
+
+## Corrección de bindings de componente · 2026-11-12
+
+Los bindings propios y CSS consumen variables de Stepper. Cada alias conserva el rol y valor por tema. Las instancias heredan los tokens de su maestro. [Mapa delegado de la corrección](../tokens/component-layer.correction.json).

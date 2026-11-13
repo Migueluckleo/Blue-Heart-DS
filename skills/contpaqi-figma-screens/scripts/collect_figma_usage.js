@@ -17,10 +17,23 @@ const bindingFields = n => {
   return fields.sort();
 };
 const styleCache = new Map();
+function textPath(text, root) {
+  const segments = [];
+  for (let part = text; part.id !== root.id; part = part.parent) {
+    const parent = part.parent;
+    if (!parent || !('children' in parent)) throw new Error('Text outside inspected subtree');
+    if (!part.visible) return null;
+    const matching = parent.children.filter(child => child.visible && child.type === part.type && child.name === part.name);
+    const occurrence = matching.findIndex(child => child.id === part.id);
+    if (occurrence < 0) throw new Error('Text path could not be matched');
+    segments.unshift([part.type, part.name, occurrence]);
+  }
+  return JSON.stringify(segments);
+}
 async function textStyles(n) {
   const texts=n.type==='TEXT'?[n]:('findAllWithCriteria'in n?n.findAllWithCriteria({types:['TEXT']}):[]);
   const keys=new Set();let unstyled=0;const text_runs=[];
-  for(const t of texts){const indices=[];let part=t;while(part.id!==n.id){const parent=part.parent;if(!parent||!('children'in parent))throw new Error('Text outside inspected subtree');indices.unshift(parent.children.findIndex(c=>c.id===part.id));part=parent;}const entry={path:indices.join('/'),style_keys:[],font_metrics:[]};text_runs.push(entry);for(const run of t.getStyledTextSegments(['textStyleId','fontName','fontSize','lineHeight','letterSpacing','textDecoration'])){
+  for(const t of texts){const path=textPath(t,n);if(path===null)continue;const entry={path,style_keys:[],font_metrics:[]};text_runs.push(entry);for(const run of t.getStyledTextSegments(['textStyleId','fontName','fontSize','lineHeight','letterSpacing','textDecoration'])){
     const {fontName,fontSize,lineHeight,letterSpacing,textDecoration}=run;
     entry.font_metrics.push({fontName,fontSize,lineHeight,letterSpacing,textDecoration});
     if(!run.textStyleId){unstyled++;entry.style_keys.push(null);continue;}
@@ -37,7 +50,7 @@ async function describe(n) {
   if(n.type==='COMPONENT'&&n.variantProperties)Object.assign(properties,n.variantProperties);
   return {id:n.id,name:n.name,type:n.type,key:n.type==='COMPONENT'?n.key:null,
     parent_id:n.parent?n.parent.id:null,parent_name:n.parent?n.parent.name:null,parent_type:n.parent?n.parent.type:null,
-    main_component_key:main?main.key:null,ancestor_ids:ancestorIds(n),
+    main_component_key:main?main.key:null,main_component_remote:main?main.remote:null,ancestor_ids:ancestorIds(n),
     reaction_count:'reactions'in n?n.reactions.length:0,child_count:'children'in n?n.children.length:0,
     layout_mode:'layoutMode'in n?n.layoutMode:null,binding_fields:bindingFields(n),
     variant_properties:properties,...styles};

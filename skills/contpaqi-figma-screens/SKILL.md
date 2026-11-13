@@ -46,9 +46,9 @@ No conviertas datos de ejemplo en reglas de negocio ni en límites de cardinalid
 
 ## Gates obligatorios antes de escribir y cerrar
 
-Aplica [los controles verificables](references/figma-usage-gates.md). Antes de cada alcance de construcción, guarda un mapa de **todas** las familias necesarias y sus claves reales de BlueHeart, con readbacks fuente y comprobante del catálogo. Ejecuta `scripts/verify_figma_usage.py preflight` y exige `PASS` antes de escribir. Una familia existente inaccesible queda `UNAVAILABLE_EXISTING_COMPONENT`; no la dibujes como frames, rectángulos o textos ni la declares composición local.
+Aplica [los controles verificables](references/figma-usage-gates.md). Antes de construir, ejecuta `inventory` y justifica la aplicabilidad de **cada familia del corte**. Mapea todos los usos aplicables a claves reales de BlueHeart o excepciones funcionales con evidencia de cada alternativa relevante. Conserva los readbacks fuente y el comprobante del catálogo. Ejecuta `scripts/verify_figma_usage.py preflight` y exige `PASS` antes de escribir. Una familia existente inaccesible queda `UNAVAILABLE_EXISTING_COMPONENT`; no la dibujes como frames, rectángulos o textos ni la declares composición local.
 
-Después de la última escritura, recoge el resultado con `scripts/collect_figma_usage.js`, generado por `verify_figma_usage.py collect`, y ejecuta `verify_figma_usage.py verify` con el mismo plan y recibo. Debe pasar la cobertura, la identidad real de instancias y los controles de bindings/estilos/layout. Un nombre como “DS / Search” o “TABLE-001” no prueba reutilización. Conserva la distinción entre contenido local legítimo y controles cubiertos por el catálogo. Un plan parcial no acredita la pantalla completa.
+Después de la última escritura, recoge el resultado con `scripts/collect_figma_usage.js`, generado por `verify_figma_usage.py collect`, y ejecuta `verify_figma_usage.py verify` con el mismo plan y recibo. El informe debe dar un resultado por cada familia y comprobar la identidad real de instancias y los controles de bindings/estilos/layout. Un nombre como “DS / Search” o “TABLE-001” no prueba reutilización. Conserva la distinción entre contenido local legítimo y controles cubiertos por el catálogo. Un plan parcial no acredita la pantalla completa.
 
 ## Construir
 

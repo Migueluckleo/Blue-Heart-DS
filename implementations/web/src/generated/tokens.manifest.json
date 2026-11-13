@@ -2,7 +2,9 @@
   "kind": "DERIVED_NOT_AUTHORITY",
   "sources": {
     "specs/tokens/blueheart-variables.v0.1.2.json": "09a96d3707735fa129e3cfa99de6ccac1a9d94ccf5cc19fa5d282de867629993",
-    "specs/data/stepper.tokens.v1.0.0.json": "06a625977b6be2c051407fec969ce91db5859e21001e3e14e4c3e7f09e84e1ef"
+    "specs/data/stepper.tokens.v1.0.0.json": "3e918c4eab16ad1e267f7e54cc4029c2ddfbf15e716bf5dd42475c632dc49f56",
+    "specs/tokens/characters.identity.v1.0.0.json": "b2ca64b7c2c2a5823981bec759f1c1c2d406ca363f69b5eb2423929223232422",
+    "specs/tokens/component-layer.correction.json": "3bbdc83a5e69674c68e33febc75187c3cffad4498586eeabce5d8bcd3c190c2a"
   },
   "modes": [
     "Contable",
@@ -11,6 +13,94 @@
     "Personas"
   ],
   "tokens": [
+    {
+      "name": "app-shell/color/bg/surface",
+      "collection": "component",
+      "css": "--app-shell-color-bg-surface",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "app-shell · color/bg/surface. Conserva el rol semántico neutral-base en los cuatro temas.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        }
+      }
+    },
+    {
+      "name": "app-shell/spacing/content",
+      "collection": "component",
+      "css": "--app-shell-spacing-content",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "app-shell · spacing/content. Conserva el rol semántico spacing-2xl en los cuatro temas.",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:231"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:231"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:231"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:231"
+        }
+      }
+    },
+    {
+      "name": "app-shell/spacing/header-gap",
+      "collection": "component",
+      "css": "--app-shell-spacing-header-gap",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "app-shell · spacing/header-gap. Conserva el rol semántico spacing-sm en los cuatro temas.",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        }
+      }
+    },
     {
       "name": "avatar/border/width-regular",
       "collection": "component",
@@ -3898,6 +3988,122 @@
       }
     },
     {
+      "name": "characters/color/beni/body",
+      "collection": "component",
+      "css": "--characters-color-beni-body",
+      "source": "specs/tokens/characters.identity.v1.0.0.json",
+      "amendments": [],
+      "description": "Cuerpo original de BENI.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:beni/body"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:beni/body"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:beni/body"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:beni/body"
+        }
+      }
+    },
+    {
+      "name": "characters/color/navi/body",
+      "collection": "component",
+      "css": "--characters-color-navi-body",
+      "source": "specs/tokens/characters.identity.v1.0.0.json",
+      "amendments": [],
+      "description": "Cuerpo original de NAVI.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:navi/body"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:navi/body"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:navi/body"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:navi/body"
+        }
+      }
+    },
+    {
+      "name": "characters/color/navi/shadow",
+      "collection": "component",
+      "css": "--characters-color-navi-shadow",
+      "source": "specs/tokens/characters.identity.v1.0.0.json",
+      "amendments": [],
+      "description": "Sombra lateral de NAVI en fases 02 y 03.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:navi/shadow"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:navi/shadow"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:navi/shadow"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:navi/shadow"
+        }
+      }
+    },
+    {
+      "name": "characters/color/shared/features",
+      "collection": "component",
+      "css": "--characters-color-shared-features",
+      "source": "specs/tokens/characters.identity.v1.0.0.json",
+      "amendments": [],
+      "description": "Ojos de BENI y NAVI y boca de BENI.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:shared/features"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:shared/features"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:shared/features"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:semantic:shared/features"
+        }
+      }
+    },
+    {
       "name": "checkbox/border/width",
       "collection": "component",
       "css": "--checkbox-border-width",
@@ -5895,6 +6101,1344 @@
         "Personas": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:227"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/color/bg/field",
+      "collection": "component",
+      "css": "--conversation-composer-color-bg-field",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · color/bg/field. Conserva el rol semántico neutral-base en los cuatro temas.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/color/bg/message",
+      "collection": "component",
+      "css": "--conversation-composer-color-bg-message",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · color/bg/message. Conserva el rol semántico neutral-subtle en los cuatro temas.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:167"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:167"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:167"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:167"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/color/border/accent",
+      "collection": "component",
+      "css": "--conversation-composer-color-border-accent",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · color/border/accent. Conserva el rol semántico brand-accent en los cuatro temas.",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:152"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:152"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:152"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:152"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/color/border/divider",
+      "collection": "component",
+      "css": "--conversation-composer-color-border-divider",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · color/border/divider. Conserva el rol semántico neutral-muted en los cuatro temas.",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/color/focus",
+      "collection": "component",
+      "css": "--conversation-composer-color-focus",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · color/focus. Conserva el rol semántico brand-strong en los cuatro temas.",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:155"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:155"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:155"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:155"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/color/text/disclaimer",
+      "collection": "component",
+      "css": "--conversation-composer-color-text-disclaimer",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · color/text/disclaimer. Conserva el rol semántico neutral-strong en los cuatro temas.",
+      "scopes": [
+        "TEXT_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/color/text/placeholder",
+      "collection": "component",
+      "css": "--conversation-composer-color-text-placeholder",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · color/text/placeholder. Conserva el rol semántico neutral-medium en los cuatro temas.",
+      "scopes": [
+        "TEXT_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/color/text/primary",
+      "collection": "component",
+      "css": "--conversation-composer-color-text-primary",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · color/text/primary. Conserva el rol semántico neutral-maximum en los cuatro temas.",
+      "scopes": [
+        "TEXT_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/font/family",
+      "collection": "component",
+      "css": "--conversation-composer-font-family",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · font/family. Conserva el rol semántico font-family-base en los cuatro temas.",
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/font/line-height-draft",
+      "collection": "component",
+      "css": "--conversation-composer-font-line-height-draft",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · font/line-height-draft. Conserva el rol semántico font-line-height-sm en los cuatro temas.",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/font/line-height-support",
+      "collection": "component",
+      "css": "--conversation-composer-font-line-height-support",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · font/line-height-support. Conserva el rol semántico font-line-height-xs en los cuatro temas.",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:208"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:208"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:208"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:208"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/font/regular",
+      "collection": "component",
+      "css": "--conversation-composer-font-regular",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · font/regular. Conserva el rol semántico font-weight-regular en los cuatro temas.",
+      "scopes": [
+        "FONT_STYLE"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/font/semibold",
+      "collection": "component",
+      "css": "--conversation-composer-font-semibold",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · font/semibold. Conserva el rol semántico font-weight-semibold en los cuatro temas.",
+      "scopes": [
+        "FONT_STYLE"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:197"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:197"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:197"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:197"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/font/size-draft",
+      "collection": "component",
+      "css": "--conversation-composer-font-size-draft",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · font/size-draft. Conserva el rol semántico font-size-sm en los cuatro temas.",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/font/size-support",
+      "collection": "component",
+      "css": "--conversation-composer-font-size-support",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · font/size-support. Conserva el rol semántico font-size-xs en los cuatro temas.",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:199"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:199"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:199"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:199"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/font/tracking",
+      "collection": "component",
+      "css": "--conversation-composer-font-tracking",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · font/tracking. Conserva el rol semántico font-letter-spacing-normal en los cuatro temas.",
+      "scopes": [
+        "LETTER_SPACING"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:217"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:217"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:217"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:217"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/font/tracking-message",
+      "collection": "component",
+      "css": "--conversation-composer-font-tracking-message",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · font/tracking-message. Conserva el rol semántico font-letter-spacing-minus-0p24 en los cuatro temas.",
+      "scopes": [
+        "LETTER_SPACING"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:661:7"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:661:7"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:661:7"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:661:7"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/radius/field",
+      "collection": "component",
+      "css": "--conversation-composer-radius-field",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · radius/field. Conserva el rol semántico radius-md en los cuatro temas.",
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:245"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:245"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:245"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:245"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/radius/message-top",
+      "collection": "component",
+      "css": "--conversation-composer-radius-message-top",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · radius/message-top. Conserva el rol semántico radius-xl en los cuatro temas.",
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:247"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:247"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:247"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:247"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/radius/none",
+      "collection": "component",
+      "css": "--conversation-composer-radius-none",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · radius/none. Conserva el rol semántico radius-none en los cuatro temas.",
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:222"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:222"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:222"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:222"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/spacing/compact",
+      "collection": "component",
+      "css": "--conversation-composer-spacing-compact",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · spacing/compact. Conserva el rol semántico spacing-sm en los cuatro temas.",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/spacing/disclaimer-gap",
+      "collection": "component",
+      "css": "--conversation-composer-spacing-disclaimer-gap",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · spacing/disclaimer-gap. Conserva el rol semántico spacing-xs en los cuatro temas.",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/spacing/field-inset",
+      "collection": "component",
+      "css": "--conversation-composer-spacing-field-inset",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · spacing/field-inset. Conserva el rol semántico spacing-lg en los cuatro temas.",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/spacing/none",
+      "collection": "component",
+      "css": "--conversation-composer-spacing-none",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · spacing/none. Conserva el rol semántico spacing-none en los cuatro temas.",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/stroke/border",
+      "collection": "component",
+      "css": "--conversation-composer-stroke-border",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · stroke/border. Conserva el rol semántico stroke-xs en los cuatro temas.",
+      "scopes": [
+        "STROKE_FLOAT"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/stroke/focus",
+      "collection": "component",
+      "css": "--conversation-composer-stroke-focus",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · stroke/focus. Conserva el rol semántico stroke-sm en los cuatro temas.",
+      "scopes": [
+        "STROKE_FLOAT"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:225"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:225"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:225"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:225"
+        }
+      }
+    },
+    {
+      "name": "conversation-composer/stroke/none",
+      "collection": "component",
+      "css": "--conversation-composer-stroke-none",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-composer · stroke/none. Conserva el rol semántico stroke-none en los cuatro temas.",
+      "scopes": [
+        "STROKE_FLOAT"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:223"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:223"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:223"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:223"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/color/bg/preview",
+      "collection": "component",
+      "css": "--conversation-response-color-bg-preview",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · color/bg/preview. Conserva el rol semántico neutral-base en los cuatro temas.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/color/border/preview",
+      "collection": "component",
+      "css": "--conversation-response-color-border-preview",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · color/border/preview. Conserva el rol semántico brand-accent en los cuatro temas.",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:152"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:152"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:152"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:152"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/color/text/primary",
+      "collection": "component",
+      "css": "--conversation-response-color-text-primary",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · color/text/primary. Conserva el rol semántico neutral-maximum en los cuatro temas.",
+      "scopes": [
+        "TEXT_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/font/bold",
+      "collection": "component",
+      "css": "--conversation-response-font-bold",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · font/bold. Conserva el rol semántico font-weight-bold en los cuatro temas.",
+      "scopes": [
+        "FONT_STYLE"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:198"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:198"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:198"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:198"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/font/family",
+      "collection": "component",
+      "css": "--conversation-response-font-family",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · font/family. Conserva el rol semántico font-family-base en los cuatro temas.",
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/font/line-height-body",
+      "collection": "component",
+      "css": "--conversation-response-font-line-height-body",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · font/line-height-body. Conserva el rol semántico font-line-height-sm en los cuatro temas.",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/font/line-height-preview-title",
+      "collection": "component",
+      "css": "--conversation-response-font-line-height-preview-title",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · font/line-height-preview-title. Conserva el rol semántico font-line-height-md en los cuatro temas.",
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:210"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:210"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:210"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:210"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/font/regular",
+      "collection": "component",
+      "css": "--conversation-response-font-regular",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · font/regular. Conserva el rol semántico font-weight-regular en los cuatro temas.",
+      "scopes": [
+        "FONT_STYLE"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/font/size-body",
+      "collection": "component",
+      "css": "--conversation-response-font-size-body",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · font/size-body. Conserva el rol semántico font-size-sm en los cuatro temas.",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/font/size-preview-title",
+      "collection": "component",
+      "css": "--conversation-response-font-size-preview-title",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · font/size-preview-title. Conserva el rol semántico font-size-md en los cuatro temas.",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:201"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:201"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:201"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:201"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/font/tracking",
+      "collection": "component",
+      "css": "--conversation-response-font-tracking",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · font/tracking. Conserva el rol semántico font-letter-spacing-normal en los cuatro temas.",
+      "scopes": [
+        "LETTER_SPACING"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:217"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:217"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:217"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:217"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/radius/preview",
+      "collection": "component",
+      "css": "--conversation-response-radius-preview",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · radius/preview. Conserva el rol semántico radius-md en los cuatro temas.",
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:245"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:245"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:245"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:245"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/size/agent",
+      "collection": "component",
+      "css": "--conversation-response-size-agent",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · size/agent. Conserva el rol semántico size-3xl en los cuatro temas.",
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/size/preview-icon",
+      "collection": "component",
+      "css": "--conversation-response-size-preview-icon",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · size/preview-icon. Conserva el rol semántico size-2xl en los cuatro temas.",
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:238"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:238"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:238"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:238"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/spacing/inset",
+      "collection": "component",
+      "css": "--conversation-response-spacing-inset",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · spacing/inset. Conserva el rol semántico spacing-lg en los cuatro temas.",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/spacing/none",
+      "collection": "component",
+      "css": "--conversation-response-spacing-none",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · spacing/none. Conserva el rol semántico spacing-none en los cuatro temas.",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/spacing/stack",
+      "collection": "component",
+      "css": "--conversation-response-spacing-stack",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · spacing/stack. Conserva el rol semántico spacing-sm en los cuatro temas.",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/spacing/wrap",
+      "collection": "component",
+      "css": "--conversation-response-spacing-wrap",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · spacing/wrap. Conserva el rol semántico spacing-xs en los cuatro temas.",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        }
+      }
+    },
+    {
+      "name": "conversation-response/stroke/preview",
+      "collection": "component",
+      "css": "--conversation-response-stroke-preview",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "conversation-response · stroke/preview. Conserva el rol semántico stroke-xs en los cuatro temas.",
+      "scopes": [
+        "STROKE_FLOAT"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
         }
       }
     },
@@ -20897,6 +22441,267 @@
       }
     },
     {
+      "name": "stepper/font/family",
+      "collection": "component",
+      "css": "--stepper-font-family",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "stepper · font/family. Conserva el rol semántico font-family-base en los cuatro temas.",
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        }
+      }
+    },
+    {
+      "name": "stepper/font/regular",
+      "collection": "component",
+      "css": "--stepper-font-regular",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "stepper · font/regular. Conserva el rol semántico font-weight-regular en los cuatro temas.",
+      "scopes": [
+        "FONT_STYLE"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        }
+      }
+    },
+    {
+      "name": "stepper/font/semibold",
+      "collection": "component",
+      "css": "--stepper-font-semibold",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "stepper · font/semibold. Conserva el rol semántico font-weight-semibold en los cuatro temas.",
+      "scopes": [
+        "FONT_STYLE"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:197"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:197"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:197"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:197"
+        }
+      }
+    },
+    {
+      "name": "stepper/font/size-support",
+      "collection": "component",
+      "css": "--stepper-font-size-support",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "stepper · font/size-support. Conserva el rol semántico font-size-1xs en los cuatro temas.",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:221"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:221"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:221"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:221"
+        }
+      }
+    },
+    {
+      "name": "stepper/font/size-title",
+      "collection": "component",
+      "css": "--stepper-font-size-title",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "stepper · font/size-title. Conserva el rol semántico font-size-sm en los cuatro temas.",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        }
+      }
+    },
+    {
+      "name": "stepper/radius/line",
+      "collection": "component",
+      "css": "--stepper-radius-line",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "stepper · radius/line. Conserva el rol semántico radius-md en los cuatro temas.",
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:245"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:245"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:245"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:245"
+        }
+      }
+    },
+    {
+      "name": "stepper/radius/mark",
+      "collection": "component",
+      "css": "--stepper-radius-mark",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "stepper · radius/mark. Conserva el rol semántico radius-full en los cuatro temas.",
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:250"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:250"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:250"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:250"
+        }
+      }
+    },
+    {
+      "name": "stepper/radius/none",
+      "collection": "component",
+      "css": "--stepper-radius-none",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "stepper · radius/none. Conserva el rol semántico radius-none en los cuatro temas.",
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:222"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:222"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:222"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:222"
+        }
+      }
+    },
+    {
+      "name": "stepper/size/glyph",
+      "collection": "component",
+      "css": "--stepper-size-glyph",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "stepper · size/glyph. Conserva el rol semántico size-lg en los cuatro temas.",
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:236"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:236"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:236"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:236"
+        }
+      }
+    },
+    {
       "name": "stepper/size/line-inline",
       "collection": "component",
       "css": "--stepper-size-line-inline",
@@ -20907,10 +22712,167 @@
         "WIDTH_HEIGHT"
       ],
       "values": {
-        "Contable": 80,
-        "Administrativo": 80,
-        "Servicios": 80,
-        "Personas": 80
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "correction:semantic:size-80"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "correction:semantic:size-80"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "correction:semantic:size-80"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "correction:semantic:size-80"
+        }
+      }
+    },
+    {
+      "name": "stepper/size/line-thickness",
+      "collection": "component",
+      "css": "--stepper-size-line-thickness",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "stepper · size/line-thickness. Conserva el rol semántico size-xs en los cuatro temas.",
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:234"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:234"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:234"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:234"
+        }
+      }
+    },
+    {
+      "name": "stepper/size/mark",
+      "collection": "component",
+      "css": "--stepper-size-mark",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "stepper · size/mark. Conserva el rol semántico size-3xl en los cuatro temas.",
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        }
+      }
+    },
+    {
+      "name": "stepper/spacing/compact",
+      "collection": "component",
+      "css": "--stepper-spacing-compact",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "stepper · spacing/compact. Conserva el rol semántico spacing-xs en los cuatro temas.",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        }
+      }
+    },
+    {
+      "name": "stepper/spacing/group",
+      "collection": "component",
+      "css": "--stepper-spacing-group",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "stepper · spacing/group. Conserva el rol semántico spacing-sm en los cuatro temas.",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        }
+      }
+    },
+    {
+      "name": "stepper/spacing/none",
+      "collection": "component",
+      "css": "--stepper-spacing-none",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "stepper · spacing/none. Conserva el rol semántico spacing-none en los cuatro temas.",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        }
       }
     },
     {
@@ -26034,6 +27996,82 @@
       }
     },
     {
+      "name": "characters/palette/beni/body",
+      "collection": "primitives",
+      "css": "--characters-palette-beni-body",
+      "source": "specs/tokens/characters.identity.v1.0.0.json",
+      "amendments": [],
+      "description": "Cuerpo original de BENI.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Value": {
+          "r": 0.2549019753932953,
+          "g": 0.3450980484485626,
+          "b": 0.6078431606292725,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "characters/palette/navi/body",
+      "collection": "primitives",
+      "css": "--characters-palette-navi-body",
+      "source": "specs/tokens/characters.identity.v1.0.0.json",
+      "amendments": [],
+      "description": "Cuerpo original de NAVI.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Value": {
+          "r": 0.9607843160629272,
+          "g": 0.5137255191802979,
+          "b": 0.25882354378700256,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "characters/palette/navi/shadow",
+      "collection": "primitives",
+      "css": "--characters-palette-navi-shadow",
+      "source": "specs/tokens/characters.identity.v1.0.0.json",
+      "amendments": [],
+      "description": "Sombra lateral de NAVI en fases 02 y 03.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Value": {
+          "r": 0.8392156958580017,
+          "g": 0.45490196347236633,
+          "b": 0.239215686917305,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "characters/palette/shared/features",
+      "collection": "primitives",
+      "css": "--characters-palette-shared-features",
+      "source": "specs/tokens/characters.identity.v1.0.0.json",
+      "amendments": [],
+      "description": "Ojos de BENI y NAVI y boca de BENI.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Value": {
+          "r": 0.8941176533699036,
+          "g": 0.8980392217636108,
+          "b": 0.9019607901573181,
+          "a": 1
+        }
+      }
+    },
+    {
       "name": "cyan/100",
       "collection": "primitives",
       "css": "--primitive-cyan-100",
@@ -27883,6 +29921,18 @@
       }
     },
     {
+      "name": "size/80",
+      "collection": "primitives",
+      "css": "--primitive-size-80",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "Longitud observada de 80 px del conector horizontal de Stepper.",
+      "scopes": [],
+      "values": {
+        "Value": 80
+      }
+    },
+    {
       "name": "size/8xl",
       "collection": "primitives",
       "css": "--primitive-size-88",
@@ -28560,6 +30610,74 @@
         "Value": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:128"
+        }
+      }
+    },
+    {
+      "name": "color/identity/characters/beni/body",
+      "collection": "semantic",
+      "css": "--color-identity-characters-beni-body",
+      "source": "specs/tokens/characters.identity.v1.0.0.json",
+      "amendments": [],
+      "description": "Cuerpo original de BENI.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:primitives:beni/body"
+        }
+      }
+    },
+    {
+      "name": "color/identity/characters/navi/body",
+      "collection": "semantic",
+      "css": "--color-identity-characters-navi-body",
+      "source": "specs/tokens/characters.identity.v1.0.0.json",
+      "amendments": [],
+      "description": "Cuerpo original de NAVI.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:primitives:navi/body"
+        }
+      }
+    },
+    {
+      "name": "color/identity/characters/navi/shadow",
+      "collection": "semantic",
+      "css": "--color-identity-characters-navi-shadow",
+      "source": "specs/tokens/characters.identity.v1.0.0.json",
+      "amendments": [],
+      "description": "Sombra lateral de NAVI en fases 02 y 03.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:primitives:navi/shadow"
+        }
+      }
+    },
+    {
+      "name": "color/identity/characters/shared/features",
+      "collection": "semantic",
+      "css": "--color-identity-characters-shared-features",
+      "source": "specs/tokens/characters.identity.v1.0.0.json",
+      "amendments": [],
+      "description": "Ojos de BENI y NAVI y boca de BENI.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "characters:primitives:shared/features"
         }
       }
     },
@@ -29775,6 +31893,21 @@
         "Value": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:71"
+        }
+      }
+    },
+    {
+      "name": "size-80",
+      "collection": "semantic",
+      "css": "--semantic-size-80",
+      "source": "specs/tokens/component-layer.correction.json",
+      "amendments": [],
+      "description": "Longitud de 80 px para tramos horizontales.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "correction:primitive:size-80"
         }
       }
     },

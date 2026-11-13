@@ -3,6 +3,9 @@ import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { extname, resolve, sep } from 'node:path';
+import { verifyCharacters } from './characters.browser.mjs';
+import { verifyConversationComposer } from './conversation-composer.browser.mjs';
+import { verifyConversationResponse } from './conversation-response.browser.mjs';
 
 const root = resolve('out');
 const types = {'.html':'text/html', '.js':'text/javascript', '.css':'text/css', '.woff2':'font/woff2'};
@@ -699,6 +702,9 @@ try {
   await page.keyboard.press('Space');
   assert.equal(await selectedRow.isChecked(),true);
   assert.match(await page.locator('#demo-table-selection').textContent(),/^1 seleccionados/);
+  const characters = await verifyCharacters(page);
+  const conversationComposer = await verifyConversationComposer(page);
+  const conversationResponse = await verifyConversationResponse(page);
   assert.deepEqual(errors,[]);
   console.log(JSON.stringify({status:'PASS',height,width,font,colors,keyboard:true,duplicateActivationsBlocked:true,
     reset:true,disabled:true,navigation:true,loaderWidth:24,reducedMotion:'1.6s',
@@ -707,7 +713,7 @@ try {
     searchKeyboardAndClear:true,breadcrumbNavigation:true,sidebarSlotsAndKeyboard:true,sidebarSecondary:true,iconButtonPressed:true,warningContrast,
     localAvatarImage:true,avatarOverflow:true,headerKeyboard:true,inputMatrix:42,inputEmptyBorderContrast,sectionHeader:true,appShell:true,pagination:true,tabs:true,tabContrasts:tabContrasts[0],
     textArea:true,textAreaBorderContrast,dropdown:true,dropdownContrasts,floatingActions:true,inlineWarningContrast,
-    chip:true,chipContrasts:chipContrasts[0],table:true,tableLinkHoverContrast}));
+    chip:true,chipContrasts:chipContrasts[0],table:true,tableLinkHoverContrast,characters,conversationComposer,conversationResponse}));
 } finally {
   await browser?.close();
   server.close();

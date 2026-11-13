@@ -98,6 +98,12 @@ La fase web está activada por DEC-WEB-COMPONENTS-001. Aplica [P07](07-WEB-COMPO
 
 No declares teclado o accesibilidad web validados desde una captura de Figma.
 
+### Control obligatorio de tokens en altas y correcciones
+
+- **TOKEN-QA-01 · Figma.** Lee cada maestro y variante del alcance, incluidos auxiliares propios y overrides de instancias. Ejecuta [check-component-tokens.js](../implementations/figma/qa/check-component-tokens.js) con los IDs reales. El script verifica la colección local y la cadena component → semantic → primitives en todos los modos. Contrasta por propiedad el binding esperado con el real, su rol y su valor resuelto. Verifica también los bindings requeridos que falten. Una instancia puede heredar los tokens de su maestro. Registra excepciones de arte, cobertura y limitaciones según el contrato.
+- **TOKEN-QA-02 · Web.** Ejecuta `pnpm ds:check` en el paquete web. El generador valida la capa de cada referencia directa en estilos, módulos y recetas, y resuelve los aliases por tema. Verifica en navegador los roles afectados, incluidas propiedades sin token requerido, refs dinámicas, fallbacks y resolución por tema.
+- Registra por familia alcance, IDs o archivos, modos, resultados y excepciones justificadas. Cierra solo con PASS por destino aplicable. Un binding directo a semantic o primitives, un token requerido ausente o un alias incompatible requiere corrección. Una propiedad requerida que no se pudo leer queda BLOCKED. NOT_APPLICABLE requiere justificación.
+
 ## 5. Defectos y tolerancias
 
 | Clase | Acción |
@@ -151,3 +157,9 @@ En QA documental comprueba alcance y procedencia de la guía, vínculo por ident
 ## Inventario de la página de familia
 
 Lee la lista completa de hijos de la página afectada y los hijos de cada set. Comprueba que solo queden componentes principales y sets propios, con las variantes dentro de sus sets. Guarda IDs, tipos y resultado en el comprobante. Un nodo ajeno se registra como hallazgo. Pide una decisión de disposición antes de borrarlo o moverlo y conserva el alcance afectado pendiente. La guía y el enlace residen en metadatos.
+
+## Orden de las páginas en altas de componentes
+
+En cada alta en AI Blueheart DS, verifica [DEC-FIGMA-FAMILY-PAGE-ORDER-001](../registry/decisions.md#dec-figma-family-page-order-001) y [P04](04-FIGMA-CONSTRUCTION.md#orden-de-las-páginas-al-dar-de-alta-un-componente). Lee el listado final de páginas desde Figma. Comprueba que los nombres canónicos visibles de las páginas oficiales de familias aparezcan de A a Z, que el bloque oficial sea contiguo y termine antes del separador de Playground. Las portadas y foundations conservan su posición y Playground permanece tras su separador, y que las páginas existentes mantengan sus IDs y nombres. Aplica el control de inventario anterior para conservar la página de familia limpia y sus variantes dentro de sus sets.
+
+Registra la secuencia antes y después con los nombres e IDs de página y el resultado del control. Marca `PASS` solo con la lectura final comprobada. Si no puedes leer el orden, registra `BLOCKED` para este control.

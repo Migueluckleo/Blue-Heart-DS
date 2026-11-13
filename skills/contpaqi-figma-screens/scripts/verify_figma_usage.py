@@ -62,6 +62,73 @@ def issue(out, code, message, use=None, node=None):
     out['findings'].append({'code': code, 'usage_id': use, 'node_id': node, 'message': message})
 
 
+def contract_text(reader, path):
+    need(path in reader.manifest['files'], 'Contract outside verified catalog: ' + path)
+    raw = safe(reader.snapshot, path).read_bytes()
+    need(sha(raw) == reader.manifest['files'][path], 'Contract integrity: ' + path)
+    return raw.decode('utf-8')
+
+
+def component_catalog(reader):
+    components = unique(reader.manifest['components'], 'id', 'components')
+    specs = {}
+    for path in reader.manifest['files']:
+        if not re.fullmatch(r'specs/components/[^/]+\.contract\.[^/]+\.md', path):
+            continue
+        text = contract_text(reader, path)
+        frontmatter = re.match(r'^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)', text)
+        match = re.search(r'^contract_id:[ \t]*([\w-]+)[ \t]*$', frontmatter[1], re.M) if frontmatter else None
+        need(match, 'Missing component ID in spec: ' + path)
+        specs.setdefault(match[1], []).append(path)
+    for family, component in components.items():
+        need(component['contract'] in specs.get(family, []), 'Manifest family lacks its spec: ' + family)
+    for family, paths in specs.items():
+        if family not in components:
+            need(len(paths) == 1, 'Ambiguous spec outside the component index: ' + family)
+            components[family] = {'id': family, 'name': family, 'contract': paths[0], 'amendments': [], 'exports': []}
+    return components
+
+
+def family_tracking(plan, components):
+    tracking = unique(plan.get('family_tracking'), 'family', 'family_tracking')
+    missing = sorted(set(components) - set(tracking))
+    foreign = sorted(set(tracking) - set(components))
+    need(not missing and not foreign, f'Family tracking differs from catalog; missing={missing}; foreign={foreign}')
+    for family, row in tracking.items():
+        need(row.get('applicability') in {'APPLIES', 'NOT_APPLICABLE'}
+             and isinstance(row.get('reason'), str) and row['reason'].strip(), 'Give applicability and reason for ' + family)
+    return tracking
+
+
+def verify_exception(reader, use, components):
+    exception = use.get('functional_exception')
+    need(isinstance(exception, dict), 'Functional exception required for ' + use['id'])
+    for field in ('purpose', 'search'):
+        need(isinstance(exception.get(field), str) and exception[field].strip(), 'Missing exception ' + field)
+    candidates = unique(exception.get('candidates'), 'family', 'exception candidates')
+    need(use['family'] is None or use['family'] in candidates, 'Assess the family covered by the exception')
+    evidence = []
+    for family, candidate in candidates.items():
+        need(family in components, 'Unknown Figma alternative: ' + family)
+        gap = candidate.get('gap')
+        need(gap != 'COMPATIBLE', 'Use the compatible Figma component: ' + family)
+        need(gap in {'PURPOSE', 'BEHAVIOR', 'STATE'}, 'Assess a functional gap for ' + family)
+        unmet = candidate.get('unmet')
+        need(isinstance(unmet, str) and unmet.strip(), 'Describe the specific unmet need for ' + family)
+        ref = candidate.get('evidence')
+        need(isinstance(ref, dict), 'Missing evidence for ' + family)
+        path, excerpt = ref.get('path'), ref.get('excerpt')
+        component = components[family]
+        need(path in [component['contract'], *component['amendments']], 'Evidence must be a spec or amendment of ' + family)
+        text = contract_text(reader, path)
+        need(isinstance(excerpt, str) and excerpt.strip() and ' '.join(excerpt.split()) in ' '.join(text.split()),
+             'Evidence excerpt missing from the pinned spec: ' + path)
+        need(explicit_status(text) in {'APPROVED', 'DELEGATED_FOR_BUILD'}, 'Ineligible exception evidence: ' + path)
+        evidence.append({'family': family, 'gap': gap, 'unmet': unmet, 'path': path,
+                         'excerpt': excerpt, 'sha256': reader.manifest['files'][path]})
+    return {'purpose': exception['purpose'], 'search': exception['search'], 'candidates': evidence}
+
+
 def file_roles(reader, plan):
     path = 'config/figma-links.json'
     raw = safe(reader.snapshot, path).read_bytes()
@@ -94,7 +161,10 @@ def preflight(runtime, plan, base):
          and len(requirements) == len(set(requirements)), 'Unique family requirements required')
     uses = unique(plan.get('uses'), 'id', 'uses')
     need(bool(uses), 'Empty scope cannot pass')
-    components = unique(reader.manifest['components'], 'id', 'components')
+    components = component_catalog(reader)
+    tracking = family_tracking(plan, components)
+    applicable = {family for family, row in tracking.items() if row['applicability'] == 'APPLIES'}
+    need(set(requirements) == applicable, 'Requirements must match applicable family tracking')
     source_refs = unique(plan.get('source_readbacks'), 'path', 'source_readbacks')
     source_nodes = {}
     for path, ref in source_refs.items():
@@ -117,24 +187,22 @@ def preflight(runtime, plan, base):
     out = {'schema_version': SCHEMA, 'stage': 'preflight', 'status': 'BLOCKED', 'findings': [],
            'plan_sha256': sha(canonical(plan)), 'snapshot': reader.identity,
            'destination_file_key': destination, 'validator_sha256': sha(Path(__file__).read_bytes()),
-           'source_readbacks': {p: r['sha256'] for p, r in source_refs.items()}}
-    known = set()
+           'source_readbacks': {p: r['sha256'] for p, r in source_refs.items()}, 'functional_exceptions': {}}
+    known = {family: [] for family in tracking}
     for use_id, use in uses.items():
         need(use.get('screen') in screens, 'Unknown screen: ' + use_id)
         kind = use.get('kind')
-        family = use.get('family')
-        if family in components:
-            known.add(family)
-            if kind != 'ds-instance':
-                issue(out, 'EXISTING_FAMILY_REQUIRES_INSTANCE', family, use_id)
-                continue
+        need('family' in use, 'Declare family or null for ' + use_id)
+        family = use['family']
+        if family is not None:
+            need(family in applicable, 'Use references an unknown or non-applicable family: ' + str(family))
+            known[family].append(use_id)
+        if kind == 'ds-instance' and family in components:
             component = components[family]
             # Original roots remain authoritative; a graph label is not an approval.
             texts = []
             for path in [component['contract'], *component['amendments']]:
-                raw = safe(reader.snapshot, path).read_bytes()
-                need(sha(raw) == reader.manifest['files'][path], 'Contract integrity: ' + path)
-                text = raw.decode('utf-8'); texts.append(text)
+                text = contract_text(reader, path); texts.append(text)
                 status = explicit_status(text)
                 if status is None:
                     m = re.search(r'^Estado:\s*[`*]*([A-Z_]+)', text, re.M)
@@ -159,21 +227,23 @@ def preflight(runtime, plan, base):
             need(isinstance(expected, dict), 'variant_properties must be object')
             if any(source.get('variant_properties', {}).get(k) != v for k, v in expected.items()):
                 issue(out, 'UNSUPPORTED_VARIANT', family, use_id)
-        elif family is not None or kind == 'ds-instance':
+        elif kind == 'ds-instance':
             issue(out, 'UNKNOWN_FAMILY', str(family), use_id)
         elif kind == 'local-content':
+            need(family is None, 'Local content cannot stand in for ' + str(family))
             need(isinstance(use.get('reason'), str) and bool(use['reason'].strip()), 'Local content needs reason')
             if use.get('decoration_of') is not None:
                 owner = uses.get(use['decoration_of'])
                 need(owner is not None and owner.get('kind') == 'ds-instance' and owner.get('screen') == use['screen'], 'Decoration needs a DS owner in the same screen')
         elif kind == 'local-composition':
             need(isinstance(use.get('reason'), str) and bool(use['reason'].strip()), 'Composition needs reason')
+            out['functional_exceptions'][use_id] = verify_exception(reader, use, components)
             dependencies = use.get('composition_of')
             need(isinstance(dependencies, list) and dependencies and all(d in uses and d != use_id for d in dependencies), 'Composition needs mapped dependencies')
         else:
             issue(out, 'INVALID_USE_KIND', str(kind), use_id)
     for family in requirements:
-        if family not in components or family not in known:
+        if not known[family]:
             issue(out, 'MISSING_FAMILY_COVERAGE', family)
     # Composition relationships must terminate and cannot hide missing mappings.
     def visit(use_id, trail):
@@ -183,6 +253,9 @@ def preflight(runtime, plan, base):
     for use_id in uses:
         visit(use_id, set())
     out['status'] = 'PASS' if not out['findings'] else 'BLOCKED'
+    out['family_tracking'] = [{**tracking[family], 'contract': components[family]['contract'], 'uses': known[family],
+                              'result': 'NOT_APPLICABLE' if family not in applicable else 'PENDING_READBACK'}
+                             for family in sorted(tracking)]
     out['generated_at'] = datetime.now(timezone.utc).isoformat()
     return out, source_nodes
 
@@ -193,7 +266,7 @@ def verify(runtime, plan, base, receipt, readbacks):
     if current['status'] != 'PASS':
         return out
     need(receipt.get('status') == 'PASS' and receipt.get('stage') == 'preflight', 'Passing preflight receipt required')
-    for field in ('plan_sha256', 'snapshot', 'destination_file_key', 'validator_sha256', 'source_readbacks'):
+    for field in ('plan_sha256', 'snapshot', 'destination_file_key', 'validator_sha256', 'source_readbacks', 'family_tracking', 'functional_exceptions'):
         need(receipt.get(field) == current[field], 'Preflight invalidated: ' + field)
     uses = unique(plan['uses'], 'id', 'uses')
     screens = set(); placements = {}; nodes = {}; candidates = []; instance_ids = set(); screen_of = {}
@@ -242,6 +315,8 @@ def verify(runtime, plan, base, receipt, readbacks):
         if node is None:
             issue(out, 'MISSING_READBACK', 'No actual node for planned use', use_id, node_id)
             continue
+        if screen_of[node_id] != use['screen']:
+            issue(out, 'READBACK_SCREEN_MISMATCH', 'Observed node belongs to a different screen', use_id, node_id)
         if use['kind'] == 'ds-instance':
             source = sources[use['source_node_id']]
             if node.get('type') != 'INSTANCE':
@@ -283,6 +358,10 @@ def verify(runtime, plan, base, receipt, readbacks):
                 if not runs or any(not run.get('font_metrics') for run in runs):
                     issue(out, 'LOCAL_TEXT_METRICS_MISSING', 'Read font metrics for editable local text', use_id, node_id)
         elif use['kind'] == 'local-composition':
+            if node.get('type') not in {'FRAME', 'COMPONENT', 'INSTANCE'} or (
+                node.get('type') == 'INSTANCE' and node.get('main_component_remote') is not False
+            ):
+                issue(out, 'INVALID_LOCAL_COMPOSITION', 'Expected an editable frame or local component', use_id, node_id)
             if node.get('layout_mode') not in {'HORIZONTAL', 'VERTICAL', 'GRID'}:
                 issue(out, 'LOCAL_LAYOUT_MISSING', 'Structural composition requires Auto Layout', use_id, node_id)
             for child in use['composition_of']:
@@ -290,20 +369,39 @@ def verify(runtime, plan, base, receipt, readbacks):
                 if node_id not in child_node.get('ancestor_ids', []):
                     issue(out, 'COMPOSITION_CHILD_MISSING', child, use_id, node_id)
     out['status'] = 'PASS' if not out['findings'] else 'BLOCKED'
+    if out['status'] == 'PASS':
+        for row in out['family_tracking']:
+            if row['uses']:
+                row['result'] = 'EXCEPTION' if any(use_id in out['functional_exceptions'] for use_id in row['uses']) else 'VERIFIED'
+                row['nodes'] = {use_id: placements[use_id] for use_id in row['uses']}
     return out
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('stage', choices=['preflight', 'verify', 'collect'])
+    parser.add_argument('stage', choices=['inventory', 'preflight', 'verify', 'collect'])
     parser.add_argument('--runtime', type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument('--plan', type=Path, required=True)
+    parser.add_argument('--plan', type=Path)
     parser.add_argument('--receipt', type=Path)
     parser.add_argument('--readback', type=Path, action='append', default=[])
     parser.add_argument('--request', type=Path, help='Collector request JSON; see figma-usage-gates reference')
     parser.add_argument('--output', type=Path)
     args = parser.parse_args()
     try:
+        if args.stage == 'inventory':
+            reader = Reader(args.runtime)
+            components = component_catalog(reader)
+            result = {'status': 'PASS', 'snapshot': reader.identity,
+                      'family_tracking': [{'family': family, 'contract': component['contract'],
+                                           'applicability': None, 'reason': ''}
+                                          for family, component in sorted(components.items())]}
+            payload = json.dumps(result, ensure_ascii=False, indent=2) + '\n'
+            if args.output:
+                args.output.write_text(payload)
+            else:
+                print(payload, end='')
+            return 0
+        need(args.plan is not None, 'Plan required')
         plan = read(args.plan)
         if args.stage == 'collect':
             need(args.request is not None, 'Collector request required')
@@ -314,8 +412,7 @@ def main():
             need(request.get('file_key') == (master if request.get('kind') == 'source' else sandbox), 'Request does not match configured file role')
             request['plan_sha256'] = sha(canonical(plan))
             request['official_component_keys'] = [u['component_key'] for u in plan.get('uses', []) if u.get('kind') == 'ds-instance' and isinstance(u.get('component_key'), str)]
-            manifest = read(args.runtime / 'assets/snapshot-manifest.json')
-            request['families'] = [{k: c.get(k) for k in ('id', 'name', 'slug', 'exports')} for c in manifest['components']]
+            request['families'] = [{k: c.get(k) for k in ('id', 'name', 'slug', 'exports')} for c in component_catalog(reader).values()]
             code = 'const request = ' + json.dumps(request, ensure_ascii=False) + ';\n' + Path(__file__).with_name('collect_figma_usage.js').read_text()
             if args.output: args.output.write_text(code)
             else: print(code)

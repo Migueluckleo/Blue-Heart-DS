@@ -41,3 +41,23 @@ El corte inicial cubre documentación, catálogo React/Next vacío, integridad d
 [Stepper](../qa/implementations/stepper.v1.0.0.review.md) · PASS en Figma y web. Lecturas nativas en los cuatro modos y Chrome con teclado, foco y semántica de progreso.
 
 [Logos](../qa/implementations/logos.v1.0.0.review.md) · PASS en selección nativa de 68 variantes, fidelidad visual y cero bindings. Redondeo subpíxel cuantificado. Web NOT_APPLICABLE.
+
+[Characters](../qa/implementations/characters.v1.0.0.review.md) · Figma PASS en 13 fases y reacciones, 188 resoluciones de color en cuatro modos y reproducción nativa. Web PASS en ambos ciclos, cuatro temas y movimiento reducido. La evidencia registra el redondeo de cinco trazados sin relleno.
+
+## Conversation Composer · CONVERSATION-001
+
+[QA documental v1.0.0](../qa/contracts/conversation-composer.v1.0.0.review.md) · PASS.
+
+[QA de implementación v1.0.0](../qa/implementations/conversation-composer.v1.0.0.review.md) · PASS Figma y Chrome.
+
+## Conversation Response · CONVERSATION-RESPONSE-001
+
+[QA documental](../qa/contracts/conversation-response.v1.0.0.review.md) y [QA de implementación](../qa/implementations/conversation-response.v1.0.0.review.md) · PASS.
+
+## QA de la capa de tokens de componente · 2026-11-12
+
+[QA documental](../qa/contracts/component-token-layer.correction.review.md) y [QA Figma y web](../qa/implementations/component-token-layer.correction.review.md) · PASS.
+
+## Control recurrente de tokens y orden de páginas
+
+TOKEN-QA-01 se probó en seis maestros y auxiliares corregidos. Leyó 1.326 bindings y 86 registros de overrides sin hallazgos. TOKEN-QA-02 pasa en el catálogo y rechaza una receta con consumo directo de neutral-medium. El listado guardado de Figma termina en Toggle, Tooltip, separador y Playground. [Lectura Figma](../implementations/figma/qa/token-gate-and-page-order.readback.json).

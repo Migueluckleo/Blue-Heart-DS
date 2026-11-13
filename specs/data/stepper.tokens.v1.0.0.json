@@ -184,10 +184,22 @@
       "name": "stepper/size/line-inline",
       "resolvedType": "FLOAT",
       "valuesByMode": {
-        "Contable": 80,
-        "Administrativo": 80,
-        "Servicios": 80,
-        "Personas": 80
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "correction:semantic:size-80"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "correction:semantic:size-80"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "correction:semantic:size-80"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "correction:semantic:size-80"
+        }
       },
       "codeSyntax": {
         "WEB": "var(--stepper-size-line-inline)"

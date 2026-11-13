@@ -22,7 +22,7 @@ La [norma raíz](../../sources/figma-snapshots/root-families-2026-11-11/app-shel
 
 P-SLOTS REQUIRED. La raíz oficial actual comparte una propiedad Body entre las cuatro variantes. El Slot admite inserción, retirada, reordenamiento y sustitución sin mínimo ni máximo declarados. Los patrones históricos de Laboratorio usan otras claves. Grid contiene una rejilla nativa de cuatro tracks FLEX por eje y los spans 4, 1+1+1+1, 2+2 y 3+1. Flex contiene dos regiones iguales y una región de ancho completo. Los bloques son ejemplos reemplazables.
 
-La referencia Figma mide 1440 × 1024 y usa separaciones de 8 y 32, con las capas propias del Shell observadas como valores locales. El ancho de Main es 1272 con Sidebar de 72 o 1110 con Sidebar de 234. El consumo web usa la superficie neutral base y los aliases semánticos de espaciado. El contenido web puede crecer en el flujo del anfitrión y mantiene orden lógico de lectura. El anfitrión define desbordamiento, datos, permisos, rutas y mínimo de la pantalla.
+La referencia Figma mide 1440 × 1024 y usa separaciones de 8 y 32, con las capas propias del Shell observadas como valores locales. El ancho de Main es 1272 con Sidebar de 72 o 1110 con Sidebar de 234. Figma y web consumen tokens App Shell para superficie, separación de Header e inset de Content. Los aliases conservan la superficie neutral base y las medidas de referencia. El contenido web puede crecer en el flujo del anfitrión y mantiene orden lógico de lectura. El anfitrión define desbordamiento, datos, permisos, rutas y mínimo de la pantalla.
 
 ## Guía semántica normativa
 
@@ -41,3 +41,7 @@ APP-SHELL-001 · Usa App Shell para componer navegación global y contenido de e
 ## Aceptación
 
 Verificar las cuatro variantes, el Slot compartido, Grid nativo, spans y tamaños, las tres dependencias, sus propiedades y el control Secondary heredado. Probar edición de Body desde instancias y los cambios de ejes. En web, probar menú, Grid/Flex, foco, flujo y anchos 1272/1110 en la referencia de 1440.
+
+## Corrección de bindings de componente · 2026-11-12
+
+Los bindings propios y CSS consumen variables de App Shell. Cada alias conserva el rol y valor por tema. Las instancias heredan los tokens de su maestro. [Mapa delegado de la corrección](../tokens/component-layer.correction.json).

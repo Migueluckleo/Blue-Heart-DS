@@ -59,7 +59,7 @@ Una colección, un modo `Value`, 173 variables.
 
 ## Guía semántica normativa
 
-Consume el rol de componente o semántico establecido por la spec de familia. Las primitivas proveen los valores de las escalas y medidas observadas. Evita seleccionar una primitiva por similitud de valor. Conserva aliases y modos. Los grupos expresan identidad y categoría. Un nombre de medida no establece una unidad. Estados, decisiones de uso, contenido, composición visual, Slots y accesibilidad se especifican con evidencia por familia. Las 23 descripciones vacías se conservan.
+Consume el rol de componente establecido por la spec de familia. El token de componente enlaza con el rol semántico. Las primitivas proveen los valores de las escalas y medidas observadas. Evita seleccionar una primitiva por similitud de valor. Conserva aliases y modos. Los grupos expresan identidad y categoría. Un nombre de medida no establece una unidad. Estados, decisiones de uso, contenido, composición visual, Slots y accesibilidad se especifican con evidencia por familia. Las 23 descripciones vacías se conservan.
 
 **Haz.** Usa la referencia real a `primitives` y su nombre de ruta en el alias Figma. **Evita.** Crear una colección por cada paleta, completar niveles ausentes o cambiar un alias a literal.
 
@@ -88,3 +88,5 @@ Conservan sufijo numérico 6, 18, 72, 104, 120, 200, 234, 240, 294, 320, 358, 55
 ## Estado de implementación
 
 `VALIDATED` para variables del maestro. [Mapa de IDs](../../implementations/figma/variables-2026-11-11/id-map.json) y [readback final](../../implementations/figma/variables-2026-11-11/final-collections.readback.json). La publicación remota sigue en HOLD. Este alcance no establece conversiones CSS ni reglas visuales de familias.
+
+La [corrección de bindings de componente](../tokens/component-layer.correction.json) aporta los aliases delegados para App Shell, Conversation Composer, Conversation Response y Stepper en las versiones vigentes.

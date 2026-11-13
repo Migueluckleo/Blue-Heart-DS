@@ -136,7 +136,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [stepper.contract.v1.0.0.md](../../../../specs/components/stepper.contract.v1.0.0.md) · SHA-256 `ff793f8f06c17a85244a3a513671fdca9439c5aa11e63edda7bc121ba310db52`.
+- [stepper.contract.v1.0.0.md](../../../../specs/components/stepper.contract.v1.0.0.md) · SHA-256 `e4598db8be040a7d885589abf08dd4a7a3e759ded54e3a86bc6a361a0ce5592e`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

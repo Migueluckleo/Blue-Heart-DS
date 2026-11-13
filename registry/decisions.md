@@ -53,3 +53,14 @@ El usuario cambió ambos controles de Sidebar en AI Blueheart DS a Icon Button/s
 ## DEC-LOGOS-FIGMA-SCOPE-001
 
 2026-11-12 · Solicitud explícita del usuario. Los cinco sets de la [selección Logos de Librería v1.1.0](https://www.figma.com/design/9zs5RMR8LB5wHjW9Bd59BA/Libreria-v1.1.0?node-id=40-93) se consumen desde AI Blueheart DS en Figma. Conservan los parámetros fuente y el arte fijo con cero bindings a variables o tokens. Web y el prototipador PO quedan fuera del alcance de esta familia. [Contrato LOGOS-001](../specs/components/logos.contract.v1.0.0.md)
+
+## DEC-CHARACTERS-IDENTITY-CHAIN-001
+
+2026-11-12 · Decisión explícita del usuario para Characters en Rebuild. Se adoptan el arte y las animaciones de la selección 820:7 y una cadena dedicada primitives → semantic → component. Esta decisión reemplaza la ruta histórica directa solo para BENI y NAVI en este destino. El color de identidad conserva el mismo RGBA en los cuatro temas. [Enmienda](../specs/foundations/characters.identity-chain.amendment.v1.0.0.md)
+## DEC-FIGMA-FAMILY-PAGE-ORDER-001
+
+2026-11-12 · Decisión explícita del usuario. Al dar de alta un componente en AI Blueheart DS, deja las páginas oficiales de familias en orden alfabético de A a Z por su nombre canónico visible. Conserva en su posición las portadas y foundations. Mantén todas las familias en un bloque contiguo. Playground y su separador permanecen juntos después de la última familia. El orden se aplica al listado de páginas y preserva IDs, nombres, variantes y contenido. La notificación registra la regla para las altas futuras. [Construcción P04](../protocols/04-FIGMA-CONSTRUCTION.md#orden-de-las-páginas-al-dar-de-alta-un-componente) · [Control P06](../protocols/06-QA-AND-VALIDATION.md#orden-de-las-páginas-en-altas-de-componentes)
+
+## Corrección de bindings de componente · 2026-11-12
+
+La solicitud exige que las propiedades tokenizadas de los componentes consuman la colección component en Figma y web. Los aliases pasan por semantic hacia primitives. Se corrigen las versiones vigentes. [QA documental y delegación](../qa/contracts/component-token-layer.correction.review.md)

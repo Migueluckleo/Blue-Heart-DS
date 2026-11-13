@@ -1,0 +1,651 @@
+{
+  "status": "PASS",
+  "verify": [
+    {
+      "name": "31 páginas oficiales A–Z",
+      "pass": true,
+      "evidence": [
+        "App Shell",
+        "Avatars",
+        "Badge",
+        "Breadcrumbs",
+        "Buttons",
+        "Characters",
+        "Checkbox",
+        "Chips",
+        "Conversation Composer",
+        "Dot",
+        "Dropdown",
+        "File Upload",
+        "Floating Actions",
+        "Header",
+        "Icon Buttons",
+        "Inline Notification",
+        "Input",
+        "Linear Progress Bar",
+        "Loader",
+        "Logos",
+        "Pagination",
+        "Radio Buttons",
+        "Search",
+        "Section Header",
+        "Sidebar",
+        "Steppers",
+        "Table",
+        "Tabs",
+        "Text Area",
+        "Toggle",
+        "Tooltip"
+      ]
+    },
+    {
+      "name": "Posiciones protegidas",
+      "pass": true,
+      "evidence": [
+        {
+          "id": "0:1",
+          "name": "Thumbnail",
+          "position": 1
+        },
+        {
+          "id": "65:274",
+          "name": "----",
+          "position": 2
+        },
+        {
+          "id": "203:92",
+          "name": "----",
+          "position": 33
+        },
+        {
+          "id": "203:93",
+          "name": "Playground",
+          "position": 34
+        }
+      ]
+    },
+    {
+      "name": "Página oficial limpia",
+      "pass": true,
+      "evidence": [
+        "216:109",
+        "216:66",
+        616,
+        138
+      ]
+    },
+    {
+      "name": "Description y enlace",
+      "pass": true,
+      "evidence": [
+        {
+          "uri": "https://github.com/Migueluckleo/Blue-Heart-DS/blob/main/specs/components/conversation-composer.contract.v1.0.0.md#guía-semántica-normativa"
+        }
+      ]
+    },
+    {
+      "name": "Propuesta en Playground",
+      "pass": true,
+      "evidence": [
+        "206:1182",
+        "203:93",
+        "CONVERSATION-001 v0.1.0. Composición visual homologada con tokens locales. No ejecuta operaciones de chat."
+      ]
+    },
+    {
+      "name": "Defaults",
+      "pass": true,
+      "evidence": [
+        "show message#206:0",
+        "show disclaimer#206:1",
+        "message#206:2",
+        "Tools#206:3",
+        "show extra actions#206:4"
+      ]
+    },
+    {
+      "name": "Slot nativo message",
+      "pass": true,
+      "evidence": "216:70"
+    },
+    {
+      "name": "Slot nativo Tools",
+      "pass": true,
+      "evidence": "216:80"
+    },
+    {
+      "name": "Disclaimer fills",
+      "pass": true,
+      "evidence": [
+        "VariableID:8:197",
+        "neutral-strong"
+      ]
+    },
+    {
+      "name": "message fills",
+      "pass": true,
+      "evidence": [
+        "VariableID:8:193",
+        "neutral-subtle"
+      ]
+    },
+    {
+      "name": "message strokes",
+      "pass": true,
+      "evidence": [
+        "VariableID:8:178",
+        "brand-accent"
+      ]
+    },
+    {
+      "name": "description fills",
+      "pass": true,
+      "evidence": [
+        "VariableID:8:200",
+        "neutral-maximum"
+      ]
+    },
+    {
+      "name": "Composer field fills",
+      "pass": true,
+      "evidence": [
+        "VariableID:8:192",
+        "neutral-base"
+      ]
+    },
+    {
+      "name": "Composer field strokes",
+      "pass": true,
+      "evidence": [
+        "VariableID:8:178",
+        "brand-accent"
+      ]
+    },
+    {
+      "name": "Placeholder fills",
+      "pass": true,
+      "evidence": [
+        "VariableID:8:196",
+        "neutral-medium"
+      ]
+    },
+    {
+      "name": "Divider strokes",
+      "pass": true,
+      "evidence": [
+        "VariableID:8:194",
+        "neutral-muted"
+      ]
+    },
+    {
+      "name": "Disclaimer tipografía local",
+      "pass": true,
+      "evidence": {
+        "runs": [
+          {
+            "start": 0,
+            "end": 83,
+            "font": {
+              "family": "Manrope",
+              "style": "Regular",
+              "variationSettings": {
+                "wght": 400
+              }
+            }
+          }
+        ],
+        "refs": [
+          {
+            "field": "fontFamily",
+            "role": "font-family-base",
+            "local": true
+          },
+          {
+            "field": "fontStyle",
+            "role": "font-weight-regular",
+            "local": true
+          },
+          {
+            "field": "fontSize",
+            "role": "font-size-xs",
+            "local": true
+          },
+          {
+            "field": "letterSpacing",
+            "role": "font-letter-spacing-normal",
+            "local": true
+          },
+          {
+            "field": "lineHeight",
+            "role": "font-line-height-xs",
+            "local": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "description tipografía local",
+      "pass": true,
+      "evidence": {
+        "runs": [
+          {
+            "start": 0,
+            "end": 42,
+            "font": {
+              "family": "Manrope",
+              "style": "SemiBold",
+              "variationSettings": {
+                "wght": 600
+              }
+            }
+          },
+          {
+            "start": 42,
+            "end": 72,
+            "font": {
+              "family": "Manrope",
+              "style": "Regular",
+              "variationSettings": {
+                "wght": 400
+              }
+            }
+          }
+        ],
+        "refs": [
+          {
+            "field": "fontFamily",
+            "role": "font-family-base",
+            "local": true
+          },
+          {
+            "field": "fontStyle",
+            "role": "font-weight-semibold",
+            "local": true
+          },
+          {
+            "field": "fontSize",
+            "role": "font-size-xs",
+            "local": true
+          },
+          {
+            "field": "letterSpacing",
+            "role": "font-letter-spacing-minus-0p24",
+            "local": true
+          },
+          {
+            "field": "fontFamily",
+            "role": "font-family-base",
+            "local": true
+          },
+          {
+            "field": "fontStyle",
+            "role": "font-weight-regular",
+            "local": true
+          },
+          {
+            "field": "fontSize",
+            "role": "font-size-xs",
+            "local": true
+          },
+          {
+            "field": "letterSpacing",
+            "role": "font-letter-spacing-minus-0p24",
+            "local": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Placeholder tipografía local",
+      "pass": true,
+      "evidence": {
+        "runs": [
+          {
+            "start": 0,
+            "end": 41,
+            "font": {
+              "family": "Manrope",
+              "style": "Regular",
+              "variationSettings": {
+                "wght": 400
+              }
+            }
+          }
+        ],
+        "refs": [
+          {
+            "field": "fontFamily",
+            "role": "font-family-base",
+            "local": true
+          },
+          {
+            "field": "fontStyle",
+            "role": "font-weight-regular",
+            "local": true
+          },
+          {
+            "field": "fontSize",
+            "role": "font-size-sm",
+            "local": true
+          },
+          {
+            "field": "letterSpacing",
+            "role": "font-letter-spacing-normal",
+            "local": true
+          },
+          {
+            "field": "lineHeight",
+            "role": "font-line-height-sm",
+            "local": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dependencias y hover local",
+      "pass": true,
+      "evidence": [
+        {
+          "id": "216:100",
+          "main": "23:853",
+          "reactions": [
+            {
+              "trigger": "ON_HOVER",
+              "actions": [
+                [
+                  "CHANGE_TO",
+                  "23:871"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "216:78",
+          "main": "59:154",
+          "icon": "206:1138",
+          "reactions": [
+            {
+              "trigger": "MOUSE_ENTER",
+              "actions": [
+                [
+                  "CHANGE_TO",
+                  "59:165"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "216:81",
+          "main": "59:154",
+          "icon": "204:100",
+          "reactions": [
+            {
+              "trigger": "MOUSE_ENTER",
+              "actions": [
+                [
+                  "CHANGE_TO",
+                  "59:165"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "216:82",
+          "main": "59:154",
+          "icon": "204:110",
+          "reactions": [
+            {
+              "trigger": "MOUSE_ENTER",
+              "actions": [
+                [
+                  "CHANGE_TO",
+                  "59:165"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "216:83",
+          "main": "59:257",
+          "icon": "204:113",
+          "reactions": [
+            {
+              "trigger": "MOUSE_ENTER",
+              "actions": [
+                [
+                  "CHANGE_TO",
+                  "59:274"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Booleanas y ancho 320",
+      "pass": true,
+      "evidence": [
+        320,
+        286
+      ]
+    },
+    {
+      "name": "Instancia message",
+      "pass": true,
+      "evidence": {
+        "counts": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "reordered": true,
+        "main": "216:66",
+        "replacement": "217:126"
+      }
+    },
+    {
+      "name": "Instancia Tools",
+      "pass": true,
+      "evidence": {
+        "counts": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "reordered": true,
+        "main": "216:66",
+        "replacement": "217:156"
+      }
+    }
+  ],
+  "order": [
+    {
+      "id": "0:1",
+      "name": "Thumbnail",
+      "position": 1
+    },
+    {
+      "id": "65:274",
+      "name": "----",
+      "position": 2
+    },
+    {
+      "id": "105:2",
+      "name": "App Shell",
+      "position": 3
+    },
+    {
+      "id": "83:2",
+      "name": "Avatars",
+      "position": 4
+    },
+    {
+      "id": "64:2",
+      "name": "Badge",
+      "position": 5
+    },
+    {
+      "id": "47:74",
+      "name": "Breadcrumbs",
+      "position": 6
+    },
+    {
+      "id": "22:3",
+      "name": "Buttons",
+      "position": 7
+    },
+    {
+      "id": "187:14",
+      "name": "Characters",
+      "position": 8
+    },
+    {
+      "id": "42:2",
+      "name": "Checkbox",
+      "position": 9
+    },
+    {
+      "id": "126:2",
+      "name": "Chips",
+      "position": 10
+    },
+    {
+      "id": "216:109",
+      "name": "Conversation Composer",
+      "position": 11
+    },
+    {
+      "id": "32:26",
+      "name": "Dot",
+      "position": 12
+    },
+    {
+      "id": "118:2",
+      "name": "Dropdown",
+      "position": 13
+    },
+    {
+      "id": "42:31",
+      "name": "File Upload",
+      "position": 14
+    },
+    {
+      "id": "122:2",
+      "name": "Floating Actions",
+      "position": 15
+    },
+    {
+      "id": "90:2",
+      "name": "Header",
+      "position": 16
+    },
+    {
+      "id": "59:2",
+      "name": "Icon Buttons",
+      "position": 17
+    },
+    {
+      "id": "122:49",
+      "name": "Inline Notification",
+      "position": 18
+    },
+    {
+      "id": "93:2",
+      "name": "Input",
+      "position": 19
+    },
+    {
+      "id": "39:2",
+      "name": "Linear Progress Bar",
+      "position": 20
+    },
+    {
+      "id": "22:2",
+      "name": "Loader",
+      "position": 21
+    },
+    {
+      "id": "170:2",
+      "name": "Logos",
+      "position": 22
+    },
+    {
+      "id": "109:2",
+      "name": "Pagination",
+      "position": 23
+    },
+    {
+      "id": "32:119",
+      "name": "Radio Buttons",
+      "position": 24
+    },
+    {
+      "id": "47:2",
+      "name": "Search",
+      "position": 25
+    },
+    {
+      "id": "96:2",
+      "name": "Section Header",
+      "position": 26
+    },
+    {
+      "id": "54:2",
+      "name": "Sidebar",
+      "position": 27
+    },
+    {
+      "id": "155:2",
+      "name": "Steppers",
+      "position": 28
+    },
+    {
+      "id": "128:2",
+      "name": "Table",
+      "position": 29
+    },
+    {
+      "id": "113:2",
+      "name": "Tabs",
+      "position": 30
+    },
+    {
+      "id": "116:2",
+      "name": "Text Area",
+      "position": 31
+    },
+    {
+      "id": "32:74",
+      "name": "Toggle",
+      "position": 32
+    },
+    {
+      "id": "203:92",
+      "name": "----",
+      "position": 33
+    },
+    {
+      "id": "203:93",
+      "name": "Playground",
+      "position": 34
+    },
+    {
+      "id": "38:2",
+      "name": "Tooltip",
+      "position": 35
+    }
+  ],
+  "main": "216:66",
+  "page": "216:109",
+  "temporaryInstanceRemoved": "217:64",
+  "remaining": [
+    "216:66"
+  ]
+}

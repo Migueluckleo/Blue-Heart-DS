@@ -42,3 +42,13 @@ Las guías de [Buttons](../specs/components/buttons.usage.amendment.v1.0.1.md) y
 ## Logos · LOGOS-001
 
 [Contrato v1.0.0](../specs/components/logos.contract.v1.0.0.md) · DELEGATED_FOR_BUILD · [QA documental PASS](../qa/contracts/logos.v1.0.0.review.md). Alcance Figma en AI Blueheart DS, página Logos. Web NOT_APPLICABLE por la solicitud explícita. Datos vinculados en la spec.
+
+[Characters](../specs/components/characters.contract.v1.0.0.md) · DELEGATED_FOR_BUILD con [QA documental](../qa/contracts/characters.v1.0.0.review.md). Dos sets y 13 fases. [Enmienda de identidad](../specs/foundations/characters.identity-chain.amendment.v1.0.0.md) para la cadena de color en las tres colecciones.
+
+## Conversation Composer · CONVERSATION-001
+
+v1.0.0 · DELEGATED_FOR_BUILD con [QA documental PASS](../qa/contracts/conversation-composer.v1.0.0.review.md). La delegación técnica comprende Figma y React web, con dos Slots nativos y sin publicación. [Contrato](../specs/components/conversation-composer.contract.v1.0.0.md)
+
+## Conversation Response · CONVERSATION-RESPONSE-001
+
+v1.0.0 · DELEGATED_FOR_BUILD con [QA documental PASS](../qa/contracts/conversation-response.v1.0.0.review.md). [Contrato](../specs/components/conversation-response.contract.v1.0.0.md).

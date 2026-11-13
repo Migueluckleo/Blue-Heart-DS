@@ -4,7 +4,7 @@ Ejecutar desde el runtime devuelto por `resolve_ds.py`. El catálogo y el snapsh
 
 ## Preparar fuentes y mapa
 
-Descubrir las familias necesarias por función y consultar contratos/enmiendas. `figma: null` requiere descubrir el localizador mediante lecturas; no acredita ausencia. Conservar el maestro `FILE_KEY_MAESTRO_CONFIRMADO` como fuente de lectura.
+Ejecuta `python3 scripts/verify_figma_usage.py inventory --runtime . --output trabajo/inventario.json`. El comando reconcilia el manifiesto y las Specs verificadas del corte. Usa la lista completa para preparar `family_tracking`. Evalúa las familias por función, comportamiento y estados que pide el brief. `figma: null` requiere descubrir el localizador mediante lecturas; no acredita ausencia. Conservar el maestro `FILE_KEY_MAESTRO_CONFIRMADO` como fuente de lectura.
 
 Usar el colector instalado para obtener evidencia de los principales reales. Su cuerpo JavaScript es de solo lectura, verifica archivo/página y no importa ni crea recursos. Cargar `figma-use`, sus referencias/API y la sesión de archivo antes de ejecutarlo con `use_figma`. Guardar el objeto JSON devuelto sin editar; no fabricar un resultado ni sustituir un error o truncamiento por `complete: true`.
 
@@ -13,12 +13,12 @@ Solicitud fuente en un archivo JSON: `{"kind":"source","master_file_key":"FILE_K
 Crear un plan JSON v1 fuera del snapshot, junto a sus readbacks. Campos:
 
 - `schema_version: 1`, `snapshot`: `manifest_sha256` del recibo remoto, `destination_file_key`: prototipo autorizado, `destination_url`: su URL Figma si el catálogo carece de sandbox aplicable, `screens`: IDs lógicos únicos.
-- `requirements`: familias canónicas necesarias. La matriz no puede omitir controles solicitados para hacer pasar el gate.
+- `family_tracking`: una fila `{family, applicability, reason}` por cada familia del inventario del corte. Usa `APPLIES` o `NOT_APPLICABLE` y justifica cada decisión. `requirements` enumera exactamente las familias que aplican. Cada una requiere usos previstos y nodos comprobados al cierre.
 - `source_readbacks: [{path, sha256}]`: rutas relativas al plan y hashes de los JSON reales del colector fuente.
 - `uses`: una entrada por instancia prevista o contenido/composición local: `id`, `screen`, `kind`, `family`.
 - `kind: ds-instance`: `family` existente, `source_node_id` del principal real, `component_key` verificada y `variant_properties` opcionales, con valores presentes en ese principal.
 - `kind: local-content`: `family: null` y `reason`; reservado para textos/adornos propios, sin disfrazar controles.
-- `kind: local-composition`: `family: null`, `reason` del hueco y `composition_of` con IDs de usos hijos. Comparar primero contra el catálogo; una familia conocida nunca se reclasifica como composición local por falta de acceso. El grafo de composiciones debe terminar y sus hijos deben existir en el resultado.
+- `kind: local-composition`: `family` indica la familia aplicable o `null` cuando el catálogo carece de una familia equivalente. Declara `reason`, `composition_of` con IDs de los usos hijos y `functional_exception: {purpose, search, candidates}`. Para cada alternativa relevante incluye `{family, gap, unmet, evidence: {path, excerpt}}`. Usa `PURPOSE`, `BEHAVIOR` o `STATE` y cita texto comprobable de la spec o una enmienda de esa familia. Incluye la evaluación de la propia `family` cuando esté declarada. Usa `COMPATIBLE` para señalar que debe usarse la instancia oficial. Un componente inaccesible o un export web ausente no acredita un hueco funcional en Figma. Los hijos de la composición deben existir dentro de su estructura editable.
 
 Una decoración primitiva puede declarar `decoration_of` con un uso DS de la misma pantalla y su motivo. Debe tener binding, cero hijos y cero reacciones; no satisface familias requeridas ni permite tratar un FRAME de control como adorno. Las capas que tapan o reinterpretan assets/componentes no se justifican por esa clasificación: requieren revisión de propósito en el QA.
 
@@ -51,4 +51,4 @@ El gate detecta frames/rectángulos que reemplazan instancias conocidas, claves/
 
 La comparación de bindings comprueba presencia de los campos; no demuestra por sí sola rol, alias, valores o modos. Los estilos se comparan por clave; una réplica técnica autorizada con otra clave requiere su mapeo y QA específico. Las excepciones nativas, Slots variables y cambios contractuales que alteren esos conjuntos requieren evidencia específica: conservar `BLOCKED` en vez de borrar restricciones para obtener un PASS.
 
-La entrega exige ambos gates PASS **y** el QA de tokens/aliases, tipografía nativa/rangos, Slots, propiedades, estados, comportamiento y revisión visual de [handoff y QA](handoff-and-qa.md). El control automatizado no certifica píxeles, semántica de tokens, aprobación humana ni conformidad integral. Enlazar plan, recibo y readbacks en la entrega. Nunca etiquetar `VALIDATED` con requisitos pendientes.
+La entrega exige ambos gates PASS **y** el QA de tokens/aliases, tipografía nativa/rangos, Slots, propiedades, estados, comportamiento y revisión visual de [handoff y QA](handoff-and-qa.md). El control automatizado no certifica píxeles, semántica de tokens, aprobación humana ni conformidad integral. Enlaza el plan, recibo y readbacks en la entrega. El informe final conserva la identidad del corte, los nodos comprobados y un resultado `VERIFIED`, `NOT_APPLICABLE` o `EXCEPTION` por familia. Nunca etiquetar `VALIDATED` con requisitos pendientes.

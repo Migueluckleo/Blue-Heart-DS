@@ -34,6 +34,12 @@ Las instancias de dependencias pueden anidarse dentro del componente consumidor.
 
 Foundations/tokens no son familias de componentes. Su representación visual requiere una organización aprobada específica. Crear variables no obliga a inventar una página de muestras.
 
+### Orden de las páginas al dar de alta un componente
+
+Al cierre de cada alta de componentes en AI Blueheart DS, aplica [DEC-FIGMA-FAMILY-PAGE-ORDER-001](../registry/decisions.md#dec-figma-family-page-order-001). Lee el listado del maestro, identifica las páginas oficiales de familias por sus nombres canónicos e IDs y ordena ese conjunto de A a Z por el nombre visible. Mantén las familias en un bloque contiguo antes del separador de Playground. Conserva en su lugar portadas y foundations. Playground y su separador permanecen juntos después de la última familia y avanzan una posición cuando crece el bloque. La operación conserva los IDs, nombres, variantes y contenido. Cada página oficial sigue reservada a los maestros y sets de su familia.
+
+Guarda la lectura inicial y final del listado y aplica el [control de P06](06-QA-AND-VALIDATION.md#orden-de-las-páginas-en-altas-de-componentes). El disparador de esta regla es el alta de un componente en el maestro.
+
 ## 4. Preflight de cada construcción
 
 Incluye la revisión de [P-SLOTS](SLOTS-REVIEW-AND-IMPLEMENTATION.md): decisión de aplicabilidad, contrato de cada región y capacidad real de edición/lectura desde instancias consumidoras. Si se requiere Slot, una colección fija de hijos, booleanas o un frame nombrado Slot no satisface el requisito. No construyas el alcance afectado sin definir el mecanismo y las pruebas correspondientes; conserva el estado pendiente de las limitaciones, sin extender el bloqueo a familias no afectadas.
@@ -70,7 +76,7 @@ Implementa únicamente anatomía, jerarquía, propiedades, variantes, estados, l
 
 Usa bindings reales donde los exige el contrato. Un color pegado con el mismo valor no satisface un binding. No sustituyas un token por otro de igual apariencia ni desacoples instancias para resolver faltantes.
 
-Para componentes reconstruidos desde otra biblioteca, consume por defecto los roles de **color** y **tipografía** mediante variables semánticas locales del maestro registrado y conserva los aliases hacia primitivas. Enlaza cada propiedad que Figma permita: fills, strokes y color de texto; familia, peso, tamaño, interlineado y espaciado de letras cuando existan variables compatibles; además de spacing, size, radius y stroke cuando el contrato los exija. Un estilo o literal observado en la fuente no reemplaza automáticamente una variable local. Si falta token, binding o capacidad de la herramienta, registra la excepción o bloqueo concreto y vuelve a P03 para decidirlo; no hardcodees ni fabriques equivalencias. En el flujo normal, una excepción de uso directo de primitive o literal necesita aprobación explícita para esa propiedad y familia. Cuando falte una categoría compatible, una excepción para conservar un literal observado se decide y registra por propiedad y familia.
+Para componentes reconstruidos desde otra biblioteca, consume por defecto los roles de **color** y **tipografía** mediante variables locales de componente que apuntan a semánticos del maestro registrado y conserva los aliases hacia primitivas. Enlaza cada propiedad que Figma permita: fills, strokes y color de texto; familia, peso, tamaño, interlineado y espaciado de letras cuando existan variables compatibles; además de spacing, size, radius y stroke cuando el contrato los exija. Un estilo o literal observado en la fuente no reemplaza automáticamente una variable local. Si falta token, binding o capacidad de la herramienta, registra la excepción o bloqueo concreto y vuelve a P03 para decidirlo; no hardcodees ni fabriques equivalencias. En el flujo normal, una excepción de uso directo de primitive o literal necesita aprobación explícita para esa propiedad y familia. Cuando falte una categoría compatible, una excepción para conservar un literal observado se decide y registra por propiedad y familia.
 
 Para una extensión semántica autorizada, verifica el nuevo token, sus modos, scopes y aliases antes de vincular consumidores. El rol de uso del contrato y la descripción canónica gobiernan el binding. Conserva intactos los bytes del inventario de origen.
 
@@ -88,7 +94,7 @@ Ante error, detén escrituras dependientes, lee el estado real, registra los rec
 
 ## 8. Lectura posterior y cierre
 
-Después de cada lote significativo y de la última corrección, lee los recursos reales. Comprueba identidad, página, jerarquía, propiedades, valores por modo, referencias y bindings disponibles. Captura respuestas y IDs para [P05](05-SELF-DOCUMENTATION-AND-TRACEABILITY.md).
+Después de cada lote significativo y de la última corrección, lee los recursos reales. Comprueba identidad, página, jerarquía, propiedades, valores por modo, referencias y bindings disponibles. Ejecuta el control TOKEN-QA-01 de [P06](06-QA-AND-VALIDATION.md#control-obligatorio-de-tokens-en-altas-y-correcciones). Captura respuestas y IDs para [P05](05-SELF-DOCUMENTATION-AND-TRACEABILITY.md).
 
 Entrega el resultado a [P06](06-QA-AND-VALIDATION.md). Una respuesta exitosa de escritura no demuestra conformidad. Si solo puedes confirmar la creación pero no los atributos obligatorios, registra la limitación y no declares `VALIDATED`.
 

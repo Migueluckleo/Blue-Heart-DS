@@ -54,9 +54,15 @@ def build():
         if key in stack:raise ValueError(f'Ciclo de aliases: {stack}')
         v=tokens[key];value=v['values'].get(mode,v['values'].get('Value'))
         if value is None:raise ValueError(f'Modo ausente: {key}, {mode}')
+        expected = {'component': {'semantic'}, 'semantic': {'primitive', 'primitives'}}.get(v['collection'])
         if isinstance(value,dict) and value.get('type')=='VARIABLE_ALIAS':
-            target=alias_key(value);resolve(target,mode,stack+(key,))
+            target=alias_key(value)
+            if expected and (target[0] not in expected or tokens[target]['resolvedType'] != v['resolvedType']):
+                raise ValueError(f'Alias incompatible: {key} → {target}, modo {mode}')
+            resolve(target,mode,stack+(key,))
             return 'var('+tokens[target]['css']+')'
+        if expected:
+            raise ValueError(f'Falta alias de {v["collection"]}: {key}, modo {mode}')
         if v['resolvedType']=='COLOR':
             return 'rgb('+ ' '.join(f'{value[c]*255:.8f}'.rstrip('0').rstrip('.') for c in 'rgb')+' / '+str(value.get('a',1))+')'
         if v['resolvedType']=='FLOAT':

@@ -1,0 +1,322 @@
+{
+  "contract": "CHARACTERS-001",
+  "collections": [
+    {
+      "name": "primitives",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "10:0"
+        }
+      ],
+      "variables": [
+        {
+          "id": "characters:primitives:beni/body",
+          "name": "characters/palette/beni/body",
+          "resolvedType": "COLOR",
+          "description": "Cuerpo original de BENI.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--characters-palette-beni-body)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "r": 0.2549019753932953,
+              "g": 0.3450980484485626,
+              "b": 0.6078431606292725,
+              "a": 1
+            }
+          }
+        },
+        {
+          "id": "characters:primitives:shared/features",
+          "name": "characters/palette/shared/features",
+          "resolvedType": "COLOR",
+          "description": "Ojos de BENI y NAVI y boca de BENI.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--characters-palette-shared-features)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "r": 0.8941176533699036,
+              "g": 0.8980392217636108,
+              "b": 0.9019607901573181,
+              "a": 1
+            }
+          }
+        },
+        {
+          "id": "characters:primitives:navi/body",
+          "name": "characters/palette/navi/body",
+          "resolvedType": "COLOR",
+          "description": "Cuerpo original de NAVI.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--characters-palette-navi-body)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "r": 0.9607843160629272,
+              "g": 0.5137255191802979,
+              "b": 0.25882354378700256,
+              "a": 1
+            }
+          }
+        },
+        {
+          "id": "characters:primitives:navi/shadow",
+          "name": "characters/palette/navi/shadow",
+          "resolvedType": "COLOR",
+          "description": "Sombra lateral de NAVI en fases 02 y 03.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--characters-palette-navi-shadow)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "r": 0.8392156958580017,
+              "g": 0.45490196347236633,
+              "b": 0.239215686917305,
+              "a": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "semantic",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "6:19"
+        }
+      ],
+      "variables": [
+        {
+          "id": "characters:semantic:beni/body",
+          "name": "color/identity/characters/beni/body",
+          "resolvedType": "COLOR",
+          "description": "Cuerpo original de BENI.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-identity-characters-beni-body)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:primitives:beni/body"
+            }
+          }
+        },
+        {
+          "id": "characters:semantic:shared/features",
+          "name": "color/identity/characters/shared/features",
+          "resolvedType": "COLOR",
+          "description": "Ojos de BENI y NAVI y boca de BENI.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-identity-characters-shared-features)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:primitives:shared/features"
+            }
+          }
+        },
+        {
+          "id": "characters:semantic:navi/body",
+          "name": "color/identity/characters/navi/body",
+          "resolvedType": "COLOR",
+          "description": "Cuerpo original de NAVI.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-identity-characters-navi-body)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:primitives:navi/body"
+            }
+          }
+        },
+        {
+          "id": "characters:semantic:navi/shadow",
+          "name": "color/identity/characters/navi/shadow",
+          "resolvedType": "COLOR",
+          "description": "Sombra lateral de NAVI en fases 02 y 03.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-identity-characters-navi-shadow)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:primitives:navi/shadow"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "component",
+      "modes": [
+        {
+          "name": "Contable",
+          "modeId": "6:20"
+        },
+        {
+          "name": "Administrativo",
+          "modeId": "6:21"
+        },
+        {
+          "name": "Servicios",
+          "modeId": "6:22"
+        },
+        {
+          "name": "Personas",
+          "modeId": "6:23"
+        }
+      ],
+      "variables": [
+        {
+          "id": "characters:component:beni/body",
+          "name": "characters/color/beni/body",
+          "resolvedType": "COLOR",
+          "description": "Cuerpo original de BENI.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--characters-color-beni-body)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:beni/body"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:beni/body"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:beni/body"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:beni/body"
+            }
+          }
+        },
+        {
+          "id": "characters:component:shared/features",
+          "name": "characters/color/shared/features",
+          "resolvedType": "COLOR",
+          "description": "Ojos de BENI y NAVI y boca de BENI.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--characters-color-shared-features)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:shared/features"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:shared/features"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:shared/features"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:shared/features"
+            }
+          }
+        },
+        {
+          "id": "characters:component:navi/body",
+          "name": "characters/color/navi/body",
+          "resolvedType": "COLOR",
+          "description": "Cuerpo original de NAVI.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--characters-color-navi-body)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:navi/body"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:navi/body"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:navi/body"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:navi/body"
+            }
+          }
+        },
+        {
+          "id": "characters:component:navi/shadow",
+          "name": "characters/color/navi/shadow",
+          "resolvedType": "COLOR",
+          "description": "Sombra lateral de NAVI en fases 02 y 03.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--characters-color-navi-shadow)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:navi/shadow"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:navi/shadow"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:navi/shadow"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "characters:semantic:navi/shadow"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -41,3 +41,5 @@ Para `LOGOS-001`, consulta la familia en el catálogo y usa una instancia nativa
 Usa logos e identidad desde los assets y manifiestos canónicos incluidos y las enmiendas de la familia. No los redibujes, recolorees, recortes ni sustituyas por texto o imágenes generadas por conveniencia. Una imagen de referencia no demuestra el asset, el token ni la fuente exactos; registra lo que no pueda identificarse.
 
 La decisión de iconografía Phosphor en `assets/design-system/references/PHOSPHOR-ICONS.md` se aplica a todo BlueHeart. Consume la key oficial verificada en Figma y el paquete oficial en React. Conserva peso, tamaño y variables del componente consumidor.
+
+Para `CHARACTERS-001`, instancia BENI Standby o NAVI Analysis de la página Characters. Conserva el eje `Frame`, las reacciones internas de los ciclos y los bindings a la cadena de identidad. Los cuatro temas resuelven el mismo color. Comprueba el comportamiento desde una instancia en el presentador cuando el brief requiera movimiento.

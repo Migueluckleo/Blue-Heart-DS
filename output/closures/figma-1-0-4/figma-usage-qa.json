@@ -1,0 +1,374 @@
+{
+  "schema_version": 1,
+  "stage": "readback",
+  "status": "PASS",
+  "findings": [],
+  "plan_sha256": "a308a75990ba4fedd76b588cebff2031d57f3c2cbae18ee3927bc22fec52fb7e",
+  "snapshot": "7af7125a0258fcf91cb43aa78e6966b0ffb40af78eebe40957e282359772a3e9",
+  "destination_file_key": "9joCtnaaFn4M9SUabOjdBz",
+  "validator_sha256": "e8b5faf88c80b65a3b47cc6adad19a6a49779e52d884a8bae95467460715bd9b",
+  "source_readbacks": {
+    "source.json": "6467d620e36d4b44ec0dc27eec6622a2e168bb003199a8c709813152c1cdb38b"
+  },
+  "functional_exceptions": {
+    "group": {
+      "purpose": "Acción principal acompañada de una instrucción persistente separada.",
+      "search": "Comparar control de acción y notificación inline por anatomía y comportamiento.",
+      "candidates": [
+        {
+          "family": "BUTTON-001",
+          "gap": "PURPOSE",
+          "unmet": "El Label de la acción no representa una instrucción auxiliar independiente.",
+          "path": "specs/components/buttons.contract.v1.0.0.md",
+          "excerpt": "El set expone propiedades acotadas y no necesita Slot arbitrario.",
+          "sha256": "f10c3428203f6d083bfa1a67175609ad3890e6ee8826e9121175159cec909b70"
+        },
+        {
+          "family": "INLINE-NOTIFICATION-001",
+          "gap": "BEHAVIOR",
+          "unmet": "El aviso explica contexto, pero su anatomía fija no admite el botón primario como control interno.",
+          "path": "specs/components/inline-notification.contract.v1.0.0.md",
+          "excerpt": "P-SLOTS NOT_APPLICABLE por anatomía fija.",
+          "sha256": "622aca6f7fe4eaa960deee54d581971ffe46941364744de678d3480db269c661"
+        }
+      ]
+    }
+  },
+  "family_tracking": [
+    {
+      "family": "APP-SHELL-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/app-shell.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "AVATAR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/avatar.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "AVATAR-GROUP-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/avatar-group.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "BADGE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/badge.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "BREADCRUMB-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/breadcrumb.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "BREADCRUMB-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/breadcrumb-item.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "BUTTON-001",
+      "applicability": "APPLIES",
+      "reason": "Acción principal del ejemplo.",
+      "contract": "specs/components/buttons.contract.v1.0.0.md",
+      "uses": [
+        "action"
+      ],
+      "result": "VERIFIED",
+      "nodes": {
+        "action": "3:737"
+      }
+    },
+    {
+      "family": "CHECKBOX-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/checkbox.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "CHIP-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/chip.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "COMPANY-SELECTOR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/company-selector.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "DOT-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/dot.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "DROPDOWN-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/dropdown-item.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "DROPDOWN-MENU-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/dropdown-menu.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "FILE-UPLOAD-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/file-upload.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "FLOATING-ACTIONS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/floating-actions.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "HEADER-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/header.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "HEADER-ACTIONS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/header-actions.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "ICON-BUTTON-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/icon-button.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "INLINE-NOTIFICATION-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/inline-notification.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "INPUT-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/input.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "LINEAR-PROGRESS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/linear-progress.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "LOADER-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/loader.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "LOGOS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/logos.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "MENU-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/menu-item.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "PAGINATION-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/pagination.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "PAGINATION-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/pagination-item.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "RADIO-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/radio.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "RADIO-GROUP-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/radio-group.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "SEARCH-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/search.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "SECTION-HEADER-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/section-header.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "SIDEBAR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/sidebar.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "STEPPER-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/stepper.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TAB-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/tab.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TABLE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/table.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TABLE-CELL-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/table-cell.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TABS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/tabs.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TEXT-AREA-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/text-area.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TOGGLE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/toggle.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TOOLTIP-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/tooltip.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TOP-BAR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/top-bar.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "USER-SELECTOR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "La prueba usa una acción con texto explicativo local y no pide una instancia de esta familia.",
+      "contract": "specs/components/user-selector.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    }
+  ],
+  "generated_at": "2026-11-12T19:21:40.672321+00:00",
+  "scope": "Mapped components and named controls in declared screen roots; full visual/interaction/semantic QA remains required"
+}

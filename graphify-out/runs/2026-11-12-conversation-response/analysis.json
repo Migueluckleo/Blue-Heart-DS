@@ -1,0 +1,151 @@
+{
+  "nodes": 4353,
+  "edges": 8133,
+  "communities": 857,
+  "gods": [
+    {
+      "id": "ref_react",
+      "label": "react",
+      "degree": 45
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_174",
+      "label": "neutral-maximum",
+      "degree": 43
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_155",
+      "label": "brand-strong",
+      "degree": 41
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_166",
+      "label": "neutral-base",
+      "degree": 41
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_169",
+      "label": "neutral-soft",
+      "degree": 41
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_154",
+      "label": "brand-default",
+      "degree": 37
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_163",
+      "label": "brand-administrativo-default",
+      "degree": 36
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_184",
+      "label": "brand-personas-default",
+      "degree": 36
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_191",
+      "label": "spacing-none",
+      "degree": 36
+    },
+    {
+      "id": "specs_tokens_blueheart_variables_v0_1_2_artifact_json_variableid_6_178",
+      "label": "brand-servicios-strong",
+      "degree": 35
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Enmienda Sidebar consume Icon Button Secondary small en Figma y React",
+      "target": "Sidebar()",
+      "source_files": [
+        "specs/components/sidebar.secondary-control.amendment.v1.0.1.md",
+        "implementations/web/src/components/sidebar.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "implements",
+      "why": "crosses file types (doc ↔ code); connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "Fotografía de muestra original de Avatar",
+      "target": "Contrato Avatar preserva imagen, iniciales, Phosphor y presencia",
+      "source_files": [
+        "sources/assets/avatar-portrait.png",
+        "specs/components/avatar.contract.v1.0.0.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Fotografía de muestra original de Avatar` unexpectedly reaches hub `Contrato Avatar preserva imagen, iniciales, Phosphor y presencia`"
+    },
+    {
+      "source": "Asset horizontal oficial de Contabilidad para Header web",
+      "target": "Contrato Header compone contexto global a 96 px de alto",
+      "source_files": [
+        "sources/assets/contabilidad-header.png",
+        "specs/components/header.contract.v1.0.0.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Asset horizontal oficial de Contabilidad para Header web` unexpectedly reaches hub `Contrato Header compone contexto global a 96 px de alto`"
+    },
+    {
+      "source": "Matriz de los cinco sets nativos de Logos",
+      "target": "Fuente de logos Librería v1.1.0 de solo lectura",
+      "source_files": [
+        "specs/components/logos.contract.v1.0.0.md",
+        "registry/sources.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "shares_data_with",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `Fuente de logos Librería v1.1.0 de solo lectura` unexpectedly reaches hub `Matriz de los cinco sets nativos de Logos`"
+    },
+    {
+      "source": "Stepper root source and icons",
+      "target": "Stepper contract STEPPER-001",
+      "source_files": [
+        "registry/sources.md",
+        "specs/components/stepper.contract.v1.0.0.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "shares_data_with",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Stepper root source and icons` unexpectedly reaches hub `Stepper contract STEPPER-001`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `next` connect `Package · Evidencias` to `Component Enforcer`, `Prepare · Evidencias`, `Component Enforcer Test`?",
+      "why": "High betweenness centrality (0.032) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `react` connect `Radio Group` to `Breadcrumb · Evidencias`, `Input · Evidencias`, `Layout · Evidencias`, `Package · Evidencias`, `Examples · Evidencias`, `Stepper · Evidencias`, `Conversation Composer`, `Button · Evidencias`, `Buttons Loader Browser`, `Table Cell`, `Conversation Response`, `Header Actions`, `Dropdown Menu`, `Pagination · Evidencias`, `Menu Item`, `App Shell`, `Linear Progress`, `Page · Evidencias`, `Tabs · Evidencias`?",
+      "why": "High betweenness centrality (0.022) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `@phosphor-icons/react` connect `Conversation Response` to `Dropdown Menu`, `Breadcrumb · Evidencias`, `Input · Evidencias`, `Table Cell`, `Package · Evidencias`, `Pagination · Evidencias`, `Examples · Evidencias`, `Tabs · Evidencias`, `Stepper · Evidencias`, `Menu Item`, `App Shell`, `Conversation Composer`, `Header Actions`, `Button · Evidencias`, `Linear Progress`?",
+      "why": "High betweenness centrality (0.012) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Raíz de Figma de solo lectura`, `P02 Ingesta con procedencia`, `Descripción canónica de token` to the rest of the system?",
+      "why": "153 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Blueheart Variables` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.012025037010103108 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Blueheart Variables` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06256384065372829 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Conversation Composer` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.05593561368209256 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

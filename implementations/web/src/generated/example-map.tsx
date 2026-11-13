@@ -1,5 +1,8 @@
 'use client';
 import * as Examples from '../examples';
+import * as Example_characters from '../examples/characters';
+import * as Example_conversation_composer from '../examples/conversation-composer';
+import * as Example_conversation_response from '../examples/conversation-response';
 import type { ComponentType } from 'react';
 export const examples: Record<string, ComponentType> = {
   "app-shell": Examples.AppShellExample,
@@ -9,9 +12,12 @@ export const examples: Record<string, ComponentType> = {
   "breadcrumb": Examples.BreadcrumbExample,
   "breadcrumb-item": Examples.BreadcrumbItemExample,
   "buttons": Examples.ButtonsExample,
+  "characters": Example_characters.CharactersExample,
   "checkbox": Examples.CheckboxExample,
   "chip": Examples.ChipExample,
   "company-selector": Examples.CompanySelectorExample,
+  "conversation-composer": Example_conversation_composer.ConversationComposerExample,
+  "conversation-response": Example_conversation_response.ConversationResponseExample,
   "dot": Examples.DotExample,
   "dropdown-item": Examples.DropdownItemExample,
   "dropdown-menu": Examples.DropdownMenuExample,

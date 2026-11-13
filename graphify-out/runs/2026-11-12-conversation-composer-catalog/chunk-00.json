@@ -1,0 +1,203 @@
+{
+  "nodes": [
+    {
+      "id": "specs_components_conversation_composer_contract_v1_0_0_composer_usage",
+      "label": "Guía de uso del Conversation Composer",
+      "file_type": "concept",
+      "rationale": "Zona de redacción dentro de una conversación. Text Area para campo autónomo e Inline Notification para avisos de sección.",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L120"
+    },
+    {
+      "id": "specs_components_conversation_composer_contract_v1_0_0_composer_accessibility",
+      "label": "Nombre, instrucciones y foco del compositor",
+      "file_type": "concept",
+      "rationale": "Textarea asociado a label, aviso persistente mediante aria-describedby, foco visible y acciones iconográficas con nombre.",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L65"
+    },
+    {
+      "id": "specs_components_conversation_composer_contract_v1_0_0_composer_bindings",
+      "label": "Roles de tokens y Phosphor de Conversation Composer",
+      "file_type": "concept",
+      "rationale": "Neutros semánticos y brand-accent para el marco. El modo del control Enviar se hereda del Icon Button primary.",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L69"
+    },
+    {
+      "id": "specs_components_conversation_composer_contract_v1_0_0_composer_contract",
+      "label": "Conversation Composer CONVERSATION-001",
+      "file_type": "concept",
+      "rationale": "Componente para redactar un mensaje en conversación. El anfitrión define el efecto de acciones y envío.",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L21"
+    },
+    {
+      "id": "specs_components_conversation_composer_contract_v1_0_0_composer_mapping",
+      "label": "Mapeo React y Figma de Conversation Composer",
+      "file_type": "concept",
+      "rationale": "Usa Button secondary small para el mensaje y Icon Button ghost/primary para acciones. El anfitrión recibe callbacks locales.",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L93"
+    },
+    {
+      "id": "specs_components_conversation_composer_contract_v1_0_0_composer_slots",
+      "label": "Slots nativos message y Tools de Conversation Composer",
+      "file_type": "concept",
+      "rationale": "Cada instancia puede añadir, quitar, sustituir y reordenar. Dos hijos iniciales por Slot. message admite contexto y Button secondary small, Tools admite controles secundarios.",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L77"
+    },
+    {
+      "id": "specs_components_conversation_composer_contract_v1_0_0_composer_variants",
+      "label": "Conversation Composer, configuración y estado",
+      "file_type": "concept",
+      "rationale": "Maestro único, sin set. show message inicia apagado, show disclaimer y show extra actions empiezan activos. Los botones tienen estados propios.",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L47"
+    },
+    {
+      "id": "specs_components_conversation_composer_figma_locator_v1_0_0_composer_figma_locator",
+      "label": "Maestro y página Figma de Conversation Composer",
+      "file_type": "concept",
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L10",
+      "rationale": "El catálogo de consumo toma el principal 216:66 y la página de familia 216:109 del contrato. Los IDs proceden de la lectura del maestro."
+    }
+  ],
+  "edges": [
+    {
+      "source": "specs_components_conversation_composer_contract_v1_0_0_artifact_md",
+      "target": "specs_components_conversation_composer_contract_v1_0_0_composer_usage",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_conversation_composer_contract_v1_0_0_artifact_md",
+      "target": "specs_components_conversation_composer_contract_v1_0_0_composer_contract",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_conversation_composer_contract_v1_0_0_artifact_md",
+      "target": "specs_components_conversation_composer_contract_v1_0_0_composer_variants",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_conversation_composer_contract_v1_0_0_artifact_md",
+      "target": "specs_components_conversation_composer_contract_v1_0_0_composer_accessibility",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_conversation_composer_contract_v1_0_0_artifact_md",
+      "target": "specs_components_conversation_composer_contract_v1_0_0_composer_bindings",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_conversation_composer_contract_v1_0_0_artifact_md",
+      "target": "specs_components_conversation_composer_contract_v1_0_0_composer_slots",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_conversation_composer_contract_v1_0_0_artifact_md",
+      "target": "specs_components_conversation_composer_contract_v1_0_0_composer_mapping",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_conversation_composer_contract_v1_0_0_composer_contract",
+      "target": "registry_sources_conversation_composer_source",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_conversation_composer_contract_v1_0_0_composer_contract",
+      "target": "specs_components_buttons_contract_v1_0_0_artifact_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_conversation_composer_contract_v1_0_0_composer_contract",
+      "target": "specs_components_icon_button_contract_v1_0_0_artifact_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_conversation_composer_contract_v1_0_0_composer_usage",
+      "target": "specs_components_inline_notification_contract_v1_0_0_artifact_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_conversation_composer_contract_v1_0_0_composer_usage",
+      "target": "specs_components_text_area_contract_v1_0_0_artifact_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "specs_components_conversation_composer_figma_locator_v1_0_0_composer_figma_locator",
+      "target": "specs_components_conversation_composer_contract_v1_0_0_composer_contract",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/specs/components/conversation-composer.contract.v1.0.0.md",
+      "source_location": "L10",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

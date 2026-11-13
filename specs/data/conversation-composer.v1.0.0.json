@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "contract": "CONVERSATION-001",
+  "version": "1.0.0",
+  "source": {
+    "fileKey": "yZsIpXywybsPDytjolwcP4",
+    "nodeId": "206:1182",
+    "revision": "0.1.0",
+    "snapshot": "sources/figma-snapshots/conversation-composer-2026-11-12/selection.json"
+  },
+  "pageName": "Conversation Composer",
+  "description": "Conversation Composer · CONVERSATION-001. Redacta un mensaje en una conversación. Usa message para contexto y Tools para acciones secundarias. Reserva el Icon Button primary para la acción principal. El anfitrión define qué hace cada acción.",
+  "guide": "https://github.com/Migueluckleo/Blue-Heart-DS/blob/main/specs/components/conversation-composer.contract.v1.0.0.md#guía-semántica-normativa",
+  "sample": {
+    "width": 616,
+    "disclaimer": "Te recomendamos revisar la información importante para asegurar un resultado óptimo",
+    "placeholder": "Escribe aquí tu requerimiento o necesidad",
+    "visibility": {
+      "message": false,
+      "disclaimer": true,
+      "extraActions": true
+    }
+  },
+  "slots": [
+    {
+      "name": "message",
+      "sourceId": "204:939",
+      "initial": [
+        "204:940",
+        "204:941"
+      ],
+      "layout": "horizontal",
+      "optional": true
+    },
+    {
+      "name": "Tools",
+      "sourceId": "204:952",
+      "initial": [
+        "206:1112",
+        "206:1123"
+      ],
+      "layout": "horizontal",
+      "optional": true
+    }
+  ],
+  "bindings": {
+    "geometry": {
+      "spacing/xs": "spacing-xs",
+      "spacing/none": "spacing-none",
+      "spacing/sm": "spacing-sm",
+      "spacing/lg": "spacing-lg",
+      "radius/xl": "radius-xl",
+      "radius/none": "radius-none",
+      "radius/md": "radius-md",
+      "stroke/none": "stroke-none",
+      "stroke/xs": "stroke-xs"
+    },
+    "type": {
+      "font/family/base": "font-family-base",
+      "font/weight/regular": "font-weight-regular",
+      "font/weight/semibold": "font-weight-semibold",
+      "font/size/xs": "font-size-xs",
+      "font/size/sm": "font-size-sm",
+      "font/line-height/xs": "font-line-height-xs",
+      "font/line-height/sm": "font-line-height-sm",
+      "font/letter-spacing/normal": "font-letter-spacing-normal"
+    },
+    "paints": {
+      "Disclaimer": {
+        "fills": "neutral-strong"
+      },
+      "message": {
+        "fills": "neutral-subtle",
+        "strokes": "brand-accent"
+      },
+      "description": {
+        "fills": "neutral-maximum"
+      },
+      "Composer field": {
+        "fills": "neutral-base",
+        "strokes": "brand-accent"
+      },
+      "Placeholder": {
+        "fills": "neutral-medium"
+      },
+      "Divider": {
+        "strokes": "neutral-muted"
+      }
+    },
+    "messageTracking": "font-letter-spacing-minus-0p24",
+    "messageLineHeightPercent": 160
+  },
+  "dependencies": {
+    "button": "23:853",
+    "iconGhost": "59:154",
+    "iconPrimary": "59:257",
+    "icons": {
+      "Plus": "206:1138",
+      "Paperclip": "204:100",
+      "Microphone": "204:110",
+      "PaperPlaneTilt": "204:113"
+    }
+  }
+}
