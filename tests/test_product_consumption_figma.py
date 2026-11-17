@@ -73,6 +73,38 @@ class ConsumptionTests(unittest.TestCase):
     def test_accepts_official_shell_progress_button_and_body_molecule(self):
         self.assertEqual(self.preflight()['status'], 'PASS')
 
+    def test_documented_set_requires_exact_spec_table_and_family_namespace(self):
+        component = {'name': 'Linear Progress Bar', 'exports': ['LinearProgress']}
+        source = {'parent_type': 'COMPONENT_SET', 'parent_name': 'Linear Progress Bar/small'}
+        table = '| Linear Progress Bar/small | public |'
+        self.assertTrue(gate.documented_set_matches(component, source, [table]))
+        self.assertFalse(gate.documented_set_matches(component, source, ['Mention Linear Progress Bar/small']))
+        self.assertFalse(gate.documented_set_matches(component, source, ['| Linear Progress Bar/smallish | public |']))
+        self.assertFalse(gate.documented_set_matches({'name': 'Button'}, source, [table]))
+
+    def test_playground_requires_explicit_scope_and_exact_configured_page(self):
+        reader = gate.Reader(self.runtime)
+        config = json.loads(reader.source('config/figma-links.json'))
+        plan = copy.deepcopy(self.plan)
+        plan['destination_file_key'] = config['master_destination']['file_key']
+        plan['destination_url'] = 'https://www.figma.com/design/' + plan['destination_file_key'] + '/QA?node-id=203-93'
+        plan['qa_scope'] = {'mode': 'ISOLATED_PLAYGROUND_QA', 'authorization': 'EXPLICIT_USER_REQUEST',
+                            'page_id': '203:93', 'new_nodes_only': True, 'preserve_canonical': True,
+                            'container_name': 'QA Skills fixture'}
+        with self.assertRaisesRegex(ValueError, 'explicit authorized Playground'):
+            gate.file_roles(reader, plan)
+        self.assertEqual(gate.preflight(self.runtime, plan, self.base, '203:93')[0]['status'], 'PASS')
+        with self.assertRaises(ValueError):
+            gate.file_roles(reader, plan, '203:94')
+        for field, value in [('new_nodes_only', False), ('preserve_canonical', False), ('container_name', 'Other')]:
+            bad = copy.deepcopy(plan)
+            bad['qa_scope'][field] = value
+            with self.assertRaises(ValueError):
+                gate.file_roles(reader, bad, '203:93')
+        plan['destination_url'] = plan['destination_url'].replace('203-93', '203-94')
+        with self.assertRaisesRegex(ValueError, 'authorized page'):
+            gate.file_roles(reader, plan, '203:93')
+
     def test_rejects_screen_without_official_appshell(self):
         plan = copy.deepcopy(self.plan)
         plan['uses'] = [u for u in plan['uses'] if u['id'] != 'shell']
@@ -109,6 +141,30 @@ class ConsumptionTests(unittest.TestCase):
         result = gate.verify(self.runtime, self.plan, self.base, receipt, [readback])
         self.assertEqual(result['status'], 'BLOCKED')
         self.assertTrue(any(f['code'] == 'BODY_BINDING_MISSING' for f in result['findings']))
+
+        # Exercise the isolated live-QA authorization path with synthetic evidence.
+        nodes[3]['binding_details'][0]['token'] = 'body/spacing/md'
+        master = json.loads((self.runtime / 'assets/design-system/config/figma-links.json').read_text())['master_destination']['file_key']
+        plan = copy.deepcopy(self.plan)
+        plan.update(destination_file_key=master, destination_url='https://www.figma.com/design/' + master + '/QA?node-id=203-93',
+                    qa_scope={'mode': 'ISOLATED_PLAYGROUND_QA', 'authorization': 'EXPLICIT_USER_REQUEST', 'page_id': '203:93',
+                              'new_nodes_only': True, 'preserve_canonical': True, 'container_name': 'QA Skills fixture'})
+        receipt = gate.preflight(self.runtime, plan, self.base, '203:93')[0]
+        readback.update(file_key=master, page_id='203:93', observed_at=receipt['generated_at'], plan_sha256=sha(canonical(plan)),
+                        root_ancestor_ids=['90:1', '203:93'], qa_root={'id': '90:1', 'name': 'QA Skills fixture', 'type': 'SECTION', 'parent_id': '203:93'})
+        for node in nodes:
+            node['ancestor_ids'].append('90:1')
+        after = {'kind': 'source', 'complete': True, 'file_key': master, 'observed_at': receipt['generated_at'], 'nodes': copy.deepcopy(self.sources)}
+        self.assertEqual(gate.verify(self.runtime, plan, self.base, receipt, [readback], '203:93', [after])['status'], 'PASS')
+        with self.assertRaisesRegex(ValueError, 'every used canonical'):
+            gate.verify(self.runtime, plan, self.base, receipt, [readback], '203:93', [])
+        readback['qa_root']['parent_id'] = '203:94'
+        with self.assertRaisesRegex(ValueError, 'isolated Playground container'):
+            gate.verify(self.runtime, plan, self.base, receipt, [readback], '203:93', [after])
+        readback['qa_root']['parent_id'] = '203:93'
+        after['nodes'][0]['name'] = 'Changed principal'
+        with self.assertRaisesRegex(ValueError, 'Canonical principal changed'):
+            gate.verify(self.runtime, plan, self.base, receipt, [readback], '203:93', [after])
 
 
 if __name__ == '__main__':

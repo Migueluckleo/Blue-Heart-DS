@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import re
 import sys
+from urllib.parse import parse_qs, urlparse
 from consumer_graph import Reader, canonical, sha, parse, safe, explicit_status
 
 SCHEMA = 1
@@ -129,7 +130,18 @@ def verify_exception(reader, use, components):
     return {'purpose': exception['purpose'], 'search': exception['search'], 'candidates': evidence}
 
 
-def file_roles(reader, plan):
+def documented_set_matches(component, source, texts):
+    """Accept only exact set names explicitly listed in the family's spec table."""
+    name = source.get('parent_name', '')
+    if source.get('parent_type') != 'COMPONENT_SET' or '/' not in name:
+        return False
+    aliases = {norm(s) for s in [component.get('name', ''), component.get('slug', ''), *component.get('exports', [])] if s}
+    if norm(name.split('/', 1)[0]) not in aliases:
+        return False
+    return any(re.search(r'^\|\s*' + re.escape(name) + r'\s*\|', text, re.M) for text in texts)
+
+
+def file_roles(reader, plan, qa_page_id=None):
     path = 'config/figma-links.json'
     raw = reader.source(path)
     need(sha(raw) == reader.manifest['files'][path], 'Figma roles differ from the verified catalog')
@@ -139,7 +151,20 @@ def file_roles(reader, plan):
     destination = plan.get('destination_file_key')
     need(master and source and master != source, 'Distinct BlueHeart source and master required')
     need(isinstance(destination, str) and re.fullmatch(r'[A-Za-z0-9]+', destination)
-         and destination not in {master, source}, 'Use a prototype file separate from the BlueHeart master and root')
+         and destination != source, 'Use a prototype file separate from the historical root')
+    if destination == master:
+        scope = plan.get('qa_scope', {})
+        allowed = config.get('qa_playgrounds', [])
+        need(qa_page_id is not None and any(row.get('file_key') == master and row.get('page_id') == qa_page_id for row in allowed),
+             'Use a prototype file separate from the BlueHeart master and root; an explicit authorized Playground QA flag is required')
+        need(scope.get('mode') == 'ISOLATED_PLAYGROUND_QA' and scope.get('authorization') == 'EXPLICIT_USER_REQUEST'
+             and scope.get('page_id') == qa_page_id and scope.get('new_nodes_only') is True
+             and scope.get('preserve_canonical') is True and isinstance(scope.get('container_name'), str)
+             and scope['container_name'].startswith('QA Skills'), 'Declare the bounded, explicitly authorized Playground QA scope')
+        need(parse_qs(urlparse(plan.get('destination_url', '')).query).get('node-id') in [[qa_page_id], [qa_page_id.replace(':', '-')]],
+             'Playground URL must identify the authorized page')
+    else:
+        need(qa_page_id is None, 'Playground QA flag is only valid for the configured master Playground')
     configured = (config.get('consumption_sandbox') or {}).get('file_key')
     if destination != configured:
         url = plan.get('destination_url', '')
@@ -148,11 +173,11 @@ def file_roles(reader, plan):
     return master, destination
 
 
-def preflight(runtime, plan, base):
+def preflight(runtime, plan, base, qa_page_id=None):
     reader = Reader(runtime)  # Verifies pinned remote manifest/receipt, even without optional graph.
     need(plan.get('schema_version') == SCHEMA, 'Unsupported plan schema')
     need(plan.get('snapshot') == reader.identity, 'Plan snapshot differs from verified catalog')
-    master, destination = file_roles(reader, plan)
+    master, destination = file_roles(reader, plan, qa_page_id)
     screens = plan.get('screens')
     need(isinstance(screens, list) and screens and all(isinstance(s, str) and s for s in screens)
          and len(screens) == len(set(screens)), 'Unique logical screens required')
@@ -248,7 +273,7 @@ def preflight(runtime, plan, base):
             if source.get('parent_type') == 'COMPONENT_SET' and isinstance(source.get('parent_id'), str):
                 locators.append(source['parent_id'])
             locator = any(re.search(r'(?<![\w:])' + re.escape(value) + r'(?![\w:])', '\n'.join(texts)) for value in locators if value)
-            if not labels.intersection(aliases) and not locator:
+            if not labels.intersection(aliases) and not locator and not documented_set_matches(component, source, texts):
                 issue(out, 'FAMILY_SOURCE_MISMATCH', family + ': neither name nor documented locator agrees', use_id)
             expected = use.get('variant_properties', {})
             need(isinstance(expected, dict), 'variant_properties must be object')
@@ -286,17 +311,37 @@ def preflight(runtime, plan, base):
                               'result': 'NOT_APPLICABLE' if family not in applicable else 'PENDING_READBACK'}
                              for family in sorted(tracking)]
     out['generated_at'] = datetime.now(timezone.utc).isoformat()
+    out['qa_scope'] = plan['qa_scope'] if qa_page_id is not None else None
     return out, source_nodes
 
 
-def verify(runtime, plan, base, receipt, readbacks):
-    current, sources = preflight(runtime, plan, base)
+def verify(runtime, plan, base, receipt, readbacks, qa_page_id=None, source_after=None):
+    current, sources = preflight(runtime, plan, base, qa_page_id)
     out = {**current, 'stage': 'readback', 'scope': 'Mapped components and named controls in declared screen roots; full visual/interaction/semantic QA remains required'}
     if current['status'] != 'PASS':
         return out
     need(receipt.get('status') == 'PASS' and receipt.get('stage') == 'preflight', 'Passing preflight receipt required')
-    for field in ('plan_sha256', 'snapshot', 'destination_file_key', 'validator_sha256', 'source_readbacks', 'family_tracking', 'functional_exceptions'):
+    for field in ('plan_sha256', 'snapshot', 'destination_file_key', 'validator_sha256', 'source_readbacks', 'family_tracking', 'functional_exceptions', 'qa_scope'):
         need(receipt.get(field) == current[field], 'Preflight invalidated: ' + field)
+    if qa_page_id is not None:
+        after_nodes = {}
+        for evidence in source_after or []:
+            need(evidence.get('kind') == 'source' and evidence.get('complete') is True
+                 and evidence.get('file_key') == plan['destination_file_key'], 'Complete source readback after Playground QA required')
+            need(timestamp(evidence['observed_at']) >= timestamp(receipt['generated_at']), 'Source preservation readback predates preflight')
+            for key, node in unique(evidence.get('nodes'), 'id', 'source preservation nodes').items():
+                need(key not in after_nodes, 'Duplicate source preservation node')
+                after_nodes[key] = node
+        need(set(after_nodes) == set(sources), 'Read back every used canonical principal after Playground QA')
+        for key in sources:
+            need(canonical(after_nodes[key]) == canonical(sources[key]), 'Canonical principal changed during Playground QA: ' + key)
+        for evidence in readbacks:
+            need(evidence.get('page_id') == qa_page_id, 'QA readback outside authorized Playground page')
+            root = evidence.get('qa_root', {})
+            need(root.get('parent_id') == qa_page_id and root.get('name') == plan['qa_scope']['container_name']
+                 and root.get('type') in {'SECTION', 'FRAME'} and root.get('id') in evidence.get('root_ancestor_ids', []),
+                 'QA screen outside its isolated Playground container')
+            need(all(root['id'] in node.get('ancestor_ids', []) for node in evidence.get('nodes', [])), 'QA node outside isolated container')
     uses = unique(plan['uses'], 'id', 'uses')
     screens = set(); placements = {}; nodes = {}; candidates = []; instance_ids = set(); screen_of = {}
     for evidence in readbacks:
@@ -425,6 +470,8 @@ def main():
     parser.add_argument('--readback', type=Path, action='append', default=[])
     parser.add_argument('--request', type=Path, help='Collector request JSON; see figma-usage-gates reference')
     parser.add_argument('--output', type=Path)
+    parser.add_argument('--qa-playground-page', help='Only with an explicit user request for isolated QA in a configured Playground page')
+    parser.add_argument('--source-after', type=Path, action='append', default=[], help='Mandatory post-QA source preservation readback in Playground mode')
     args = parser.parse_args()
     try:
         if args.stage == 'inventory':
@@ -446,7 +493,7 @@ def main():
             need(args.request is not None, 'Collector request required')
             request = read(args.request)
             reader = Reader(args.runtime)
-            master, sandbox = file_roles(reader, plan)
+            master, sandbox = file_roles(reader, plan, args.qa_playground_page)
             request['master_file_key'] = master
             need(request.get('file_key') == (master if request.get('kind') == 'source' else sandbox), 'Request does not match configured file role')
             request['plan_sha256'] = sha(canonical(plan))
@@ -457,10 +504,10 @@ def main():
             else: print(code)
             return 0
         if args.stage == 'preflight':
-            result, _ = preflight(args.runtime, plan, args.plan.resolve().parent)
+            result, _ = preflight(args.runtime, plan, args.plan.resolve().parent, args.qa_playground_page)
         else:
             need(args.receipt is not None and bool(args.readback), 'Preflight receipt and target readbacks required')
-            result = verify(args.runtime, plan, args.plan.resolve().parent, read(args.receipt), [read(p) for p in args.readback])
+            result = verify(args.runtime, plan, args.plan.resolve().parent, read(args.receipt), [read(p) for p in args.readback], args.qa_playground_page, [read(p) for p in args.source_after])
     except (ValueError, OSError, KeyError, TypeError, AttributeError, IndexError) as error:
         result = {'schema_version': SCHEMA, 'stage': args.stage, 'status': 'BLOCKED', 'findings': [{'code': 'INVALID_EVIDENCE', 'message': str(error)}]}
     text = json.dumps(result, ensure_ascii=False, indent=2) + '\n'

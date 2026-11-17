@@ -62,3 +62,7 @@ Toda pantalla y cada estado de un flujo de producto usan [AppShell](../component
 Las moléculas de producto se montan dentro del Slot Body del AppShell. Se respetan Header, Sidebar, Section Header y las demás regiones según el contrato y sus enmiendas; su presencia y configuración dependen de la función de la pantalla, sin inventar una anatomía alternativa.
 
 Para conversaciones, AppShell usa el modo conversation cuando el corte lo ofrece y aloja Chat en Body. Las herramientas laterales se ubican en el slot correspondiente y conservan las reglas de Rail/Panel. Se verifican AppShell y Chat en cada estado del flujo. El correcto uso del anfitrión es condición de conformidad de la pantalla, además de la corrección de cada control aislado.
+
+## QA acotado dentro del maestro
+
+Por solicitud explícita del usuario del 17 de noviembre de 2026, una prueba de consumo puede construirse en la página Playground configurada del maestro. Esta excepción requiere activación expresa en el preflight, contenedor aislado con nodos nuevos, URL de la página autorizada y readbacks de preservación antes/después de todos los principales utilizados. Los componentes principales, tokens, estilos y material ajeno permanecen intactos. Las pantallas de producto ordinarias siguen usando archivos separados del maestro y de la raíz histórica.

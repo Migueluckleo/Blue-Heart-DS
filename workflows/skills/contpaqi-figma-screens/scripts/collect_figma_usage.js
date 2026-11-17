@@ -49,7 +49,7 @@ function textPath(text, root) {
   return JSON.stringify(segments);
 }
 async function textStyles(n) {
-  const texts=n.type==='TEXT'?[n]:('findAllWithCriteria'in n?n.findAllWithCriteria({types:['TEXT']}):[]);
+  const texts=n.type==='TEXT'?[n]:('children'in n?await Promise.all($fig.query('TEXT',n.id).values(['id']).map(r=>figma.getNodeByIdAsync(r.id))):[]);
   const keys=new Set();let unstyled=0;const text_runs=[];
   for(const t of texts){const path=textPath(t,n);if(path===null)continue;const entry={path,style_keys:[],font_metrics:[]};text_runs.push(entry);for(const run of t.getStyledTextSegments(['textStyleId','fontName','fontSize','lineHeight','letterSpacing','textDecoration'])){
     const {fontName,fontSize,lineHeight,letterSpacing,textDecoration}=run;
@@ -81,9 +81,11 @@ if(request.kind==='source'){
 }else{
   result.screen=request.screen;result.placements=request.placements;
   const root=await figma.getNodeByIdAsync(request.root_id);
-  if(!root||!('findAll'in root)||!ancestorIds(root).includes(page.id))throw new Error('Screen root absent from page');
+  if(!root||!('children'in root)||!ancestorIds(root).includes(page.id))throw new Error('Screen root absent from page');
   result.root_id=root.id;
-  const all=[root,...root.findAll()];const byId=new Map(all.map(n=>[n.id,n]));
+  const all=[root,...await Promise.all($fig.query('*',root.id).values(['id']).map(r=>figma.getNodeByIdAsync(r.id)))];const byId=new Map(all.map(n=>[n.id,n]));
+  result.root_ancestor_ids=ancestorIds(root);
+  if(request.qa_root_id){const qa=await figma.getNodeByIdAsync(request.qa_root_id);if(!qa||!result.root_ancestor_ids.includes(qa.id))throw new Error('Screen outside QA container');result.qa_root={id:qa.id,name:qa.name,type:qa.type,parent_id:qa.parent?qa.parent.id:null};}
   const aliases=new Map();for(const f of request.families)for(const alias of [f.id,f.name,f.slug,...(f.exports||[])])if(alias){const k=norm(alias);if(!aliases.has(k))aliases.set(k,new Set());aliases.get(k).add(f.id);}
   result.candidates=[];result.instance_ids=[];const selected=new Set(Object.values(request.placements));
   for(const n of all){
