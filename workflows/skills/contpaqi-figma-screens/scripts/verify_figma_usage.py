@@ -151,6 +151,14 @@ def configured_text_runs(source, use):
     return [run for run in source['text_runs'] if not any(properties.get(key) is False for key in run.get('visibility_controls', []))]
 
 
+def missing_internal_bindings(source, node):
+    # Library imports can change variable IDs; the canonical role and collection
+    # must stay the same, including when a Body token has the same numeric value.
+    return [binding for binding in source['binding_details'] if not any(
+        all(actual.get(key) == binding.get(key) for key in ('property', 'token', 'collection'))
+        for actual in node.get('binding_details', []))]
+
+
 def file_roles(reader, plan, qa_page_id=None):
     path = 'config/figma-links.json'
     raw = reader.source(path)
@@ -240,6 +248,9 @@ def preflight(runtime, plan, base, qa_page_id=None):
             need(node.get('type') == 'COMPONENT' and isinstance(node.get('key'), str) and node['key'], 'Read actual component, not set or guessed key')
             for field in ('binding_fields', 'text_style_keys'):
                 need(isinstance(node.get(field), list) and all(isinstance(v, str) for v in node[field]), 'Missing source ' + field)
+            for binding in rows(node.get('binding_details'), 'source binding details'):
+                need(all(isinstance(binding.get(key), str) and binding[key] for key in ('property', 'token', 'collection')),
+                     'Unresolved source token role')
             for run in rows(node.get('text_runs'), 'source text ranges'):
                 need(isinstance(run.get('path'), str) and isinstance(run.get('style_keys'), list)
                      and all(k is None or isinstance(k, str) for k in run['style_keys'])
@@ -411,6 +422,8 @@ def verify(runtime, plan, base, receipt, readbacks, qa_page_id=None, source_afte
             if node.get('layout_mode') != source.get('layout_mode'):
                 issue(out, 'LAYOUT_MISMATCH', 'Layout differs from source', use_id, node_id)
             expected_runs = configured_text_runs(source, use)
+            for binding in missing_internal_bindings(source, node):
+                issue(out, 'INTERNAL_TOKEN_CHANGED', str(binding), use_id, node_id)
             for key, value in use.get('component_properties', {}).items():
                 actual_property = node.get('component_properties', {}).get(key, {})
                 if actual_property.get('type') != 'BOOLEAN' or actual_property.get('value') is not value:

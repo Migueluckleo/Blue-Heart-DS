@@ -45,7 +45,7 @@ class ConsumptionTests(unittest.TestCase):
             use_id = ['shell', 'action', 'progress'][i]
             node_id = f'20:{i+1}'
             self.sources.append({'id': node_id, 'name': component['name'], 'type': 'COMPONENT', 'key': 'official-' + use_id,
-                                 'binding_fields': [], 'text_style_keys': [], 'text_runs': [], 'layout_mode': 'VERTICAL'})
+                                 'binding_fields': [], 'binding_details': [], 'text_style_keys': [], 'text_runs': [], 'layout_mode': 'VERTICAL'})
             self.uses.append({'id': use_id, 'screen': 'product', 'family': component['id'], 'kind': 'ds-instance', 'source_node_id': node_id, 'component_key': 'official-' + use_id})
         source = {'schema_version': 1, 'kind': 'source', 'file_key': master, 'observed_at': '2026-11-17T12:00:00Z', 'complete': True, 'nodes': self.sources}
         raw_source = json.dumps(source).encode()
@@ -83,6 +83,13 @@ class ConsumptionTests(unittest.TestCase):
         for invalid in [{'Show label#1': 'false'}, {'Guessed visibility': False}]:
             with self.assertRaises(ValueError):
                 gate.configured_text_runs(source, {'component_properties': invalid})
+
+    def test_component_internal_role_cannot_be_replaced_by_body(self):
+        binding = {'property': 'itemSpacing', 'token': 'button/spacing/gap', 'collection': 'component', 'variable_id': 'source-id'}
+        source = {'binding_details': [binding]}
+        imported = {**binding, 'variable_id': 'imported-id'}
+        self.assertEqual(gate.missing_internal_bindings(source, {'binding_details': [imported]}), [])
+        self.assertEqual(gate.missing_internal_bindings(source, {'binding_details': [{**imported, 'token': 'body/spacing/sm'}]}), [binding])
 
     def test_documented_set_requires_exact_spec_table_and_family_namespace(self):
         component = {'name': 'Linear Progress Bar', 'exports': ['LinearProgress']}
