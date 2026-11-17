@@ -205,7 +205,8 @@ def inputs(root=ROOT):
             if set(entries) != {'SKILL.md'}:
                 raise ValueError('GitHub launcher must contain only SKILL.md: ' + name)
             templates[name] = entries
-        fingerprint = {'templates': templates, 'delivery': config['delivery'], 'channel': config['channel']}
+        fingerprint = {'templates': templates, 'delivery': config['delivery'], 'channel': config['channel'],
+                       'release_line': config.get('release_line')}
         return {'root': root, 'config': config, 'templates': templates, 'files': {}, 'components': [],
                 'excluded_links': [], 'ds_digest': 'REMOTE', 'fingerprint': fingerprint,
                 'input_digest': digest(compact(fingerprint))}
@@ -278,6 +279,19 @@ def next_version(version, bump):
         raise ValueError("Invalid release version: " + version)
     major, minor, patch = map(int, match.groups())
     return f"{major + 1}.0.0" if bump == "major" else f"{major}.{minor + 1}.0" if bump == "minor" else f"{major}.{minor}.{patch + 1}"
+
+
+def release_version(config, current, out, bump):
+    line = config.get('release_line')
+    if line is None:
+        return next_version(current['version'], bump) if current else config['initial_version']
+    if not re.fullmatch(r'(0|[1-9]\d*)\.(0|[1-9]\d*)', line) or bump != 'patch':
+        raise ValueError('Configured release_line permits patch releases only')
+    prefix = line + '.'
+    versions = [p.name for p in out.iterdir() if p.is_dir() and SEMVER.fullmatch(p.name) and p.name.startswith(prefix)] if out.exists() else []
+    if current and SEMVER.fullmatch(current.get('version', '')) and current['version'].startswith(prefix):
+        versions.append(current['version'])
+    return prefix + str(max((int(v.split('.')[2]) for v in versions), default=-1) + 1)
 
 
 def expected_release(state, version):
@@ -371,10 +385,10 @@ def sync(root=ROOT, bump="patch", state=None):
         if result["status"] != "CURRENT":
             raise ValueError("Existing release is damaged; immutable releases cannot be repaired in place: " + str(result["errors"]))
         return {**result, "operation": "UNCHANGED"}
-    version = next_version(current["version"], bump) if current else state["config"]["initial_version"]
+    out = safe(state["root"], state["config"]["output"])
+    version = release_version(state['config'], current, out, bump)
     if not SEMVER.fullmatch(version):
         raise ValueError("Invalid initial version")
-    out = safe(state["root"], state["config"]["output"])
     target = safe(out, version)
     if target.exists():
         raise ValueError("Version collision; historical release preserved: " + version)

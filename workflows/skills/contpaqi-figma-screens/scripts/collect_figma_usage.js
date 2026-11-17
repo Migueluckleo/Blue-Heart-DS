@@ -8,7 +8,35 @@ const norm = s => s.toLowerCase().replace(/[^a-z0-9]/g, '').replace(/s$/, '');
 const ancestorIds = n => { const ids=[]; let p=n.parent; while(p&&p.type!=='DOCUMENT'){ids.push(p.id);p=p.parent;}return ids; };
 const officialKeys=new Set(request.official_component_keys||[]);const mainCache=new Map();
 async function mainOf(n){if(!mainCache.has(n.id))mainCache.set(n.id,await n.getMainComponentAsync());return mainCache.get(n.id);}
-async function insideVerifiedInstance(n){let p=n.parent;while(p&&p.type!=='PAGE'){if(p.type==='SLOT')return false;if(p.type==='INSTANCE'){const m=await mainOf(p);if(m&&officialKeys.has(m.key))return true;}p=p.parent;}return false;}
+const inheritedControls=new Map();
+async function insideVerifiedInstance(n){
+  let p=n.parent,crossedSlot=false;
+  while(p&&p.type!=='PAGE'){
+    if(p.type==='SLOT')crossedSlot=true;
+    if(p.type==='INSTANCE'){
+      const m=await mainOf(p);
+      if(m&&officialKeys.has(m.key)){
+        if(!crossedSlot)return true;
+        // Figma rewrites native-slot content IDs. Exempt inherited defaults only
+        // when an actual counterpart exists inside this verified principal.
+        const prefix='I'+p.id+';';if(!n.id.startsWith(prefix))return false;
+        const path=n.id.slice(prefix.length);const sourceId=path.includes(';')?'I'+path:path;
+        const source=await figma.getNodeByIdAsync(sourceId);
+        if(!source||source.type!==n.type||!ancestorIds(source).includes(m.id))return false;
+        if(n.type==='INSTANCE'){
+          const actualMain=await mainOf(n),expectedMain=await mainOf(source);
+          if(!actualMain||!expectedMain||actualMain.key!==expectedMain.key)return false;
+          inheritedControls.set(n.id,{id:n.id,source_id:source.id,owner_id:p.id,owner_key:m.key,component_key:actualMain.key});
+        }
+        const signatures=async node=>(await bindingDetails(node)).map(b=>[b.property,b.variable_id,b.token,b.collection].join('|')).sort();
+        if(JSON.stringify(await signatures(n))!==JSON.stringify(await signatures(source))){inheritedControls.delete(n.id);return false;}
+        return true;
+      }
+    }
+    p=p.parent;
+  }
+  return false;
+}
 const bindingFields = n => {
   const fields = 'boundVariables' in n ? Object.keys(n.boundVariables || {}) : [];
   for (const prop of ['fills','strokes']) if(prop in n && Array.isArray(n[prop])) n[prop].forEach((p,i)=>{
@@ -98,5 +126,13 @@ if(request.kind==='source'){
     if(families)for(const family of families){result.candidates.push({id:n.id,family});selected.add(n.id);}
   }
   for(const id of selected){const n=byId.get(id);if(!n)throw new Error('Placement outside screen: '+id);result.nodes.push(await describe(n));}
+  result.inherited_source_controls=[...inheritedControls.values()];
+}
+if(request.node_limit!==undefined){
+  const offset=request.node_offset||0,limit=request.node_limit;
+  if(!Number.isInteger(offset)||offset<0||!Number.isInteger(limit)||limit<1)throw new Error('Invalid readback transport page');
+  result.transport={offset,limit,total_nodes:result.nodes.length};
+  result.nodes=result.nodes.slice(offset,offset+limit);
+  result.complete=false; // Reassemble every numbered page before gate verification.
 }
 return result;
