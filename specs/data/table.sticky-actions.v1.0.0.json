@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "contract_id": "TABLE-001",
+  "version": "1.0.0",
+  "change_kind": "variant_extension",
+  "authority": "EXPLICIT_USER_REQUEST",
+  "source_reference": {
+    "kind": "user_image_attachment",
+    "file_name": "codex-clipboard-54ab6f2a-0ba6-45c9-aae1-46a1a7ac6d0e.png",
+    "sha256": "2e6d437a74ea6893cf731352010cf32bd4b5d4a334f0610dfc06496b4852da72",
+    "scope": "Sticky Actions a la derecha y sombra; el usuario exige Icon Buttons Ghost oficiales."
+  },
+  "figma": {
+    "file_key": "yZsIpXywybsPDytjolwcP4",
+    "page_id": "128:2",
+    "component_set_id": "331:2664",
+    "variant_axis": "actions",
+    "default": "default",
+    "variants": {
+      "default": "142:92",
+      "sticky": "331:1238"
+    },
+    "rows_slot": "331:1549",
+    "actions_slot": "331:2470",
+    "vertical_viewport": "331:1239",
+    "horizontal_viewport": "331:1548",
+    "ghost_component": "59:154",
+    "sample_width": 1040,
+    "sample_height": 432,
+    "row_height": 40,
+    "sample_action_column_width": 136
+  },
+  "web": {
+    "property": "stickyActions",
+    "default": false,
+    "semantics": "Una tabla HTML, fija su última columna cuando se activa; controles Ghost provistos como contenido de TableCell."
+  },
+  "shadow": {
+    "evidence": "DERIVED_FROM_REFERENCE_AND_EXISTING_DS_SCALE",
+    "x": -4,
+    "y": 0,
+    "radius": 16,
+    "spread": -2,
+    "color_role": "shadow/md",
+    "tokens_ref": "specs/tokens/table.sticky-actions.v1.0.0.json"
+  },
+  "readback_ref": "implementations/figma/table-sticky-actions-2026-11-17/readback.json",
+  "readback_sha256": "fee85514052db5b481155e6ba0cdf3bbb5ae1635a339093829af0d5d31bf4f6f"
+}

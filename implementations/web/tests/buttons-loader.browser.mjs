@@ -9,6 +9,7 @@ import { verifyConversationResponse } from './conversation-response.browser.mjs'
 import { verifyUserMessage } from './user-message.browser.mjs';
 import { verifyChat } from './chat.browser.mjs';
 import { verifyChatSidebar } from './chat-sidebar.browser.mjs';
+import { verifyStickyTable } from './table-sticky-actions.browser.mjs';
 
 const root = resolve('out');
 const types = {'.html':'text/html', '.js':'text/javascript', '.css':'text/css', '.woff2':'font/woff2', '.svg':'image/svg+xml'};
@@ -159,6 +160,36 @@ try {
   await page.keyboard.press('Space');
   assert.equal(await checkbox.isChecked(),false);
   assert.equal(await page.locator('#demo-checkbox-disabled').isDisabled(),true);
+  const labelPosition = page.getByRole('combobox',{name:'Posición de la etiqueta de Checkbox'});
+  const checkboxRoot = page.locator('#demo-checkbox').locator('..');
+  const checkboxOrder = () => checkboxRoot.evaluate(el => {
+    const label = el.querySelector('.bh-checkbox-label').getBoundingClientRect();
+    const control = el.querySelector('.bh-checkbox-control').getBoundingClientRect();
+    return {left: label.left < control.left, gap: Math.abs(label.left < control.left ? control.left - label.right : label.left - control.right)};
+  });
+  assert.equal((await checkboxOrder()).left,false);
+  await labelPosition.selectOption('left');
+  assert.equal((await checkboxOrder()).left,true);
+  assert.ok(Math.abs((await checkboxOrder()).gap-8)<.1);
+  await checkboxRoot.locator('.bh-checkbox-label').click();
+  assert.equal(await checkbox.isChecked(),true);
+  await checkbox.focus();
+  await page.keyboard.press('Space');
+  assert.equal(await checkbox.isChecked(),false);
+  assert.equal(await checkbox.evaluate(el=>el.matches(':focus-visible')),true);
+  const disabledRoot = page.locator('#demo-checkbox-disabled').locator('..');
+  assert.equal(await disabledRoot.evaluate(el=>el.querySelector('.bh-checkbox-label').getBoundingClientRect().left < el.querySelector('.bh-checkbox-control').getBoundingClientRect().left),true);
+  await disabledRoot.locator('.bh-checkbox-label').click({force:true});
+  assert.equal(await page.locator('#demo-checkbox-disabled').isChecked(),true);
+  await checkboxRoot.evaluate(el => {
+    el.querySelector('.bh-checkbox-label').textContent='Seleccionar todos los comprobantes pendientes de revisión del periodo para aplicar los filtros disponibles y revisar su estado';
+    el.style.inlineSize='220px';
+  });
+  assert.equal(await checkboxRoot.evaluate(el=>el.scrollWidth<=el.clientWidth),true);
+  assert.ok(await checkboxRoot.locator('.bh-checkbox-label').evaluate(el=>el.getBoundingClientRect().height)>24);
+  await labelPosition.selectOption('right');
+  assert.equal((await checkboxOrder()).left,false);
+
   const picker = page.locator('#demo-file-upload');
   await picker.focus();
   const choosing = page.waitForEvent('filechooser');
@@ -434,6 +465,7 @@ try {
   const rowsPerPage = pagination.getByRole('combobox',{name:'Filas por página'});
   assert.deepEqual(await rowsPerPage.locator('option').allTextContents(),['20','50','100']);
   assert.equal((await pagination.locator('.bh-pagination-rows').boundingBox()).width,88);
+  assert.equal(await pagination.locator('.bh-pagination-range').textContent(),'81-100 de 240 registros');
   const nextPage = pagination.getByRole('button',{name:'Página siguiente'});
   await nextPage.focus();
   assert.equal(await nextPage.evaluate(el=>el.matches(':focus-visible')),true);
@@ -442,7 +474,7 @@ try {
   assert.equal(await page.evaluate(()=>document.activeElement.id),'demo-pagination-results');
   await rowsPerPage.selectOption('50');
   assert.equal(await pagination.locator('[aria-current=page]').getAttribute('aria-label'),'Página 1');
-  assert.equal(await pagination.locator('.bh-pagination-range').textContent(),'1–50 de 240');
+  assert.equal(await pagination.locator('.bh-pagination-range').textContent(),'1-50 de 240 registros');
   assert.equal(await pagination.getByRole('button',{name:'Primera página'}).isDisabled(),true);
   await pagination.getByRole('button',{name:'Última página'}).click();
   assert.equal(await nextPage.isDisabled(),true);
@@ -454,6 +486,27 @@ try {
   await compactNext.focus();
   await page.keyboard.press('Enter');
   assert.equal(await compactPagination.locator('.bh-pagination-position').textContent(),'Página 2 de 3');
+  const rangePosition = page.getByRole('combobox',{name:'Posición del resumen de registros'});
+  assert.equal(await rangePosition.inputValue(),'left');
+  const paginationState = await pagination.locator('[aria-current=page]').getAttribute('aria-label');
+  const compactState = await compactPagination.locator('.bh-pagination-position').textContent();
+  for (const position of ['right','left']) {
+    await rangePosition.selectOption(position);
+    for (const nav of [pagination,compactPagination]) {
+      const summary = await nav.locator('.bh-pagination-range').boundingBox();
+      const controls = await nav.locator(':scope > :not(.bh-pagination-range)').all();
+      for (const control of controls) {
+        const bounds = await control.boundingBox();
+        assert.ok(position === 'left' ? summary.x + summary.width <= bounds.x : bounds.x + bounds.width <= summary.x,
+          `record summary ${position} of each control`);
+      }
+    }
+    assert.equal(await pagination.locator('[aria-current=page]').getAttribute('aria-label'),paginationState);
+    assert.equal(await rowsPerPage.inputValue(),'50');
+    assert.equal(await pagination.locator('.bh-pagination-range').textContent(),'201-240 de 240 registros');
+    assert.equal(await compactPagination.locator('.bh-pagination-position').textContent(),compactState);
+    assert.equal(await compactPagination.locator('.bh-pagination-range').textContent(),'21-40 de 55 registros');
+  }
   const tabList = page.getByRole('tablist',{name:'Tipos de comprobante'});
   const invoices = tabList.getByRole('tab',{name:'Facturas',exact:true});
   const creditNotes = tabList.getByRole('tab',{name:'Notas de crédito'});
@@ -742,6 +795,7 @@ try {
   await page.keyboard.press('Space');
   assert.equal(await selectedRow.isChecked(),true);
   assert.match(await page.locator('#demo-table-selection').textContent(),/^1 seleccionados/);
+  const stickyTable = await verifyStickyTable(page);
   const characters = await verifyCharacters(page);
   const conversationComposer = await verifyConversationComposer(page);
   const conversationResponse = await verifyConversationResponse(page);
@@ -756,7 +810,7 @@ try {
     searchKeyboardAndClear:true,breadcrumbNavigation:true,sidebarSlotsAndKeyboard:true,sidebarSecondary:true,iconButtonPressed:true,warningContrast,
     localAvatarImage:true,avatarOverflow:true,headerKeyboard:true,inputMatrix:42,inputEmptyBorderContrast,sectionHeader:true,appShell:true,pagination:true,tabs:true,tabContrasts:tabContrasts[0],
     textArea:true,textAreaBorderContrast,dropdown:true,dropdownContrasts,floatingActions:true,inlineWarningContrast,
-    chip:true,chipContrasts:chipContrasts[0],table:true,tableLinkHoverContrast,characters,conversationComposer,conversationResponse,userMessage,chat,chatSidebar}));
+    chip:true,chipContrasts:chipContrasts[0],table:true,tableLinkHoverContrast,stickyTable,characters,conversationComposer,conversationResponse,userMessage,chat,chatSidebar}));
 } finally {
   await browser?.close();
   server.close();

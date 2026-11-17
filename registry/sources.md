@@ -53,3 +53,11 @@ Set provisional 238:2236 en Playground. [Lectura de Standby y Started](../source
 ## Chat Sidebar · CHAT-SIDEBAR-001
 
 Cuatro paneles, cuatro rails y muestras independientes observadas en Playground 203:93. [Selección estructurada](../sources/figma-snapshots/chat-sidebar-2026-11-13/selection.json) · [Manifiesto de SVG](../specs/data/chat-sidebar.assets.v1.0.0.json).
+
+## Body · Contenido de producto · 2026-11-17
+
+Solicitud explícita del usuario del 17 de noviembre de 2026: roles Body para contenido a medida, estándar interno de Cards 24/16/8/4 y separación de 32 px entre Cards independientes. Cinco demos diferentes con botones/widgets, como frames en Playground y dentro de un App Shell; no documentarlas como componentes. [Contrato y datos delegados](../specs/foundations/body.contract.v1.0.0.md).
+
+## Política de visibilidad de tokens · 2026-11-17
+
+SRC-TOKEN-VISIBILITY-20261117: solicitud explícita del usuario y [datos canónicos de scopes](../specs/tokens/visibility.body-only.correction.json), SHA-256 bfeff78297e413e05a989523fecf5adb8f79850f99cd15cd25196a78b2e88397. [Lecturas Figma](../implementations/figma/token-visibility-2026-11-17/before.json) conservadas antes/después; el cambio no sustituye valores ni aliases históricos.

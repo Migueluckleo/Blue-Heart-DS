@@ -1,0 +1,139 @@
+{
+  "contract_id": "CHECKBOX-001",
+  "requested_on": "2026-11-17",
+  "requirement": "Configurar el label a izquierda o derecha del checkbox.",
+  "file_key": "yZsIpXywybsPDytjolwcP4",
+  "set_id": "42:30",
+  "properties": {
+    "Label#42:0": {
+      "type": "TEXT",
+      "defaultValue": "Label"
+    },
+    "Show label#42:6": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "selected": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true",
+        "indeterminate"
+      ]
+    },
+    "state": {
+      "type": "VARIANT",
+      "defaultValue": "default",
+      "variantOptions": [
+        "default",
+        "hover",
+        "focus",
+        "disabled",
+        "error"
+      ]
+    },
+    "label position": {
+      "type": "VARIANT",
+      "defaultValue": "right",
+      "variantOptions": [
+        "right",
+        "left"
+      ]
+    }
+  },
+  "variant_mapping": [
+    {
+      "source": "42:4",
+      "left": "309:12",
+      "right": "42:4",
+      "name": "selected=false, state=default"
+    },
+    {
+      "source": "42:9",
+      "left": "309:17",
+      "right": "42:9",
+      "name": "selected=false, state=hover"
+    },
+    {
+      "source": "42:14",
+      "left": "309:22",
+      "right": "42:14",
+      "name": "selected=false, state=focus"
+    },
+    {
+      "source": "42:20",
+      "left": "309:28",
+      "right": "42:20",
+      "name": "selected=false, state=disabled"
+    },
+    {
+      "source": "42:25",
+      "left": "309:33",
+      "right": "42:25",
+      "name": "selected=false, state=error"
+    },
+    {
+      "source": "43:2",
+      "left": "309:38",
+      "right": "43:2",
+      "name": "selected=true, state=default"
+    },
+    {
+      "source": "43:42",
+      "left": "309:45",
+      "right": "43:42",
+      "name": "selected=true, state=hover"
+    },
+    {
+      "source": "43:49",
+      "left": "309:52",
+      "right": "43:49",
+      "name": "selected=true, state=focus"
+    },
+    {
+      "source": "43:57",
+      "left": "309:60",
+      "right": "43:57",
+      "name": "selected=true, state=disabled"
+    },
+    {
+      "source": "43:64",
+      "left": "309:67",
+      "right": "43:64",
+      "name": "selected=true, state=error"
+    },
+    {
+      "source": "43:71",
+      "left": "309:74",
+      "right": "43:71",
+      "name": "selected=indeterminate, state=default"
+    },
+    {
+      "source": "43:111",
+      "left": "309:81",
+      "right": "43:111",
+      "name": "selected=indeterminate, state=hover"
+    },
+    {
+      "source": "43:118",
+      "left": "309:88",
+      "right": "43:118",
+      "name": "selected=indeterminate, state=focus"
+    },
+    {
+      "source": "43:126",
+      "left": "309:96",
+      "right": "43:126",
+      "name": "selected=indeterminate, state=disabled"
+    },
+    {
+      "source": "43:133",
+      "left": "309:103",
+      "right": "43:133",
+      "name": "selected=indeterminate, state=error"
+    }
+  ],
+  "evidence": "implementations/figma/checkbox-label-position-2026-11-17/readback.json",
+  "evidence_sha256": "647585c367769320cd8f0bd9c39a89ca062b03b692af9d1c023db0e165bdad74"
+}

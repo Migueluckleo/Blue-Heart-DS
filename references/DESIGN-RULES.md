@@ -10,4 +10,6 @@ Para iconos aplica [Phosphor Icons](PHOSPHOR-ICONS.md) en Figma y React. Las par
 
 ## Consumo de tokens por componente
 
+La [política vigente de selectores](../specs/foundations/token-visibility.contract.v1.0.0.md) expone únicamente nombres que empiezan por `body/` dentro de `component`, con scopes específicos por función. Todos los demás tokens, incluso nombres que contienen body en otra posición, usan `scopes=[]` donde sea compatible. Body es la interfaz para contenido específico de producto; los componentes oficiales conservan sus tokens internos, aliases y bindings. Toda alta o corrección debe cumplir TOKEN-QA-03. Los scopes filtran selectores y no invalidan el consumo interno ni modifican publicación.
+
 Los bindings propios de un componente y sus referencias CSS consumen variables de la colección component. Cada variable de componente apunta a un rol semántico por tema y este a una primitiva. Una instancia hereda los roles de su maestro. Si el anfitrión sobrescribe una propiedad, usa un token de componente que exprese ese rol. Conserva las excepciones de arte original documentadas en la spec. La corrección del 12 de noviembre de 2026 se aplica a las versiones vigentes. [Datos de la corrección](../specs/tokens/component-layer.correction.json)

@@ -1,5 +1,6 @@
 """Adaptación determinista a CSS. Los valores editables siguen en los JSON del DS."""
 import hashlib, json, re
+from token_visibility import apply_visibility
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 WEB = Path(__file__).resolve().parents[1]
@@ -10,7 +11,7 @@ def css_name(collection, name):
     prefix = 'primitive-' if collection == 'primitive' else ''
     return '--ds-'+prefix+re.sub(r'[^a-zA-Z0-9-]', '-', name).lower()
 def build():
-    tokens, ids, hashes = {}, {}, {}
+    tokens, ids, hashes, visibility_policies = {}, {}, {}, []
     mode_names = {m:m for m in MODES} | {'Value':'Value'}
     def add(v, collection, source):
         key=(collection,v['name'])
@@ -28,6 +29,8 @@ def build():
         raw=(ROOT/source).read_bytes(); hashes[source]=hashlib.sha256(raw).hexdigest();d=json.loads(raw)
         if hashes[source] != entry['sha256']:
             raise ValueError('Hash de tokens distinto al delegado: ' + source)
+        if 'selectorVisibilityPolicy' in d:
+            visibility_policies.append((d['selectorVisibilityPolicy'], source))
         if 'collections' in d:
             for c in d['collections']:
                 mode_names.update({m['modeId']:m['name'] for m in c['modes']})
@@ -43,6 +46,8 @@ def build():
             v.setdefault('amendments',[]).append(source)
         for override in d.get('scopeOverrides',[]):
             tokens['semantic',override['name']]['scopes']=override['scopes']
+    for policy, source in visibility_policies:
+        apply_visibility(tokens, policy, source)
     def alias_key(value):
         if value.get('id') in ids:return ids[value['id']]
         name=value.get('primitive_name',value.get('name'))

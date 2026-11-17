@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "component_id": "PAGINATION-001",
+  "date": "2026-11-17",
+  "request": "Configurar el resumen de registros a la izquierda o derecha de los controles",
+  "figma_file_key": "yZsIpXywybsPDytjolwcP4",
+  "page_id": "109:2",
+  "component_set_id": "109:36",
+  "default_range_position": "left",
+  "readback": {
+    "mutatedNodeIds": [
+      "109:36",
+      "109:37",
+      "109:38",
+      "109:144",
+      "319:34",
+      "109:177",
+      "323:54",
+      "323:87",
+      "323:67",
+      "323:152",
+      "323:154"
+    ],
+    "createdNodeIds": [
+      "324:128"
+    ],
+    "removedNodeIds": [
+      "324:128"
+    ],
+    "default": "109:34",
+    "props": {
+      "Pages#109:20": {
+        "type": "SLOT",
+        "description": "Pagination item; el host mantiene orden, selección única y extremos.",
+        "slotSettings": {
+          "stretchChildOnInsert": false,
+          "displayEmptyByDefault": false,
+          "minChildren": 1,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": true
+        },
+        "preferredValues": [
+          {
+            "type": "COMPONENT_SET",
+            "key": "1e0df03cc8dae3cb07db84d8a5bc727ec54a4831"
+          }
+        ]
+      },
+      "Page label#109:26": {
+        "type": "TEXT",
+        "defaultValue": "Página 5 de 12"
+      },
+      "Range#109:29": {
+        "type": "TEXT",
+        "defaultValue": "81-100 de 240 registros"
+      },
+      "Show range#109:32": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Show rows per page#109:35": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "type": {
+        "type": "VARIANT",
+        "defaultValue": "default",
+        "variantOptions": [
+          "default",
+          "compact"
+        ]
+      },
+      "range position": {
+        "type": "VARIANT",
+        "defaultValue": "left",
+        "variantOptions": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    "checks": [
+      {
+        "type": "default",
+        "position": "left",
+        "rangeText": "1-20 de 25 registros",
+        "visibility": "PASS",
+        "slotChildren": 11
+      },
+      {
+        "type": "default",
+        "position": "right",
+        "rangeText": "1-20 de 25 registros",
+        "visibility": "PASS",
+        "slotChildren": 11
+      },
+      {
+        "type": "compact",
+        "position": "left",
+        "rangeText": "1-20 de 25 registros",
+        "visibility": "PASS",
+        "slotChildren": null
+      },
+      {
+        "type": "compact",
+        "position": "right",
+        "rangeText": "1-20 de 25 registros",
+        "visibility": "PASS",
+        "slotChildren": null
+      }
+    ],
+    "variants": [
+      {
+        "id": "109:34",
+        "name": "type=default, range position=left",
+        "size": [
+          726,
+          72
+        ],
+        "children": [
+          {
+            "id": "109:37",
+            "name": "Range",
+            "type": "TEXT",
+            "x": 24,
+            "width": 150,
+            "refs": {
+              "visible": "Show range#109:32",
+              "characters": "Range#109:29"
+            },
+            "style": "S:97b75a7620a1b55b537a3263fc40a00097c20652,"
+          },
+          {
+            "id": "109:38",
+            "name": "Pages",
+            "type": "SLOT",
+            "x": 198,
+            "width": 392,
+            "refs": {
+              "slotContentId": "Pages#109:20"
+            },
+            "style": null
+          },
+          {
+            "id": "109:144",
+            "name": "Rows per page",
+            "type": "INSTANCE",
+            "x": 614,
+            "width": 88,
+            "refs": {
+              "visible": "Show rows per page#109:35"
+            },
+            "style": null
+          }
+        ]
+      },
+      {
+        "id": "109:35",
+        "name": "type=compact, range position=left",
+        "size": [
+          390,
+          72
+        ],
+        "children": [
+          {
+            "id": "319:34",
+            "name": "Range",
+            "type": "TEXT",
+            "x": 24,
+            "width": 150,
+            "refs": {
+              "visible": "Show range#109:32",
+              "characters": "Range#109:29"
+            },
+            "style": "S:97b75a7620a1b55b537a3263fc40a00097c20652,"
+          },
+          {
+            "id": "109:173",
+            "name": "Left",
+            "type": "INSTANCE",
+            "x": 186,
+            "width": 32,
+            "refs": {},
+            "style": null
+          },
+          {
+            "id": "109:177",
+            "name": "Page label",
+            "type": "TEXT",
+            "x": 230,
+            "width": 92,
+            "refs": {
+              "characters": "Page label#109:26"
+            },
+            "style": "S:fd77b40164b1662abdf66c9f89c1a491d4e67db5,"
+          },
+          {
+            "id": "109:178",
+            "name": "Right",
+            "type": "INSTANCE",
+            "x": 334,
+            "width": 32,
+            "refs": {},
+            "style": null
+          }
+        ]
+      },
+      {
+        "id": "323:53",
+        "name": "type=default, range position=right",
+        "size": [
+          726,
+          72
+        ],
+        "children": [
+          {
+            "id": "323:87",
+            "name": "Pages",
+            "type": "SLOT",
+            "x": 24,
+            "width": 392,
+            "refs": {
+              "slotContentId": "Pages#109:20"
+            },
+            "style": null
+          },
+          {
+            "id": "323:67",
+            "name": "Rows per page",
+            "type": "INSTANCE",
+            "x": 440,
+            "width": 88,
+            "refs": {
+              "visible": "Show rows per page#109:35"
+            },
+            "style": null
+          },
+          {
+            "id": "323:54",
+            "name": "Range",
+            "type": "TEXT",
+            "x": 552,
+            "width": 150,
+            "refs": {
+              "visible": "Show range#109:32",
+              "characters": "Range#109:29"
+            },
+            "style": "S:97b75a7620a1b55b537a3263fc40a00097c20652,"
+          }
+        ]
+      },
+      {
+        "id": "323:151",
+        "name": "type=compact, range position=right",
+        "size": [
+          390,
+          72
+        ],
+        "children": [
+          {
+            "id": "323:153",
+            "name": "Left",
+            "type": "INSTANCE",
+            "x": 24,
+            "width": 32,
+            "refs": {},
+            "style": null
+          },
+          {
+            "id": "323:154",
+            "name": "Page label",
+            "type": "TEXT",
+            "x": 68,
+            "width": 92,
+            "refs": {
+              "characters": "Page label#109:26"
+            },
+            "style": "S:fd77b40164b1662abdf66c9f89c1a491d4e67db5,"
+          },
+          {
+            "id": "323:155",
+            "name": "Right",
+            "type": "INSTANCE",
+            "x": 172,
+            "width": 32,
+            "refs": {},
+            "style": null
+          },
+          {
+            "id": "323:152",
+            "name": "Range",
+            "type": "TEXT",
+            "x": 216,
+            "width": 150,
+            "refs": {
+              "visible": "Show range#109:32",
+              "characters": "Range#109:29"
+            },
+            "style": "S:97b75a7620a1b55b537a3263fc40a00097c20652,"
+          }
+        ]
+      }
+    ]
+  },
+  "token_qa": {
+    "status": "PASS",
+    "owners": [
+      {
+        "id": "109:36",
+        "name": "Pagination"
+      }
+    ],
+    "bindingCount": 108,
+    "overrideCount": 18,
+    "findings": []
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "reviewed": "Set completo, cuatro variantes, sin recortes ni solapamientos"
+  },
+  "publication": "NOT_REQUESTED",
+  "installation": "NOT_REQUESTED",
+  "web_qa": {
+    "status": "PASS",
+    "node_tests": 12,
+    "typescript": "PASS",
+    "next_build": "PASS",
+    "chrome": "PASS",
+    "checks": [
+      "Default y Compact: posiciones left/right por geometría antes/después de todos los controles",
+      "Página, resumen y tamaño de filas conservados al cambiar de posición",
+      "Navegación por teclado, extremos y consumo desde Table"
+    ],
+    "suite": "implementations/web/tests/buttons-loader.browser.mjs",
+    "retry": {
+      "count": 1,
+      "reason": "Timeout inicial del filechooser de File Upload, previo al alcance de Pagination; suite completa aprobada en el reintento sin cambios."
+    }
+  }
+}

@@ -73,3 +73,27 @@ TOKEN-QA-01 se probó en seis maestros y auxiliares corregidos. Leyó 1.326 bind
 ## Chat Sidebar · CHAT-SIDEBAR-001
 
 [QA documental](../qa/contracts/chat-sidebar.v1.0.0.review.md) · [QA Figma y web](../qa/implementations/chat-sidebar.v1.0.0.review.md).
+
+## Checkbox · Posición del label · 2026-11-17
+
+[QA de Checkbox](../qa/implementations/file-upload-checkbox.v1.0.0.review.md) pasó en Figma y web para label a izquierda y derecha, tokens y reacciones. [Lectura](../implementations/figma/checkbox-label-position-2026-11-17/readback.json).
+
+## Pagination · Cantidad de registros · 2026-11-17
+
+[QA de Pagination](../qa/implementations/pagination-chain.v1.0.0.review.md) pasó para los rangos, las dos presentaciones, cero y un registro, teclado y cambio de tamaño de página.
+
+## Pagination · Posición del resumen · 2026-11-17
+
+[QA de Pagination](../qa/implementations/pagination-chain.v1.0.0.review.md) pasó para las cuatro combinaciones left/right de Default/Compact, tokens, propiedades compartidas y Chrome. [Lectura](../implementations/figma/pagination-range-position-2026-11-17/readback.json).
+
+## Table · Sticky Actions · 2026-11-17
+
+[QA de Sticky Actions](../qa/implementations/table-chain.v1.0.0.review.md) pasó para tokens, Slots, Ghost, scroll en el presentador nativo, cuatro temas, teclado y ancho 320 en Chrome.
+
+## Body · Contenido de producto · 2026-11-17
+
+[QA de Body](../qa/implementations/body.v1.0.0.review.md) pasó para tokens, cinco estilos, contraste, medidas y demos en Figma y Chrome; sin componentes de Card consumibles.
+
+## Política de visibilidad de tokens · 2026-11-17
+
+[QA documental](../qa/contracts/token-visibility.v1.0.0.review.md) y [QA de implementación](../qa/implementations/token-visibility.v1.0.0.review.md): PASS. TOKEN-QA-03 obligatorio en cada alta/corrección de tokens o componentes en Figma y web; comparación posterior de scopes exactos, aliases, valores, bindings, estilos Body y publicación. 1,462 variables, 43 páginas, 19,692 nodos y cinco estilos Body cotejados.

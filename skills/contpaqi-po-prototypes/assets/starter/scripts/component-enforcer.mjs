@@ -2,7 +2,7 @@ import {createHash} from 'node:crypto';
 import {readFileSync,writeFileSync} from 'node:fs';
 import htmlParser from 'next/dist/compiled/node-html-parser/index.js';
 import postcss from 'postcss';
-import {verifyComponentPlan,verifyComponentSourceReceipt} from './component-plan.mjs';
+import {conversationLayoutEvidence,verifyComponentPlan,verifyComponentSourceReceipt} from './component-plan.mjs';
 import {prototypeOutput} from './prototype-output.mjs';
 
 export const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -149,6 +149,25 @@ export function inspectComponentMarkup(html, catalog, plan) {
   };
   const isLibrary = node => node.closest('[data-blueheart]')
     || trusted.has(scope(node)) && firstElement(scope(node)) === node;
+
+  if (catalog.families.get('APP-SHELL-001')?.includes('AppShell')
+    && Object.hasOwn(catalog.sources, conversationLayoutEvidence)) {
+    for (const chat of document.querySelectorAll('[data-blueheart="chat"],[data-ds-component="CHAT-001"]')) {
+      const chatRoot = own(chat,'data-blueheart') === 'chat' ? chat : firstElement(chat);
+      if (!chatRoot || chatRoot !== chat && own(chatRoot,'data-blueheart') === 'chat') continue;
+      const shell = chatRoot.closest('[data-blueheart="app-shell"]');
+      const shellMarker = shell && scope(shell);
+      const body = chatRoot.closest('[data-slot="body"]');
+      const layout = body?.parentNode;
+      if (shellMarker && trusted.has(shellMarker) && own(shellMarker,'data-ds-export') === 'AppShell'
+        && firstElement(shellMarker) === shell && layout?.classList?.contains('bh-app-shell-body')
+        && own(layout,'data-layout') === 'conversation'
+        && body.closest('[data-blueheart="app-shell"]') === shell) continue;
+      const id = own(scope(chatRoot) ?? chatRoot,'data-ds-node') ?? 'chat';
+      add('CHAT_LAYOUT_REQUIRED', id,
+        'Monta Chat en el Slot Body del export AppShell con bodyLayout="conversation" y registra la instancia AppShell.');
+    }
+  }
   for (const control of document.querySelectorAll('button,input,textarea,select,table,td,th,nav,[role]')) {
     const family = semanticFamily(control);
     if (family && (own(control,'data-ds-authored') === 'true' || !isLibrary(control))) reportRole(control, family);

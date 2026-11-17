@@ -67,6 +67,28 @@ test('un requisito independiente detecta un sustituto local de cualquier familia
   }
 });
 
+test('Chat requiere AppShell oficial en conversación y dentro del Slot Body', () => {
+  const chat = '<div data-ds-node="chat" data-ds-component="CHAT-001" data-ds-export="Chat"><div data-blueheart="chat"></div></div>';
+  const shell = (layout, content, slot = 'body', verified = true) =>
+    `<div data-ds-node="shell" data-ds-component="APP-SHELL-001" ${verified ? 'data-ds-export="AppShell"' : ''}>
+      <div data-blueheart="app-shell"><div class="bh-app-shell-body" data-layout="${layout}">
+        <div data-slot="${slot}">${content}</div>
+      </div></div>
+    </div>`;
+  const components = [entry('chat','CHAT-001','Chat'),entry('shell','APP-SHELL-001','AppShell')];
+  const evidence = 'implementations/figma/app-shell-conversation/readback.json';
+  const cut = {...manifest, files:{...manifest.files,[evidence]:'fixture'}};
+  const findings = (html, snapshot = cut) => auditComponentHtml(Buffer.from(html), {components}, snapshot).findings;
+  assert.deepEqual(findings(shell('conversation',chat)), []);
+  for (const html of [chat,shell('grid',chat),shell('conversation',chat,'right-sidebar'),
+    shell('conversation',chat,'body',false), shell('conversation','') + chat]) {
+    assert.equal(findings(html).filter(finding => finding.code === 'CHAT_LAYOUT_REQUIRED').length, 1);
+  }
+  const older = {...cut,files:{...cut.files}};
+  delete older.files[evidence];
+  assert.deepEqual(findings(chat,older), []);
+});
+
 test('una excepción trazable conserva el contrato de fondo del Header', () => {
   const headerSource = manifest.components.find(row=>row.id==='HEADER-001').contract;
   const localHeader = {instanceId:'header',componentId:'LOCAL-Header',kind:'local-composition',

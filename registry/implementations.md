@@ -41,3 +41,27 @@ App Shell, Conversation Composer, Conversation Response y Stepper consumen los a
 ## Chat Sidebar · CHAT-SIDEBAR-001
 
 [Set oficial 258:3326](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=258-3326) · [Lectura de Figma](../implementations/figma/chat-sidebar-2026-11-13/readback.json) · [Ficha web](../implementations/web/docs/components/chat-sidebar.md).
+
+## Checkbox · Posición del label · 2026-11-17
+
+[Checkbox 42:30](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=42-30) ofrece label position right/left. La [API React](../implementations/web/docs/components/checkbox.md) acepta labelPosition con default right.
+
+## Pagination · Cantidad de registros · 2026-11-17
+
+[Pagination 109:36](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=109-36) expone Range visible. React acepta totalRecords y pageSize para calcular el resumen. [Lectura](../implementations/figma/pagination-record-count-2026-11-17/readback.json).
+
+## Pagination · Posición del resumen · 2026-11-17
+
+[Pagination 109:36](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=109-36) ofrece range position left/right en Default y Compact. Web usa rangePosition, con left por defecto. [Lectura y QA](../implementations/figma/pagination-range-position-2026-11-17/readback.json).
+
+## Table · Sticky Actions · 2026-11-17
+
+[Table 331:2664](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=331-2664) conserva Default 142:92 y añade Sticky 331:1238. [Lectura y QA](../implementations/figma/table-sticky-actions-2026-11-17/readback.json) · [API web](../implementations/web/docs/components/table.md).
+
+## Body · Contenido de producto · 2026-11-17
+
+[Playground Body](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=347-2597) usa el App Shell oficial y cinco frames con controles vinculados. [Lectura](../implementations/figma/body-tokens-2026-11-17/readback.json) · [Tokens](../specs/tokens/body.v1.0.0.json).
+
+## Política de visibilidad de tokens · 2026-11-17
+
+[Corrección de selectores](../specs/foundations/token-visibility.contract.v1.0.0.md): Figma 1,098 scopes internos corregidos; 33 Body visibles, 1,429 internos ocultos. Web aplica la política al manifest efectivo sin cambiar CSS. Evidencia completa en [QA](../qa/implementations/token-visibility.v1.0.0.review.md). Sin publicar ni instalar.

@@ -10,17 +10,18 @@ export type CheckboxProps = Omit<ComponentPropsWithoutRef<'input'>,
   'type' | 'role' | 'checked' | 'defaultChecked' | 'onChange' | 'aria-label' | 'aria-checked' | 'aria-invalid'> & {
   label: string;
   showLabel?: boolean;
+  labelPosition?: 'left' | 'right';
   selected: CheckboxSelection;
   invalid?: boolean;
   onSelectedChange?: (selected: boolean) => void;
   previewState?: 'hover' | 'focus';
 };
 
-export function Checkbox({label, showLabel = false, selected, onSelectedChange, invalid, previewState, className, ...input}: CheckboxProps) {
+export function Checkbox({label, showLabel = false, labelPosition = 'right', selected, onSelectedChange, invalid, previewState, className, ...input}: CheckboxProps) {
   const mixed = selected === 'indeterminate';
   const Mark = mixed ? MinusIcon : selected ? CheckIcon : null;
   return <label className={['bh-checkbox', className].filter(Boolean).join(' ')}
-    data-blueheart="checkbox" data-preview={previewState} data-selected={selected}>
+    data-blueheart="checkbox" data-preview={previewState} data-selected={selected} data-label-position={labelPosition}>
     <input {...input} type="checkbox" className="sr-only" checked={selected === true}
       aria-label={showLabel ? undefined : label} aria-invalid={invalid || undefined}
       aria-checked={mixed ? 'mixed' : undefined}

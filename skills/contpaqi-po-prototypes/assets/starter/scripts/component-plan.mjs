@@ -9,6 +9,8 @@ const planPath = 'references/component-plan.json';
 const manifestPath = 'references/snapshot-manifest.json';
 const registryPath = 'implementations/web/components.registry.json';
 
+export const conversationLayoutEvidence = 'implementations/figma/app-shell-conversation/readback.json';
+
 function need(condition, message) {
   if (!condition) throw new Error('DS_PLAN: ' + message);
 }
@@ -182,6 +184,19 @@ export function createComponentPlan(brief) {
     const localCoverage = coverage === 'COMPATIBLE' ? null : assessLocalCoverage(entry);
     return {...family,instanceId,role,exportName:exportName??null,coverage,reason,evidence:evidenceFor(family,evidence),localCoverage,dependencies:[...dependencies.values()]};
   });
+  const chatInstances = new Set(controls.filter(control => control.componentId === 'CHAT-001').map(control => control.instanceId));
+  if (chatInstances.size && Object.hasOwn(manifest.files, conversationLayoutEvidence)
+    && mapFamily('APP-SHELL-001').exports.includes('AppShell')) {
+    const shells = new Set(controls.filter(control => control.componentId === 'APP-SHELL-001'
+      && control.coverage === 'COMPATIBLE' && control.exportName === 'AppShell').map(control => control.instanceId));
+    need(shells.size, 'El flujo de Chat requiere mapear AppShell en modo conversation.');
+    for (const screen of brief.screens ?? []) for (const state of screen.states ?? []) {
+      const nodes = state.nodes ?? [];
+      if (nodes.some(id => chatInstances.has(id))) {
+        need(nodes.some(id => shells.has(id)), `Incluye AppShell en el estado de Chat ${screen.id}/${state.id}.`);
+      }
+    }
+  }
   const families = [...tracked.values()].sort((a,b)=>a.componentId.localeCompare(b.componentId)).map(row=>{
     const {contract,amendments,exports} = mapFamily(row.componentId);
     const instances = controls.filter(control=>control.componentId===row.componentId).map(control=>control.instanceId);

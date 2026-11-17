@@ -10,6 +10,9 @@ export interface PaginationProps {
   type?: 'default' | 'compact';
   label?: string;
   range?: string;
+  rangePosition?: 'left' | 'right';
+  totalRecords?: number;
+  pageSize?: number;
   pageLabel?: string;
   touchTargets?: boolean;
   rows?: {
@@ -31,32 +34,41 @@ function pageMarkers(current: number, total: number): PageMarker[] {
 }
 
 export function Pagination({currentPage, totalPages, onPageChange, type = 'default', label = 'Paginación',
-  range, pageLabel, touchTargets = false, rows}: PaginationProps) {
-  if (!Number.isSafeInteger(totalPages) || totalPages < 2) return null;
-  const page = Number.isSafeInteger(currentPage) ? Math.max(1,Math.min(currentPage,totalPages)) : 1;
+  range, rangePosition = 'left', totalRecords, pageSize = 20, pageLabel, touchTargets = false, rows}: PaginationProps) {
+  const records = typeof totalRecords === 'number' && Number.isSafeInteger(totalRecords) && totalRecords >= 0
+    ? totalRecords : undefined;
+  const size = rows?.value ?? pageSize;
+  const hasRecordRange = records !== undefined && Number.isSafeInteger(size) && size > 0;
+  const pages = hasRecordRange ? Math.max(1, Math.ceil(records / size)) : totalPages;
+  if (!Number.isSafeInteger(pages) || pages < 1 || (!hasRecordRange && pages < 2)) return null;
+  const page = Number.isSafeInteger(currentPage) ? Math.max(1,Math.min(currentPage,pages)) : 1;
+  const computedRange = hasRecordRange
+    ? `${records === 0 ? 0 : (page - 1) * size + 1}-${Math.min(page * size, records)} de ${records} ${records === 1 ? 'registro' : 'registros'}`
+    : undefined;
+  const recordRange = range ?? computedRange;
   function arrow(direction: PaginationDirection, accessibleLabel: string, destination: number, disabled: boolean) {
     return <PaginationItem type="icon" direction={direction} accessibleLabel={accessibleLabel}
       disabled={disabled} touchTarget={touchTargets} onActivate={() => onPageChange(destination)}/>;
   }
 
-  return <nav className="bh-pagination" data-blueheart="pagination" data-type={type} aria-label={label}>
+  return <nav className="bh-pagination" data-blueheart="pagination" data-type={type} data-range-position={rangePosition} aria-label={label}>
+    {recordRange && <span className="bh-pagination-range" aria-live="polite">{recordRange}</span>}
     {type === 'compact' ? <>
       {arrow('previous','Página anterior',page-1,page===1)}
-      <span className="bh-pagination-position" aria-live="polite">{pageLabel ?? `Página ${page} de ${totalPages}`}</span>
-      {arrow('next','Página siguiente',page+1,page===totalPages)}
+      <span className="bh-pagination-position" aria-live="polite">{pageLabel ?? `Página ${page} de ${pages}`}</span>
+      {arrow('next','Página siguiente',page+1,page===pages)}
     </> : <>
-      {range && <span className="bh-pagination-range">{range}</span>}
       <div className="bh-pagination-pages">
         {arrow('first','Primera página',1,page===1)}
         {arrow('previous','Página anterior',page-1,page===1)}
-        {pageMarkers(page,totalPages).map(marker => typeof marker === 'number'
+        {pageMarkers(page,pages).map(marker => typeof marker === 'number'
           ? <PaginationItem key={marker} type="page" label={String(marker)} accessibleLabel={`Página ${marker}`}
               selected={marker===page} touchTarget={touchTargets} onActivate={() => {
                 if (marker !== page) onPageChange(marker);
               }}/>
           : <PaginationItem key={marker} type="ellipsis"/>)}
-        {arrow('next','Página siguiente',page+1,page===totalPages)}
-        {arrow('last','Última página',totalPages,page===totalPages)}
+        {arrow('next','Página siguiente',page+1,page===pages)}
+        {arrow('last','Última página',pages,page===pages)}
       </div>
       {rows && <div className="bh-pagination-rows">
         <InputChoice label={rows.label ?? 'Filas por página'} value={rows.value} options={rows.options} onValueChange={rows.onChange}/>

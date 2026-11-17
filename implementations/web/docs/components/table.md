@@ -18,7 +18,7 @@ Usa Table para comparar valores alineados por columna y recorrer filas. La tabla
 
 ## Uso sin backend
 
-El anfitrión mantiene filas, orden y paginación. El viewport desplaza ambos ejes y Pagination queda fuera del área desplazable.
+El anfitrión mantiene filas, orden y paginación. El viewport desplaza ambos ejes y Pagination queda fuera del área desplazable. stickyActions=true fija la última columna (cabecera y cuerpo) a la derecha, con sombra lateral y superficie opaca. Coloca Icon Buttons Ghost small en sus celdas y declara su ancho en columnWidths. La cabecera acompaña el scroll vertical y Pagination permanece fuera.
 
 ```tsx
 'use client';
@@ -27,6 +27,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';
 import { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';
 import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
+import { EyeIcon } from '@phosphor-icons/react/dist/csr/Eye';
 import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
 import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
 import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
@@ -34,6 +35,8 @@ import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, To
 const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];
 
 export function TableExample() {
+  const [stickyActions,setStickyActions] = useState(false);
+  const [lastAction,setLastAction] = useState('');
   const [rows,setRows] = useState(() => Array.from({length:12},(_,index)=>index+1));
   const [page,setPage] = useState(1);
   const [pageSize,setPageSize] = useState(4);
@@ -55,17 +58,20 @@ export function TableExample() {
         const first=ordered[0];setRows(value=>value.filter(row=>row!==first));setSelected(value=>value.filter(row=>row!==first));setPage(1);
       }}/>
     </div>
+    <Checkbox label="Fijar acciones a la derecha" selected={stickyActions} onSelectedChange={setStickyActions}/>
     <p id="demo-table-selection" role="status">{selected.length} seleccionados de {rows.length} comprobantes</p>
+    <p role="status" id="demo-table-action">{lastAction}</p>
     <Table label="Comprobantes ficticios" className="max-w-[560px]" viewportHeight={124}
-      columnWidths={[100,148,220,280]}
+      stickyActions={stickyActions} columnWidths={stickyActions ? [100,148,220,280,136] : [100,148,220,280]}
       pagination={{currentPage:current,totalPages,onPageChange:setPage,label:'Páginas de comprobantes',
-        range:rows.length ? `${start+1}–${Math.min(start+pageSize,rows.length)} de ${rows.length}` : undefined,
+        totalRecords:rows.length,
         rows:{value:pageSize,options:[4,6],onChange:value=>{setPageSize(value);setPage(1);}}}}>
       <thead><tr>
         <TableCell item="header" label="Selección"/>
         <TableCell item="header" label="Folio" sort={reversed ? 'descending' : 'ascending'}/>
         <TableCell item="header" label="Proveedor"/>
         <TableCell item="header" label="Concepto"/>
+        {stickyActions && <TableCell item="header" label="Acciones"/>}
       </tr></thead>
       <tbody>{visible.map(row=>{
         const checked=selected.includes(row);
@@ -77,6 +83,14 @@ export function TableExample() {
           <TableCell label={`Folio ${row}`} state={state}/>
           <TableCell label={`Proveedor ficticio ${row}`} state={state}/>
           <TableCell label="Servicios de conciliación contable del periodo de muestra" state={state}/>
+          {stickyActions && <TableCell kind="action" state={state}>
+            <div className="bh-table-cell-actions">
+              <IconButton variant="ghost" size="small" icon={EyeIcon} label={`Ver folio ${row}`} title={`Ver folio ${row}`}
+                onClick={()=>setLastAction(`Vista local del folio ${row}`)}/>
+              <IconButton variant="ghost" size="small" icon={PencilSimpleIcon} label={`Editar folio ${row}`} title={`Editar folio ${row}`}
+                onClick={()=>setLastAction(`Edición local del folio ${row}`)}/>
+            </div>
+          </TableCell>}
         </tr>;
       })}</tbody>
     </Table>
@@ -96,6 +110,7 @@ export interface TableProps {
   viewportLabel?: string;
   viewportHeight?: number;
   columnWidths?: readonly number[];
+  stickyActions?: boolean;
   children: ReactNode;
   pagination?: PaginationProps;
   className?: string;
@@ -108,7 +123,7 @@ Las firmas siguientes se extraen de las funciones, incluidos sus valores por def
 
 ```tsx
 Table: {label, viewportLabel = `Desplazamiento de ${label}`, viewportHeight = 360,
-  columnWidths, children, pagination, className}: TableProps
+  columnWidths, stickyActions = false, children, pagination, className}: TableProps
 ```
 
 Props `on…` son callbacks locales. No atribuyen autorización, carga, guardado ni resultados de negocio.
@@ -125,7 +140,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [table.contract.v1.0.0.md](../../../../specs/components/table.contract.v1.0.0.md) · SHA-256 `c806d0f7971730c058a181c33ba05550ea9c943315d0a0d5bb0dffc559c9f46e`.
+- [table.contract.v1.0.0.md](../../../../specs/components/table.contract.v1.0.0.md) · SHA-256 `11a10407cc962ea6c2bbf5e2fd8ecb16e3f106cbbc5f100820284f098ccd602b`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

@@ -271,7 +271,7 @@
       "Checkbox"
     ],
     "category": "selección",
-    "notes": "Activa la opción indeterminada con Espacio; la segunda casilla está deshabilitada.",
+    "notes": "Elige labelPosition left o right cuando showLabel está activo. La etiqueta va a la derecha por defecto. El selector de la muestra permite alternar ambos lados; la segunda casilla está deshabilitada.",
     "base": "specs/components/checkbox.contract.v1.0.0.md",
     "amendments": [],
     "slots": {
@@ -603,7 +603,7 @@
       "Pagination"
     ],
     "category": "navegación",
-    "notes": "Mantiene una página actual y recibe opciones de filas del anfitrión. Compact puede ampliar targets a 44 px.",
+    "notes": "Pasa totalRecords para mostrar el rango y el total, por ejemplo 1-20 de 25 registros. El tamaño usa rows.value o pageSize, con default 20. El resumen permanece visible con cero o una sola página. rangePosition left/right ubica el resumen antes o después de todos los controles; default left, en Default y Compact.",
     "base": "specs/components/pagination.contract.v1.0.0.md",
     "amendments": [],
     "slots": {
@@ -768,7 +768,7 @@
     "exports": [
       "Table"
     ],
-    "notes": "El anfitrión mantiene filas, orden y paginación. El viewport desplaza ambos ejes y Pagination queda fuera del área desplazable.",
+    "notes": "El anfitrión mantiene filas, orden y paginación. El viewport desplaza ambos ejes y Pagination queda fuera del área desplazable. stickyActions=true fija la última columna (cabecera y cuerpo) a la derecha, con sombra lateral y superficie opaca. Coloca Icon Buttons Ghost small en sus celdas y declara su ancho en columnWidths. La cabecera acompaña el scroll vertical y Pagination permanece fuera.",
     "slots": {
       "status": "REQUIRED",
       "reason": "Rows admite una cabecera y cantidad variable de filas con identidad estable"

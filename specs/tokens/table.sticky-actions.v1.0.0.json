@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "contract": "TABLE-001",
+  "version": "1.0.0",
+  "authority": "EXPLICIT_USER_REQUEST",
+  "collections": [
+    {
+      "name": "semantic",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "Value"
+        }
+      ],
+      "variables": [
+        {
+          "id": "table-sticky:semantic:shadow-offset-x",
+          "targetId": "VariableID:329:948",
+          "name": "table-sticky-actions-shadow-offset-x",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Desplazamiento hacia el contenido de la sombra lateral. Derivado de la referencia y de la escala existente -4.",
+          "codeSyntax": {
+            "WEB": "var(--semantic-table-sticky-actions-shadow-offset-x)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:145:2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "component",
+      "modes": [
+        {
+          "name": "Contable",
+          "modeId": "Contable"
+        },
+        {
+          "name": "Administrativo",
+          "modeId": "Administrativo"
+        },
+        {
+          "name": "Servicios",
+          "modeId": "Servicios"
+        },
+        {
+          "name": "Personas",
+          "modeId": "Personas"
+        }
+      ],
+      "variables": [
+        {
+          "id": "table-sticky:component:color-effect-sticky-actions-shadow",
+          "targetId": "VariableID:329:949",
+          "name": "table/color/effect/sticky-actions-shadow",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "EFFECT_COLOR"
+          ],
+          "description": "Sombra lateral de Sticky Actions: color/effect/sticky-actions-shadow. Reutiliza la cadena component → semantic → primitives.",
+          "codeSyntax": {
+            "WEB": "var(--table-color-effect-sticky-actions-shadow)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:393:3"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:393:3"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:393:3"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:393:3"
+            }
+          }
+        },
+        {
+          "id": "table-sticky:component:size-sticky-actions-shadow-offset-x",
+          "targetId": "VariableID:329:950",
+          "name": "table/size/sticky-actions-shadow-offset-x",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "EFFECT_FLOAT"
+          ],
+          "description": "Sombra lateral de Sticky Actions: size/sticky-actions-shadow-offset-x. Reutiliza la cadena component → semantic → primitives.",
+          "codeSyntax": {
+            "WEB": "var(--table-size-sticky-actions-shadow-offset-x)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "table-sticky:semantic:shadow-offset-x"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "table-sticky:semantic:shadow-offset-x"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "table-sticky:semantic:shadow-offset-x"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "table-sticky:semantic:shadow-offset-x"
+            }
+          }
+        },
+        {
+          "id": "table-sticky:component:size-sticky-actions-shadow-offset-y",
+          "targetId": "VariableID:329:951",
+          "name": "table/size/sticky-actions-shadow-offset-y",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "EFFECT_FLOAT"
+          ],
+          "description": "Sombra lateral de Sticky Actions: size/sticky-actions-shadow-offset-y. Reutiliza la cadena component → semantic → primitives.",
+          "codeSyntax": {
+            "WEB": "var(--table-size-sticky-actions-shadow-offset-y)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            }
+          }
+        },
+        {
+          "id": "table-sticky:component:size-sticky-actions-shadow-radius",
+          "targetId": "VariableID:329:952",
+          "name": "table/size/sticky-actions-shadow-radius",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "EFFECT_FLOAT"
+          ],
+          "description": "Sombra lateral de Sticky Actions: size/sticky-actions-shadow-radius. Reutiliza la cadena component → semantic → primitives.",
+          "codeSyntax": {
+            "WEB": "var(--table-size-sticky-actions-shadow-radius)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:236"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:236"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:236"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:236"
+            }
+          }
+        },
+        {
+          "id": "table-sticky:component:size-sticky-actions-shadow-spread",
+          "targetId": "VariableID:329:953",
+          "name": "table/size/sticky-actions-shadow-spread",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "EFFECT_FLOAT"
+          ],
+          "description": "Sombra lateral de Sticky Actions: size/sticky-actions-shadow-spread. Reutiliza la cadena component → semantic → primitives.",
+          "codeSyntax": {
+            "WEB": "var(--table-size-sticky-actions-shadow-spread)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:393:7"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:393:7"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:393:7"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:393:7"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

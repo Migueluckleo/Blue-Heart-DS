@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "run": "2026-11-17-pagination-range-position",
+  "status": "COMPLETE_LOCAL",
+  "started": 1794941568.3972669,
+  "invocations": 2,
+  "retry_attempts": 0,
+  "previous_attempts": [
+    {
+      "started": 1794941503.7782001,
+      "elapsed_seconds": 4.186,
+      "status": "NEEDS_SEMANTICS",
+      "phases": [
+        {
+          "name": "documents",
+          "seconds": 2.569,
+          "status": "PASS",
+          "result": {
+            "status": "PASS",
+            "files": 1244,
+            "findings": 0,
+            "timings": {
+              "inventory": 0.704,
+              "metadata": 1.226,
+              "status": 0.239,
+              "validation": 0.324
+            }
+          }
+        },
+        {
+          "name": "graph_plan",
+          "seconds": 0.762,
+          "status": "PASS",
+          "result": {
+            "status": "PREPARED",
+            "run": "2026-11-17-pagination-range-position",
+            "semantic_files": 7,
+            "chunks": 1,
+            "next": "Extraer cada chunk según la skill Graphify y después ejecutar scripts/ds graph close --run 2026-11-17-pagination-range-position"
+          }
+        }
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "name": "documents",
+      "seconds": 1.403,
+      "status": "PASS",
+      "result": {
+        "status": "PASS",
+        "files": 1244,
+        "findings": 0,
+        "timings": {
+          "inventory": 0.704,
+          "metadata": 0.039,
+          "status": 0.229,
+          "validation": 0.365
+        }
+      }
+    },
+    {
+      "name": "graph_plan",
+      "seconds": 0.898,
+      "status": "PASS",
+      "result": {
+        "status": "PREPARED",
+        "run": "2026-11-17-pagination-range-position",
+        "semantic_files": 7,
+        "chunks": 1
+      }
+    },
+    {
+      "name": "graph",
+      "seconds": 15.372,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "run": "2026-11-17-pagination-range-position",
+        "files": 1244,
+        "nodes": 4793,
+        "edges": 8854,
+        "config_sha256": "64200147d7f8876266bfc3547518007dc7c1a5d29ea83d98bb44712ac6b7b6ed",
+        "output_sha256": {
+          "graph.json": "722acb44007bbe112c6ba262bacedbfb71164e65d2950b6b2ce838a5cb7f68a5",
+          "graph.html": "c2e8ac5415b7cce30e2bc95c7625bb6eb36afbd8a2ed221fa4fced865ec1610a",
+          "GRAPH_REPORT.md": "ffebf87c0057a4ca1e24dd603b4ab6b25c9a68a270dde8558eb4b9d9ce1b14d5",
+          "manifest.json": "204800a3965f90e778b25a373ebae43e07ac993a106e93b7422f4c44cb32bb4f",
+          ".graphify_health.json": "9a0610796916942790b41c821749f6520d5a1cf753a62e7e685bf3977d001086",
+          ".graphify_labels.json": "ca81479c879b8e58d4aa78ad2b346f610cf67a4df27477cc51ea0c6e17738c9b",
+          ".graphify_labels.json.sig": "1bc706a8a570dae9596aa202647e4fc88b1a43b5e4a0e33f1c7de5d1e27c57fe",
+          "cost.json": "f9bbe2c2b603f79e44edc9df287f38211014b5a4334b7a18912ee001c6a9b622"
+        },
+        "source_link_limitations": 0,
+        "semantic_usage": "UNAVAILABLE; not zero",
+        "scope": "Local corpus freshness, deterministic documentation checks, no Figma QA or design approval",
+        "extraction_tool_sha256": "593eb639d649019c81606b410999b243c76e43ad3b7988ee90a120e973dd8bd7",
+        "extraction_sha256": {
+          "ast.json": "7a07adabc96a21ba878e48375a0283b7b5f26865ecd23f8dcf234551a35600b7",
+          "structural-supplement.json": "1472d9392767a4319fed14b5bb4c24133cb4b15bde81189aa45c1eff7b7146c9",
+          "source-plan.json": "4f9e14966a930c6744bd8c344cbb6910884f41e8b621e9ff0a0024078a77bbde"
+        }
+      }
+    },
+    {
+      "name": "consumption",
+      "seconds": 7.56,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "index_bytes": 368964,
+        "documents": 116,
+        "relations": 268
+      }
+    },
+    {
+      "name": "catalog",
+      "seconds": 1.257,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "files": 1214,
+        "components": 51,
+        "ds_digest": "04d6680cf9f05cd60dc71b03b8f270f49da7cff39f8810174e3aba8fff8ea8c3",
+        "bundle_bytes": 5086636
+      }
+    },
+    {
+      "name": "skills_sync_export",
+      "seconds": 0.334,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "version": "1.0.6",
+        "ds_digest": "REMOTE",
+        "components": 0,
+        "errors": [],
+        "scope": "Package integrity and source freshness; no design approval or live Figma/web QA",
+        "operation": "UNCHANGED"
+      }
+    },
+    {
+      "name": "skills_integrity",
+      "seconds": 0.199,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "version": "1.0.6",
+        "ds_digest": "REMOTE",
+        "components": 0,
+        "errors": [],
+        "scope": "Package integrity and source freshness; no design approval or live Figma/web QA"
+      }
+    },
+    {
+      "name": "source_integrity",
+      "seconds": 0.242,
+      "status": "PASS",
+      "result": {
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "graph_integrity",
+      "seconds": 0.541,
+      "status": "PASS",
+      "result": {
+        "status": "CURRENT",
+        "errors": [],
+        "files": 1244,
+        "nodes": 4793,
+        "edges": 8854,
+        "scope": "Graph freshness/integrity, not Figma validation"
+      }
+    }
+  ],
+  "usage_start": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "usage_end": {
+    "status": "UNAVAILABLE",
+    "reason": "No account usage observation supplied"
+  },
+  "agent_tokens": "UNAVAILABLE",
+  "agent_tool_calls": "UNAVAILABLE",
+  "command_phase_calls": 9,
+  "publication": "NOT_RUN",
+  "installation": "NOT_REQUESTED; portable packages verified",
+  "publication_holds": [],
+  "reuse": {
+    "ds_core.corpus": {
+      "executed": 1,
+      "reused": 7
+    },
+    "yaml_files": {
+      "executed": 1,
+      "reused": 903,
+      "persisted_reused": 233
+    },
+    "ds_core.generate_status": {
+      "executed": 2,
+      "reused": 1
+    },
+    "ds_core.documentation_check": {
+      "executed": 2,
+      "reused": 0
+    },
+    "ds_skills.source_inputs": {
+      "executed": 1,
+      "reused": 10
+    },
+    "ds_consumption.validate_sources": {
+      "executed": 1,
+      "reused": 4
+    }
+  },
+  "hash_reads": 2752,
+  "source_fingerprint": "257e07f9e1c7777fdd78f15bcb78abd09737a1734de0ed7d67b2b893974ee13b",
+  "elapsed_seconds": 28.754,
+  "concurrent_attempts": 0
+}

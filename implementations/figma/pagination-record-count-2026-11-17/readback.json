@@ -1,0 +1,185 @@
+{
+  "fileKey": "yZsIpXywybsPDytjolwcP4",
+  "date": "2026-11-17",
+  "status": "PASS",
+  "mutation": {
+    "set": "109:36",
+    "properties": {
+      "Pages#109:20": {
+        "type": "SLOT",
+        "description": "Pagination item; el host mantiene orden, selección única y extremos.",
+        "slotSettings": {
+          "stretchChildOnInsert": false,
+          "displayEmptyByDefault": false,
+          "minChildren": 1,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": true
+        },
+        "preferredValues": [
+          {
+            "type": "COMPONENT_SET",
+            "key": "1e0df03cc8dae3cb07db84d8a5bc727ec54a4831"
+          }
+        ]
+      },
+      "Page label#109:26": {
+        "type": "TEXT",
+        "defaultValue": "Página 5 de 12"
+      },
+      "Range#109:29": {
+        "type": "TEXT",
+        "defaultValue": "81-100 de 240 registros"
+      },
+      "Show range#109:32": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Show rows per page#109:35": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "type": {
+        "type": "VARIANT",
+        "defaultValue": "default",
+        "variantOptions": [
+          "default",
+          "compact"
+        ]
+      }
+    },
+    "mutatedNodeIds": [
+      "109:36",
+      "109:34",
+      "109:35",
+      "109:37",
+      "109:177"
+    ],
+    "createdNodeIds": [
+      "319:34"
+    ],
+    "rangeIds": [
+      "109:37",
+      "319:34"
+    ],
+    "variants": [
+      {
+        "id": "109:34",
+        "name": "type=default",
+        "size": [
+          726,
+          72
+        ],
+        "children": [
+          [
+            "109:37",
+            "Range",
+            true,
+            24,
+            150
+          ],
+          [
+            "109:38",
+            "Pages",
+            true,
+            198,
+            392
+          ],
+          [
+            "109:144",
+            "Rows per page",
+            true,
+            614,
+            88
+          ]
+        ]
+      },
+      {
+        "id": "109:35",
+        "name": "type=compact",
+        "size": [
+          390,
+          72
+        ],
+        "children": [
+          [
+            "319:34",
+            "Range",
+            true,
+            24,
+            150
+          ],
+          [
+            "109:173",
+            "Left",
+            true,
+            186,
+            32
+          ],
+          [
+            "109:177",
+            "Page label",
+            true,
+            230,
+            92
+          ],
+          [
+            "109:178",
+            "Right",
+            true,
+            334,
+            32
+          ]
+        ]
+      }
+    ]
+  },
+  "figmaQA": {
+    "status": "PASS",
+    "set": "109:36",
+    "default": "109:34",
+    "defaultRange": "81-100 de 240 registros",
+    "showRange": true,
+    "rows": [
+      {
+        "type": "default",
+        "width": 703,
+        "height": 72,
+        "rangeWidth": 127,
+        "text": "1-20 de 25 registros"
+      },
+      {
+        "type": "compact",
+        "width": 359,
+        "height": 72,
+        "rangeWidth": 127,
+        "text": "1-20 de 25 registros"
+      }
+    ],
+    "deletedNodeIds": [
+      "320:34"
+    ]
+  },
+  "tokenQA": {
+    "status": "PASS",
+    "owners": [
+      {
+        "id": "109:36",
+        "name": "Pagination"
+      }
+    ],
+    "bindingCount": 54,
+    "overrideCount": 9,
+    "findings": []
+  },
+  "web": {
+    "unitTests": 12,
+    "build": "PASS",
+    "chrome": "PASS",
+    "firstPage": "1-20 de 25 registros",
+    "lastPage": "21-25 de 25 registros",
+    "empty": "0-0 de 0 registros",
+    "single": "1-1 de 1 registro",
+    "customRangeRetained": true,
+    "rowsPriority": true
+  }
+}

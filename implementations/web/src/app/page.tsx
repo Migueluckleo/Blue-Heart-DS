@@ -14,6 +14,7 @@ export default function Catalog() {
   return (
     <main data-ds-theme={theme.toLowerCase()} className="mx-auto max-w-5xl px-6 py-12">
       <h1 className="mb-5 text-3xl font-semibold">Catálogo BlueHeart DS</h1>
+      <a className="mb-6 block underline" href="playground/body.html">Abrir Playground de Body</a>
       <label className="mb-6 flex items-center gap-2">
         Tema
         <select className="rounded border px-2 py-1" value={theme} onChange={event => setTheme(event.target.value)}>

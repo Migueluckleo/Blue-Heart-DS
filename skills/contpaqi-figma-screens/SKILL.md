@@ -71,3 +71,11 @@ Entrega el enlace real al archivo y los nodos finales, capturas, mapa de compone
 ## Cobertura vacía
 
 Si el corte carece de familias aplicables, informa `BLOCKED` para el diseño que depende del DS y registra la cobertura faltante. Las ligas y las specs futuras habilitarán la siguiente fase.
+
+## Contenido específico de producto con Body
+
+Consulta también `assets/design-system/specs/foundations/token-visibility.contract.v1.0.0.md` y `assets/design-system/specs/tokens/visibility.body-only.correction.json`. Solo los tokens de la colección `component` cuyo nombre empiece exactamente por `body/` son la interfaz de tokens para construir contenido específico de producto, con scopes limitados a su función. Un nombre de otra familia que contenga body no pertenece a Body. Los demás tokens siguen funcionando como dependencias internas con scopes vacíos: conserva los tokens propios de componentes e instancias y su cadena component → semantic → primitive, sin sustituirlos por Body o literales. Mantén los cinco estilos Body y sus enlaces. Para altas/correcciones aplica TOKEN-QA-03, relee scopes y verifica valores, aliases, bindings y publicación; no uses ALL_SCOPES ni cambies hiddenFromPublishing. Los datos históricos conservan la captura original; para scopes efectivos aplica la corrección vigente.
+
+Para Cards, Widgets y composiciones bajo demanda, lee `assets/design-system/specs/foundations/body.contract.v1.0.0.md` y sus datos `assets/design-system/specs/tokens/body.v1.0.0.json` desde el snapshot ya verificado. Body es una foundation; se abre por su ruta verificada, no como una familia de componente del índice. Aplica sus roles `body/*`, estilos tipográficos y estándar de espaciado. Sus tallas lg/md/xs tienen su propio mapeo a la escala semántica: consulta los aliases, no deduzcas valores por el nombre.
+
+Estas composiciones pertenecen al producto o prototipo. Reutiliza dentro de ellas los controles oficiales que correspondan y conserva los tokens propios de esos controles. El contenido visual a medida consume Body → semantic → primitives; las muestras de Playground no definen una familia de Cards del DS.

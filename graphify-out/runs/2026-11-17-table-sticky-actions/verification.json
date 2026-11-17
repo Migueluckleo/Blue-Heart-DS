@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-17-table-sticky-actions",
+  "status": "PASS",
+  "errors": [],
+  "corpus_files": 1248,
+  "represented_files": 1248,
+  "graph_nodes": 4817,
+  "graph_edges": 8897,
+  "protected_data": {
+    "specs/tokens/blueheart-variables.v0.1.2.json": {
+      "sha256": "09a96d3707735fa129e3cfa99de6ccac1a9d94ccf5cc19fa5d282de867629993",
+      "authority": "specs/foundations/blueheart-variables.contract.v0.1.2.md"
+    },
+    "specs/data/buttons.v1.0.0.json": {
+      "sha256": "d271e1de91be664fe0c78eef8ea311fdafa52073535f4349a7d78f7611d4c9fa",
+      "authority": "specs/components/buttons.contract.v1.0.0.md"
+    },
+    "specs/data/loader.v1.0.0.json": {
+      "sha256": "09a7070ebb3dd5b583ce613e61a59c3b8321fd75060da671a13a1b429049abfe",
+      "authority": "specs/components/loader.contract.v1.0.0.md"
+    }
+  },
+  "source_link_limitations": [],
+  "scoped_path_smoke_tests": [
+    {
+      "from": "protocols/05-SELF-DOCUMENTATION-AND-TRACEABILITY.md",
+      "to": "references/EFFICIENT-CLOSURE.md",
+      "path": [
+        "protocols_05_self_documentation_and_traceability_artifact_md",
+        "references_efficient_closure_artifact_md"
+      ]
+    },
+    {
+      "from": "protocols/07-WEB-COMPONENTS-AND-TECHNICAL-DOCUMENTATION.md",
+      "to": "implementations/web/README.md",
+      "path": [
+        "protocols_07_web_components_and_technical_documentation_artifact_md",
+        "implementations_web_readme_artifact_md"
+      ]
+    },
+    {
+      "from": "AGENTS.md",
+      "to": "protocols/SLOTS-REVIEW-AND-IMPLEMENTATION.md",
+      "path": [
+        "agents_artifact_md",
+        "protocols_slots_review_and_implementation_artifact_md"
+      ]
+    },
+    {
+      "from": "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+      "to": "specs/tokens/blueheart-variables.v0.1.2.json",
+      "path": [
+        "specs_foundations_blueheart_variables_contract_v0_1_2_artifact_md",
+        "specs_tokens_blueheart_variables_v0_1_2_artifact_json"
+      ]
+    },
+    {
+      "from": "specs/components/buttons.contract.v1.0.0.md",
+      "to": "specs/data/buttons.v1.0.0.json",
+      "path": [
+        "specs_components_buttons_contract_v1_0_0_artifact_md",
+        "specs_data_buttons_v1_0_0_artifact_json"
+      ]
+    },
+    {
+      "from": "specs/components/loader.contract.v1.0.0.md",
+      "to": "specs/data/loader.v1.0.0.json",
+      "path": [
+        "specs_components_loader_contract_v1_0_0_artifact_md",
+        "specs_data_loader_v1_0_0_artifact_json"
+      ]
+    }
+  ],
+  "reference_only_missing_paths": [
+    "@playwright/test"
+  ],
+  "output_sha256": {
+    "graph.json": "d1bcffc5e8ff3c9c752d60220fd36993f6834496de04d848bf4d239e7b290e3d",
+    "graph.html": "f0fe4b8c789d92499362268d52ef244ca4a9e19094c3339e9f7e0c21135dd1eb",
+    "GRAPH_REPORT.md": "7eec9eb9e2144bb98b2f5c1aec69678e37f4c46fbb7d9ab80a8bf79107dcf090"
+  },
+  "scope": "Graph freshness, file coverage and integrity only; no live Figma revalidation"
+}

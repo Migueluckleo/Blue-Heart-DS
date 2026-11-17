@@ -18,7 +18,7 @@ Usa Pagination para un conjunto de resultados que pueda dividirse en páginas. G
 
 ## Uso sin backend
 
-Mantiene una página actual y recibe opciones de filas del anfitrión. Compact puede ampliar targets a 44 px.
+Pasa totalRecords para mostrar el rango y el total, por ejemplo 1-20 de 25 registros. El tamaño usa rows.value o pageSize, con default 20. El resumen permanece visible con cero o una sola página. rangePosition left/right ubica el resumen antes o después de todos los controles; default left, en Default y Compact.
 
 ```tsx
 'use client';
@@ -27,6 +27,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';
 import { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';
 import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
+import { EyeIcon } from '@phosphor-icons/react/dist/csr/Eye';
 import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
 import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
 import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
@@ -36,19 +37,27 @@ const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading'
 export function PaginationExample() {
   const [page, setPage] = useState(5);
   const [rows, setRows] = useState(20);
+  const [rangePosition, setRangePosition] = useState<'left' | 'right'>('left');
   const [compactPage, setCompactPage] = useState(1);
   const results = useRef<HTMLHeadingElement>(null);
   const total = 240;
   return <div className="my-4 space-y-4">
+    <label className="flex items-center gap-2">
+      Posición del resumen de registros
+      <select value={rangePosition} onChange={event => setRangePosition(event.target.value as 'left' | 'right')}>
+        <option value="left">Izquierda</option>
+        <option value="right">Derecha</option>
+      </select>
+    </label>
     <h3 id="demo-pagination-results" ref={results} tabIndex={-1}>Comprobantes de la página {page}</h3>
     <div className="overflow-x-auto">
       <Pagination label="Paginación de comprobantes" currentPage={page} totalPages={Math.ceil(total / rows)}
         onPageChange={next => {setPage(next);results.current?.focus();}}
-        range={`${(page - 1) * rows + 1}–${Math.min(page * rows,total)} de ${total}`}
+        totalRecords={total} rangePosition={rangePosition}
         rows={{value:rows,options:[20,50,100],onChange:next=>{setRows(next);setPage(1);}}}/>
     </div>
     <Pagination label="Paginación de vista compacta" type="compact" currentPage={compactPage}
-      totalPages={3} onPageChange={setCompactPage} touchTargets/>
+      totalRecords={55} pageSize={20} rangePosition={rangePosition} totalPages={3} onPageChange={setCompactPage} touchTargets/>
   </div>;
 }
 ```
@@ -67,6 +76,9 @@ export interface PaginationProps {
   type?: 'default' | 'compact';
   label?: string;
   range?: string;
+  rangePosition?: 'left' | 'right';
+  totalRecords?: number;
+  pageSize?: number;
   pageLabel?: string;
   touchTargets?: boolean;
   rows?: {
@@ -85,7 +97,7 @@ Las firmas siguientes se extraen de las funciones, incluidos sus valores por def
 
 ```tsx
 Pagination: {currentPage, totalPages, onPageChange, type = 'default', label = 'Paginación',
-  range, pageLabel, touchTargets = false, rows}: PaginationProps
+  range, rangePosition = 'left', totalRecords, pageSize = 20, pageLabel, touchTargets = false, rows}: PaginationProps
 ```
 
 Props `on…` son callbacks locales. No atribuyen autorización, carga, guardado ni resultados de negocio.
@@ -102,7 +114,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [pagination.contract.v1.0.0.md](../../../../specs/components/pagination.contract.v1.0.0.md) · SHA-256 `a41e1cba8b736289575af08a6db2ca01a44112ccc6eaf190618345b7f5e4cb65`.
+- [pagination.contract.v1.0.0.md](../../../../specs/components/pagination.contract.v1.0.0.md) · SHA-256 `a7f1fe70b993ba7b7aa6805513657ed66f85b21cc2c8e803f7eb313a83957c1b`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

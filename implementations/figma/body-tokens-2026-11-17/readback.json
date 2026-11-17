@@ -1,0 +1,2277 @@
+{
+  "schema_version": 1,
+  "contract_id": "FOUNDATIONS-BODY-001",
+  "date": "2026-11-17",
+  "file_key": "yZsIpXywybsPDytjolwcP4",
+  "component_token_count": 33,
+  "new_semantic_roles": [
+    "warning-strong"
+  ],
+  "text_style_count": 5,
+  "token_qa": {
+    "status": "PASS",
+    "componentTokens": 33,
+    "modes": [
+      "Contable",
+      "Administrativo",
+      "Servicios",
+      "Personas"
+    ],
+    "collections": [
+      {
+        "id": "VariableCollectionId:6:21",
+        "name": "semantic"
+      },
+      {
+        "id": "VariableCollectionId:6:22",
+        "name": "component"
+      },
+      {
+        "id": "VariableCollectionId:10:2",
+        "name": "primitives"
+      }
+    ],
+    "tokens": [
+      {
+        "id": "VariableID:344:3",
+        "name": "body/color/text/primary",
+        "scopes": [
+          "TEXT_FILL"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-color-text-primary)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "neutral-maximum",
+            "primitive": "neutral/900",
+            "value": {
+              "r": 0.05882352963089943,
+              "g": 0.09019608050584793,
+              "b": 0.16470588743686676,
+              "a": 1
+            }
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "neutral-maximum",
+            "primitive": "neutral/900",
+            "value": {
+              "r": 0.05882352963089943,
+              "g": 0.09019608050584793,
+              "b": 0.16470588743686676,
+              "a": 1
+            }
+          },
+          {
+            "name": "Servicios",
+            "semantic": "neutral-maximum",
+            "primitive": "neutral/900",
+            "value": {
+              "r": 0.05882352963089943,
+              "g": 0.09019608050584793,
+              "b": 0.16470588743686676,
+              "a": 1
+            }
+          },
+          {
+            "name": "Personas",
+            "semantic": "neutral-maximum",
+            "primitive": "neutral/900",
+            "value": {
+              "r": 0.05882352963089943,
+              "g": 0.09019608050584793,
+              "b": 0.16470588743686676,
+              "a": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:4",
+        "name": "body/color/text/secondary",
+        "scopes": [
+          "TEXT_FILL"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-color-text-secondary)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "neutral-strong",
+            "primitive": "neutral/600",
+            "value": {
+              "r": 0.27843138575553894,
+              "g": 0.3333333432674408,
+              "b": 0.4117647111415863,
+              "a": 1
+            }
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "neutral-strong",
+            "primitive": "neutral/600",
+            "value": {
+              "r": 0.27843138575553894,
+              "g": 0.3333333432674408,
+              "b": 0.4117647111415863,
+              "a": 1
+            }
+          },
+          {
+            "name": "Servicios",
+            "semantic": "neutral-strong",
+            "primitive": "neutral/600",
+            "value": {
+              "r": 0.27843138575553894,
+              "g": 0.3333333432674408,
+              "b": 0.4117647111415863,
+              "a": 1
+            }
+          },
+          {
+            "name": "Personas",
+            "semantic": "neutral-strong",
+            "primitive": "neutral/600",
+            "value": {
+              "r": 0.27843138575553894,
+              "g": 0.3333333432674408,
+              "b": 0.4117647111415863,
+              "a": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:5",
+        "name": "body/color/text/brand",
+        "scopes": [
+          "TEXT_FILL"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-color-text-brand)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "brand-strong",
+            "primitive": "blue/500",
+            "value": {
+              "r": 0.15294118225574493,
+              "g": 0.18431372940540314,
+              "b": 0.8352941274642944,
+              "a": 1
+            }
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "brand-administrativo-strong",
+            "primitive": "green/600",
+            "value": {
+              "r": 0,
+              "g": 0.3137255012989044,
+              "b": 0.21960784494876862,
+              "a": 1
+            }
+          },
+          {
+            "name": "Servicios",
+            "semantic": "brand-servicios-strong",
+            "primitive": "orange/700",
+            "value": {
+              "r": 0.686274528503418,
+              "g": 0.07450980693101883,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "name": "Personas",
+            "semantic": "brand-personas-strong",
+            "primitive": "purple/600",
+            "value": {
+              "r": 0.3450980484485626,
+              "g": 0,
+              "b": 0.7176470756530762,
+              "a": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:6",
+        "name": "body/color/text/warning",
+        "scopes": [
+          "TEXT_FILL"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-color-text-warning)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "warning-strong",
+            "primitive": "amber/800",
+            "value": {
+              "r": 0.47843137383461,
+              "g": 0.29019609093666077,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "warning-strong",
+            "primitive": "amber/800",
+            "value": {
+              "r": 0.47843137383461,
+              "g": 0.29019609093666077,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "name": "Servicios",
+            "semantic": "warning-strong",
+            "primitive": "amber/800",
+            "value": {
+              "r": 0.47843137383461,
+              "g": 0.29019609093666077,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "name": "Personas",
+            "semantic": "warning-strong",
+            "primitive": "amber/800",
+            "value": {
+              "r": 0.47843137383461,
+              "g": 0.29019609093666077,
+              "b": 0,
+              "a": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:7",
+        "name": "body/color/text/success",
+        "scopes": [
+          "TEXT_FILL"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-color-text-success)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "positive-default",
+            "primitive": "emerald/600",
+            "value": {
+              "r": 0.03529411926865578,
+              "g": 0.5137255191802979,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "positive-default",
+            "primitive": "emerald/600",
+            "value": {
+              "r": 0.03529411926865578,
+              "g": 0.5137255191802979,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "name": "Servicios",
+            "semantic": "positive-default",
+            "primitive": "emerald/600",
+            "value": {
+              "r": 0.03529411926865578,
+              "g": 0.5137255191802979,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "name": "Personas",
+            "semantic": "positive-default",
+            "primitive": "emerald/600",
+            "value": {
+              "r": 0.03529411926865578,
+              "g": 0.5137255191802979,
+              "b": 0,
+              "a": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:8",
+        "name": "body/color/text/danger",
+        "scopes": [
+          "TEXT_FILL"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-color-text-danger)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "danger-default",
+            "primitive": "red/600",
+            "value": {
+              "r": 0.8313725590705872,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "danger-default",
+            "primitive": "red/600",
+            "value": {
+              "r": 0.8313725590705872,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "name": "Servicios",
+            "semantic": "danger-default",
+            "primitive": "red/600",
+            "value": {
+              "r": 0.8313725590705872,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            }
+          },
+          {
+            "name": "Personas",
+            "semantic": "danger-default",
+            "primitive": "red/600",
+            "value": {
+              "r": 0.8313725590705872,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:9",
+        "name": "body/color/text/information",
+        "scopes": [
+          "TEXT_FILL"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-color-text-information)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "information-default",
+            "primitive": "cyan/600",
+            "value": {
+              "r": 0,
+              "g": 0.38823530077934265,
+              "b": 0.6705882549285889,
+              "a": 1
+            }
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "information-default",
+            "primitive": "cyan/600",
+            "value": {
+              "r": 0,
+              "g": 0.38823530077934265,
+              "b": 0.6705882549285889,
+              "a": 1
+            }
+          },
+          {
+            "name": "Servicios",
+            "semantic": "information-default",
+            "primitive": "cyan/600",
+            "value": {
+              "r": 0,
+              "g": 0.38823530077934265,
+              "b": 0.6705882549285889,
+              "a": 1
+            }
+          },
+          {
+            "name": "Personas",
+            "semantic": "information-default",
+            "primitive": "cyan/600",
+            "value": {
+              "r": 0,
+              "g": 0.38823530077934265,
+              "b": 0.6705882549285889,
+              "a": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:10",
+        "name": "body/color/bg/primary",
+        "scopes": [
+          "FRAME_FILL",
+          "SHAPE_FILL"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-color-bg-primary)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "neutral-base",
+            "primitive": "neutral/100",
+            "value": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "neutral-base",
+            "primitive": "neutral/100",
+            "value": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          {
+            "name": "Servicios",
+            "semantic": "neutral-base",
+            "primitive": "neutral/100",
+            "value": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          {
+            "name": "Personas",
+            "semantic": "neutral-base",
+            "primitive": "neutral/100",
+            "value": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:11",
+        "name": "body/color/bg/emphasis",
+        "scopes": [
+          "FRAME_FILL",
+          "SHAPE_FILL"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-color-bg-emphasis)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "neutral-subtle",
+            "primitive": "neutral/200",
+            "value": {
+              "r": 0.9450980424880981,
+              "g": 0.9607843160629272,
+              "b": 0.9764705896377563,
+              "a": 1
+            }
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "neutral-subtle",
+            "primitive": "neutral/200",
+            "value": {
+              "r": 0.9450980424880981,
+              "g": 0.9607843160629272,
+              "b": 0.9764705896377563,
+              "a": 1
+            }
+          },
+          {
+            "name": "Servicios",
+            "semantic": "neutral-subtle",
+            "primitive": "neutral/200",
+            "value": {
+              "r": 0.9450980424880981,
+              "g": 0.9607843160629272,
+              "b": 0.9764705896377563,
+              "a": 1
+            }
+          },
+          {
+            "name": "Personas",
+            "semantic": "neutral-subtle",
+            "primitive": "neutral/200",
+            "value": {
+              "r": 0.9450980424880981,
+              "g": 0.9607843160629272,
+              "b": 0.9764705896377563,
+              "a": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:12",
+        "name": "body/font/heading/h1/size",
+        "scopes": [
+          "FONT_SIZE"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-font-heading-h1-size)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "font-size-xl",
+            "primitive": "font-size/24",
+            "value": 24
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "font-size-xl",
+            "primitive": "font-size/24",
+            "value": 24
+          },
+          {
+            "name": "Servicios",
+            "semantic": "font-size-xl",
+            "primitive": "font-size/24",
+            "value": 24
+          },
+          {
+            "name": "Personas",
+            "semantic": "font-size-xl",
+            "primitive": "font-size/24",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:13",
+        "name": "body/font/heading/h1/line-height",
+        "scopes": [
+          "LINE_HEIGHT"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-font-heading-h1-line-height)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "font-line-height-xl",
+            "primitive": "font-line-height/32",
+            "value": 32
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "font-line-height-xl",
+            "primitive": "font-line-height/32",
+            "value": 32
+          },
+          {
+            "name": "Servicios",
+            "semantic": "font-line-height-xl",
+            "primitive": "font-line-height/32",
+            "value": 32
+          },
+          {
+            "name": "Personas",
+            "semantic": "font-line-height-xl",
+            "primitive": "font-line-height/32",
+            "value": 32
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:14",
+        "name": "body/font/heading/h2/size",
+        "scopes": [
+          "FONT_SIZE"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-font-heading-h2-size)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "font-size-lg",
+            "primitive": "font-size/20",
+            "value": 20
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "font-size-lg",
+            "primitive": "font-size/20",
+            "value": 20
+          },
+          {
+            "name": "Servicios",
+            "semantic": "font-size-lg",
+            "primitive": "font-size/20",
+            "value": 20
+          },
+          {
+            "name": "Personas",
+            "semantic": "font-size-lg",
+            "primitive": "font-size/20",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:15",
+        "name": "body/font/heading/h2/line-height",
+        "scopes": [
+          "LINE_HEIGHT"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-font-heading-h2-line-height)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "font-line-height-lg",
+            "primitive": "font-line-height/28",
+            "value": 28
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "font-line-height-lg",
+            "primitive": "font-line-height/28",
+            "value": 28
+          },
+          {
+            "name": "Servicios",
+            "semantic": "font-line-height-lg",
+            "primitive": "font-line-height/28",
+            "value": 28
+          },
+          {
+            "name": "Personas",
+            "semantic": "font-line-height-lg",
+            "primitive": "font-line-height/28",
+            "value": 28
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:16",
+        "name": "body/font/heading/h3/size",
+        "scopes": [
+          "FONT_SIZE"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-font-heading-h3-size)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "font-size-md",
+            "primitive": "font-size/16",
+            "value": 16
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "font-size-md",
+            "primitive": "font-size/16",
+            "value": 16
+          },
+          {
+            "name": "Servicios",
+            "semantic": "font-size-md",
+            "primitive": "font-size/16",
+            "value": 16
+          },
+          {
+            "name": "Personas",
+            "semantic": "font-size-md",
+            "primitive": "font-size/16",
+            "value": 16
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:17",
+        "name": "body/font/heading/h3/line-height",
+        "scopes": [
+          "LINE_HEIGHT"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-font-heading-h3-line-height)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "font-line-height-md",
+            "primitive": "font-line-height/24",
+            "value": 24
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "font-line-height-md",
+            "primitive": "font-line-height/24",
+            "value": 24
+          },
+          {
+            "name": "Servicios",
+            "semantic": "font-line-height-md",
+            "primitive": "font-line-height/24",
+            "value": 24
+          },
+          {
+            "name": "Personas",
+            "semantic": "font-line-height-md",
+            "primitive": "font-line-height/24",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:18",
+        "name": "body/font/description/size",
+        "scopes": [
+          "FONT_SIZE"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-font-description-size)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "font-size-sm",
+            "primitive": "font-size/14",
+            "value": 14
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "font-size-sm",
+            "primitive": "font-size/14",
+            "value": 14
+          },
+          {
+            "name": "Servicios",
+            "semantic": "font-size-sm",
+            "primitive": "font-size/14",
+            "value": 14
+          },
+          {
+            "name": "Personas",
+            "semantic": "font-size-sm",
+            "primitive": "font-size/14",
+            "value": 14
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:19",
+        "name": "body/font/description/line-height",
+        "scopes": [
+          "LINE_HEIGHT"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-font-description-line-height)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "font-line-height-sm",
+            "primitive": "font-line-height/20",
+            "value": 20
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "font-line-height-sm",
+            "primitive": "font-line-height/20",
+            "value": 20
+          },
+          {
+            "name": "Servicios",
+            "semantic": "font-line-height-sm",
+            "primitive": "font-line-height/20",
+            "value": 20
+          },
+          {
+            "name": "Personas",
+            "semantic": "font-line-height-sm",
+            "primitive": "font-line-height/20",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:20",
+        "name": "body/font/caption/size",
+        "scopes": [
+          "FONT_SIZE"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-font-caption-size)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "font-size-xs",
+            "primitive": "font-size/12",
+            "value": 12
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "font-size-xs",
+            "primitive": "font-size/12",
+            "value": 12
+          },
+          {
+            "name": "Servicios",
+            "semantic": "font-size-xs",
+            "primitive": "font-size/12",
+            "value": 12
+          },
+          {
+            "name": "Personas",
+            "semantic": "font-size-xs",
+            "primitive": "font-size/12",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:21",
+        "name": "body/font/caption/line-height",
+        "scopes": [
+          "LINE_HEIGHT"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-font-caption-line-height)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "font-line-height-xs",
+            "primitive": "font-line-height/16",
+            "value": 16
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "font-line-height-xs",
+            "primitive": "font-line-height/16",
+            "value": 16
+          },
+          {
+            "name": "Servicios",
+            "semantic": "font-line-height-xs",
+            "primitive": "font-line-height/16",
+            "value": 16
+          },
+          {
+            "name": "Personas",
+            "semantic": "font-line-height-xs",
+            "primitive": "font-line-height/16",
+            "value": 16
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:22",
+        "name": "body/font/family",
+        "scopes": [
+          "FONT_FAMILY"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-font-family)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "font-family-base",
+            "primitive": "font-family/manrope",
+            "value": "Manrope"
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "font-family-base",
+            "primitive": "font-family/manrope",
+            "value": "Manrope"
+          },
+          {
+            "name": "Servicios",
+            "semantic": "font-family-base",
+            "primitive": "font-family/manrope",
+            "value": "Manrope"
+          },
+          {
+            "name": "Personas",
+            "semantic": "font-family-base",
+            "primitive": "font-family/manrope",
+            "value": "Manrope"
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:23",
+        "name": "body/font/heading/weight",
+        "scopes": [
+          "FONT_STYLE"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-font-heading-weight)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "font-weight-semibold",
+            "primitive": "font-weight/semibold",
+            "value": "Semibold"
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "font-weight-semibold",
+            "primitive": "font-weight/semibold",
+            "value": "Semibold"
+          },
+          {
+            "name": "Servicios",
+            "semantic": "font-weight-semibold",
+            "primitive": "font-weight/semibold",
+            "value": "Semibold"
+          },
+          {
+            "name": "Personas",
+            "semantic": "font-weight-semibold",
+            "primitive": "font-weight/semibold",
+            "value": "Semibold"
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:24",
+        "name": "body/font/text/weight",
+        "scopes": [
+          "FONT_STYLE"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-font-text-weight)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "font-weight-regular",
+            "primitive": "font-weight/regular",
+            "value": "Regular"
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "font-weight-regular",
+            "primitive": "font-weight/regular",
+            "value": "Regular"
+          },
+          {
+            "name": "Servicios",
+            "semantic": "font-weight-regular",
+            "primitive": "font-weight/regular",
+            "value": "Regular"
+          },
+          {
+            "name": "Personas",
+            "semantic": "font-weight-regular",
+            "primitive": "font-weight/regular",
+            "value": "Regular"
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:25",
+        "name": "body/font/tracking",
+        "scopes": [
+          "LETTER_SPACING"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-font-tracking)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "font-letter-spacing-normal",
+            "primitive": "font-letter-spacing/normal",
+            "value": 0
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "font-letter-spacing-normal",
+            "primitive": "font-letter-spacing/normal",
+            "value": 0
+          },
+          {
+            "name": "Servicios",
+            "semantic": "font-letter-spacing-normal",
+            "primitive": "font-letter-spacing/normal",
+            "value": 0
+          },
+          {
+            "name": "Personas",
+            "semantic": "font-letter-spacing-normal",
+            "primitive": "font-letter-spacing/normal",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:26",
+        "name": "body/spacing/xl",
+        "scopes": [
+          "GAP"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-spacing-xl)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "spacing-2xl",
+            "primitive": "spacing/32",
+            "value": 32
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "spacing-2xl",
+            "primitive": "spacing/32",
+            "value": 32
+          },
+          {
+            "name": "Servicios",
+            "semantic": "spacing-2xl",
+            "primitive": "spacing/32",
+            "value": 32
+          },
+          {
+            "name": "Personas",
+            "semantic": "spacing-2xl",
+            "primitive": "spacing/32",
+            "value": 32
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:27",
+        "name": "body/spacing/lg",
+        "scopes": [
+          "GAP"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-spacing-lg)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "spacing-xl",
+            "primitive": "spacing/24",
+            "value": 24
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "spacing-xl",
+            "primitive": "spacing/24",
+            "value": 24
+          },
+          {
+            "name": "Servicios",
+            "semantic": "spacing-xl",
+            "primitive": "spacing/24",
+            "value": 24
+          },
+          {
+            "name": "Personas",
+            "semantic": "spacing-xl",
+            "primitive": "spacing/24",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:28",
+        "name": "body/spacing/md",
+        "scopes": [
+          "GAP"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-spacing-md)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "spacing-lg",
+            "primitive": "spacing/16",
+            "value": 16
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "spacing-lg",
+            "primitive": "spacing/16",
+            "value": 16
+          },
+          {
+            "name": "Servicios",
+            "semantic": "spacing-lg",
+            "primitive": "spacing/16",
+            "value": 16
+          },
+          {
+            "name": "Personas",
+            "semantic": "spacing-lg",
+            "primitive": "spacing/16",
+            "value": 16
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:29",
+        "name": "body/spacing/sm",
+        "scopes": [
+          "GAP"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-spacing-sm)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "spacing-sm",
+            "primitive": "spacing/8",
+            "value": 8
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "spacing-sm",
+            "primitive": "spacing/8",
+            "value": 8
+          },
+          {
+            "name": "Servicios",
+            "semantic": "spacing-sm",
+            "primitive": "spacing/8",
+            "value": 8
+          },
+          {
+            "name": "Personas",
+            "semantic": "spacing-sm",
+            "primitive": "spacing/8",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:30",
+        "name": "body/spacing/xs",
+        "scopes": [
+          "GAP"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-spacing-xs)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "spacing-xs",
+            "primitive": "spacing/4",
+            "value": 4
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "spacing-xs",
+            "primitive": "spacing/4",
+            "value": 4
+          },
+          {
+            "name": "Servicios",
+            "semantic": "spacing-xs",
+            "primitive": "spacing/4",
+            "value": 4
+          },
+          {
+            "name": "Personas",
+            "semantic": "spacing-xs",
+            "primitive": "spacing/4",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:31",
+        "name": "body/spacing/null",
+        "scopes": [
+          "GAP"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-spacing-null)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "spacing-none",
+            "primitive": "spacing/0",
+            "value": 0
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "spacing-none",
+            "primitive": "spacing/0",
+            "value": 0
+          },
+          {
+            "name": "Servicios",
+            "semantic": "spacing-none",
+            "primitive": "spacing/0",
+            "value": 0
+          },
+          {
+            "name": "Personas",
+            "semantic": "spacing-none",
+            "primitive": "spacing/0",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:32",
+        "name": "body/radius/lg",
+        "scopes": [
+          "CORNER_RADIUS"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-radius-lg)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "radius-xl",
+            "primitive": "radius/16",
+            "value": 16
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "radius-xl",
+            "primitive": "radius/16",
+            "value": 16
+          },
+          {
+            "name": "Servicios",
+            "semantic": "radius-xl",
+            "primitive": "radius/16",
+            "value": 16
+          },
+          {
+            "name": "Personas",
+            "semantic": "radius-xl",
+            "primitive": "radius/16",
+            "value": 16
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:33",
+        "name": "body/radius/md",
+        "scopes": [
+          "CORNER_RADIUS"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-radius-md)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "radius-md",
+            "primitive": "radius/8",
+            "value": 8
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "radius-md",
+            "primitive": "radius/8",
+            "value": 8
+          },
+          {
+            "name": "Servicios",
+            "semantic": "radius-md",
+            "primitive": "radius/8",
+            "value": 8
+          },
+          {
+            "name": "Personas",
+            "semantic": "radius-md",
+            "primitive": "radius/8",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:34",
+        "name": "body/radius/sm",
+        "scopes": [
+          "CORNER_RADIUS"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-radius-sm)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "radius-sm",
+            "primitive": "radius/4",
+            "value": 4
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "radius-sm",
+            "primitive": "radius/4",
+            "value": 4
+          },
+          {
+            "name": "Servicios",
+            "semantic": "radius-sm",
+            "primitive": "radius/4",
+            "value": 4
+          },
+          {
+            "name": "Personas",
+            "semantic": "radius-sm",
+            "primitive": "radius/4",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "VariableID:344:35",
+        "name": "body/radius/null",
+        "scopes": [
+          "CORNER_RADIUS"
+        ],
+        "codeSyntax": {
+          "WEB": "var(--body-radius-null)"
+        },
+        "modes": [
+          {
+            "name": "Contable",
+            "semantic": "radius-none",
+            "primitive": "radius/0",
+            "value": 0
+          },
+          {
+            "name": "Administrativo",
+            "semantic": "radius-none",
+            "primitive": "radius/0",
+            "value": 0
+          },
+          {
+            "name": "Servicios",
+            "semantic": "radius-none",
+            "primitive": "radius/0",
+            "value": 0
+          },
+          {
+            "name": "Personas",
+            "semantic": "radius-none",
+            "primitive": "radius/0",
+            "value": 0
+          }
+        ]
+      }
+    ],
+    "styles": [
+      {
+        "id": "S:67e5f01c76a09f73a80919a34a90e56b700f3bdc,",
+        "name": "body/heading/h1",
+        "size": 24,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 32
+        },
+        "font": {
+          "family": "Manrope",
+          "style": "SemiBold",
+          "variationSettings": {
+            "wght": 600
+          }
+        },
+        "boundVariables": {
+          "letterSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:25"
+          },
+          "fontSize": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:12"
+          },
+          "fontStyle": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:23"
+          },
+          "fontFamily": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:22"
+          },
+          "lineHeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:13"
+          }
+        }
+      },
+      {
+        "id": "S:4c3bfd551b52250ae173fc7d37378cb1f986f646,",
+        "name": "body/heading/h2",
+        "size": 20,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 28
+        },
+        "font": {
+          "family": "Manrope",
+          "style": "SemiBold",
+          "variationSettings": {
+            "wght": 600
+          }
+        },
+        "boundVariables": {
+          "letterSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:25"
+          },
+          "fontSize": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:14"
+          },
+          "fontStyle": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:23"
+          },
+          "fontFamily": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:22"
+          },
+          "lineHeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:15"
+          }
+        }
+      },
+      {
+        "id": "S:fb6e99abaaf76882ef5f3ea91abdb1f1a763e5ae,",
+        "name": "body/heading/h3",
+        "size": 16,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 24
+        },
+        "font": {
+          "family": "Manrope",
+          "style": "SemiBold",
+          "variationSettings": {
+            "wght": 600
+          }
+        },
+        "boundVariables": {
+          "letterSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:25"
+          },
+          "fontSize": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:16"
+          },
+          "fontStyle": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:23"
+          },
+          "fontFamily": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:22"
+          },
+          "lineHeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:17"
+          }
+        }
+      },
+      {
+        "id": "S:0a7ce447c7a2731966b56eaf8df96c19ec08c4ec,",
+        "name": "body/description",
+        "size": 14,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "font": {
+          "family": "Manrope",
+          "style": "Regular",
+          "variationSettings": {
+            "wght": 400
+          }
+        },
+        "boundVariables": {
+          "letterSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:25"
+          },
+          "fontSize": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:18"
+          },
+          "fontStyle": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:24"
+          },
+          "fontFamily": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:22"
+          },
+          "lineHeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:19"
+          }
+        }
+      },
+      {
+        "id": "S:47d3c4e7ce6e2b7ed3c144abeb0596ae82d1eef3,",
+        "name": "body/caption",
+        "size": 12,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 16
+        },
+        "font": {
+          "family": "Manrope",
+          "style": "Regular",
+          "variationSettings": {
+            "wght": 400
+          }
+        },
+        "boundVariables": {
+          "letterSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:25"
+          },
+          "fontSize": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:20"
+          },
+          "fontStyle": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:24"
+          },
+          "fontFamily": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:22"
+          },
+          "lineHeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:344:21"
+          }
+        }
+      }
+    ]
+  },
+  "binding_qa": {
+    "status": "PASS",
+    "owners": [
+      {
+        "id": "I347:2597;105:1484;356:3711",
+        "name": "Body content · five different demos"
+      }
+    ],
+    "bindingCount": 440,
+    "overrideCount": 23,
+    "findings": []
+  },
+  "color_resolution": [
+    {
+      "name": "color/text/primary",
+      "modes": [
+        {
+          "mode": "Contable",
+          "semantic": "neutral-maximum",
+          "primitive": "neutral/900",
+          "value": {
+            "r": 0.05882352963089943,
+            "g": 0.09019608050584793,
+            "b": 0.16470588743686676,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Administrativo",
+          "semantic": "neutral-maximum",
+          "primitive": "neutral/900",
+          "value": {
+            "r": 0.05882352963089943,
+            "g": 0.09019608050584793,
+            "b": 0.16470588743686676,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Servicios",
+          "semantic": "neutral-maximum",
+          "primitive": "neutral/900",
+          "value": {
+            "r": 0.05882352963089943,
+            "g": 0.09019608050584793,
+            "b": 0.16470588743686676,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Personas",
+          "semantic": "neutral-maximum",
+          "primitive": "neutral/900",
+          "value": {
+            "r": 0.05882352963089943,
+            "g": 0.09019608050584793,
+            "b": 0.16470588743686676,
+            "a": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "color/text/secondary",
+      "modes": [
+        {
+          "mode": "Contable",
+          "semantic": "neutral-strong",
+          "primitive": "neutral/600",
+          "value": {
+            "r": 0.27843138575553894,
+            "g": 0.3333333432674408,
+            "b": 0.4117647111415863,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Administrativo",
+          "semantic": "neutral-strong",
+          "primitive": "neutral/600",
+          "value": {
+            "r": 0.27843138575553894,
+            "g": 0.3333333432674408,
+            "b": 0.4117647111415863,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Servicios",
+          "semantic": "neutral-strong",
+          "primitive": "neutral/600",
+          "value": {
+            "r": 0.27843138575553894,
+            "g": 0.3333333432674408,
+            "b": 0.4117647111415863,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Personas",
+          "semantic": "neutral-strong",
+          "primitive": "neutral/600",
+          "value": {
+            "r": 0.27843138575553894,
+            "g": 0.3333333432674408,
+            "b": 0.4117647111415863,
+            "a": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "color/text/brand",
+      "modes": [
+        {
+          "mode": "Contable",
+          "semantic": "brand-strong",
+          "primitive": "blue/500",
+          "value": {
+            "r": 0.15294118225574493,
+            "g": 0.18431372940540314,
+            "b": 0.8352941274642944,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Administrativo",
+          "semantic": "brand-administrativo-strong",
+          "primitive": "green/600",
+          "value": {
+            "r": 0,
+            "g": 0.3137255012989044,
+            "b": 0.21960784494876862,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Servicios",
+          "semantic": "brand-servicios-strong",
+          "primitive": "orange/700",
+          "value": {
+            "r": 0.686274528503418,
+            "g": 0.07450980693101883,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Personas",
+          "semantic": "brand-personas-strong",
+          "primitive": "purple/600",
+          "value": {
+            "r": 0.3450980484485626,
+            "g": 0,
+            "b": 0.7176470756530762,
+            "a": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "color/text/warning",
+      "modes": [
+        {
+          "mode": "Contable",
+          "semantic": "warning-strong",
+          "primitive": "amber/800",
+          "value": {
+            "r": 0.47843137383461,
+            "g": 0.29019609093666077,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Administrativo",
+          "semantic": "warning-strong",
+          "primitive": "amber/800",
+          "value": {
+            "r": 0.47843137383461,
+            "g": 0.29019609093666077,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Servicios",
+          "semantic": "warning-strong",
+          "primitive": "amber/800",
+          "value": {
+            "r": 0.47843137383461,
+            "g": 0.29019609093666077,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Personas",
+          "semantic": "warning-strong",
+          "primitive": "amber/800",
+          "value": {
+            "r": 0.47843137383461,
+            "g": 0.29019609093666077,
+            "b": 0,
+            "a": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "color/text/success",
+      "modes": [
+        {
+          "mode": "Contable",
+          "semantic": "positive-default",
+          "primitive": "emerald/600",
+          "value": {
+            "r": 0.03529411926865578,
+            "g": 0.5137255191802979,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Administrativo",
+          "semantic": "positive-default",
+          "primitive": "emerald/600",
+          "value": {
+            "r": 0.03529411926865578,
+            "g": 0.5137255191802979,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Servicios",
+          "semantic": "positive-default",
+          "primitive": "emerald/600",
+          "value": {
+            "r": 0.03529411926865578,
+            "g": 0.5137255191802979,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Personas",
+          "semantic": "positive-default",
+          "primitive": "emerald/600",
+          "value": {
+            "r": 0.03529411926865578,
+            "g": 0.5137255191802979,
+            "b": 0,
+            "a": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "color/text/danger",
+      "modes": [
+        {
+          "mode": "Contable",
+          "semantic": "danger-default",
+          "primitive": "red/600",
+          "value": {
+            "r": 0.8313725590705872,
+            "g": 0,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Administrativo",
+          "semantic": "danger-default",
+          "primitive": "red/600",
+          "value": {
+            "r": 0.8313725590705872,
+            "g": 0,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Servicios",
+          "semantic": "danger-default",
+          "primitive": "red/600",
+          "value": {
+            "r": 0.8313725590705872,
+            "g": 0,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Personas",
+          "semantic": "danger-default",
+          "primitive": "red/600",
+          "value": {
+            "r": 0.8313725590705872,
+            "g": 0,
+            "b": 0,
+            "a": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "color/text/information",
+      "modes": [
+        {
+          "mode": "Contable",
+          "semantic": "information-default",
+          "primitive": "cyan/600",
+          "value": {
+            "r": 0,
+            "g": 0.38823530077934265,
+            "b": 0.6705882549285889,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Administrativo",
+          "semantic": "information-default",
+          "primitive": "cyan/600",
+          "value": {
+            "r": 0,
+            "g": 0.38823530077934265,
+            "b": 0.6705882549285889,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Servicios",
+          "semantic": "information-default",
+          "primitive": "cyan/600",
+          "value": {
+            "r": 0,
+            "g": 0.38823530077934265,
+            "b": 0.6705882549285889,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Personas",
+          "semantic": "information-default",
+          "primitive": "cyan/600",
+          "value": {
+            "r": 0,
+            "g": 0.38823530077934265,
+            "b": 0.6705882549285889,
+            "a": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "color/bg/primary",
+      "modes": [
+        {
+          "mode": "Contable",
+          "semantic": "neutral-base",
+          "primitive": "neutral/100",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Administrativo",
+          "semantic": "neutral-base",
+          "primitive": "neutral/100",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Servicios",
+          "semantic": "neutral-base",
+          "primitive": "neutral/100",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Personas",
+          "semantic": "neutral-base",
+          "primitive": "neutral/100",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "color/bg/emphasis",
+      "modes": [
+        {
+          "mode": "Contable",
+          "semantic": "neutral-subtle",
+          "primitive": "neutral/200",
+          "value": {
+            "r": 0.9450980424880981,
+            "g": 0.9607843160629272,
+            "b": 0.9764705896377563,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Administrativo",
+          "semantic": "neutral-subtle",
+          "primitive": "neutral/200",
+          "value": {
+            "r": 0.9450980424880981,
+            "g": 0.9607843160629272,
+            "b": 0.9764705896377563,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Servicios",
+          "semantic": "neutral-subtle",
+          "primitive": "neutral/200",
+          "value": {
+            "r": 0.9450980424880981,
+            "g": 0.9607843160629272,
+            "b": 0.9764705896377563,
+            "a": 1
+          }
+        },
+        {
+          "mode": "Personas",
+          "semantic": "neutral-subtle",
+          "primitive": "neutral/200",
+          "value": {
+            "r": 0.9450980424880981,
+            "g": 0.9607843160629272,
+            "b": 0.9764705896377563,
+            "a": 1
+          }
+        }
+      ]
+    }
+  ],
+  "composition_qa": {
+    "status": "PASS",
+    "page": "203:93",
+    "app_shell_instance": "347:2597",
+    "app_shell_main": "105:5",
+    "demo_count": 5,
+    "demo_node_types": [
+      "FRAME",
+      "FRAME",
+      "FRAME",
+      "FRAME",
+      "FRAME"
+    ],
+    "custom_card_components": 0,
+    "documented_as_components": false,
+    "card_master_on_canvas": false,
+    "reused_official_controls": {
+      "Linear Progress": 5,
+      "Button/primary": 2,
+      "Button/text": 3,
+      "Badge": 5,
+      "Button/secondary": 2,
+      "Checkbox": 2,
+      "Icon Button/ghost": 2
+    },
+    "menu": [
+      {
+        "menu": "expanded",
+        "body": [
+          1110,
+          972
+        ],
+        "canvas": [
+          1110,
+          972
+        ],
+        "frames": 5
+      },
+      {
+        "menu": "collapsed",
+        "body": [
+          1272,
+          972
+        ],
+        "canvas": [
+          1272,
+          972
+        ],
+        "frames": 5
+      }
+    ],
+    "final_layout": {
+      "status": "PASS",
+      "mutatedNodeIds": [
+        "I347:2597;105:1484;356:3711",
+        "I347:2597;105:1484;356:3712",
+        "I347:2597;105:1484;356:3759"
+      ],
+      "betweenCards": 32,
+      "betweenRows": 32,
+      "outerCanvasPadding": 32,
+      "cardInternals": {
+        "padding": 24,
+        "segments": 16,
+        "withinSegment": 8,
+        "titleDescription": 4
+      },
+      "cardTypes": [
+        "FRAME",
+        "FRAME",
+        "FRAME",
+        "FRAME",
+        "FRAME"
+      ],
+      "cards": [
+        {
+          "id": "I347:2597;105:1484;356:3713",
+          "width": 588,
+          "height": 356
+        },
+        {
+          "id": "I347:2597;105:1484;356:3730",
+          "width": 588,
+          "height": 324
+        },
+        {
+          "id": "I347:2597;105:1484;356:3760",
+          "width": 381.3333435058594,
+          "height": 300
+        },
+        {
+          "id": "I347:2597;105:1484;356:3771",
+          "width": 381.33331298828125,
+          "height": 308
+        },
+        {
+          "id": "I347:2597;105:1484;356:3783",
+          "width": 381.33331298828125,
+          "height": 328
+        }
+      ],
+      "canvas": "I347:2597;105:1484;356:3711"
+    },
+    "visual": "PASS: composiciones diferentes con métricas, listas, widgets, botones y controles oficiales. Textos editables y contenido dentro del Slot Body.",
+    "width": "FILL",
+    "height": "FILL",
+    "between_cards": 32,
+    "between_independent_blocks": 32,
+    "internal_standard": {
+      "padding": 24,
+      "segments": 16,
+      "within_segment": 8,
+      "title_description": 4
+    },
+    "outer_canvas_padding": 32
+  },
+  "publication": "NOT_RUN",
+  "installation": "NOT_RUN",
+  "web_qa": {
+    "status": "PASS",
+    "cards": 5,
+    "tokens": 33,
+    "metrics": {
+      "padding": [
+        "24px",
+        "24px",
+        "24px",
+        "24px"
+      ],
+      "gap": "16px",
+      "radius": "16px",
+      "titleDescription": "4px",
+      "segment": "8px",
+      "h1": [
+        "24px",
+        "32px",
+        "600"
+      ],
+      "h2": [
+        "20px",
+        "28px",
+        "600"
+      ],
+      "h3": [
+        "16px",
+        "24px",
+        "600"
+      ],
+      "description": [
+        "14px",
+        "20px",
+        "400"
+      ],
+      "caption": [
+        "12px",
+        "16px",
+        "400"
+      ],
+      "font": "\"Manrope Variable\""
+    },
+    "themes": [
+      {
+        "mode": "Contable",
+        "minContrast": 4.501742074315131,
+        "colors": {
+          "primary": "#0f172a",
+          "secondary": "#475569",
+          "brand": "#272fd5",
+          "warning": "#7a4a00",
+          "success": "#098300",
+          "danger": "#d40000",
+          "information": "#0063ab"
+        }
+      },
+      {
+        "mode": "Administrativo",
+        "minContrast": 4.501742074315131,
+        "colors": {
+          "primary": "#0f172a",
+          "secondary": "#475569",
+          "brand": "#005038",
+          "warning": "#7a4a00",
+          "success": "#098300",
+          "danger": "#d40000",
+          "information": "#0063ab"
+        }
+      },
+      {
+        "mode": "Servicios",
+        "minContrast": 4.501742074315131,
+        "colors": {
+          "primary": "#0f172a",
+          "secondary": "#475569",
+          "brand": "#af1300",
+          "warning": "#7a4a00",
+          "success": "#098300",
+          "danger": "#d40000",
+          "information": "#0063ab"
+        }
+      },
+      {
+        "mode": "Personas",
+        "minContrast": 4.501742074315131,
+        "colors": {
+          "primary": "#0f172a",
+          "secondary": "#475569",
+          "brand": "#5800b7",
+          "warning": "#7a4a00",
+          "success": "#098300",
+          "danger": "#d40000",
+          "information": "#0063ab"
+        }
+      }
+    ],
+    "shellBodyWidths": [
+      1272,
+      1110,
+      1272
+    ],
+    "keyboard": true,
+    "between_cards": 32,
+    "between_independent_blocks": 32
+  }
+}

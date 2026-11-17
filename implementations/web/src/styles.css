@@ -26,6 +26,18 @@
     border-spacing: 0;
   }
   .bh-table-pagination { overflow-x: auto; }
+  .bh-table[data-sticky-actions="true"] > .bh-table-viewport > .bh-table-content > :is(thead, tbody, tfoot) > tr > :last-child {
+    position: sticky;
+    right: 0;
+    z-index: 1;
+    box-shadow: inset 0 0 0 var(--bh-cell-focus_width) var(--bh-cell-focus),
+      calc(var(--table-size-sticky-actions-shadow-offset-x) * 1px)
+      calc(var(--table-size-sticky-actions-shadow-offset-y) * 1px)
+      calc(var(--table-size-sticky-actions-shadow-radius) * 1px)
+      calc(var(--table-size-sticky-actions-shadow-spread) * 1px)
+      var(--table-color-effect-sticky-actions-shadow);
+  }
+  .bh-table[data-sticky-actions="true"] > .bh-table-viewport > .bh-table-content > tbody > tr > :last-child > .bh-table-cell-inner { justify-content: center; }
   .bh-table-cell {
     position: relative;
     box-sizing: border-box;
@@ -549,6 +561,8 @@
     gap: calc(var(--checkbox-spacing-label-gap) * 1px);
     cursor: pointer;
   }
+
+  .bh-checkbox[data-label-position="left"] > .bh-checkbox-label { order: -1; }
 
   .bh-checkbox-control {
     display: inline-grid;
@@ -1599,6 +1613,7 @@
     white-space: nowrap;
   }
   .bh-pagination[data-type="compact"] { gap: calc(var(--pagination-spacing-compact) * 1px); }
+  .bh-pagination[data-range-position="right"] > .bh-pagination-range { order: 1; }
   .bh-pagination-pages { display: flex; align-items: center; gap: calc(var(--pagination-spacing-items) * 1px); }
   .bh-pagination-position { color: var(--pagination-color-text-primary-default); font-weight: var(--pagination-font-medium); }
   .bh-pagination-rows { inline-size: calc(var(--pagination-size-rows-width) * 1px); flex: none; }
@@ -2544,4 +2559,82 @@
   .bh-chat-plan-ring-track { stroke: var(--chat-plan-usage-color-bg-ring-track); }
   .bh-chat-plan-ring-value { stroke: var(--chat-plan-usage-color-bg-progress); }
   .bh-chat-plan-ring-value[stroke-dasharray="0 100"] { visibility: hidden; }
+}
+
+@layer components {
+  .bh-body-playground {
+    display: grid;
+    gap: calc(var(--body-spacing-md) * 1px);
+    padding: calc(var(--body-spacing-lg) * 1px);
+    background: var(--body-color-bg-primary);
+    color: var(--body-color-text-primary);
+    font-family: var(--body-font-family);
+  }
+  .bh-body-playground-scroll { overflow-x: auto; }
+  .bh-body-playground-shell { width: 1440px; min-height: 1280px; }
+  .bh-body-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-inline-size: 0;
+    gap: calc(var(--body-spacing-xl) * 1px);
+    padding: calc(var(--body-spacing-xl) * 1px);
+    border-radius: calc(var(--body-radius-lg) * 1px);
+    background: var(--body-color-bg-primary);
+    color: var(--body-color-text-primary);
+    font-family: var(--body-font-family);
+    letter-spacing: calc(var(--body-font-tracking) * 1px);
+  }
+  .bh-body-demo-row {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: calc(var(--body-spacing-xl) * 1px);
+  }
+  .bh-body-demo-row[data-columns="2"] { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .bh-body-demo-card {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    min-inline-size: 0;
+    gap: calc(var(--body-spacing-md) * 1px);
+    padding: calc(var(--body-spacing-lg) * 1px);
+    border-radius: calc(var(--body-radius-lg) * 1px);
+    background: var(--body-color-bg-primary);
+    color: var(--body-color-text-primary);
+  }
+  .bh-body-demo-card :is(h3,p) { margin: calc(var(--body-spacing-null) * 1px); }
+  .bh-body-title-description, .bh-body-information-segment { display: flex; flex-direction: column; min-inline-size: 0; }
+  .bh-body-title-description { gap: calc(var(--body-spacing-xs) * 1px); }
+  .bh-body-information-segment { gap: calc(var(--body-spacing-sm) * 1px); }
+  .bh-body-h1, .bh-body-h2, .bh-body-h3 {
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-heading-weight);
+    letter-spacing: calc(var(--body-font-tracking) * 1px);
+    color: var(--body-color-text-primary);
+  }
+  .bh-body-h1 { font-size: calc(var(--body-font-heading-h1-size) * 1px); line-height: calc(var(--body-font-heading-h1-line-height) * 1px); }
+  .bh-body-h2 { font-size: calc(var(--body-font-heading-h2-size) * 1px); line-height: calc(var(--body-font-heading-h2-line-height) * 1px); }
+  .bh-body-h3 { font-size: calc(var(--body-font-heading-h3-size) * 1px); line-height: calc(var(--body-font-heading-h3-line-height) * 1px); }
+  .bh-body-description, .bh-body-caption { color: var(--body-color-text-secondary); font-weight: var(--body-font-text-weight); }
+  .bh-body-description { font-size: calc(var(--body-font-description-size) * 1px); line-height: calc(var(--body-font-description-line-height) * 1px); }
+  .bh-body-caption { font-size: calc(var(--body-font-caption-size) * 1px); line-height: calc(var(--body-font-caption-line-height) * 1px); }
+  .bh-body-brand { color: var(--body-color-text-brand); }
+  [data-body-tone="warning"] { color: var(--body-color-text-warning); }
+  [data-body-tone="success"] { color: var(--body-color-text-success); }
+  [data-body-tone="danger"] { color: var(--body-color-text-danger); }
+  [data-body-tone="information"] { color: var(--body-color-text-information); }
+}
+
+@layer components {
+  .bh-body-metrics { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: calc(var(--body-spacing-md) * 1px); }
+  .bh-body-widget { display: flex; flex-direction: column; gap: calc(var(--body-spacing-sm) * 1px); padding: calc(var(--body-spacing-md) * 1px); border-radius: calc(var(--body-radius-md) * 1px); background: var(--body-color-bg-emphasis); }
+  .bh-body-detail-row { display: flex; align-items: center; gap: calc(var(--body-spacing-md) * 1px); }
+  .bh-body-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: calc(var(--body-spacing-sm) * 1px); }
+  .bh-body-segments { display: flex; flex-direction: column; gap: calc(var(--body-spacing-md) * 1px); }
+  .bh-body-grow { flex: 1; min-inline-size: 0; }
+  .bh-body-amount { flex: none; align-items: flex-end; }
+  .bh-body-primary { color: var(--body-color-text-primary); }
+}
+@layer components {
+  .bh-body-demo-card > [data-blueheart="button"] { align-self: flex-start; }
 }

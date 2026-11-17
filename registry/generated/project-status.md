@@ -20,7 +20,7 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 | CHAT-SIDEBAR-001 | [1.0.0](../../specs/components/chat-sidebar.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
 | CHAT-SIDEBAR-SECTION-001 | [1.0.0](../../specs/components/chat-sidebar-section.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | CHAT-TOOL-ITEM-001 | [1.0.0](../../specs/components/chat-tool-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| CHECKBOX-001 | [1.0.0](../../specs/components/checkbox.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| CHECKBOX-001 | [1.0.0](../../specs/components/checkbox.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
 | CHIP-001 | [1.0.0](../../specs/components/chip.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | COMPANY-SELECTOR-001 | [1.0.0](../../specs/components/company-selector.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | CONVERSATION-001 | [1.0.0](../../specs/components/conversation-composer.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
@@ -31,6 +31,8 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 | FILE-UPLOAD-001 | [1.0.0](../../specs/components/file-upload.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | FLOATING-ACTIONS-001 | [1.0.0](../../specs/components/floating-actions.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | FOUNDATIONS-BLUEHEART-VARIABLES-001 | [0.1.2](../../specs/foundations/blueheart-variables.contract.v0.1.2.md) | DELEGATED_FOR_BUILD | 1 | 3 registros por alcance |
+| FOUNDATIONS-BODY-001 | [1.0.0](../../specs/foundations/body.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
+| FOUNDATIONS-TOKEN-VISIBILITY-001 | [1.0.0](../../specs/foundations/token-visibility.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | HEADER-001 | [1.0.0](../../specs/components/header.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | HEADER-ACTIONS-001 | [1.0.0](../../specs/components/header-actions.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | ICON-BUTTON-001 | [1.0.0](../../specs/components/icon-button.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
@@ -40,7 +42,7 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 | LOADER-001 | [1.0.0](../../specs/components/loader.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 1 registros por alcance |
 | LOGOS-001 | [1.0.0](../../specs/components/logos.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
 | MENU-ITEM-001 | [1.0.0](../../specs/components/menu-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| PAGINATION-001 | [1.0.0](../../specs/components/pagination.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| PAGINATION-001 | [1.0.0](../../specs/components/pagination.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 2 registros por alcance |
 | PAGINATION-ITEM-001 | [1.0.0](../../specs/components/pagination-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | RADIO-001 | [1.0.0](../../specs/components/radio.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | RADIO-GROUP-001 | [1.0.0](../../specs/components/radio-group.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
@@ -49,7 +51,7 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 | SIDEBAR-001 | [1.0.0](../../specs/components/sidebar.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 2 registros por alcance |
 | STEPPER-001 | [1.0.0](../../specs/components/stepper.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | TAB-001 | [1.0.0](../../specs/components/tab.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| TABLE-001 | [1.0.0](../../specs/components/table.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| TABLE-001 | [1.0.0](../../specs/components/table.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
 | TABLE-CELL-001 | [1.0.0](../../specs/components/table-cell.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | TABS-001 | [1.0.0](../../specs/components/tabs.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | TEXT-AREA-001 | [1.0.0](../../specs/components/text-area.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
@@ -256,6 +258,7 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Preparación: UNKNOWN.
 - Slots: NOT_APPLICABLE en [specs/components/checkbox.contract.v1.0.0.md](../../specs/components/checkbox.contract.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Implementación: [implementations/figma/checkbox-label-position-2026-11-17/readback.json](../../implementations/figma/checkbox-label-position-2026-11-17/readback.json) — {"status": "PASS"}.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -394,6 +397,35 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
+## FOUNDATIONS-BODY-001
+
+Base: [specs/foundations/body.contract.v1.0.0.md](../../specs/foundations/body.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/foundations/body.contract.v1.0.0.md](../../specs/foundations/body.contract.v1.0.0.md).
+- Página declarada: UNKNOWN.
+- Preparación: UNKNOWN.
+- Slots: UNKNOWN.
+- Revisión de implementación declarada: UNKNOWN.
+- Implementación: [implementations/figma/body-tokens-2026-11-17/readback.json](../../implementations/figma/body-tokens-2026-11-17/readback.json) — {"publication": "NOT_RUN"}.
+- QA por alcance: [qa/implementations/body.v1.0.0.review.md](../../qa/implementations/body.v1.0.0.review.md).
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## FOUNDATIONS-TOKEN-VISIBILITY-001
+
+Base: [specs/foundations/token-visibility.contract.v1.0.0.md](../../specs/foundations/token-visibility.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/foundations/token-visibility.contract.v1.0.0.md](../../specs/foundations/token-visibility.contract.v1.0.0.md).
+- Página declarada: UNKNOWN.
+- Preparación: UNKNOWN.
+- Slots: UNKNOWN.
+- Revisión de implementación declarada: UNKNOWN.
+- QA por alcance: [qa/contracts/token-visibility.v1.0.0.review.md](../../qa/contracts/token-visibility.v1.0.0.review.md), [qa/implementations/token-visibility.v1.0.0.review.md](../../qa/implementations/token-visibility.v1.0.0.review.md).
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
 ## HEADER-001
 
 Base: [specs/components/header.contract.v1.0.0.md](../../specs/components/header.contract.v1.0.0.md).
@@ -525,6 +557,8 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Preparación: UNKNOWN.
 - Slots: REQUIRED en [specs/components/pagination.contract.v1.0.0.md](../../specs/components/pagination.contract.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Implementación: [implementations/figma/pagination-range-position-2026-11-17/readback.json](../../implementations/figma/pagination-range-position-2026-11-17/readback.json) — {"publication": "NOT_REQUESTED"}.
+- Implementación: [implementations/figma/pagination-record-count-2026-11-17/readback.json](../../implementations/figma/pagination-record-count-2026-11-17/readback.json) — {"status": "PASS"}.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -646,6 +680,7 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Preparación: UNKNOWN.
 - Slots: REQUIRED en [specs/components/table.contract.v1.0.0.md](../../specs/components/table.contract.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Implementación: [implementations/figma/table-sticky-actions-2026-11-17/readback.json](../../implementations/figma/table-sticky-actions-2026-11-17/readback.json) — {"publication": "NOT_RUN"}.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 

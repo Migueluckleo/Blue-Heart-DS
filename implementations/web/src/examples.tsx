@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';
 import { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';
 import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
+import { EyeIcon } from '@phosphor-icons/react/dist/csr/Eye';
 import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
 import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
 import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from './index';
@@ -170,10 +171,20 @@ export function LinearProgressExample() {
 // example: checkbox
 export function CheckboxExample() {
   const [selected, setSelected] = useState<CheckboxSelection>('indeterminate');
-  return <div className="my-4 flex flex-wrap gap-6">
-    <Checkbox id="demo-checkbox" label="Seleccionar comprobantes visibles" showLabel selected={selected}
-      onSelectedChange={setSelected}/>
-    <Checkbox id="demo-checkbox-disabled" label="Selección no disponible" showLabel selected disabled/>
+  const [labelPosition, setLabelPosition] = useState<'left' | 'right'>('right');
+  return <div className="my-4 space-y-4">
+    <label className="flex items-center gap-2">
+      Posición de la etiqueta de Checkbox
+      <select value={labelPosition} onChange={event => setLabelPosition(event.target.value as 'left' | 'right')}>
+        <option value="right">Derecha</option>
+        <option value="left">Izquierda</option>
+      </select>
+    </label>
+    <div className="flex flex-wrap gap-6">
+      <Checkbox id="demo-checkbox" label="Seleccionar comprobantes visibles" showLabel labelPosition={labelPosition} selected={selected}
+        onSelectedChange={setSelected}/>
+      <Checkbox id="demo-checkbox-disabled" label="Selección no disponible" showLabel labelPosition={labelPosition} selected disabled/>
+    </div>
   </div>;
 }
 
@@ -554,19 +565,27 @@ export function PaginationItemExample() {
 export function PaginationExample() {
   const [page, setPage] = useState(5);
   const [rows, setRows] = useState(20);
+  const [rangePosition, setRangePosition] = useState<'left' | 'right'>('left');
   const [compactPage, setCompactPage] = useState(1);
   const results = useRef<HTMLHeadingElement>(null);
   const total = 240;
   return <div className="my-4 space-y-4">
+    <label className="flex items-center gap-2">
+      Posición del resumen de registros
+      <select value={rangePosition} onChange={event => setRangePosition(event.target.value as 'left' | 'right')}>
+        <option value="left">Izquierda</option>
+        <option value="right">Derecha</option>
+      </select>
+    </label>
     <h3 id="demo-pagination-results" ref={results} tabIndex={-1}>Comprobantes de la página {page}</h3>
     <div className="overflow-x-auto">
       <Pagination label="Paginación de comprobantes" currentPage={page} totalPages={Math.ceil(total / rows)}
         onPageChange={next => {setPage(next);results.current?.focus();}}
-        range={`${(page - 1) * rows + 1}–${Math.min(page * rows,total)} de ${total}`}
+        totalRecords={total} rangePosition={rangePosition}
         rows={{value:rows,options:[20,50,100],onChange:next=>{setRows(next);setPage(1);}}}/>
     </div>
     <Pagination label="Paginación de vista compacta" type="compact" currentPage={compactPage}
-      totalPages={3} onPageChange={setCompactPage} touchTargets/>
+      totalRecords={55} pageSize={20} rangePosition={rangePosition} totalPages={3} onPageChange={setCompactPage} touchTargets/>
   </div>;
 }
 
@@ -764,6 +783,8 @@ export function TableCellExample() {
 
 // example: table
 export function TableExample() {
+  const [stickyActions,setStickyActions] = useState(false);
+  const [lastAction,setLastAction] = useState('');
   const [rows,setRows] = useState(() => Array.from({length:12},(_,index)=>index+1));
   const [page,setPage] = useState(1);
   const [pageSize,setPageSize] = useState(4);
@@ -785,17 +806,20 @@ export function TableExample() {
         const first=ordered[0];setRows(value=>value.filter(row=>row!==first));setSelected(value=>value.filter(row=>row!==first));setPage(1);
       }}/>
     </div>
+    <Checkbox label="Fijar acciones a la derecha" selected={stickyActions} onSelectedChange={setStickyActions}/>
     <p id="demo-table-selection" role="status">{selected.length} seleccionados de {rows.length} comprobantes</p>
+    <p role="status" id="demo-table-action">{lastAction}</p>
     <Table label="Comprobantes ficticios" className="max-w-[560px]" viewportHeight={124}
-      columnWidths={[100,148,220,280]}
+      stickyActions={stickyActions} columnWidths={stickyActions ? [100,148,220,280,136] : [100,148,220,280]}
       pagination={{currentPage:current,totalPages,onPageChange:setPage,label:'Páginas de comprobantes',
-        range:rows.length ? `${start+1}–${Math.min(start+pageSize,rows.length)} de ${rows.length}` : undefined,
+        totalRecords:rows.length,
         rows:{value:pageSize,options:[4,6],onChange:value=>{setPageSize(value);setPage(1);}}}}>
       <thead><tr>
         <TableCell item="header" label="Selección"/>
         <TableCell item="header" label="Folio" sort={reversed ? 'descending' : 'ascending'}/>
         <TableCell item="header" label="Proveedor"/>
         <TableCell item="header" label="Concepto"/>
+        {stickyActions && <TableCell item="header" label="Acciones"/>}
       </tr></thead>
       <tbody>{visible.map(row=>{
         const checked=selected.includes(row);
@@ -807,6 +831,14 @@ export function TableExample() {
           <TableCell label={`Folio ${row}`} state={state}/>
           <TableCell label={`Proveedor ficticio ${row}`} state={state}/>
           <TableCell label="Servicios de conciliación contable del periodo de muestra" state={state}/>
+          {stickyActions && <TableCell kind="action" state={state}>
+            <div className="bh-table-cell-actions">
+              <IconButton variant="ghost" size="small" icon={EyeIcon} label={`Ver folio ${row}`} title={`Ver folio ${row}`}
+                onClick={()=>setLastAction(`Vista local del folio ${row}`)}/>
+              <IconButton variant="ghost" size="small" icon={PencilSimpleIcon} label={`Editar folio ${row}`} title={`Editar folio ${row}`}
+                onClick={()=>setLastAction(`Edición local del folio ${row}`)}/>
+            </div>
+          </TableCell>}
         </tr>;
       })}</tbody>
     </Table>

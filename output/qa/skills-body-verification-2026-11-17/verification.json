@@ -1,0 +1,232 @@
+{
+  "verification_status": "COMPLETE",
+  "verified_at": "2026-11-17T21:02:52.877436+00:00",
+  "requested_scope": "Verificar Body para contenido de producto y tokens internos de componentes en ambas skills",
+  "publication": "NOT_RUN (user constraint)",
+  "installation": "NOT_RUN (user constraint)",
+  "canonical_sources_changed": false,
+  "new_skill_release_emitted": false,
+  "packages": {
+    "contpaqi-po-prototypes": {
+      "version": "1.0.8",
+      "zip": "output/skills/1.0.8/contpaqi-po-prototypes-1.0.8.zip",
+      "sha256": "d6e7a10cbd5ef082e0e428ee77fa0b3f83a78185dacbf91896ec3d1289b795da",
+      "body_instruction": "PASS",
+      "component_internal_token_instruction": "PASS",
+      "full_package_integrity": "CURRENT (scripts/ds skills check)"
+    },
+    "contpaqi-figma-screens": {
+      "version": "1.0.8",
+      "zip": "output/skills/1.0.8/contpaqi-figma-screens-1.0.8.zip",
+      "sha256": "47fed8b3c0de9029efe62c5b286cd5274a30c8980576f6cb44403cdd5d2f3f30",
+      "body_instruction": "PASS",
+      "component_internal_token_instruction": "PASS",
+      "full_package_integrity": "CURRENT (scripts/ds skills check)"
+    }
+  },
+  "local_catalog": {
+    "status": "PASS",
+    "resolvers": {
+      "contpaqi-po-prototypes": {
+        "status": "PASS",
+        "engine_version": "1.0.8",
+        "ds_version": "0.0.0+ds.3c8900f844d84a39",
+        "ds_digest": "3c8900f844d84a3998b1be5c2299998331f57207b7e1846e4fdb3b7cca0c9fb6",
+        "manifest_sha256": "1a8b05eb58dc5727b6999323d7f44c864036547886ab8256b16ad0e01215ca1b",
+        "files": 1234,
+        "graph": {
+          "mode": "graph",
+          "reason": null
+        },
+        "catalog_url": "https://raw.githubusercontent.com/Migueluckleo/Blue-Heart-DS/main/catalog/current.json",
+        "figma_library_file_key": "yZsIpXywybsPDytjolwcP4"
+      },
+      "contpaqi-figma-screens": {
+        "status": "PASS",
+        "engine_version": "1.0.8",
+        "ds_version": "0.0.0+ds.3c8900f844d84a39",
+        "ds_digest": "3c8900f844d84a3998b1be5c2299998331f57207b7e1846e4fdb3b7cca0c9fb6",
+        "manifest_sha256": "1a8b05eb58dc5727b6999323d7f44c864036547886ab8256b16ad0e01215ca1b",
+        "files": 1234,
+        "graph": {
+          "mode": "graph",
+          "reason": null
+        },
+        "catalog_url": "https://raw.githubusercontent.com/Migueluckleo/Blue-Heart-DS/main/catalog/current.json",
+        "figma_library_file_key": "yZsIpXywybsPDytjolwcP4"
+      }
+    },
+    "required_sources": {
+      "specs/foundations/body.contract.v1.0.0.md": "6473ba6bfa7d44c2e326b4e895502f4ccf045d17c37b1a3b5165857067d55086",
+      "specs/foundations/token-visibility.contract.v1.0.0.md": "a2daac83a39bd3323e9425a07f4009a83608c43dc63f0d38ba7969f128e346a9",
+      "specs/tokens/body.v1.0.0.json": "d9862b8642147af2499f8a3527d8e2947daace0d8ab23e86705ed7d77af21d0b",
+      "specs/tokens/visibility.body-only.correction.json": "bfeff78297e413e05a989523fecf5adb8f79850f99cd15cd25196a78b2e88397"
+    },
+    "effective_body_rule": {
+      "collection": "component",
+      "name_prefix": "body/",
+      "case_sensitive": true
+    },
+    "implementation_generation": "PASS (P07: 50 web families; no stale generated outputs)"
+  },
+  "github_catalog": {
+    "contpaqi-po-prototypes": {
+      "resolver": {
+        "status": "PASS",
+        "engine_version": "1.0.8",
+        "ds_version": "0.0.0+ds.059e57aae363d377",
+        "ds_digest": "059e57aae363d377a3fc98ce627da131ba699d354750e901f9c317f1afd18893",
+        "manifest_sha256": "8c7274b471a1736f76a23ac7c9bd2e4fcc5c24a93e2e9b1a9e4636dbdb3c9b30",
+        "files": 1208,
+        "graph": {
+          "mode": "graph",
+          "reason": null
+        },
+        "catalog_url": "https://raw.githubusercontent.com/Migueluckleo/Blue-Heart-DS/main/catalog/current.json",
+        "figma_library_file_key": "yZsIpXywybsPDytjolwcP4"
+      },
+      "body_readiness": "BLOCKED_MISSING_BODY_DATA",
+      "missing_sources": [
+        "specs/foundations/body.contract.v1.0.0.md",
+        "specs/foundations/token-visibility.contract.v1.0.0.md",
+        "specs/tokens/body.v1.0.0.json",
+        "specs/tokens/visibility.body-only.correction.json"
+      ]
+    },
+    "contpaqi-figma-screens": {
+      "resolver": {
+        "status": "PASS",
+        "engine_version": "1.0.8",
+        "ds_version": "0.0.0+ds.059e57aae363d377",
+        "ds_digest": "059e57aae363d377a3fc98ce627da131ba699d354750e901f9c317f1afd18893",
+        "manifest_sha256": "8c7274b471a1736f76a23ac7c9bd2e4fcc5c24a93e2e9b1a9e4636dbdb3c9b30",
+        "files": 1208,
+        "graph": {
+          "mode": "graph",
+          "reason": null
+        },
+        "catalog_url": "https://raw.githubusercontent.com/Migueluckleo/Blue-Heart-DS/main/catalog/current.json",
+        "figma_library_file_key": "yZsIpXywybsPDytjolwcP4"
+      },
+      "body_readiness": "BLOCKED_MISSING_BODY_DATA",
+      "missing_sources": [
+        "specs/foundations/body.contract.v1.0.0.md",
+        "specs/foundations/token-visibility.contract.v1.0.0.md",
+        "specs/tokens/body.v1.0.0.json",
+        "specs/tokens/visibility.body-only.correction.json"
+      ]
+    }
+  },
+  "web_browser": {
+    "status": "PASS",
+    "theme_count": 4,
+    "product_compositions": 5,
+    "body_tokens": 33,
+    "typography": {
+      "padding": [
+        "24px",
+        "24px",
+        "24px",
+        "24px"
+      ],
+      "gap": "16px",
+      "radius": "16px",
+      "titleDescription": "4px",
+      "segment": "8px",
+      "h1": [
+        "24px",
+        "32px",
+        "600"
+      ],
+      "h2": [
+        "20px",
+        "28px",
+        "600"
+      ],
+      "h3": [
+        "16px",
+        "24px",
+        "600"
+      ],
+      "description": [
+        "14px",
+        "20px",
+        "400"
+      ],
+      "caption": [
+        "12px",
+        "16px",
+        "400"
+      ],
+      "font": "\"Manrope Variable\""
+    },
+    "internal_button_aliases": [
+      "button/size/height-small",
+      "button/spacing/xs",
+      "button/spacing/md",
+      "button/radius/container",
+      "button/color/bg/primary-default",
+      "button/color/text/inverse",
+      "button/font/family",
+      "button/font/label-style",
+      "button/font/size-compact",
+      "button/font/line-hight",
+      "button/font/letter-spacing"
+    ],
+    "assertions": "All measured Button CSS aliases resolve to component/button/* tokens with empty scopes; no Body substitution in its inline recipe. Official web component source scan found no --body- or body/color/ substitutions in 46 TSX modules.",
+    "evidence": "output/qa/skills-body-verification-2026-11-17/browser/chrome.json"
+  },
+  "figma_evidence": {
+    "fresh_read_during_this_review": false,
+    "reviewed_capture": "implementations/figma/body-tokens-2026-11-17/readback.json",
+    "capture_sha256": "6d8aaf1a320b975c3ab6712f115f493a66d79fe80329413e41fd73d1dce03f61",
+    "binding_qa": {
+      "status": "PASS",
+      "owners": [
+        {
+          "id": "I347:2597;105:1484;356:3711",
+          "name": "Body content · five different demos"
+        }
+      ],
+      "bindingCount": 440,
+      "overrideCount": 23,
+      "findings": []
+    },
+    "composition_qa": "PASS",
+    "visibility_revalidation": {
+      "status": "PASS",
+      "control": "TOKEN-QA-03",
+      "variables": 1462,
+      "changed_scopes": 1098,
+      "visible_body": 33,
+      "hidden_internal": 1429,
+      "alias_values_preserved": 4643,
+      "all_other_variable_fields_preserved": true,
+      "collections_modes_publication_preserved": true,
+      "body_text_styles_preserved": 5,
+      "pages": 43,
+      "nodes_fingerprinted": 19692,
+      "bound_nodes": 15484,
+      "page_binding_sha256_equal": true,
+      "web_tokens": 1462,
+      "web_visible_body": 33,
+      "tested_types": [
+        "COLOR",
+        "FLOAT",
+        "STRING"
+      ],
+      "unsupported_types_observed": [],
+      "untested_absent_types": [
+        "BOOLEAN"
+      ],
+      "boundary_cases": "PASS",
+      "unavailable_usage_metrics": "UNAVAILABLE"
+    },
+    "scope": "Revalidated stored Figma readbacks from 2026-11-17, including aliases, Body styles and unchanged binding fingerprints. No live Figma mutations."
+  },
+  "limits": [
+    "This verifies skill instructions, package integrity and the cited local product composition. It does not establish automatic Body compliance for every future generated composition.",
+    "The normal GitHub runtime resolves successfully but cannot consume Body from the currently published catalog because the four canonical files are absent."
+  ],
+  "next_dependency": "A catalog containing the Body/visibility contracts and delegated data is required for GitHub consumption. Publication was excluded by the user."
+}

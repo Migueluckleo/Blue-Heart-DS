@@ -1,0 +1,1261 @@
+{
+  "fileKey": "yZsIpXywybsPDytjolwcP4",
+  "observedOn": "2026-11-17",
+  "status": "PASS",
+  "set": "42:30",
+  "pairs": [
+    {
+      "source": "42:4",
+      "left": "309:12",
+      "right": "42:4",
+      "name": "selected=false, state=default"
+    },
+    {
+      "source": "42:9",
+      "left": "309:17",
+      "right": "42:9",
+      "name": "selected=false, state=hover"
+    },
+    {
+      "source": "42:14",
+      "left": "309:22",
+      "right": "42:14",
+      "name": "selected=false, state=focus"
+    },
+    {
+      "source": "42:20",
+      "left": "309:28",
+      "right": "42:20",
+      "name": "selected=false, state=disabled"
+    },
+    {
+      "source": "42:25",
+      "left": "309:33",
+      "right": "42:25",
+      "name": "selected=false, state=error"
+    },
+    {
+      "source": "43:2",
+      "left": "309:38",
+      "right": "43:2",
+      "name": "selected=true, state=default"
+    },
+    {
+      "source": "43:42",
+      "left": "309:45",
+      "right": "43:42",
+      "name": "selected=true, state=hover"
+    },
+    {
+      "source": "43:49",
+      "left": "309:52",
+      "right": "43:49",
+      "name": "selected=true, state=focus"
+    },
+    {
+      "source": "43:57",
+      "left": "309:60",
+      "right": "43:57",
+      "name": "selected=true, state=disabled"
+    },
+    {
+      "source": "43:64",
+      "left": "309:67",
+      "right": "43:64",
+      "name": "selected=true, state=error"
+    },
+    {
+      "source": "43:71",
+      "left": "309:74",
+      "right": "43:71",
+      "name": "selected=indeterminate, state=default"
+    },
+    {
+      "source": "43:111",
+      "left": "309:81",
+      "right": "43:111",
+      "name": "selected=indeterminate, state=hover"
+    },
+    {
+      "source": "43:118",
+      "left": "309:88",
+      "right": "43:118",
+      "name": "selected=indeterminate, state=focus"
+    },
+    {
+      "source": "43:126",
+      "left": "309:96",
+      "right": "43:126",
+      "name": "selected=indeterminate, state=disabled"
+    },
+    {
+      "source": "43:133",
+      "left": "309:103",
+      "right": "43:133",
+      "name": "selected=indeterminate, state=error"
+    }
+  ],
+  "definitions": {
+    "Label#42:0": {
+      "type": "TEXT",
+      "defaultValue": "Label"
+    },
+    "Show label#42:6": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "selected": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true",
+        "indeterminate"
+      ]
+    },
+    "state": {
+      "type": "VARIANT",
+      "defaultValue": "default",
+      "variantOptions": [
+        "default",
+        "hover",
+        "focus",
+        "disabled",
+        "error"
+      ]
+    },
+    "label position": {
+      "type": "VARIANT",
+      "defaultValue": "right",
+      "variantOptions": [
+        "right",
+        "left"
+      ]
+    }
+  },
+  "description": "CHECKBOX-001 · Usa Checkbox para opciones independientes y selección en lote. Elige label position left o right para ubicar la etiqueta. Conserva un nombre accesible al ocultarla y explica los errores.",
+  "layoutQA": {
+    "status": "PASS",
+    "set": "42:30",
+    "count": 30,
+    "default": "42:4",
+    "properties": {
+      "Label#42:0": {
+        "type": "TEXT",
+        "defaultValue": "Label"
+      },
+      "Show label#42:6": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      "selected": {
+        "type": "VARIANT",
+        "defaultValue": "false",
+        "variantOptions": [
+          "false",
+          "true",
+          "indeterminate"
+        ]
+      },
+      "state": {
+        "type": "VARIANT",
+        "defaultValue": "default",
+        "variantOptions": [
+          "default",
+          "hover",
+          "focus",
+          "disabled",
+          "error"
+        ]
+      },
+      "label position": {
+        "type": "VARIANT",
+        "defaultValue": "right",
+        "variantOptions": [
+          "right",
+          "left"
+        ]
+      }
+    },
+    "longLabelRetained": true,
+    "hidden": [
+      24,
+      24
+    ],
+    "rows": [
+      {
+        "id": "42:4",
+        "selected": "false",
+        "state": "default",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "43:2"
+          ],
+          [
+            "MOUSE_ENTER",
+            "42:9"
+          ]
+        ]
+      },
+      {
+        "id": "42:9",
+        "selected": "false",
+        "state": "hover",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "43:42"
+          ],
+          [
+            "MOUSE_LEAVE",
+            "42:4"
+          ]
+        ]
+      },
+      {
+        "id": "42:14",
+        "selected": "false",
+        "state": "focus",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "43:49"
+          ]
+        ]
+      },
+      {
+        "id": "42:20",
+        "selected": "false",
+        "state": "disabled",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": []
+      },
+      {
+        "id": "42:25",
+        "selected": "false",
+        "state": "error",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "43:64"
+          ]
+        ]
+      },
+      {
+        "id": "43:2",
+        "selected": "true",
+        "state": "default",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "42:4"
+          ],
+          [
+            "MOUSE_ENTER",
+            "43:42"
+          ]
+        ]
+      },
+      {
+        "id": "43:42",
+        "selected": "true",
+        "state": "hover",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "42:9"
+          ],
+          [
+            "MOUSE_LEAVE",
+            "43:2"
+          ]
+        ]
+      },
+      {
+        "id": "43:49",
+        "selected": "true",
+        "state": "focus",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "42:14"
+          ]
+        ]
+      },
+      {
+        "id": "43:57",
+        "selected": "true",
+        "state": "disabled",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": []
+      },
+      {
+        "id": "43:64",
+        "selected": "true",
+        "state": "error",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "42:25"
+          ]
+        ]
+      },
+      {
+        "id": "43:71",
+        "selected": "indeterminate",
+        "state": "default",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "43:2"
+          ],
+          [
+            "MOUSE_ENTER",
+            "43:111"
+          ]
+        ]
+      },
+      {
+        "id": "43:111",
+        "selected": "indeterminate",
+        "state": "hover",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "43:42"
+          ],
+          [
+            "MOUSE_LEAVE",
+            "43:71"
+          ]
+        ]
+      },
+      {
+        "id": "43:118",
+        "selected": "indeterminate",
+        "state": "focus",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "43:49"
+          ]
+        ]
+      },
+      {
+        "id": "43:126",
+        "selected": "indeterminate",
+        "state": "disabled",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": []
+      },
+      {
+        "id": "43:133",
+        "selected": "indeterminate",
+        "state": "error",
+        "label position": "right",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          32,
+          0
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "43:64"
+          ]
+        ]
+      },
+      {
+        "id": "309:12",
+        "selected": "false",
+        "state": "default",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "309:38"
+          ],
+          [
+            "MOUSE_ENTER",
+            "309:17"
+          ]
+        ]
+      },
+      {
+        "id": "309:17",
+        "selected": "false",
+        "state": "hover",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "309:45"
+          ],
+          [
+            "MOUSE_LEAVE",
+            "309:12"
+          ]
+        ]
+      },
+      {
+        "id": "309:22",
+        "selected": "false",
+        "state": "focus",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "309:52"
+          ]
+        ]
+      },
+      {
+        "id": "309:28",
+        "selected": "false",
+        "state": "disabled",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": []
+      },
+      {
+        "id": "309:33",
+        "selected": "false",
+        "state": "error",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "309:67"
+          ]
+        ]
+      },
+      {
+        "id": "309:38",
+        "selected": "true",
+        "state": "default",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "309:12"
+          ],
+          [
+            "MOUSE_ENTER",
+            "309:45"
+          ]
+        ]
+      },
+      {
+        "id": "309:45",
+        "selected": "true",
+        "state": "hover",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "309:17"
+          ],
+          [
+            "MOUSE_LEAVE",
+            "309:38"
+          ]
+        ]
+      },
+      {
+        "id": "309:52",
+        "selected": "true",
+        "state": "focus",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "309:22"
+          ]
+        ]
+      },
+      {
+        "id": "309:60",
+        "selected": "true",
+        "state": "disabled",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": []
+      },
+      {
+        "id": "309:67",
+        "selected": "true",
+        "state": "error",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "309:33"
+          ]
+        ]
+      },
+      {
+        "id": "309:74",
+        "selected": "indeterminate",
+        "state": "default",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "309:38"
+          ],
+          [
+            "MOUSE_ENTER",
+            "309:81"
+          ]
+        ]
+      },
+      {
+        "id": "309:81",
+        "selected": "indeterminate",
+        "state": "hover",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "309:45"
+          ],
+          [
+            "MOUSE_LEAVE",
+            "309:74"
+          ]
+        ]
+      },
+      {
+        "id": "309:88",
+        "selected": "indeterminate",
+        "state": "focus",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "309:52"
+          ]
+        ]
+      },
+      {
+        "id": "309:96",
+        "selected": "indeterminate",
+        "state": "disabled",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": []
+      },
+      {
+        "id": "309:103",
+        "selected": "indeterminate",
+        "state": "error",
+        "label position": "left",
+        "label": [
+          320,
+          72
+        ],
+        "position": [
+          0,
+          328
+        ],
+        "links": [
+          [
+            "ON_CLICK",
+            "309:67"
+          ]
+        ]
+      }
+    ],
+    "reviewFrame": "313:195",
+    "deletedNodeIds": [
+      "313:22"
+    ],
+    "createdNodeIds": [
+      "313:195",
+      "313:196",
+      "313:197",
+      "313:202",
+      "313:213",
+      "313:224",
+      "313:225",
+      "313:234",
+      "313:245"
+    ]
+  },
+  "tokenQA": {
+    "status": "PASS",
+    "owners": [
+      {
+        "id": "42:30",
+        "name": "Checkbox"
+      }
+    ],
+    "bindingCount": 1284,
+    "overrideCount": 40,
+    "findings": []
+  },
+  "ownership": {
+    "status": "PASS",
+    "page": [
+      [
+        "42:30",
+        "Checkbox",
+        "COMPONENT_SET"
+      ]
+    ],
+    "set": "42:30",
+    "description": "CHECKBOX-001 · Usa Checkbox para opciones independientes y selección en lote. Elige label position left o right para ubicar la etiqueta. Conserva un nombre accesible al ocultarla y explica los errores.",
+    "variants": [
+      {
+        "id": "42:4",
+        "name": "selected=false, state=default, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "42:7",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "42:9",
+        "name": "selected=false, state=hover, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "42:12",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "42:14",
+        "name": "selected=false, state=focus, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "42:18",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "42:20",
+        "name": "selected=false, state=disabled, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "42:23",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "42:25",
+        "name": "selected=false, state=error, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "42:28",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "43:2",
+        "name": "selected=true, state=default, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "43:40",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "43:42",
+        "name": "selected=true, state=hover, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "43:47",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "43:49",
+        "name": "selected=true, state=focus, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "43:55",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "43:57",
+        "name": "selected=true, state=disabled, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "43:62",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "43:64",
+        "name": "selected=true, state=error, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "43:69",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "43:71",
+        "name": "selected=indeterminate, state=default, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "43:109",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "43:111",
+        "name": "selected=indeterminate, state=hover, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "43:116",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "43:118",
+        "name": "selected=indeterminate, state=focus, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "43:124",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "43:126",
+        "name": "selected=indeterminate, state=disabled, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "43:131",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "43:133",
+        "name": "selected=indeterminate, state=error, label position=right",
+        "local": true,
+        "parent": "42:30",
+        "label": "43:138",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:12",
+        "name": "selected=false, state=default, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:15",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:17",
+        "name": "selected=false, state=hover, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:20",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:22",
+        "name": "selected=false, state=focus, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:26",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:28",
+        "name": "selected=false, state=disabled, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:31",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:33",
+        "name": "selected=false, state=error, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:36",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:38",
+        "name": "selected=true, state=default, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:42",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:45",
+        "name": "selected=true, state=hover, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:49",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:52",
+        "name": "selected=true, state=focus, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:57",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:60",
+        "name": "selected=true, state=disabled, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:64",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:67",
+        "name": "selected=true, state=error, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:71",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:74",
+        "name": "selected=indeterminate, state=default, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:78",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:81",
+        "name": "selected=indeterminate, state=hover, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:85",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:88",
+        "name": "selected=indeterminate, state=focus, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:93",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:96",
+        "name": "selected=indeterminate, state=disabled, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:100",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      },
+      {
+        "id": "309:103",
+        "name": "selected=indeterminate, state=error, label position=left",
+        "local": true,
+        "parent": "42:30",
+        "label": "309:107",
+        "labelReference": {
+          "visible": "Show label#42:6"
+        },
+        "textReference": {
+          "characters": "Label#42:0"
+        }
+      }
+    ],
+    "external": [
+      [
+        "b0e1ef9e3dcc90870bbf7ef05b8ee937890eb31d",
+        "Check"
+      ],
+      [
+        "10ad6c579ecb00c883f839281ca2ad812962a324",
+        "Minus"
+      ]
+    ],
+    "errors": [],
+    "deletedNodeIds": [
+      "313:195"
+    ]
+  },
+  "web": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "browser": "PASS",
+    "labelPositions": 2,
+    "labelClick": true,
+    "keyboard": true,
+    "disabled": true,
+    "longLabelAtWidth": 220
+  }
+}

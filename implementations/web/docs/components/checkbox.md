@@ -20,7 +20,7 @@ Conserva un nombre accesible cuando se oculta Label. La casilla nativa se activa
 
 ## Uso sin backend
 
-Activa la opción indeterminada con Espacio; la segunda casilla está deshabilitada.
+Elige labelPosition left o right cuando showLabel está activo. La etiqueta va a la derecha por defecto. El selector de la muestra permite alternar ambos lados; la segunda casilla está deshabilitada.
 
 ```tsx
 'use client';
@@ -29,6 +29,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';
 import { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';
 import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
+import { EyeIcon } from '@phosphor-icons/react/dist/csr/Eye';
 import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
 import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
 import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
@@ -37,10 +38,20 @@ const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading'
 
 export function CheckboxExample() {
   const [selected, setSelected] = useState<CheckboxSelection>('indeterminate');
-  return <div className="my-4 flex flex-wrap gap-6">
-    <Checkbox id="demo-checkbox" label="Seleccionar comprobantes visibles" showLabel selected={selected}
-      onSelectedChange={setSelected}/>
-    <Checkbox id="demo-checkbox-disabled" label="Selección no disponible" showLabel selected disabled/>
+  const [labelPosition, setLabelPosition] = useState<'left' | 'right'>('right');
+  return <div className="my-4 space-y-4">
+    <label className="flex items-center gap-2">
+      Posición de la etiqueta de Checkbox
+      <select value={labelPosition} onChange={event => setLabelPosition(event.target.value as 'left' | 'right')}>
+        <option value="right">Derecha</option>
+        <option value="left">Izquierda</option>
+      </select>
+    </label>
+    <div className="flex flex-wrap gap-6">
+      <Checkbox id="demo-checkbox" label="Seleccionar comprobantes visibles" showLabel labelPosition={labelPosition} selected={selected}
+        onSelectedChange={setSelected}/>
+      <Checkbox id="demo-checkbox-disabled" label="Selección no disponible" showLabel labelPosition={labelPosition} selected disabled/>
+    </div>
   </div>;
 }
 ```
@@ -58,6 +69,7 @@ export type CheckboxProps = Omit<ComponentPropsWithoutRef<'input'>,
   'type' | 'role' | 'checked' | 'defaultChecked' | 'onChange' | 'aria-label' | 'aria-checked' | 'aria-invalid'> & {
   label: string;
   showLabel?: boolean;
+  labelPosition?: 'left' | 'right';
   selected: CheckboxSelection;
   invalid?: boolean;
   onSelectedChange?: (selected: boolean) => void;
@@ -70,7 +82,7 @@ export type CheckboxProps = Omit<ComponentPropsWithoutRef<'input'>,
 Las firmas siguientes se extraen de las funciones, incluidos sus valores por defecto. Una prop sin asignación `=` es obligatoria o permanece undefined según su tipo; no se rellena con reglas de negocio.
 
 ```tsx
-Checkbox: {label, showLabel = false, selected, onSelectedChange, invalid, previewState, className, ...input}: CheckboxProps
+Checkbox: {label, showLabel = false, labelPosition = 'right', selected, onSelectedChange, invalid, previewState, className, ...input}: CheckboxProps
 ```
 
 Props `on…` son callbacks locales. No atribuyen autorización, carga, guardado ni resultados de negocio.
@@ -87,7 +99,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [checkbox.contract.v1.0.0.md](../../../../specs/components/checkbox.contract.v1.0.0.md) · SHA-256 `270c19f1bff11fcaa8ba77cc251302a890af236ba78302b572c20128fc2eee6d`.
+- [checkbox.contract.v1.0.0.md](../../../../specs/components/checkbox.contract.v1.0.0.md) · SHA-256 `fd1bf81cba70bac10fdd8069c963734ac506db7b4d8cf763d768250303794c56`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

@@ -11,6 +11,7 @@ human_review_policy: OPTIONAL_NON_BLOCKING
 source_data_ref: specs/tokens/blueheart-variables.v0.1.2.json
 source_data_digest_sha256: 09a96d3707735fa129e3cfa99de6ccac1a9d94ccf5cc19fa5d282de867629993
 data_refs:
+  - specs/tokens/visibility.body-only.correction.json
   - specs/tokens/blueheart-variables.v0.1.2.json
   - sources/figma-snapshots/variables-2026-11-11/capture-manifest.json
 ---
@@ -20,6 +21,8 @@ data_refs:
 La organización vigente incorpora la corrección de colecciones y la nomenclatura de talla confirmada por el usuario. En el maestro quedan exactamente tres colecciones locales, con nombres `primitives`, `semantic` y `component`. Los 19 grupos usan nombres de variable con barra dentro de `primitives`, por ejemplo `orange/100` y `font-family/inter`. Conserva el orden de modos observado, los nombres y la estructura fuente de `semantic` y `component`.
 
 ## Autoridad y datos
+
+La [corrección de visibilidad de tokens](token-visibility.contract.v1.0.0.md) sustituye exclusivamente los scopes efectivos del inventario histórico. Solo `component/body/` se expone en selectores, con scopes específicos; las demás variables conservan su función con `[]`. Identidad, valores, aliases, bindings y publicación siguen intactos. El JSON histórico mantiene su hash y procedencia; consumir también la corrección delegada vigente.
 
 El [JSON delegado](../tokens/blueheart-variables.v0.1.2.json) gobierna los datos y la descripción canónica de cada variable. La [captura y sus hashes](../../sources/figma-snapshots/variables-2026-11-11/capture-manifest.json) conservan los IDs y los valores de origen. Los IDs y keys reales del maestro se registran en una evidencia de implementación. El QA documental está en [el comprobante](../../qa/implementations/blueheart-variables.v0.1.2.review.md).
 

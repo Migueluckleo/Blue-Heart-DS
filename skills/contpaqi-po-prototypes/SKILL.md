@@ -22,6 +22,8 @@ Después de resolver el snapshot, ejecuta `python3 scripts/consumer_graph.py --c
 
 Para una composición, consulta `--intent dependencies` por familia anfitriona. Por ejemplo, `APP-SHELL-001` recupera Header, Sidebar, su enmienda y Section Header. Abre los contratos de las familias que realmente utilices y sus dependencias declaradas.
 
+Para una pantalla cuyo flujo principal es una conversación con Beni o Navi, resuelve primero `APP-SHELL-001` y `CHAT-001`. Si el corte ofrece App Shell en modo conversación, mapea y marca la instancia `AppShell`, usa `bodyLayout="conversation"` y monta `Chat` en su Slot Body. Incluye ambas instancias en cada estado de captura de la conversación. Si el producto usa herramientas laterales de Chat, colócalas en el Slot Right sidebar y conserva las reglas de Rail y Panel del contrato. El contenido particular del flujo vive en los slots y en el estado del anfitrión.
+
 `PASS` con `mode: graph` acredita navegación dirigida, no aprobación de diseño. `FALLBACK` incluye motivo y cobertura limitada a contrato y enmiendas del snapshot validado: completa dependencias por lectura selectiva de las referencias originales antes de construir. `BLOCKED` no permite usar un contexto parcial; resuelve conflicto, integridad, cobertura o límite indicado. No descargues `graphify-out/graph.json` ni reindexes el repositorio. Lee las fuentes recuperadas para verificar reglas; el índice no decide precedencia normativa.
 
 1. Extrae objetivo, pantallas, contenido, acciones, tema y viewport. Resuelve solo
@@ -51,3 +53,11 @@ modificar el maestro o las habilidades instaladas durante este flujo.
 ## Cobertura vacía
 
 Si el corte carece de familias aplicables, informa `BLOCKED` para el diseño que depende del DS y registra la cobertura faltante. Las ligas y las specs futuras habilitarán la siguiente fase.
+
+## Contenido específico de producto con Body
+
+Consulta también `assets/design-system/specs/foundations/token-visibility.contract.v1.0.0.md` y `assets/design-system/specs/tokens/visibility.body-only.correction.json`. Body es exclusivamente el prefijo `body/` en la colección `component`: es la interfaz de tokens para contenido específico de producto. Los componentes oficiales siguen consumiendo sus tokens internos y aliases, aunque tengan scopes vacíos en Figma; no los sustituyas por Body, semánticos o valores literales. Los nombres de otras familias que contengan body no pertenecen a Body. Consume el manifest efectivo generado o aplica esta corrección sobre los inventarios históricos para interpretar scopes. Conserva variables CSS, modos y cadena component → semantic → primitive. Toda alta/corrección debe cumplir TOKEN-QA-03 en Figma y web, con scopes específicos declarados por función y preservación de estilos Body y bindings. Esta política no autoriza publicar ni instalar.
+
+Para Cards, Widgets y composiciones bajo demanda, lee `assets/design-system/specs/foundations/body.contract.v1.0.0.md` y sus datos `assets/design-system/specs/tokens/body.v1.0.0.json` desde el snapshot ya verificado. Body es una foundation; se abre por su ruta verificada, no como una familia de componente del índice. Aplica sus roles `body/*`, estilos tipográficos y estándar de espaciado. Sus tallas lg/md/xs tienen su propio mapeo a la escala semántica: consulta los aliases, no deduzcas valores por el nombre.
+
+Estas composiciones pertenecen al producto o prototipo. Reutiliza dentro de ellas los controles oficiales que correspondan y conserva los tokens propios de esos controles. El contenido visual a medida consume Body → semantic → primitives; las muestras de Playground no definen una familia de Cards del DS.

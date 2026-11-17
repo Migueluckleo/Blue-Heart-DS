@@ -64,3 +64,27 @@ v1.0.0 · DELEGATED_FOR_BUILD. [Contrato](../specs/components/chat.contract.v1.0
 ## Chat Sidebar · CHAT-SIDEBAR-001
 
 [Chat Sidebar](../specs/components/chat-sidebar.contract.v1.0.0.md) y cuatro átomos delegados v1.0.0 · [Chat Tool Item](../specs/components/chat-tool-item.contract.v1.0.0.md) · [Chat History Item](../specs/components/chat-history-item.contract.v1.0.0.md) · [Chat Sidebar Section](../specs/components/chat-sidebar-section.contract.v1.0.0.md) · [Chat Plan Usage](../specs/components/chat-plan-usage.contract.v1.0.0.md).
+
+## Checkbox · Posición del label · 2026-11-17
+
+[Checkbox](../specs/components/checkbox.contract.v1.0.0.md) registra las dos posiciones del label y las 30 combinaciones. El default mantiene la etiqueta a la derecha.
+
+## Pagination · Cantidad de registros · 2026-11-17
+
+[Pagination](../specs/components/pagination.contract.v1.0.0.md) define el rango y la cantidad de registros en Default y Compact, con cálculo automático en React.
+
+## Pagination · Posición del resumen · 2026-11-17
+
+[Pagination](../specs/components/pagination.contract.v1.0.0.md) define range position left/right y rangePosition en web, default left. Las cuatro combinaciones conservan texto, controles y selección.
+
+## Table · Sticky Actions · 2026-11-17
+
+[Table](../specs/components/table.contract.v1.0.0.md) añade actions=sticky y stickyActions=true, con Ghost oficiales y sombra lateral. Conserva el contrato 1.0.0 y Default predeterminado.
+
+## Body · Contenido de producto · 2026-11-17
+
+[Body · FOUNDATIONS-BODY-001](../specs/foundations/body.contract.v1.0.0.md) delega 33 tokens, cinco estilos tipográficos y el estándar interno 24/16/8/4. Entre Cards y bloques independientes se usan 32 px. Las demos son frames locales y no constituyen una familia de Cards.
+
+## Política de visibilidad de tokens · 2026-11-17
+
+[FOUNDATIONS-TOKEN-VISIBILITY-001](../specs/foundations/token-visibility.contract.v1.0.0.md): corrección de scopes efectivos delegada tras QA documental. Solo component/body/ es interfaz visible de producto; no cambia versiones de familias.
