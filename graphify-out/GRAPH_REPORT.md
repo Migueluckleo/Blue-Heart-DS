@@ -1,7 +1,7 @@
 # Graph Report - blueheart-rebuild  (2026-11-17)
 
 ## Corpus Check
-- Large corpus: 1274 files · ~1,406,657 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 1274 files · ~1,406,680 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
 - 5125 nodes · 9696 edges · 881 communities (194 shown, 687 thin omitted)
@@ -243,12 +243,12 @@
   sources/assets/chat-sidebar/connection.svg → specs/components/chat-sidebar.contract.v1.0.0.md
 - `Contabilidad Nube isotipo` --conceptually_related_to--> `Chat Sidebar`  [EXTRACTED]
   sources/assets/chat-sidebar/logo.svg → specs/components/chat-sidebar.contract.v1.0.0.md
-- `Registered Body Playground implementation` --semantically_similar_to--> `Body five frame App Shell composition QA`  [INFERRED] [semantically similar]
-  registry/implementations.md → qa/implementations/body.v1.0.0.review.md
 - `Logo de Beni sin firma para Section Header` --conceptually_related_to--> `Reemplazo de título de Section Header`  [EXTRACTED]
   sources/assets/section-header/beni.svg → specs/components/section-header.contract.v1.0.0.md
-- `Fotografía de muestra original de Avatar` --references--> `Contrato Avatar preserva imagen, iniciales, Phosphor y presencia`  [EXTRACTED]
-  sources/assets/avatar-portrait.png → specs/components/avatar.contract.v1.0.0.md
+- `Registered Body Playground implementation` --semantically_similar_to--> `Body five frame App Shell composition QA`  [INFERRED] [semantically similar]
+  registry/implementations.md → qa/implementations/body.v1.0.0.review.md
+- `Enmienda Sidebar consume Icon Button Secondary small en Figma y React` --implements--> `Sidebar()`  [EXTRACTED]
+  specs/components/sidebar.secondary-control.amendment.v1.0.1.md → implementations/web/src/components/sidebar.tsx
 
 ## Import Cycles
 - None detected.
@@ -1032,7 +1032,7 @@ Cohesion: 0.67
 Nodes (3): size/79, size-79, chat-sidebar/size/rail
 
 ## Knowledge Gaps
-- **410 isolated node(s):** `Body gap and padding scale`, `Body radius scale`, `Body warning strong contrast role`, `Function specific Body selector scopes`, `Paquete oficial Phosphor React y weight` (+405 more)
+- **410 isolated node(s):** `Retiro verificado de 19 colecciones temporales propias`, `Revisión visual opcional después del QA técnico`, `Destinos Figma y React del label configurable de Checkbox`, `Páginas maestras dedicadas de Buttons y Loader`, `Destinos Figma y web del resumen configurable de Pagination` (+405 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1233 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **687 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -1040,10 +1040,12 @@ Nodes (3): size/79, size-79, chat-sidebar/size/rail
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `react` connect `Characters · Evidencias` to `Menu Item`, `Page · Evidencias`, `Radio Group`, `Chat Sidebar`, `Tabs · Evidencias`, `Pagination · Evidencias`, `Package · Evidencias`, `Button · Evidencias`, `App Shell`, `Dropdown Menu`, `Examples · Evidencias`, `Linear Progress`, `Header Actions`, `Stepper · Evidencias`, `Conversation Response`, `Input · Evidencias`, `Layout · Evidencias`, `Table Cell`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
+- **Why does `@phosphor-icons/react` connect `Conversation Response` to `Menu Item`, `Characters · Evidencias`, `Tabs · Evidencias`, `Chat Sidebar`, `Pagination · Evidencias`, `Package · Evidencias`, `Button · Evidencias`, `Dropdown Menu`, `App Shell`, `Examples · Evidencias`, `Linear Progress`, `Header Actions`, `Stepper · Evidencias`, `Input · Evidencias`, `Table Cell`?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
 - **Why does `value()` connect `Body Playground Browser` to `Table Main Rows`, `Buttons Loader Browser`, `Audit Linear Progress Consumer`, `Audit Native Set`?**
   _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **What connects `Body gap and padding scale`, `Body radius scale`, `Body warning strong contrast role` to the rest of the system?**
+- **What connects `Retiro verificado de 19 colecciones temporales propias`, `Revisión visual opcional después del QA técnico`, `Destinos Figma y React del label configurable de Checkbox` to the rest of the system?**
   _410 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Blueheart Variables` be split into smaller, more focused modules?**
   _Cohesion score 0.009542649153347049 - nodes in this community are weakly interconnected._
@@ -1051,12 +1053,10 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.021505376344086023 - nodes in this community are weakly interconnected._
 - **Should `Conversation Composer` be split into smaller, more focused modules?**
   _Cohesion score 0.05593561368209256 - nodes in this community are weakly interconnected._
-- **Should `Contratos e implementación` be split into smaller, more focused modules?**
-  _Cohesion score 0.0525879917184265 - nodes in this community are weakly interconnected._
 
-## Refresh provenance · 2026-11-17-figma-final-qa
+## Refresh provenance · 2026-11-17-figma-stable-readback
 
-The extraction reuses 237 unchanged source contributions verified by content hashes. New documents and changed sections were read in the host Codex session; unchanged historical sections of append-only registries retain their prior semantic provenance. JSON identity/references and canonical token aliases were extracted deterministically. Token counters shown as zero by the template are placeholders: measured agent token usage is unavailable, not zero cost. Historical specs, QA and snapshots remain historical; graph currency does not certify Figma or approval. Full corpus, exact supplemental token paths, raw edge provenance and backup live under runs/2026-11-17-figma-final-qa/.
+The extraction reuses 238 unchanged source contributions verified by content hashes. New documents and changed sections were read in the host Codex session; unchanged historical sections of append-only registries retain their prior semantic provenance. JSON identity/references and canonical token aliases were extracted deterministically. Token counters shown as zero by the template are placeholders: measured agent token usage is unavailable, not zero cost. Historical specs, QA and snapshots remain historical; graph currency does not certify Figma or approval. Full corpus, exact supplemental token paths, raw edge provenance and backup live under runs/2026-11-17-figma-stable-readback/.
 Effective scope: 1277 files, including 1 explicitly inspected design-data JSON files and explicitly configured Mermaid diagram sources. Derived exports, temporary renders and graph outputs excluded.
 Suggested questions and community heuristics above are navigation aids, not authorized tasks or confirmed Design System defects.
 Source-link limitation: 0 unresolved relative links remain quoted in archived/historical evidence. They are listed in structural-supplement.json; original evidence was not rewritten and no graph relationship was invented for those targets. This is distinct from missing graph endpoints.

@@ -8477,7 +8477,7 @@
       "file_type": "code",
       "norm_label": "describe()",
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L92"
+      "source_location": "L98"
     },
     {
       "id": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_insideverifiedinstance",
@@ -8537,7 +8537,7 @@
       "file_type": "code",
       "norm_label": "textstyles()",
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L80"
+      "source_location": "L86"
     },
     {
       "id": "implementations_web_scripts_check_token_visibility_audit",
@@ -95222,7 +95222,7 @@
       "extraction_scope": "file identity, explicit references; semantic entities indexed separately",
       "file_type": "document",
       "norm_label": "collect_figma_usage.js",
-      "sha256": "19a0f3e5d0bc9eed2c6a80f5106560292d259fa078af6d27fff69803585e1700",
+      "sha256": "9fe57f7e75258ccf0bf0f4bb7a8419239916aa70515c3e8721c6d70f4f27d0ca",
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
       "source_location": "L1"
     },
@@ -95290,7 +95290,7 @@
       "file_type": "code",
       "norm_label": "result",
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L108"
+      "source_location": "L114"
     },
     {
       "id": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_stylecache",
@@ -119554,6 +119554,32 @@
     },
     {
       "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_describe",
+      "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_textstyles",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "evidence_records": [
+        {
+          "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_describe",
+          "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_textstyles",
+          "relation": "calls",
+          "confidence": "EXTRACTED",
+          "confidence_score": 1.0,
+          "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
+          "source_location": "L100"
+        }
+      ],
+      "relations": [
+        "calls"
+      ],
+      "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_describe",
       "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_ancestorids",
       "relation": "calls",
       "_origin": "ast",
@@ -119568,14 +119594,14 @@
           "confidence": "EXTRACTED",
           "confidence_score": 1.0,
           "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-          "source_location": "L103"
+          "source_location": "L109"
         }
       ],
       "relations": [
         "calls"
       ],
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L103",
+      "source_location": "L109",
       "weight": 1.0
     },
     {
@@ -119594,14 +119620,14 @@
           "confidence": "EXTRACTED",
           "confidence_score": 1.0,
           "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-          "source_location": "L105"
+          "source_location": "L111"
         }
       ],
       "relations": [
         "calls"
       ],
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L105",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -119620,14 +119646,14 @@
           "confidence": "EXTRACTED",
           "confidence_score": 1.0,
           "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-          "source_location": "L105"
+          "source_location": "L111"
         }
       ],
       "relations": [
         "calls"
       ],
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L105",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -119646,40 +119672,14 @@
           "confidence": "EXTRACTED",
           "confidence_score": 1.0,
           "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-          "source_location": "L93"
+          "source_location": "L99"
         }
       ],
       "relations": [
         "calls"
       ],
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L93",
-      "weight": 1.0
-    },
-    {
-      "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_describe",
-      "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_textstyles",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "evidence_records": [
-        {
-          "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_describe",
-          "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_textstyles",
-          "relation": "calls",
-          "confidence": "EXTRACTED",
-          "confidence_score": 1.0,
-          "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-          "source_location": "L94"
-        }
-      ],
-      "relations": [
-        "calls"
-      ],
-      "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L94",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
@@ -119776,14 +119776,14 @@
           "confidence": "EXTRACTED",
           "confidence_score": 1.0,
           "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-          "source_location": "L83"
+          "source_location": "L89"
         }
       ],
       "relations": [
         "calls"
       ],
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L83",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -119802,14 +119802,14 @@
           "confidence": "EXTRACTED",
           "confidence_score": 1.0,
           "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-          "source_location": "L88"
+          "source_location": "L94"
         }
       ],
       "relations": [
         "calls"
       ],
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L88",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -180495,31 +180495,6 @@
     },
     {
       "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage",
-      "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_result",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "evidence_records": [
-        {
-          "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage",
-          "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_result",
-          "relation": "contains",
-          "confidence": "EXTRACTED",
-          "confidence_score": 1.0,
-          "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-          "source_location": "L108"
-        }
-      ],
-      "relations": [
-        "contains"
-      ],
-      "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L108",
-      "weight": 1.0
-    },
-    {
-      "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage",
       "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_inheritedcontrols",
       "relation": "contains",
       "_origin": "ast",
@@ -180541,6 +180516,31 @@
       ],
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
       "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage",
+      "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_result",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "evidence_records": [
+        {
+          "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage",
+          "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_result",
+          "relation": "contains",
+          "confidence": "EXTRACTED",
+          "confidence_score": 1.0,
+          "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
+          "source_location": "L114"
+        }
+      ],
+      "relations": [
+        "contains"
+      ],
+      "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -180783,14 +180783,14 @@
           "confidence": "EXTRACTED",
           "confidence_score": 1.0,
           "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-          "source_location": "L80"
+          "source_location": "L86"
         }
       ],
       "relations": [
         "contains"
       ],
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L80",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -180858,14 +180858,14 @@
           "confidence": "EXTRACTED",
           "confidence_score": 1.0,
           "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-          "source_location": "L92"
+          "source_location": "L98"
         }
       ],
       "relations": [
         "contains"
       ],
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L92",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -365486,30 +365486,6 @@
     },
     {
       "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_artifact_js",
-      "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_result",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "evidence_records": [
-        {
-          "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_artifact_js",
-          "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_result",
-          "relation": "references",
-          "confidence": "EXTRACTED",
-          "confidence_score": 1.0,
-          "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-          "source_location": "L108"
-        }
-      ],
-      "relations": [
-        "references"
-      ],
-      "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L108",
-      "weight": 1.0
-    },
-    {
-      "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_artifact_js",
       "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_inheritedcontrols",
       "relation": "references",
       "confidence": "EXTRACTED",
@@ -365530,6 +365506,30 @@
       ],
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
       "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_artifact_js",
+      "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_result",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "evidence_records": [
+        {
+          "source": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_artifact_js",
+          "target": "workflows_skills_contpaqi_figma_screens_scripts_collect_figma_usage_result",
+          "relation": "references",
+          "confidence": "EXTRACTED",
+          "confidence_score": 1.0,
+          "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
+          "source_location": "L114"
+        }
+      ],
+      "relations": [
+        "references"
+      ],
+      "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -365786,14 +365786,14 @@
           "confidence": "EXTRACTED",
           "confidence_score": 1.0,
           "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-          "source_location": "L80"
+          "source_location": "L86"
         }
       ],
       "relations": [
         "references"
       ],
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L80",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -365858,14 +365858,14 @@
           "confidence": "EXTRACTED",
           "confidence_score": 1.0,
           "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-          "source_location": "L92"
+          "source_location": "L98"
         }
       ],
       "relations": [
         "references"
       ],
       "source_file": "workflows/skills/contpaqi-figma-screens/scripts/collect_figma_usage.js",
-      "source_location": "L92",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -375182,5 +375182,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c09ff852379c3d7ac8bf33796be53adda414ba00"
+  "built_at_commit": "2d351a5d8aa41a2c932d3fa821bd131d3a005d45"
 }

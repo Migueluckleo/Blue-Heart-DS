@@ -69,9 +69,15 @@ function textPath(text, root) {
     const parent = part.parent;
     if (!parent || !('children' in parent)) throw new Error('Text outside inspected subtree');
     if (!part.visible) return null;
-    // Structural occurrence stays stable when a supported property hides a sibling.
-    const matching = parent.children.filter(child => child.type === part.type && child.name === part.name);
-    const occurrence = matching.findIndex(child => child.id === part.id);
+    // The host enables skipInvisibleInstanceChildren. Include hidden siblings
+    // only for this structural ordinal; keep normal traversal visibility-scoped.
+    const skip = figma.skipInvisibleInstanceChildren;
+    let occurrence;
+    try {
+      figma.skipInvisibleInstanceChildren = false;
+      const matching = parent.children.filter(child => child.type === part.type && child.name === part.name);
+      occurrence = matching.findIndex(child => child.id === part.id);
+    } finally { figma.skipInvisibleInstanceChildren = skip; }
     if (occurrence < 0) throw new Error('Text path could not be matched');
     segments.unshift([part.type, part.name, occurrence]);
   }
