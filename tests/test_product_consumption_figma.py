@@ -73,6 +73,17 @@ class ConsumptionTests(unittest.TestCase):
     def test_accepts_official_shell_progress_button_and_body_molecule(self):
         self.assertEqual(self.preflight()['status'], 'PASS')
 
+    def test_visibility_overrides_require_supported_boolean_and_keep_visible_text_checks(self):
+        label = {'path': 'label', 'visibility_controls': ['Show label#1'], 'style_keys': ['label-style'], 'font_metrics': []}
+        field = {'path': 'value', 'visibility_controls': [], 'style_keys': ['field-style'], 'font_metrics': []}
+        source = {'component_properties': {'Show label#1': {'type': 'BOOLEAN', 'value': True}}, 'text_runs': [label, field]}
+        self.assertEqual(gate.configured_text_runs(source, {}), [label, field])
+        self.assertEqual(gate.configured_text_runs(source, {'component_properties': {'Show label#1': False}}), [field])
+        self.assertEqual(gate.configured_text_runs(source, {'component_properties': {'Show label#1': True}}), [label, field])
+        for invalid in [{'Show label#1': 'false'}, {'Guessed visibility': False}]:
+            with self.assertRaises(ValueError):
+                gate.configured_text_runs(source, {'component_properties': invalid})
+
     def test_documented_set_requires_exact_spec_table_and_family_namespace(self):
         component = {'name': 'Linear Progress Bar', 'exports': ['LinearProgress']}
         source = {'parent_type': 'COMPONENT_SET', 'parent_name': 'Linear Progress Bar/small'}

@@ -141,6 +141,16 @@ def documented_set_matches(component, source, texts):
     return any(re.search(r'^\|\s*' + re.escape(name) + r'\s*\|', text, re.M) for text in texts)
 
 
+def configured_text_runs(source, use):
+    properties = use.get('component_properties', {})
+    need(isinstance(properties, dict), 'component_properties must be object')
+    for key, value in properties.items():
+        definition = source.get('component_properties', {}).get(key, {})
+        need(definition.get('type') == 'BOOLEAN' and isinstance(value, bool),
+             'Declare only verified supported boolean properties: ' + key)
+    return [run for run in source['text_runs'] if not any(properties.get(key) is False for key in run.get('visibility_controls', []))]
+
+
 def file_roles(reader, plan, qa_page_id=None):
     path = 'config/figma-links.json'
     raw = reader.source(path)
@@ -267,6 +277,7 @@ def preflight(runtime, plan, base, qa_page_id=None):
                 continue
             if use.get('component_key') != source['key']:
                 issue(out, 'SOURCE_KEY_MISMATCH', family, use_id)
+            configured_text_runs(source, use)
             labels = {norm(s) for s in [source.get('name', ''), source.get('parent_name', '')] if s}
             aliases = {norm(s) for s in [component.get('name', ''), component.get('slug', ''), *component.get('exports', [])] if s}
             locators = [source['id']]
@@ -399,11 +410,17 @@ def verify(runtime, plan, base, receipt, readbacks, qa_page_id=None, source_afte
                 issue(out, 'MAIN_COMPONENT_MISMATCH', 'Main component key differs from verified source', use_id, node_id)
             if node.get('layout_mode') != source.get('layout_mode'):
                 issue(out, 'LAYOUT_MISMATCH', 'Layout differs from source', use_id, node_id)
+            expected_runs = configured_text_runs(source, use)
+            for key, value in use.get('component_properties', {}).items():
+                actual_property = node.get('component_properties', {}).get(key, {})
+                if actual_property.get('type') != 'BOOLEAN' or actual_property.get('value') is not value:
+                    issue(out, 'COMPONENT_PROPERTY_MISMATCH', key, use_id, node_id)
             for field, code in [('binding_fields', 'BINDINGS_MISSING'), ('text_style_keys', 'STYLES_MISSING')]:
                 need(isinstance(node.get(field), list), 'Incomplete constraint readback: ' + field)
-                if not set(source[field]) <= set(node[field]):
-                    issue(out, code, ', '.join(sorted(set(source[field]) - set(node[field]))), use_id, node_id)
-            expected_runs = source['text_runs']
+                expected_values = ({k for run in expected_runs for k in run['style_keys'] if k}
+                                   if field == 'text_style_keys' and use.get('component_properties') else set(source[field]))
+                if not expected_values <= set(node[field]):
+                    issue(out, code, ', '.join(sorted(expected_values - set(node[field]))), use_id, node_id)
             actual_runs = node.get('text_runs')
             need(isinstance(actual_runs, list), 'Missing target text ranges')
             by_path = {}

@@ -69,7 +69,8 @@ function textPath(text, root) {
     const parent = part.parent;
     if (!parent || !('children' in parent)) throw new Error('Text outside inspected subtree');
     if (!part.visible) return null;
-    const matching = parent.children.filter(child => child.visible && child.type === part.type && child.name === part.name);
+    // Structural occurrence stays stable when a supported property hides a sibling.
+    const matching = parent.children.filter(child => child.type === part.type && child.name === part.name);
     const occurrence = matching.findIndex(child => child.id === part.id);
     if (occurrence < 0) throw new Error('Text path could not be matched');
     segments.unshift([part.type, part.name, occurrence]);
@@ -79,7 +80,7 @@ function textPath(text, root) {
 async function textStyles(n) {
   const texts=n.type==='TEXT'?[n]:('children'in n?await Promise.all($fig.query('TEXT',n.id).values(['id']).map(r=>figma.getNodeByIdAsync(r.id))):[]);
   const keys=new Set();let unstyled=0;const text_runs=[];
-  for(const t of texts){const path=textPath(t,n);if(path===null)continue;const entry={path,style_keys:[],font_metrics:[]};text_runs.push(entry);for(const run of t.getStyledTextSegments(['textStyleId','fontName','fontSize','lineHeight','letterSpacing','textDecoration'])){
+  for(const t of texts){const path=textPath(t,n);if(path===null)continue;const visibility=[];for(let p=t;p&&p.id!==n.id;p=p.parent){if('componentPropertyReferences'in p&&p.componentPropertyReferences?.visible)visibility.push(p.componentPropertyReferences.visible);}const entry={path,visibility_controls:[...new Set(visibility)],style_keys:[],font_metrics:[]};text_runs.push(entry);for(const run of t.getStyledTextSegments(['textStyleId','fontName','fontSize','lineHeight','letterSpacing','textDecoration'])){
     const {fontName,fontSize,lineHeight,letterSpacing,textDecoration}=run;
     entry.font_metrics.push({fontName,fontSize,lineHeight,letterSpacing,textDecoration});
     if(!run.textStyleId){unstyled++;entry.style_keys.push(null);continue;}
@@ -94,12 +95,15 @@ async function describe(n) {
   const properties={};
   if(n.type==='INSTANCE')for(const [k,v]of Object.entries(n.componentProperties))if(v.type==='VARIANT')properties[k]=v.value;
   if(n.type==='COMPONENT'&&n.variantProperties)Object.assign(properties,n.variantProperties);
+  const component_properties={};
+  if(n.type==='INSTANCE')for(const[k,v]of Object.entries(n.componentProperties))if(v.type==='BOOLEAN')component_properties[k]={type:v.type,value:v.value};
+  if(n.type==='COMPONENT'){const owner=n.parent?.type==='COMPONENT_SET'?n.parent:n;for(const[k,v]of Object.entries(owner.componentPropertyDefinitions))if(v.type==='BOOLEAN')component_properties[k]={type:v.type,value:v.defaultValue};}
   return {id:n.id,name:n.name,type:n.type,key:n.type==='COMPONENT'?n.key:null,
     parent_id:n.parent?n.parent.id:null,parent_name:n.parent?n.parent.name:null,parent_type:n.parent?n.parent.type:null,
     main_component_key:main?main.key:null,main_component_remote:main?main.remote:null,ancestor_ids:ancestorIds(n),
     reaction_count:'reactions'in n?n.reactions.length:0,child_count:'children'in n?n.children.length:0,
     layout_mode:'layoutMode'in n?n.layoutMode:null,binding_fields:bindingFields(n),binding_details:await bindingDetails(n),
-    variant_properties:properties,...styles};
+    variant_properties:properties,component_properties,...styles};
 }
 const result={schema_version:1,kind:request.kind,file_key:figma.fileKey,page_id:page.id,
   observed_at:new Date().toISOString(),complete:true,plan_sha256:request.plan_sha256,nodes:[]};
