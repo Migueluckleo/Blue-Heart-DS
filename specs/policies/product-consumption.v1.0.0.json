@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "contract_id": "FOUNDATIONS-PRODUCT-CONSUMPTION-001",
+  "local_construction": "MOLECULES_ONLY",
+  "molecule_types": [
+    "module",
+    "card",
+    "section"
+  ],
+  "body": {
+    "collection": "component",
+    "prefix": "body/",
+    "contract": "specs/foundations/body.contract.v1.0.0.md",
+    "data": "specs/tokens/body.v1.0.0.json",
+    "visibility_contract": "specs/foundations/token-visibility.contract.v1.0.0.md"
+  },
+  "controls": "OFFICIAL_DS_ONLY",
+  "component_tokens": "PRESERVE_INTERNAL",
+  "atomic_fallback": "BLOCKED_MISSING_DS_COVERAGE",
+  "examples": {
+    "progress": "LINEAR-PROGRESS-001",
+    "action": "BUTTON-001"
+  },
+  "delivery": "github-direct-v2",
+  "product_host": {
+    "family": "APP-SHELL-001",
+    "web_export": "AppShell",
+    "required_for": "EVERY_PRODUCT_SCREEN_AND_STATE",
+    "conversation_layout": "conversation",
+    "content_region": "body"
+  }
+}

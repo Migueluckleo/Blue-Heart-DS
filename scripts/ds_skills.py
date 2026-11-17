@@ -194,6 +194,21 @@ def source_inputs(root=ROOT):
 
 
 def inputs(root=ROOT):
+    root = Path(root).resolve()
+    config = read_json(safe(root, 'config/ds-skills.json'))
+    if config.get('delivery') == 'github-direct-v2':
+        templates = {}
+        for name in config['skills']:
+            directory = safe(root, 'skills/' + name)
+            entries = {p.relative_to(directory).as_posix(): digest(p.read_bytes())
+                       for p in directory.rglob('*') if p.is_file()}
+            if set(entries) != {'SKILL.md'}:
+                raise ValueError('GitHub launcher must contain only SKILL.md: ' + name)
+            templates[name] = entries
+        fingerprint = {'templates': templates, 'delivery': config['delivery'], 'channel': config['channel']}
+        return {'root': root, 'config': config, 'templates': templates, 'files': {}, 'components': [],
+                'excluded_links': [], 'ds_digest': 'REMOTE', 'fingerprint': fingerprint,
+                'input_digest': digest(compact(fingerprint))}
     state = source_inputs(root)
     if state["config"].get("delivery") == "github-live-v1":
         # The installed engine changes only with its own instructions/tooling.
@@ -215,6 +230,8 @@ def inputs(root=ROOT):
 def package_files(state, version, name):
     root = state["root"]
     result = {p: safe(root, "skills/" + name + "/" + p) for p in state["templates"][name]}
+    if state['config'].get('delivery') == 'github-direct-v2':
+        return result
     if state["config"].get("delivery") == "github-live-v1":
         result["scripts/resolve_ds.py"] = safe(root, "scripts/resolve_ds.py")
         result["scripts/consumer_graph.py"] = safe(root, "scripts/consumer_graph.py")

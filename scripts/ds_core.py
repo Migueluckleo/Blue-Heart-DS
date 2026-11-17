@@ -97,7 +97,7 @@ def corpus(root=ROOT, config=None):
     # Los starters portables también tienen estilos operativos que el detector omite.
     for name in config.get("supplemental_skill_sources", []):
         path = (root / name).resolve()
-        if not path.is_relative_to((root / "skills").resolve()) or path.suffix != ".css":
+        if not any(path.is_relative_to((root / base).resolve()) for base in ('skills', 'workflows/skills')) or path.suffix != ".css":
             raise ValueError("Unsupported supplemental skill source: " + name)
         path.read_text()
         if not any(str(path) in group for group in detection["files"].values()):

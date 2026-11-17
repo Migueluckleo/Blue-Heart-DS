@@ -32,6 +32,7 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 | FLOATING-ACTIONS-001 | [1.0.0](../../specs/components/floating-actions.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | FOUNDATIONS-BLUEHEART-VARIABLES-001 | [0.1.2](../../specs/foundations/blueheart-variables.contract.v0.1.2.md) | DELEGATED_FOR_BUILD | 1 | 3 registros por alcance |
 | FOUNDATIONS-BODY-001 | [1.0.0](../../specs/foundations/body.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
+| FOUNDATIONS-PRODUCT-CONSUMPTION-001 | [1.0.0](../../specs/foundations/product-consumption.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | FOUNDATIONS-TOKEN-VISIBILITY-001 | [1.0.0](../../specs/foundations/token-visibility.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | HEADER-001 | [1.0.0](../../specs/components/header.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | HEADER-ACTIONS-001 | [1.0.0](../../specs/components/header-actions.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
@@ -409,6 +410,19 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Revisión de implementación declarada: UNKNOWN.
 - Implementación: [implementations/figma/body-tokens-2026-11-17/readback.json](../../implementations/figma/body-tokens-2026-11-17/readback.json) — {"publication": "NOT_RUN"}.
 - QA por alcance: [qa/implementations/body.v1.0.0.review.md](../../qa/implementations/body.v1.0.0.review.md).
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## FOUNDATIONS-PRODUCT-CONSUMPTION-001
+
+Base: [specs/foundations/product-consumption.contract.v1.0.0.md](../../specs/foundations/product-consumption.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/foundations/product-consumption.contract.v1.0.0.md](../../specs/foundations/product-consumption.contract.v1.0.0.md).
+- Página declarada: UNKNOWN.
+- Preparación: UNKNOWN.
+- Slots: UNKNOWN.
+- Revisión de implementación declarada: UNKNOWN.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 

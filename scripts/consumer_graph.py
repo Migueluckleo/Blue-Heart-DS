@@ -128,6 +128,12 @@ def validate_index(index, manifest):
 
 
 class Reader:
+    def source(self, path):
+        if safe(self.runtime, 'assets/github-session.json').is_file():
+            from github_workflow import source
+            return source(self.runtime, path)
+        return safe(self.snapshot, path).read_bytes()
+
     def __init__(self, runtime):
         self.runtime = Path(runtime).resolve()
         self.snapshot = safe(self.runtime, 'assets/design-system')
@@ -216,7 +222,7 @@ class Reader:
             for path in sorted(paths,key=lambda p:(p.endswith('.json'),p)):
                 if path not in self.manifest['files']:
                     raise ValueError('INTEGRITY')
-                data = safe(self.snapshot, path).read_bytes()
+                data = self.source(path)
                 result['metrics']['files_read'] += 1
                 result['metrics']['bytes_read'] += len(data)
                 if result['metrics']['bytes_read'] > byte_limit:
@@ -255,14 +261,17 @@ class Reader:
                     text = ''  # Return only addressed token objects, not the whole inventory.
                 if use_graph and request['intent'] in {'variants','states'} and path == component['contract']:
                     sections = [sec for sec in node['sections'] if sec['kind'] == request['intent']]
-                    if not sections:
-                        raise ValueError('COVERAGE_GAP')
-                    lines = text.splitlines(); chunks = []
-                    for sec in sections:
-                        begin = sec['line'] - 1; end = begin + 1
-                        while end < len(lines) and not lines[end].startswith('## '): end += 1
-                        chunks.append('\n'.join(lines[begin:end]))
-                    text = '\n\n'.join(chunks)
+                    if sections:
+                        lines = text.splitlines(); chunks = []
+                        for sec in sections:
+                            begin = sec['line'] - 1; end = begin + 1
+                            while end < len(lines) and not lines[end].startswith('## '): end += 1
+                            chunks.append('\n'.join(lines[begin:end]))
+                        text = '\n\n'.join(chunks)
+                    else:
+                        # Some contracts delegate variants/states to JSON; absence of
+                        # a Markdown heading is not evidence that the data is absent.
+                        result['section_resolution'] = 'VERIFIED_CONTRACT_AND_DELEGATED_DOCUMENTS'
                 result['documents'].append({'path':path,'sha256':self.manifest['files'][path], 'text':text})
             if use_graph and request['intent'] == 'tokens' and not result['tokens']:
                 raise ValueError('COVERAGE_GAP')

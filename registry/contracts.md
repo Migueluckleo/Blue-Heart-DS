@@ -88,3 +88,7 @@ v1.0.0 · DELEGATED_FOR_BUILD. [Contrato](../specs/components/chat.contract.v1.0
 ## Política de visibilidad de tokens · 2026-11-17
 
 [FOUNDATIONS-TOKEN-VISIBILITY-001](../specs/foundations/token-visibility.contract.v1.0.0.md): corrección de scopes efectivos delegada tras QA documental. Solo component/body/ es interfaz visible de producto; no cambia versiones de familias.
+
+## Contrato primordial de consumo · 2026-11-17
+
+[FOUNDATIONS-PRODUCT-CONSUMPTION-001](../specs/foundations/product-consumption.contract.v1.0.0.md) es obligatorio para ambos workflows. Controles oficiales del DS; solo moléculas locales de producto con Body; carencias atómicas bloqueadas; fuentes y herramientas vigentes consultadas desde GitHub.
