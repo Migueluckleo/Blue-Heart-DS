@@ -1,0 +1,160 @@
+{
+  "status": "PASS",
+  "transport": "GITHUB_IMMUTABLE_COMMIT",
+  "skill": "contpaqi-po-prototypes",
+  "commit": "a81223965c67c1ec1ee8d5444964eb71afb741d2",
+  "manifest_sha256": "71156e8df921358efcafe4d332f6377924f79bf9211f4afa20a2093ddd7868de",
+  "ds_digest": "bb0c078275796da2f9e9b22a6dd30426cacef62cfbaa1ff780c651b1614cf0eb",
+  "queries": [
+    {
+      "component": "DROPDOWN-MENU-001",
+      "intent": "component",
+      "status": "PASS",
+      "mode": "graph",
+      "documents": [
+        "specs/components/dropdown-item.contract.v1.0.0.md",
+        "specs/components/dropdown-menu.contract.v1.0.0.md",
+        "specs/components/dropdown-menu.search.amendment.v1.0.0.md",
+        "specs/components/input.contract.v1.0.0.md",
+        "specs/components/search.contract.v1.0.0.md",
+        "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+        "specs/foundations/token-visibility.contract.v1.0.0.md",
+        "specs/data/dropdown-menu.v1.0.0.json",
+        "specs/data/dropdown-scrollbar.v1.0.0.json",
+        "specs/tokens/dropdown-menu.search.v1.0.0.json"
+      ],
+      "tokens": [],
+      "metrics": {
+        "files_read": 10,
+        "bytes_read": 91579,
+        "index_bytes": 393751,
+        "nodes_visited": 10,
+        "duration_ms": 2880.294,
+        "context_bytes": 103843
+      }
+    },
+    {
+      "component": "DROPDOWN-MENU-001",
+      "intent": "dependencies",
+      "status": "PASS",
+      "mode": "graph",
+      "documents": [
+        "specs/components/dropdown-item.contract.v1.0.0.md",
+        "specs/components/dropdown-menu.contract.v1.0.0.md",
+        "specs/components/dropdown-menu.search.amendment.v1.0.0.md",
+        "specs/components/input.contract.v1.0.0.md",
+        "specs/components/search.contract.v1.0.0.md",
+        "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+        "specs/foundations/token-visibility.contract.v1.0.0.md",
+        "specs/data/dropdown-menu.v1.0.0.json",
+        "specs/data/dropdown-scrollbar.v1.0.0.json",
+        "specs/tokens/dropdown-menu.search.v1.0.0.json"
+      ],
+      "tokens": [],
+      "metrics": {
+        "files_read": 10,
+        "bytes_read": 91579,
+        "index_bytes": 393751,
+        "nodes_visited": 10,
+        "duration_ms": 21.527,
+        "context_bytes": 103843
+      }
+    },
+    {
+      "component": "DROPDOWN-MENU-001",
+      "intent": "tokens",
+      "status": "PASS",
+      "mode": "graph",
+      "documents": [
+        "specs/components/dropdown-item.contract.v1.0.0.md",
+        "specs/components/dropdown-menu.contract.v1.0.0.md",
+        "specs/components/dropdown-menu.search.amendment.v1.0.0.md",
+        "specs/components/input.contract.v1.0.0.md",
+        "specs/components/search.contract.v1.0.0.md",
+        "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+        "specs/foundations/token-visibility.contract.v1.0.0.md",
+        "specs/data/dropdown-menu.v1.0.0.json",
+        "specs/data/dropdown-scrollbar.v1.0.0.json",
+        "specs/tokens/blueheart-variables.v0.1.2.json",
+        "specs/tokens/component-layer.correction.json",
+        "specs/tokens/dropdown-menu.search.v1.0.0.json",
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "tokens": [
+        "specs/tokens/dropdown-menu.search.v1.0.0.json#/collections/2/variables/0"
+      ],
+      "metrics": {
+        "files_read": 13,
+        "bytes_read": 1357194,
+        "index_bytes": 393751,
+        "nodes_visited": 13,
+        "duration_ms": 1364.337,
+        "context_bytes": 43852
+      }
+    },
+    {
+      "component": "CHAT-DOCUMENT-VIEWER-001",
+      "intent": "component",
+      "status": "PASS",
+      "mode": "graph",
+      "documents": [
+        "specs/components/app-shell.document-preview.amendment.v1.0.0.md",
+        "specs/components/buttons.contract.v1.0.0.md",
+        "specs/components/chat-document-viewer.contract.v1.0.0.md",
+        "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+        "specs/foundations/token-visibility.contract.v1.0.0.md",
+        "specs/tokens/chat-document-viewer.v1.0.0.json"
+      ],
+      "tokens": [],
+      "metrics": {
+        "files_read": 6,
+        "bytes_read": 54913,
+        "index_bytes": 393751,
+        "nodes_visited": 6,
+        "duration_ms": 1137.629,
+        "context_bytes": 61324
+      }
+    },
+    {
+      "component": "APP-SHELL-001",
+      "intent": "component",
+      "status": "PASS",
+      "mode": "graph",
+      "documents": [
+        "specs/components/app-shell.contract.v1.0.0.md",
+        "specs/components/app-shell.document-preview.amendment.v1.0.0.md",
+        "specs/components/chat-document-viewer.contract.v1.0.0.md",
+        "specs/components/chat-sidebar.contract.v1.0.0.md",
+        "specs/components/chat.contract.v1.0.0.md",
+        "specs/components/header.contract.v1.0.0.md",
+        "specs/components/section-header.contract.v1.0.0.md",
+        "specs/components/sidebar.contract.v1.0.0.md",
+        "specs/components/sidebar.secondary-control.amendment.v1.0.1.md",
+        "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+        "specs/data/app-shell.v1.0.0.json",
+        "specs/tokens/component-layer.correction.json"
+      ],
+      "tokens": [],
+      "metrics": {
+        "files_read": 12,
+        "bytes_read": 269366,
+        "index_bytes": 393751,
+        "nodes_visited": 12,
+        "duration_ms": 2379.749,
+        "context_bytes": 296754
+      }
+    }
+  ],
+  "verified_source_hashes": {
+    "implementations/web/src/components/dropdown-menu.tsx": "2397797d530ce4c7b22f2b28ea2ecbe9c07353bdbfc4686012b27aa24750728f",
+    "implementations/web/src/components/search.tsx": "1cb49aa36acd3bcfda44bb6442f72d478bb61fb8aede22a0b818289bcb60c464",
+    "implementations/web/src/components/chat-document-viewer.tsx": "e605820c42048366ad0d91d7506584751a85460f67ade0a0cac510329e6be1c1",
+    "implementations/web/src/components/app-shell.tsx": "06ae92248802548049d29188c47eba83ffe4b563b93668fbf041996f01063168",
+    "specs/tokens/dropdown-menu.search.v1.0.0.json": "6e815076a56f45c2c2d31a344beb10c3cf4b4460620eadf47cb08a4e25ee9ab7"
+  },
+  "visible_body_tokens": 33,
+  "family_alias_tokens_checked": 68,
+  "installed_resources_used": false,
+  "figma_write": false,
+  "remote_workflow_execution": "PASS"
+}

@@ -1,5 +1,5 @@
 {
-  "status": "READY_FOR_PUSH",
+  "status": "PUBLISHED_AND_VERIFIED",
   "branch": "main",
   "baseline": "074cf21d865009a48aced3b5c79e15207b417126",
   "authorization": "User explicitly requested push to main and inclusion of Azure cleanup and consumption adjustments.",
@@ -17,5 +17,31 @@
     "catalog_queries": 9
   },
   "library_publication": false,
-  "skill_installation": false
+  "skill_installation": false,
+  "published_source_commit": "a81223965c67c1ec1ee8d5444964eb71afb741d2",
+  "verified_remote_main": "a81223965c67c1ec1ee8d5444964eb71afb741d2",
+  "source_commit_url": "https://github.com/Migueluckleo/Blue-Heart-DS/commit/a81223965c67c1ec1ee8d5444964eb71afb741d2",
+  "remote_workflows": {
+    "contpaqi-figma-screens": {
+      "status": "PASS",
+      "graph_mode": "graph",
+      "queries": 5,
+      "family_alias_tokens_checked": 68,
+      "visible_body_tokens": 33,
+      "source_reads": "GITHUB_IMMUTABLE_COMMIT",
+      "workflow_guides_verified": true,
+      "installed_resources_used": false
+    },
+    "contpaqi-po-prototypes": {
+      "status": "PASS",
+      "graph_mode": "graph",
+      "queries": 5,
+      "family_alias_tokens_checked": 68,
+      "visible_body_tokens": 33,
+      "source_reads": "GITHUB_IMMUTABLE_COMMIT",
+      "workflow_guides_verified": true,
+      "installed_resources_used": false
+    }
+  },
+  "evidence_commit_scope": "Only this publication receipt and four remote QA reports; canonical sources and catalog remain identical to the verified source commit."
 }
