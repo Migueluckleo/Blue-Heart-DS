@@ -1,7 +1,7 @@
 # Build y QA offline
 
 ```sh
-python3 -B "$HERRAMIENTA_GITHUB" start --skill contpaqi-po-prototypes --commit "$COMMIT" --output "$RUNTIME"
+python3 -B "$CARGADOR_REMOTO" start --skill contpaqi-po-prototypes --commit "$COMMIT" --output "$RUNTIME"
 # Usa el runtime del comprobante PASS.
 python3 -B "$RUNTIME/scripts/github_workflow.py" web --runtime "$RUNTIME"
 node "$RUNTIME/scripts/init.mjs" "$PROYECTO"
@@ -16,7 +16,7 @@ npm run capture
 npm run handoff
 ```
 
-`HERRAMIENTA_GITHUB` es `scripts/github_workflow.py` leído desde GitHub en el commit resuelto, no desde la instalación. `RUNTIME` y `PROYECTO` son rutas
+`CARGADOR_REMOTO` es el cargador del proveedor (`github_workflow.py` o `azure_workflow.py`) leído desde el repositorio de origen en el commit resuelto, no desde la instalación. `RUNTIME` y `PROYECTO` son rutas
 distintas a carpetas nuevas, con el proyecto fuera del runtime. Si ya resolviste
 el corte para este encargo, reutiliza el `runtime` del comprobante.
 

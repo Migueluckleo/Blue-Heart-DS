@@ -2,13 +2,13 @@
 
 ## Rutas portables
 
-Primero inicia la sesión GitHub descrita en [consumo remoto](remote-source.md). Resuelve las rutas respecto de la carpeta de ejecución verificada que devuelve, nunca respecto de un ZIP histórico:
+Primero inicia la sesión remota descrita en [consumo remoto](remote-source.md). Resuelve las rutas respecto de la carpeta de ejecución verificada que devuelve, nunca respecto de un ZIP histórico:
 
 | Archivo | Función |
 |---|---|
 | `assets/release.json` | Versión del paquete, `ds_digest`, nombre de skill y compañera. |
 | `assets/snapshot-manifest.json` | `schema_version: 1`, mapa `files` de ruta relativa → SHA-256 de bytes y lista `components`. |
-| `assets/design-system/` | Fuentes obtenidas según necesidad desde GitHub; las claves de `files` son relativas a esta raíz. |
+| `assets/design-system/` | Fuentes obtenidas según necesidad desde el repositorio de origen; las claves de `files` son relativas a esta raíz. |
 | `references/components.json` | Copia generada de `components` para localizar familias, contratos, enmiendas y exports. |
 
 Cada componente del índice ofrece `id`, `slug`, `name`, `contract`, `amendments`, `exports`, `version` y `figma`. `figma: null` significa que el índice no aporta un localizador comprobado; no significa que el componente no exista. Conserva IDs lógicos, rutas y versiones; no fabriques IDs de Figma a partir de ellos.
@@ -28,7 +28,7 @@ Las instrucciones de migración incluidas en el corpus describen la reconstrucci
 
 ## Tokens y assets
 
-Lee `config/figma-links.json` y `config/web-inputs.json` del corte. En componentes vinculados, conserva la tipografía del principal y verifica los bindings, estilos compartidos existentes y métricas por rango que correspondan al contrato. Para texto propio, aplica los estilos y roles Body del contrato y sus datos vigentes de GitHub. Registra el rol usado y cualquier hueco de cobertura.
+Lee `config/figma-links.json` y `config/web-inputs.json` del corte. En componentes vinculados, conserva la tipografía del principal y verifica los bindings, estilos compartidos existentes y métricas por rango que correspondan al contrato. Para texto propio, aplica los estilos y roles Body del contrato y sus datos vigentes del repositorio de origen. Registra el rol usado y cualquier hueco de cobertura.
 
 Para cada binding necesario registra la identidad lógica del token y su origen, propiedad consumidora, modo y variable real del prototipo. Verifica tanto el scope técnico como el significado: texto, superficie, borde, icono y foco no son intercambiables por compartir RGB. No pegues valores resueltos donde se exige un binding ni uses primitivas directamente en la UI.
 

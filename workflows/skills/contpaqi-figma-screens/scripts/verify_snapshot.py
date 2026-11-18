@@ -23,11 +23,14 @@ def verify(skill_root):
     if not isinstance(files, dict) or not files:
         raise ValueError("Manifest files must be a non-empty path-to-SHA256 object")
     base = (skill_root / "assets/design-system").resolve()
-    session_path = skill_root / 'assets/github-session.json'
-    session = read_json(session_path) if session_path.is_file() else None
+    session_paths = [skill_root / 'assets' / name for name in ('github-session.json', 'azure-session.json')
+                     if (skill_root / 'assets' / name).is_file()]
+    if len(session_paths) > 1:
+        raise ValueError('Ambiguous remote session')
+    session = read_json(session_paths[0]) if session_paths else None
     if session and (session.get('manifest_sha256') != hashlib.sha256((skill_root / 'assets/snapshot-manifest.json').read_bytes()).hexdigest()
                     or session.get('ds_digest') != manifest.get('ds_digest')):
-        raise ValueError('GitHub session identity mismatch')
+        raise ValueError('Remote session identity mismatch')
     checked = 0
     for name, expected in files.items():
         if not isinstance(name, str) or not isinstance(expected, str):
@@ -52,7 +55,8 @@ def verify(skill_root):
         errors.append({"path": "assets/release.json", "error": "ds_digest mismatch"})
     if not isinstance(manifest.get("components"), list) or components != manifest["components"]:
         errors.append({"path": "references/components.json", "error": "Component index mismatch"})
-    if release.get("skill_name") != "contpaqi-figma-screens":
+    expected_skill = 'azure-contpaqi-figma-screens' if (skill_root / 'assets/azure-session.json').is_file() else 'contpaqi-figma-screens'
+    if release.get("skill_name") != expected_skill:
         errors.append({"path": "assets/release.json", "error": "Unexpected skill_name"})
     return {
         "status": "FAIL" if errors else "PASS",

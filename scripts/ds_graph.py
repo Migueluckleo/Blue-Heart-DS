@@ -37,7 +37,8 @@ def plan(config, detection=None):
     hashes = {p: sha(ROOT / p) for p in paths}
     changed = []
     for path in paths:
-        digest = hashlib.md5((ROOT / path).read_bytes()).hexdigest()
+        # Graphify's cache protocol uses MD5; trust and integrity use source_sha256.
+        digest = hashlib.md5((ROOT / path).read_bytes(), usedforsecurity=False).hexdigest()
         kind = "semantic_hash" if path in semantic else "ast_hash"
         if manifest.get(path, {}).get(kind) != digest:
             changed.append(path)

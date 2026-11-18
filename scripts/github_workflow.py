@@ -39,7 +39,7 @@ def relative(name):
 
 class NoRedirect(HTTPRedirectHandler):
     def redirect_request(self, *args, **kwargs):
-        raise ValueError('Unexpected GitHub redirect')
+        raise ValueError('Unexpected remote redirect; check authentication')
 
 
 def request(url, limit=16 * 1024 * 1024):
@@ -52,6 +52,13 @@ def request(url, limit=16 * 1024 * 1024):
 
 
 class GitHub:
+    session_file = 'assets/github-session.json'
+    repository = REPO
+    delivery = 'github-direct-v2'
+    engine = 'GITHUB'
+    shared = SHARED
+    identity_prefix = ''
+
     def __init__(self, commit=None, get=None):
         self.get = get or request
         self.requests = 0
@@ -109,12 +116,27 @@ def write(base, path, data):
     dest.write_bytes(data)
 
 
+def session_client(runtime, get=None):
+    sessions = [name for name in ('assets/github-session.json', 'assets/azure-session.json')
+                if (runtime / name).is_file()]
+    if len(sessions) != 1:
+        raise ValueError('Expected exactly one remote session')
+    session = json.loads((runtime / sessions[0]).read_bytes())
+    if sessions[0] == 'assets/azure-session.json':
+        from azure_workflow import AzureDevOps
+        client_type = AzureDevOps
+    else:
+        client_type = GitHub
+    if session.get('repository') != client_type.repository or session.get('delivery') != client_type.delivery:
+        raise ValueError('Remote session origin mismatch')
+    return session, client_type(session['commit'], get)
+
+
 def source(runtime, path, get=None):
     """Fetch a required source once per job, always verify its catalog hash."""
     runtime = Path(runtime).resolve()
     relative(path)
-    session = json.loads((runtime / 'assets/github-session.json').read_bytes())
-    client = GitHub(session['commit'], get)
+    session, client = session_client(runtime, get)
     manifest_raw = (runtime / 'assets/snapshot-manifest.json').read_bytes()
     if sha(manifest_raw) != session['manifest_sha256']:
         raise ValueError('Session manifest changed')
@@ -139,13 +161,13 @@ def source(runtime, path, get=None):
     return data
 
 
-def start(skill, output, commit=None, get=None):
+def start(skill, output, commit=None, get=None, *, client_type=GitHub):
     if skill not in SKILLS:
         raise ValueError('Unknown workflow')
     output = Path(output).absolute()
     if output.exists() or output.is_symlink():
         raise ValueError('Use a new work session folder')
-    client = GitHub(commit, get)
+    client = client_type(commit, get)
     pointer_raw = client.raw('catalog/current.json')
     pointer = json.loads(pointer_raw)
     identity = pointer['manifest_sha256']
@@ -159,7 +181,7 @@ def start(skill, output, commit=None, get=None):
     for path in manifest['files']:
         relative(path)
     output.parent.mkdir(parents=True, exist_ok=True)
-    stage = Path(tempfile.mkdtemp(prefix='.github-workflow-', dir=output.parent))
+    stage = Path(tempfile.mkdtemp(prefix='.remote-workflow-', dir=output.parent))
     try:
         workflow_files = client.workflow_files(skill)
         prefix = 'workflows/skills/' + skill + '/'
@@ -172,17 +194,19 @@ def start(skill, output, commit=None, get=None):
             write(stage, path, data)
         with ThreadPoolExecutor(max_workers=8) as pool:
             list(pool.map(fetch, workflow_files.items()))
-        for path in SHARED:
+        for path in client.shared:
             write(stage, path, client.raw(path))
         write(stage, 'assets/snapshot-manifest.json', raw)
         write(stage, 'assets/remote-receipt.json', pointer_raw)
         write(stage, 'references/components.json', encoded(manifest['components']))
-        session = {'schema_version': 1, 'repository': REPO, 'commit': client.commit,
-                   'skill_name': skill, 'manifest_sha256': identity, 'ds_digest': manifest['ds_digest'],
-                   'delivery': 'github-direct-v2', 'source_reads': 'ON_DEMAND', 'offline_fallback': False}
-        write(stage, 'assets/github-session.json', encoded(session))
-        release = {**session, 'version': manifest['package_version'], 'engine_version': 'GITHUB:' + client.commit,
-                   'catalog_url': client.url('catalog/current.json')}
+        session = {'schema_version': 1, 'repository': client.repository, 'commit': client.commit,
+                   'skill_name': client.identity_prefix + skill,
+                   'manifest_sha256': identity, 'ds_digest': manifest['ds_digest'],
+                   'delivery': client.delivery, 'source_reads': 'ON_DEMAND', 'offline_fallback': False}
+        write(stage, client.session_file, encoded(session))
+        release = {**session, 'version': manifest['package_version'], 'engine_version': client.engine + ':' + client.commit,
+                   'catalog_url': client.url('catalog/current.json'),
+                   'companion_skill': client.identity_prefix + next(name for name in SKILLS if name != skill)}
         write(stage, 'assets/release.json', encoded(release))
         graph = {'mode': 'fallback', 'reason': 'MISSING'}
         desc = manifest.get('consumption_graph')

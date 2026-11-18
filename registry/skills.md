@@ -41,3 +41,15 @@ CONVERSATION-RESPONSE-001 incorpora la spec, los IDs del set oficial y el export
 ## Corte local de la corrección de tokens · 2026-11-12
 
 El catálogo común incorpora los aliases de componente y las fichas corregidas en sus versiones vigentes. El comprobante local se genera en `output/closures/2026-11-12-component-token-layer.json`.
+
+## Variante Azure v1.0.9 · 2026-11-18
+
+Canal Azure independiente para `contpaqi-po-prototypes` y `contpaqi-figma-screens`, solicitado por el usuario. Los ZIP viven en `output/skills/azure/1.0.9/`; mantienen versión común 1.0.9 y los nombres de invocación. Las publicaciones GitHub históricas se conservan. [Guía de consulta](../references/AZURE-SKILL-CONSUMPTION.md) y [QA local PASS](../qa/skills/azure-consumption.v1.0.9.review.md). Integración real `BLOCKED_AUTHENTICATION`; no se publicó ni instaló. `user_audit: NOT_REQUIRED`.
+
+## Seguridad antes de publicar Azure · 2026-11-18
+
+La autenticación real de lectura quedó comprobada con el helper Git existente: Azure devolvió repositorio vacío sin rama predeterminada. Se corrigieron cinco avisos de Next.js actualizando a 16.4.5; npm y las dependencias Python no reportaron vulnerabilidades conocidas. [Revisión y límites](../qa/tooling/azure-prepublication-security-2026-11-18.md). Los ZIP Azure siguen en 1.0.9; el nuevo contenido se fija por commit y manifiesto. La publicación espera el resultado final del control de seguridad.
+
+## Prefijo Azure · 2026-11-18
+
+Solicitud: diferenciar las skills de Azure mediante el prefijo Azure. Nombres vigentes: `azure-contpaqi-po-prototypes` y `azure-contpaqi-figma-screens`, versión 1.0.9. Los ZIP y nombres de invocación llevan `azure-`; el traspaso PO invoca la skill de Figma del mismo proveedor mediante `companion_skill`. Entregas anteriores preservadas. [Guía](../references/AZURE-SKILL-CONSUMPTION.md). QA del corte: `output/qa/azure-prefix-2026-11-18/report.json`; cierre: `output/closures/2026-11-18-azure-prefix.json`.

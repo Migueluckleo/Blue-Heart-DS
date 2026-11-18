@@ -2,7 +2,7 @@
 
 Completa `brief.json` según lo implementado; nunca copies la demostración como si
 fuera el resultado. `npm run handoff` entrega el HTML con nombre de producto o flujo, el Markdown, referencias/handoff.json
-y capturas. El Markdown invoca `$contpaqi-figma-screens`; no ejecuta esa habilidad.
+y capturas. El Markdown invoca la skill de Figma indicada por el proveedor (`$azure-contpaqi-figma-screens` en Azure; `$contpaqi-figma-screens` en GitHub); no ejecuta esa habilidad.
 Incluye un bloque JSON autosuficiente para pegar únicamente el Markdown en la
 habilidad de Figma. HTML/PNG/archivos de referencia son adjuntos opcionales; si no
 están disponibles no se afirma comparación visual contra ellos.

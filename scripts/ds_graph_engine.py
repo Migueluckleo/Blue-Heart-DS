@@ -224,7 +224,8 @@ def assemble():
         chunk=normalize_fragment(read(RUN/f'chunk-{i:02d}.json'))
         represented={rel(n['source_file']) for n in chunk['nodes'] if n.get('source_file') and not n.get('reference_only')}
         absent=set(map(rel,files))-represented
-        assert not absent,(i,absent)
+        if absent:
+            raise ValueError('Incomplete semantic coverage: ' + str((i, absent)))
         sem.append(chunk); covered.update(map(rel,files))
     for p in sorted(RUN.glob('delta-*.json')):
         chunk=normalize_fragment(read(p)); sem.append(chunk)
@@ -297,7 +298,8 @@ def assemble():
     nodes={n['id']:n for n in raw['nodes']}
     dump(RUN/'combined-raw.json',raw)
     missing=[e for e in edges if e['source'] not in nodes or e['target'] not in nodes]
-    assert not missing,('missing endpoints',missing[:5])
+    if missing:
+        raise ValueError('Missing graph endpoints: ' + str(missing[:5]))
     # NetworkX simple graph supports one edge/pair. Preserve all explicit
     # evidence in attributes and raw extraction instead of losing relations.
     pairs={}; selfloops=[]
@@ -325,7 +327,8 @@ def assemble():
     # This can turn their explicit membership edges into trivial self-links.
     # Remove only references created by that normalization, retaining raw evidence.
     normalization_loops=[(u,v,dict(attrs)) for u,v,attrs in G.edges(data=True) if u==v]
-    assert all(e.get('relation')=='references' for _,_,e in normalization_loops), 'Unexpected semantic self-loop'
+    if not all(e.get('relation') == 'references' for _, _, e in normalization_loops):
+        raise ValueError('Unexpected semantic self-loop')
     dump(RUN/'normalization-cleanup.json',{'removed_self_references':normalization_loops,
        'reason':'File identity normalization; raw extraction preserved; no source document changed'})
     G.remove_edges_from((u,v) for u,v,_ in normalization_loops)
@@ -476,7 +479,8 @@ def verify():
       'scope':'Graph freshness, file coverage and integrity only; no live Figma revalidation'}
     dump(RUN/'verification.json',result)
     print(json.dumps(result,ensure_ascii=False))
-    assert not errors,errors
+    if errors:
+        raise ValueError('Graph verification failed: ' + str(errors))
 
 def manifest():
     from graphify.detect import save_manifest
@@ -485,7 +489,8 @@ def manifest():
     d=read(RUN/'detection.json');plan=read(RUN/'semantic-plan.json'); g=read(OUT/'graph.json')
     # Complete evidence has already passed verification. Semantic placeholders
     # and failed/absent chunks never reach this gate.
-    assert read(RUN/'verification.json')['status']=='PASS'
+    if read(RUN/'verification.json')['status'] != 'PASS':
+        raise ValueError('Cannot publish a graph without PASS verification')
     stamped={k:list(v) for k,v in d['files'].items()}
     save_manifest(stamped,manifest_path=str(OUT/'manifest.json'),root=ROOT,
       scan_corpus={p for group in stamped.values() for p in group})
@@ -502,7 +507,8 @@ def manifest():
     for paths in stamped.values():
         for f in paths:
             if m.get(rel(f),{}).get('semantic_hash')!=digest(f):mismatches.append(rel(f))
-    assert not mismatches,mismatches
+    if mismatches:
+        raise ValueError('Graph manifest hash mismatch: ' + str(mismatches))
     cost_path=RUN/'before/cost.json'
     cost=read(cost_path) if cost_path.is_file() else {'runs':[]}
     cost.setdefault('runs',[]).append({'date':datetime.now(timezone.utc).isoformat(),

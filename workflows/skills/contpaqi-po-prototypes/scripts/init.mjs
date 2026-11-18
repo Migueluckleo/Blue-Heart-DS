@@ -9,8 +9,11 @@ if (!arg) throw new Error('Uso: node <runtime>/scripts/init.mjs <proyecto-nuevo>
 const assets = path.join(skill, 'assets');
 const releasePath = path.join(assets, 'release.json');
 const manifestPath = path.join(assets, 'snapshot-manifest.json');
+const sessionPaths = ['github-session.json', 'azure-session.json'].map(name => path.join(assets, name)).filter(existsSync);
+if (sessionPaths.length > 1) throw new Error('Sesión remota ambigua.');
+const sessionPath = sessionPaths[0];
 if (!existsSync(releasePath) || !existsSync(manifestPath)) {
-  console.error('Falta la sesión GitHub. Consulta el workflow vigente y ejecuta github_workflow.py start.');
+  console.error('Falta la sesión remota. Consulta el workflow vigente y ejecuta su cargador start.');
   console.error('Con status PASS, ejecuta node <runtime>/scripts/init.mjs <proyecto-nuevo> usando la ruta runtime del comprobante.');
   process.exit(1);
 }
@@ -25,14 +28,14 @@ const ordered = Object.fromEntries(Object.entries(manifest.files).sort(([a],[b])
 const digest = createHash('sha256').update(JSON.stringify(ordered)).digest('hex');
 if (manifest.schema_version !== 1 || release.ds_digest !== digest || manifest.ds_digest !== digest || release.version !== manifest.package_version) throw new Error('Release y snapshot no coinciden.');
 for (const [relative, expected] of Object.entries(ordered)) {
-  if (existsSync(path.join(assets, 'github-session.json')) && !existsSync(path.resolve(snapshot, relative))) continue;
+  if (sessionPath && !existsSync(path.resolve(snapshot, relative))) continue;
   const file = realpathSync(path.resolve(snapshot, relative));
   if (!file.startsWith(realpathSync(snapshot) + path.sep)) throw new Error('Ruta fuera del snapshot.');
   if (createHash('sha256').update(readFileSync(file)).digest('hex') !== expected) throw new Error(`Snapshot alterado: ${relative}`);
 }
-if (existsSync(path.join(assets, 'github-session.json'))) {
-  const session = readJSON(path.join(assets, 'github-session.json'));
-  if (session.manifest_sha256 !== createHash('sha256').update(readFileSync(manifestPath)).digest('hex') || session.ds_digest !== manifest.ds_digest) throw new Error('La sesión GitHub y el catálogo difieren.');
+if (sessionPath) {
+  const session = readJSON(sessionPath);
+  if (session.manifest_sha256 !== createHash('sha256').update(readFileSync(manifestPath)).digest('hex') || session.ds_digest !== manifest.ds_digest) throw new Error('La sesión remota y el catálogo difieren.');
   const webReceipt = readJSON(path.join(assets, 'web-inputs-receipt.json'));
   if (webReceipt.manifest_sha256 !== session.manifest_sha256 || webReceipt.status !== 'PASS') throw new Error('Falta el comprobante de fuentes web del mismo corte.');
   for (const required of webReceipt.files) {

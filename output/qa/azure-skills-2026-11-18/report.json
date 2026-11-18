@@ -1,0 +1,144 @@
+{
+  "qa_id": "AZURE-SKILLS-1.0.9-2026-11-18",
+  "scope": "Azure consumer launchers, transport, shared runtime and PO initialization; no product screen construction",
+  "date": "2026-11-18",
+  "local_result": "PASS",
+  "remote_integration": "PASS; both skills started from Azure, queried dependencies and verified source hashes",
+  "publication": "PUBLISHED_AND_VERIFIED",
+  "installation": "NOT_REQUESTED",
+  "user_audit": "NOT_REQUIRED",
+  "human_review_policy": "OPTIONAL_NON_BLOCKING",
+  "agent_tokens": "UNAVAILABLE",
+  "account_usage": "UNAVAILABLE",
+  "checks": [
+    {
+      "id": "REGRESSION",
+      "status": "PASS",
+      "command": "PATH='<bundled-node>:$PATH' <graphify-python> -B -m unittest discover -s tests -p 'test_*.py' -v",
+      "tests": 25
+    },
+    {
+      "id": "SKILL-SYNTAX",
+      "status": "PASS",
+      "command": "quick_validate.py skills-azure/<skill>",
+      "skills": 2,
+      "validator_dependency": "PyYAML 6.0.3 installed in /private/tmp/blueheart-azure-validator-deps only"
+    },
+    {
+      "id": "INDEPENDENT-REVIEW",
+      "status": "PASS",
+      "reviewer": "azure_skill_review",
+      "tests": 8,
+      "scope": "Offline local fixture, no-credential preflight, instructions, package design"
+    },
+    {
+      "id": "PACKAGE",
+      "status": "PASS",
+      "command": "python3 -B scripts/ds_azure.py build; python3 -B scripts/ds_azure.py check",
+      "version": "1.0.9",
+      "packages": {
+        "contpaqi-figma-screens": {
+          "files": {
+            "SKILL.md": "a1a1a263eb39cb9abd79b07b0c76b2d2963fbb9d1f1e59f2e5ce31329646c6ed"
+          },
+          "archive": "contpaqi-figma-screens-1.0.9.zip",
+          "sha256": "eef34971f4e2e219407e35372d5d664a1b0da96a099499500c3308c21a6a36d0",
+          "bytes": 1746
+        },
+        "contpaqi-po-prototypes": {
+          "files": {
+            "SKILL.md": "47979d7524edffebc2a4a68a8fb336e3889a7f8c54ab62887ac771364840e6e7"
+          },
+          "archive": "contpaqi-po-prototypes-1.0.9.zip",
+          "sha256": "e2184a3cf4942e2042095254395bb8f5a2cb218f3c4f58818e0aebffb51e09f7",
+          "bytes": 1759
+        }
+      }
+    },
+    {
+      "id": "REMOTE-ACCESS",
+      "status": "BLOCKED",
+      "evidence": "REST metadata request returned HTTP 203 HTML sign-in page; Git ls-remote returned no refs and did not prove authenticated access"
+    },
+    {
+      "id": "FIGMA-SCREEN",
+      "status": "NOT_APPLICABLE",
+      "reason": "Provider adaptation only; no screen construction requested"
+    },
+    {
+      "id": "OFFLINE-HTML-RENDER",
+      "status": "NOT_APPLICABLE",
+      "reason": "Starter/build/render logic unchanged; materialization and project initialization verified"
+    },
+    {
+      "id": "ZIP-CONTENTS",
+      "status": "PASS",
+      "evidence": "Both ZIPs contain only <skill>/SKILL.md; archive SHA-256 matches manifest"
+    }
+  ],
+  "global_closure": {
+    "run": "2026-11-18-azure-security",
+    "receipt": "output/closures/2026-11-18-azure-security.json",
+    "status": "COMPLETE_LOCAL"
+  },
+  "files_read_or_changed": [
+    "config/azure-consumption.json",
+    "config/ds-project.json",
+    "scripts/azure_workflow.py",
+    "scripts/ds_azure.py",
+    "scripts/github_workflow.py",
+    "scripts/consumer_graph.py",
+    "skills-azure/contpaqi-po-prototypes/SKILL.md",
+    "skills-azure/contpaqi-figma-screens/SKILL.md",
+    "references/AZURE-SKILL-CONSUMPTION.md",
+    "qa/skills/azure-consumption.v1.0.9.review.md",
+    "tests/test_azure_workflow.py"
+  ],
+  "finder_metadata": {
+    "operation": "MOVED_TO_REVERSIBLE_BACKUP",
+    "files": [
+      {
+        "from": "output/skills/1.0.9/.DS_Store",
+        "to": "output/qa/azure-skills-2026-11-18/finder-metadata/release-root.DS_Store",
+        "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3",
+        "bytes": 6148
+      },
+      {
+        "from": "output/skills/1.0.9/contpaqi-po-prototypes/.DS_Store",
+        "to": "output/qa/azure-skills-2026-11-18/finder-metadata/po-launcher.DS_Store",
+        "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3",
+        "bytes": 6148
+      }
+    ],
+    "github_archives_match_original_manifest": true,
+    "reason": "Immutable release inspection rejected untracked Finder metadata; launcher and archive bytes unchanged"
+  },
+  "security_review": "PASS_WITH_REVIEWED_SCANNER_OBSERVATIONS; see output/security/2026-11-18-pre-azure/report.json",
+  "remote_commit": "57daa8e22a3f50c3bc6c39289b1031f04b576538",
+  "remote_verification": [
+    {
+      "skill": "contpaqi-po-prototypes",
+      "start": "PASS",
+      "graph_query": "PASS",
+      "commit": "57daa8e22a3f50c3bc6c39289b1031f04b576538",
+      "manifest_sha256": "16f9f76ca053dc0d72b12c7ddd19865511c38ed99c9134863fa7ea227da1ecd7",
+      "runtime": "/private/tmp/blueheart-azure-live-consumption-a13xuhbm/contpaqi-po-prototypes",
+      "documents": 6,
+      "web_sources": "PASS",
+      "project_initialization": "PASS",
+      "next_version": "16.4.5",
+      "elapsed_seconds": 9.902
+    },
+    {
+      "skill": "contpaqi-figma-screens",
+      "start": "PASS",
+      "graph_query": "PASS",
+      "commit": "57daa8e22a3f50c3bc6c39289b1031f04b576538",
+      "manifest_sha256": "16f9f76ca053dc0d72b12c7ddd19865511c38ed99c9134863fa7ea227da1ecd7",
+      "runtime": "/private/tmp/blueheart-azure-live-consumption-a13xuhbm/contpaqi-figma-screens",
+      "documents": 6,
+      "snapshot": "PASS",
+      "elapsed_seconds": 6.414
+    }
+  ]
+}

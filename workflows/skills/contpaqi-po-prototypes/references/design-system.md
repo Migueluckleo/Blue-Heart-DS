@@ -3,7 +3,7 @@
 Aplica `registry/DEC-AI-TECHNICAL-CLOSURE-001.md` del corpus: el agente documenta y verifica el trabajo solicitado; la revisión humana es opcional y no bloquea el cierre técnico. Conserva estados históricos sin simular aprobación. Los contratos delegados siguen siendo distintos de aprobaciones humanas y los fallos técnicos conservan su efecto.
 
 Consulta `references/components.json` de la habilidad para localizar IDs,
-contratos, enmiendas, exports y evidencia Figma. El corpus consultado desde GitHub está en
+contratos, enmiendas, exports y evidencia Figma. El corpus consultado desde el repositorio de origen está en
 `assets/design-system/`; al inicializar se copia a `references/design-system/`.
 Lee `registry/contracts.md`, las bases/enmiendas seleccionadas y la documentación
 web de esas familias. La fecha o el número mayor no sustituyen una enmienda por
@@ -15,7 +15,7 @@ fija escrita en las instrucciones.
 `src/components/` y `src/generated/` contienen recetas y geometrías originales.
 `src/styles.css` aplica Tailwind y los tokens configurados del corte.
 `src/generated/tokens.manifest.json` remite a JSON canónico y extensiones.
-La tipografía de cada componente se conserva desde su contrato, datos delegados e implementación React. Comprueba familia, peso, tamaño, altura de línea, espaciado y decoración cuando apliquen. El contenido propio consume los roles tipográficos Body vigentes; consulta su contrato y datos desde GitHub. Registra cualquier hueco de cobertura.
+La tipografía de cada componente se conserva desde su contrato, datos delegados e implementación React. Comprueba familia, peso, tamaño, altura de línea, espaciado y decoración cuando apliquen. El contenido propio consume los roles tipográficos Body vigentes; consulta su contrato y datos desde el repositorio de origen. Registra cualquier hueco de cobertura.
 
 No edites el snapshot ni las recetas para decorar una pantalla; usa Tailwind
 para composición local con Body, conservando los tokens internos de los controles oficiales. No sobrescribas `.ds-*` ni sustituyas
