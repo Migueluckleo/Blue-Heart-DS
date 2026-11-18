@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "method": "Real Figma player, CUA coordinate clicks grounded in visible screenshots; URL and AX state checked after expected navigation.",
+  "viewport": {
+    "width": 1440,
+    "height": 1100,
+    "restored": true
+  },
+  "unique_scenario_edges": 14,
+  "disabled_button_checked": true,
+  "screen_ids": [
+    "385:5169",
+    "385:5418",
+    "385:5703",
+    "385:5952",
+    "385:6237",
+    "385:6486"
+  ],
+  "log": [
+    {
+      "action": "ready expand",
+      "target": "385-5418",
+      "verified": true
+    },
+    {
+      "action": "expanded advance 25 to75",
+      "target": "385-5952",
+      "verified": true
+    },
+    {
+      "action": "expanded reset 100 to25",
+      "target": "385-5418",
+      "verified": true
+    },
+    {
+      "action": "expanded advance 25 to75",
+      "target": "385-5952",
+      "verified": true
+    },
+    {
+      "action": "expanded reset 75 to25",
+      "target": "385-5418",
+      "verified": true
+    },
+    {
+      "action": "ready collapse",
+      "target": "385-5169",
+      "verified": true
+    },
+    {
+      "action": "collapsed advance 25 to75",
+      "target": "385-5703",
+      "verified": true
+    },
+    {
+      "action": "collapsed reset 75 to25",
+      "target": "385-5169",
+      "verified": true
+    },
+    {
+      "action": "collapsed advance 25 to75",
+      "target": "385-5703",
+      "verified": true
+    },
+    {
+      "action": "advanced expand",
+      "target": "385-5952",
+      "verified": true
+    },
+    {
+      "action": "expanded advance 75 to100",
+      "target": "385-6486",
+      "verified": true
+    },
+    {
+      "action": "done collapse",
+      "target": "385-6237",
+      "verified": true
+    },
+    {
+      "action": "collapsed reset 100 to25",
+      "target": "385-5169",
+      "verified": true
+    },
+    {
+      "action": "collapsed advance 25 to75",
+      "target": "385-5703",
+      "verified": true
+    },
+    {
+      "action": "advanced expand",
+      "target": "385-5952",
+      "verified": true
+    },
+    {
+      "action": "advanced collapse",
+      "target": "385-5703",
+      "verified": true
+    },
+    {
+      "action": "collapsed advance 75 to100",
+      "target": "385-6237",
+      "verified": true
+    },
+    {
+      "action": "disabled completed button",
+      "target": "385-6237",
+      "verified": true
+    },
+    {
+      "action": "done expand",
+      "target": "385-6486",
+      "verified": true
+    },
+    {
+      "action": "done collapse",
+      "target": "385-6237",
+      "verified": true
+    },
+    {
+      "action": "collapsed reset 100 to25",
+      "target": "385-5169",
+      "verified": true
+    }
+  ],
+  "observations": [
+    {
+      "kind": "PRODUCT_BUG_FIXED",
+      "issue": "Source Linear Progress AFTER_TIMEOUT demo advanced to 100% independently of product state.",
+      "resolution": "Removed only demo timeout reactions from four QA instances; principals and tokens unchanged; player reloaded and all routes verified."
+    },
+    {
+      "kind": "QA_INPUT_CORRECTED",
+      "issue": "One verification clicked the Advance coordinate while intending the expanded Reset button.",
+      "resolution": "Corrected Reset coordinate and checked both 75→25 and100→25 with waitForURL. This input error was not classified as a product defect."
+    }
+  ],
+  "scope_limit": "Native header/sidebar destinations outside the declared QA flow retain their DS defaults; external product/backend behavior is not implemented."
+}

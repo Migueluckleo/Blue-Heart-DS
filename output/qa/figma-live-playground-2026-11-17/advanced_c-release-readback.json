@@ -1,0 +1,3633 @@
+{
+  "schema_version": 1,
+  "kind": "target",
+  "file_key": "yZsIpXywybsPDytjolwcP4",
+  "page_id": "203:93",
+  "observed_at": "2026-11-17T23:37:13.726Z",
+  "complete": true,
+  "plan_sha256": "ac8d5561349fae25cae267a9db43367b300da6e8e6fd41f865325c08f5b913fa",
+  "nodes": [
+    {
+      "id": "385:5704",
+      "name": "DS / AppShell · advanced_c",
+      "type": "INSTANCE",
+      "key": null,
+      "parent_id": "385:5703",
+      "parent_name": "advanced_c · Anticipa AI · 75%",
+      "parent_type": "FRAME",
+      "main_component_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "main_component_remote": false,
+      "ancestor_ids": [
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 2,
+      "layout_mode": "VERTICAL",
+      "binding_fields": [
+        "fills",
+        "fills.0.color",
+        "itemSpacing"
+      ],
+      "binding_details": [
+        {
+          "property": "itemSpacing",
+          "variable_id": "VariableID:227:64",
+          "token": "app-shell/spacing/header-gap",
+          "collection": "component"
+        },
+        {
+          "property": "fills",
+          "variable_id": "VariableID:227:66",
+          "token": "app-shell/color/bg/surface",
+          "collection": "component"
+        },
+        {
+          "property": "fills.0.color",
+          "variable_id": "VariableID:227:66",
+          "token": "app-shell/color/bg/surface",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {
+        "menu": "collapsed",
+        "body layout": "flex"
+      },
+      "component_properties": {},
+      "text_style_keys": [
+        "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb",
+        "0a7ce447c7a2731966b56eaf8df96c19ec08c4ec",
+        "0ed6b6170f8c30800db3f931231e0906875c182f",
+        "15ce92a91ff9390c97df480011ec203af24a3678",
+        "1bf2f3e1b3eaffd00c816773557394f78f9a9bf8",
+        "4c3bfd551b52250ae173fc7d37378cb1f986f646",
+        "5699bbfb0a5301aad8c9eaa8dcb50537a985bc1b",
+        "591a8250d0e6bfe85e5f0ed353a999f82cda97ab",
+        "5be4cc135963dbfc3b4916dbfa481c140600226e",
+        "67e5f01c76a09f73a80919a34a90e56b700f3bdc",
+        "814b0a3702de4be7b381fe897f58d71ba417c26b",
+        "95b8556569c910be94506ac33e0e34072e1ff7a2",
+        "bd1179fc3ddfdd47863a4310b2ac2a0907c87481",
+        "bd163b7da9eb30937eee922045799f56c1427460",
+        "d365a2818af4403537718faa96424a334dfb3714",
+        "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+      ],
+      "unstyled_text_runs": 3,
+      "text_runs": [
+        {
+          "path": "[[\"INSTANCE\",\"Header\",0],[\"FRAME\",\"Content\",0],[\"FRAME\",\"Version\",0],[\"FRAME\",\"Version info\",0],[\"TEXT\",\"Version\",0]]",
+          "visibility_controls": [
+            "Show version#90:10"
+          ],
+          "style_keys": [
+            "95b8556569c910be94506ac33e0e34072e1ff7a2"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 16,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 24
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"INSTANCE\",\"Header\",0],[\"FRAME\",\"Content\",0],[\"FRAME\",\"Version\",0],[\"FRAME\",\"Version info\",0],[\"INSTANCE\",\"Release badge\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [
+            "Show release badge#90:14",
+            "Show version#90:10"
+          ],
+          "style_keys": [
+            "bd1179fc3ddfdd47863a4310b2ac2a0907c87481"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"INSTANCE\",\"Header\",0],[\"FRAME\",\"Content\",0],[\"FRAME\",\"Actions\",0],[\"INSTANCE\",\"Header actions\",0],[\"FRAME\",\"Notificaciones\",0],[\"INSTANCE\",\"icon-button\",0],[\"FRAME\",\"Badge anchor\",0],[\"INSTANCE\",\"Badge\",0],[\"TEXT\",\"Count\",0]]",
+          "visibility_controls": [
+            "Show badge#59:7",
+            "Show actions#90:12"
+          ],
+          "style_keys": [
+            "bd163b7da9eb30937eee922045799f56c1427460"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold",
+                "variationSettings": {
+                  "wght": 700
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"INSTANCE\",\"Header\",0],[\"FRAME\",\"Content\",0],[\"FRAME\",\"Company\",0],[\"INSTANCE\",\"Company selector\",0],[\"FRAME\",\"Company info\",0],[\"TEXT\",\"Company name\",0]]",
+          "visibility_controls": [
+            "Show company#90:11"
+          ],
+          "style_keys": [
+            "15ce92a91ff9390c97df480011ec203af24a3678"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "SemiBold",
+                "variationSettings": {
+                  "wght": 600
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"INSTANCE\",\"Header\",0],[\"FRAME\",\"Content\",0],[\"FRAME\",\"Company\",0],[\"INSTANCE\",\"Company selector\",0],[\"FRAME\",\"Company info\",0],[\"TEXT\",\"RFC\",0]]",
+          "visibility_controls": [
+            "Show company#90:11"
+          ],
+          "style_keys": [
+            "5699bbfb0a5301aad8c9eaa8dcb50537a985bc1b"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"INSTANCE\",\"Header\",0],[\"FRAME\",\"Content\",0],[\"FRAME\",\"User interaction\",0],[\"INSTANCE\",\"User selector\",0],[\"INSTANCE\",\"Avatar\",0],[\"FRAME\",\"Avatar\",0],[\"TEXT\",\"Initials\",0]]",
+          "visibility_controls": [
+            "Show user#90:13"
+          ],
+          "style_keys": [
+            "d365a2818af4403537718faa96424a334dfb3714"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "SemiBold",
+                "variationSettings": {
+                  "wght": 600
+                }
+              },
+              "fontSize": 20,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"INSTANCE\",\"Section Header\",0],[\"FRAME\",\"Content\",0],[\"FRAME\",\"Heading\",0],[\"INSTANCE\",\"Breadcrumb\",0],[\"FRAME\",\"Items\",0],[\"INSTANCE\",\"Breadcrumb item\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [
+            "Show breadcrumbs#287:5"
+          ],
+          "style_keys": [
+            "591a8250d0e6bfe85e5f0ed353a999f82cda97ab"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"INSTANCE\",\"Section Header\",0],[\"FRAME\",\"Content\",0],[\"FRAME\",\"Heading\",0],[\"INSTANCE\",\"Breadcrumb\",0],[\"FRAME\",\"Items\",0],[\"INSTANCE\",\"Breadcrumb item\",1],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [
+            "Show breadcrumbs#287:5"
+          ],
+          "style_keys": [
+            "814b0a3702de4be7b381fe897f58d71ba417c26b"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "SemiBold",
+                "variationSettings": {
+                  "wght": 600
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"INSTANCE\",\"Section Header\",0],[\"FRAME\",\"Content\",0],[\"FRAME\",\"Heading\",0],[\"FRAME\",\"Title width\",0],[\"TEXT\",\"Title\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            "5be4cc135963dbfc3b4916dbfa481c140600226e"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "SemiBold",
+                "variationSettings": {
+                  "wght": 600
+                }
+              },
+              "fontSize": 24,
+              "lineHeight": {
+                "unit": "AUTO"
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"INSTANCE\",\"Section Header\",0],[\"FRAME\",\"Content\",0],[\"FRAME\",\"Heading\",0],[\"TEXT\",\"Description\",0]]",
+          "visibility_controls": [
+            "Show description#287:6"
+          ],
+          "style_keys": [
+            "0ed6b6170f8c30800db3f931231e0906875c182f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "AUTO"
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"INSTANCE\",\"Section Header\",0],[\"FRAME\",\"Content\",0],[\"SLOT\",\"Metadata\",0],[\"INSTANCE\",\"Badge\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [
+            "Show metadata#287:7"
+          ],
+          "style_keys": [
+            "1bf2f3e1b3eaffd00c816773557394f78f9a9bf8"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"INSTANCE\",\"Section Header\",0],[\"FRAME\",\"Content\",0],[\"SLOT\",\"Metadata\",0],[\"TEXT\",\"Updated\",0]]",
+          "visibility_controls": [
+            "Show metadata#287:7"
+          ],
+          "style_keys": [
+            "0ed6b6170f8c30800db3f931231e0906875c182f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "AUTO"
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"INSTANCE\",\"Section Header\",0],[\"FRAME\",\"Main actions\",0],[\"SLOT\",\"Inputs\",0],[\"INSTANCE\",\"Input 1\",0],[\"FRAME\",\"container\",1],[\"FRAME\",\"container-placeholder-text\",0],[\"TEXT\",\"Placeholder text\",0]]",
+          "visibility_controls": [
+            "Show placeholder#93:32",
+            "Show actions#287:8"
+          ],
+          "style_keys": [
+            "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "AUTO"
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"INSTANCE\",\"Section Header\",0],[\"FRAME\",\"Main actions\",0],[\"SLOT\",\"Inputs\",0],[\"INSTANCE\",\"Input 2\",0],[\"FRAME\",\"container\",1],[\"FRAME\",\"container-placeholder-text\",0],[\"TEXT\",\"Placeholder text\",0]]",
+          "visibility_controls": [
+            "Show placeholder#93:32",
+            "Show actions#287:8"
+          ],
+          "style_keys": [
+            "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "AUTO"
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"INSTANCE\",\"Section Header\",0],[\"FRAME\",\"Main actions\",0],[\"SLOT\",\"Inputs\",0],[\"INSTANCE\",\"Input 3\",0],[\"FRAME\",\"container\",1],[\"FRAME\",\"container-placeholder-text\",0],[\"TEXT\",\"Placeholder text\",0]]",
+          "visibility_controls": [
+            "Show placeholder#93:32",
+            "Show actions#287:8"
+          ],
+          "style_keys": [
+            "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "AUTO"
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"INSTANCE\",\"Section Header\",0],[\"FRAME\",\"Main actions\",0],[\"SLOT\",\"Inputs\",0],[\"INSTANCE\",\"Input 4\",0],[\"FRAME\",\"container\",1],[\"FRAME\",\"container-placeholder-text\",0],[\"TEXT\",\"Placeholder text\",0]]",
+          "visibility_controls": [
+            "Show placeholder#93:32",
+            "Show actions#287:8"
+          ],
+          "style_keys": [
+            "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "AUTO"
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"INSTANCE\",\"Section Header\",0],[\"FRAME\",\"Main actions\",0],[\"SLOT\",\"Inputs\",0],[\"INSTANCE\",\"Input 5\",0],[\"FRAME\",\"container\",1],[\"FRAME\",\"container-placeholder-text\",0],[\"TEXT\",\"Placeholder text\",0]]",
+          "visibility_controls": [
+            "Show placeholder#93:32",
+            "Show actions#287:8"
+          ],
+          "style_keys": [
+            "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "AUTO"
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"INSTANCE\",\"Section Header\",0],[\"FRAME\",\"Main actions\",0],[\"FRAME\",\"General actions layout\",0],[\"SLOT\",\"General actions\",0],[\"INSTANCE\",\"General action\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [
+            "Show actions#287:8"
+          ],
+          "style_keys": [
+            null
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold",
+                "variationSettings": {
+                  "wght": 700
+                }
+              },
+              "fontSize": 16,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"SLOT\",\"Body\",0],[\"FRAME\",\"Contenido de producto · módulo Body\",0],[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Encabezado · molécula Body\",0],[\"TEXT\",\"Título · Body h2\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            "4c3bfd551b52250ae173fc7d37378cb1f986f646"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "SemiBold",
+                "variationSettings": {
+                  "wght": 600
+                }
+              },
+              "fontSize": 20,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 28
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"SLOT\",\"Body\",0],[\"FRAME\",\"Contenido de producto · módulo Body\",0],[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Encabezado · molécula Body\",0],[\"TEXT\",\"Descripción · Body\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            "0a7ce447c7a2731966b56eaf8df96c19ec08c4ec"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"SLOT\",\"Body\",0],[\"FRAME\",\"Contenido de producto · módulo Body\",0],[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Estado · molécula Body\",0],[\"TEXT\",\"Avance · Body h1\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            "67e5f01c76a09f73a80919a34a90e56b700f3bdc"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "SemiBold",
+                "variationSettings": {
+                  "wght": 600
+                }
+              },
+              "fontSize": 24,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 32
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"SLOT\",\"Body\",0],[\"FRAME\",\"Contenido de producto · módulo Body\",0],[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Estado · molécula Body\",0],[\"INSTANCE\",\"DS / Linear Progress · advanced_c\",0],[\"FRAME\",\"Header\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [
+            "Show label#39:18"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"SLOT\",\"Body\",0],[\"FRAME\",\"Contenido de producto · módulo Body\",0],[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Estado · molécula Body\",0],[\"INSTANCE\",\"DS / Linear Progress · advanced_c\",0],[\"FRAME\",\"Header\",0],[\"TEXT\",\"Value\",0]]",
+          "visibility_controls": [
+            "Show value#39:27"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"SLOT\",\"Body\",0],[\"FRAME\",\"Contenido de producto · módulo Body\",0],[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Estado · molécula Body\",0],[\"INSTANCE\",\"DS / Linear Progress · advanced_c\",0],[\"TEXT\",\"Helper text\",0]]",
+          "visibility_controls": [
+            "Show helper text#39:36"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"SLOT\",\"Body\",0],[\"FRAME\",\"Contenido de producto · módulo Body\",0],[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Acciones · molécula Body\",0],[\"INSTANCE\",\"DS / Button · avanzar · advanced_c\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            null
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold",
+                "variationSettings": {
+                  "wght": 700
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Content\",0],[\"FRAME\",\"Main\",0],[\"SLOT\",\"Body\",0],[\"FRAME\",\"Contenido de producto · módulo Body\",0],[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Acciones · molécula Body\",0],[\"INSTANCE\",\"DS / Button · reiniciar · advanced_c\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            null
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold",
+                "variationSettings": {
+                  "wght": 700
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1484;385:6855",
+      "name": "Contenido de producto · módulo Body",
+      "type": "FRAME",
+      "key": null,
+      "parent_id": "I385:5704;105:1484",
+      "parent_name": "Body",
+      "parent_type": "SLOT",
+      "main_component_key": null,
+      "main_component_remote": null,
+      "ancestor_ids": [
+        "I385:5704;105:1484",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 1,
+      "layout_mode": "VERTICAL",
+      "binding_fields": [
+        "fills",
+        "fills.0.color",
+        "itemSpacing"
+      ],
+      "binding_details": [
+        {
+          "property": "itemSpacing",
+          "variable_id": "VariableID:344:26",
+          "token": "body/spacing/xl",
+          "collection": "component"
+        },
+        {
+          "property": "fills",
+          "variable_id": "VariableID:344:10",
+          "token": "body/color/bg/primary",
+          "collection": "component"
+        },
+        {
+          "property": "fills.0.color",
+          "variable_id": "VariableID:344:10",
+          "token": "body/color/bg/primary",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {},
+      "component_properties": {},
+      "text_style_keys": [
+        "0a7ce447c7a2731966b56eaf8df96c19ec08c4ec",
+        "4c3bfd551b52250ae173fc7d37378cb1f986f646",
+        "67e5f01c76a09f73a80919a34a90e56b700f3bdc",
+        "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+      ],
+      "unstyled_text_runs": 2,
+      "text_runs": [
+        {
+          "path": "[[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Encabezado · molécula Body\",0],[\"TEXT\",\"Título · Body h2\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            "4c3bfd551b52250ae173fc7d37378cb1f986f646"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "SemiBold",
+                "variationSettings": {
+                  "wght": 600
+                }
+              },
+              "fontSize": 20,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 28
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Encabezado · molécula Body\",0],[\"TEXT\",\"Descripción · Body\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            "0a7ce447c7a2731966b56eaf8df96c19ec08c4ec"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Estado · molécula Body\",0],[\"TEXT\",\"Avance · Body h1\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            "67e5f01c76a09f73a80919a34a90e56b700f3bdc"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "SemiBold",
+                "variationSettings": {
+                  "wght": 600
+                }
+              },
+              "fontSize": 24,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 32
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Estado · molécula Body\",0],[\"INSTANCE\",\"DS / Linear Progress · advanced_c\",0],[\"FRAME\",\"Header\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [
+            "Show label#39:18"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Estado · molécula Body\",0],[\"INSTANCE\",\"DS / Linear Progress · advanced_c\",0],[\"FRAME\",\"Header\",0],[\"TEXT\",\"Value\",0]]",
+          "visibility_controls": [
+            "Show value#39:27"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Estado · molécula Body\",0],[\"INSTANCE\",\"DS / Linear Progress · advanced_c\",0],[\"TEXT\",\"Helper text\",0]]",
+          "visibility_controls": [
+            "Show helper text#39:36"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Acciones · molécula Body\",0],[\"INSTANCE\",\"DS / Button · avanzar · advanced_c\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            null
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold",
+                "variationSettings": {
+                  "wght": 700
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Revisión de cierre · tarjeta Body\",0],[\"FRAME\",\"Acciones · molécula Body\",0],[\"INSTANCE\",\"DS / Button · reiniciar · advanced_c\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            null
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold",
+                "variationSettings": {
+                  "wght": 700
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1484;385:6857",
+      "name": "Revisión de cierre · tarjeta Body",
+      "type": "FRAME",
+      "key": null,
+      "parent_id": "I385:5704;105:1484;385:6855",
+      "parent_name": "Contenido de producto · módulo Body",
+      "parent_type": "FRAME",
+      "main_component_key": null,
+      "main_component_remote": null,
+      "ancestor_ids": [
+        "I385:5704;105:1484;385:6855",
+        "I385:5704;105:1484",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 3,
+      "layout_mode": "VERTICAL",
+      "binding_fields": [
+        "bottomLeftRadius",
+        "bottomRightRadius",
+        "fills",
+        "fills.0.color",
+        "itemSpacing",
+        "paddingBottom",
+        "paddingLeft",
+        "paddingRight",
+        "paddingTop",
+        "topLeftRadius",
+        "topRightRadius"
+      ],
+      "binding_details": [
+        {
+          "property": "itemSpacing",
+          "variable_id": "VariableID:344:28",
+          "token": "body/spacing/md",
+          "collection": "component"
+        },
+        {
+          "property": "paddingLeft",
+          "variable_id": "VariableID:344:27",
+          "token": "body/spacing/lg",
+          "collection": "component"
+        },
+        {
+          "property": "paddingTop",
+          "variable_id": "VariableID:344:27",
+          "token": "body/spacing/lg",
+          "collection": "component"
+        },
+        {
+          "property": "paddingRight",
+          "variable_id": "VariableID:344:27",
+          "token": "body/spacing/lg",
+          "collection": "component"
+        },
+        {
+          "property": "paddingBottom",
+          "variable_id": "VariableID:344:27",
+          "token": "body/spacing/lg",
+          "collection": "component"
+        },
+        {
+          "property": "topLeftRadius",
+          "variable_id": "VariableID:344:32",
+          "token": "body/radius/lg",
+          "collection": "component"
+        },
+        {
+          "property": "topRightRadius",
+          "variable_id": "VariableID:344:32",
+          "token": "body/radius/lg",
+          "collection": "component"
+        },
+        {
+          "property": "bottomLeftRadius",
+          "variable_id": "VariableID:344:32",
+          "token": "body/radius/lg",
+          "collection": "component"
+        },
+        {
+          "property": "bottomRightRadius",
+          "variable_id": "VariableID:344:32",
+          "token": "body/radius/lg",
+          "collection": "component"
+        },
+        {
+          "property": "fills",
+          "variable_id": "VariableID:344:11",
+          "token": "body/color/bg/emphasis",
+          "collection": "component"
+        },
+        {
+          "property": "fills.0.color",
+          "variable_id": "VariableID:344:11",
+          "token": "body/color/bg/emphasis",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {},
+      "component_properties": {},
+      "text_style_keys": [
+        "0a7ce447c7a2731966b56eaf8df96c19ec08c4ec",
+        "4c3bfd551b52250ae173fc7d37378cb1f986f646",
+        "67e5f01c76a09f73a80919a34a90e56b700f3bdc",
+        "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+      ],
+      "unstyled_text_runs": 2,
+      "text_runs": [
+        {
+          "path": "[[\"FRAME\",\"Encabezado · molécula Body\",0],[\"TEXT\",\"Título · Body h2\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            "4c3bfd551b52250ae173fc7d37378cb1f986f646"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "SemiBold",
+                "variationSettings": {
+                  "wght": 600
+                }
+              },
+              "fontSize": 20,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 28
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Encabezado · molécula Body\",0],[\"TEXT\",\"Descripción · Body\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            "0a7ce447c7a2731966b56eaf8df96c19ec08c4ec"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Estado · molécula Body\",0],[\"TEXT\",\"Avance · Body h1\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            "67e5f01c76a09f73a80919a34a90e56b700f3bdc"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "SemiBold",
+                "variationSettings": {
+                  "wght": 600
+                }
+              },
+              "fontSize": 24,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 32
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Estado · molécula Body\",0],[\"INSTANCE\",\"DS / Linear Progress · advanced_c\",0],[\"FRAME\",\"Header\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [
+            "Show label#39:18"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Estado · molécula Body\",0],[\"INSTANCE\",\"DS / Linear Progress · advanced_c\",0],[\"FRAME\",\"Header\",0],[\"TEXT\",\"Value\",0]]",
+          "visibility_controls": [
+            "Show value#39:27"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Estado · molécula Body\",0],[\"INSTANCE\",\"DS / Linear Progress · advanced_c\",0],[\"TEXT\",\"Helper text\",0]]",
+          "visibility_controls": [
+            "Show helper text#39:36"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Acciones · molécula Body\",0],[\"INSTANCE\",\"DS / Button · avanzar · advanced_c\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            null
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold",
+                "variationSettings": {
+                  "wght": 700
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Acciones · molécula Body\",0],[\"INSTANCE\",\"DS / Button · reiniciar · advanced_c\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            null
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold",
+                "variationSettings": {
+                  "wght": 700
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1484;385:6859",
+      "name": "Encabezado · molécula Body",
+      "type": "FRAME",
+      "key": null,
+      "parent_id": "I385:5704;105:1484;385:6857",
+      "parent_name": "Revisión de cierre · tarjeta Body",
+      "parent_type": "FRAME",
+      "main_component_key": null,
+      "main_component_remote": null,
+      "ancestor_ids": [
+        "I385:5704;105:1484;385:6857",
+        "I385:5704;105:1484;385:6855",
+        "I385:5704;105:1484",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 2,
+      "layout_mode": "VERTICAL",
+      "binding_fields": [
+        "itemSpacing"
+      ],
+      "binding_details": [
+        {
+          "property": "itemSpacing",
+          "variable_id": "VariableID:344:30",
+          "token": "body/spacing/xs",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {},
+      "component_properties": {},
+      "text_style_keys": [
+        "0a7ce447c7a2731966b56eaf8df96c19ec08c4ec",
+        "4c3bfd551b52250ae173fc7d37378cb1f986f646"
+      ],
+      "unstyled_text_runs": 0,
+      "text_runs": [
+        {
+          "path": "[[\"TEXT\",\"Título · Body h2\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            "4c3bfd551b52250ae173fc7d37378cb1f986f646"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "SemiBold",
+                "variationSettings": {
+                  "wght": 600
+                }
+              },
+              "fontSize": 20,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 28
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"TEXT\",\"Descripción · Body\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            "0a7ce447c7a2731966b56eaf8df96c19ec08c4ec"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1484;385:6865",
+      "name": "Estado · molécula Body",
+      "type": "FRAME",
+      "key": null,
+      "parent_id": "I385:5704;105:1484;385:6857",
+      "parent_name": "Revisión de cierre · tarjeta Body",
+      "parent_type": "FRAME",
+      "main_component_key": null,
+      "main_component_remote": null,
+      "ancestor_ids": [
+        "I385:5704;105:1484;385:6857",
+        "I385:5704;105:1484;385:6855",
+        "I385:5704;105:1484",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 2,
+      "layout_mode": "VERTICAL",
+      "binding_fields": [
+        "itemSpacing"
+      ],
+      "binding_details": [
+        {
+          "property": "itemSpacing",
+          "variable_id": "VariableID:344:29",
+          "token": "body/spacing/sm",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {},
+      "component_properties": {},
+      "text_style_keys": [
+        "67e5f01c76a09f73a80919a34a90e56b700f3bdc",
+        "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+      ],
+      "unstyled_text_runs": 0,
+      "text_runs": [
+        {
+          "path": "[[\"TEXT\",\"Avance · Body h1\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            "67e5f01c76a09f73a80919a34a90e56b700f3bdc"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "SemiBold",
+                "variationSettings": {
+                  "wght": 600
+                }
+              },
+              "fontSize": 24,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 32
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"INSTANCE\",\"DS / Linear Progress · advanced_c\",0],[\"FRAME\",\"Header\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [
+            "Show label#39:18"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"INSTANCE\",\"DS / Linear Progress · advanced_c\",0],[\"FRAME\",\"Header\",0],[\"TEXT\",\"Value\",0]]",
+          "visibility_controls": [
+            "Show value#39:27"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"INSTANCE\",\"DS / Linear Progress · advanced_c\",0],[\"TEXT\",\"Helper text\",0]]",
+          "visibility_controls": [
+            "Show helper text#39:36"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1484;385:6877",
+      "name": "Acciones · molécula Body",
+      "type": "FRAME",
+      "key": null,
+      "parent_id": "I385:5704;105:1484;385:6857",
+      "parent_name": "Revisión de cierre · tarjeta Body",
+      "parent_type": "FRAME",
+      "main_component_key": null,
+      "main_component_remote": null,
+      "ancestor_ids": [
+        "I385:5704;105:1484;385:6857",
+        "I385:5704;105:1484;385:6855",
+        "I385:5704;105:1484",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 2,
+      "layout_mode": "HORIZONTAL",
+      "binding_fields": [
+        "itemSpacing"
+      ],
+      "binding_details": [
+        {
+          "property": "itemSpacing",
+          "variable_id": "VariableID:344:29",
+          "token": "body/spacing/sm",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {},
+      "component_properties": {},
+      "text_style_keys": [],
+      "unstyled_text_runs": 2,
+      "text_runs": [
+        {
+          "path": "[[\"INSTANCE\",\"DS / Button · avanzar · advanced_c\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            null
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold",
+                "variationSettings": {
+                  "wght": 700
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"INSTANCE\",\"DS / Button · reiniciar · advanced_c\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            null
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold",
+                "variationSettings": {
+                  "wght": 700
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1484;385:6861",
+      "name": "Título · Body h2",
+      "type": "TEXT",
+      "key": null,
+      "parent_id": "I385:5704;105:1484;385:6859",
+      "parent_name": "Encabezado · molécula Body",
+      "parent_type": "FRAME",
+      "main_component_key": null,
+      "main_component_remote": null,
+      "ancestor_ids": [
+        "I385:5704;105:1484;385:6859",
+        "I385:5704;105:1484;385:6857",
+        "I385:5704;105:1484;385:6855",
+        "I385:5704;105:1484",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 0,
+      "layout_mode": null,
+      "binding_fields": [
+        "fills",
+        "fills.0.color",
+        "fontFamily",
+        "fontSize",
+        "fontStyle",
+        "letterSpacing",
+        "lineHeight"
+      ],
+      "binding_details": [
+        {
+          "property": "fills",
+          "variable_id": "VariableID:344:3",
+          "token": "body/color/text/primary",
+          "collection": "component"
+        },
+        {
+          "property": "letterSpacing",
+          "variable_id": "VariableID:344:25",
+          "token": "body/font/tracking",
+          "collection": "component"
+        },
+        {
+          "property": "fontSize",
+          "variable_id": "VariableID:344:14",
+          "token": "body/font/heading/h2/size",
+          "collection": "component"
+        },
+        {
+          "property": "fontStyle",
+          "variable_id": "VariableID:344:23",
+          "token": "body/font/heading/weight",
+          "collection": "component"
+        },
+        {
+          "property": "fontFamily",
+          "variable_id": "VariableID:344:22",
+          "token": "body/font/family",
+          "collection": "component"
+        },
+        {
+          "property": "lineHeight",
+          "variable_id": "VariableID:344:15",
+          "token": "body/font/heading/h2/line-height",
+          "collection": "component"
+        },
+        {
+          "property": "fills.0.color",
+          "variable_id": "VariableID:344:3",
+          "token": "body/color/text/primary",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {},
+      "component_properties": {},
+      "text_style_keys": [
+        "4c3bfd551b52250ae173fc7d37378cb1f986f646"
+      ],
+      "unstyled_text_runs": 0,
+      "text_runs": [
+        {
+          "path": "[]",
+          "visibility_controls": [],
+          "style_keys": [
+            "4c3bfd551b52250ae173fc7d37378cb1f986f646"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "SemiBold",
+                "variationSettings": {
+                  "wght": 600
+                }
+              },
+              "fontSize": 20,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 28
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1484;385:6863",
+      "name": "Descripción · Body",
+      "type": "TEXT",
+      "key": null,
+      "parent_id": "I385:5704;105:1484;385:6859",
+      "parent_name": "Encabezado · molécula Body",
+      "parent_type": "FRAME",
+      "main_component_key": null,
+      "main_component_remote": null,
+      "ancestor_ids": [
+        "I385:5704;105:1484;385:6859",
+        "I385:5704;105:1484;385:6857",
+        "I385:5704;105:1484;385:6855",
+        "I385:5704;105:1484",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 0,
+      "layout_mode": null,
+      "binding_fields": [
+        "fills",
+        "fills.0.color",
+        "fontFamily",
+        "fontSize",
+        "fontStyle",
+        "letterSpacing",
+        "lineHeight"
+      ],
+      "binding_details": [
+        {
+          "property": "fills",
+          "variable_id": "VariableID:344:4",
+          "token": "body/color/text/secondary",
+          "collection": "component"
+        },
+        {
+          "property": "letterSpacing",
+          "variable_id": "VariableID:344:25",
+          "token": "body/font/tracking",
+          "collection": "component"
+        },
+        {
+          "property": "fontSize",
+          "variable_id": "VariableID:344:18",
+          "token": "body/font/description/size",
+          "collection": "component"
+        },
+        {
+          "property": "fontStyle",
+          "variable_id": "VariableID:344:24",
+          "token": "body/font/text/weight",
+          "collection": "component"
+        },
+        {
+          "property": "fontFamily",
+          "variable_id": "VariableID:344:22",
+          "token": "body/font/family",
+          "collection": "component"
+        },
+        {
+          "property": "lineHeight",
+          "variable_id": "VariableID:344:19",
+          "token": "body/font/description/line-height",
+          "collection": "component"
+        },
+        {
+          "property": "fills.0.color",
+          "variable_id": "VariableID:344:4",
+          "token": "body/color/text/secondary",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {},
+      "component_properties": {},
+      "text_style_keys": [
+        "0a7ce447c7a2731966b56eaf8df96c19ec08c4ec"
+      ],
+      "unstyled_text_runs": 0,
+      "text_runs": [
+        {
+          "path": "[]",
+          "visibility_controls": [],
+          "style_keys": [
+            "0a7ce447c7a2731966b56eaf8df96c19ec08c4ec"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1484;385:6867",
+      "name": "Avance · Body h1",
+      "type": "TEXT",
+      "key": null,
+      "parent_id": "I385:5704;105:1484;385:6865",
+      "parent_name": "Estado · molécula Body",
+      "parent_type": "FRAME",
+      "main_component_key": null,
+      "main_component_remote": null,
+      "ancestor_ids": [
+        "I385:5704;105:1484;385:6865",
+        "I385:5704;105:1484;385:6857",
+        "I385:5704;105:1484;385:6855",
+        "I385:5704;105:1484",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 0,
+      "layout_mode": null,
+      "binding_fields": [
+        "fills",
+        "fills.0.color",
+        "fontFamily",
+        "fontSize",
+        "fontStyle",
+        "letterSpacing",
+        "lineHeight"
+      ],
+      "binding_details": [
+        {
+          "property": "fills",
+          "variable_id": "VariableID:344:5",
+          "token": "body/color/text/brand",
+          "collection": "component"
+        },
+        {
+          "property": "letterSpacing",
+          "variable_id": "VariableID:344:25",
+          "token": "body/font/tracking",
+          "collection": "component"
+        },
+        {
+          "property": "fontSize",
+          "variable_id": "VariableID:344:12",
+          "token": "body/font/heading/h1/size",
+          "collection": "component"
+        },
+        {
+          "property": "fontStyle",
+          "variable_id": "VariableID:344:23",
+          "token": "body/font/heading/weight",
+          "collection": "component"
+        },
+        {
+          "property": "fontFamily",
+          "variable_id": "VariableID:344:22",
+          "token": "body/font/family",
+          "collection": "component"
+        },
+        {
+          "property": "lineHeight",
+          "variable_id": "VariableID:344:13",
+          "token": "body/font/heading/h1/line-height",
+          "collection": "component"
+        },
+        {
+          "property": "fills.0.color",
+          "variable_id": "VariableID:344:5",
+          "token": "body/color/text/brand",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {},
+      "component_properties": {},
+      "text_style_keys": [
+        "67e5f01c76a09f73a80919a34a90e56b700f3bdc"
+      ],
+      "unstyled_text_runs": 0,
+      "text_runs": [
+        {
+          "path": "[]",
+          "visibility_controls": [],
+          "style_keys": [
+            "67e5f01c76a09f73a80919a34a90e56b700f3bdc"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "SemiBold",
+                "variationSettings": {
+                  "wght": 600
+                }
+              },
+              "fontSize": 24,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 32
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1484;385:6875",
+      "name": "DS / Linear Progress · advanced_c",
+      "type": "INSTANCE",
+      "key": null,
+      "parent_id": "I385:5704;105:1484;385:6865",
+      "parent_name": "Estado · molécula Body",
+      "parent_type": "FRAME",
+      "main_component_key": "a5b6bae477309c601eb22ee72ce74b9bbb99a925",
+      "main_component_remote": false,
+      "ancestor_ids": [
+        "I385:5704;105:1484;385:6865",
+        "I385:5704;105:1484;385:6857",
+        "I385:5704;105:1484;385:6855",
+        "I385:5704;105:1484",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 3,
+      "layout_mode": "VERTICAL",
+      "binding_fields": [
+        "itemSpacing",
+        "minWidth",
+        "paddingBottom",
+        "paddingLeft",
+        "paddingRight",
+        "paddingTop"
+      ],
+      "binding_details": [
+        {
+          "property": "itemSpacing",
+          "variable_id": "VariableID:8:683",
+          "token": "linear-progress/spacing/content",
+          "collection": "component"
+        },
+        {
+          "property": "paddingLeft",
+          "variable_id": "VariableID:8:682",
+          "token": "linear-progress/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingTop",
+          "variable_id": "VariableID:8:682",
+          "token": "linear-progress/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingRight",
+          "variable_id": "VariableID:8:682",
+          "token": "linear-progress/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingBottom",
+          "variable_id": "VariableID:8:682",
+          "token": "linear-progress/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "minWidth",
+          "variable_id": "VariableID:8:684",
+          "token": "linear-progress/size/min-width",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {
+        "type": "primary",
+        "size": "small",
+        "value": "75%"
+      },
+      "component_properties": {
+        "Show value#39:27": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show label#39:18": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show helper text#39:36": {
+          "type": "BOOLEAN",
+          "value": true
+        }
+      },
+      "text_style_keys": [
+        "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+      ],
+      "unstyled_text_runs": 0,
+      "text_runs": [
+        {
+          "path": "[[\"FRAME\",\"Header\",0],[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [
+            "Show label#39:18"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"FRAME\",\"Header\",0],[\"TEXT\",\"Value\",0]]",
+          "visibility_controls": [
+            "Show value#39:27"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        },
+        {
+          "path": "[[\"TEXT\",\"Helper text\",0]]",
+          "visibility_controls": [
+            "Show helper text#39:36"
+          ],
+          "style_keys": [
+            "efd5351efeafcf0b49ecd3cc58b735b14077f84f"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 12,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1484;385:6882",
+      "name": "DS / Button · avanzar · advanced_c",
+      "type": "INSTANCE",
+      "key": null,
+      "parent_id": "I385:5704;105:1484;385:6877",
+      "parent_name": "Acciones · molécula Body",
+      "parent_type": "FRAME",
+      "main_component_key": "283caf6e5cbc73ddbcbf3df631584cfeb8689638",
+      "main_component_remote": false,
+      "ancestor_ids": [
+        "I385:5704;105:1484;385:6877",
+        "I385:5704;105:1484;385:6857",
+        "I385:5704;105:1484;385:6855",
+        "I385:5704;105:1484",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 2,
+      "child_count": 1,
+      "layout_mode": "HORIZONTAL",
+      "binding_fields": [
+        "bottomLeftRadius",
+        "bottomRightRadius",
+        "fills",
+        "fills.0.color",
+        "height",
+        "itemSpacing",
+        "paddingBottom",
+        "paddingLeft",
+        "paddingRight",
+        "paddingTop",
+        "topLeftRadius",
+        "topRightRadius"
+      ],
+      "binding_details": [
+        {
+          "property": "itemSpacing",
+          "variable_id": "VariableID:8:438",
+          "token": "button/spacing/xs",
+          "collection": "component"
+        },
+        {
+          "property": "paddingLeft",
+          "variable_id": "VariableID:8:440",
+          "token": "button/spacing/md",
+          "collection": "component"
+        },
+        {
+          "property": "paddingTop",
+          "variable_id": "VariableID:8:438",
+          "token": "button/spacing/xs",
+          "collection": "component"
+        },
+        {
+          "property": "paddingRight",
+          "variable_id": "VariableID:8:440",
+          "token": "button/spacing/md",
+          "collection": "component"
+        },
+        {
+          "property": "paddingBottom",
+          "variable_id": "VariableID:8:438",
+          "token": "button/spacing/xs",
+          "collection": "component"
+        },
+        {
+          "property": "height",
+          "variable_id": "VariableID:8:435",
+          "token": "button/size/height-small",
+          "collection": "component"
+        },
+        {
+          "property": "topLeftRadius",
+          "variable_id": "VariableID:8:429",
+          "token": "button/radius/container",
+          "collection": "component"
+        },
+        {
+          "property": "topRightRadius",
+          "variable_id": "VariableID:8:429",
+          "token": "button/radius/container",
+          "collection": "component"
+        },
+        {
+          "property": "bottomLeftRadius",
+          "variable_id": "VariableID:8:429",
+          "token": "button/radius/container",
+          "collection": "component"
+        },
+        {
+          "property": "bottomRightRadius",
+          "variable_id": "VariableID:8:429",
+          "token": "button/radius/container",
+          "collection": "component"
+        },
+        {
+          "property": "fills",
+          "variable_id": "VariableID:8:407",
+          "token": "button/color/bg/primary-default",
+          "collection": "component"
+        },
+        {
+          "property": "fills.0.color",
+          "variable_id": "VariableID:8:407",
+          "token": "button/color/bg/primary-default",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {
+        "size": "small",
+        "state": "default"
+      },
+      "component_properties": {
+        "Show left icon#23:19": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show right icon#23:38": {
+          "type": "BOOLEAN",
+          "value": false
+        }
+      },
+      "text_style_keys": [],
+      "unstyled_text_runs": 1,
+      "text_runs": [
+        {
+          "path": "[[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            null
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold",
+                "variationSettings": {
+                  "wght": 700
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1484;385:6887",
+      "name": "DS / Button · reiniciar · advanced_c",
+      "type": "INSTANCE",
+      "key": null,
+      "parent_id": "I385:5704;105:1484;385:6877",
+      "parent_name": "Acciones · molécula Body",
+      "parent_type": "FRAME",
+      "main_component_key": "b2fa5624bf28fab637bc34513d5901ad62b5cbcb",
+      "main_component_remote": false,
+      "ancestor_ids": [
+        "I385:5704;105:1484;385:6877",
+        "I385:5704;105:1484;385:6857",
+        "I385:5704;105:1484;385:6855",
+        "I385:5704;105:1484",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 2,
+      "child_count": 1,
+      "layout_mode": "HORIZONTAL",
+      "binding_fields": [
+        "bottomLeftRadius",
+        "bottomRightRadius",
+        "fills",
+        "fills.0.color",
+        "height",
+        "itemSpacing",
+        "paddingBottom",
+        "paddingLeft",
+        "paddingRight",
+        "paddingTop",
+        "strokeBottomWeight",
+        "strokeLeftWeight",
+        "strokeRightWeight",
+        "strokeTopWeight",
+        "strokes",
+        "strokes.0.color",
+        "topLeftRadius",
+        "topRightRadius"
+      ],
+      "binding_details": [
+        {
+          "property": "itemSpacing",
+          "variable_id": "VariableID:8:438",
+          "token": "button/spacing/xs",
+          "collection": "component"
+        },
+        {
+          "property": "paddingLeft",
+          "variable_id": "VariableID:8:440",
+          "token": "button/spacing/md",
+          "collection": "component"
+        },
+        {
+          "property": "paddingTop",
+          "variable_id": "VariableID:8:438",
+          "token": "button/spacing/xs",
+          "collection": "component"
+        },
+        {
+          "property": "paddingRight",
+          "variable_id": "VariableID:8:440",
+          "token": "button/spacing/md",
+          "collection": "component"
+        },
+        {
+          "property": "paddingBottom",
+          "variable_id": "VariableID:8:438",
+          "token": "button/spacing/xs",
+          "collection": "component"
+        },
+        {
+          "property": "height",
+          "variable_id": "VariableID:8:435",
+          "token": "button/size/height-small",
+          "collection": "component"
+        },
+        {
+          "property": "topLeftRadius",
+          "variable_id": "VariableID:8:429",
+          "token": "button/radius/container",
+          "collection": "component"
+        },
+        {
+          "property": "topRightRadius",
+          "variable_id": "VariableID:8:429",
+          "token": "button/radius/container",
+          "collection": "component"
+        },
+        {
+          "property": "bottomLeftRadius",
+          "variable_id": "VariableID:8:429",
+          "token": "button/radius/container",
+          "collection": "component"
+        },
+        {
+          "property": "bottomRightRadius",
+          "variable_id": "VariableID:8:429",
+          "token": "button/radius/container",
+          "collection": "component"
+        },
+        {
+          "property": "strokeTopWeight",
+          "variable_id": "VariableID:8:441",
+          "token": "button/border/width-regular",
+          "collection": "component"
+        },
+        {
+          "property": "strokeBottomWeight",
+          "variable_id": "VariableID:8:441",
+          "token": "button/border/width-regular",
+          "collection": "component"
+        },
+        {
+          "property": "strokeLeftWeight",
+          "variable_id": "VariableID:8:441",
+          "token": "button/border/width-regular",
+          "collection": "component"
+        },
+        {
+          "property": "strokeRightWeight",
+          "variable_id": "VariableID:8:441",
+          "token": "button/border/width-regular",
+          "collection": "component"
+        },
+        {
+          "property": "fills",
+          "variable_id": "VariableID:8:413",
+          "token": "button/color/bg/secondary-default",
+          "collection": "component"
+        },
+        {
+          "property": "strokes",
+          "variable_id": "VariableID:8:416",
+          "token": "button/color/stroke/brand",
+          "collection": "component"
+        },
+        {
+          "property": "fills.0.color",
+          "variable_id": "VariableID:8:413",
+          "token": "button/color/bg/secondary-default",
+          "collection": "component"
+        },
+        {
+          "property": "strokes.0.color",
+          "variable_id": "VariableID:8:416",
+          "token": "button/color/stroke/brand",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {
+        "size": "small",
+        "state": "default"
+      },
+      "component_properties": {
+        "Show right icon#23:133": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show left icon#23:114": {
+          "type": "BOOLEAN",
+          "value": false
+        }
+      },
+      "text_style_keys": [],
+      "unstyled_text_runs": 1,
+      "text_runs": [
+        {
+          "path": "[[\"TEXT\",\"Label\",0]]",
+          "visibility_controls": [],
+          "style_keys": [
+            null
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold",
+                "variationSettings": {
+                  "wght": 700
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "PIXELS",
+                "value": 20
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1344;96:38;389:5662",
+      "name": "Input 1",
+      "type": "INSTANCE",
+      "key": null,
+      "parent_id": "I385:5704;105:1344;96:38",
+      "parent_name": "Inputs",
+      "parent_type": "SLOT",
+      "main_component_key": "c446a54dc9a02c1cfa290996eb711cb6dcaf4f5a",
+      "main_component_remote": false,
+      "ancestor_ids": [
+        "I385:5704;105:1344;96:38",
+        "I385:5704;105:1344;96:37",
+        "I385:5704;105:1344",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 1,
+      "layout_mode": "VERTICAL",
+      "binding_fields": [
+        "itemSpacing",
+        "paddingBottom",
+        "paddingLeft",
+        "paddingRight",
+        "paddingTop"
+      ],
+      "binding_details": [
+        {
+          "property": "itemSpacing",
+          "variable_id": "VariableID:8:550",
+          "token": "input/spacing/sm",
+          "collection": "component"
+        },
+        {
+          "property": "paddingLeft",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingTop",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingRight",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingBottom",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {
+        "size": "large",
+        "status": "default"
+      },
+      "component_properties": {
+        "Show badge#93:36": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show placeholder#93:32": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show label#93:28": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show icon#93:24": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Required#93:20": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show helper#93:12": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show tooltip#93:16": {
+          "type": "BOOLEAN",
+          "value": false
+        }
+      },
+      "text_style_keys": [
+        "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+      ],
+      "unstyled_text_runs": 0,
+      "text_runs": [
+        {
+          "path": "[[\"FRAME\",\"container\",1],[\"FRAME\",\"container-placeholder-text\",0],[\"TEXT\",\"Placeholder text\",0]]",
+          "visibility_controls": [
+            "Show placeholder#93:32"
+          ],
+          "style_keys": [
+            "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "AUTO"
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1344;96:38;389:5663",
+      "name": "Input 2",
+      "type": "INSTANCE",
+      "key": null,
+      "parent_id": "I385:5704;105:1344;96:38",
+      "parent_name": "Inputs",
+      "parent_type": "SLOT",
+      "main_component_key": "c446a54dc9a02c1cfa290996eb711cb6dcaf4f5a",
+      "main_component_remote": false,
+      "ancestor_ids": [
+        "I385:5704;105:1344;96:38",
+        "I385:5704;105:1344;96:37",
+        "I385:5704;105:1344",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 1,
+      "layout_mode": "VERTICAL",
+      "binding_fields": [
+        "itemSpacing",
+        "paddingBottom",
+        "paddingLeft",
+        "paddingRight",
+        "paddingTop"
+      ],
+      "binding_details": [
+        {
+          "property": "itemSpacing",
+          "variable_id": "VariableID:8:550",
+          "token": "input/spacing/sm",
+          "collection": "component"
+        },
+        {
+          "property": "paddingLeft",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingTop",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingRight",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingBottom",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {
+        "size": "large",
+        "status": "default"
+      },
+      "component_properties": {
+        "Show badge#93:36": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show placeholder#93:32": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show label#93:28": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show icon#93:24": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Required#93:20": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show helper#93:12": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show tooltip#93:16": {
+          "type": "BOOLEAN",
+          "value": false
+        }
+      },
+      "text_style_keys": [
+        "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+      ],
+      "unstyled_text_runs": 0,
+      "text_runs": [
+        {
+          "path": "[[\"FRAME\",\"container\",1],[\"FRAME\",\"container-placeholder-text\",0],[\"TEXT\",\"Placeholder text\",0]]",
+          "visibility_controls": [
+            "Show placeholder#93:32"
+          ],
+          "style_keys": [
+            "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "AUTO"
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1344;96:38;389:5664",
+      "name": "Input 3",
+      "type": "INSTANCE",
+      "key": null,
+      "parent_id": "I385:5704;105:1344;96:38",
+      "parent_name": "Inputs",
+      "parent_type": "SLOT",
+      "main_component_key": "c446a54dc9a02c1cfa290996eb711cb6dcaf4f5a",
+      "main_component_remote": false,
+      "ancestor_ids": [
+        "I385:5704;105:1344;96:38",
+        "I385:5704;105:1344;96:37",
+        "I385:5704;105:1344",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 1,
+      "layout_mode": "VERTICAL",
+      "binding_fields": [
+        "itemSpacing",
+        "paddingBottom",
+        "paddingLeft",
+        "paddingRight",
+        "paddingTop"
+      ],
+      "binding_details": [
+        {
+          "property": "itemSpacing",
+          "variable_id": "VariableID:8:550",
+          "token": "input/spacing/sm",
+          "collection": "component"
+        },
+        {
+          "property": "paddingLeft",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingTop",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingRight",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingBottom",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {
+        "size": "large",
+        "status": "default"
+      },
+      "component_properties": {
+        "Show badge#93:36": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show placeholder#93:32": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show label#93:28": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show icon#93:24": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Required#93:20": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show helper#93:12": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show tooltip#93:16": {
+          "type": "BOOLEAN",
+          "value": false
+        }
+      },
+      "text_style_keys": [
+        "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+      ],
+      "unstyled_text_runs": 0,
+      "text_runs": [
+        {
+          "path": "[[\"FRAME\",\"container\",1],[\"FRAME\",\"container-placeholder-text\",0],[\"TEXT\",\"Placeholder text\",0]]",
+          "visibility_controls": [
+            "Show placeholder#93:32"
+          ],
+          "style_keys": [
+            "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "AUTO"
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1344;96:38;389:5665",
+      "name": "Input 4",
+      "type": "INSTANCE",
+      "key": null,
+      "parent_id": "I385:5704;105:1344;96:38",
+      "parent_name": "Inputs",
+      "parent_type": "SLOT",
+      "main_component_key": "c446a54dc9a02c1cfa290996eb711cb6dcaf4f5a",
+      "main_component_remote": false,
+      "ancestor_ids": [
+        "I385:5704;105:1344;96:38",
+        "I385:5704;105:1344;96:37",
+        "I385:5704;105:1344",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 1,
+      "layout_mode": "VERTICAL",
+      "binding_fields": [
+        "itemSpacing",
+        "paddingBottom",
+        "paddingLeft",
+        "paddingRight",
+        "paddingTop"
+      ],
+      "binding_details": [
+        {
+          "property": "itemSpacing",
+          "variable_id": "VariableID:8:550",
+          "token": "input/spacing/sm",
+          "collection": "component"
+        },
+        {
+          "property": "paddingLeft",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingTop",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingRight",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingBottom",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {
+        "size": "large",
+        "status": "default"
+      },
+      "component_properties": {
+        "Show badge#93:36": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show placeholder#93:32": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show label#93:28": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show icon#93:24": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Required#93:20": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show helper#93:12": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show tooltip#93:16": {
+          "type": "BOOLEAN",
+          "value": false
+        }
+      },
+      "text_style_keys": [
+        "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+      ],
+      "unstyled_text_runs": 0,
+      "text_runs": [
+        {
+          "path": "[[\"FRAME\",\"container\",1],[\"FRAME\",\"container-placeholder-text\",0],[\"TEXT\",\"Placeholder text\",0]]",
+          "visibility_controls": [
+            "Show placeholder#93:32"
+          ],
+          "style_keys": [
+            "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "AUTO"
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "I385:5704;105:1344;96:38;389:5666",
+      "name": "Input 5",
+      "type": "INSTANCE",
+      "key": null,
+      "parent_id": "I385:5704;105:1344;96:38",
+      "parent_name": "Inputs",
+      "parent_type": "SLOT",
+      "main_component_key": "c446a54dc9a02c1cfa290996eb711cb6dcaf4f5a",
+      "main_component_remote": false,
+      "ancestor_ids": [
+        "I385:5704;105:1344;96:38",
+        "I385:5704;105:1344;96:37",
+        "I385:5704;105:1344",
+        "I385:5704;105:1343",
+        "I385:5704;105:1265",
+        "385:5704",
+        "385:5703",
+        "385:5168",
+        "203:93"
+      ],
+      "reaction_count": 0,
+      "child_count": 1,
+      "layout_mode": "VERTICAL",
+      "binding_fields": [
+        "itemSpacing",
+        "paddingBottom",
+        "paddingLeft",
+        "paddingRight",
+        "paddingTop"
+      ],
+      "binding_details": [
+        {
+          "property": "itemSpacing",
+          "variable_id": "VariableID:8:550",
+          "token": "input/spacing/sm",
+          "collection": "component"
+        },
+        {
+          "property": "paddingLeft",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingTop",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingRight",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        },
+        {
+          "property": "paddingBottom",
+          "variable_id": "VariableID:8:551",
+          "token": "input/spacing/none",
+          "collection": "component"
+        }
+      ],
+      "variant_properties": {
+        "size": "large",
+        "status": "default"
+      },
+      "component_properties": {
+        "Show badge#93:36": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show placeholder#93:32": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show label#93:28": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show icon#93:24": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Required#93:20": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show helper#93:12": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show tooltip#93:16": {
+          "type": "BOOLEAN",
+          "value": false
+        }
+      },
+      "text_style_keys": [
+        "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+      ],
+      "unstyled_text_runs": 0,
+      "text_runs": [
+        {
+          "path": "[[\"FRAME\",\"container\",1],[\"FRAME\",\"container-placeholder-text\",0],[\"TEXT\",\"Placeholder text\",0]]",
+          "visibility_controls": [
+            "Show placeholder#93:32"
+          ],
+          "style_keys": [
+            "08ab7fe4090ae8e527038cdd77f46d0cb688f0cb"
+          ],
+          "font_metrics": [
+            {
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular",
+                "variationSettings": {
+                  "wght": 400
+                }
+              },
+              "fontSize": 14,
+              "lineHeight": {
+                "unit": "AUTO"
+              },
+              "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+              },
+              "textDecoration": "NONE"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "screen": "advanced_c",
+  "placements": {
+    "advanced_c.shell": "385:5704",
+    "advanced_c.body": "I385:5704;105:1484;385:6855",
+    "advanced_c.card": "I385:5704;105:1484;385:6857",
+    "advanced_c.heading": "I385:5704;105:1484;385:6859",
+    "advanced_c.status": "I385:5704;105:1484;385:6865",
+    "advanced_c.actions": "I385:5704;105:1484;385:6877",
+    "advanced_c.title": "I385:5704;105:1484;385:6861",
+    "advanced_c.description": "I385:5704;105:1484;385:6863",
+    "advanced_c.count": "I385:5704;105:1484;385:6867",
+    "advanced_c.progress": "I385:5704;105:1484;385:6875",
+    "advanced_c.advance": "I385:5704;105:1484;385:6882",
+    "advanced_c.reset": "I385:5704;105:1484;385:6887",
+    "advanced_c.input1": "I385:5704;105:1344;96:38;389:5662",
+    "advanced_c.input2": "I385:5704;105:1344;96:38;389:5663",
+    "advanced_c.input3": "I385:5704;105:1344;96:38;389:5664",
+    "advanced_c.input4": "I385:5704;105:1344;96:38;389:5665",
+    "advanced_c.input5": "I385:5704;105:1344;96:38;389:5666"
+  },
+  "root_id": "385:5703",
+  "root_ancestor_ids": [
+    "385:5168",
+    "203:93"
+  ],
+  "qa_root": {
+    "id": "385:5168",
+    "name": "QA Skills · Anticipa AI · Figma · 2026-11-17",
+    "type": "SECTION",
+    "parent_id": "203:93"
+  },
+  "candidates": [
+    {
+      "id": "385:5704",
+      "family": "APP-SHELL-001"
+    },
+    {
+      "id": "I385:5704;105:1484;385:6875",
+      "family": "LINEAR-PROGRESS-001"
+    },
+    {
+      "id": "I385:5704;105:1484;385:6882",
+      "family": "BUTTON-001"
+    },
+    {
+      "id": "I385:5704;105:1484;385:6887",
+      "family": "BUTTON-001"
+    }
+  ],
+  "instance_ids": [
+    "385:5704",
+    "I385:5704;105:1344;96:38;389:5662",
+    "I385:5704;105:1344;96:38;389:5663",
+    "I385:5704;105:1344;96:38;389:5664",
+    "I385:5704;105:1344;96:38;389:5665",
+    "I385:5704;105:1344;96:38;389:5666",
+    "I385:5704;105:1484;385:6875",
+    "I385:5704;105:1484;385:6882",
+    "I385:5704;105:1484;385:6887"
+  ],
+  "inherited_source_controls": [
+    {
+      "id": "I385:5704;105:1266;61:228",
+      "source_id": "I105:1266;61:228",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "3ea3f24db3a8811c2e09750e56ac5388330a4827"
+    },
+    {
+      "id": "I385:5704;105:1266;61:228;54:62",
+      "source_id": "I105:1266;61:228;54:62",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "7de3e2b6dd8bfe526ed1ec72cc2df4052c42c2de"
+    },
+    {
+      "id": "I385:5704;105:1266;61:241",
+      "source_id": "I105:1266;61:241",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "1682113efdff70386bf4ac23c3a4d49008e24e9e"
+    },
+    {
+      "id": "I385:5704;105:1266;61:241;54:113",
+      "source_id": "I105:1266;61:241;54:113",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "090ff24ab3485ba51fe71427dd00328da0afe68f"
+    },
+    {
+      "id": "I385:5704;105:1266;61:253",
+      "source_id": "I105:1266;61:253",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "1682113efdff70386bf4ac23c3a4d49008e24e9e"
+    },
+    {
+      "id": "I385:5704;105:1266;61:253;54:113",
+      "source_id": "I105:1266;61:253;54:113",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "090ff24ab3485ba51fe71427dd00328da0afe68f"
+    },
+    {
+      "id": "I385:5704;105:1266;61:261",
+      "source_id": "I105:1266;61:261",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "1682113efdff70386bf4ac23c3a4d49008e24e9e"
+    },
+    {
+      "id": "I385:5704;105:1266;61:261;54:113",
+      "source_id": "I105:1266;61:261;54:113",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "090ff24ab3485ba51fe71427dd00328da0afe68f"
+    },
+    {
+      "id": "I385:5704;105:1266;61:269",
+      "source_id": "I105:1266;61:269",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "1682113efdff70386bf4ac23c3a4d49008e24e9e"
+    },
+    {
+      "id": "I385:5704;105:1266;61:269;54:113",
+      "source_id": "I105:1266;61:269;54:113",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "090ff24ab3485ba51fe71427dd00328da0afe68f"
+    },
+    {
+      "id": "I385:5704;105:1266;61:277",
+      "source_id": "I105:1266;61:277",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "1682113efdff70386bf4ac23c3a4d49008e24e9e"
+    },
+    {
+      "id": "I385:5704;105:1266;61:277;54:113",
+      "source_id": "I105:1266;61:277;54:113",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "090ff24ab3485ba51fe71427dd00328da0afe68f"
+    },
+    {
+      "id": "I385:5704;105:1266;61:285",
+      "source_id": "I105:1266;61:285",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "1682113efdff70386bf4ac23c3a4d49008e24e9e"
+    },
+    {
+      "id": "I385:5704;105:1266;61:285;54:113",
+      "source_id": "I105:1266;61:285;54:113",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "090ff24ab3485ba51fe71427dd00328da0afe68f"
+    },
+    {
+      "id": "I385:5704;105:1266;61:296",
+      "source_id": "I105:1266;61:296",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "9769675cdcecb2784a6c1895f76e4daf1e75efe0"
+    },
+    {
+      "id": "I385:5704;105:1266;61:296;60:62",
+      "source_id": "I105:1266;61:296;60:62",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "1682113efdff70386bf4ac23c3a4d49008e24e9e"
+    },
+    {
+      "id": "I385:5704;105:1266;61:296;60:62;54:113",
+      "source_id": "I105:1266;61:296;60:62;54:113",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "8ebba51c41e3b39511663395803390b9d2e3d3f7"
+    },
+    {
+      "id": "I385:5704;105:1344;96:28",
+      "source_id": "I105:1344;96:28",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "20ec318a1dbd553904bcd09be94f2148beeada20"
+    },
+    {
+      "id": "I385:5704;105:1344;96:150",
+      "source_id": "I105:1344;96:150",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "6258d835f1b7a1ce315f9ae9db069ac4b2bb927f"
+    },
+    {
+      "id": "I385:5704;105:1344;96:150;61:444",
+      "source_id": "I105:1344;96:150;61:444",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "8c085e5256f1c4b805274c58950d738da08eff0b"
+    },
+    {
+      "id": "I385:5704;105:1344;96:197",
+      "source_id": "I105:1344;96:197",
+      "owner_id": "385:5704",
+      "owner_key": "89cf54861600be801af4dae79d9d7761cb8065e9",
+      "component_key": "6075f746c8e1d4bfcd8708c385b08945032d9395"
+    }
+  ],
+  "transport_receipts": [
+    {
+      "offset": 0,
+      "limit": 1,
+      "total_nodes": 17,
+      "observed_at": "2026-11-17T23:37:03.142Z"
+    },
+    {
+      "offset": 1,
+      "limit": 8,
+      "total_nodes": 17,
+      "observed_at": "2026-11-17T23:37:13.726Z"
+    },
+    {
+      "offset": 9,
+      "limit": 127,
+      "total_nodes": 17,
+      "observed_at": "2026-11-17T23:37:09.353Z"
+    }
+  ]
+}

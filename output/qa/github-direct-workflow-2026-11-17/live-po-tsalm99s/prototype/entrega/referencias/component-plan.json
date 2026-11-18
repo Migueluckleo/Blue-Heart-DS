@@ -1,0 +1,1570 @@
+{
+  "schema_version": 1,
+  "manifest_sha256": "d8efb5d6ab3ef6c9b77ab0b2cb565ddd3f800fa564f17d0dbcefb41a098c99ac",
+  "ds_digest": "343793892f7131f1b772c700a3e4c962152cb505f592b4f8f21f919cd9c295d0",
+  "registry": {
+    "path": "implementations/web/components.registry.json",
+    "sha256": "e0b305a64932bc3a20cbc7612864aafa99a1812f6e8f17a729c0f190f23c315c"
+  },
+  "exportsIndex": {
+    "path": "implementations/web/src/index.ts",
+    "sha256": "3fabafffff6237564a7c98105a7868f175dbec756c98a1ea1430e9d1dcae558e"
+  },
+  "families": [
+    {
+      "componentId": "APP-SHELL-001",
+      "applicability": "APPLIES",
+      "reason": "Uso explícito independiente del brief de QA.",
+      "contract": {
+        "path": "specs/components/app-shell.contract.v1.0.0.md",
+        "sha256": "76e50e29b3b397729ab40689d90044f5d233efbd63e1074275b024ae599e1528"
+      },
+      "amendments": [],
+      "exports": [
+        "AppShell",
+        "AppShellGridItem"
+      ],
+      "instances": [
+        "shell"
+      ]
+    },
+    {
+      "componentId": "AVATAR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/avatar.contract.v1.0.0.md",
+        "sha256": "70f70507b073c37ca689301ed3617e0f01248affc4e5a65c462537eb1840a11a"
+      },
+      "amendments": [],
+      "exports": [
+        "Avatar"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "AVATAR-GROUP-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/avatar-group.contract.v1.0.0.md",
+        "sha256": "43a8a2744c029bdb9b8044c6f78f5d9dda205076ea0d1e57bd3dc71c7dbf62a2"
+      },
+      "amendments": [],
+      "exports": [
+        "AvatarGroup"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "BADGE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/badge.contract.v1.0.0.md",
+        "sha256": "98e904066c0387b88dfc1db6679d4b35fc6665a1da266dde8dbac7c8c81a0213"
+      },
+      "amendments": [],
+      "exports": [
+        "Badge"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "BREADCRUMB-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/breadcrumb.contract.v1.0.0.md",
+        "sha256": "9ebe8c835f06524e6d08da68d49515e613e06c6ec74b41037778118a5eb1ef50"
+      },
+      "amendments": [],
+      "exports": [
+        "Breadcrumb"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "BREADCRUMB-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/breadcrumb-item.contract.v1.0.0.md",
+        "sha256": "8256eb263629bebc8ee7017fc9060e375c5677ccb5b5f759814b3e13c62c8006"
+      },
+      "amendments": [],
+      "exports": [
+        "BreadcrumbItem"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "BUTTON-001",
+      "applicability": "APPLIES",
+      "reason": "Uso explícito independiente del brief de QA.",
+      "contract": {
+        "path": "specs/components/buttons.contract.v1.0.0.md",
+        "sha256": "f10c3428203f6d083bfa1a67175609ad3890e6ee8826e9121175159cec909b70"
+      },
+      "amendments": [
+        {
+          "path": "specs/components/buttons.usage.amendment.v1.0.1.md",
+          "sha256": "39c8b5851fd42cc0e57257faab9c7bdac4d529422eea58378bc81a06f70bded8"
+        }
+      ],
+      "exports": [
+        "Button"
+      ],
+      "instances": [
+        "advance",
+        "reset"
+      ]
+    },
+    {
+      "componentId": "CHARACTERS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/characters.contract.v1.0.0.md",
+        "sha256": "1c77b3bf880ee220ddfc6d548c091b762c6937bbd7d78c62849b7bb7ff90e8f9"
+      },
+      "amendments": [],
+      "exports": [
+        "Characters"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "CHAT-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/chat.contract.v1.0.0.md",
+        "sha256": "8a99302d67324a53be6efff6ce9b33e48ee751876796ac71bce7ca3278bce089"
+      },
+      "amendments": [],
+      "exports": [
+        "Chat"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "CHAT-HISTORY-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/chat-history-item.contract.v1.0.0.md",
+        "sha256": "39ee33d51197eb8abcefd1fb61aa594be31e100e671c01bba19c219d57dff8da"
+      },
+      "amendments": [],
+      "exports": [
+        "ChatHistoryItem"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "CHAT-PLAN-USAGE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/chat-plan-usage.contract.v1.0.0.md",
+        "sha256": "810c9bd6e72f46b3c463bead5e04afde3148b81ff4c2267a0b8a4721a4ebf865"
+      },
+      "amendments": [],
+      "exports": [
+        "ChatPlanUsage"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "CHAT-SIDEBAR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/chat-sidebar.contract.v1.0.0.md",
+        "sha256": "0123dc6d1622783256a4f2cc569e60b22f365f48122099d46961d53ca9cb7fbc"
+      },
+      "amendments": [],
+      "exports": [
+        "ChatSidebar"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "CHAT-SIDEBAR-SECTION-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/chat-sidebar-section.contract.v1.0.0.md",
+        "sha256": "43a939b8afab53df9c28d2f1270fee54e148669c370df5eac0e5ebb0c28dde34"
+      },
+      "amendments": [],
+      "exports": [
+        "ChatSidebarSection"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "CHAT-TOOL-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/chat-tool-item.contract.v1.0.0.md",
+        "sha256": "369f4c685c50ed56d80c622700cb45861048ca4eea76e1c1fa9fee561ac04163"
+      },
+      "amendments": [],
+      "exports": [
+        "ChatToolItem"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "CHECKBOX-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/checkbox.contract.v1.0.0.md",
+        "sha256": "fd1bf81cba70bac10fdd8069c963734ac506db7b4d8cf763d768250303794c56"
+      },
+      "amendments": [],
+      "exports": [
+        "Checkbox"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "CHIP-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/chip.contract.v1.0.0.md",
+        "sha256": "10c3a4dbf70aa981dc8e8596a467d263183b3e84ecf32f47695cc3d29206c7f4"
+      },
+      "amendments": [],
+      "exports": [
+        "Chip"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "COMPANY-SELECTOR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/company-selector.contract.v1.0.0.md",
+        "sha256": "8f25df0524c840e0386cdc279c9afbb05993f18a5f029868f0f4baa9dcd4b2f5"
+      },
+      "amendments": [],
+      "exports": [
+        "CompanySelector"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "CONVERSATION-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/conversation-composer.contract.v1.0.0.md",
+        "sha256": "a08cfeb05a34628a166b45bf9d95a314d19e77bab38ee5b1911c001b69fc845e"
+      },
+      "amendments": [],
+      "exports": [
+        "ConversationComposer"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "CONVERSATION-RESPONSE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/conversation-response.contract.v1.0.0.md",
+        "sha256": "2dc6dddaf2e1682a4a43be2684b832a9f2ff39bf98be6ba7405299be1e9442a0"
+      },
+      "amendments": [],
+      "exports": [
+        "ConversationResponse",
+        "ConversationResponsePreview",
+        "ConversationResponseCopyIcon"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "DOT-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/dot.contract.v1.0.0.md",
+        "sha256": "c4418c9807ff26e4b52b6e18c997f07ad06fd4fa68fbf13c474ad08b974a318a"
+      },
+      "amendments": [],
+      "exports": [
+        "Dot"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "DROPDOWN-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/dropdown-item.contract.v1.0.0.md",
+        "sha256": "19b5fb01a5e2a2e61cb5de983552f72435914b88c1d6d954748f5ddef19b79e3"
+      },
+      "amendments": [],
+      "exports": [
+        "DropdownItem"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "DROPDOWN-MENU-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/dropdown-menu.contract.v1.0.0.md",
+        "sha256": "d064ff4c024858d9fd9bf7448aaf0227b214a837d63700855880351e8effa766"
+      },
+      "amendments": [],
+      "exports": [
+        "DropdownMenu",
+        "DropdownField"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "FILE-UPLOAD-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/file-upload.contract.v1.0.0.md",
+        "sha256": "30bc060028616c419b828e453f0743210e8e744ad2c4988be8751b136b6ad5c4"
+      },
+      "amendments": [],
+      "exports": [
+        "FileUpload"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "FLOATING-ACTIONS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/floating-actions.contract.v1.0.0.md",
+        "sha256": "0aa666a17d76d5a049abad0c834748e3bb63e19d3760c8fa43b84f8d17fce8f0"
+      },
+      "amendments": [],
+      "exports": [
+        "FloatingActions"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "HEADER-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/header.contract.v1.0.0.md",
+        "sha256": "cbac0551a47cc1c755f7db8440b49610ed0574bca0b07a7124fba3151759c044"
+      },
+      "amendments": [],
+      "exports": [
+        "Header"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "HEADER-ACTIONS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/header-actions.contract.v1.0.0.md",
+        "sha256": "78401d643bb90f88b3ed67fd73a0c9be2bf8d132da626bc7c773dd886c015ec5"
+      },
+      "amendments": [],
+      "exports": [
+        "HeaderActions"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "ICON-BUTTON-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/icon-button.contract.v1.0.0.md",
+        "sha256": "26ea2e8769d17dfb87285d886e13771fa37d0ebdbcb633358b0172ec27f75493"
+      },
+      "amendments": [],
+      "exports": [
+        "IconButton"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "INLINE-NOTIFICATION-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/inline-notification.contract.v1.0.0.md",
+        "sha256": "622aca6f7fe4eaa960deee54d581971ffe46941364744de678d3480db269c661"
+      },
+      "amendments": [],
+      "exports": [
+        "InlineNotification"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "INPUT-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/input.contract.v1.0.0.md",
+        "sha256": "38943f5018664f4353163bc990d049e08fbbd247cf9d858a35ca2666681bddaa"
+      },
+      "amendments": [],
+      "exports": [
+        "Input"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "LINEAR-PROGRESS-001",
+      "applicability": "APPLIES",
+      "reason": "Uso explícito independiente del brief de QA.",
+      "contract": {
+        "path": "specs/components/linear-progress.contract.v1.0.0.md",
+        "sha256": "4b2d43ab2ede543322ca177340d290b2e8e232abb5503d1f061ab64302fb1ad7"
+      },
+      "amendments": [],
+      "exports": [
+        "LinearProgress"
+      ],
+      "instances": [
+        "progress"
+      ]
+    },
+    {
+      "componentId": "LOADER-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/loader.contract.v1.0.0.md",
+        "sha256": "b6bc0b64db1ebaefef508c2070add1d0f312d2e5b4cc20960b7d859b6bed0d55"
+      },
+      "amendments": [
+        {
+          "path": "specs/components/loader.usage.amendment.v1.0.1.md",
+          "sha256": "ec3dbe238868278bace0c7afe9c2d638f0fd7e2183b565d65bf515f76230192a"
+        }
+      ],
+      "exports": [
+        "Loader"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "LOGOS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/logos.contract.v1.0.0.md",
+        "sha256": "0dc8178c3e259096b526b6f7ef3179504d2b68f587c17e6f8415dfab6ea7349d"
+      },
+      "amendments": [],
+      "exports": [],
+      "instances": []
+    },
+    {
+      "componentId": "MENU-ITEM-001",
+      "applicability": "APPLIES",
+      "reason": "Uso explícito independiente del brief de QA.",
+      "contract": {
+        "path": "specs/components/menu-item.contract.v1.0.0.md",
+        "sha256": "99c7968ebc13a059c0482d64c99944fc878da6f518805d41f3528b6080537868"
+      },
+      "amendments": [],
+      "exports": [
+        "MenuItem"
+      ],
+      "instances": [
+        "menu"
+      ]
+    },
+    {
+      "componentId": "PAGINATION-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/pagination.contract.v1.0.0.md",
+        "sha256": "a7f1fe70b993ba7b7aa6805513657ed66f85b21cc2c8e803f7eb313a83957c1b"
+      },
+      "amendments": [],
+      "exports": [
+        "Pagination"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "PAGINATION-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/pagination-item.contract.v1.0.0.md",
+        "sha256": "3a8eff67b8f00d435faae568c0181afb267691611b845515ad19d4cf56913e85"
+      },
+      "amendments": [],
+      "exports": [
+        "PaginationItem"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "RADIO-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/radio.contract.v1.0.0.md",
+        "sha256": "d23b3e151a7d530f3611b8a9f2d2b86c095861622412ea59692b31dd07900fef"
+      },
+      "amendments": [],
+      "exports": [
+        "Radio"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "RADIO-GROUP-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/radio-group.contract.v1.0.0.md",
+        "sha256": "640f7616ccc82c29e5c134fa887d97cfeb65235af0448f1cdcfa8e93988850cb"
+      },
+      "amendments": [],
+      "exports": [
+        "RadioGroup"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "SEARCH-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/search.contract.v1.0.0.md",
+        "sha256": "229c8301f0151604052def3951424823588392a5c9165c01352daaa0e39829ed"
+      },
+      "amendments": [],
+      "exports": [
+        "Search"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "SECTION-HEADER-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/section-header.contract.v1.0.0.md",
+        "sha256": "3f7aa013f0cac29445386ae0fb9e7d524f5a1308df1ff3ece9bb4ebe144616fe"
+      },
+      "amendments": [],
+      "exports": [
+        "SectionHeader"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "SIDEBAR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/sidebar.contract.v1.0.0.md",
+        "sha256": "0cfcf88001c7bbba68ad8011197bc3ff049e8dad5ab320dbfa5e149a68cf57f0"
+      },
+      "amendments": [
+        {
+          "path": "specs/components/sidebar.secondary-control.amendment.v1.0.1.md",
+          "sha256": "d6a628fc853ee2223064511ec4244d61edc16965dd6e86c169ffd8eab2bdf0ad"
+        }
+      ],
+      "exports": [
+        "Sidebar"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "STEPPER-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/stepper.contract.v1.0.0.md",
+        "sha256": "e4598db8be040a7d885589abf08dd4a7a3e759ded54e3a86bc6a361a0ce5592e"
+      },
+      "amendments": [],
+      "exports": [
+        "Stepper",
+        "StepperItem"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "TAB-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/tab.contract.v1.0.0.md",
+        "sha256": "040d848dfd98d26731f00cad747680b67ea36457b8e1a74e3031314f481ab804"
+      },
+      "amendments": [],
+      "exports": [
+        "Tab"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "TABLE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/table.contract.v1.0.0.md",
+        "sha256": "11a10407cc962ea6c2bbf5e2fd8ecb16e3f106cbbc5f100820284f098ccd602b"
+      },
+      "amendments": [],
+      "exports": [
+        "Table"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "TABLE-CELL-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/table-cell.contract.v1.0.0.md",
+        "sha256": "9c8ff9ef9633413c2addd283b4022c88a0014db013a71f00828036660b595d99"
+      },
+      "amendments": [],
+      "exports": [
+        "TableCell",
+        "TableCaptureCell"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "TABS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/tabs.contract.v1.0.0.md",
+        "sha256": "ffa4637ae231721e77ab9be88d4c3c0c951c6c978e9d2c546ca67f12bcb0e446"
+      },
+      "amendments": [],
+      "exports": [
+        "Tabs"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "TEXT-AREA-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/text-area.contract.v1.0.0.md",
+        "sha256": "4462e6f71b9e5371383f6ae604e7d1002af36f6743a33e94754a982b38b54d48"
+      },
+      "amendments": [],
+      "exports": [
+        "TextArea"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "TOGGLE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/toggle.contract.v1.0.0.md",
+        "sha256": "18fd1f9c1e182511bfd22d431d360e809cd095879d2d31d8ad4bb01799e5f29c"
+      },
+      "amendments": [],
+      "exports": [
+        "Toggle"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "TOOLTIP-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/tooltip.contract.v1.0.0.md",
+        "sha256": "55730a20b256c59cd0287afb0f70d3d23836af988ae6ddc6d8e8a5787c91ca9c"
+      },
+      "amendments": [],
+      "exports": [
+        "Tooltip"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "TOP-BAR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/top-bar.contract.v1.0.0.md",
+        "sha256": "5219c7be83a50e7b035eccc8c317528d2821b3e66df1710895e7f53ac1188470"
+      },
+      "amendments": [],
+      "exports": [
+        "TopBar"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "USER-MESSAGE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/user-message.contract.v1.0.0.md",
+        "sha256": "4c93f58bf3caaa4040e10596331e6a53746fbafb378227ce8c3ba06138b49965"
+      },
+      "amendments": [],
+      "exports": [
+        "UserMessage"
+      ],
+      "instances": []
+    },
+    {
+      "componentId": "USER-SELECTOR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief; las dependencias internas del AppShell y sus controles se verifican mediante los contratos y el QA del anfitrión.",
+      "contract": {
+        "path": "specs/components/user-selector.contract.v1.0.0.md",
+        "sha256": "03032f86629b08c0f51410c729e7494266f1daef35ea5a44c9705db47e0720c5"
+      },
+      "amendments": [],
+      "exports": [
+        "UserSelector"
+      ],
+      "instances": []
+    }
+  ],
+  "controls": [
+    {
+      "componentId": "APP-SHELL-001",
+      "contract": {
+        "path": "specs/components/app-shell.contract.v1.0.0.md",
+        "sha256": "76e50e29b3b397729ab40689d90044f5d233efbd63e1074275b024ae599e1528"
+      },
+      "amendments": [],
+      "exports": [
+        "AppShell",
+        "AppShellGridItem"
+      ],
+      "dependencies": [
+        {
+          "componentId": "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+          "contract": {
+            "path": "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+            "sha256": "7179e6bb8d79a2b63f2f1b4d023528ea460def806a34e98f5ce53c110bbefce0"
+          },
+          "amendments": [],
+          "exports": [],
+          "dependencies": []
+        },
+        {
+          "componentId": "HEADER-001",
+          "contract": {
+            "path": "specs/components/header.contract.v1.0.0.md",
+            "sha256": "cbac0551a47cc1c755f7db8440b49610ed0574bca0b07a7124fba3151759c044"
+          },
+          "amendments": [],
+          "exports": [
+            "Header"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "BADGE-001",
+            "COMPANY-SELECTOR-001",
+            "USER-SELECTOR-001",
+            "HEADER-ACTIONS-001"
+          ]
+        },
+        {
+          "componentId": "SIDEBAR-001",
+          "contract": {
+            "path": "specs/components/sidebar.contract.v1.0.0.md",
+            "sha256": "0cfcf88001c7bbba68ad8011197bc3ff049e8dad5ab320dbfa5e149a68cf57f0"
+          },
+          "amendments": [
+            {
+              "path": "specs/components/sidebar.secondary-control.amendment.v1.0.1.md",
+              "sha256": "d6a628fc853ee2223064511ec4244d61edc16965dd6e86c169ffd8eab2bdf0ad"
+            }
+          ],
+          "exports": [
+            "Sidebar"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "MENU-ITEM-001",
+            "ICON-BUTTON-001"
+          ]
+        },
+        {
+          "componentId": "SECTION-HEADER-001",
+          "contract": {
+            "path": "specs/components/section-header.contract.v1.0.0.md",
+            "sha256": "3f7aa013f0cac29445386ae0fb9e7d524f5a1308df1ff3ece9bb4ebe144616fe"
+          },
+          "amendments": [],
+          "exports": [
+            "SectionHeader"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "BREADCRUMB-001",
+            "BADGE-001",
+            "INPUT-001",
+            "ICON-BUTTON-001",
+            "BUTTON-001",
+            "LOGOS-001"
+          ]
+        },
+        {
+          "componentId": "CHAT-001",
+          "contract": {
+            "path": "specs/components/chat.contract.v1.0.0.md",
+            "sha256": "8a99302d67324a53be6efff6ce9b33e48ee751876796ac71bce7ca3278bce089"
+          },
+          "amendments": [],
+          "exports": [
+            "Chat"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "CHARACTERS-001",
+            "CHIP-001",
+            "CONVERSATION-001",
+            "CONVERSATION-RESPONSE-001",
+            "USER-MESSAGE-001"
+          ]
+        },
+        {
+          "componentId": "CHAT-SIDEBAR-001",
+          "contract": {
+            "path": "specs/components/chat-sidebar.contract.v1.0.0.md",
+            "sha256": "0123dc6d1622783256a4f2cc569e60b22f365f48122099d46961d53ca9cb7fbc"
+          },
+          "amendments": [],
+          "exports": [
+            "ChatSidebar"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "CHAT-TOOL-ITEM-001",
+            "CHAT-HISTORY-ITEM-001",
+            "CHAT-SIDEBAR-SECTION-001",
+            "CHAT-PLAN-USAGE-001",
+            "ICON-BUTTON-001",
+            "DROPDOWN-MENU-001",
+            "LOGOS-001"
+          ]
+        },
+        {
+          "componentId": "BADGE-001",
+          "contract": {
+            "path": "specs/components/badge.contract.v1.0.0.md",
+            "sha256": "98e904066c0387b88dfc1db6679d4b35fc6665a1da266dde8dbac7c8c81a0213"
+          },
+          "amendments": [],
+          "exports": [
+            "Badge"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001"
+          ]
+        },
+        {
+          "componentId": "COMPANY-SELECTOR-001",
+          "contract": {
+            "path": "specs/components/company-selector.contract.v1.0.0.md",
+            "sha256": "8f25df0524c840e0386cdc279c9afbb05993f18a5f029868f0f4baa9dcd4b2f5"
+          },
+          "amendments": [],
+          "exports": [
+            "CompanySelector"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001"
+          ]
+        },
+        {
+          "componentId": "USER-SELECTOR-001",
+          "contract": {
+            "path": "specs/components/user-selector.contract.v1.0.0.md",
+            "sha256": "03032f86629b08c0f51410c729e7494266f1daef35ea5a44c9705db47e0720c5"
+          },
+          "amendments": [],
+          "exports": [
+            "UserSelector"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "AVATAR-001"
+          ]
+        },
+        {
+          "componentId": "HEADER-ACTIONS-001",
+          "contract": {
+            "path": "specs/components/header-actions.contract.v1.0.0.md",
+            "sha256": "78401d643bb90f88b3ed67fd73a0c9be2bf8d132da626bc7c773dd886c015ec5"
+          },
+          "amendments": [],
+          "exports": [
+            "HeaderActions"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "ICON-BUTTON-001"
+          ]
+        },
+        {
+          "componentId": "MENU-ITEM-001",
+          "contract": {
+            "path": "specs/components/menu-item.contract.v1.0.0.md",
+            "sha256": "99c7968ebc13a059c0482d64c99944fc878da6f518805d41f3528b6080537868"
+          },
+          "amendments": [],
+          "exports": [
+            "MenuItem"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "TOOLTIP-001"
+          ]
+        },
+        {
+          "componentId": "ICON-BUTTON-001",
+          "contract": {
+            "path": "specs/components/icon-button.contract.v1.0.0.md",
+            "sha256": "26ea2e8769d17dfb87285d886e13771fa37d0ebdbcb633358b0172ec27f75493"
+          },
+          "amendments": [],
+          "exports": [
+            "IconButton"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "DOT-001"
+          ]
+        },
+        {
+          "componentId": "BREADCRUMB-001",
+          "contract": {
+            "path": "specs/components/breadcrumb.contract.v1.0.0.md",
+            "sha256": "9ebe8c835f06524e6d08da68d49515e613e06c6ec74b41037778118a5eb1ef50"
+          },
+          "amendments": [],
+          "exports": [
+            "Breadcrumb"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "BREADCRUMB-ITEM-001"
+          ]
+        },
+        {
+          "componentId": "INPUT-001",
+          "contract": {
+            "path": "specs/components/input.contract.v1.0.0.md",
+            "sha256": "38943f5018664f4353163bc990d049e08fbbd247cf9d858a35ca2666681bddaa"
+          },
+          "amendments": [],
+          "exports": [
+            "Input"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "BADGE-001"
+          ]
+        },
+        {
+          "componentId": "BUTTON-001",
+          "contract": {
+            "path": "specs/components/buttons.contract.v1.0.0.md",
+            "sha256": "f10c3428203f6d083bfa1a67175609ad3890e6ee8826e9121175159cec909b70"
+          },
+          "amendments": [
+            {
+              "path": "specs/components/buttons.usage.amendment.v1.0.1.md",
+              "sha256": "39c8b5851fd42cc0e57257faab9c7bdac4d529422eea58378bc81a06f70bded8"
+            }
+          ],
+          "exports": [
+            "Button"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "LOADER-001"
+          ]
+        },
+        {
+          "componentId": "LOGOS-001",
+          "contract": {
+            "path": "specs/components/logos.contract.v1.0.0.md",
+            "sha256": "0dc8178c3e259096b526b6f7ef3179504d2b68f587c17e6f8415dfab6ea7349d"
+          },
+          "amendments": [],
+          "exports": [],
+          "dependencies": []
+        },
+        {
+          "componentId": "CHARACTERS-001",
+          "contract": {
+            "path": "specs/components/characters.contract.v1.0.0.md",
+            "sha256": "1c77b3bf880ee220ddfc6d548c091b762c6937bbd7d78c62849b7bb7ff90e8f9"
+          },
+          "amendments": [],
+          "exports": [
+            "Characters"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001"
+          ]
+        },
+        {
+          "componentId": "CHIP-001",
+          "contract": {
+            "path": "specs/components/chip.contract.v1.0.0.md",
+            "sha256": "10c3a4dbf70aa981dc8e8596a467d263183b3e84ecf32f47695cc3d29206c7f4"
+          },
+          "amendments": [],
+          "exports": [
+            "Chip"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001"
+          ]
+        },
+        {
+          "componentId": "CONVERSATION-001",
+          "contract": {
+            "path": "specs/components/conversation-composer.contract.v1.0.0.md",
+            "sha256": "a08cfeb05a34628a166b45bf9d95a314d19e77bab38ee5b1911c001b69fc845e"
+          },
+          "amendments": [],
+          "exports": [
+            "ConversationComposer"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "BUTTON-001",
+            "ICON-BUTTON-001"
+          ]
+        },
+        {
+          "componentId": "CONVERSATION-RESPONSE-001",
+          "contract": {
+            "path": "specs/components/conversation-response.contract.v1.0.0.md",
+            "sha256": "2dc6dddaf2e1682a4a43be2684b832a9f2ff39bf98be6ba7405299be1e9442a0"
+          },
+          "amendments": [],
+          "exports": [
+            "ConversationResponse",
+            "ConversationResponsePreview",
+            "ConversationResponseCopyIcon"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "CHARACTERS-001",
+            "BADGE-001",
+            "BUTTON-001",
+            "ICON-BUTTON-001"
+          ]
+        },
+        {
+          "componentId": "USER-MESSAGE-001",
+          "contract": {
+            "path": "specs/components/user-message.contract.v1.0.0.md",
+            "sha256": "4c93f58bf3caaa4040e10596331e6a53746fbafb378227ce8c3ba06138b49965"
+          },
+          "amendments": [],
+          "exports": [
+            "UserMessage"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001"
+          ]
+        },
+        {
+          "componentId": "CHAT-TOOL-ITEM-001",
+          "contract": {
+            "path": "specs/components/chat-tool-item.contract.v1.0.0.md",
+            "sha256": "369f4c685c50ed56d80c622700cb45861048ca4eea76e1c1fa9fee561ac04163"
+          },
+          "amendments": [],
+          "exports": [
+            "ChatToolItem"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "ICON-BUTTON-001"
+          ]
+        },
+        {
+          "componentId": "CHAT-HISTORY-ITEM-001",
+          "contract": {
+            "path": "specs/components/chat-history-item.contract.v1.0.0.md",
+            "sha256": "39ee33d51197eb8abcefd1fb61aa594be31e100e671c01bba19c219d57dff8da"
+          },
+          "amendments": [],
+          "exports": [
+            "ChatHistoryItem"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "ICON-BUTTON-001"
+          ]
+        },
+        {
+          "componentId": "CHAT-SIDEBAR-SECTION-001",
+          "contract": {
+            "path": "specs/components/chat-sidebar-section.contract.v1.0.0.md",
+            "sha256": "43a939b8afab53df9c28d2f1270fee54e148669c370df5eac0e5ebb0c28dde34"
+          },
+          "amendments": [],
+          "exports": [
+            "ChatSidebarSection"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "ICON-BUTTON-001"
+          ]
+        },
+        {
+          "componentId": "CHAT-PLAN-USAGE-001",
+          "contract": {
+            "path": "specs/components/chat-plan-usage.contract.v1.0.0.md",
+            "sha256": "810c9bd6e72f46b3c463bead5e04afde3148b81ff4c2267a0b8a4721a4ebf865"
+          },
+          "amendments": [],
+          "exports": [
+            "ChatPlanUsage"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001"
+          ]
+        },
+        {
+          "componentId": "DROPDOWN-MENU-001",
+          "contract": {
+            "path": "specs/components/dropdown-menu.contract.v1.0.0.md",
+            "sha256": "d064ff4c024858d9fd9bf7448aaf0227b214a837d63700855880351e8effa766"
+          },
+          "amendments": [],
+          "exports": [
+            "DropdownMenu",
+            "DropdownField"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "DROPDOWN-ITEM-001",
+            "INPUT-001"
+          ]
+        },
+        {
+          "componentId": "AVATAR-001",
+          "contract": {
+            "path": "specs/components/avatar.contract.v1.0.0.md",
+            "sha256": "70f70507b073c37ca689301ed3617e0f01248affc4e5a65c462537eb1840a11a"
+          },
+          "amendments": [],
+          "exports": [
+            "Avatar"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+            "DOT-001"
+          ]
+        },
+        {
+          "componentId": "TOOLTIP-001",
+          "contract": {
+            "path": "specs/components/tooltip.contract.v1.0.0.md",
+            "sha256": "55730a20b256c59cd0287afb0f70d3d23836af988ae6ddc6d8e8a5787c91ca9c"
+          },
+          "amendments": [],
+          "exports": [
+            "Tooltip"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001"
+          ]
+        },
+        {
+          "componentId": "DOT-001",
+          "contract": {
+            "path": "specs/components/dot.contract.v1.0.0.md",
+            "sha256": "c4418c9807ff26e4b52b6e18c997f07ad06fd4fa68fbf13c474ad08b974a318a"
+          },
+          "amendments": [],
+          "exports": [
+            "Dot"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001"
+          ]
+        },
+        {
+          "componentId": "BREADCRUMB-ITEM-001",
+          "contract": {
+            "path": "specs/components/breadcrumb-item.contract.v1.0.0.md",
+            "sha256": "8256eb263629bebc8ee7017fc9060e375c5677ccb5b5f759814b3e13c62c8006"
+          },
+          "amendments": [],
+          "exports": [
+            "BreadcrumbItem"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001"
+          ]
+        },
+        {
+          "componentId": "LOADER-001",
+          "contract": {
+            "path": "specs/components/loader.contract.v1.0.0.md",
+            "sha256": "b6bc0b64db1ebaefef508c2070add1d0f312d2e5b4cc20960b7d859b6bed0d55"
+          },
+          "amendments": [
+            {
+              "path": "specs/components/loader.usage.amendment.v1.0.1.md",
+              "sha256": "ec3dbe238868278bace0c7afe9c2d638f0fd7e2183b565d65bf515f76230192a"
+            }
+          ],
+          "exports": [
+            "Loader"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001"
+          ]
+        },
+        {
+          "componentId": "DROPDOWN-ITEM-001",
+          "contract": {
+            "path": "specs/components/dropdown-item.contract.v1.0.0.md",
+            "sha256": "19b5fb01a5e2a2e61cb5de983552f72435914b88c1d6d954748f5ddef19b79e3"
+          },
+          "amendments": [],
+          "exports": [
+            "DropdownItem"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001"
+          ]
+        }
+      ],
+      "instanceId": "shell",
+      "role": "APP-SHELL-001",
+      "exportName": "AppShell",
+      "coverage": "COMPATIBLE",
+      "reason": "La necesidad se resuelve mediante el export oficial verificado.",
+      "evidence": {
+        "path": "specs/components/app-shell.contract.v1.0.0.md",
+        "sha256": "76e50e29b3b397729ab40689d90044f5d233efbd63e1074275b024ae599e1528"
+      },
+      "localCoverage": null
+    },
+    {
+      "componentId": "MENU-ITEM-001",
+      "contract": {
+        "path": "specs/components/menu-item.contract.v1.0.0.md",
+        "sha256": "99c7968ebc13a059c0482d64c99944fc878da6f518805d41f3528b6080537868"
+      },
+      "amendments": [],
+      "exports": [
+        "MenuItem"
+      ],
+      "dependencies": [
+        {
+          "componentId": "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+          "contract": {
+            "path": "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+            "sha256": "7179e6bb8d79a2b63f2f1b4d023528ea460def806a34e98f5ce53c110bbefce0"
+          },
+          "amendments": [],
+          "exports": [],
+          "dependencies": []
+        },
+        {
+          "componentId": "TOOLTIP-001",
+          "contract": {
+            "path": "specs/components/tooltip.contract.v1.0.0.md",
+            "sha256": "55730a20b256c59cd0287afb0f70d3d23836af988ae6ddc6d8e8a5787c91ca9c"
+          },
+          "amendments": [],
+          "exports": [
+            "Tooltip"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001"
+          ]
+        }
+      ],
+      "instanceId": "menu",
+      "role": "MENU-ITEM-001",
+      "exportName": "MenuItem",
+      "coverage": "COMPATIBLE",
+      "reason": "La necesidad se resuelve mediante el export oficial verificado.",
+      "evidence": {
+        "path": "specs/components/menu-item.contract.v1.0.0.md",
+        "sha256": "99c7968ebc13a059c0482d64c99944fc878da6f518805d41f3528b6080537868"
+      },
+      "localCoverage": null
+    },
+    {
+      "componentId": "LINEAR-PROGRESS-001",
+      "contract": {
+        "path": "specs/components/linear-progress.contract.v1.0.0.md",
+        "sha256": "4b2d43ab2ede543322ca177340d290b2e8e232abb5503d1f061ab64302fb1ad7"
+      },
+      "amendments": [],
+      "exports": [
+        "LinearProgress"
+      ],
+      "dependencies": [
+        {
+          "componentId": "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+          "contract": {
+            "path": "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+            "sha256": "7179e6bb8d79a2b63f2f1b4d023528ea460def806a34e98f5ce53c110bbefce0"
+          },
+          "amendments": [],
+          "exports": [],
+          "dependencies": []
+        }
+      ],
+      "instanceId": "progress",
+      "role": "LINEAR-PROGRESS-001",
+      "exportName": "LinearProgress",
+      "coverage": "COMPATIBLE",
+      "reason": "La necesidad se resuelve mediante el export oficial verificado.",
+      "evidence": {
+        "path": "specs/components/linear-progress.contract.v1.0.0.md",
+        "sha256": "4b2d43ab2ede543322ca177340d290b2e8e232abb5503d1f061ab64302fb1ad7"
+      },
+      "localCoverage": null
+    },
+    {
+      "componentId": "BUTTON-001",
+      "contract": {
+        "path": "specs/components/buttons.contract.v1.0.0.md",
+        "sha256": "f10c3428203f6d083bfa1a67175609ad3890e6ee8826e9121175159cec909b70"
+      },
+      "amendments": [
+        {
+          "path": "specs/components/buttons.usage.amendment.v1.0.1.md",
+          "sha256": "39c8b5851fd42cc0e57257faab9c7bdac4d529422eea58378bc81a06f70bded8"
+        }
+      ],
+      "exports": [
+        "Button"
+      ],
+      "dependencies": [
+        {
+          "componentId": "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+          "contract": {
+            "path": "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+            "sha256": "7179e6bb8d79a2b63f2f1b4d023528ea460def806a34e98f5ce53c110bbefce0"
+          },
+          "amendments": [],
+          "exports": [],
+          "dependencies": []
+        },
+        {
+          "componentId": "LOADER-001",
+          "contract": {
+            "path": "specs/components/loader.contract.v1.0.0.md",
+            "sha256": "b6bc0b64db1ebaefef508c2070add1d0f312d2e5b4cc20960b7d859b6bed0d55"
+          },
+          "amendments": [
+            {
+              "path": "specs/components/loader.usage.amendment.v1.0.1.md",
+              "sha256": "ec3dbe238868278bace0c7afe9c2d638f0fd7e2183b565d65bf515f76230192a"
+            }
+          ],
+          "exports": [
+            "Loader"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001"
+          ]
+        }
+      ],
+      "instanceId": "advance",
+      "role": "BUTTON-001",
+      "exportName": "Button",
+      "coverage": "COMPATIBLE",
+      "reason": "La necesidad se resuelve mediante el export oficial verificado.",
+      "evidence": {
+        "path": "specs/components/buttons.contract.v1.0.0.md",
+        "sha256": "f10c3428203f6d083bfa1a67175609ad3890e6ee8826e9121175159cec909b70"
+      },
+      "localCoverage": null
+    },
+    {
+      "componentId": "BUTTON-001",
+      "contract": {
+        "path": "specs/components/buttons.contract.v1.0.0.md",
+        "sha256": "f10c3428203f6d083bfa1a67175609ad3890e6ee8826e9121175159cec909b70"
+      },
+      "amendments": [
+        {
+          "path": "specs/components/buttons.usage.amendment.v1.0.1.md",
+          "sha256": "39c8b5851fd42cc0e57257faab9c7bdac4d529422eea58378bc81a06f70bded8"
+        }
+      ],
+      "exports": [
+        "Button"
+      ],
+      "dependencies": [
+        {
+          "componentId": "FOUNDATIONS-BLUEHEART-VARIABLES-001",
+          "contract": {
+            "path": "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+            "sha256": "7179e6bb8d79a2b63f2f1b4d023528ea460def806a34e98f5ce53c110bbefce0"
+          },
+          "amendments": [],
+          "exports": [],
+          "dependencies": []
+        },
+        {
+          "componentId": "LOADER-001",
+          "contract": {
+            "path": "specs/components/loader.contract.v1.0.0.md",
+            "sha256": "b6bc0b64db1ebaefef508c2070add1d0f312d2e5b4cc20960b7d859b6bed0d55"
+          },
+          "amendments": [
+            {
+              "path": "specs/components/loader.usage.amendment.v1.0.1.md",
+              "sha256": "ec3dbe238868278bace0c7afe9c2d638f0fd7e2183b565d65bf515f76230192a"
+            }
+          ],
+          "exports": [
+            "Loader"
+          ],
+          "dependencies": [
+            "FOUNDATIONS-BLUEHEART-VARIABLES-001"
+          ]
+        }
+      ],
+      "instanceId": "reset",
+      "role": "BUTTON-001",
+      "exportName": "Button",
+      "coverage": "COMPATIBLE",
+      "reason": "La necesidad se resuelve mediante el export oficial verificado.",
+      "evidence": {
+        "path": "specs/components/buttons.contract.v1.0.0.md",
+        "sha256": "f10c3428203f6d083bfa1a67175609ad3890e6ee8826e9121175159cec909b70"
+      },
+      "localCoverage": null
+    }
+  ],
+  "controlsAbsent": null,
+  "consumption": {
+    "contract": {
+      "path": "specs/foundations/product-consumption.contract.v1.0.0.md",
+      "sha256": "0d9c276ed3ca16d1d63284d6b3c1f09622db4cbb273d1acaf808d630856fe1b3"
+    },
+    "policy": {
+      "path": "specs/policies/product-consumption.v1.0.0.json",
+      "sha256": "940b65ee5ac42f9fb715747a5f1ac09e3d51873d87303269e801cabb309e62ae"
+    },
+    "local_construction": "MOLECULES_ONLY",
+    "molecules": [
+      {
+        "instanceId": "card",
+        "moleculeType": "card",
+        "tokens": [
+          "body/spacing/lg",
+          "body/spacing/md",
+          "body/radius/lg",
+          "body/color/bg/emphasis"
+        ],
+        "compositionOf": [
+          "BUTTON-001",
+          "LINEAR-PROGRESS-001"
+        ],
+        "bodyBindings": [
+          {
+            "property": "padding",
+            "token": "body/spacing/lg"
+          },
+          {
+            "property": "gap",
+            "token": "body/spacing/md"
+          },
+          {
+            "property": "borderRadius",
+            "token": "body/radius/lg"
+          },
+          {
+            "property": "backgroundColor",
+            "token": "body/color/bg/emphasis"
+          }
+        ]
+      },
+      {
+        "instanceId": "actions",
+        "moleculeType": "module",
+        "tokens": [
+          "body/spacing/sm"
+        ],
+        "compositionOf": [
+          "BUTTON-001"
+        ],
+        "bodyBindings": [
+          {
+            "property": "gap",
+            "token": "body/spacing/sm"
+          }
+        ]
+      },
+      {
+        "instanceId": "heading",
+        "moleculeType": "section",
+        "tokens": [
+          "body/spacing/xs"
+        ],
+        "compositionOf": [],
+        "bodyBindings": [
+          {
+            "property": "gap",
+            "token": "body/spacing/xs"
+          }
+        ]
+      },
+      {
+        "instanceId": "status",
+        "moleculeType": "section",
+        "tokens": [
+          "body/spacing/sm"
+        ],
+        "compositionOf": [
+          "LINEAR-PROGRESS-001"
+        ],
+        "bodyBindings": [
+          {
+            "property": "gap",
+            "token": "body/spacing/sm"
+          }
+        ]
+      }
+    ]
+  }
+}

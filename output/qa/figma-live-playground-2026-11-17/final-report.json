@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-11-17T23:42:35.836414+00:00",
+  "scope": "Anticipa AI QA in the explicitly authorized BlueHeart master Playground; all declared product uses, DS internals, Body, AppShell and the scenario navigation.",
+  "repository": "Migueluckleo/Blue-Heart-DS",
+  "commit": "b5c4b9a0a8f8adc776ca036c5e86cb551d44b69f",
+  "manifest_sha256": "0f221d39af954b1a1e6e4c66ae01270dfa74f964863ff830cde5b2da1ac84d5d",
+  "ds_digest": "579d656499495d0ee4c980f6ad3d113e6147235b6aa5819f6b8eada4a8086d61",
+  "skill_release_line": "1.0.x",
+  "local_launcher_package": "1.0.9",
+  "installed": false,
+  "figma_library_published": false,
+  "github_direct": {
+    "bootstrap": {
+      "status": "PASS",
+      "runtime": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/output/qa/figma-live-playground-2026-11-17/runtime-release",
+      "schema_version": 1,
+      "repository": "Migueluckleo/Blue-Heart-DS",
+      "commit": "b5c4b9a0a8f8adc776ca036c5e86cb551d44b69f",
+      "skill_name": "contpaqi-figma-screens",
+      "manifest_sha256": "0f221d39af954b1a1e6e4c66ae01270dfa74f964863ff830cde5b2da1ac84d5d",
+      "ds_digest": "579d656499495d0ee4c980f6ad3d113e6147235b6aa5819f6b8eada4a8086d61",
+      "delivery": "github-direct-v2",
+      "source_reads": "ON_DEMAND",
+      "offline_fallback": false,
+      "graph": {
+        "mode": "graph",
+        "reason": null
+      },
+      "network": {
+        "requests": 17,
+        "bytes": 780240
+      },
+      "bundle_used": false,
+      "installed_resources_used": false
+    },
+    "graph_query": {
+      "status": "PASS",
+      "mode": "graph",
+      "metrics": {
+        "files_read": 10,
+        "bytes_read": 253730,
+        "index_bytes": 382582,
+        "nodes_visited": 10,
+        "duration_ms": 1662.77,
+        "context_bytes": 278844
+      },
+      "max_documents": 16,
+      "max_bytes": 400000
+    }
+  },
+  "figma": {
+    "file_key": "yZsIpXywybsPDytjolwcP4",
+    "page_id": "203:93",
+    "qa_root_id": "385:5168",
+    "design_url": "https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=385-5168",
+    "prototype_url": "https://www.figma.com/proto/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=385-5169&starting-point-node-id=385%3A5169",
+    "screens": [
+      "ready_c",
+      "ready_e",
+      "advanced_c",
+      "advanced_e",
+      "done_c",
+      "done_e"
+    ]
+  },
+  "gates": {
+    "preflight": "PASS",
+    "final_readback": "PASS",
+    "findings": [],
+    "controlled_negative_result": "BLOCKED_AS_EXPECTED",
+    "controlled_negative_codes": [
+      "UNMAPPED_CONTROL",
+      "INTERNAL_TOKEN_CHANGED",
+      "BODY_BINDING_MISSING"
+    ]
+  },
+  "coverage": {
+    "catalog_families": 51,
+    "applicable_families": [
+      "APP-SHELL-001",
+      "BUTTON-001",
+      "INPUT-001",
+      "LINEAR-PROGRESS-001"
+    ],
+    "not_applicable": 47,
+    "mapped_uses": 102,
+    "official_instances": 54,
+    "body_molecules": 30,
+    "editable_body_texts": 18
+  },
+  "checks": {
+    "local_regression_tests_passed": 17,
+    "theme_width_menu_cases_passed": 16,
+    "actual_player_unique_edges_passed": 14,
+    "disabled_button_passed": true,
+    "slot_add_reorder_remove_passed": true,
+    "native_variant_body_preservation_passed": true,
+    "long_text_chars": 680,
+    "header_complete_in_six_screens": true,
+    "source_principals_preserved": {
+      "appshell": true,
+      "button": true,
+      "progress": true,
+      "input": true
+    },
+    "body_alias_closure_unchanged": true,
+    "collections_unchanged": true,
+    "body_styles_unchanged": true,
+    "alias_variables_observed": 105,
+    "body_styles_observed": 5,
+    "original_playground_roots_preserved": 7
+  },
+  "resolved_findings": [
+    "Authorized isolated Playground scope was not supported by the original gate.",
+    "Documented Linear Progress Bar/small was incorrectly rejected.",
+    "Inherited native-slot controls needed verified source provenance; customized Inputs require their own explicit mapping.",
+    "Supported Input visibility properties required source boolean definitions and visibility references.",
+    "Host skipInvisibleInstanceChildren changed text ordinals; structural reads now include hidden siblings briefly and restore the flag.",
+    "Component internal token roles are now compared, including substitutions by an equal-valued Body token.",
+    "Linear Progress demo AFTER_TIMEOUT was overridden only on the QA instances to keep product progress tied to the scenario."
+  ],
+  "limitations": [
+    "The 47 non-applicable families were tracked with reasons; this does not claim interaction testing of every family.",
+    "Native global Header and Sidebar destinations outside the declared test scenario retain DS defaults; external product/backend behavior is outside this QA.",
+    "This is not a full accessibility or screenreader audit.",
+    "Earlier failed attempts remain archived and are superseded by verify-release.json and this report."
+  ]
+}

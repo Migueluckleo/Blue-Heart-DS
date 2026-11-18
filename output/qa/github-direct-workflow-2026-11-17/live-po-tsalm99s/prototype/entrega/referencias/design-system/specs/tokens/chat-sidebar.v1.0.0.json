@@ -1,0 +1,3160 @@
+{
+  "contract": "CHAT-SIDEBAR-001",
+  "collections": [
+    {
+      "name": "primitives",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "chat-sidebar:primitives:Value"
+        }
+      ],
+      "variables": [
+        {
+          "id": "chat-sidebar:primitive:sidebar-rail-surface",
+          "name": "rail-palette/sidebar-rail-surface",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Valor observado de sidebar-rail-surface en Playground.",
+          "codeSyntax": {
+            "WEB": "var(--primitive-sidebar-rail-surface)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "r": 0.9803921568627451,
+              "g": 0.9803921568627451,
+              "b": 0.9803921568627451,
+              "a": 1
+            }
+          }
+        },
+        {
+          "id": "chat-sidebar:primitive:sidebar-section-divider",
+          "name": "rail-palette/sidebar-section-divider",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Valor observado de sidebar-section-divider en Playground.",
+          "codeSyntax": {
+            "WEB": "var(--primitive-sidebar-section-divider)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "r": 0.911057710647583,
+              "g": 0.911057710647583,
+              "b": 0.911057710647583,
+              "a": 1
+            }
+          }
+        },
+        {
+          "id": "chat-sidebar:primitive:sidebar-title-black",
+          "name": "rail-palette/sidebar-title-black",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Valor observado de sidebar-title-black en Playground.",
+          "codeSyntax": {
+            "WEB": "var(--primitive-sidebar-title-black)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            }
+          }
+        },
+        {
+          "id": "chat-sidebar:primitive:sidebar-ring-track",
+          "name": "rail-palette/sidebar-ring-track",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Valor observado de sidebar-ring-track en Playground.",
+          "codeSyntax": {
+            "WEB": "var(--primitive-sidebar-ring-track)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "r": 0.8617037534713745,
+              "g": 0.8617037534713745,
+              "b": 0.8617037534713745,
+              "a": 1
+            }
+          }
+        },
+        {
+          "id": "chat-sidebar:primitive:size-264",
+          "name": "size/264",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Valor observado de size-264 en Playground.",
+          "codeSyntax": {
+            "WEB": "var(--primitive-size-264)"
+          },
+          "valuesByMode": {
+            "Value": 264
+          }
+        },
+        {
+          "id": "chat-sidebar:primitive:size-79",
+          "name": "size/79",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Valor observado de size-79 en Playground.",
+          "codeSyntax": {
+            "WEB": "var(--primitive-size-79)"
+          },
+          "valuesByMode": {
+            "Value": 79
+          }
+        },
+        {
+          "id": "chat-sidebar:primitive:size-47",
+          "name": "size/47",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Valor observado de size-47 en Playground.",
+          "codeSyntax": {
+            "WEB": "var(--primitive-size-47)"
+          },
+          "valuesByMode": {
+            "Value": 47
+          }
+        }
+      ]
+    },
+    {
+      "name": "semantic",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "chat-sidebar:semantic:Value"
+        }
+      ],
+      "variables": [
+        {
+          "id": "chat-sidebar:semantic:sidebar-rail-surface",
+          "name": "sidebar-rail-surface",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Rol de referencia sidebar-rail-surface del panel de chat.",
+          "codeSyntax": {
+            "WEB": "var(--semantic-sidebar-rail-surface)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:primitive:sidebar-rail-surface"
+            }
+          }
+        },
+        {
+          "id": "chat-sidebar:semantic:sidebar-section-divider",
+          "name": "sidebar-section-divider",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Rol de referencia sidebar-section-divider del panel de chat.",
+          "codeSyntax": {
+            "WEB": "var(--semantic-sidebar-section-divider)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:primitive:sidebar-section-divider"
+            }
+          }
+        },
+        {
+          "id": "chat-sidebar:semantic:sidebar-title-black",
+          "name": "sidebar-title-black",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Rol de referencia sidebar-title-black del panel de chat.",
+          "codeSyntax": {
+            "WEB": "var(--semantic-sidebar-title-black)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:primitive:sidebar-title-black"
+            }
+          }
+        },
+        {
+          "id": "chat-sidebar:semantic:sidebar-ring-track",
+          "name": "sidebar-ring-track",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Rol de referencia sidebar-ring-track del panel de chat.",
+          "codeSyntax": {
+            "WEB": "var(--semantic-sidebar-ring-track)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:primitive:sidebar-ring-track"
+            }
+          }
+        },
+        {
+          "id": "chat-sidebar:semantic:size-264",
+          "name": "size-264",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Rol de referencia size-264 del panel de chat.",
+          "codeSyntax": {
+            "WEB": "var(--semantic-size-264)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:primitive:size-264"
+            }
+          }
+        },
+        {
+          "id": "chat-sidebar:semantic:size-79",
+          "name": "size-79",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Rol de referencia size-79 del panel de chat.",
+          "codeSyntax": {
+            "WEB": "var(--semantic-size-79)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:primitive:size-79"
+            }
+          }
+        },
+        {
+          "id": "chat-sidebar:semantic:size-47",
+          "name": "size-47",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Rol de referencia size-47 del panel de chat.",
+          "codeSyntax": {
+            "WEB": "var(--semantic-size-47)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:primitive:size-47"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "component",
+      "modes": [
+        {
+          "name": "Contable",
+          "modeId": "chat-sidebar:component:Contable"
+        },
+        {
+          "name": "Administrativo",
+          "modeId": "chat-sidebar:component:Administrativo"
+        },
+        {
+          "name": "Servicios",
+          "modeId": "chat-sidebar:component:Servicios"
+        },
+        {
+          "name": "Personas",
+          "modeId": "chat-sidebar:component:Personas"
+        }
+      ],
+      "variables": [
+        {
+          "name": "chat-tool-item/color/bg/hover",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "description": "Rol color/bg/hover de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-color-bg-hover)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:152"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:162"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:176"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:181"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/color/stroke/focus",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "description": "Rol color/stroke/focus de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-color-stroke-focus)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/color/text/body",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "description": "Rol color/text/body de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-color-text-body)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/color/text/disabled",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "description": "Rol color/text/disabled de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-color-text-disabled)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/font/body-size",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "description": "Rol font/body-size de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-font-body-size)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/font/family",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_FAMILY"
+          ],
+          "description": "Rol font/family de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-font-family)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/font/line-height",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "LINE_HEIGHT"
+          ],
+          "description": "Rol font/line-height de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-font-line-height)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/font/regular",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_STYLE"
+          ],
+          "description": "Rol font/regular de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-font-regular)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/font/tracking",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "LETTER_SPACING"
+          ],
+          "description": "Rol font/tracking de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-font-tracking)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/radius/control",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "CORNER_RADIUS"
+          ],
+          "description": "Rol radius/control de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-radius-control)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/size/icon",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "description": "Rol size/icon de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-size-icon)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/size/row",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "description": "Rol size/row de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-size-row)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:240"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:240"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:240"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:240"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/spacing/lg",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/lg de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-spacing-lg)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/spacing/none",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/none de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-spacing-none)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/spacing/sm",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/sm de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-spacing-sm)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/spacing/xs",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/xs de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-spacing-xs)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            }
+          }
+        },
+        {
+          "name": "chat-tool-item/stroke/focus",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "STROKE_FLOAT"
+          ],
+          "description": "Rol stroke/focus de Chat Tool Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-tool-item-stroke-focus)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:225"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:225"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:225"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:225"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/color/bg/hover",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "description": "Rol color/bg/hover de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-color-bg-hover)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:152"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:162"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:176"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:181"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/color/bg/selected",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "description": "Rol color/bg/selected de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-color-bg-selected)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:151"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:161"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:175"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:180"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/color/stroke/focus",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "description": "Rol color/stroke/focus de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-color-stroke-focus)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/color/text/body",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "description": "Rol color/text/body de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-color-text-body)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/color/text/support",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "description": "Rol color/text/support de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-color-text-support)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/font/body-size",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "description": "Rol font/body-size de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-font-body-size)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/font/family",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_FAMILY"
+          ],
+          "description": "Rol font/family de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-font-family)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/font/line-height",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "LINE_HEIGHT"
+          ],
+          "description": "Rol font/line-height de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-font-line-height)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/font/medium",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_STYLE"
+          ],
+          "description": "Rol font/medium de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-font-medium)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:196"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:196"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:196"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:196"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/font/meta-size",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "description": "Rol font/meta-size de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-font-meta-size)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/font/regular",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_STYLE"
+          ],
+          "description": "Rol font/regular de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-font-regular)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/font/tracking",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "LETTER_SPACING"
+          ],
+          "description": "Rol font/tracking de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-font-tracking)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/radius/control",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "CORNER_RADIUS"
+          ],
+          "description": "Rol radius/control de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-radius-control)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/size/icon",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "description": "Rol size/icon de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-size-icon)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/size/row",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "description": "Rol size/row de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-size-row)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:240"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:240"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:240"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:240"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/spacing/lg",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/lg de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-spacing-lg)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/spacing/none",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/none de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-spacing-none)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/spacing/sm",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/sm de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-spacing-sm)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            }
+          }
+        },
+        {
+          "name": "chat-history-item/stroke/focus",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "STROKE_FLOAT"
+          ],
+          "description": "Rol stroke/focus de Chat History Item.",
+          "codeSyntax": {
+            "WEB": "var(--chat-history-item-stroke-focus)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:225"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:225"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:225"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:225"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar-section/color/text/support",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "description": "Rol color/text/support de Chat Sidebar Section.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-section-color-text-support)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar-section/font/body-size",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "description": "Rol font/body-size de Chat Sidebar Section.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-section-font-body-size)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar-section/font/family",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_FAMILY"
+          ],
+          "description": "Rol font/family de Chat Sidebar Section.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-section-font-family)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar-section/font/line-height",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "LINE_HEIGHT"
+          ],
+          "description": "Rol font/line-height de Chat Sidebar Section.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-section-font-line-height)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar-section/font/regular",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_STYLE"
+          ],
+          "description": "Rol font/regular de Chat Sidebar Section.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-section-font-regular)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar-section/font/tracking",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "LETTER_SPACING"
+          ],
+          "description": "Rol font/tracking de Chat Sidebar Section.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-section-font-tracking)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar-section/size/heading",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "description": "Rol size/heading de Chat Sidebar Section.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-section-size-heading)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar-section/spacing/sm",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/sm de Chat Sidebar Section.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-section-spacing-sm)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar-section/spacing/none",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/none de Chat Sidebar Section.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-section-spacing-none)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar-section/spacing/lg",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/lg de Chat Sidebar Section.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-section-spacing-lg)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/color/bg/progress",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL"
+          ],
+          "description": "Rol color/bg/progress de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-color-bg-progress)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:154"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:163"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:177"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:184"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/color/bg/ring-track",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "description": "Rol color/bg/ring-track de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-color-bg-ring-track)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-ring-track"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-ring-track"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-ring-track"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-ring-track"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/color/bg/surface",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "description": "Rol color/bg/surface de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-color-bg-surface)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/color/bg/track",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "description": "Rol color/bg/track de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-color-bg-track)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/color/text/accent",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "TEXT_FILL",
+            "SHAPE_FILL"
+          ],
+          "description": "Rol color/text/accent de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-color-text-accent)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:154"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:163"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:177"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:184"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/color/text/body",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "description": "Rol color/text/body de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-color-text-body)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/font/bold",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_STYLE"
+          ],
+          "description": "Rol font/bold de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-font-bold)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:198"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:198"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:198"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:198"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/font/family",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_FAMILY"
+          ],
+          "description": "Rol font/family de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-font-family)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/font/line-height",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "LINE_HEIGHT"
+          ],
+          "description": "Rol font/line-height de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-font-line-height)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/font/medium",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_STYLE"
+          ],
+          "description": "Rol font/medium de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-font-medium)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:196"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:196"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:196"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:196"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/font/meta-size",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "description": "Rol font/meta-size de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-font-meta-size)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/font/title-size",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "description": "Rol font/title-size de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-font-title-size)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:201"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:201"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:201"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:201"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/font/tracking",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "LETTER_SPACING"
+          ],
+          "description": "Rol font/tracking de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-font-tracking)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/radius/full",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "CORNER_RADIUS"
+          ],
+          "description": "Rol radius/full de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-radius-full)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:250"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:250"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:250"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:250"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/radius/panel",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "CORNER_RADIUS"
+          ],
+          "description": "Rol radius/panel de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-radius-panel)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:247"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:247"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:247"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:247"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/size/icon",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "description": "Rol size/icon de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-size-icon)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/size/ring",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "description": "Rol size/ring de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-size-ring)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:size-47"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:size-47"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:size-47"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:size-47"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/size/track",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "description": "Rol size/track de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-size-track)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/spacing/lg",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/lg de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-spacing-lg)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/spacing/none",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/none de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-spacing-none)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            }
+          }
+        },
+        {
+          "name": "chat-plan-usage/spacing/sm",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/sm de Chat Plan Usage.",
+          "codeSyntax": {
+            "WEB": "var(--chat-plan-usage-spacing-sm)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/color/bg/progress",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL"
+          ],
+          "description": "Rol color/bg/progress de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-color-bg-progress)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:154"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:163"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:177"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:184"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/color/bg/rail",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "description": "Rol color/bg/rail de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-color-bg-rail)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-rail-surface"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-rail-surface"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-rail-surface"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-rail-surface"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/color/bg/selected",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "description": "Rol color/bg/selected de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-color-bg-selected)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:151"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:161"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:175"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:180"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/color/bg/surface",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "description": "Rol color/bg/surface de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-color-bg-surface)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/color/bg/track",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "description": "Rol color/bg/track de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-color-bg-track)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/color/border/divider",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "description": "Rol color/border/divider de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-color-border-divider)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-section-divider"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-section-divider"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-section-divider"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-section-divider"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/color/border/edge",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "description": "Rol color/border/edge de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-color-border-edge)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/color/text/accent",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "TEXT_FILL",
+            "SHAPE_FILL"
+          ],
+          "description": "Rol color/text/accent de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-color-text-accent)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:154"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:163"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:177"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:184"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/color/text/body",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "description": "Rol color/text/body de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-color-text-body)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/color/text/support",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "description": "Rol color/text/support de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-color-text-support)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/color/text/title",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "description": "Rol color/text/title de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-color-text-title)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-title-black"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-title-black"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-title-black"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:sidebar-title-black"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/font/body-size",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "description": "Rol font/body-size de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-font-body-size)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/font/bold",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_STYLE"
+          ],
+          "description": "Rol font/bold de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-font-bold)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:198"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:198"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:198"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:198"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/font/family",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_FAMILY"
+          ],
+          "description": "Rol font/family de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-font-family)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/font/line-height",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "LINE_HEIGHT"
+          ],
+          "description": "Rol font/line-height de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-font-line-height)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/font/medium",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_STYLE"
+          ],
+          "description": "Rol font/medium de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-font-medium)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:196"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:196"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:196"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:196"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/font/meta-size",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "description": "Rol font/meta-size de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-font-meta-size)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/font/regular",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_STYLE"
+          ],
+          "description": "Rol font/regular de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-font-regular)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/font/title-size",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "description": "Rol font/title-size de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-font-title-size)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:201"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:201"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:201"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:201"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/font/tracking",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "LETTER_SPACING"
+          ],
+          "description": "Rol font/tracking de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-font-tracking)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/radius/control",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "CORNER_RADIUS"
+          ],
+          "description": "Rol radius/control de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-radius-control)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/radius/full",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "CORNER_RADIUS"
+          ],
+          "description": "Rol radius/full de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-radius-full)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:250"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:250"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:250"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:250"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/radius/panel",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "CORNER_RADIUS"
+          ],
+          "description": "Rol radius/panel de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-radius-panel)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:247"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:247"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:247"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:247"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/size/header",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "description": "Rol size/header de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-size-header)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/size/panel",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "description": "Rol size/panel de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-size-panel)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:size-264"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:size-264"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:size-264"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:size-264"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/size/rail",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "description": "Rol size/rail de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-size-rail)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:size-79"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:size-79"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:size-79"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "chat-sidebar:semantic:size-79"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/spacing/lg",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/lg de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-spacing-lg)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/spacing/none",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/none de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-spacing-none)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/spacing/section",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/section de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-spacing-section)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:231"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:231"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:231"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:231"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/spacing/sm",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/sm de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-spacing-sm)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/spacing/xs",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Rol spacing/xs de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-spacing-xs)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            }
+          }
+        },
+        {
+          "name": "chat-sidebar/stroke/width",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "STROKE_FLOAT"
+          ],
+          "description": "Rol stroke/width de Chat Sidebar.",
+          "codeSyntax": {
+            "WEB": "var(--chat-sidebar-stroke-width)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:224"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:224"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:224"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:224"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

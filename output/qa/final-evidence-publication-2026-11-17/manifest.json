@@ -1,0 +1,1400 @@
+{
+  "schema_version": 1,
+  "scope": "Publication of existing final QA evidence only; no product tests rerun, no Figma mutations, no skill or dependency installation.",
+  "base_commit": "b5c4b9a0a8f8adc776ca036c5e86cb551d44b69f",
+  "qa_commits": {
+    "po": "e07ba22e607c4c55b0d8a810c96cba9b6c964bfb",
+    "figma": "b5c4b9a0a8f8adc776ca036c5e86cb551d44b69f"
+  },
+  "verification": {
+    "figma_original_manifest": "42/42 SHA-256 and sizes match",
+    "source_original_preservation": "4/4 original snapshots JSON-equal excluding only observed_at",
+    "po_html_sha256": "221e054a348a0b3edaffd867de30f0c88b0c411cd83e9f10df603a5cfd57f764",
+    "po_capture_hashes": "16/16 match (eight original and eight delivery copies)",
+    "handoff_snapshot": "156/156 delivered sources match snapshot manifest SHA-256",
+    "json_parse": "PASS",
+    "credential_pattern_scan": "PASS"
+  },
+  "excluded": [
+    "Downloaded runtimes and working source copies; the final handoff snapshot is retained",
+    "Intermediate builds and duplicate working HTML",
+    "Prior attempts and superseded diagnostics",
+    "Temporary scripts, paginated transport fragments, caches and empty stderr",
+    "Historical catalogs and unrelated worktree changes"
+  ],
+  "notes": [
+    "Original reports remain unchanged, including absolute paths and intermediate status fields; final reports govern acceptance.",
+    "The earlier PO report describes Figma consumption/synthetic gates at e07ba22; the later Anticipa AI report records live Figma QA at b5c4b9a.",
+    "Next.js SecurityFatalError observation is retained; no completed security assessment is asserted.",
+    "output/ is excluded from the DS corpus in config/ds-project.json; this evidence-only publication does not rebuild Graphify or the catalog."
+  ],
+  "file_count": 273,
+  "bytes": 23301121,
+  "files": {
+    "output/qa/figma-live-playground-2026-11-17/QA-FIGMA-ANTICIPA-AI.md": {
+      "sha256": "cde191fad98260ec53402bf3df7c4a9e627ab359dc2a39c362cd6010413c6c2c",
+      "git_blob_sha1": "f1a0f681c83a6ae363cf2d3992a2ef48ae906624",
+      "bytes": 4293
+    },
+    "output/qa/figma-live-playground-2026-11-17/advanced_c-release-readback.json": {
+      "sha256": "fff093a6e71a340248d30467c7374c1502a002fd341da9aa7b1702aeeabe1a49",
+      "git_blob_sha1": "f420df3ce97caba1dedfc0a769436075284be5aa",
+      "bytes": 109120
+    },
+    "output/qa/figma-live-playground-2026-11-17/advanced_e-release-readback.json": {
+      "sha256": "588d7a9ad9b7b3abb572f7280e9864fa36e41c58c783e7cba80714e468a24540",
+      "git_blob_sha1": "dd89a591793626d4c062ae1c146c43f816fcd165",
+      "bytes": 122677
+    },
+    "output/qa/figma-live-playground-2026-11-17/body-chain-after.json": {
+      "sha256": "01635a39ead8cac7aabb37ff8a24c841ecdc0cb6f223f1f5f507b5564abbb7d5",
+      "git_blob_sha1": "7622e52c9fc62a2fb93a0e5b9cb3af100abbd181",
+      "bytes": 63713
+    },
+    "output/qa/figma-live-playground-2026-11-17/body-chain-before.json": {
+      "sha256": "01635a39ead8cac7aabb37ff8a24c841ecdc0cb6f223f1f5f507b5564abbb7d5",
+      "git_blob_sha1": "7622e52c9fc62a2fb93a0e5b9cb3af100abbd181",
+      "bytes": 63713
+    },
+    "output/qa/figma-live-playground-2026-11-17/body-styles-after.json": {
+      "sha256": "75dd6deb97a5af6ad16de0b806a54ccb16702aab4f91773db56bb4f6fa248616",
+      "git_blob_sha1": "c78696d3b047f3ff972b44c93f5d2489f80fdcb7",
+      "bytes": 5779
+    },
+    "output/qa/figma-live-playground-2026-11-17/body-styles-before.json": {
+      "sha256": "75dd6deb97a5af6ad16de0b806a54ccb16702aab4f91773db56bb4f6fa248616",
+      "git_blob_sha1": "c78696d3b047f3ff972b44c93f5d2489f80fdcb7",
+      "bytes": 5779
+    },
+    "output/qa/figma-live-playground-2026-11-17/creation.json": {
+      "sha256": "43259b23f71b2fe664d195af723f9f50c445a78c942a249d463e961bdf645d9d",
+      "git_blob_sha1": "f4de704d2976f5802d57248ac70a25447d6842c2",
+      "bytes": 6743
+    },
+    "output/qa/figma-live-playground-2026-11-17/done_c-release-readback.json": {
+      "sha256": "f22817e24dbc0bda4ecbb85de7c27649950d50f3b6b227723cb29181c457615f",
+      "git_blob_sha1": "19f1da085f9a9c38057ee7da3dd9d66ad955d46d",
+      "bytes": 108937
+    },
+    "output/qa/figma-live-playground-2026-11-17/done_e-release-readback.json": {
+      "sha256": "ae472951470cad16c2551e30b50d4d5a188936a9f01be266dcd763200edf2fa3",
+      "git_blob_sha1": "29459ebf0cdf15a3617d499898b6e8c820450658",
+      "bytes": 122494
+    },
+    "output/qa/figma-live-playground-2026-11-17/dynamic-body-cases.json": {
+      "sha256": "815a27f3e932ca2a55b1a24f340d314eb6808a5e98ef638bac9c25defe25c0f4",
+      "git_blob_sha1": "8e0e46d5b4abfb55db0b917190ba8ef40b4a7a11",
+      "bytes": 1437
+    },
+    "output/qa/figma-live-playground-2026-11-17/final-evidence-manifest.json": {
+      "sha256": "84a79ad34fcd7d50633a72100ac4731178ae5736043e6f3179e97f61ee76e151",
+      "git_blob_sha1": "b16a6359176643f71090c947d5b716391646501e",
+      "bytes": 6320
+    },
+    "output/qa/figma-live-playground-2026-11-17/final-overview.png": {
+      "sha256": "a99bbd506cec5373e6f4934bdaa13935aca072954f71de49c0e702208557dbad",
+      "git_blob_sha1": "5b01970308269acc2dec5965a8a9e7644b69fa24",
+      "bytes": 286086
+    },
+    "output/qa/figma-live-playground-2026-11-17/final-report.json": {
+      "sha256": "b0ab211c1ed955f7bc7c154b12eedb723c5fc47dfea8102671fc24bf0e4196e7",
+      "git_blob_sha1": "a2df53d31441b2aec3b2ff3a56ada599df221db0",
+      "bytes": 4953
+    },
+    "output/qa/figma-live-playground-2026-11-17/final-screen.png": {
+      "sha256": "2b25d91327eeb6438604df5641c0b9ca146fb27bb24b7ca50fd0adfeeea23d22",
+      "git_blob_sha1": "8e7fbc7de86e62b92ffafae90bfcd93930949d44",
+      "bytes": 85585
+    },
+    "output/qa/figma-live-playground-2026-11-17/graph-appshell-release.json": {
+      "sha256": "628b2c7f12135744f5e5dce0890dcada3f8e914e3c7c9031fd6ad3064d9e98ad",
+      "git_blob_sha1": "cd5ebfc9ffebfca19841b4d8a32866ad3e913548",
+      "bytes": 279532
+    },
+    "output/qa/figma-live-playground-2026-11-17/header-and-playground-after.json": {
+      "sha256": "0545b083278e82f17370bc46e75fb5f77f767546aabcf78641b1551c07ae74ed",
+      "git_blob_sha1": "c909cdd6e750750addc5587f155c3c2694cc5f6a",
+      "bytes": 10368
+    },
+    "output/qa/figma-live-playground-2026-11-17/long-text-case.json": {
+      "sha256": "bd5d27381470e1b9463e8db46dd2744dc409012925d5d2866cf148ef192fb886",
+      "git_blob_sha1": "5ed536e4c394c4abb0d80e7f328534fc1755a85d",
+      "bytes": 310
+    },
+    "output/qa/figma-live-playground-2026-11-17/native-variant-swap.json": {
+      "sha256": "d08b2fe3e3f5472215b57f20fff5b3f0e47fb5eedf64006c44601ef7dff268c1",
+      "git_blob_sha1": "5a2343b7e523137c7bd45020909e295075462aee",
+      "bytes": 1371
+    },
+    "output/qa/figma-live-playground-2026-11-17/negative-release-mutations.json": {
+      "sha256": "907e6a0b9eace61f305eb5e76f01c556e032aff92478158949c26d21d81bf057",
+      "git_blob_sha1": "ed1537a58990cfb5dcb766ea17e57221a3a1ddf1",
+      "bytes": 462
+    },
+    "output/qa/figma-live-playground-2026-11-17/negative-release-result.json": {
+      "sha256": "c9023be92a4aacd645a81daf82d6397a744c512204082f86ec220c0ed10afd60",
+      "git_blob_sha1": "8b7ede4791c3d7955451dbd8daf423a4faa2904c",
+      "bytes": 21599
+    },
+    "output/qa/figma-live-playground-2026-11-17/plan.json": {
+      "sha256": "c7f6b47fc9bd28ef0bbe054af29366c4a511f9bb2e048028e3b69d9e8c99779e",
+      "git_blob_sha1": "73d32ae19bf14a32ccdc8599f3ae30a414177d4d",
+      "bytes": 64457
+    },
+    "output/qa/figma-live-playground-2026-11-17/player-interactions.json": {
+      "sha256": "095eaf4e3fea3efe99ef3be8e51d4b509e6d763d6e36488157e9abf4a58cf573",
+      "git_blob_sha1": "27748e00d9f4c94ba838e88e7d3c8d9a59903aa6",
+      "bytes": 3452
+    },
+    "output/qa/figma-live-playground-2026-11-17/playground-before.json": {
+      "sha256": "2a85eaa87b515c810d35c72e6a07d930bd7561ddb62914963c8dca5c433c341f",
+      "git_blob_sha1": "5cf0eef11be479c834fda14590c38e212fce5756",
+      "bytes": 3059
+    },
+    "output/qa/figma-live-playground-2026-11-17/preflight-release.json": {
+      "sha256": "a8327214d45e401c4a367c460b1363e5d8a85ce9512fb37a0b47fd8e07357b04",
+      "git_blob_sha1": "6fa2f3e7ee01adc5cbd3b21eef2fb7cc368b35b0",
+      "bytes": 20822
+    },
+    "output/qa/figma-live-playground-2026-11-17/progress-demo-override.json": {
+      "sha256": "8947db5000e4138d56faf4fa144aea640d68d269cf5adc651a0f2ea25e39d6b0",
+      "git_blob_sha1": "8cde2ed6f859c3cd2cd285df8985b0e8f63aa47a",
+      "bytes": 1205
+    },
+    "output/qa/figma-live-playground-2026-11-17/ready_c-negative-release-readback.json": {
+      "sha256": "4b73c8ad58ca02d44670abe253a0e93014e89b011ef8a13e6d45bd1b0ff36bc5",
+      "git_blob_sha1": "de981923adb3783a78bb79b5dcee70fa136f29f2",
+      "bytes": 110301
+    },
+    "output/qa/figma-live-playground-2026-11-17/ready_c-release-readback.json": {
+      "sha256": "f4e7dd7ffb0f9fb09298ca7d9bc039a1d7a61624e208284a358204b79af3c710",
+      "git_blob_sha1": "0ed6d1b96370c671fb3b1820c5c9c5f757a9d88e",
+      "bytes": 108991
+    },
+    "output/qa/figma-live-playground-2026-11-17/ready_e-release-readback.json": {
+      "sha256": "0134b60c675bb18dd6f0626aa34705a2eba2c2ffe51c49f983df587a6b043a4a",
+      "git_blob_sha1": "4f4eb93b871abb8088f60af3f49591e2d5f6b429",
+      "bytes": 122548
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-appshell-original-after.json": {
+      "sha256": "b2fa1dd50fe3cbda900a55a442e7b7e868c058b129664a944929b9c143669afd",
+      "git_blob_sha1": "8b795c0698ef3efd1efd81ce8586f3a9e87c0e45",
+      "bytes": 47217
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-appshell-release-after.json": {
+      "sha256": "81e95f41f3a50bad06e1a50a5255125cd0186a2b91c6c155fe8f32ef1d571dce",
+      "git_blob_sha1": "d53b2ac395106714abc0af1239509d39ca84d46a",
+      "bytes": 51142
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-appshell-release-before.json": {
+      "sha256": "81a8bb41cfce128d69e050e75452f09bf8a706350666b9ad6e2a40a9f890226c",
+      "git_blob_sha1": "0d7acab83b80a533de67ff20d7357f266b73328e",
+      "bytes": 51142
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-appshell.json": {
+      "sha256": "d49253cc9b109b6b64e765c33525c0c9422ef67b64c2ff859063a6f2ac02eb6d",
+      "git_blob_sha1": "2d3f15477c476b400335b4e4dbc9634d6aa1da40",
+      "bytes": 47217
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-button-original-after.json": {
+      "sha256": "d778ee19be1b9b0a285c158c11b33468caf7bfce03efa74196fb8fec15caf397",
+      "git_blob_sha1": "d439de74a1068f47fb7fb4f4080df65db9a5ffff",
+      "bytes": 13261
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-button-release-after.json": {
+      "sha256": "748f3a3c9f4cf7342b28276ddbec27e1121744d1128f2dd0680df24cd0445976",
+      "git_blob_sha1": "19ea95d8fe197f0cfb7ed1ebe4a095fa2c3135e0",
+      "bytes": 14091
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-button-release-before.json": {
+      "sha256": "32f0d08496a8ab2c5946de225dc99021c7d997d74c4a1acd3eafbf67c1eb7902",
+      "git_blob_sha1": "3568a24a25cb9234ce9da80b798127fa71b6093a",
+      "bytes": 14091
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-button.json": {
+      "sha256": "e15f8554544073bab76a5ca9c9912e04dd611a7e1c1de0a390344e82925816b7",
+      "git_blob_sha1": "a7b39836510d390e12c48298e07b4ff403987551",
+      "bytes": 13261
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-input-original-after.json": {
+      "sha256": "af2aeed1930b0c8d9af80b22731dce839714fd5e0897e54edf13248ebfa6fb12",
+      "git_blob_sha1": "877e92827965ebeff55852cf7c800da199f0ae8d",
+      "bytes": 5234
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-input-release-after.json": {
+      "sha256": "51b1b91efc2e32e0ffbd51cb36319d3ba09ff3c72aea814615760dd7a748e438",
+      "git_blob_sha1": "c16ac14888f950077e9af0b4837f1da1033c3da9",
+      "bytes": 6293
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-input-release-before.json": {
+      "sha256": "4db3a52a1ed7a6d4c5714d4abb356e20b073e059a7469c33ebd7504df1b137ae",
+      "git_blob_sha1": "a381e650827365587046169d44abd02b0df2b245",
+      "bytes": 6293
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-input.json": {
+      "sha256": "bc660a8dedc8b753aa11782cfc66907605ec017068885d7d6e0aef205c0591ab",
+      "git_blob_sha1": "c4486f70f42a04e1581e4906929f56952c001df2",
+      "bytes": 5234
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-progress-original-after.json": {
+      "sha256": "c9dc055b248d9adc76cf55ac8adc20d03ac0dced78b8b2a5486ece12f18339ff",
+      "git_blob_sha1": "fbd9176b31fbab56dadf93f5cf6d57d95a113e04",
+      "bytes": 13217
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-progress-release-after.json": {
+      "sha256": "4c70e93e1313f49f86da8b68c75b84c0dee52c15aadcef01988dd76e7290dd38",
+      "git_blob_sha1": "fd92c18db399bfc7cdb2d6884fcffba4d9962e5b",
+      "bytes": 14930
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-progress-release-before.json": {
+      "sha256": "2b6bf4e5d6c85d6ef5dadc642b7e9b772bc5adb7f59262ec70ddd72abd190033",
+      "git_blob_sha1": "23f118008f050c806fc175c63d3d14782a95e9d8",
+      "bytes": 14930
+    },
+    "output/qa/figma-live-playground-2026-11-17/source-progress.json": {
+      "sha256": "b9ef0ae89846e6681c4fd8b5ce30e472f16a82fdf4df489212c841f4e374433c",
+      "git_blob_sha1": "79f30d8488dfb40b8b55f4b81f9fc3c587e8f0ce",
+      "bytes": 13217
+    },
+    "output/qa/figma-live-playground-2026-11-17/start-release.json": {
+      "sha256": "299a62172c94de0d3071021d0b4dfe586e2054a716aa8e39830728d9be2c1cab",
+      "git_blob_sha1": "405319c4d61f261b6cc4d3c55aa0ca4a15bccc98",
+      "bytes": 715
+    },
+    "output/qa/figma-live-playground-2026-11-17/theme-width-cases.json": {
+      "sha256": "fc8c58dd36497a0a7ff215f738b7dbb7cc7c55be259bb18310e9473870938a27",
+      "git_blob_sha1": "b8e94aebd6122126a37c872e4782100ac89c2195",
+      "bytes": 34717
+    },
+    "output/qa/figma-live-playground-2026-11-17/verify-release.json": {
+      "sha256": "094f4b2eedb9e168df56e650eedde2e039fee28b4ea34960d391c2521d9ee595",
+      "git_blob_sha1": "83329c433c5aea816c9d05c4d25743d36e5fda2d",
+      "bytes": 24205
+    },
+    "output/qa/github-direct-workflow-2026-11-17/closure.log": {
+      "sha256": "9cb60132f38794342dfe9d83c5da68f5f8f6a0332d8c14bbe2176bd548c809de",
+      "git_blob_sha1": "16ec23951a38e0330d8397ee32958aa666241812",
+      "bytes": 530
+    },
+    "output/qa/github-direct-workflow-2026-11-17/figma-consumption-tests.log": {
+      "sha256": "167bef6a480ece69fae2a0b8d80547d063ce46d9527c6256e3d3287b8318f29d",
+      "git_blob_sha1": "0748ed2f820ff170a716cacfbbe53f06f11441d1",
+      "bytes": 538
+    },
+    "output/qa/github-direct-workflow-2026-11-17/final-report.json": {
+      "sha256": "756372051bb53baa78dc7de9cfa810289f04a0e84c09ccfba1b8e071f33f911c",
+      "git_blob_sha1": "db9a701de45babea7d80e5afd6b8dc261ce1d9e5",
+      "bytes": 8747
+    },
+    "output/qa/github-direct-workflow-2026-11-17/github-workflow-tests.log": {
+      "sha256": "d86c0ed69866e09c01ba949084ac635975671771faed3656c256ded309420053",
+      "git_blob_sha1": "2f6c19bf908a3b5d87dfa2b396496f6ad655b2f4",
+      "bytes": 690
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-figma-consumption-5lj6vip7/body.json": {
+      "sha256": "d99ad653e89bff64759f0c12484a1069e98b1141051845a35055442fd0de4d76",
+      "git_blob_sha1": "bc197abd703842024a74695ace92d9449901f735",
+      "bytes": 41586
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-figma-consumption-5lj6vip7/graph.json": {
+      "sha256": "3c842fe71f8162d2982a53d4d4b18acadaaa79f10715a41605df8067feeead44",
+      "git_blob_sha1": "1d0edc2e855e7bbf0663b0e7bd49f6e3ce902fc7",
+      "bytes": 278195
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-figma-consumption-5lj6vip7/integrity.json": {
+      "sha256": "e7e9895ad6e1255947fd93fe401a864796f3a2edac9410f013191b5e3efbef2c",
+      "git_blob_sha1": "306b891e923e8eb1ce2a497a8b7ac010e1621306",
+      "bytes": 293
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-figma-consumption-5lj6vip7/inventory.json": {
+      "sha256": "145ec9e81c229bebab3cc37994994ea1c4a99f7fc01ded5b2aad257697a70a7a",
+      "git_blob_sha1": "a524d973d6c799abd3c31683f469c853fe0bec25",
+      "bytes": 8461
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-figma-consumption-5lj6vip7/start.json": {
+      "sha256": "38cd59ab3a457411ad1338f7931f6479d9c2f35686b3c79a06b14e8a02d877e9",
+      "git_blob_sha1": "6ce76e12765d14d5be9704424175d755a06894d3",
+      "bytes": 740
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-figma-consumption-5lj6vip7/visibility.json": {
+      "sha256": "091e2c93e6e6cb492f12e432954f1d14389aa4ae32c6ce0d4dfdd78491de766f",
+      "git_blob_sha1": "687778f681b01af707260c8ca6eea881f65208d3",
+      "bytes": 6058
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-figma-consumption.json": {
+      "sha256": "5a812870637ef8d45942a165147173aea7532b2cb711aa5d61ffc1075f2b6b4b",
+      "git_blob_sha1": "2ab7e2700cd7abe813ba2f20f34f42d0d9268b54",
+      "bytes": 1794
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/browser-extra-report.json": {
+      "sha256": "a79fd842d86e04526018541365c4b263a9bf15bbc0d8f309576b19f01eb5674e",
+      "git_blob_sha1": "d404f80faf87ae3b1851169bfed7dbc85d580afc",
+      "bytes": 25438
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/browser-extra.log": {
+      "sha256": "89bf46e0e92470255d7e1b581898397d83299bbcc36612e7f81fabfa871473ad",
+      "git_blob_sha1": "a68c40d34e6e6e53e7c9e94c72f35a3fdab457fc",
+      "bytes": 65
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/browser-extra.mjs": {
+      "sha256": "87f478f7e1f649306c2a904f6b3d2ca78715fd39d3286b7d52329c8e1da93973",
+      "git_blob_sha1": "6b6d5eb8fb3dbfb23456b6d80b633012ce7b4385",
+      "bytes": 7575
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/build-report.json": {
+      "sha256": "49172edb6b6383f6cdea46b903f8840e3a6c4e6db6a41b43e685d426efc71638",
+      "git_blob_sha1": "b170899775d239dc6b8b488af9cab07df7f14ca2",
+      "bytes": 974
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/capture.log": {
+      "sha256": "d7ff91b05ae8de3f6810409957e8943de205acd8731e406699c46d4dfde3c12f",
+      "git_blob_sha1": "4674a78a6ef4b9c0ca782b0c519b5ba7985b7113",
+      "bytes": 60
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/enforce.log": {
+      "sha256": "7af13d9bb217fe503b5e2b1e6f9784c2ecaba93250b85cad1f4f6654192a39fe",
+      "git_blob_sha1": "5578adbbe05ca7f8ffd2b692f5b2352ca18c1a10",
+      "bytes": 66
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/graph-APP-SHELL-001-dependencies.log": {
+      "sha256": "554333f082589c99a454fd6bae6f6f54b33bec616a794d02d72f6085664fef0f",
+      "git_blob_sha1": "830fc0d5cad274f26a409a3046d57d78d9c9b249",
+      "bytes": 278195
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/graph-BUTTON-001-states.log": {
+      "sha256": "8d424299b1ead82d55b57cbcce7f17fcdedc891c2a153c21960316e8a2a7828c",
+      "git_blob_sha1": "1b1942746f7c09e221741a56b8ca2a557c57b1fc",
+      "bytes": 361463
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/graph-BUTTON-001-tokens.log": {
+      "sha256": "e0fa01beb00186cad5248a72438339f145a04b78d8c8653c83c4a76c90770051",
+      "git_blob_sha1": "7800991c0d744d7f6dacebbc092a11dbff281989",
+      "bytes": 27744
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/graph-BUTTON-001-variants.log": {
+      "sha256": "6ae7472261aa1a7aa2d7f9f4912b7863bd8223566bb51b291e6d5c26b0effc45",
+      "git_blob_sha1": "9c480002a162a7a24c13e6af628c293c98a5f0dd",
+      "bytes": 361463
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/graph-LINEAR-PROGRESS-001-dependencies.log": {
+      "sha256": "75fac1a0ffbdb4919b6b72295d25e46b76c60395a3de95187f5ea95352524c7b",
+      "git_blob_sha1": "57c14a072b6bcf355cf397cf9a38704c8f251c34",
+      "bytes": 1349738
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/graph-MENU-ITEM-001-dependencies.log": {
+      "sha256": "4e912e2292615d12ff71d50f067fe16420cd6a261ef09c8f4973ea1423b9fb16",
+      "git_blob_sha1": "31785669e1a4594684d3c1bb3389055e7ec0267b",
+      "bytes": 345793
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/handoff.log": {
+      "sha256": "0a0adf981dd2e68bbf2deeaad5522b99b1736ed3224a46bea5e7756fa3b2d127",
+      "git_blob_sha1": "794edf52bd3159fbddec9bc49522f4023036d65d",
+      "bytes": 102
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/inline-export.log": {
+      "sha256": "5fa2dc9ba749842d5e23e480b43ae9993c72b21a766928cdfdd14b9140756d61",
+      "git_blob_sha1": "e68aa5d7546109d403055a7ebd10f457b35bf948",
+      "bytes": 255
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/next-build.log": {
+      "sha256": "571d3136bd9f660403d2196aba0e0fc2004a97654d4c20af3095f6b9aba3fb27",
+      "git_blob_sha1": "602f8e274fba38332c9fbf8dc9885a17faecdcdc",
+      "bytes": 720
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/next-security-observation.log": {
+      "sha256": "aa437aab2b6ed217958930bcb5fb6c2b2ab23d80166711a5e869f23b40f2a949",
+      "git_blob_sha1": "4d12d1f441197ae240b723f2a875c535fa99c38a",
+      "bytes": 1457
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prepare.log": {
+      "sha256": "7462cd8f2e12e6a03389b3a60e4855b92096c6707a0ccddc246f0e4bfe6dcfd4",
+      "git_blob_sha1": "e627fa1e2fe4ac4801bd7ab511473666537eaae0",
+      "bytes": 118
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/capture/report.json": {
+      "sha256": "757713d56455a36562ecd90d5f093c5e96e42ad1fc1926bc083c3a8bdaddf5ee",
+      "git_blob_sha1": "bf18bcaf159d3c6de0c7bb4e5f96b1655732cc03",
+      "bytes": 259600
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/capture/summary--advanced--1280x900.png": {
+      "sha256": "52cf220232c880fd0bbf0e4c2e4f8e30866150a624905fd0c78efb7cc5741d45",
+      "git_blob_sha1": "f9144977c31bcbd9163d5b585726e3c92f219da3",
+      "bytes": 41762
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/capture/summary--advanced--1440x900.png": {
+      "sha256": "9e15e37218e790109cd155edc9c2d988d1a5e290824ce8f67e14aaf6fd7f4aee",
+      "git_blob_sha1": "07a63ddcdba22a7f655032083d35f4abf84b53bd",
+      "bytes": 42975
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/capture/summary--expanded--1280x900.png": {
+      "sha256": "52cf4b8e8cff90486faa20b7b66dff8d0ee05d61f29dd7d4ffdb9b52e5e619db",
+      "git_blob_sha1": "a76637bead78a7be221820ba542375e7c1613203",
+      "bytes": 43173
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/capture/summary--expanded--1440x900.png": {
+      "sha256": "694ae28f718e07efba021553a6094d177b6146feae5f8f13fdc6c4989699a140",
+      "git_blob_sha1": "c460bca37223e0ac588c8c7e46316022f6ce353f",
+      "bytes": 44294
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/capture/summary--ready--1280x900.png": {
+      "sha256": "9b3d8d1fa71c5e7ddf930e8a86218dcca6ea39269ededa5bdf535d8665ef41d5",
+      "git_blob_sha1": "fcbb546b998c368384845274c122d272a1123494",
+      "bytes": 41321
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/capture/summary--ready--1440x900.png": {
+      "sha256": "9d149996611d0e99238ae37b6d17e82313f8c449b5f45c49a46a163103cabd86",
+      "git_blob_sha1": "3531d0f58ab8f9c6a98693200efdb4ef8176532e",
+      "bytes": 42302
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/capture/summary--reset--1280x900.png": {
+      "sha256": "44c47824a9aceda5641de20affcbd9d62b98dedc813c711d1cf1a1f6875a6fdb",
+      "git_blob_sha1": "d85a1f9cb3591fb7d587dc6bc31062a1db4bf815",
+      "bytes": 42059
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/capture/summary--reset--1440x900.png": {
+      "sha256": "cac503339ee8c15f64750fd619620f38de71e52cb279bb308778f77840cbd896",
+      "git_blob_sha1": "f8bdae05398b9507266b39d5e517e39d9eda5795",
+      "bytes": 43083
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/capturas/report.json": {
+      "sha256": "757713d56455a36562ecd90d5f093c5e96e42ad1fc1926bc083c3a8bdaddf5ee",
+      "git_blob_sha1": "bf18bcaf159d3c6de0c7bb4e5f96b1655732cc03",
+      "bytes": 259600
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/capturas/summary--advanced--1280x900.png": {
+      "sha256": "52cf220232c880fd0bbf0e4c2e4f8e30866150a624905fd0c78efb7cc5741d45",
+      "git_blob_sha1": "f9144977c31bcbd9163d5b585726e3c92f219da3",
+      "bytes": 41762
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/capturas/summary--advanced--1440x900.png": {
+      "sha256": "9e15e37218e790109cd155edc9c2d988d1a5e290824ce8f67e14aaf6fd7f4aee",
+      "git_blob_sha1": "07a63ddcdba22a7f655032083d35f4abf84b53bd",
+      "bytes": 42975
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/capturas/summary--expanded--1280x900.png": {
+      "sha256": "52cf4b8e8cff90486faa20b7b66dff8d0ee05d61f29dd7d4ffdb9b52e5e619db",
+      "git_blob_sha1": "a76637bead78a7be221820ba542375e7c1613203",
+      "bytes": 43173
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/capturas/summary--expanded--1440x900.png": {
+      "sha256": "694ae28f718e07efba021553a6094d177b6146feae5f8f13fdc6c4989699a140",
+      "git_blob_sha1": "c460bca37223e0ac588c8c7e46316022f6ce353f",
+      "bytes": 44294
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/capturas/summary--ready--1280x900.png": {
+      "sha256": "9b3d8d1fa71c5e7ddf930e8a86218dcca6ea39269ededa5bdf535d8665ef41d5",
+      "git_blob_sha1": "fcbb546b998c368384845274c122d272a1123494",
+      "bytes": 41321
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/capturas/summary--ready--1440x900.png": {
+      "sha256": "9d149996611d0e99238ae37b6d17e82313f8c449b5f45c49a46a163103cabd86",
+      "git_blob_sha1": "3531d0f58ab8f9c6a98693200efdb4ef8176532e",
+      "bytes": 42302
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/capturas/summary--reset--1280x900.png": {
+      "sha256": "44c47824a9aceda5641de20affcbd9d62b98dedc813c711d1cf1a1f6875a6fdb",
+      "git_blob_sha1": "d85a1f9cb3591fb7d587dc6bc31062a1db4bf815",
+      "bytes": 42059
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/capturas/summary--reset--1440x900.png": {
+      "sha256": "cac503339ee8c15f64750fd619620f38de71e52cb279bb308778f77840cbd896",
+      "git_blob_sha1": "f8bdae05398b9507266b39d5e517e39d9eda5795",
+      "bytes": 43083
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/component-build.json": {
+      "sha256": "a3a7165869fda5e50bfadb2fca6f14493bf020655c65c865b826b02663e47043",
+      "git_blob_sha1": "11011eaae70e56ac45c700a3d60adcf24762d297",
+      "bytes": 305
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/component-plan.json": {
+      "sha256": "6f944dfaf89a343236a33dd175771e51a34e0c0f0307015811a7474d4db36d8d",
+      "git_blob_sha1": "bb6321fc1fe66920fafcff68c849212791cc0f86",
+      "bytes": 53847
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/component-source.json": {
+      "sha256": "86397eb0574f3e55fa02050c60d9eb0275e206bc8de9cc58c85fd9b11d88bc09",
+      "git_blob_sha1": "8e722bf1a8dfca6f3a457174867b9b5c03ef2dce",
+      "bytes": 593
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/config/figma-links.json": {
+      "sha256": "60239f1a963b6ac5752f1eea9ce2f1a5a8dbf2d4230c0e7f3a9bd70a9d61d4d8",
+      "git_blob_sha1": "e2df6be9c46f6f014061ac20192cceadd18fddee",
+      "bytes": 5919
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/config/web-inputs.json": {
+      "sha256": "d085bc672b1c8169aca04ef203cb662a08f5a05e385112ff1f34dcf4711cf34e",
+      "git_blob_sha1": "9f4f08288fd79abf59af8d5777fd4cd15305c8bf",
+      "bytes": 1897
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/components.registry.json": {
+      "sha256": "e0b305a64932bc3a20cbc7612864aafa99a1812f6e8f17a729c0f190f23c315c",
+      "git_blob_sha1": "3ed6a24115dbf442e498267be96679e8410e05b6",
+      "bytes": 30201
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/package.json": {
+      "sha256": "f724f0aab3b5253f4096f0321c344fe151534fff1eb077620527d9e277843170",
+      "git_blob_sha1": "e623884356e7386dcedef48c700de134fd70bf8b",
+      "bytes": 1072
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/public/assets/avatar-portrait.png": {
+      "sha256": "70a3a9c5cbb671a3a3c76597e5764df7c12b1f69c41158d12730d12088565c44",
+      "git_blob_sha1": "30f7c06e683c50a05d673b39233248e2c2d1fabc",
+      "bytes": 1437377
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/public/assets/chat-sidebar-connection.svg": {
+      "sha256": "84e414dd0b1362e69884cabd0dc7580264ec7d4accd3e4ff13c239bf6da4ab79",
+      "git_blob_sha1": "432fd519c2422ee67daa425bbd85adbb48434252",
+      "bytes": 801
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/public/assets/chat-sidebar-logo.svg": {
+      "sha256": "264c1159d2365f5e2e05cc6fd469f2be18d4567bb8f04ceae8b5c971edda2a14",
+      "git_blob_sha1": "10190ff34c243898f6e5137f2de7aff373af672b",
+      "bytes": 20608
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/public/assets/contabilidad-header.png": {
+      "sha256": "1e9516569018ca31fd1c09319076b048e44bf37d1125bc920e9575ff2e4a6868",
+      "git_blob_sha1": "1cbb0931d374d9ca842fa5d527aca0c0c71e4f82",
+      "bytes": 15706
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/public/assets/section-header-beni.svg": {
+      "sha256": "92d19d720afe6178452e4618927ef612d04ae44a991fbc93b5840ba5ee8a3080",
+      "git_blob_sha1": "4ccde33020f0290f91e822885e3dd277ecbe6647",
+      "bytes": 2082
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/app-shell.tsx": {
+      "sha256": "5444baaf0d027c4d4365004413721e244aad265d341f4d9b2ccd31d3a9fac237",
+      "git_blob_sha1": "68d04abd8097bab23f4e9999223244b849188b63",
+      "bytes": 1732
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/avatar-group.tsx": {
+      "sha256": "f7ee39abafdc9ee91e4bde6d8f86b72c2743fe3d77c4ec2b63cdcf48819e25e0",
+      "git_blob_sha1": "036e4d3c7665d1a4d7c5afea7882c2032a3ca1d7",
+      "bytes": 942
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/avatar.tsx": {
+      "sha256": "6dc0f7af8e638d30b8d803a05ec7b4f8736e0994bd1952a5c7c16a2340b2464c",
+      "git_blob_sha1": "ad7ddbc87933e69a7a83b80f6900c066ebd559ea",
+      "bytes": 1680
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/badge.tsx": {
+      "sha256": "1e88e39c6d4c3a29f43d1b09d61ca05756194ce833b907cfabb01dd3a1ed4d35",
+      "git_blob_sha1": "50c3fa76761acea2ec368896a14b422e8cd2e560",
+      "bytes": 1507
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/breadcrumb-item.tsx": {
+      "sha256": "33e11a7a15f8b759899e1912c27cc3e4f9a486a1e4560df06142bacbe1c07805",
+      "git_blob_sha1": "df38dad386a3270aea8da359ae0fd4ac25175c7d",
+      "bytes": 1778
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/breadcrumb.tsx": {
+      "sha256": "e4505b9586ed0f0dedd96ac6044c8ba4364c7435995ba27268155252e3aa6eaf",
+      "git_blob_sha1": "37b1fe44eb8db6685037ece8e74d05bdbb0fab95",
+      "bytes": 2686
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/button.tsx": {
+      "sha256": "96cea6ec58a3d49fb9beb5e99741dec82d5572d9aed5ab8cd581ae0530bd0b6f",
+      "git_blob_sha1": "152a91b323076bfa555205ac53c7746a1bf3619c",
+      "bytes": 7198
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/characters.tsx": {
+      "sha256": "20138fb65ad44fe316b92bb69e8abc603c78ccf19a9045667b57a49cece84d04",
+      "git_blob_sha1": "70dfe9c6d4a31a24fbfa0539e016b228f8c8b2a9",
+      "bytes": 1980
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/chat-sidebar.tsx": {
+      "sha256": "b3e390be0f4863efa3ae96ef0a8abe42b2550205be4d9d8b3063b0038e956765",
+      "git_blob_sha1": "9aac431a0c81f5986654185425b6f3b0534db509",
+      "bytes": 6582
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/chat.tsx": {
+      "sha256": "6f0f0c850a2cd864e05a218d533a760ddce5894a81aff9a901f1856b64b05fbb",
+      "git_blob_sha1": "0876ce778a43ff7181acd15eb101d568ae93dacb",
+      "bytes": 2094
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/checkbox.tsx": {
+      "sha256": "8360f983ea17584150a06e3662af42e0109340bdf30776cf90d1c56e374e6847",
+      "git_blob_sha1": "c03ae13cc531caa8c0c57e47533b89292a8212e5",
+      "bytes": 1850
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/chip.tsx": {
+      "sha256": "791016b8260a384e25755baeb2b45d94e8b876b90e69127ae659dbedf6daa17d",
+      "git_blob_sha1": "632b2368a4028101df3e1a07f9ef95cb73dd4d64",
+      "bytes": 2858
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/company-selector.tsx": {
+      "sha256": "4155534ef1b8c21c57e5d0a8e108d1418bf83d393292256d7bad3f01f7eeebff",
+      "git_blob_sha1": "91d1ca9cb4fc0d2e8731acdc9312d3444bad6131",
+      "bytes": 1046
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/conversation-composer.tsx": {
+      "sha256": "8af9306e0229146fc106ef7d62369c913ae06cc498eec6620b5242ea8b72a2f8",
+      "git_blob_sha1": "2e04b3332161f33061af0259a9a4af906b429c33",
+      "bytes": 3449
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/conversation-response.tsx": {
+      "sha256": "4809d5703f592efc629051d2db841538e1263efeeef0cefd4363c3615354316b",
+      "git_blob_sha1": "12ba603fcaef3a430ebba0360bcb28450329caa6",
+      "bytes": 3683
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/dot.tsx": {
+      "sha256": "7996415b92848ccd87fc411132cdefe85f8c3f9628b56c10fa39d5d26713bc5b",
+      "git_blob_sha1": "3054df1aba84fbb8a676fdbdb28463696c0d2dca",
+      "bytes": 1786
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/dropdown-item.tsx": {
+      "sha256": "5fd78dfa219338654d05eed9f260da1a0781bc5d0299cefd2c513235963cc434",
+      "git_blob_sha1": "dde1be2637563f83eda64442ae2c8a2804ed472d",
+      "bytes": 2347
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/dropdown-menu.tsx": {
+      "sha256": "87b13eefc398e031e265ab3338a2d228f7a945835167257e8cba24277ee80bf5",
+      "git_blob_sha1": "a6801343c9a998dcc5e899967ff6f542ea89319c",
+      "bytes": 6087
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/file-upload.tsx": {
+      "sha256": "097c0d03d5ed2a45d7cf4cd57ac939b65e1053335097bbc6a6700578a3b9eba4",
+      "git_blob_sha1": "c3c24c704170b53b3d172b1d2e386b1a5a8d7869",
+      "bytes": 4367
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/floating-actions.tsx": {
+      "sha256": "214c2f55134cb50650f1db54ce8f37c85020e5eca755e5945d6f5150b9a35986",
+      "git_blob_sha1": "afcba465adcbacab16f820f170dd688f11915f60",
+      "bytes": 1454
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/header-actions.tsx": {
+      "sha256": "5364c69f87997e37fb29f12a71eed717803e9c471e5fb866a2f0df2516079b51",
+      "git_blob_sha1": "df1e8b48cb4f88902bdcb6395f8e335405329180",
+      "bytes": 1896
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/header.tsx": {
+      "sha256": "24b6d3309f63a69929187efea2b11c626955e586fb8efd72f0bb650c24157762",
+      "git_blob_sha1": "26efc232552bd9957786dbface831e3da7fd0c2b",
+      "bytes": 1760
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/icon-button.tsx": {
+      "sha256": "1d7a91df6578e7b200952e81eee5edb0a310efb2e711ad2d2e5fc3c3d4ac3bf0",
+      "git_blob_sha1": "081b129cecf56c3365aba5a5a72412b024a14f5e",
+      "bytes": 3718
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/inline-notification.tsx": {
+      "sha256": "1360cd050deeee702ad67643b44be943b1044ffd4973e379fd5d7dc5ae432b47",
+      "git_blob_sha1": "a70e36f2a598a3b99210e2097ada99d474e570bb",
+      "bytes": 2392
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/input.tsx": {
+      "sha256": "fa62fc379fcda18b98d50b1d34ca2a989155aca68c1b5310b39dc2008bf8bac5",
+      "git_blob_sha1": "904027aa69943a5bcad2386d16bb028f6d2df167",
+      "bytes": 4989
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/linear-progress.tsx": {
+      "sha256": "5427f31a5dc59b1d36a2db063ec04e13ab0e41dddbd0b600a3d053512640c15a",
+      "git_blob_sha1": "2073776b288a026645bc16cbdaeadefd96e99e5b",
+      "bytes": 2275
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/loader.tsx": {
+      "sha256": "f776fabeb1d5ee2f6b40f4972ae59eaa51ef91fc019d497f62558c6412243de9",
+      "git_blob_sha1": "16b3b1a573ebd959b37b418177a5b57843d493da",
+      "bytes": 2170
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/menu-item.tsx": {
+      "sha256": "951bb23eb01fc0c082e6b0e81c17aea98a9634d34ffa14adf8b060465e876fca",
+      "git_blob_sha1": "f9f29280bd42b7e6f56ca64fb18e0c758b1c8c9f",
+      "bytes": 4231
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/pagination-item.tsx": {
+      "sha256": "b47a2a8891ba6ad786b079728f1d685e5683bec9f322cd9e5d7223db7f1314e8",
+      "git_blob_sha1": "b0b52cdf5dad9f1d00f7005a9fbe1f4b986217b7",
+      "bytes": 1824
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/pagination.tsx": {
+      "sha256": "384733c1c8c165f79c9e1f323e8af5f921a9a573c831ea4eb8e10b56fabd01cf",
+      "git_blob_sha1": "b065f0cc412d484577b870d1d387c07e1ee69ab3",
+      "bytes": 3860
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/radio-group.tsx": {
+      "sha256": "5d021b9bab956ca599f7bdd2358c95af39d857a63d70564b22eedc2f56d7b27d",
+      "git_blob_sha1": "8ddcea47197b4f3dba1faca9dd7f313638c4a4e2",
+      "bytes": 2077
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/radio.tsx": {
+      "sha256": "2774576d615c7e58a0ee9767d42eba983d8d3b6ce96e20a7d7d0905c676fd3fd",
+      "git_blob_sha1": "a13690f89758c28f36e396398c20799bccdf4212",
+      "bytes": 1281
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/search.tsx": {
+      "sha256": "1051068fe820367fdf176370b36c65b688858ac44319f6afef7216e0dde5967c",
+      "git_blob_sha1": "a62ad3fd4c316053b28241ffe976bf01909be924",
+      "bytes": 1838
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/section-header.tsx": {
+      "sha256": "e99ca8fd5e71874d03cd9dfeb81f3539c667c2bc0f5f1827a18dbc58349b727b",
+      "git_blob_sha1": "b180abf321888eb1038820b0f0bec3c89df01da1",
+      "bytes": 1754
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/sidebar.tsx": {
+      "sha256": "0677b51d6005adae112d5570c0b1ebb1a737eb66aac1b825cbf3191cab5daccf",
+      "git_blob_sha1": "cc97019f7f1e738047c1f0e2b8a9078458f7fcff",
+      "bytes": 1653
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/stepper.tsx": {
+      "sha256": "af1f993128afb414a8efa0581e437be09eea588f2108119660ae0c4ec50a7d20",
+      "git_blob_sha1": "82949ff5d02b9c25ac7fbc7364d69cce142fe875",
+      "bytes": 3153
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/tab.tsx": {
+      "sha256": "c2e61f2cf3f9a1258b42c33e5316b6b153039c10ac6b361861c5eaab656d288d",
+      "git_blob_sha1": "55241c92868bc3825e7d1255018d22285b01ecbe",
+      "bytes": 3147
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/table-cell.tsx": {
+      "sha256": "1e0127dc235459e124e4155a27358f693a9100dd360c9a53f09f3c9cdc20ba16",
+      "git_blob_sha1": "3bc0c73e347a9d04c503d645cbfd8a2002b3f65d",
+      "bytes": 3824
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/table.tsx": {
+      "sha256": "2e5185bed2ea2feed37e8054d1fbc2d7f4497dd6b7f7c2a0d4bbf95d768db062",
+      "git_blob_sha1": "66a9f164b343f4ed505559f8ca49aace7e379a84",
+      "bytes": 1253
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/tabs.tsx": {
+      "sha256": "cfec9d4b4f913f66aee06ab2ccf1838c8b9a797c2c8286d32bf3f691cb28bebb",
+      "git_blob_sha1": "b5a02d9237fb2026ff4d7bb40c8fbbff9e83b20f",
+      "bytes": 2934
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/text-area.tsx": {
+      "sha256": "53099d23193609908e97c26af5e5b1af208bd1aaeeba9930cd4d050d1dc5cbb6",
+      "git_blob_sha1": "2e92b6e8d48a2b9ee35d672acb45c8313fa0c1c3",
+      "bytes": 2689
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/toggle.tsx": {
+      "sha256": "5967acbac9beb4287b7469fbdbedec078c5f7877999077c76153147574bfe1e4",
+      "git_blob_sha1": "f38c254a7f58a1f47bd8d845118098bfb2a8e5b2",
+      "bytes": 1122
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/tooltip.tsx": {
+      "sha256": "2174a1f22a3c8114d48dd4edfa95e9aab140abba90b2ddfc94638b2b0023f0f6",
+      "git_blob_sha1": "faa4b70b851b6490b954047ccde4457e1ba9bfa9",
+      "bytes": 815
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/top-bar.tsx": {
+      "sha256": "8092d14537abcf380b7b020f33ef1e23cfe19b94ac166f8d45530e992abd3a92",
+      "git_blob_sha1": "f7ff79448a084a41c916509d20c4362f7cf7d47b",
+      "bytes": 675
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/user-message.tsx": {
+      "sha256": "137ad89344ede9ec8998da2db26cdaf2fbf5b05b695839d4c00723a748c2cd99",
+      "git_blob_sha1": "422c5026a53009353f140e8d99f941fc6d247abe",
+      "bytes": 464
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/components/user-selector.tsx": {
+      "sha256": "0b4094ff35ad0988c83261aa35121587a83a6dc5e31ba8963833e65b041c309d",
+      "git_blob_sha1": "3d97cd615f900038642ff2a8348bbed48b4eba68",
+      "bytes": 812
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/buttons-recipes.json": {
+      "sha256": "824a72139b77b7cafe50502895f2a978e4980c3f803cae4cd9efeaf882c1ab62",
+      "git_blob_sha1": "53e72da251997add2abca38ebbff7181e2eedbee",
+      "bytes": 118214
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/catalog.json": {
+      "sha256": "a6d0e7dd008c5662d6b268e63babb0e2236b2285d5c51ae7b0fac03a8980eaeb",
+      "git_blob_sha1": "e49b59df8f12311482f7f861380d6759be1e94ad",
+      "bytes": 186931
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/characters.css": {
+      "sha256": "484300c51549d393b033394c7c72e699ac48562e65739dc9ac0da3a1e6cf1d7a",
+      "git_blob_sha1": "e082403194eb8e24d8aa53c93e94313e1175b805",
+      "bytes": 53088
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/characters.json": {
+      "sha256": "27f01a410ada70328d40d094105ada9891a56956fe096e789bd1fbc224cfd5a3",
+      "git_blob_sha1": "457edd65bc65e81a8169a780242a2f5173625553",
+      "bytes": 49709
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/chip-recipes.css": {
+      "sha256": "1e40a9d476a3fa89cc19003c8a1a495d0deeb463da88c08b85ca7e3fb199d173",
+      "git_blob_sha1": "979bdbd2353168b01944d2880feda58f5d46cc3f",
+      "bytes": 21185
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/conversation-response-copy.json": {
+      "sha256": "c0deea7ea11ad030baa5cc85670cda4310830f4f269c8d72b8d49b12009793d8",
+      "git_blob_sha1": "1f59eb7622394ad32bcbce5b0ec58926c120ea89",
+      "bytes": 1146
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/example-map.tsx": {
+      "sha256": "46162ac40065654fffaa97e9f2171da04e2f6e1501ab88f7250dd4e96c7eb2f0",
+      "git_blob_sha1": "f1da0e711f048191c6d1f6f76a3f85026b77c833",
+      "bytes": 3221
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/icon-button-recipes.json": {
+      "sha256": "9747f87dbe322ff95b4fb03ef73f111528f60538f8dc34c84f5231dbddbd85c2",
+      "git_blob_sha1": "6d68ebfc552b101b34ca3150c6629a514f51e672",
+      "bytes": 42117
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/loader-recipes.json": {
+      "sha256": "4e082e3455c891a6b46a721899f18106624bb9e94956b176477861cdb4422af9",
+      "git_blob_sha1": "050e9f434702caf665bc0abc2c2a780f9b167022",
+      "bytes": 6041
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/menu-item-recipes.json": {
+      "sha256": "cb7c675f64348e12def332e2883bd0eba72df0abefc318ea8bd06d324020909e",
+      "git_blob_sha1": "90c77f3ee92f1eec88c0f4a93cdd7161780a09da",
+      "bytes": 6921
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/tab-recipes.json": {
+      "sha256": "77d3eaadb1023d5c3e99ffecb71058c847556218122bdd7ab7dc799d2a3fc6d2",
+      "git_blob_sha1": "20c33c08becfa152a81b5a9dcbcde764593c20db",
+      "bytes": 12231
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/table-cell-recipes.css": {
+      "sha256": "215e646b65f7b2e56fee3a399ef5964f40e3a8da1c023635189635acc7ef4853",
+      "git_blob_sha1": "21f29ce27350c8bc9b1382b31f7a120789ad49c0",
+      "bytes": 24644
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/tokens.css": {
+      "sha256": "ef93eb3095f96fc4bf2fbd9824577580cec47e82d3fc76d9fa5b37bb842063f0",
+      "git_blob_sha1": "e90910ea82ba821a184533f640203a4109e15a3c",
+      "bytes": 273646
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/tokens.manifest.json": {
+      "sha256": "13d454cf31d7c8a6464f4d0605e3d55f1f9c51bcbbada9c89c3de40cad332c9a",
+      "git_blob_sha1": "38ae21569484051674989af10da0ea4c9e6b26c9",
+      "bytes": 1100333
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/generated/typography.css": {
+      "sha256": "b7205de396755f681c4f79fe14618517795058cc23aafdf52fcfa09119a3c369",
+      "git_blob_sha1": "448cc0c35fa07457e5e81fc5f24dd112234778d5",
+      "bytes": 46
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/index.ts": {
+      "sha256": "3fabafffff6237564a7c98105a7868f175dbec756c98a1ea1430e9d1dcae558e",
+      "git_blob_sha1": "af4179bb2e259f7039cadbb76a4ef990def7125d",
+      "bytes": 6537
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/implementations/web/src/styles.css": {
+      "sha256": "090a4c9dc1f721c15253345e1281f9ed04f38b01ed4b7febbbdf7ea0b1bfa7e7",
+      "git_blob_sha1": "7bceeab6b97614fb21834b07111462fb31e97f29",
+      "bytes": 108048
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/references/ARTIFACT-RETENTION.md": {
+      "sha256": "b5e39586df56220822e88fe297e4c85f5051ea65675b28ca010bc25858f0dd5b",
+      "git_blob_sha1": "4d780601b8987eb33e27834096ff89b60486e655",
+      "bytes": 6557
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/references/DESIGN-RULES.md": {
+      "sha256": "458bb9d1f47bac97e0fa4d9bb8524fa0d36a9a664b408f544f6a9c70429f8aef",
+      "git_blob_sha1": "7a18a031e695f68b08e9e7e6bb1f4fb5a6b1ad3c",
+      "bytes": 2703
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/references/DOCUMENTATION-SOURCES.md": {
+      "sha256": "449c09e41433d03a4470a36238df7dc9b365e95bf4e522141b0837c113e650ad",
+      "git_blob_sha1": "a8e6ffb58f4d14d2861fc18cfd959a567568e329",
+      "bytes": 622
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/references/EFFICIENT-CLOSURE.md": {
+      "sha256": "a317bc98f32beae34ad67abdf3db452306f9048aadc8fe1df6f9e0b642c7087d",
+      "git_blob_sha1": "3810c3233a95d851e2470ad70f96a737c8fba695",
+      "bytes": 4992
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/references/GRAPH-OPERATIONS.md": {
+      "sha256": "b91dae94dcf77cb3471b8f92827d7190e0fd0611f1d4290ed72f5afa4859033e",
+      "git_blob_sha1": "5ba01539173e0fc22d66ecaa1f3f7b151b50bff6",
+      "bytes": 7568
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/references/PHOSPHOR-ICONS.md": {
+      "sha256": "6d57cc2bf57b157f4f02a392814f76e48f003740408ce641b2de9bf30de86f23",
+      "git_blob_sha1": "39a6062d9309078b57764a3f0290a98d02e72709",
+      "bytes": 855
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/references/PROJECT-TOOLING.md": {
+      "sha256": "4bf006c6c62cbc3c391aeacdf254409fc624b19df7888a91797587dae3944294",
+      "git_blob_sha1": "98df5f0de459f8e06ad821ef5b9a28c5a39a0ba8",
+      "bytes": 11136
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/references/USAGE-GUIDE.md": {
+      "sha256": "5ec301cad29cdb268665813c54e33fc8a12128afceaf8dfc08c70865361ce22c",
+      "git_blob_sha1": "b56e3f9341052060355c93d114b0853755d5d293",
+      "bytes": 2518
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/registry/DEC-AI-TECHNICAL-CLOSURE-001.md": {
+      "sha256": "39e61ad4424a01d6328000dae50676e30521e9d3d096754585451494a800b0cf",
+      "git_blob_sha1": "aaf1a49aa73d68174261ee9ff68182a8815f07ff",
+      "bytes": 5613
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/registry/contracts.md": {
+      "sha256": "c6cf6716896e6e31028cba4cd77041028d9cd7cc9bf1755b01a055d7ab4044c7",
+      "git_blob_sha1": "7bf9c9691dcec3b9b5f59a0659cbd08371267f2e",
+      "bytes": 8224
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/app-shell.contract.v1.0.0.md": {
+      "sha256": "76e50e29b3b397729ab40689d90044f5d233efbd63e1074275b024ae599e1528",
+      "git_blob_sha1": "2d5c27803dd3d082cb605e3e12a9143e82751b00",
+      "bytes": 5902
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/avatar-group.contract.v1.0.0.md": {
+      "sha256": "43a8a2744c029bdb9b8044c6f78f5d9dda205076ea0d1e57bd3dc71c7dbf62a2",
+      "git_blob_sha1": "617ce64d07e864cf84c66a376e7cce3915b2ec1a",
+      "bytes": 2700
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/avatar.contract.v1.0.0.md": {
+      "sha256": "70f70507b073c37ca689301ed3617e0f01248affc4e5a65c462537eb1840a11a",
+      "git_blob_sha1": "ce4f75cc4b6d97bc0f53ecb2fbb565ac6cd7767d",
+      "bytes": 2839
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/badge.contract.v1.0.0.md": {
+      "sha256": "98e904066c0387b88dfc1db6679d4b35fc6665a1da266dde8dbac7c8c81a0213",
+      "git_blob_sha1": "0a7303f3b48e291d7fa29c3f3609b4f2c363125f",
+      "bytes": 2773
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/breadcrumb-item.contract.v1.0.0.md": {
+      "sha256": "8256eb263629bebc8ee7017fc9060e375c5677ccb5b5f759814b3e13c62c8006",
+      "git_blob_sha1": "4beb6ff0583613e3bd1e857797d127542ec70e9e",
+      "bytes": 2644
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/breadcrumb.contract.v1.0.0.md": {
+      "sha256": "9ebe8c835f06524e6d08da68d49515e613e06c6ec74b41037778118a5eb1ef50",
+      "git_blob_sha1": "9c379a65ebe3042fa8fb3d376a17d718cee72818",
+      "bytes": 2870
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/buttons.contract.v1.0.0.md": {
+      "sha256": "f10c3428203f6d083bfa1a67175609ad3890e6ee8826e9121175159cec909b70",
+      "git_blob_sha1": "45fa171f3e0bfc59e52c93b2f53aa5d964099210",
+      "bytes": 4556
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/buttons.usage.amendment.v1.0.1.md": {
+      "sha256": "39c8b5851fd42cc0e57257faab9c7bdac4d529422eea58378bc81a06f70bded8",
+      "git_blob_sha1": "90ac5ba49d7e112638b7dc7a8bbb6c9baea7961d",
+      "bytes": 5817
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/characters.contract.v1.0.0.md": {
+      "sha256": "1c77b3bf880ee220ddfc6d548c091b762c6937bbd7d78c62849b7bb7ff90e8f9",
+      "git_blob_sha1": "05505ccb44b378a7e217259fb827d39bbc87b78c",
+      "bytes": 4748
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/chat-history-item.contract.v1.0.0.md": {
+      "sha256": "39ee33d51197eb8abcefd1fb61aa594be31e100e671c01bba19c219d57dff8da",
+      "git_blob_sha1": "7ffcfbb192619defa9e343a6dff6418c2df02d54",
+      "bytes": 2438
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/chat-plan-usage.contract.v1.0.0.md": {
+      "sha256": "810c9bd6e72f46b3c463bead5e04afde3148b81ff4c2267a0b8a4721a4ebf865",
+      "git_blob_sha1": "8043f1465e0a44088250aec364168f2f88fc50f0",
+      "bytes": 2629
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/chat-sidebar-section.contract.v1.0.0.md": {
+      "sha256": "43a939b8afab53df9c28d2f1270fee54e148669c370df5eac0e5ebb0c28dde34",
+      "git_blob_sha1": "69cf76d8da6db832be64ba364c7540cad26e70bc",
+      "bytes": 2331
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/chat-sidebar.contract.v1.0.0.md": {
+      "sha256": "0123dc6d1622783256a4f2cc569e60b22f365f48122099d46961d53ca9cb7fbc",
+      "git_blob_sha1": "ac5ab31b90560e9aa1505611ede24b555d33008c",
+      "bytes": 5070
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/chat-tool-item.contract.v1.0.0.md": {
+      "sha256": "369f4c685c50ed56d80c622700cb45861048ca4eea76e1c1fa9fee561ac04163",
+      "git_blob_sha1": "444013c9ecd1a0a01885f568538f36cb10e46c1c",
+      "bytes": 2322
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/chat.contract.v1.0.0.md": {
+      "sha256": "8a99302d67324a53be6efff6ce9b33e48ee751876796ac71bce7ca3278bce089",
+      "git_blob_sha1": "99433bf11c212d59fdb7f8e7a13c4e0083778052",
+      "bytes": 4431
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/checkbox.contract.v1.0.0.md": {
+      "sha256": "fd1bf81cba70bac10fdd8069c963734ac506db7b4d8cf763d768250303794c56",
+      "git_blob_sha1": "6bda541aee936392e7ae2bd4e35b537356f40276",
+      "bytes": 3948
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/chip.contract.v1.0.0.md": {
+      "sha256": "10c3a4dbf70aa981dc8e8596a467d263183b3e84ecf32f47695cc3d29206c7f4",
+      "git_blob_sha1": "ad273828e57944b4e1497795c008515110a35489",
+      "bytes": 4336
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/company-selector.contract.v1.0.0.md": {
+      "sha256": "8f25df0524c840e0386cdc279c9afbb05993f18a5f029868f0f4baa9dcd4b2f5",
+      "git_blob_sha1": "a4103e67a78d01c8b19fc37ba43e26db505c1152",
+      "bytes": 2513
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/conversation-composer.contract.v1.0.0.md": {
+      "sha256": "a08cfeb05a34628a166b45bf9d95a314d19e77bab38ee5b1911c001b69fc845e",
+      "git_blob_sha1": "5c00756950ca0a8092a9aad39e0f05fd689415d1",
+      "bytes": 10444
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/conversation-response.contract.v1.0.0.md": {
+      "sha256": "2dc6dddaf2e1682a4a43be2684b832a9f2ff39bf98be6ba7405299be1e9442a0",
+      "git_blob_sha1": "213ba0e401b80af926cb3be572649336140a2bd0",
+      "bytes": 9971
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/dot.contract.v1.0.0.md": {
+      "sha256": "c4418c9807ff26e4b52b6e18c997f07ad06fd4fa68fbf13c474ad08b974a318a",
+      "git_blob_sha1": "0c87eea02d120fb153ebd60c8797cc3384077c7f",
+      "bytes": 3678
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/dropdown-item.contract.v1.0.0.md": {
+      "sha256": "19b5fb01a5e2a2e61cb5de983552f72435914b88c1d6d954748f5ddef19b79e3",
+      "git_blob_sha1": "9bff4f08945dfd5e7e2749f4e3b487c41c597506",
+      "bytes": 2850
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/dropdown-menu.contract.v1.0.0.md": {
+      "sha256": "d064ff4c024858d9fd9bf7448aaf0227b214a837d63700855880351e8effa766",
+      "git_blob_sha1": "b4fe8eab00e1fd8d782de0917c02fe0fca91a361",
+      "bytes": 3807
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/file-upload.contract.v1.0.0.md": {
+      "sha256": "30bc060028616c419b828e453f0743210e8e744ad2c4988be8751b136b6ad5c4",
+      "git_blob_sha1": "63594d36f3bc1380aee833aeacc694e8cd5d9b59",
+      "bytes": 3107
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/floating-actions.contract.v1.0.0.md": {
+      "sha256": "0aa666a17d76d5a049abad0c834748e3bb63e19d3760c8fa43b84f8d17fce8f0",
+      "git_blob_sha1": "783a376b3269364168c98df519e6724ec14f27ba",
+      "bytes": 2966
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/header-actions.contract.v1.0.0.md": {
+      "sha256": "78401d643bb90f88b3ed67fd73a0c9be2bf8d132da626bc7c773dd886c015ec5",
+      "git_blob_sha1": "06bf9639afc2a260e199057aaec3f1f9b4cd0ba7",
+      "bytes": 2568
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/header.contract.v1.0.0.md": {
+      "sha256": "cbac0551a47cc1c755f7db8440b49610ed0574bca0b07a7124fba3151759c044",
+      "git_blob_sha1": "0f802c49bc2f6e3ba725f081b00ad04e1cc34591",
+      "bytes": 2588
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/icon-button.contract.v1.0.0.md": {
+      "sha256": "26ea2e8769d17dfb87285d886e13771fa37d0ebdbcb633358b0172ec27f75493",
+      "git_blob_sha1": "73295aee724ebf212d72a82cea39c95fabe50a43",
+      "bytes": 3410
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/inline-notification.contract.v1.0.0.md": {
+      "sha256": "622aca6f7fe4eaa960deee54d581971ffe46941364744de678d3480db269c661",
+      "git_blob_sha1": "29d82ce313ba6ef99f61b6b564247b64604e1619",
+      "bytes": 2899
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/input.contract.v1.0.0.md": {
+      "sha256": "38943f5018664f4353163bc990d049e08fbbd247cf9d858a35ca2666681bddaa",
+      "git_blob_sha1": "21fe408590ec83be102083c95b845e044d3bc0f1",
+      "bytes": 3907
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/linear-progress.contract.v1.0.0.md": {
+      "sha256": "4b2d43ab2ede543322ca177340d290b2e8e232abb5503d1f061ab64302fb1ad7",
+      "git_blob_sha1": "2f3796137f175f28298a56ef1f3e3ea0f1323814",
+      "bytes": 4996
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/loader.contract.v1.0.0.md": {
+      "sha256": "b6bc0b64db1ebaefef508c2070add1d0f312d2e5b4cc20960b7d859b6bed0d55",
+      "git_blob_sha1": "482e7169820d5e5fd68cf898e11b3de8a2b62b0e",
+      "bytes": 3806
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/loader.usage.amendment.v1.0.1.md": {
+      "sha256": "ec3dbe238868278bace0c7afe9c2d638f0fd7e2183b565d65bf515f76230192a",
+      "git_blob_sha1": "5ae3ca7ce513b7a95f3045b0010058971880b4ca",
+      "bytes": 5184
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/logos.contract.v1.0.0.md": {
+      "sha256": "0dc8178c3e259096b526b6f7ef3179504d2b68f587c17e6f8415dfab6ea7349d",
+      "git_blob_sha1": "a4f69dcd556a1d9f530f6d84a674464dc62098db",
+      "bytes": 6284
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/menu-item.contract.v1.0.0.md": {
+      "sha256": "99c7968ebc13a059c0482d64c99944fc878da6f518805d41f3528b6080537868",
+      "git_blob_sha1": "134c362fedd46b3eb3813eb8e34ce1812acbd088",
+      "bytes": 3188
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/pagination-item.contract.v1.0.0.md": {
+      "sha256": "3a8eff67b8f00d435faae568c0181afb267691611b845515ad19d4cf56913e85",
+      "git_blob_sha1": "cc44433578792f153973eb54ffee57c1fa1fb873",
+      "bytes": 2611
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/pagination.contract.v1.0.0.md": {
+      "sha256": "a7f1fe70b993ba7b7aa6805513657ed66f85b21cc2c8e803f7eb313a83957c1b",
+      "git_blob_sha1": "712dc33e58dcb85b0fb9e50ca70bd86934fd42b4",
+      "bytes": 5880
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/radio-group.contract.v1.0.0.md": {
+      "sha256": "640f7616ccc82c29e5c134fa887d97cfeb65235af0448f1cdcfa8e93988850cb",
+      "git_blob_sha1": "d225ce9da2881d0e924994047f2a5a8ea034b638",
+      "bytes": 4291
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/radio.contract.v1.0.0.md": {
+      "sha256": "d23b3e151a7d530f3611b8a9f2d2b86c095861622412ea59692b31dd07900fef",
+      "git_blob_sha1": "0206d00546d10ae715d436e0c90f4201cb88ea5b",
+      "bytes": 3622
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/search.contract.v1.0.0.md": {
+      "sha256": "229c8301f0151604052def3951424823588392a5c9165c01352daaa0e39829ed",
+      "git_blob_sha1": "6e38f0842804535e35205540addfc31124e55161",
+      "bytes": 2674
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/section-header.contract.v1.0.0.md": {
+      "sha256": "3f7aa013f0cac29445386ae0fb9e7d524f5a1308df1ff3ece9bb4ebe144616fe",
+      "git_blob_sha1": "652e52067c0232499f666eae130bad12c9258fd6",
+      "bytes": 4800
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/sidebar.contract.v1.0.0.md": {
+      "sha256": "0cfcf88001c7bbba68ad8011197bc3ff049e8dad5ab320dbfa5e149a68cf57f0",
+      "git_blob_sha1": "158910b29082adb4a251b8dbbd2b6b25194f7966",
+      "bytes": 3671
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/sidebar.secondary-control.amendment.v1.0.1.md": {
+      "sha256": "d6a628fc853ee2223064511ec4244d61edc16965dd6e86c169ffd8eab2bdf0ad",
+      "git_blob_sha1": "2ab27dac6194a6a3e029f976073c816b26760b7f",
+      "bytes": 3125
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/stepper.contract.v1.0.0.md": {
+      "sha256": "e4598db8be040a7d885589abf08dd4a7a3e759ded54e3a86bc6a361a0ce5592e",
+      "git_blob_sha1": "1528fe6da190ee623fe196e895e447975ba3a613",
+      "bytes": 6173
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/tab.contract.v1.0.0.md": {
+      "sha256": "040d848dfd98d26731f00cad747680b67ea36457b8e1a74e3031314f481ab804",
+      "git_blob_sha1": "7640ebe7721b2110d2ab30e300d18cb4050c48d5",
+      "bytes": 2783
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/table-cell.contract.v1.0.0.md": {
+      "sha256": "9c8ff9ef9633413c2addd283b4022c88a0014db013a71f00828036660b595d99",
+      "git_blob_sha1": "4727eed3816e9714823d98c8def7c57070708d61",
+      "bytes": 4023
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/table.contract.v1.0.0.md": {
+      "sha256": "11a10407cc962ea6c2bbf5e2fd8ecb16e3f106cbbc5f100820284f098ccd602b",
+      "git_blob_sha1": "437d1fb683e03ef1d95cd93ea650673848b62f8c",
+      "bytes": 8124
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/tabs.contract.v1.0.0.md": {
+      "sha256": "ffa4637ae231721e77ab9be88d4c3c0c951c6c978e9d2c546ca67f12bcb0e446",
+      "git_blob_sha1": "6df82f6a6dc2688e8e4b19d9b97cceb9c868ee74",
+      "bytes": 2760
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/text-area.contract.v1.0.0.md": {
+      "sha256": "4462e6f71b9e5371383f6ae604e7d1002af36f6743a33e94754a982b38b54d48",
+      "git_blob_sha1": "8f88ff2591b2a574a288789f8e154771ae7349a4",
+      "bytes": 3062
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/toggle.contract.v1.0.0.md": {
+      "sha256": "18fd1f9c1e182511bfd22d431d360e809cd095879d2d31d8ad4bb01799e5f29c",
+      "git_blob_sha1": "76de667a5ccce6da5e3cc557da4719f1831daf7d",
+      "bytes": 3513
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/tooltip.contract.v1.0.0.md": {
+      "sha256": "55730a20b256c59cd0287afb0f70d3d23836af988ae6ddc6d8e8a5787c91ca9c",
+      "git_blob_sha1": "8eaf25b7d53b6535fb58f8b8a8605862cff1be04",
+      "bytes": 3149
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/top-bar.contract.v1.0.0.md": {
+      "sha256": "5219c7be83a50e7b035eccc8c317528d2821b3e66df1710895e7f53ac1188470",
+      "git_blob_sha1": "701198c8fa8b868ab82931496f4d520e5eaaba6f",
+      "bytes": 2472
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/user-message.contract.v1.0.0.md": {
+      "sha256": "4c93f58bf3caaa4040e10596331e6a53746fbafb378227ce8c3ba06138b49965",
+      "git_blob_sha1": "65dabdf21d7ad1b1eded2fde4f4af1935a312af8",
+      "bytes": 3477
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/components/user-selector.contract.v1.0.0.md": {
+      "sha256": "03032f86629b08c0f51410c729e7494266f1daef35ea5a44c9705db47e0720c5",
+      "git_blob_sha1": "e32dc592cf63ea77100691d62bbe4a41440636b8",
+      "bytes": 2382
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/data/app-shell.v1.0.0.json": {
+      "sha256": "15c5ff0d45d7f615b58ab2d64daabd3993ba7dd7a6426d2eaff069df70f5ec26",
+      "git_blob_sha1": "616791730891c92c23b5d1948781f57e2cdf76d5",
+      "bytes": 156590
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/data/buttons.v1.0.0.json": {
+      "sha256": "d271e1de91be664fe0c78eef8ea311fdafa52073535f4349a7d78f7611d4c9fa",
+      "git_blob_sha1": "80e11acf7e4585176d51ac51d466b01dc0aa3117",
+      "bytes": 302690
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/data/linear-progress.v1.0.0.json": {
+      "sha256": "0029fe258213aaf8e40206c821ec0adad9718039513a916fe040aa78feb660d0",
+      "git_blob_sha1": "f92ddc9c39ff1889849f20101db64cf2921ff454",
+      "bytes": 1216563
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/data/menu-item.v1.0.0.json": {
+      "sha256": "643cab489d2bbee5772fca082edeb7ead17159101978cc7144ba853540cbdf70",
+      "git_blob_sha1": "a6bc26d36742500072df3e534da862546c16ca66",
+      "bytes": 300679
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/data/stepper.tokens.v1.0.0.json": {
+      "sha256": "3e918c4eab16ad1e267f7e54cc4029c2ddfbf15e716bf5dd42475c632dc49f56",
+      "git_blob_sha1": "e0f053e6aa7599a778dfd5a1bafb148ec189ffc1",
+      "bytes": 5377
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/foundations/blueheart-variables.contract.v0.1.2.md": {
+      "sha256": "7179e6bb8d79a2b63f2f1b4d023528ea460def806a34e98f5ce53c110bbefce0",
+      "git_blob_sha1": "bf19d27db4b39c11978519a9ae3eccf806bf3c0b",
+      "bytes": 5889
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/foundations/body.contract.v1.0.0.md": {
+      "sha256": "6473ba6bfa7d44c2e326b4e895502f4ccf045d17c37b1a3b5165857067d55086",
+      "git_blob_sha1": "d0a9c580ebfee8b5ff8c83d57e0a51e700c9e3b9",
+      "bytes": 7488
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/foundations/characters.identity-chain.amendment.v1.0.0.md": {
+      "sha256": "5c678ee54d5c183a55c17491d1ac487fd827554e89ceb8007b39c2aaf88483a5",
+      "git_blob_sha1": "82cd3548e125089546e813dc9a7eb9bfbca6b5e7",
+      "bytes": 1210
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/foundations/product-consumption.contract.v1.0.0.md": {
+      "sha256": "0d9c276ed3ca16d1d63284d6b3c1f09622db4cbb273d1acaf808d630856fe1b3",
+      "git_blob_sha1": "61bb99c380f431c19efe8ae41be58c050a67aebc",
+      "bytes": 7477
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/foundations/token-visibility.contract.v1.0.0.md": {
+      "sha256": "a2daac83a39bd3323e9425a07f4009a83608c43dc63f0d38ba7969f128e346a9",
+      "git_blob_sha1": "8da887db26701f3df4a341277855932a61c25563",
+      "bytes": 6341
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/policies/product-consumption.v1.0.0.json": {
+      "sha256": "940b65ee5ac42f9fb715747a5f1ac09e3d51873d87303269e801cabb309e62ae",
+      "git_blob_sha1": "5497fed88738820d5e7439a56c83364067852488",
+      "bytes": 913
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/tokens/blueheart-variables.v0.1.2.json": {
+      "sha256": "09a96d3707735fa129e3cfa99de6ccac1a9d94ccf5cc19fa5d282de867629993",
+      "git_blob_sha1": "11af6abdf504f415b5d37a35ff5c870916ff6b89",
+      "bytes": 1200069
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/tokens/body.v1.0.0.json": {
+      "sha256": "d9862b8642147af2499f8a3527d8e2947daace0d8ab23e86705ed7d77af21d0b",
+      "git_blob_sha1": "2a7c7a1d876ac1f73e98cd951e1007bf6ace3552",
+      "bytes": 37251
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/tokens/characters.identity.v1.0.0.json": {
+      "sha256": "b2ca64b7c2c2a5823981bec759f1c1c2d406ca363f69b5eb2423929223232422",
+      "git_blob_sha1": "c17c83afd813fe101f17f15f156528de7f1271d1",
+      "bytes": 9276
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/tokens/chat-sidebar.v1.0.0.json": {
+      "sha256": "b28c5fcdb307ce1feb81401ccdb7397fe30b1598820d4b7fbe566864f9b77d80",
+      "git_blob_sha1": "99c0c30ff081325b640a169892ac28dc5dca0283",
+      "bytes": 93727
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/tokens/chat.v1.0.0.json": {
+      "sha256": "4950488963f3818edf8b0b8201c2d83eab961075bd26e649987b7a998a2a23d7",
+      "git_blob_sha1": "d5f4c858f9c66fb2659ffa306aff350ccaee8f7e",
+      "bytes": 19352
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/tokens/component-layer.correction.json": {
+      "sha256": "3bbdc83a5e69674c68e33febc75187c3cffad4498586eeabce5d8bcd3c190c2a",
+      "git_blob_sha1": "1f9f54f3a8e82e19e5f21b7fbc472b6e0ce237b6",
+      "bytes": 60332
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/tokens/table.sticky-actions.v1.0.0.json": {
+      "sha256": "94d6d16e2939eb323a33e90e94aac04f19b891e2083a7d3fa2e86b026cb9ebe9",
+      "git_blob_sha1": "34ea824cd1152e7eec3991bb1c41bc55a8646f3b",
+      "bytes": 6932
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/tokens/user-message.v1.0.0.json": {
+      "sha256": "751c840291a40808d1c258186f31ad053dd67f7261daa5a2a5ad120b934147b7",
+      "git_blob_sha1": "6ad1c9957c6e44604f503bbd70849aca31a5904f",
+      "bytes": 12028
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/design-system/specs/tokens/visibility.body-only.correction.json": {
+      "sha256": "bfeff78297e413e05a989523fecf5adb8f79850f99cd15cd25196a78b2e88397",
+      "git_blob_sha1": "4091bfcd51837f76191f92df6b549c4c77817e89",
+      "bytes": 5214
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/handoff.json": {
+      "sha256": "130a08d5a64f6f5ac741ddc1c4573a5091dfb9441883200b9523a4f65964621c",
+      "git_blob_sha1": "f0cb1be3c174d8dcf247bec74bbd827df4cf45ef",
+      "bytes": 425079
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/release.json": {
+      "sha256": "1371142df1cada167d0a950b6d2f3e9fa6dff7dcdff1a24f8372225e86b740aa",
+      "git_blob_sha1": "6ece63014a9de75aa10812bf5db9bf039927b564",
+      "bytes": 746
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/referencias/snapshot-manifest.json": {
+      "sha256": "d8efb5d6ab3ef6c9b77ab0b2cb565ddd3f800fa564f17d0dbcefb41a098c99ac",
+      "git_blob_sha1": "5d90d2d10ccce80dcf7f9cf0160030f7303de689",
+      "bytes": 249740
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/replicar-en-figma.md": {
+      "sha256": "ece71c3e5e906be1e46b2cf9cae3476aa99e5e50445ae16c5bdfa890f7fb3136",
+      "git_blob_sha1": "a4cab9d2d9ea8d2d766f63b556e5b472dcfbfe3d",
+      "bytes": 306706
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/revision-de-cierre-qa.html": {
+      "sha256": "221e054a348a0b3edaffd867de30f0c88b0c411cd83e9f10df603a5cfd57f764",
+      "git_blob_sha1": "e8ec03ec0ef125b4373eded4dedbb9d55f527018",
+      "bytes": 8098577
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/revision-de-cierre-qa.manifest.json": {
+      "sha256": "3f6f3238ac8094e03925494d1ec05d03da9654c634bc63d75dc033d4b98b90b1",
+      "git_blob_sha1": "1baa370f2c4883a6dcb65929a33b09ea5074712d",
+      "bytes": 3346
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/record-build.log": {
+      "sha256": "7af13d9bb217fe503b5e2b1e6f9784c2ecaba93250b85cad1f4f6654192a39fe",
+      "git_blob_sha1": "5578adbbe05ca7f8ffd2b692f5b2352ca18c1a10",
+      "bytes": 66
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/start.log": {
+      "sha256": "b3947816ade529a065bdf6f8b84dc3dcfa315c6dbb9bcd597b7154634366a398",
+      "git_blob_sha1": "941407e14b45b2c5f0f61a6a77fcc20113b46e0a",
+      "bytes": 725
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/summary.json": {
+      "sha256": "462fba65a82c92e44dbfaf9335246cfac80715757d901162b337d23ce6f0b323",
+      "git_blob_sha1": "268aa06bebc7b38bed9378cd0192dc42b87898da",
+      "bytes": 3288
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/theme-administrativo-1280.png": {
+      "sha256": "ce4ab5ef76f792f7d9e953d4917aed8f718b16764dc23322ca1e9f52c5ebc8b3",
+      "git_blob_sha1": "d7173365d0b5705c77d7b679a193bd5148dd7453",
+      "bytes": 43017
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/theme-administrativo-1440.png": {
+      "sha256": "2758c39971554703e7324e842ee7e9881e904ab383c2813b92e685da8a630882",
+      "git_blob_sha1": "cc15f307de848a305bc9764dfbd07a968786e7e7",
+      "bytes": 44085
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/theme-contable-1280.png": {
+      "sha256": "488f207b53abb9eecdfe173987273df296d09b5a3ff48b033c39de91a6424230",
+      "git_blob_sha1": "6e366d8b196503078e2589ea19f966c62ad79428",
+      "bytes": 42600
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/theme-contable-1440.png": {
+      "sha256": "3871e469db6dad01f3e6c0f005e983d7f211ba784fd4ff26d2a4ef429a360788",
+      "git_blob_sha1": "fdf5ca61b010f6d70518fe7f560faab91ded728a",
+      "bytes": 43596
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/theme-personas-1280.png": {
+      "sha256": "99f9577d1a61c0a3fdf4839f77f9525b9703565a27668c1b618840b34ebcf7b5",
+      "git_blob_sha1": "37330ffe19f2b92ce6bda0f971dc7e63e91dc5a8",
+      "bytes": 42662
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/theme-personas-1440.png": {
+      "sha256": "a824c5cf01bbd264d7cad857551241ffca1c767b59f7f883abbfddbbcd4dd913",
+      "git_blob_sha1": "ef09debc85bcfa137d00cbf0efe74889969c6d90",
+      "bytes": 43625
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/theme-servicios-1280.png": {
+      "sha256": "3f09b6a45626af2571e3dae24ca823f0dd68ff6453c5b054374ff76f48c0e63e",
+      "git_blob_sha1": "5331142c8f4d74a8e17bf5c8c661324591251fa9",
+      "bytes": 42594
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/theme-servicios-1440.png": {
+      "sha256": "07e2373b7cb51cf177f0fe457b3c4d65c6314152f91cdb5dd4bff830f45ab298",
+      "git_blob_sha1": "d9b75b6b738e5c3d32e18240f191132087f64b78",
+      "bytes": 43578
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/visual-refinement.json": {
+      "sha256": "734ae0e143f41355a3f4620093d54f6925f0771d166f83047ab1baa57b104a64",
+      "git_blob_sha1": "0115ee870e9dd2dae0c045966f87487ae2910944",
+      "bytes": 343
+    },
+    "output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/web-sources.log": {
+      "sha256": "bba971a3a05872147209e98d10b09e8079a1c0caad07cb002439b779652ab9bc",
+      "git_blob_sha1": "5ebb7e9958924909939f5d45296df1700dd17209",
+      "bytes": 216
+    },
+    "output/qa/github-direct-workflow-2026-11-17/po-consumption-tests.log": {
+      "sha256": "384108f16ef6805326daabc431d9d7d87bdb2a208793938cf3f5ad4af15dbff5",
+      "git_blob_sha1": "ed2965d597202259c869b710cfd8f9e370050683",
+      "bytes": 547
+    }
+  }
+}

@@ -1,0 +1,427 @@
+{
+  "contract": "USER-MESSAGE-001",
+  "collections": [
+    {
+      "name": "primitives",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "user-message:primitives:Value"
+        }
+      ],
+      "variables": [
+        {
+          "name": "size/494",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Medida de 494 px observada en el ancho máximo de User message.",
+          "codeSyntax": {
+            "WEB": "var(--primitive-size-494)"
+          },
+          "valuesByMode": {
+            "Value": 494
+          },
+          "id": "user-message:primitive:size-494"
+        }
+      ]
+    },
+    {
+      "name": "semantic",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "user-message:semantic:Value"
+        }
+      ],
+      "variables": [
+        {
+          "name": "size-494",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Ancho máximo de 494 px para la burbuja de User message.",
+          "codeSyntax": {
+            "WEB": "var(--semantic-size-494)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "user-message:primitive:size-494"
+            }
+          },
+          "id": "user-message:semantic:size-494"
+        }
+      ]
+    },
+    {
+      "name": "component",
+      "modes": [
+        {
+          "name": "Contable",
+          "modeId": "user-message:component:Contable"
+        },
+        {
+          "name": "Administrativo",
+          "modeId": "user-message:component:Administrativo"
+        },
+        {
+          "name": "Servicios",
+          "modeId": "user-message:component:Servicios"
+        },
+        {
+          "name": "Personas",
+          "modeId": "user-message:component:Personas"
+        }
+      ],
+      "variables": [
+        {
+          "name": "user-message/spacing/gap",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Separación de la estructura vertical.",
+          "codeSyntax": {
+            "WEB": "var(--user-message-spacing-gap)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            }
+          }
+        },
+        {
+          "name": "user-message/spacing/none",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Inset cero del contenedor.",
+          "codeSyntax": {
+            "WEB": "var(--user-message-spacing-none)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            }
+          }
+        },
+        {
+          "name": "user-message/spacing/inset",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "GAP"
+          ],
+          "description": "Padding de la burbuja.",
+          "codeSyntax": {
+            "WEB": "var(--user-message-spacing-inset)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            }
+          }
+        },
+        {
+          "name": "user-message/radius/bubble",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "CORNER_RADIUS"
+          ],
+          "description": "Radio de la burbuja.",
+          "codeSyntax": {
+            "WEB": "var(--user-message-radius-bubble)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            }
+          }
+        },
+        {
+          "name": "user-message/size/bubble-max",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "description": "Ancho máximo de la burbuja de texto.",
+          "codeSyntax": {
+            "WEB": "var(--user-message-size-bubble-max)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "user-message:semantic:size-494"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "user-message:semantic:size-494"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "user-message:semantic:size-494"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "user-message:semantic:size-494"
+            }
+          }
+        },
+        {
+          "name": "user-message/color/bg/bubble",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "FRAME_FILL"
+          ],
+          "description": "Superficie de la burbuja. Conserva el acento observado en los cuatro temas.",
+          "codeSyntax": {
+            "WEB": "var(--user-message-color-bg-bubble)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:152"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:152"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:152"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:152"
+            }
+          }
+        },
+        {
+          "name": "user-message/color/text/body",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "description": "Texto de la burbuja.",
+          "codeSyntax": {
+            "WEB": "var(--user-message-color-text-body)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            }
+          }
+        },
+        {
+          "name": "user-message/font/family",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_FAMILY"
+          ],
+          "description": "Familia del mensaje.",
+          "codeSyntax": {
+            "WEB": "var(--user-message-font-family)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            }
+          }
+        },
+        {
+          "name": "user-message/font/regular",
+          "resolvedType": "STRING",
+          "scopes": [
+            "FONT_STYLE"
+          ],
+          "description": "Peso del mensaje.",
+          "codeSyntax": {
+            "WEB": "var(--user-message-font-regular)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            }
+          }
+        },
+        {
+          "name": "user-message/font/size",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "description": "Tamaño del mensaje.",
+          "codeSyntax": {
+            "WEB": "var(--user-message-font-size)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            }
+          }
+        },
+        {
+          "name": "user-message/font/line-height",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "LINE_HEIGHT"
+          ],
+          "description": "Interlineado del mensaje.",
+          "codeSyntax": {
+            "WEB": "var(--user-message-font-line-height)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            }
+          }
+        },
+        {
+          "name": "user-message/font/tracking",
+          "resolvedType": "FLOAT",
+          "scopes": [
+            "LETTER_SPACING"
+          ],
+          "description": "Espaciado de letras del mensaje.",
+          "codeSyntax": {
+            "WEB": "var(--user-message-font-tracking)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:217"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

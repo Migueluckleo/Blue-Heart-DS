@@ -1,0 +1,254 @@
+{
+  "status": "PASS_FUNCTIONAL_QA_WITH_RECORDED_TOOLCHAIN_OBSERVATION",
+  "published_commit": "e07ba22e607c4c55b0d8a810c96cba9b6c964bfb",
+  "publication_thread": "Estado de Github",
+  "qa_thread": "QA Skills",
+  "skill_installation": "NOT_RUN",
+  "launcher_version": "1.1.1",
+  "launcher_contents": [
+    "SKILL.md"
+  ],
+  "catalog_manifest": "d8efb5d6ab3ef6c9b77ab0b2cb565ddd3f800fa564f17d0dbcefb41a098c99ac",
+  "ds_digest": "343793892f7131f1b772c700a3e4c962152cb505f592b4f8f21f919cd9c295d0",
+  "mandatory_contract": "specs/foundations/product-consumption.contract.v1.0.0.md",
+  "local_tests": {
+    "passed": 25,
+    "historical_genspark_skipped": 2
+  },
+  "po": {
+    "status": "PASS",
+    "build_steps": [
+      {
+        "name": "prepare",
+        "status": "PASS",
+        "exit_code": 0
+      },
+      {
+        "name": "next-build",
+        "status": "PASS",
+        "exit_code": 0
+      },
+      {
+        "name": "inline-export",
+        "status": "PASS",
+        "exit_code": 0
+      },
+      {
+        "name": "record-build",
+        "status": "PASS",
+        "exit_code": 0
+      },
+      {
+        "name": "enforce",
+        "status": "PASS",
+        "exit_code": 0
+      },
+      {
+        "name": "capture",
+        "status": "PASS",
+        "exit_code": 0
+      },
+      {
+        "name": "handoff",
+        "status": "PASS",
+        "exit_code": 0
+      },
+      {
+        "name": "browser-extra",
+        "status": "PASS",
+        "exit_code": 0
+      }
+    ],
+    "sources": {
+      "github_only": true,
+      "verified_sources": 156,
+      "verified_source_bytes": 7364731,
+      "web_preparation_files": 151,
+      "web_preparation_bytes": 5382290,
+      "catalog_files": 1236,
+      "bundle_used": false,
+      "installed_engine_used": false
+    },
+    "graph_queries": {
+      "graph-APP-SHELL-001-dependencies": {
+        "status": "PASS",
+        "mode": "graph",
+        "metrics": {
+          "files_read": 10,
+          "bytes_read": 252398,
+          "index_bytes": 382582,
+          "nodes_visited": 10,
+          "duration_ms": 1682.102,
+          "context_bytes": 277506
+        }
+      },
+      "graph-MENU-ITEM-001-dependencies": {
+        "status": "PASS",
+        "mode": "graph",
+        "metrics": {
+          "files_read": 4,
+          "bytes_read": 312905,
+          "index_bytes": 382582,
+          "nodes_visited": 4,
+          "duration_ms": 602.364,
+          "context_bytes": 345323
+        }
+      },
+      "graph-BUTTON-001-tokens": {
+        "status": "PASS",
+        "mode": "graph",
+        "metrics": {
+          "files_read": 8,
+          "bytes_read": 1588373,
+          "index_bytes": 382582,
+          "nodes_visited": 8,
+          "duration_ms": 1248.263,
+          "context_bytes": 27011
+        }
+      },
+      "graph-BUTTON-001-states": {
+        "status": "PASS",
+        "mode": "graph",
+        "metrics": {
+          "files_read": 5,
+          "bytes_read": 322758,
+          "index_bytes": 382582,
+          "nodes_visited": 5,
+          "duration_ms": 39.548,
+          "context_bytes": 360845
+        }
+      },
+      "graph-BUTTON-001-variants": {
+        "status": "PASS",
+        "mode": "graph",
+        "metrics": {
+          "files_read": 5,
+          "bytes_read": 322758,
+          "index_bytes": 382582,
+          "nodes_visited": 5,
+          "duration_ms": 32.554,
+          "context_bytes": 360845
+        }
+      },
+      "graph-LINEAR-PROGRESS-001-dependencies": {
+        "status": "PASS",
+        "mode": "graph",
+        "metrics": {
+          "files_read": 3,
+          "bytes_read": 1227448,
+          "index_bytes": 382582,
+          "nodes_visited": 3,
+          "duration_ms": 500.581,
+          "context_bytes": 1349300
+        }
+      }
+    },
+    "capture": {
+      "status": "PASS",
+      "states": 8,
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "width": 1280,
+          "height": 900
+        }
+      ],
+      "http_requests": 0,
+      "errors": [],
+      "report": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/capture/report.json"
+    },
+    "extra_browser": {
+      "status": "PASS",
+      "cases": 8,
+      "themes": [
+        "Contable",
+        "Administrativo",
+        "Servicios",
+        "Personas"
+      ],
+      "theme_method": "Controlled theme attributes to test canonical modes; no product theme picker was claimed",
+      "renamed_and_moved_html": true,
+      "keyboard": true,
+      "progress_limit_and_reset": true,
+      "app_shell_width_1440": {
+        "collapsed": 1272,
+        "expanded": 1110
+      },
+      "body_metrics": {
+        "padding": 24,
+        "segments": 16,
+        "information_and_actions": 8,
+        "title_description": 4,
+        "radius": 16
+      },
+      "typography": {
+        "body_title": "Manrope Variable 20px/28px 600",
+        "button": "Manrope Variable 14px/20px 700; internal tokens preserved"
+      },
+      "negative_cases": [
+        {
+          "case": "Body padding replaced by same literal value",
+          "result": "REJECTED"
+        },
+        {
+          "case": "Molecule outside AppShell Body",
+          "result": "REJECTED"
+        },
+        {
+          "case": "Official Linear Progress replaced with authored native progress",
+          "result": "REJECTED"
+        }
+      ],
+      "report": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/browser-extra-report.json"
+    },
+    "visual_review": {
+      "status": "PASS_AFTER_REFINEMENT",
+      "correction": "Grouped title/description with Body xs=4 and status content with sm=8; rebuilt and recaptured",
+      "representative_screenshots": [
+        "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/capture/summary--ready--1440x900.png",
+        "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/capture/summary--expanded--1440x900.png",
+        "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/theme-personas-1280.png"
+      ]
+    },
+    "handoff": {
+      "status": "PASS",
+      "structured_markdown_self_contained": true,
+      "html_sha256": "221e054a348a0b3edaffd867de30f0c88b0c411cd83e9f10df603a5cfd57f764",
+      "declared_nodes": 12,
+      "tracked_families": 51,
+      "molecules": 4
+    },
+    "html": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/revision-de-cierre-qa.html",
+    "markdown": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega/replicar-en-figma.md",
+    "delivery": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/prototype/entrega"
+  },
+  "figma": {
+    "github_consumption": "PASS",
+    "families": 51,
+    "verified_materialized_files": 60,
+    "elapsed_seconds": 20.084,
+    "report": "output/qa/github-direct-workflow-2026-11-17/live-figma-consumption.json",
+    "preflight_readback_tests": "4 synthetic isolated cases PASS",
+    "new_live_figma_build": "NOT_RUN",
+    "figma_mutations": "NONE"
+  },
+  "observations": [
+    {
+      "kind": "TOOLCHAIN_SECURITY_NOTICE",
+      "detail": "Next.js 16.4.0 emitted SecurityFatalError after one successful compilation. Repeating the same build succeeded. No dependency upgrade was performed. This is a recorded compiler notice, not a completed security assessment.",
+      "evidence": "/Users/miguel.leo/Desktop/BlueHeart DS 2.0/blueheart-rebuild/output/qa/github-direct-workflow-2026-11-17/live-po-tsalm99s/next-security-observation.log"
+    },
+    {
+      "kind": "QA_ENVIRONMENT",
+      "detail": "This runtime has Node without npm; pnpm attempted dependency auto-install and was stopped by modules-directory protection. Equivalent package scripts were executed directly with Node using existing dependencies; no skill or dependency installation was completed."
+    }
+  ],
+  "limits": [
+    "Functional and consumption QA covers the tested product prototype and declared states; it is not proof for every future generated screen.",
+    "Figma was checked for live GitHub consumption and synthetic gates only; no new prototype or live Figma readback was created in this change.",
+    "The Next.js compiler notice remains an observation for toolchain maintenance; no production security approval is asserted."
+  ]
+}

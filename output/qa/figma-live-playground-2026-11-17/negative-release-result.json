@@ -1,0 +1,514 @@
+{
+  "schema_version": 1,
+  "stage": "readback",
+  "status": "BLOCKED",
+  "findings": [
+    {
+      "code": "UNMAPPED_CONTROL",
+      "usage_id": null,
+      "node_id": "I385:5170;105:1484;413:5223",
+      "message": "LINEAR-PROGRESS-001"
+    },
+    {
+      "code": "INTERNAL_TOKEN_CHANGED",
+      "usage_id": "ready_c.advance",
+      "node_id": "I385:5170;105:1484;385:6804",
+      "message": "{'property': 'itemSpacing', 'variable_id': 'VariableID:8:438', 'token': 'button/spacing/xs', 'collection': 'component'}"
+    },
+    {
+      "code": "BODY_BINDING_MISSING",
+      "usage_id": "ready_c.card",
+      "node_id": "I385:5170;105:1484;385:6779",
+      "message": "{'property': 'itemSpacing', 'token': 'body/spacing/md'}"
+    }
+  ],
+  "plan_sha256": "ac8d5561349fae25cae267a9db43367b300da6e8e6fd41f865325c08f5b913fa",
+  "snapshot": "0f221d39af954b1a1e6e4c66ae01270dfa74f964863ff830cde5b2da1ac84d5d",
+  "destination_file_key": "yZsIpXywybsPDytjolwcP4",
+  "validator_sha256": "6405c02d873236dabb1d8e181901437a3256f4011dfefc21c0231cb721e888bf",
+  "source_readbacks": {
+    "source-appshell-release-before.json": "81a8bb41cfce128d69e050e75452f09bf8a706350666b9ad6e2a40a9f890226c",
+    "source-button-release-before.json": "32f0d08496a8ab2c5946de225dc99021c7d997d74c4a1acd3eafbf67c1eb7902",
+    "source-progress-release-before.json": "2b6bf4e5d6c85d6ef5dadc642b7e9b772bc5adb7f59262ec70ddd72abd190033",
+    "source-input-release-before.json": "4db3a52a1ed7a6d4c5714d4abb356e20b073e059a7469c33ebd7504df1b137ae"
+  },
+  "functional_exceptions": {},
+  "family_tracking": [
+    {
+      "family": "APP-SHELL-001",
+      "applicability": "APPLIES",
+      "reason": "Uso independiente explícito del escenario de QA.",
+      "contract": "specs/components/app-shell.contract.v1.0.0.md",
+      "uses": [
+        "ready_c.shell",
+        "ready_e.shell",
+        "advanced_c.shell",
+        "advanced_e.shell",
+        "done_c.shell",
+        "done_e.shell"
+      ],
+      "result": "PENDING_READBACK"
+    },
+    {
+      "family": "AVATAR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/avatar.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "AVATAR-GROUP-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/avatar-group.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "BADGE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/badge.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "BREADCRUMB-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/breadcrumb.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "BREADCRUMB-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/breadcrumb-item.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "BUTTON-001",
+      "applicability": "APPLIES",
+      "reason": "Uso independiente explícito del escenario de QA.",
+      "contract": "specs/components/buttons.contract.v1.0.0.md",
+      "uses": [
+        "ready_c.advance",
+        "ready_c.reset",
+        "ready_e.advance",
+        "ready_e.reset",
+        "advanced_c.advance",
+        "advanced_c.reset",
+        "advanced_e.advance",
+        "advanced_e.reset",
+        "done_c.advance",
+        "done_c.reset",
+        "done_e.advance",
+        "done_e.reset"
+      ],
+      "result": "PENDING_READBACK"
+    },
+    {
+      "family": "CHARACTERS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/characters.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "CHAT-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/chat.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "CHAT-HISTORY-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/chat-history-item.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "CHAT-PLAN-USAGE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/chat-plan-usage.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "CHAT-SIDEBAR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/chat-sidebar.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "CHAT-SIDEBAR-SECTION-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/chat-sidebar-section.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "CHAT-TOOL-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/chat-tool-item.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "CHECKBOX-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/checkbox.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "CHIP-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/chip.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "COMPANY-SELECTOR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/company-selector.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "CONVERSATION-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/conversation-composer.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "CONVERSATION-RESPONSE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/conversation-response.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "DOT-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/dot.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "DROPDOWN-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/dropdown-item.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "DROPDOWN-MENU-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/dropdown-menu.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "FILE-UPLOAD-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/file-upload.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "FLOATING-ACTIONS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/floating-actions.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "HEADER-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/header.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "HEADER-ACTIONS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/header-actions.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "ICON-BUTTON-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/icon-button.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "INLINE-NOTIFICATION-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/inline-notification.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "INPUT-001",
+      "applicability": "APPLIES",
+      "reason": "Inputs del slot de Section Header personalizados mediante sus propiedades oficiales; Figma materializa esas instancias como overrides del slot.",
+      "contract": "specs/components/input.contract.v1.0.0.md",
+      "uses": [
+        "ready_c.input1",
+        "ready_c.input2",
+        "ready_c.input3",
+        "ready_c.input4",
+        "ready_c.input5",
+        "ready_e.input1",
+        "ready_e.input2",
+        "ready_e.input3",
+        "ready_e.input4",
+        "ready_e.input5",
+        "advanced_c.input1",
+        "advanced_c.input2",
+        "advanced_c.input3",
+        "advanced_c.input4",
+        "advanced_c.input5",
+        "advanced_e.input1",
+        "advanced_e.input2",
+        "advanced_e.input3",
+        "advanced_e.input4",
+        "advanced_e.input5",
+        "done_c.input1",
+        "done_c.input2",
+        "done_c.input3",
+        "done_c.input4",
+        "done_c.input5",
+        "done_e.input1",
+        "done_e.input2",
+        "done_e.input3",
+        "done_e.input4",
+        "done_e.input5"
+      ],
+      "result": "PENDING_READBACK"
+    },
+    {
+      "family": "LINEAR-PROGRESS-001",
+      "applicability": "APPLIES",
+      "reason": "Uso independiente explícito del escenario de QA.",
+      "contract": "specs/components/linear-progress.contract.v1.0.0.md",
+      "uses": [
+        "ready_c.progress",
+        "ready_e.progress",
+        "advanced_c.progress",
+        "advanced_e.progress",
+        "done_c.progress",
+        "done_e.progress"
+      ],
+      "result": "PENDING_READBACK"
+    },
+    {
+      "family": "LOADER-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/loader.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "LOGOS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/logos.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "MENU-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/menu-item.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "PAGINATION-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/pagination.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "PAGINATION-ITEM-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/pagination-item.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "RADIO-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/radio.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "RADIO-GROUP-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/radio-group.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "SEARCH-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/search.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "SECTION-HEADER-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/section-header.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "SIDEBAR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/sidebar.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "STEPPER-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/stepper.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TAB-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/tab.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TABLE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/table.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TABLE-CELL-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/table-cell.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TABS-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/tabs.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TEXT-AREA-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/text-area.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TOGGLE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/toggle.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TOOLTIP-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/tooltip.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "TOP-BAR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/top-bar.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "USER-MESSAGE-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/user-message.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    },
+    {
+      "family": "USER-SELECTOR-001",
+      "applicability": "NOT_APPLICABLE",
+      "reason": "Sin uso independiente en el brief de prueba; las dependencias heredadas de AppShell y los controles se verifican contra su principal.",
+      "contract": "specs/components/user-selector.contract.v1.0.0.md",
+      "uses": [],
+      "result": "NOT_APPLICABLE"
+    }
+  ],
+  "generated_at": "2026-11-17T23:39:01.043548+00:00",
+  "qa_scope": {
+    "mode": "ISOLATED_PLAYGROUND_QA",
+    "authorization": "EXPLICIT_USER_REQUEST",
+    "page_id": "203:93",
+    "new_nodes_only": true,
+    "preserve_canonical": true,
+    "container_name": "QA Skills · Anticipa AI · Figma · 2026-11-17"
+  },
+  "scope": "Mapped components and named controls in declared screen roots; full visual/interaction/semantic QA remains required"
+}
