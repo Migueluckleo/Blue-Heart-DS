@@ -3,7 +3,7 @@ import { Header, type HeaderProps } from './header';
 import { SectionHeader, type SectionHeaderProps } from './section-header';
 import { Sidebar, type SidebarProps } from './sidebar';
 
-export type AppShellBodyLayout = 'grid' | 'flex' | 'conversation';
+export type AppShellBodyLayout = 'grid' | 'flex' | 'conversation' | 'conversation-preview';
 
 export interface AppShellProps {
   header: HeaderProps;
@@ -11,13 +11,16 @@ export interface AppShellProps {
   sectionHeader: SectionHeaderProps;
   children: ReactNode;
   rightSidebar?: ReactNode;
+  documentPreview?: ReactNode;
+  documentExpanded?: boolean;
   bodyLayout?: AppShellBodyLayout;
   contentAs?: 'main' | 'section';
   contentLabel?: string;
   className?: string;
 }
 
-export function AppShell({header, sidebar, sectionHeader, children, rightSidebar, bodyLayout = 'grid',
+export function AppShell({header, sidebar, sectionHeader, children, rightSidebar, documentPreview,
+  documentExpanded = false, bodyLayout = 'grid',
   contentAs: Content = 'main', contentLabel, className}: AppShellProps) {
   return <div className={['bh-app-shell',className].filter(Boolean).join(' ')} data-blueheart="app-shell">
     <Header {...header}/>
@@ -26,8 +29,12 @@ export function AppShell({header, sidebar, sectionHeader, children, rightSidebar
       <Content className="bh-app-shell-main" aria-label={contentLabel}>
         <SectionHeader {...sectionHeader}/>
         <div className="bh-app-shell-body" data-layout={bodyLayout}>
-          {bodyLayout === 'conversation' ? <>
-            <div className="bh-app-shell-conversation" data-slot="body">{children}</div>
+          {bodyLayout === 'conversation' || bodyLayout === 'conversation-preview' ? <>
+            <div className="bh-app-shell-conversation" data-slot="body"
+              hidden={bodyLayout === 'conversation-preview' && documentExpanded}
+              inert={bodyLayout === 'conversation-preview' && documentExpanded ? true : undefined}>{children}</div>
+            {bodyLayout === 'conversation-preview' && documentPreview &&
+              <div className="bh-app-shell-document" data-slot="document-preview">{documentPreview}</div>}
             {rightSidebar && <div className="bh-app-shell-right" data-slot="right-sidebar">{rightSidebar}</div>}
           </> : children}
         </div>

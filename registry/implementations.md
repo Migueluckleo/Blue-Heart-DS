@@ -65,3 +65,11 @@ App Shell, Conversation Composer, Conversation Response y Stepper consumen los a
 ## Política de visibilidad de tokens · 2026-11-17
 
 [Corrección de selectores](../specs/foundations/token-visibility.contract.v1.0.0.md): Figma 1,098 scopes internos corregidos; 33 Body visibles, 1,429 internos ocultos. Web aplica la política al manifest efectivo sin cambiar CSS. Evidencia completa en [QA](../qa/implementations/token-visibility.v1.0.0.review.md). Sin publicar ni instalar.
+
+## Chat Document Viewer y layout de documento · 2026-11-18
+
+Chat Document Viewer 430:15516, página oficial 452:2; App Shell conversation-preview 453:5306/453:5430 y muestra Playground 458:7455. React export, layout controlado, ficha y ejemplo sin backend. 23 variables internas nuevas; solo Body continúa visible. [QA](../qa/implementations/chat-document-viewer.v1.0.0.review.md). No se publica ni instala.
+
+## Dropdown menu · búsqueda opcional
+
+Maestro 119:17 conserva key y Options#119:0. Show search añade Search small local con viewport intrínseco y capa fija. React DropdownField/DropdownMenu incorporan filtrado local opcional; Search embedded evita forms anidados. [QA](../qa/implementations/dropdown-menu.search.v1.0.0.review.md).

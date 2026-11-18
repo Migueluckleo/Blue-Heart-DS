@@ -1,0 +1,698 @@
+{
+  "schema_version": 1,
+  "kind": "DELEGATED_TOKEN_DATA",
+  "source": "sources/figma-snapshots/chat-document-viewer-2026-11-18/component-before.json",
+  "collections": [
+    {
+      "name": "primitives",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "Value"
+        }
+      ],
+      "variables": [
+        {
+          "id": "document-viewer:primitive:size-374",
+          "name": "size/374",
+          "resolvedType": "FLOAT",
+          "description": "Ancho de conversación de 374 px observado en el layout con preview de documento.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--primitive-size-374)"
+          },
+          "valuesByMode": {
+            "Value": 374
+          },
+          "targetId": "VariableID:451:2"
+        },
+        {
+          "id": "document-viewer:primitive:tracking",
+          "name": "font-letter-spacing/document-viewer-title",
+          "resolvedType": "FLOAT",
+          "description": "Tracking de título: 0.1% de 20 px equivale a 0.02 px. Normalización requerida para binding Figma.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--primitive-font-letter-spacing-document-viewer-title)"
+          },
+          "valuesByMode": {
+            "Value": 0.02
+          },
+          "targetId": "VariableID:451:3"
+        },
+        {
+          "id": "document-viewer:primitive:description-tracking",
+          "targetId": "VariableID:468:2",
+          "name": "font-letter-spacing/document-viewer-description",
+          "resolvedType": "FLOAT",
+          "description": "Tracking de descripción: 0.1% de 14 px equivale a 0.014 px.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--primitive-font-letter-spacing-document-viewer-description)"
+          },
+          "valuesByMode": {
+            "Value": 0.014
+          }
+        }
+      ]
+    },
+    {
+      "name": "semantic",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "Value"
+        }
+      ],
+      "variables": [
+        {
+          "id": "document-viewer:semantic:size-374",
+          "name": "size-374",
+          "resolvedType": "FLOAT",
+          "description": "Ancho de referencia de la columna de conversación junto al documento.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--semantic-size-374)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:primitive:size-374"
+            }
+          },
+          "targetId": "VariableID:451:4"
+        },
+        {
+          "id": "document-viewer:semantic:tracking",
+          "name": "font-letter-spacing-document-viewer-title",
+          "resolvedType": "FLOAT",
+          "description": "Tracking de título del visor normalizado a 0.02 px, equivalente al 0.1% observado.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--semantic-font-letter-spacing-document-viewer-title)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:primitive:tracking"
+            }
+          },
+          "targetId": "VariableID:451:5"
+        },
+        {
+          "id": "document-viewer:semantic:description-tracking",
+          "targetId": "VariableID:468:3",
+          "name": "font-letter-spacing-document-viewer-description",
+          "resolvedType": "FLOAT",
+          "description": "Tracking de descripción del visor normalizado a 0.014 px, equivalente al 0.1% observado.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--semantic-font-letter-spacing-document-viewer-description)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:primitive:description-tracking"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "component",
+      "modes": [
+        {
+          "name": "Contable",
+          "modeId": "Contable"
+        },
+        {
+          "name": "Administrativo",
+          "modeId": "Administrativo"
+        },
+        {
+          "name": "Servicios",
+          "modeId": "Servicios"
+        },
+        {
+          "name": "Personas",
+          "modeId": "Personas"
+        }
+      ],
+      "variables": [
+        {
+          "id": "document-viewer:component:color/bg/surface",
+          "name": "chat-document-viewer/color/bg/surface",
+          "resolvedType": "COLOR",
+          "description": "Chat Document Viewer · Superficie del visor.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-color-bg-surface)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            }
+          },
+          "targetId": "VariableID:451:6"
+        },
+        {
+          "id": "document-viewer:component:color/text/title",
+          "name": "chat-document-viewer/color/text/title",
+          "resolvedType": "COLOR",
+          "description": "Chat Document Viewer · Texto principal del encabezado del documento.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-color-text-title)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            }
+          },
+          "targetId": "VariableID:451:7"
+        },
+        {
+          "id": "document-viewer:component:color/text/description",
+          "name": "chat-document-viewer/color/text/description",
+          "resolvedType": "COLOR",
+          "description": "Chat Document Viewer · Descripción informativa del documento.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-color-text-description)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:171"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:171"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:171"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:171"
+            }
+          },
+          "targetId": "VariableID:451:8"
+        },
+        {
+          "id": "document-viewer:component:spacing/section",
+          "name": "chat-document-viewer/spacing/section",
+          "resolvedType": "FLOAT",
+          "description": "Chat Document Viewer · Separación de 32 px entre acciones, encabezado y preview.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-spacing-section)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:231"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:231"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:231"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:231"
+            }
+          },
+          "targetId": "VariableID:451:9"
+        },
+        {
+          "id": "document-viewer:component:spacing/toolbar",
+          "name": "chat-document-viewer/spacing/toolbar",
+          "resolvedType": "FLOAT",
+          "description": "Chat Document Viewer · Separación de 16 px entre acciones del visor.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-spacing-toolbar)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            }
+          },
+          "targetId": "VariableID:451:10"
+        },
+        {
+          "id": "document-viewer:component:spacing/header",
+          "name": "chat-document-viewer/spacing/header",
+          "resolvedType": "FLOAT",
+          "description": "Chat Document Viewer · Separación de 4 px entre título y descripción.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-spacing-header)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            }
+          },
+          "targetId": "VariableID:451:11"
+        },
+        {
+          "id": "document-viewer:component:spacing/preview",
+          "name": "chat-document-viewer/spacing/preview",
+          "resolvedType": "FLOAT",
+          "description": "Chat Document Viewer · Separación de 16 px entre contenidos insertados en preview.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-spacing-preview)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            }
+          },
+          "targetId": "VariableID:451:12"
+        },
+        {
+          "id": "document-viewer:component:spacing/none",
+          "name": "chat-document-viewer/spacing/none",
+          "resolvedType": "FLOAT",
+          "description": "Chat Document Viewer · Padding cero del contenedor y regiones.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-spacing-none)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            }
+          },
+          "targetId": "VariableID:451:13"
+        },
+        {
+          "id": "document-viewer:component:radius/container",
+          "name": "chat-document-viewer/radius/container",
+          "resolvedType": "FLOAT",
+          "description": "Chat Document Viewer · Radio cero del contenedor del visor.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-radius-container)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:222"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:222"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:222"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:222"
+            }
+          },
+          "targetId": "VariableID:451:14"
+        },
+        {
+          "id": "document-viewer:component:font/family",
+          "name": "chat-document-viewer/font/family",
+          "resolvedType": "STRING",
+          "description": "Chat Document Viewer · Familia tipográfica del visor.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-font-family)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:194"
+            }
+          },
+          "targetId": "VariableID:451:15"
+        },
+        {
+          "id": "document-viewer:component:font/title/weight",
+          "name": "chat-document-viewer/font/title/weight",
+          "resolvedType": "STRING",
+          "description": "Chat Document Viewer · Peso Bold del título, equivalente CSS 700.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-font-title-weight)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:198"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:198"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:198"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:198"
+            }
+          },
+          "targetId": "VariableID:451:16"
+        },
+        {
+          "id": "document-viewer:component:font/description/weight",
+          "name": "chat-document-viewer/font/description/weight",
+          "resolvedType": "STRING",
+          "description": "Chat Document Viewer · Peso Regular de la descripción, equivalente CSS 400.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-font-description-weight)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:195"
+            }
+          },
+          "targetId": "VariableID:451:17"
+        },
+        {
+          "id": "document-viewer:component:font/title/size",
+          "name": "chat-document-viewer/font/title/size",
+          "resolvedType": "FLOAT",
+          "description": "Chat Document Viewer · Título de 20 px.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-font-title-size)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:202"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:202"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:202"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:202"
+            }
+          },
+          "targetId": "VariableID:451:18"
+        },
+        {
+          "id": "document-viewer:component:font/description/size",
+          "name": "chat-document-viewer/font/description/size",
+          "resolvedType": "FLOAT",
+          "description": "Chat Document Viewer · Descripción de 14 px.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-font-description-size)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            }
+          },
+          "targetId": "VariableID:451:19"
+        },
+        {
+          "id": "document-viewer:component:font/tracking",
+          "name": "chat-document-viewer/font/title/tracking",
+          "resolvedType": "FLOAT",
+          "description": "Chat Document Viewer · Tracking del título de 0.02 px, equivalente a 0.1% con 20 px.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-font-title-tracking)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:semantic:tracking"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:semantic:tracking"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:semantic:tracking"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:semantic:tracking"
+            }
+          },
+          "targetId": "VariableID:451:20"
+        },
+        {
+          "id": "document-viewer:component:chat-width",
+          "name": "app-shell/size/conversation-chat",
+          "resolvedType": "FLOAT",
+          "description": "App Shell · Ancho de 374 px de Chat en el layout con documento; el preview absorbe el espacio restante.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--app-shell-size-conversation-chat)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:semantic:size-374"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:semantic:size-374"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:semantic:size-374"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:semantic:size-374"
+            }
+          },
+          "targetId": "VariableID:451:21"
+        },
+        {
+          "id": "document-viewer:component:description-tracking",
+          "targetId": "VariableID:468:4",
+          "name": "chat-document-viewer/font/description/tracking",
+          "resolvedType": "FLOAT",
+          "description": "Chat Document Viewer · Tracking de descripción de 0.014 px, equivalente a 0.1% con 14 px.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-document-viewer-font-description-tracking)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:semantic:description-tracking"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:semantic:description-tracking"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:semantic:description-tracking"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "document-viewer:semantic:description-tracking"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "typography": {
+    "title": {
+      "family": "Manrope",
+      "style": "Bold",
+      "fontWeight": 700,
+      "size": 20,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0.02
+      },
+      "sourceLetterSpacing": {
+        "unit": "PERCENT",
+        "value": 0.1
+      },
+      "trackingNormalization": "fontSize * sourcePercent / 100; Figma bound letterSpacing uses PIXELS"
+    },
+    "description": {
+      "family": "Manrope",
+      "style": "Regular",
+      "fontWeight": 400,
+      "size": 14,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0.014
+      },
+      "sourceLetterSpacing": {
+        "unit": "PERCENT",
+        "value": 0.1
+      },
+      "trackingNormalization": "fontSize * sourcePercent / 100; Figma bound letterSpacing uses PIXELS"
+    }
+  },
+  "text_styles": [
+    {
+      "id": "chat-document-viewer/title",
+      "targetId": "S:91bc4d7d8e9f543c3f11a8b31583049dd255e96f,",
+      "fields": {
+        "fontFamily": "chat-document-viewer/font/family",
+        "fontStyle": "chat-document-viewer/font/title/weight",
+        "fontSize": "chat-document-viewer/font/title/size",
+        "letterSpacing": "chat-document-viewer/font/title/tracking"
+      }
+    },
+    {
+      "id": "chat-document-viewer/description",
+      "targetId": "S:4405954b36014e2bf9be517d8aefd95c86a01dcb,",
+      "fields": {
+        "fontFamily": "chat-document-viewer/font/family",
+        "fontStyle": "chat-document-viewer/font/description/weight",
+        "fontSize": "chat-document-viewer/font/description/size",
+        "letterSpacing": "chat-document-viewer/font/description/tracking"
+      }
+    }
+  ]
+}

@@ -110,6 +110,8 @@ export interface ButtonCommonProps {
   leftIcon?: ButtonIcon;
   rightIcon?: ButtonIcon;
   describedBy?: string;
+  /** Controlled pressed state for actions that toggle a view. */
+  ariaPressed?: boolean;
   id?: string;
   className?: string;
   /** For an isolated catalogue specimen. */

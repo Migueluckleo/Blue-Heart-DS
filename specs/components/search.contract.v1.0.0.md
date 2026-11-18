@@ -22,6 +22,8 @@ El [contrato fuente](../../sources/figma-snapshots/root-families-2026-11-11/sear
 
 ## Guía semántica normativa
 
+En composición dentro de un formulario, la adaptación web `embedded` conserva la anatomía Search en un div con landmark search y evita un form anidado. `inputProps` permite al anfitrión declarar el combobox y controlar teclado/ARIA; los props propios de valor y nombre conservan autoridad. Ver [Dropdown con búsqueda](dropdown-menu.search.amendment.v1.0.0.md). El default sigue siendo form con envío Enter.
+
 Usa Search para localizar o filtrar elementos dentro de un conjunto identificable. Explica qué se puede buscar y conserva el nombre accesible aunque Label se oculte. El anfitrión decide cuándo ejecutar la consulta y cómo presentar resultados, errores y estados vacíos. Mantén el texto introducido por la persona y conserva el foco al limpiar.
 
 | Situación | Haz | Evita |

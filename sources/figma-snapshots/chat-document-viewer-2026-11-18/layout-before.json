@@ -1,0 +1,1089 @@
+{
+  "layout": [
+    {
+      "id": "430:5222",
+      "name": "App Shell",
+      "type": "INSTANCE",
+      "parent": "203:93",
+      "width": 1440,
+      "height": 1024,
+      "layout": "VERTICAL",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1324",
+      "name": "Header",
+      "type": "INSTANCE",
+      "parent": "430:5222",
+      "width": 1440,
+      "height": 96,
+      "layout": "HORIZONTAL",
+      "horizontal": "FILL",
+      "vertical": "HUG",
+      "main": {
+        "id": "90:439",
+        "key": "184bc49c10c9c61b024cc49f5df95c4438f2f73d",
+        "name": "Header",
+        "remote": false
+      },
+      "props": {
+        "Version#90:15": {
+          "type": "TEXT",
+          "value": "2.0.0"
+        },
+        "Show release badge#90:14": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show user#90:13": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show actions#90:12": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show company#90:11": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Show version#90:10": {
+          "type": "BOOLEAN",
+          "value": true
+        }
+      }
+    },
+    {
+      "id": "I430:5222;299:1324;90:1138",
+      "name": "contables",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1324",
+      "width": 149.25758361816406,
+      "height": 48,
+      "layout": "NONE",
+      "horizontal": "FIXED",
+      "vertical": "FIXED",
+      "main": {
+        "id": "171:1896",
+        "key": "b0a3eb7f6b3e9aa3547378897a0027f207256524",
+        "name": "product=anticipa, type=horizontal",
+        "remote": false
+      },
+      "props": {
+        "product": {
+          "value": "anticipa",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "type": {
+          "value": "horizontal",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    {
+      "id": "I430:5222;299:1324;90:1189",
+      "name": "Content",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1324",
+      "width": 887,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1190",
+      "name": "Version",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1324;90:1189",
+      "width": 149,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1191",
+      "name": "Version info",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1324;90:1190",
+      "width": 100,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1193",
+      "name": "Release badge",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1324;90:1191",
+      "width": 55,
+      "height": 24,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1202",
+      "name": "Actions",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1324;90:1189",
+      "width": 321,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1203",
+      "name": "Header actions",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1324;90:1202",
+      "width": 272,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1203;90:143",
+      "name": "Sincronizar",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1324;90:1203",
+      "width": 48,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1203;90:144",
+      "name": "icon-button",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1324;90:1203;90:143",
+      "width": 48,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1203;90:201",
+      "name": "Academia",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1324;90:1203",
+      "width": 48,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1203;90:202",
+      "name": "icon-button",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1324;90:1203;90:201",
+      "width": 48,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1203;90:252",
+      "name": "Soporte",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1324;90:1203",
+      "width": 48,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1203;90:253",
+      "name": "icon-button",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1324;90:1203;90:252",
+      "width": 48,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1203;90:299",
+      "name": "Aplicaciones",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1324;90:1203",
+      "width": 48,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1203;90:300",
+      "name": "icon-button",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1324;90:1203;90:299",
+      "width": 48,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1203;90:350",
+      "name": "Notificaciones",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1324;90:1203",
+      "width": 48,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1203;90:351",
+      "name": "icon-button",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1324;90:1203;90:350",
+      "width": 48,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1240",
+      "name": "Company",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1324;90:1189",
+      "width": 329,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1241",
+      "name": "Company selector",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1324;90:1240",
+      "width": 280,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1241;90:6",
+      "name": "Icon tile",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1324;90:1241",
+      "width": 32,
+      "height": 32,
+      "layout": "HORIZONTAL",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1241;90:70",
+      "name": "Buildings",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1324;90:1241;90:6",
+      "width": 20,
+      "height": 20,
+      "layout": "NONE",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1241;90:72",
+      "name": "Company info",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1324;90:1241",
+      "width": 182,
+      "height": 36,
+      "layout": "VERTICAL",
+      "horizontal": "FILL",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1241;90:75",
+      "name": "Caret",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1324;90:1241",
+      "width": 20,
+      "height": 20,
+      "layout": "NONE",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1251",
+      "name": "User interaction",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1324;90:1189",
+      "width": 88,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1252",
+      "name": "User selector",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1324;90:1251",
+      "width": 88,
+      "height": 48,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1252;90:110",
+      "name": "Avatar",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1324;90:1252",
+      "width": 48,
+      "height": 48,
+      "layout": "VERTICAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1252;90:110;83:78",
+      "name": "Avatar",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1324;90:1252;90:110",
+      "width": 48,
+      "height": 48,
+      "layout": "VERTICAL",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1324;90:1252;90:114",
+      "name": "Caret",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1324;90:1252",
+      "width": 24,
+      "height": 24,
+      "layout": "NONE",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1325",
+      "name": "Content",
+      "type": "FRAME",
+      "parent": "430:5222",
+      "width": 1440,
+      "height": 920,
+      "layout": "HORIZONTAL",
+      "horizontal": "FILL",
+      "vertical": "FILL"
+    },
+    {
+      "id": "I430:5222;299:1326",
+      "name": "Sidebar",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1325",
+      "width": 72,
+      "height": 856,
+      "layout": "VERTICAL",
+      "horizontal": "FIXED",
+      "vertical": "FILL",
+      "main": {
+        "id": "61:219",
+        "key": "4159a969a971c38e70fb6acb9e80ff07f3fc4fbe",
+        "name": "state=collapsed",
+        "remote": false
+      },
+      "props": {
+        "Expanded menu items#61:34": {
+          "type": "SLOT",
+          "preferredValues": [
+            {
+              "type": "COMPONENT_SET",
+              "key": "d15ecf0f24191472874dd554eeb69e7fae66c3c4"
+            }
+          ]
+        },
+        "Collapsed lower options#61:33": {
+          "type": "SLOT",
+          "preferredValues": [
+            {
+              "type": "COMPONENT_SET",
+              "key": "d15ecf0f24191472874dd554eeb69e7fae66c3c4"
+            }
+          ]
+        },
+        "Expanded lower options#61:35": {
+          "type": "SLOT",
+          "preferredValues": [
+            {
+              "type": "COMPONENT_SET",
+              "key": "d15ecf0f24191472874dd554eeb69e7fae66c3c4"
+            }
+          ]
+        },
+        "Collapsed menu items#61:32": {
+          "type": "SLOT",
+          "preferredValues": [
+            {
+              "type": "COMPONENT_SET",
+              "key": "d15ecf0f24191472874dd554eeb69e7fae66c3c4"
+            }
+          ]
+        },
+        "state": {
+          "value": "collapsed",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    {
+      "id": "I430:5222;299:1326;61:220",
+      "name": "Expand control",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1326",
+      "width": 72,
+      "height": 64,
+      "layout": "HORIZONTAL",
+      "horizontal": "FILL",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1326;61:221",
+      "name": "Expand Icon Button",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:220",
+      "width": 32,
+      "height": 32,
+      "layout": "HORIZONTAL",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:221;61:456",
+      "name": "Icon",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:221",
+      "width": 16,
+      "height": 16,
+      "layout": "NONE",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:221;61:458",
+      "name": "Badge anchor",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1326;61:221",
+      "width": 0.00009999999747378752,
+      "height": 8,
+      "layout": "HORIZONTAL",
+      "horizontal": "FIXED",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1326;61:227",
+      "name": "Collapsed menu items",
+      "type": "SLOT",
+      "parent": "I430:5222;299:1326",
+      "width": 72,
+      "height": 696,
+      "layout": "VERTICAL",
+      "horizontal": "FILL",
+      "vertical": "FILL"
+    },
+    {
+      "id": "I430:5222;299:1326;61:228",
+      "name": "menu-item",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:227",
+      "width": 72,
+      "height": 56,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:228;54:62",
+      "name": "Icon",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:228",
+      "width": 24,
+      "height": 24,
+      "layout": "NONE",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:241",
+      "name": "menu-item",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:227",
+      "width": 72,
+      "height": 56,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:241;54:113",
+      "name": "Icon",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:241",
+      "width": 24,
+      "height": 24,
+      "layout": "NONE",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:253",
+      "name": "menu-item",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:227",
+      "width": 72,
+      "height": 56,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:253;54:113",
+      "name": "Icon",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:253",
+      "width": 24,
+      "height": 24,
+      "layout": "NONE",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:261",
+      "name": "menu-item",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:227",
+      "width": 72,
+      "height": 56,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:261;54:113",
+      "name": "Icon",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:261",
+      "width": 24,
+      "height": 24,
+      "layout": "NONE",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:269",
+      "name": "menu-item",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:227",
+      "width": 72,
+      "height": 56,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:269;54:113",
+      "name": "Icon",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:269",
+      "width": 24,
+      "height": 24,
+      "layout": "NONE",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:277",
+      "name": "menu-item",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:227",
+      "width": 72,
+      "height": 56,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:277;54:113",
+      "name": "Icon",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:277",
+      "width": 24,
+      "height": 24,
+      "layout": "NONE",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:285",
+      "name": "menu-item",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:227",
+      "width": 72,
+      "height": 56,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:285;54:113",
+      "name": "Icon",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:285",
+      "width": 24,
+      "height": 24,
+      "layout": "NONE",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:293",
+      "name": "Collapsed lower options",
+      "type": "SLOT",
+      "parent": "I430:5222;299:1326",
+      "width": 72,
+      "height": 96,
+      "layout": "VERTICAL",
+      "horizontal": "FILL",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1326;61:294",
+      "name": "Version",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1326;61:293",
+      "width": 72,
+      "height": 16,
+      "layout": "VERTICAL",
+      "horizontal": "FILL",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1326;61:296",
+      "name": "Ayuda",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:293",
+      "width": 72,
+      "height": 56,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1326;61:296;60:62",
+      "name": "Menu item",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:296",
+      "width": 72,
+      "height": 56,
+      "layout": "HORIZONTAL",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1326;61:296;60:62;54:113",
+      "name": "Icon",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1326;61:296;60:62",
+      "width": 24,
+      "height": 24,
+      "layout": "NONE",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1327",
+      "name": "Main",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1325",
+      "width": 1272,
+      "height": 856,
+      "layout": "VERTICAL",
+      "horizontal": "FILL",
+      "vertical": "FILL"
+    },
+    {
+      "id": "I430:5222;299:1328",
+      "name": "Section Header",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1327",
+      "width": 1272,
+      "height": 107,
+      "layout": "VERTICAL",
+      "horizontal": "FILL",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1328;287:152",
+      "name": "Content",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1328",
+      "width": 1224,
+      "height": 59,
+      "layout": "HORIZONTAL",
+      "horizontal": "FILL",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1328;287:153",
+      "name": "Heading",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1328;287:152",
+      "width": 1224,
+      "height": 59,
+      "layout": "VERTICAL",
+      "horizontal": "FILL",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1328;287:155",
+      "name": "Beni y Navi",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1328;287:153",
+      "width": 87,
+      "height": 32,
+      "layout": "NONE",
+      "horizontal": "FIXED",
+      "vertical": "FIXED"
+    },
+    {
+      "id": "I430:5222;299:1329",
+      "name": "Conversation layout",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1327",
+      "width": 1272,
+      "height": 717,
+      "layout": "HORIZONTAL",
+      "horizontal": "FILL",
+      "vertical": "FILL"
+    },
+    {
+      "id": "I430:5222;299:2109",
+      "name": "Body",
+      "type": "SLOT",
+      "parent": "I430:5222;299:1329",
+      "width": 1161,
+      "height": 717,
+      "layout": "VERTICAL",
+      "horizontal": "FILL",
+      "vertical": "FILL"
+    },
+    {
+      "id": "I430:5222;299:2109;430:8374",
+      "name": "Frame 2",
+      "type": "FRAME",
+      "parent": "I430:5222;299:2109",
+      "width": 1161,
+      "height": 717,
+      "layout": "HORIZONTAL",
+      "horizontal": "FILL",
+      "vertical": "FILL"
+    },
+    {
+      "id": "I430:5222;299:2109;430:6955",
+      "name": "Chat",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:2109;430:8374",
+      "width": 374,
+      "height": 717,
+      "layout": "VERTICAL",
+      "horizontal": "FIXED",
+      "vertical": "FILL",
+      "main": {
+        "id": "242:455",
+        "key": "77ad0b60d34794e1ca8fe7f69f51290d4ca1a360",
+        "name": "State=Started",
+        "remote": false
+      },
+      "props": {
+        "User name#242:6": {
+          "type": "TEXT",
+          "value": "Bruce Wayne"
+        },
+        "Messages#238:0": {
+          "type": "SLOT",
+          "preferredValues": []
+        },
+        "Status text#242:9": {
+          "type": "TEXT",
+          "value": "Leyendo la información..."
+        },
+        "State": {
+          "value": "Started",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    {
+      "id": "I430:5222;299:2109;430:15519",
+      "name": "chat document viewer",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:2109;430:8374",
+      "width": 755,
+      "height": 717,
+      "layout": "VERTICAL",
+      "horizontal": "FIXED",
+      "vertical": "FIXED",
+      "main": {
+        "id": "430:15516",
+        "key": "8fd980d14fcda0e04773de154aeaa23677f9d4d7",
+        "name": "chat document viewer",
+        "remote": false
+      },
+      "props": {
+        "preview#430:0": {
+          "type": "SLOT",
+          "preferredValues": []
+        }
+      }
+    },
+    {
+      "id": "I430:5222;299:2110",
+      "name": "Right sidebar",
+      "type": "SLOT",
+      "parent": "I430:5222;299:1329",
+      "width": 79,
+      "height": 717,
+      "layout": "HORIZONTAL",
+      "horizontal": "HUG",
+      "vertical": "FILL"
+    },
+    {
+      "id": "I430:5222;299:1331",
+      "name": "Chat Sidebar",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:2110",
+      "width": 79,
+      "height": 717,
+      "layout": "VERTICAL",
+      "horizontal": "FIXED",
+      "vertical": "FILL"
+    },
+    {
+      "id": "I430:5222;299:1331;258:2446",
+      "name": "Header",
+      "type": "FRAME",
+      "parent": "I430:5222;299:1331",
+      "width": 47,
+      "height": 288,
+      "layout": "VERTICAL",
+      "horizontal": "FILL",
+      "vertical": "HUG"
+    },
+    {
+      "id": "I430:5222;299:1331;258:2632",
+      "name": "collapsed plan",
+      "type": "INSTANCE",
+      "parent": "I430:5222;299:1331",
+      "width": 47,
+      "height": 47,
+      "layout": "HORIZONTAL",
+      "horizontal": "FILL",
+      "vertical": "HUG"
+    }
+  ],
+  "buttons": [
+    {
+      "id": "430:13899",
+      "main": {
+        "id": "23:847",
+        "name": "size=medium, state=default",
+        "remote": false,
+        "parent": "23:952"
+      },
+      "props": {
+        "Left icon#23:152": {
+          "type": "INSTANCE_SWAP",
+          "value": "430:7043",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Show right icon#23:133": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Right icon#23:171": {
+          "type": "INSTANCE_SWAP",
+          "value": "23:684",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Show left icon#23:114": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Label#23:95": {
+          "type": "TEXT",
+          "value": "Descargar xls"
+        },
+        "size": {
+          "value": "medium",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "state": {
+          "value": "default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "icons": [
+        {
+          "id": "I430:13899;23:848",
+          "name": "Left icon"
+        }
+      ]
+    },
+    {
+      "id": "430:13900",
+      "main": {
+        "id": "23:965",
+        "name": "size=medium, state=default",
+        "remote": false,
+        "parent": "23:1070"
+      },
+      "props": {
+        "Right icon#23:266": {
+          "type": "INSTANCE_SWAP",
+          "value": "23:684",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Left icon#23:247": {
+          "type": "INSTANCE_SWAP",
+          "value": "430:7040",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Show right icon#23:228": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show left icon#23:209": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Label#23:190": {
+          "type": "TEXT",
+          "value": "Expandir"
+        },
+        "size": {
+          "value": "medium",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "state": {
+          "value": "default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "icons": [
+        {
+          "id": "I430:13900;23:966",
+          "name": "Left icon"
+        }
+      ]
+    },
+    {
+      "id": "430:13901",
+      "main": {
+        "id": "23:965",
+        "name": "size=medium, state=default",
+        "remote": false,
+        "parent": "23:1070"
+      },
+      "props": {
+        "Right icon#23:266": {
+          "type": "INSTANCE_SWAP",
+          "value": "23:684",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Left icon#23:247": {
+          "type": "INSTANCE_SWAP",
+          "value": "43:166",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Show right icon#23:228": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show left icon#23:209": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Label#23:190": {
+          "type": "TEXT",
+          "value": "Cerrar"
+        },
+        "size": {
+          "value": "medium",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "state": {
+          "value": "default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "icons": [
+        {
+          "id": "I430:13901;23:966",
+          "name": "Left icon"
+        }
+      ]
+    }
+  ]
+}

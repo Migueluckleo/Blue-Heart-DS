@@ -8,6 +8,8 @@ Familia `DROPDOWN-MENU-001` · API local 0.1.0 · categoría formularios.
 
 Fuente: [guía del contrato](../../../../specs/components/dropdown-menu.contract.v1.0.0.md#guía-semántica-normativa).
 
+La [enmienda de búsqueda opcional](dropdown-menu.search.amendment.v1.0.0.md) rige `Show search` y su API web, conserva Options y los defaults del menú. Consultarla junto con este contrato.
+
 Usa Dropdown menu para elegir un valor de una lista definida por el anfitrión. W3C WAI relaciona combobox y listbox mediante controles y opción activa. Carbon mantiene la etiqueta del campo y distingue elección simple de multiselección. [W3C WAI Combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/) · [Carbon Dropdown](https://www.carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines)
 
 | Situación | Haz | Evita |
@@ -18,7 +20,7 @@ Usa Dropdown menu para elegir un valor de una lista definida por el anfitrión. 
 
 ## Uso sin backend
 
-DropdownField coordina el combobox de solo selección con el listbox. El host controla los datos y la selección.
+DropdownField conserva selección simple y añade showSearch opcional, con filtrado local y Search small fuera del listbox. El host controla datos y selección.
 
 ```tsx
 'use client';
@@ -47,6 +49,11 @@ export function DropdownMenuExample() {
     <DropdownField label="Moneda del comprobante" entries={entries} selectedId={currency}
       onSelectionChange={setCurrency}/>
     <p id="demo-dropdown-currency" role="status">Moneda elegida: {currency}</p>
+    <form onSubmit={event=>event.preventDefault()}>
+      <DropdownField label="Moneda con búsqueda" entries={entries} selectedId={currency}
+        showSearch searchLabel="Buscar moneda" searchPlaceholder="Buscar por nombre o código"
+        onSelectionChange={setCurrency}/>
+    </form>
   </div>;
 }
 ```
@@ -68,9 +75,23 @@ export interface DropdownMenuProps {
   onSelectionChange: (id: string) => void;
   maxHeight?: number;
   hidden?: boolean;
+  showSearch?: boolean;
+  searchLabel?: string;
+  searchPlaceholder?: string;
+  searchValue?: string;
+  onSearchChange?: (value: string) => void;
+  onSearchKeyDown?: KeyboardEventHandler<HTMLInputElement>;
+  searchInputProps?: Pick<InputHTMLAttributes<HTMLInputElement>,
+    'role' | 'aria-expanded' | 'aria-controls' | 'aria-activedescendant' | 'aria-autocomplete'>;
 }
 
-export interface DropdownFieldProps extends Omit<DropdownMenuProps,'id'|'activeId'|'hidden'> {
+const optionId = (menuId: string, id: string) => `${menuId}-option-${encodeURIComponent(id)}`;
+const normalize = (value: string) => value.normalize('NFD').replace(/\p{M}/gu, '').toLocaleLowerCase().trim();
+
+/** Keep only groups with matches and separators between surviving options. */
+
+export interface DropdownFieldProps extends Omit<DropdownMenuProps,
+  'id' | 'activeId' | 'hidden' | 'searchValue' | 'onSearchChange' | 'onSearchKeyDown' | 'searchInputProps'> {
   placeholder?: string;
   disabled?: boolean;
   className?: string;
@@ -82,9 +103,13 @@ export interface DropdownFieldProps extends Omit<DropdownMenuProps,'id'|'activeI
 Las firmas siguientes se extraen de las funciones, incluidos sus valores por defecto. Una prop sin asignación `=` es obligatoria o permanece undefined según su tipo; no se rellena con reglas de negocio.
 
 ```tsx
-DropdownMenu: {id,label,entries,size='medium',selectedId,activeId,onSelectionChange,maxHeight,hidden}: DropdownMenuProps
-DropdownField: {label,entries,size='medium',selectedId,onSelectionChange,maxHeight,
-  placeholder='Selecciona una opción',disabled,className}: DropdownFieldProps
+DropdownMenu: {id, label, entries, size = 'medium', selectedId, activeId,
+  onSelectionChange, maxHeight = 320, hidden = false, showSearch = false,
+  searchLabel = `Buscar en ${label}`, searchPlaceholder = 'Buscar…', searchValue,
+  onSearchChange, onSearchKeyDown, searchInputProps}: DropdownMenuProps
+DropdownField: {label, entries, selectedId, onSelectionChange, size = 'medium',
+  placeholder = 'Selecciona una opción', disabled = false, maxHeight = 320, className = '',
+  showSearch = false, searchLabel, searchPlaceholder}: DropdownFieldProps
 ```
 
 Props `on…` son callbacks locales. No atribuyen autorización, carga, guardado ni resultados de negocio.
@@ -101,10 +126,11 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [dropdown-menu.contract.v1.0.0.md](../../../../specs/components/dropdown-menu.contract.v1.0.0.md) · SHA-256 `d064ff4c024858d9fd9bf7448aaf0227b214a837d63700855880351e8effa766`.
+- [dropdown-menu.contract.v1.0.0.md](../../../../specs/components/dropdown-menu.contract.v1.0.0.md) · SHA-256 `829e36cc2dd2c048bb3d7289b9d2243675d3618de25a3867e240754978caac58`.
+- [dropdown-menu.search.amendment.v1.0.0.md](../../../../specs/components/dropdown-menu.search.amendment.v1.0.0.md) · SHA-256 `54cff39539cd9cd14f019d489e4b8c13a8a36faee73dd5acf9185c62edb3e722`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 
 ## Verificación
 
-`pnpm verify` comprueba generación/cobertura, TypeScript, pruebas y build estático. `pnpm test:browser` valida los recorridos locales. [Evidencia de QA](../../../../qa/implementations/dropdown-chain.v1.0.0.review.md) identifica alcance, resultados y límites; una demo visible por sí sola no es un PASS visual.
+`pnpm verify` comprueba generación/cobertura, TypeScript, pruebas y build estático. `pnpm test:browser` valida los recorridos locales. [Evidencia de QA](../../../../qa/implementations/dropdown-menu.search.v1.0.0.review.md) identifica alcance, resultados y límites; una demo visible por sí sola no es un PASS visual.

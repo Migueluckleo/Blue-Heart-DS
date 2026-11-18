@@ -11,6 +11,7 @@
 - [Buttons](buttons.md) · BUTTON-001
 - [Characters](characters.md) · CHARACTERS-001
 - [Chat](chat.md) · CHAT-001
+- [Chat Document Viewer](chat-document-viewer.md) · CHAT-DOCUMENT-VIEWER-001
 - [Chat History Item](chat-history-item.md) · CHAT-HISTORY-ITEM-001
 - [Chat Plan Usage](chat-plan-usage.md) · CHAT-PLAN-USAGE-001
 - [Chat Sidebar](chat-sidebar.md) · CHAT-SIDEBAR-001

@@ -8,6 +8,8 @@ Familia `SEARCH-001` · API local 0.1.0 · categoría búsqueda.
 
 Fuente: [guía del contrato](../../../../specs/components/search.contract.v1.0.0.md#guía-semántica-normativa).
 
+En composición dentro de un formulario, la adaptación web `embedded` conserva la anatomía Search en un div con landmark search y evita un form anidado. `inputProps` permite al anfitrión declarar el combobox y controlar teclado/ARIA; los props propios de valor y nombre conservan autoridad. Ver [Dropdown con búsqueda](dropdown-menu.search.amendment.v1.0.0.md). El default sigue siendo form con envío Enter.
+
 Usa Search para localizar o filtrar elementos dentro de un conjunto identificable. Explica qué se puede buscar y conserva el nombre accesible aunque Label se oculte. El anfitrión decide cuándo ejecutar la consulta y cómo presentar resultados, errores y estados vacíos. Mantén el texto introducido por la persona y conserva el foco al limpiar.
 
 | Situación | Haz | Evita |
@@ -65,6 +67,9 @@ export interface SearchProps {
   value: string;
   size?: SearchSize;
   disabled?: boolean;
+  embedded?: boolean;
+  inputProps?: Omit<InputHTMLAttributes<HTMLInputElement>,
+    'id' | 'type' | 'className' | 'value' | 'onChange' | 'disabled' | 'placeholder' | 'aria-label'>;
   onValueChange?: (value: string) => void;
   onSearch?: (value: string) => void;
 }
@@ -76,7 +81,7 @@ Las firmas siguientes se extraen de las funciones, incluidos sus valores por def
 
 ```tsx
 Search: {id, label, showLabel = false, placeholder = 'Search', value, size = 'large',
-  disabled = false, onValueChange, onSearch}: SearchProps
+  disabled = false, embedded = false, inputProps, onValueChange, onSearch}: SearchProps
 ```
 
 Props `on…` son callbacks locales. No atribuyen autorización, carga, guardado ni resultados de negocio.
@@ -93,7 +98,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [search.contract.v1.0.0.md](../../../../specs/components/search.contract.v1.0.0.md) · SHA-256 `229c8301f0151604052def3951424823588392a5c9165c01352daaa0e39829ed`.
+- [search.contract.v1.0.0.md](../../../../specs/components/search.contract.v1.0.0.md) · SHA-256 `1bb4091cdfe677eb2b2757ab90d3043fbcdf3048b5ef84249838b238e591e90c`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

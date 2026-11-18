@@ -10,6 +10,8 @@
     "specs/tokens/chat-sidebar.v1.0.0.json": "b28c5fcdb307ce1feb81401ccdb7397fe30b1598820d4b7fbe566864f9b77d80",
     "specs/tokens/table.sticky-actions.v1.0.0.json": "94d6d16e2939eb323a33e90e94aac04f19b891e2083a7d3fa2e86b026cb9ebe9",
     "specs/tokens/body.v1.0.0.json": "d9862b8642147af2499f8a3527d8e2947daace0d8ab23e86705ed7d77af21d0b",
+    "specs/tokens/chat-document-viewer.v1.0.0.json": "5d3792222fde1e9f92b5bace9ad55021c3fc747e9abd45d869e3a68ce576bde4",
+    "specs/tokens/dropdown-menu.search.v1.0.0.json": "6e815076a56f45c2c2d31a344beb10c3cf4b4460620eadf47cb08a4e25ee9ab7",
     "specs/tokens/visibility.body-only.correction.json": "bfeff78297e413e05a989523fecf5adb8f79850f99cd15cd25196a78b2e88397"
   },
   "modes": [
@@ -45,6 +47,35 @@
         "Personas": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:166"
+        }
+      }
+    },
+    {
+      "name": "app-shell/size/conversation-chat",
+      "collection": "component",
+      "css": "--app-shell-size-conversation-chat",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "App Shell · Ancho de 374 px de Chat en el layout con documento; el preview absorbe el espacio restante.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:semantic:size-374"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:semantic:size-374"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:semantic:size-374"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:semantic:size-374"
         }
       }
     },
@@ -5130,6 +5161,470 @@
         "Personas": {
           "type": "VARIABLE_ALIAS",
           "id": "characters:semantic:shared/features"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/color/bg/surface",
+      "collection": "component",
+      "css": "--chat-document-viewer-color-bg-surface",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Superficie del visor.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/color/text/description",
+      "collection": "component",
+      "css": "--chat-document-viewer-color-text-description",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Descripción informativa del documento.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/color/text/title",
+      "collection": "component",
+      "css": "--chat-document-viewer-color-text-title",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Texto principal del encabezado del documento.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/font/description/size",
+      "collection": "component",
+      "css": "--chat-document-viewer-font-description-size",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Descripción de 14 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/font/description/tracking",
+      "collection": "component",
+      "css": "--chat-document-viewer-font-description-tracking",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Tracking de descripción de 0.014 px, equivalente a 0.1% con 14 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:semantic:description-tracking"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:semantic:description-tracking"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:semantic:description-tracking"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:semantic:description-tracking"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/font/description/weight",
+      "collection": "component",
+      "css": "--chat-document-viewer-font-description-weight",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Peso Regular de la descripción, equivalente CSS 400.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:195"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/font/family",
+      "collection": "component",
+      "css": "--chat-document-viewer-font-family",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Familia tipográfica del visor.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/font/title/size",
+      "collection": "component",
+      "css": "--chat-document-viewer-font-title-size",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Título de 20 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:202"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:202"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:202"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:202"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/font/title/tracking",
+      "collection": "component",
+      "css": "--chat-document-viewer-font-title-tracking",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Tracking del título de 0.02 px, equivalente a 0.1% con 20 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:semantic:tracking"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:semantic:tracking"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:semantic:tracking"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:semantic:tracking"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/font/title/weight",
+      "collection": "component",
+      "css": "--chat-document-viewer-font-title-weight",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Peso Bold del título, equivalente CSS 700.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:198"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:198"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:198"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:198"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/radius/container",
+      "collection": "component",
+      "css": "--chat-document-viewer-radius-container",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Radio cero del contenedor del visor.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:222"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:222"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:222"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:222"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/spacing/header",
+      "collection": "component",
+      "css": "--chat-document-viewer-spacing-header",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Separación de 4 px entre título y descripción.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/spacing/none",
+      "collection": "component",
+      "css": "--chat-document-viewer-spacing-none",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Padding cero del contenedor y regiones.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/spacing/preview",
+      "collection": "component",
+      "css": "--chat-document-viewer-spacing-preview",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Separación de 16 px entre contenidos insertados en preview.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/spacing/section",
+      "collection": "component",
+      "css": "--chat-document-viewer-spacing-section",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Separación de 32 px entre acciones, encabezado y preview.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:231"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:231"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:231"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:231"
+        }
+      }
+    },
+    {
+      "name": "chat-document-viewer/spacing/toolbar",
+      "collection": "component",
+      "css": "--chat-document-viewer-spacing-toolbar",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Chat Document Viewer · Separación de 16 px entre acciones del visor.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
         }
       }
     },
@@ -13689,6 +14184,35 @@
       }
     },
     {
+      "name": "dropdown/size/menu-content-max",
+      "collection": "component",
+      "css": "--dropdown-menu-size-content-max",
+      "source": "specs/tokens/dropdown-menu.search.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Dropdown menu · Límite interior de 318 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "dropdown-search:semantic:318"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "dropdown-search:semantic:318"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "dropdown-search:semantic:318"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "dropdown-search:semantic:318"
+        }
+      }
+    },
+    {
       "name": "dropdown/size/menu-effect-none",
       "collection": "component",
       "css": "--dropdown-menu-size-effect-none",
@@ -13743,6 +14267,35 @@
         "Personas": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:219"
+        }
+      }
+    },
+    {
+      "name": "dropdown/size/menu-search-height",
+      "collection": "component",
+      "css": "--dropdown-menu-size-search-height",
+      "source": "specs/tokens/dropdown-menu.search.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Dropdown menu · Reserva de altura de Search small de 32 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
         }
       }
     },
@@ -14004,6 +14557,35 @@
         "Personas": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:191"
+        }
+      }
+    },
+    {
+      "name": "dropdown/spacing/menu-search-gap",
+      "collection": "component",
+      "css": "--dropdown-menu-spacing-search-gap",
+      "source": "specs/tokens/dropdown-menu.search.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Dropdown menu · Separación Search–Options 16 px, alias semantic spacing-lg.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
         }
       }
     },
@@ -33443,6 +34025,34 @@
       }
     },
     {
+      "name": "font-letter-spacing/document-viewer-description",
+      "collection": "primitives",
+      "css": "--primitive-font-letter-spacing-document-viewer-description",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Tracking de descripción: 0.1% de 14 px equivale a 0.014 px.",
+      "scopes": [],
+      "values": {
+        "Value": 0.014
+      }
+    },
+    {
+      "name": "font-letter-spacing/document-viewer-title",
+      "collection": "primitives",
+      "css": "--primitive-font-letter-spacing-document-viewer-title",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Tracking de título: 0.1% de 20 px equivale a 0.02 px. Normalización requerida para binding Figma.",
+      "scopes": [],
+      "values": {
+        "Value": 0.02
+      }
+    },
+    {
       "name": "font-letter-spacing/label-px",
       "collection": "primitives",
       "css": "--primitive-font-letter-spacing-label-px",
@@ -35126,6 +35736,20 @@
       }
     },
     {
+      "name": "size/318",
+      "collection": "primitives",
+      "css": "--primitive-size-318",
+      "source": "specs/tokens/dropdown-menu.search.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Interior máximo de 318 px: viewport 320 menos dos bordes de 1 px. DERIVED.",
+      "scopes": [],
+      "values": {
+        "Value": 318
+      }
+    },
+    {
       "name": "size/320",
       "collection": "primitives",
       "css": "--primitive-size-320",
@@ -35151,6 +35775,20 @@
       "scopes": [],
       "values": {
         "Value": 358
+      }
+    },
+    {
+      "name": "size/374",
+      "collection": "primitives",
+      "css": "--primitive-size-374",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Ancho de conversación de 374 px observado en el layout con preview de documento.",
+      "scopes": [],
+      "values": {
+        "Value": 374
       }
     },
     {
@@ -36299,6 +36937,40 @@
         "Value": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:746:4"
+        }
+      }
+    },
+    {
+      "name": "font-letter-spacing-document-viewer-description",
+      "collection": "semantic",
+      "css": "--semantic-font-letter-spacing-document-viewer-description",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Tracking de descripción del visor normalizado a 0.014 px, equivalente al 0.1% observado.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:primitive:description-tracking"
+        }
+      }
+    },
+    {
+      "name": "font-letter-spacing-document-viewer-title",
+      "collection": "semantic",
+      "css": "--semantic-font-letter-spacing-document-viewer-title",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Tracking de título del visor normalizado a 0.02 px, equivalente al 0.1% observado.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:primitive:tracking"
         }
       }
     },
@@ -37493,6 +38165,23 @@
       }
     },
     {
+      "name": "size-318",
+      "collection": "semantic",
+      "css": "--semantic-size-318",
+      "source": "specs/tokens/dropdown-menu.search.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Límite interior de viewport de 318 px.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "dropdown-search:primitive:318"
+        }
+      }
+    },
+    {
       "name": "size-320",
       "collection": "semantic",
       "css": "--semantic-size-320",
@@ -37523,6 +38212,23 @@
         "Value": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:891:4"
+        }
+      }
+    },
+    {
+      "name": "size-374",
+      "collection": "semantic",
+      "css": "--semantic-size-374",
+      "source": "specs/tokens/chat-document-viewer.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Ancho de referencia de la columna de conversación junto al documento.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "document-viewer:primitive:size-374"
         }
       }
     },

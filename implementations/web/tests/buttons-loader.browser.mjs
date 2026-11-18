@@ -596,7 +596,7 @@ try {
   await page.keyboard.press('Enter');
   assert.equal(await currency.getAttribute('aria-expanded'),'true');
   assert.equal(await currency.getAttribute('aria-controls'),await currencies.getAttribute('id'));
-  assert.equal((await currencies.boundingBox()).height,320);
+  assert.equal((await currencies.locator('..').boundingBox()).height,320);
   const currencyOption = name => currencies.getByRole('option',{name,exact:true});
   assert.equal(await currencyOption('MXN').getAttribute('aria-selected'),'true');
   await page.keyboard.press('ArrowDown');

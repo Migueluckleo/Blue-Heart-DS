@@ -478,75 +478,6 @@ export function SectionHeaderExample() {
   </div>;
 }
 
-// example: app-shell
-export function AppShellExample() {
-  const [collapsed, setCollapsed] = useState(true);
-  const [bodyLayout, setBodyLayout] = useState<AppShellBodyLayout>('grid');
-  const [action, setAction] = useState('');
-  const [tool, setTool] = useState<ChatSidebarProps['view']>('none');
-  const [draft, setDraft] = useState('');
-  const [messages, setMessages] = useState<string[]>([]);
-  const inConversation = bodyLayout === 'conversation';
-  const composer = {label:'Redactar en conversación de App Shell',value:draft,onValueChange:setDraft,
-    onSend:(text: string) => {
-      if (!text.trim()) return;
-      setMessages(current => [...current,text]);
-      setDraft('');
-    }};
-  const rightSidebar = <>
-    {tool !== 'none' && <ChatSidebar view={tool} onViewChange={setTool} onCollapse={() => setTool('none')}>
-      {tool === 'Chats' && messages.length > 0 && <ChatSidebarSection title="Recientes">
-        <ChatHistoryItem title={messages[0]} selected onSelect={() => setAction(messages[0])}/>
-      </ChatSidebarSection>}
-    </ChatSidebar>}
-    <ChatSidebar mode="rail" view={tool} onViewChange={setTool} plan={{plan:'Pro Plan',used:42,limit:150}}/>
-  </>;
-  const moduleStyle = 'grow basis-0 rounded-lg bg-slate-100 p-4';
-  return <div className="my-4 space-y-4">
-    <label className="inline-flex items-center gap-2">
-      Distribución del contenido
-      <select className="rounded border px-2 py-1" value={bodyLayout}
-        onChange={event => setBodyLayout(event.currentTarget.value as AppShellBodyLayout)}>
-        <option value="grid">Grid</option>
-        <option value="flex">Flex</option>
-        <option value="conversation">Conversación</option>
-      </select>
-    </label>
-    <div className="overflow-x-auto">
-      <AppShell className="w-[1440px] min-h-[1024px]" bodyLayout={bodyLayout}
-        contentAs="section" contentLabel="Área de trabajo de muestra" rightSidebar={rightSidebar}
-        header={{actions:{actions:3,onAction:next => setAction(next)}}}
-        sidebar={{label:'Navegación del área de trabajo',collapsed,onCollapsedChange:setCollapsed,
-          collapsedMenuItems:<MenuItem label="Inicio del área" href="#demo-shell-heading" current showRightIcon={false} showBeta={false}/>,
-          expandedMenuItems:<MenuItem type="expanded" label="Inicio del área" href="#demo-shell-heading" current showRightIcon={false} showBeta={false}/>}}
-        sectionHeader={{title:inConversation ? 'Beni' : 'Resumen contable',headingLevel:3,
-          logoInsteadTitle:inConversation,description:inConversation ? 'Asistente de CONTPAQi'
-            : 'Revisa los comprobantes del periodo y su estado de conciliación.'}}>
-        {inConversation ? (messages.length ? <Chat state="started" composer={composer} messages={messages.map((text,index) =>
-          <UserMessage key={index} message={text}/>)}/> : <Chat userName="Bruce Wayne" composer={composer}
-          onSuggestion={setDraft} suggestions={['Muéstrame mis ingresos del mes','¿Cuánto IVA tengo por pagar?']}/>) : <>
-        <div className={bodyLayout === 'grid' ? 'contents' : 'flex gap-[var(--bh-app-shell-gap)]'}>
-          <AppShellGridItem span={2} className={moduleStyle}>
-            <h4>Comprobantes registrados</h4>
-            <p>128 en el periodo</p>
-          </AppShellGridItem>
-          <AppShellGridItem span={2} className={moduleStyle}>
-            <h4>Por conciliar</h4>
-            <p>7 pendientes</p>
-          </AppShellGridItem>
-        </div>
-        <AppShellGridItem span={4} className={moduleStyle}>
-          <h4 id="demo-shell-heading">Revisión del periodo</h4>
-          <Input id="demo-shell-note" label="Nota de revisión" placeholder="Añade una nota"
-            required={false} showIcon={false} className="max-w-sm"/>
-        </AppShellGridItem>
-        </>}
-      </AppShell>
-    </div>
-    <p role="status">{action && `Acción de muestra: ${action}`}</p>
-  </div>;
-}
-
 // example: pagination-item
 export function PaginationItemExample() {
   const [page, setPage] = useState(1);
@@ -669,6 +600,11 @@ export function DropdownMenuExample() {
     <DropdownField label="Moneda del comprobante" entries={entries} selectedId={currency}
       onSelectionChange={setCurrency}/>
     <p id="demo-dropdown-currency" role="status">Moneda elegida: {currency}</p>
+    <form onSubmit={event=>event.preventDefault()}>
+      <DropdownField label="Moneda con búsqueda" entries={entries} selectedId={currency}
+        showSearch searchLabel="Buscar moneda" searchPlaceholder="Buscar por nombre o código"
+        onSelectionChange={setCurrency}/>
+    </form>
   </div>;
 }
 

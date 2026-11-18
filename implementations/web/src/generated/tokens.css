@@ -42,6 +42,8 @@
   --primitive-emerald-900: rgb(0 35.00000171 0 / 1);
   --primitive-font-family-inter: "Inter";
   --primitive-font-family-manrope: "Manrope Variable";
+  --primitive-font-letter-spacing-document-viewer-description: 0.014;
+  --primitive-font-letter-spacing-document-viewer-title: 0.02;
   --primitive-font-letter-spacing-label-px: 0.014000000432133675;
   --primitive-font-letter-spacing-minus-0p2: -0.20000000298023224;
   --primitive-font-letter-spacing-minus-0p24: -0.23999999463558197;
@@ -144,8 +146,10 @@
   --primitive-size-264: 264;
   --primitive-size-294: 294;
   --primitive-size-24: 24;
+  --primitive-size-318: 318;
   --primitive-size-320: 320;
   --primitive-size-358: 358;
+  --primitive-size-374: 374;
   --primitive-size-32: 32;
   --primitive-size-47: 47;
   --primitive-size-494: 494;
@@ -221,6 +225,8 @@
   --danger-subtle: var(--primitive-red-100);
   --font-family-base: var(--primitive-font-family-manrope);
   --semantic-font-family-inter: var(--primitive-font-family-inter);
+  --semantic-font-letter-spacing-document-viewer-description: var(--primitive-font-letter-spacing-document-viewer-description);
+  --semantic-font-letter-spacing-document-viewer-title: var(--primitive-font-letter-spacing-document-viewer-title);
   --semantic-font-letter-spacing-label-px: var(--primitive-font-letter-spacing-label-px);
   --semantic-font-letter-spacing-minus-0p2: var(--primitive-font-letter-spacing-minus-0p2);
   --semantic-font-letter-spacing-minus-0p24: var(--primitive-font-letter-spacing-minus-0p24);
@@ -291,8 +297,10 @@
   --semantic-size-264: var(--primitive-size-264);
   --semantic-size-294: var(--primitive-size-294);
   --size-2xl: var(--primitive-size-24);
+  --semantic-size-318: var(--primitive-size-318);
   --semantic-size-320: var(--primitive-size-320);
   --semantic-size-358: var(--primitive-size-358);
+  --semantic-size-374: var(--primitive-size-374);
   --size-3xl: var(--primitive-size-32);
   --semantic-size-47: var(--primitive-size-47);
   --semantic-size-494: var(--primitive-size-494);
@@ -342,6 +350,7 @@
 }
 :root, [data-ds-theme="contable"] {
   --app-shell-color-bg-surface: var(--neutral-base);
+  --app-shell-size-conversation-chat: var(--semantic-size-374);
   --app-shell-spacing-content: var(--spacing-2xl);
   --app-shell-spacing-header-gap: var(--spacing-sm);
   --avatar-border-width-regular: var(--stroke-xs);
@@ -515,6 +524,22 @@
   --characters-color-navi-body: var(--color-identity-characters-navi-body);
   --characters-color-navi-shadow: var(--color-identity-characters-navi-shadow);
   --characters-color-shared-features: var(--color-identity-characters-shared-features);
+  --chat-document-viewer-color-bg-surface: var(--neutral-base);
+  --chat-document-viewer-color-text-description: var(--neutral-strong);
+  --chat-document-viewer-color-text-title: var(--neutral-maximum);
+  --chat-document-viewer-font-description-size: var(--font-size-sm);
+  --chat-document-viewer-font-description-tracking: var(--semantic-font-letter-spacing-document-viewer-description);
+  --chat-document-viewer-font-description-weight: var(--font-weight-regular);
+  --chat-document-viewer-font-family: var(--font-family-base);
+  --chat-document-viewer-font-title-size: var(--font-size-lg);
+  --chat-document-viewer-font-title-tracking: var(--semantic-font-letter-spacing-document-viewer-title);
+  --chat-document-viewer-font-title-weight: var(--font-weight-bold);
+  --chat-document-viewer-radius-container: var(--radius-none);
+  --chat-document-viewer-spacing-header: var(--spacing-xs);
+  --chat-document-viewer-spacing-none: var(--spacing-none);
+  --chat-document-viewer-spacing-preview: var(--spacing-lg);
+  --chat-document-viewer-spacing-section: var(--spacing-2xl);
+  --chat-document-viewer-spacing-toolbar: var(--spacing-lg);
   --chat-history-item-color-bg-hover: var(--brand-accent);
   --chat-history-item-color-bg-selected: var(--brand-subtle);
   --chat-history-item-color-stroke-focus: var(--brand-strong);
@@ -810,8 +835,10 @@
   --dropdown-item-size-height-small: var(--size-3xl);
   --dropdown-item-size-icon-default: var(--size-xl);
   --dropdown-item-size-icon-small: var(--size-lg);
+  --dropdown-menu-size-content-max: var(--semantic-size-318);
   --dropdown-menu-size-effect-none: var(--spacing-none);
   --dropdown-menu-size-scrollbar-width: var(--size-md);
+  --dropdown-menu-size-search-height: var(--size-3xl);
   --dropdown-menu-size-shadow-offset: var(--spacing-xs);
   --dropdown-menu-size-shadow-radius: var(--semantic-size-6);
   --dropdown-menu-size-shadow-spread: var(--semantic-spacing-negative-2);
@@ -821,6 +848,7 @@
   --dropdown-item-spacing-sm: var(--spacing-sm);
   --dropdown-item-spacing-xs: var(--spacing-xs);
   --dropdown-menu-spacing-none: var(--spacing-none);
+  --dropdown-menu-spacing-search-gap: var(--spacing-lg);
   --dropdown-menu-spacing-xs: var(--spacing-xs);
   --file-upload-border-focus-width: var(--stroke-md);
   --file-upload-border-width: var(--stroke-xs);
@@ -1467,6 +1495,7 @@
 }
 [data-ds-theme="administrativo"] {
   --app-shell-color-bg-surface: var(--neutral-base);
+  --app-shell-size-conversation-chat: var(--semantic-size-374);
   --app-shell-spacing-content: var(--spacing-2xl);
   --app-shell-spacing-header-gap: var(--spacing-sm);
   --avatar-border-width-regular: var(--stroke-xs);
@@ -1640,6 +1669,22 @@
   --characters-color-navi-body: var(--color-identity-characters-navi-body);
   --characters-color-navi-shadow: var(--color-identity-characters-navi-shadow);
   --characters-color-shared-features: var(--color-identity-characters-shared-features);
+  --chat-document-viewer-color-bg-surface: var(--neutral-base);
+  --chat-document-viewer-color-text-description: var(--neutral-strong);
+  --chat-document-viewer-color-text-title: var(--neutral-maximum);
+  --chat-document-viewer-font-description-size: var(--font-size-sm);
+  --chat-document-viewer-font-description-tracking: var(--semantic-font-letter-spacing-document-viewer-description);
+  --chat-document-viewer-font-description-weight: var(--font-weight-regular);
+  --chat-document-viewer-font-family: var(--font-family-base);
+  --chat-document-viewer-font-title-size: var(--font-size-lg);
+  --chat-document-viewer-font-title-tracking: var(--semantic-font-letter-spacing-document-viewer-title);
+  --chat-document-viewer-font-title-weight: var(--font-weight-bold);
+  --chat-document-viewer-radius-container: var(--radius-none);
+  --chat-document-viewer-spacing-header: var(--spacing-xs);
+  --chat-document-viewer-spacing-none: var(--spacing-none);
+  --chat-document-viewer-spacing-preview: var(--spacing-lg);
+  --chat-document-viewer-spacing-section: var(--spacing-2xl);
+  --chat-document-viewer-spacing-toolbar: var(--spacing-lg);
   --chat-history-item-color-bg-hover: var(--brand-administrativo-accent);
   --chat-history-item-color-bg-selected: var(--brand-administrativo-subtle);
   --chat-history-item-color-stroke-focus: var(--brand-strong);
@@ -1935,8 +1980,10 @@
   --dropdown-item-size-height-small: var(--size-3xl);
   --dropdown-item-size-icon-default: var(--size-xl);
   --dropdown-item-size-icon-small: var(--size-lg);
+  --dropdown-menu-size-content-max: var(--semantic-size-318);
   --dropdown-menu-size-effect-none: var(--spacing-none);
   --dropdown-menu-size-scrollbar-width: var(--size-md);
+  --dropdown-menu-size-search-height: var(--size-3xl);
   --dropdown-menu-size-shadow-offset: var(--spacing-xs);
   --dropdown-menu-size-shadow-radius: var(--semantic-size-6);
   --dropdown-menu-size-shadow-spread: var(--semantic-spacing-negative-2);
@@ -1946,6 +1993,7 @@
   --dropdown-item-spacing-sm: var(--spacing-sm);
   --dropdown-item-spacing-xs: var(--spacing-xs);
   --dropdown-menu-spacing-none: var(--spacing-none);
+  --dropdown-menu-spacing-search-gap: var(--spacing-lg);
   --dropdown-menu-spacing-xs: var(--spacing-xs);
   --file-upload-border-focus-width: var(--stroke-md);
   --file-upload-border-width: var(--stroke-xs);
@@ -2592,6 +2640,7 @@
 }
 [data-ds-theme="servicios"] {
   --app-shell-color-bg-surface: var(--neutral-base);
+  --app-shell-size-conversation-chat: var(--semantic-size-374);
   --app-shell-spacing-content: var(--spacing-2xl);
   --app-shell-spacing-header-gap: var(--spacing-sm);
   --avatar-border-width-regular: var(--stroke-xs);
@@ -2765,6 +2814,22 @@
   --characters-color-navi-body: var(--color-identity-characters-navi-body);
   --characters-color-navi-shadow: var(--color-identity-characters-navi-shadow);
   --characters-color-shared-features: var(--color-identity-characters-shared-features);
+  --chat-document-viewer-color-bg-surface: var(--neutral-base);
+  --chat-document-viewer-color-text-description: var(--neutral-strong);
+  --chat-document-viewer-color-text-title: var(--neutral-maximum);
+  --chat-document-viewer-font-description-size: var(--font-size-sm);
+  --chat-document-viewer-font-description-tracking: var(--semantic-font-letter-spacing-document-viewer-description);
+  --chat-document-viewer-font-description-weight: var(--font-weight-regular);
+  --chat-document-viewer-font-family: var(--font-family-base);
+  --chat-document-viewer-font-title-size: var(--font-size-lg);
+  --chat-document-viewer-font-title-tracking: var(--semantic-font-letter-spacing-document-viewer-title);
+  --chat-document-viewer-font-title-weight: var(--font-weight-bold);
+  --chat-document-viewer-radius-container: var(--radius-none);
+  --chat-document-viewer-spacing-header: var(--spacing-xs);
+  --chat-document-viewer-spacing-none: var(--spacing-none);
+  --chat-document-viewer-spacing-preview: var(--spacing-lg);
+  --chat-document-viewer-spacing-section: var(--spacing-2xl);
+  --chat-document-viewer-spacing-toolbar: var(--spacing-lg);
   --chat-history-item-color-bg-hover: var(--brand-servicios-accent);
   --chat-history-item-color-bg-selected: var(--brand-servicios-subtle);
   --chat-history-item-color-stroke-focus: var(--brand-strong);
@@ -3060,8 +3125,10 @@
   --dropdown-item-size-height-small: var(--size-3xl);
   --dropdown-item-size-icon-default: var(--size-xl);
   --dropdown-item-size-icon-small: var(--size-lg);
+  --dropdown-menu-size-content-max: var(--semantic-size-318);
   --dropdown-menu-size-effect-none: var(--spacing-none);
   --dropdown-menu-size-scrollbar-width: var(--size-md);
+  --dropdown-menu-size-search-height: var(--size-3xl);
   --dropdown-menu-size-shadow-offset: var(--spacing-xs);
   --dropdown-menu-size-shadow-radius: var(--semantic-size-6);
   --dropdown-menu-size-shadow-spread: var(--semantic-spacing-negative-2);
@@ -3071,6 +3138,7 @@
   --dropdown-item-spacing-sm: var(--spacing-sm);
   --dropdown-item-spacing-xs: var(--spacing-xs);
   --dropdown-menu-spacing-none: var(--spacing-none);
+  --dropdown-menu-spacing-search-gap: var(--spacing-lg);
   --dropdown-menu-spacing-xs: var(--spacing-xs);
   --file-upload-border-focus-width: var(--stroke-md);
   --file-upload-border-width: var(--stroke-xs);
@@ -3717,6 +3785,7 @@
 }
 [data-ds-theme="personas"] {
   --app-shell-color-bg-surface: var(--neutral-base);
+  --app-shell-size-conversation-chat: var(--semantic-size-374);
   --app-shell-spacing-content: var(--spacing-2xl);
   --app-shell-spacing-header-gap: var(--spacing-sm);
   --avatar-border-width-regular: var(--stroke-xs);
@@ -3890,6 +3959,22 @@
   --characters-color-navi-body: var(--color-identity-characters-navi-body);
   --characters-color-navi-shadow: var(--color-identity-characters-navi-shadow);
   --characters-color-shared-features: var(--color-identity-characters-shared-features);
+  --chat-document-viewer-color-bg-surface: var(--neutral-base);
+  --chat-document-viewer-color-text-description: var(--neutral-strong);
+  --chat-document-viewer-color-text-title: var(--neutral-maximum);
+  --chat-document-viewer-font-description-size: var(--font-size-sm);
+  --chat-document-viewer-font-description-tracking: var(--semantic-font-letter-spacing-document-viewer-description);
+  --chat-document-viewer-font-description-weight: var(--font-weight-regular);
+  --chat-document-viewer-font-family: var(--font-family-base);
+  --chat-document-viewer-font-title-size: var(--font-size-lg);
+  --chat-document-viewer-font-title-tracking: var(--semantic-font-letter-spacing-document-viewer-title);
+  --chat-document-viewer-font-title-weight: var(--font-weight-bold);
+  --chat-document-viewer-radius-container: var(--radius-none);
+  --chat-document-viewer-spacing-header: var(--spacing-xs);
+  --chat-document-viewer-spacing-none: var(--spacing-none);
+  --chat-document-viewer-spacing-preview: var(--spacing-lg);
+  --chat-document-viewer-spacing-section: var(--spacing-2xl);
+  --chat-document-viewer-spacing-toolbar: var(--spacing-lg);
   --chat-history-item-color-bg-hover: var(--brand-personas-accent);
   --chat-history-item-color-bg-selected: var(--brand-personas-subtle);
   --chat-history-item-color-stroke-focus: var(--brand-strong);
@@ -4185,8 +4270,10 @@
   --dropdown-item-size-height-small: var(--size-3xl);
   --dropdown-item-size-icon-default: var(--size-xl);
   --dropdown-item-size-icon-small: var(--size-lg);
+  --dropdown-menu-size-content-max: var(--semantic-size-318);
   --dropdown-menu-size-effect-none: var(--spacing-none);
   --dropdown-menu-size-scrollbar-width: var(--size-md);
+  --dropdown-menu-size-search-height: var(--size-3xl);
   --dropdown-menu-size-shadow-offset: var(--spacing-xs);
   --dropdown-menu-size-shadow-radius: var(--semantic-size-6);
   --dropdown-menu-size-shadow-spread: var(--semantic-spacing-negative-2);
@@ -4196,6 +4283,7 @@
   --dropdown-item-spacing-sm: var(--spacing-sm);
   --dropdown-item-spacing-xs: var(--spacing-xs);
   --dropdown-menu-spacing-none: var(--spacing-none);
+  --dropdown-menu-spacing-search-gap: var(--spacing-lg);
   --dropdown-menu-spacing-xs: var(--spacing-xs);
   --file-upload-border-focus-width: var(--stroke-md);
   --file-upload-border-width: var(--stroke-xs);

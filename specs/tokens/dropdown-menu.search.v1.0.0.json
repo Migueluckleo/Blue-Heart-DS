@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "kind": "DELEGATED_TOKEN_DATA",
+  "source": "sources/figma-snapshots/dropdown-search-2026-11-18/source-before.json",
+  "figma": {
+    "component_id": "119:17",
+    "key": "55501bd7b5aa5a9cbd18a7f2760368de95b1cad2",
+    "search_property": "Show search#481:0",
+    "search_instance_id": "481:35",
+    "options_slot_id": "119:18",
+    "options_property": "Options#119:0",
+    "results_id": "481:34",
+    "pinned_search_id": "486:38",
+    "height_reserve_id": "486:37"
+  },
+  "collections": [
+    {
+      "name": "primitives",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "Value"
+        }
+      ],
+      "variables": [
+        {
+          "id": "dropdown-search:primitive:318",
+          "targetId": "VariableID:486:33",
+          "name": "size/318",
+          "resolvedType": "FLOAT",
+          "description": "Interior máximo de 318 px: viewport 320 menos dos bordes de 1 px. DERIVED.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--primitive-size-318)"
+          },
+          "valuesByMode": {
+            "Value": 318
+          }
+        }
+      ]
+    },
+    {
+      "name": "semantic",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "Value"
+        }
+      ],
+      "variables": [
+        {
+          "id": "dropdown-search:semantic:318",
+          "targetId": "VariableID:486:34",
+          "name": "size-318",
+          "resolvedType": "FLOAT",
+          "description": "Límite interior de viewport de 318 px.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--semantic-size-318)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "dropdown-search:primitive:318"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "component",
+      "modes": [
+        {
+          "name": "Contable",
+          "modeId": "Contable"
+        },
+        {
+          "name": "Administrativo",
+          "modeId": "Administrativo"
+        },
+        {
+          "name": "Servicios",
+          "modeId": "Servicios"
+        },
+        {
+          "name": "Personas",
+          "modeId": "Personas"
+        }
+      ],
+      "variables": [
+        {
+          "id": "dropdown-search:component:gap",
+          "targetId": "VariableID:481:33",
+          "name": "dropdown/spacing/menu-search-gap",
+          "resolvedType": "FLOAT",
+          "description": "Dropdown menu · Separación Search–Options 16 px, alias semantic spacing-lg.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--dropdown-menu-spacing-search-gap)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            }
+          }
+        },
+        {
+          "id": "dropdown-search:component:menu-content-max",
+          "targetId": "VariableID:486:35",
+          "name": "dropdown/size/menu-content-max",
+          "resolvedType": "FLOAT",
+          "description": "Dropdown menu · Límite interior de 318 px.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--dropdown-menu-size-content-max)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "dropdown-search:semantic:318"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "dropdown-search:semantic:318"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "dropdown-search:semantic:318"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "dropdown-search:semantic:318"
+            }
+          }
+        },
+        {
+          "id": "dropdown-search:component:menu-search-height",
+          "targetId": "VariableID:486:36",
+          "name": "dropdown/size/menu-search-height",
+          "resolvedType": "FLOAT",
+          "description": "Dropdown menu · Reserva de altura de Search small de 32 px.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--dropdown-menu-size-search-height)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

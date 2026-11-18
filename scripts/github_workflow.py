@@ -117,16 +117,12 @@ def write(base, path, data):
 
 
 def session_client(runtime, get=None):
-    sessions = [name for name in ('assets/github-session.json', 'assets/azure-session.json')
+    sessions = [name for name in ('assets/github-session.json',)
                 if (runtime / name).is_file()]
     if len(sessions) != 1:
         raise ValueError('Expected exactly one remote session')
     session = json.loads((runtime / sessions[0]).read_bytes())
-    if sessions[0] == 'assets/azure-session.json':
-        from azure_workflow import AzureDevOps
-        client_type = AzureDevOps
-    else:
-        client_type = GitHub
+    client_type = GitHub
     if session.get('repository') != client_type.repository or session.get('delivery') != client_type.delivery:
         raise ValueError('Remote session origin mismatch')
     return session, client_type(session['commit'], get)

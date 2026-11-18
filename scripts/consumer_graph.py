@@ -129,7 +129,7 @@ def validate_index(index, manifest):
 
 class Reader:
     def source(self, path):
-        if any(safe(self.runtime, name).is_file() for name in ('assets/github-session.json', 'assets/azure-session.json')):
+        if any(safe(self.runtime, name).is_file() for name in ('assets/github-session.json',)):
             from github_workflow import source
             return source(self.runtime, path)
         return safe(self.snapshot, path).read_bytes()

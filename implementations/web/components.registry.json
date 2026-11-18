@@ -9,14 +9,17 @@
       "AppShellGridItem"
     ],
     "category": "navegación",
-    "notes": "Compón Header, Sidebar y Section Header. Elige Grid, Flex o Conversación. En Conversación, pasa Chat en children y el Rail y Panel opcional en rightSidebar.",
+    "notes": "Grid, Flex, Conversación o Conversación con preview del documento. En preview, Chat conserva 374 px y el documento llena el espacio restante.",
     "base": "specs/components/app-shell.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/app-shell.document-preview.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "REQUIRED",
       "reason": "Body admite composición reemplazable. El modo de conversación añade la región Right sidebar."
     },
-    "qa": "qa/implementations/app-shell.v1.0.0.review.md"
+    "qa": "qa/implementations/app-shell.v1.0.0.review.md",
+    "example_source": "separate"
   },
   {
     "id": "AVATAR-001",
@@ -165,6 +168,25 @@
       "reason": "Messages admite composición de historial en Started"
     },
     "qa": "qa/implementations/chat.v1.0.0.review.md",
+    "example_source": "separate"
+  },
+  {
+    "id": "CHAT-DOCUMENT-VIEWER-001",
+    "slug": "chat-document-viewer",
+    "name": "Chat Document Viewer",
+    "module": "chat-document-viewer",
+    "exports": [
+      "ChatDocumentViewer"
+    ],
+    "category": "conversación",
+    "notes": "Documento entregado junto al Chat, con acciones del anfitrión y contenido reemplazable mediante preview.",
+    "base": "specs/components/chat-document-viewer.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "REQUIRED",
+      "reason": "preview es un Slot nativo con contenido y cantidad editables."
+    },
+    "qa": "qa/implementations/chat-document-viewer.v1.0.0.review.md",
     "example_source": "separate"
   },
   {
@@ -402,14 +424,16 @@
       "DropdownField"
     ],
     "category": "formularios",
-    "notes": "DropdownField coordina el combobox de solo selección con el listbox. El host controla los datos y la selección.",
+    "notes": "DropdownField conserva selección simple y añade showSearch opcional, con filtrado local y Search small fuera del listbox. El host controla datos y selección.",
     "base": "specs/components/dropdown-menu.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/dropdown-menu.search.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "REQUIRED",
       "reason": "Options admite insertar, quitar y reordenar ítems oficiales"
     },
-    "qa": "qa/implementations/dropdown-chain.v1.0.0.review.md"
+    "qa": "qa/implementations/dropdown-menu.search.v1.0.0.review.md"
   },
   {
     "id": "FILE-UPLOAD-001",

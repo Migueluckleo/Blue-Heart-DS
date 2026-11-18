@@ -1,0 +1,161 @@
+{
+  "variants": [
+    {
+      "ownerId": "453:5306",
+      "slots": [
+        {
+          "id": "455:5193",
+          "type": "SLOT",
+          "name": "Body",
+          "refs": {
+            "slotContentId": "Body#105:0"
+          },
+          "width": 374,
+          "height": 717
+        },
+        {
+          "id": "455:5542",
+          "type": "SLOT",
+          "name": "Document preview",
+          "refs": {
+            "slotContentId": "Document preview#454:0"
+          },
+          "width": 819,
+          "height": 717
+        },
+        {
+          "id": "455:5809",
+          "type": "SLOT",
+          "name": "Right sidebar",
+          "refs": {
+            "slotContentId": "Right sidebar#299:7"
+          },
+          "width": 79,
+          "height": 717
+        }
+      ]
+    },
+    {
+      "ownerId": "453:5430",
+      "slots": [
+        {
+          "id": "455:6112",
+          "type": "SLOT",
+          "name": "Body",
+          "refs": {
+            "slotContentId": "Body#105:0"
+          },
+          "width": 374,
+          "height": 717
+        },
+        {
+          "id": "455:6379",
+          "type": "SLOT",
+          "name": "Document preview",
+          "refs": {
+            "slotContentId": "Document preview#454:0"
+          },
+          "width": 657,
+          "height": 717
+        },
+        {
+          "id": "455:6682",
+          "type": "SLOT",
+          "name": "Right sidebar",
+          "refs": {
+            "slotContentId": "Right sidebar#299:7"
+          },
+          "width": 79,
+          "height": 717
+        }
+      ]
+    }
+  ],
+  "props": {
+    "Body#105:0": {
+      "type": "SLOT",
+      "description": "Sustituye los ejemplos por contenido de la pantalla. Mantén la rejilla o la composición de filas que corresponda.",
+      "slotSettings": {
+        "stretchChildOnInsert": false,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "preferredValues": []
+    },
+    "Right sidebar#299:7": {
+      "type": "SLOT",
+      "description": "Panel opcional seguido del Rail de Chat Sidebar.",
+      "preferredValues": []
+    },
+    "Document preview#454:0": {
+      "type": "SLOT",
+      "description": "Documento entregado junto al Chat. Contenido editable del visor; el ancho llena el espacio restante.",
+      "slotSettings": {
+        "stretchChildOnInsert": true,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "preferredValues": []
+    },
+    "Body#455:0": {
+      "type": "SLOT",
+      "description": null,
+      "preferredValues": []
+    },
+    "Document preview#455:9": {
+      "type": "SLOT",
+      "description": null,
+      "preferredValues": []
+    },
+    "Right sidebar#455:18": {
+      "type": "SLOT",
+      "description": null,
+      "preferredValues": []
+    },
+    "Body#455:27": {
+      "type": "SLOT",
+      "description": null,
+      "preferredValues": []
+    },
+    "Document preview#455:36": {
+      "type": "SLOT",
+      "description": null,
+      "preferredValues": []
+    },
+    "Right sidebar#455:45": {
+      "type": "SLOT",
+      "description": null,
+      "preferredValues": []
+    },
+    "menu": {
+      "type": "VARIANT",
+      "defaultValue": "collapsed",
+      "variantOptions": [
+        "collapsed",
+        "expanded"
+      ]
+    },
+    "body layout": {
+      "type": "VARIANT",
+      "defaultValue": "grid",
+      "variantOptions": [
+        "grid",
+        "flex",
+        "conversation",
+        "conversation-preview"
+      ]
+    }
+  },
+  "rawMutatedIds": [
+    "455:5193",
+    "455:5542",
+    "455:5809",
+    "455:6112",
+    "455:6379",
+    "455:6682"
+  ]
+}

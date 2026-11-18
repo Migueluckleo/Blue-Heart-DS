@@ -1,0 +1,172 @@
+[
+  {
+    "id": "430:5222",
+    "name": "App Shell",
+    "type": "INSTANCE",
+    "main": {
+      "id": "299:1332",
+      "name": "menu=collapsed, body layout=conversation",
+      "parent": "105:7"
+    },
+    "props": {
+      "Right sidebar#299:7": {
+        "type": "SLOT",
+        "preferredValues": []
+      },
+      "Body#105:0": {
+        "type": "SLOT",
+        "preferredValues": []
+      },
+      "menu": {
+        "value": "collapsed",
+        "type": "VARIANT",
+        "boundVariables": {}
+      },
+      "body layout": {
+        "value": "conversation",
+        "type": "VARIANT",
+        "boundVariables": {}
+      }
+    }
+  },
+  {
+    "id": "430:13907",
+    "name": "preview",
+    "type": "SLOT",
+    "componentPropertyReferences": {
+      "slotContentId": "preview#430:0"
+    },
+    "children": [
+      {
+        "id": "430:13908",
+        "name": "toolbar",
+        "type": "FRAME"
+      },
+      {
+        "id": "430:13912",
+        "name": "visualizaciónContainer",
+        "type": "FRAME"
+      },
+      {
+        "id": "430:13915",
+        "name": "Molecules / Anticipa / Preview Table",
+        "type": "FRAME"
+      }
+    ]
+  },
+  {
+    "id": "105:7",
+    "name": "App Shell",
+    "type": "COMPONENT_SET",
+    "children": [
+      {
+        "id": "105:3",
+        "name": "menu=collapsed, body layout=grid",
+        "type": "COMPONENT"
+      },
+      {
+        "id": "105:4",
+        "name": "menu=expanded, body layout=grid",
+        "type": "COMPONENT"
+      },
+      {
+        "id": "105:5",
+        "name": "menu=collapsed, body layout=flex",
+        "type": "COMPONENT"
+      },
+      {
+        "id": "105:6",
+        "name": "menu=expanded, body layout=flex",
+        "type": "COMPONENT"
+      },
+      {
+        "id": "299:1332",
+        "name": "menu=collapsed, body layout=conversation",
+        "type": "COMPONENT"
+      },
+      {
+        "id": "299:2120",
+        "name": "menu=expanded, body layout=conversation",
+        "type": "COMPONENT"
+      }
+    ],
+    "props": {
+      "Body#105:0": {
+        "type": "SLOT",
+        "description": "Sustituye los ejemplos por contenido de la pantalla. Mantén la rejilla o la composición de filas que corresponda.",
+        "slotSettings": {
+          "stretchChildOnInsert": false,
+          "displayEmptyByDefault": false,
+          "minChildren": null,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": false
+        },
+        "preferredValues": []
+      },
+      "Right sidebar#299:7": {
+        "type": "SLOT",
+        "description": "Panel opcional seguido del Rail de Chat Sidebar.",
+        "preferredValues": []
+      },
+      "menu": {
+        "type": "VARIANT",
+        "defaultValue": "collapsed",
+        "variantOptions": [
+          "collapsed",
+          "expanded"
+        ]
+      },
+      "body layout": {
+        "type": "VARIANT",
+        "defaultValue": "grid",
+        "variantOptions": [
+          "grid",
+          "flex",
+          "conversation"
+        ]
+      }
+    }
+  },
+  {
+    "id": "299:1332",
+    "name": "menu=collapsed, body layout=conversation",
+    "type": "COMPONENT",
+    "children": [
+      {
+        "id": "299:1324",
+        "name": "Header",
+        "type": "INSTANCE",
+        "width": 1440,
+        "height": 96
+      },
+      {
+        "id": "299:1325",
+        "name": "Content",
+        "type": "FRAME",
+        "width": 1440,
+        "height": 920
+      }
+    ]
+  },
+  {
+    "id": "299:2120",
+    "name": "menu=expanded, body layout=conversation",
+    "type": "COMPONENT",
+    "children": [
+      {
+        "id": "299:2112",
+        "name": "Header",
+        "type": "INSTANCE",
+        "width": 1440,
+        "height": 96
+      },
+      {
+        "id": "299:2113",
+        "name": "Content",
+        "type": "FRAME",
+        "width": 1440,
+        "height": 920
+      }
+    ]
+  }
+]

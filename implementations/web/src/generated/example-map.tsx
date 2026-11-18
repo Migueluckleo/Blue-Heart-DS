@@ -1,7 +1,9 @@
 'use client';
 import * as Examples from '../examples';
+import * as Example_app_shell from '../examples/app-shell';
 import * as Example_characters from '../examples/characters';
 import * as Example_chat from '../examples/chat';
+import * as Example_chat_document_viewer from '../examples/chat-document-viewer';
 import * as Example_chat_history_item from '../examples/chat-history-item';
 import * as Example_chat_plan_usage from '../examples/chat-plan-usage';
 import * as Example_chat_sidebar from '../examples/chat-sidebar';
@@ -12,7 +14,7 @@ import * as Example_conversation_response from '../examples/conversation-respons
 import * as Example_user_message from '../examples/user-message';
 import type { ComponentType } from 'react';
 export const examples: Record<string, ComponentType> = {
-  "app-shell": Examples.AppShellExample,
+  "app-shell": Example_app_shell.AppShellExample,
   "avatar": Examples.AvatarExample,
   "avatar-group": Examples.AvatarGroupExample,
   "badge": Examples.BadgeExample,
@@ -21,6 +23,7 @@ export const examples: Record<string, ComponentType> = {
   "buttons": Examples.ButtonsExample,
   "characters": Example_characters.CharactersExample,
   "chat": Example_chat.ChatExample,
+  "chat-document-viewer": Example_chat_document_viewer.ChatDocumentViewerExample,
   "chat-history-item": Example_chat_history_item.ChatHistoryItemExample,
   "chat-plan-usage": Example_chat_plan_usage.ChatPlanUsageExample,
   "chat-sidebar": Example_chat_sidebar.ChatSidebarExample,

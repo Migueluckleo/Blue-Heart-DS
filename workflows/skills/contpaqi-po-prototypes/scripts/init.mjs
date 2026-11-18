@@ -9,7 +9,7 @@ if (!arg) throw new Error('Uso: node <runtime>/scripts/init.mjs <proyecto-nuevo>
 const assets = path.join(skill, 'assets');
 const releasePath = path.join(assets, 'release.json');
 const manifestPath = path.join(assets, 'snapshot-manifest.json');
-const sessionPaths = ['github-session.json', 'azure-session.json'].map(name => path.join(assets, name)).filter(existsSync);
+const sessionPaths = ['github-session.json'].map(name => path.join(assets, name)).filter(existsSync);
 if (sessionPaths.length > 1) throw new Error('Sesión remota ambigua.');
 const sessionPath = sessionPaths[0];
 if (!existsSync(releasePath) || !existsSync(manifestPath)) {

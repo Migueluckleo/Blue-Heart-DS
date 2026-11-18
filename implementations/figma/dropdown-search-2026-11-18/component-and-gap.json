@@ -1,0 +1,79 @@
+{
+  "gap": {
+    "id": "VariableID:481:33",
+    "name": "dropdown/spacing/menu-search-gap",
+    "values": {
+      "6:20": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:255"
+      },
+      "6:21": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:255"
+      },
+      "6:22": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:255"
+      },
+      "6:23": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:255"
+      }
+    },
+    "scopes": []
+  },
+  "menu": {
+    "id": "119:17",
+    "key": "55501bd7b5aa5a9cbd18a7f2760368de95b1cad2",
+    "width": 320,
+    "height": 42,
+    "props": {
+      "Options#119:0": {
+        "type": "SLOT",
+        "description": "Instancias de Dropdown item del mismo size. En selección simple, como máximo una option selected; header y divider no eligen.",
+        "slotSettings": {
+          "stretchChildOnInsert": true,
+          "displayEmptyByDefault": false,
+          "minChildren": 1,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": true
+        },
+        "preferredValues": [
+          {
+            "type": "COMPONENT_SET",
+            "key": "cce41e00be54980badfdc725fcb5094b13909494"
+          }
+        ]
+      },
+      "Show scrollbar#119:1": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      "Show search#481:0": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      }
+    }
+  },
+  "results": {
+    "id": "481:34",
+    "width": 318,
+    "height": 40
+  },
+  "search": {
+    "id": "481:35",
+    "visible": false,
+    "references": {
+      "visible": "Show search#481:0"
+    }
+  },
+  "slot": {
+    "id": "119:18",
+    "type": "SLOT",
+    "references": {
+      "slotContentId": "Options#119:0"
+    },
+    "width": 159,
+    "height": 32
+  }
+}

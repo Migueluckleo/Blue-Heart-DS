@@ -6,7 +6,7 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 
 | Familia | Base | Estado documental | Enmiendas | Evidencia de implementación |
 |---|---|---|---|---|
-| APP-SHELL-001 | [1.0.0](../../specs/components/app-shell.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
+| APP-SHELL-001 | [1.0.0](../../specs/components/app-shell.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 1 registros por alcance |
 | AVATAR-001 | [1.0.0](../../specs/components/avatar.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | AVATAR-GROUP-001 | [1.0.0](../../specs/components/avatar-group.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | BADGE-001 | [1.0.0](../../specs/components/badge.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
@@ -15,6 +15,7 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 | BUTTON-001 | [1.0.0](../../specs/components/buttons.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 1 registros por alcance |
 | CHARACTERS-001 | [1.0.0](../../specs/components/characters.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | CHAT-001 | [1.0.0](../../specs/components/chat.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| CHAT-DOCUMENT-VIEWER-001 | [1.0.0](../../specs/components/chat-document-viewer.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | CHAT-HISTORY-ITEM-001 | [1.0.0](../../specs/components/chat-history-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | CHAT-PLAN-USAGE-001 | [1.0.0](../../specs/components/chat-plan-usage.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | CHAT-SIDEBAR-001 | [1.0.0](../../specs/components/chat-sidebar.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
@@ -67,11 +68,12 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 Base: [specs/components/app-shell.contract.v1.0.0.md](../../specs/components/app-shell.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/app-shell.contract.v1.0.0.md](../../specs/components/app-shell.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/app-shell.contract.v1.0.0.md](../../specs/components/app-shell.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/app-shell.document-preview.amendment.v1.0.0.md](../../specs/components/app-shell.document-preview.amendment.v1.0.0.md).
 - Página declarada: App Shell en [specs/components/app-shell.contract.v1.0.0.md](../../specs/components/app-shell.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: REQUIRED en [specs/components/app-shell.contract.v1.0.0.md](../../specs/components/app-shell.contract.v1.0.0.md).
+- Slots: REQUIRED en [specs/components/app-shell.contract.v1.0.0.md](../../specs/components/app-shell.contract.v1.0.0.md); REQUIRED en [specs/components/app-shell.document-preview.amendment.v1.0.0.md](../../specs/components/app-shell.document-preview.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/components/app-shell.document-preview.amendment.v1.0.0.md](../../specs/components/app-shell.document-preview.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
 - Implementación: [implementations/figma/app-shell-conversation/readback.json](../../implementations/figma/app-shell-conversation/readback.json) — {}.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
@@ -180,6 +182,20 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Preparación: UNKNOWN.
 - Slots: REQUIRED en [specs/components/chat.contract.v1.0.0.md](../../specs/components/chat.contract.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## CHAT-DOCUMENT-VIEWER-001
+
+Base: [specs/components/chat-document-viewer.contract.v1.0.0.md](../../specs/components/chat-document-viewer.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/components/chat-document-viewer.contract.v1.0.0.md](../../specs/components/chat-document-viewer.contract.v1.0.0.md).
+- Página declarada: Chat Document Viewer en [specs/components/chat-document-viewer.contract.v1.0.0.md](../../specs/components/chat-document-viewer.contract.v1.0.0.md).
+- Preparación: UNKNOWN.
+- Slots: REQUIRED en [specs/components/chat-document-viewer.contract.v1.0.0.md](../../specs/components/chat-document-viewer.contract.v1.0.0.md).
+- Revisión de implementación declarada: UNKNOWN.
+- QA por alcance: [qa/contracts/chat-document-viewer.v1.0.0.review.md](../../qa/contracts/chat-document-viewer.v1.0.0.review.md).
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -801,3 +817,9 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Revisión de implementación declarada: UNKNOWN.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
+## Enmiendas sin asociación automática a una base
+
+Conservan su identidad y alcance propios; consultar relaciones explícitas en cada documento.
+
+- [specs/components/dropdown-menu.search.amendment.v1.0.0.md](../../specs/components/dropdown-menu.search.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD.

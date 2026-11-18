@@ -61,3 +61,11 @@ Solicitud explícita del usuario del 17 de noviembre de 2026: roles Body para co
 ## Política de visibilidad de tokens · 2026-11-17
 
 SRC-TOKEN-VISIBILITY-20261117: solicitud explícita del usuario y [datos canónicos de scopes](../specs/tokens/visibility.body-only.correction.json), SHA-256 bfeff78297e413e05a989523fecf5adb8f79850f99cd15cd25196a78b2e88397. [Lecturas Figma](../implementations/figma/token-visibility-2026-11-17/before.json) conservadas antes/después; el cambio no sustituye valores ni aliases históricos.
+
+## Chat Document Viewer y layout de documento · 2026-11-18
+
+SRC-CHAT-DOCUMENT-VIEWER-20261118: nodos aportados 430:15516 (principal) y 430:5222 (layout), maestro yZsIpXywybsPDytjolwcP4. [Snapshots conservados](../sources/figma-snapshots/chat-document-viewer-2026-11-18/component-before.json). [Datos canónicos](../specs/tokens/chat-document-viewer.v1.0.0.json), SHA-256 5d3792222fde1e9f92b5bace9ad55021c3fc747e9abd45d869e3a68ce576bde4; distingue IDs lógicos y destino. 374 px y tracking 0.1% proceden de la fuente; normalización px explícita.
+
+## Dropdown menu con búsqueda · 2026-11-18
+
+SRC-DROPDOWN-SEARCH-20261118: fuente aportada 430:16410 en el maestro autorizado. [Lectura conservada](../sources/figma-snapshots/dropdown-search-2026-11-18/source-before.json). [Datos delegados](../specs/tokens/dropdown-menu.search.v1.0.0.json), SHA-256 6e815076a56f45c2c2d31a344beb10c3cf4b4460620eadf47cb08a4e25ee9ab7. 16/32/4 px observados; 318 px derivados del viewport con borde. Autorización explícita de push a main, incluida la limpieza Azure y ajustes de consumo.

@@ -47,17 +47,3 @@ El índice reducido, derivado de Graphify, se valida contra el manifiesto y se u
 Figma obtiene fuentes necesarias durante inventario, preflight y consultas. La construcción web materializa el código, assets y entradas de planificación que necesita el proyecto. El corpus histórico, las evidencias masivas y el grafo completo permanecen remotos. Las fuentes ya obtenidas se verifican al reutilizarlas dentro del mismo encargo. Si una fuente falta, la red falla o el hash difiere, la decisión dependiente queda bloqueada; no se usa un paquete viejo ni un checkout local como alternativa.
 
 El commit, el manifiesto, los hashes, las URLs y los resultados quedan en los comprobantes de la sesión. Un encargo nuevo vuelve a consultar `main`; el encargo activo conserva un commit coherente. Las fuentes y el catálogo se publican juntos mediante una autorización de publicación separada. La instalación de los lanzadores también requiere su propio alcance autorizado.
-
-## 7. Variante Azure DevOps 1.0.9 · 2026-11-18
-
-Por solicitud explícita del usuario, existe un canal de consumo Azure independiente de los paquetes GitHub históricos. Sus lanzadores están en `skills-azure/`; `config/azure-consumption.json` declara repositorio, versión y salida. `python3 -B scripts/ds_azure.py build` genera los dos ZIP 1.0.9 bajo `output/skills/azure/1.0.9/` y `check` comprueba su integridad sin instalarlos. La misma versión numérica identifica variantes de proveedor distintas; los manifiestos y directorios de canal las distinguen. No se modifica un paquete histórico en su lugar.
-
-El lanzador Azure resuelve la rama predeterminada real del repositorio y fija su commit. `scripts/azure_workflow.py` usa la API Azure Repos 7.1 para obtener blobs y archivos. Comparte con `scripts/github_workflow.py` las verificaciones de catálogo, materialización y consultas; la sesión `azure-session.json` fija el proveedor y no permite pasar a GitHub ante un fallo. Los workflows y las plantillas compartidos admiten ambos orígenes. Se mantienen la lectura bajo demanda, los hashes y las reglas de las secciones anteriores.
-
-La autenticación pertenece al entorno del consumidor y nunca a los lanzadores. La [guía Azure](../references/AZURE-SKILL-CONSUMPTION.md) conserva método, requisitos, evidencia, pruebas y límites. Solo una integración autenticada contra fuentes publicadas acredita consumo remoto; pruebas locales o una respuesta HTML de inicio de sesión no lo sustituyen.
-
-## 8. Prefijo de las skills Azure · 2026-11-18
-
-Por petición del usuario, los nombres instalables de Azure son `azure-contpaqi-po-prototypes` y `azure-contpaqi-figma-screens`. Las carpetas, `name` del frontmatter, ZIP, identidades de release y traspaso usan ese prefijo. Las rutas internas compartidas de workflow permanecen canónicas. El cargador Azure acepta también los nombres de arranque anteriores para compatibilidad, pero emite las identidades con prefijo. Los lanzadores GitHub conservan sus nombres.
-
-La versión solicitada sigue siendo 1.0.9. Los ZIP renombrados se generan en `output/skills/azure-prefixed/1.0.9/` para preservar intacta la entrega anterior y su manifiesto. No se necesita reinstalar una skill de GitHub para usar la variante Azure; se puede instalar cada variante con su nombre distinto.

@@ -43,6 +43,9 @@ Usa App Shell para reunir navegación global y el contenido principal de una pan
 | Dashboard con módulos alineados | Usa Grid y elige spans según los mínimos de cada módulo. | Fijar las alturas de los rectángulos de ejemplo. |
 | Listado, formulario o detalle | Usa Flex cuando predomine un eje. Conserva el orden del contenido. | Reordenar el significado visualmente. |
 | Menú expandido y contenido largo | Verifica espacio disponible y declara una región de scroll en el anfitrión. | Convertir el recorte del ejemplo Figma en contenido web inaccesible. |
+| Documento entregado durante una conversación | Usa conversation-preview con Chat en Body y el visor en Document preview. | Sustituir Chat por una tabla fija o desanclar las regiones. |
+
+La [enmienda de documento entregado](app-shell.document-preview.amendment.v1.0.0.md) añade dos variantes a las seis anteriores y documenta ancho, Slots, acciones y equivalencia web. El set vigente tiene ocho variantes; los contratos y QA anteriores conservan su alcance histórico.
 
 ## Description exacta
 

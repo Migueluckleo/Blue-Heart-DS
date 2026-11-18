@@ -16,7 +16,7 @@ npm run capture
 npm run handoff
 ```
 
-`CARGADOR_REMOTO` es el cargador del proveedor (`github_workflow.py` o `azure_workflow.py`) leído desde el repositorio de origen en el commit resuelto, no desde la instalación. `RUNTIME` y `PROYECTO` son rutas
+`CARGADOR_REMOTO` es el cargador del proveedor (`github_workflow.py`) leído desde el repositorio de origen en el commit resuelto, no desde la instalación. `RUNTIME` y `PROYECTO` son rutas
 distintas a carpetas nuevas, con el proyecto fuera del runtime. Si ya resolviste
 el corte para este encargo, reutiliza el `runtime` del comprobante.
 

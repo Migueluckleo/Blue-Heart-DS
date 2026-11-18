@@ -26,6 +26,8 @@ El disparador usa la superficie de Input fuera del menú, con gap de 4 y ancho c
 
 ## Guía semántica normativa
 
+La [enmienda de búsqueda opcional](dropdown-menu.search.amendment.v1.0.0.md) rige `Show search` y su API web, conserva Options y los defaults del menú. Consultarla junto con este contrato.
+
 Usa Dropdown menu para elegir un valor de una lista definida por el anfitrión. W3C WAI relaciona combobox y listbox mediante controles y opción activa. Carbon mantiene la etiqueta del campo y distingue elección simple de multiselección. [W3C WAI Combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/) · [Carbon Dropdown](https://www.carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines)
 
 | Situación | Haz | Evita |

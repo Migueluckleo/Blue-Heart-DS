@@ -30,6 +30,8 @@ export interface ButtonCommonProps {
   leftIcon?: ButtonIcon;
   rightIcon?: ButtonIcon;
   describedBy?: string;
+  /** Controlled pressed state for actions that toggle a view. */
+  ariaPressed?: boolean;
   id?: string;
   className?: string;
   /** For an isolated catalogue specimen. */
@@ -130,7 +132,7 @@ export function Button(props: ButtonProps) {
         props.onClick?.(event);
       }}>{content}</a>;
   }
-  return <button {...common} type={props.type ?? 'button'} disabled={disabled} onClick={event => {
+  return <button {...common} type={props.type ?? 'button'} disabled={disabled} aria-pressed={props.ariaPressed} onClick={event => {
     if (blocked) {event.preventDefault(); return;}
     props.onClick?.(event);
   }}>{content}</button>;

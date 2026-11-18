@@ -92,3 +92,11 @@ v1.0.0 · DELEGATED_FOR_BUILD. [Contrato](../specs/components/chat.contract.v1.0
 ## Contrato primordial de consumo · 2026-11-17
 
 [FOUNDATIONS-PRODUCT-CONSUMPTION-001](../specs/foundations/product-consumption.contract.v1.0.0.md) es obligatorio para ambos workflows. Controles oficiales del DS; solo moléculas locales de producto con Body; carencias atómicas bloqueadas; fuentes y herramientas vigentes consultadas desde GitHub.
+
+## Chat Document Viewer y layout de documento · 2026-11-18
+
+[CHAT-DOCUMENT-VIEWER-001](../specs/components/chat-document-viewer.contract.v1.0.0.md) y [APP-SHELL-DOCUMENT-PREVIEW-001](../specs/components/app-shell.document-preview.amendment.v1.0.0.md): DELEGATED_FOR_BUILD tras QA documental. Visor con Slot nativo y dos variantes adicionales de App Shell, preservando las seis anteriores.
+
+## Dropdown menu · búsqueda opcional
+
+[Enmienda DROPDOWN-MENU-001-SEARCH](../specs/components/dropdown-menu.search.amendment.v1.0.0.md): DELEGATED_FOR_BUILD, QA documental PASS, user_audit NOT_REQUIRED. Preserva maestro, Slot y defaults; distingue diseño observado de filtro y accesibilidad web derivados.

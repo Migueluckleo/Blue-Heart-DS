@@ -97,3 +97,11 @@ TOKEN-QA-01 se probó en seis maestros y auxiliares corregidos. Leyó 1.326 bind
 ## Política de visibilidad de tokens · 2026-11-17
 
 [QA documental](../qa/contracts/token-visibility.v1.0.0.review.md) y [QA de implementación](../qa/implementations/token-visibility.v1.0.0.review.md): PASS. TOKEN-QA-03 obligatorio en cada alta/corrección de tokens o componentes en Figma y web; comparación posterior de scopes exactos, aliases, valores, bindings, estilos Body y publicación. 1,462 variables, 43 páginas, 19,692 nodos y cinco estilos Body cotejados.
+
+## Chat Document Viewer y layout de documento · 2026-11-18
+
+[QA documental](../qa/contracts/chat-document-viewer.v1.0.0.review.md) PASS. [QA de implementación](../qa/implementations/chat-document-viewer.v1.0.0.review.md): Slots nativos, identidad, A–Z, cadenas por cuatro modos, TOKEN-QA-01/02/03 y acciones web. Se preservan 1,462 variables previas; inventario 1,485, 33 Body visibles. Tracking normalizado a píxeles por limitación de binding Figma. Cierre técnico registrado con sus resultados reales.
+
+## Dropdown menu con búsqueda · 2026-11-18
+
+[QA documental](../qa/contracts/dropdown-menu.search.v1.0.0.review.md) y [QA de implementación](../qa/implementations/dropdown-menu.search.v1.0.0.review.md): PASS. Show search opcional, Slot nativo preservado, scroll, filtro local, teclado/foco/IME, cuatro temas y TOKEN-QA-01/02/03. Se preservan 33 scopes y cinco estilos Body. El listbox se excluye del Tab implícito del navegador.

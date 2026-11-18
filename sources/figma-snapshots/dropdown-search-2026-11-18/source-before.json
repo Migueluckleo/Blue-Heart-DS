@@ -1,0 +1,747 @@
+[
+  {
+    "id": "119:17",
+    "name": "Dropdown menu",
+    "type": "COMPONENT",
+    "width": 320,
+    "height": 210,
+    "layoutMode": "HORIZONTAL",
+    "layoutSizingHorizontal": "FIXED",
+    "layoutSizingVertical": "HUG",
+    "itemSpacing": 0,
+    "paddingLeft": 0,
+    "paddingRight": 0,
+    "paddingTop": 0,
+    "paddingBottom": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:630"
+          }
+        }
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "color": {
+          "r": 0.7490196228027344,
+          "g": 0.8078431487083435,
+          "b": 0.9960784316062927
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:631"
+          }
+        }
+      }
+    ],
+    "strokeWeight": 1,
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "radius": 6,
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:633"
+          },
+          "spread": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:637"
+          },
+          "radius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:634"
+          },
+          "offsetX": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:636"
+          },
+          "offsetY": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:635"
+          }
+        },
+        "color": {
+          "r": 0.0470588244497776,
+          "g": 0.0470588244497776,
+          "b": 0.0470588244497776,
+          "a": 0.10000000149011612
+        },
+        "offset": {
+          "x": 0,
+          "y": 4
+        },
+        "spread": -2,
+        "blendMode": "NORMAL",
+        "showShadowBehindNode": false
+      }
+    ],
+    "boundVariables": {
+      "itemSpacing": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:627"
+      },
+      "paddingLeft": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:627"
+      },
+      "paddingTop": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:627"
+      },
+      "paddingRight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:627"
+      },
+      "paddingBottom": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:627"
+      },
+      "topLeftRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:628"
+      },
+      "topRightRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:628"
+      },
+      "bottomLeftRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:628"
+      },
+      "bottomRightRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:628"
+      },
+      "strokeTopWeight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:629"
+      },
+      "strokeBottomWeight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:629"
+      },
+      "strokeLeftWeight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:629"
+      },
+      "strokeRightWeight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:629"
+      },
+      "maxHeight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:632"
+      },
+      "fills": [
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:630"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:631"
+        }
+      ],
+      "effects": [
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:633"
+        },
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:634"
+        },
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:635"
+        },
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:636"
+        },
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:637"
+        }
+      ]
+    },
+    "visible": true,
+    "maxHeight": 320,
+    "cornerRadius": 8,
+    "children": [
+      {
+        "id": "119:18",
+        "name": "Options",
+        "type": "SLOT",
+        "width": 318,
+        "height": 208
+      },
+      {
+        "id": "119:53",
+        "name": "Scrollbar",
+        "type": "INSTANCE",
+        "width": 12,
+        "height": 208
+      }
+    ],
+    "props": {
+      "Options#119:0": {
+        "type": "SLOT",
+        "description": "Instancias de Dropdown item del mismo size. En selección simple, como máximo una option selected; header y divider no eligen.",
+        "slotSettings": {
+          "stretchChildOnInsert": true,
+          "displayEmptyByDefault": false,
+          "minChildren": 1,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": true
+        },
+        "preferredValues": [
+          {
+            "type": "COMPONENT_SET",
+            "key": "cce41e00be54980badfdc725fcb5094b13909494"
+          }
+        ]
+      },
+      "Show scrollbar#119:1": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      }
+    }
+  },
+  {
+    "id": "430:16410",
+    "name": "Dropdown menu",
+    "type": "FRAME",
+    "width": 320,
+    "height": 258,
+    "layoutMode": "HORIZONTAL",
+    "layoutSizingHorizontal": "FIXED",
+    "layoutSizingVertical": "HUG",
+    "itemSpacing": 0,
+    "paddingLeft": 0,
+    "paddingRight": 0,
+    "paddingTop": 0,
+    "paddingBottom": 0,
+    "fills": [
+      {
+        "type": "SOLID",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:630"
+          }
+        }
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "color": {
+          "r": 0.7490196228027344,
+          "g": 0.8078431487083435,
+          "b": 0.9960784316062927
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:631"
+          }
+        }
+      }
+    ],
+    "strokeWeight": 1,
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "radius": 6,
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:633"
+          },
+          "spread": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:637"
+          },
+          "radius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:634"
+          },
+          "offsetX": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:636"
+          },
+          "offsetY": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:635"
+          }
+        },
+        "color": {
+          "r": 0.0470588244497776,
+          "g": 0.0470588244497776,
+          "b": 0.0470588244497776,
+          "a": 0.10000000149011612
+        },
+        "offset": {
+          "x": 0,
+          "y": 4
+        },
+        "spread": -2,
+        "blendMode": "NORMAL",
+        "showShadowBehindNode": false
+      }
+    ],
+    "boundVariables": {
+      "itemSpacing": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:627"
+      },
+      "paddingLeft": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:627"
+      },
+      "paddingTop": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:627"
+      },
+      "paddingRight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:627"
+      },
+      "paddingBottom": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:627"
+      },
+      "topLeftRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:628"
+      },
+      "topRightRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:628"
+      },
+      "bottomLeftRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:628"
+      },
+      "bottomRightRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:628"
+      },
+      "strokeTopWeight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:629"
+      },
+      "strokeBottomWeight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:629"
+      },
+      "strokeLeftWeight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:629"
+      },
+      "strokeRightWeight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:629"
+      },
+      "maxHeight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:632"
+      },
+      "fills": [
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:630"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:631"
+        }
+      ],
+      "effects": [
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:633"
+        },
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:634"
+        },
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:635"
+        },
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:636"
+        },
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:637"
+        }
+      ]
+    },
+    "visible": true,
+    "maxHeight": 320,
+    "cornerRadius": 8,
+    "children": [
+      {
+        "id": "430:16411",
+        "name": "results",
+        "type": "FRAME",
+        "width": 306,
+        "height": 256
+      },
+      {
+        "id": "430:16417",
+        "name": "Scrollbar",
+        "type": "INSTANCE",
+        "width": 12,
+        "height": 208
+      }
+    ]
+  },
+  {
+    "id": "430:16411",
+    "name": "results",
+    "type": "FRAME",
+    "width": 306,
+    "height": 256,
+    "layoutMode": "VERTICAL",
+    "layoutSizingHorizontal": "FILL",
+    "layoutSizingVertical": "HUG",
+    "itemSpacing": 16,
+    "paddingLeft": 4,
+    "paddingRight": 4,
+    "paddingTop": 4,
+    "paddingBottom": 4,
+    "fills": [],
+    "strokes": [],
+    "strokeWeight": 1,
+    "effects": [],
+    "boundVariables": {
+      "itemSpacing": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:344:28"
+      },
+      "paddingLeft": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:638"
+      },
+      "paddingTop": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:638"
+      },
+      "paddingRight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:638"
+      },
+      "paddingBottom": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:638"
+      }
+    },
+    "visible": true,
+    "maxHeight": null,
+    "cornerRadius": 0,
+    "children": [
+      {
+        "id": "430:16456",
+        "name": "Search",
+        "type": "INSTANCE",
+        "width": 298,
+        "height": 32
+      },
+      {
+        "id": "430:16463",
+        "name": "options",
+        "type": "FRAME",
+        "width": 298,
+        "height": 200
+      }
+    ]
+  },
+  {
+    "id": "430:16456",
+    "name": "Search",
+    "type": "INSTANCE",
+    "width": 298,
+    "height": 32,
+    "layoutMode": "VERTICAL",
+    "layoutSizingHorizontal": "FILL",
+    "layoutSizingVertical": "HUG",
+    "itemSpacing": 8,
+    "paddingLeft": 0,
+    "paddingRight": 0,
+    "paddingTop": 0,
+    "paddingBottom": 0,
+    "fills": [],
+    "strokes": [],
+    "strokeWeight": 1,
+    "effects": [],
+    "boundVariables": {
+      "itemSpacing": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:13:114"
+      },
+      "paddingLeft": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:13:113"
+      },
+      "paddingTop": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:13:113"
+      },
+      "paddingRight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:13:113"
+      },
+      "paddingBottom": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:13:113"
+      }
+    },
+    "visible": true,
+    "maxHeight": null,
+    "cornerRadius": 0,
+    "children": [
+      {
+        "id": "I430:16456;47:57",
+        "name": "content",
+        "type": "FRAME",
+        "width": 298,
+        "height": 32
+      }
+    ],
+    "props": {
+      "Value#47:18": {
+        "type": "TEXT",
+        "value": "Search"
+      },
+      "Show label#47:12": {
+        "type": "BOOLEAN",
+        "value": false
+      },
+      "Label#47:6": {
+        "type": "TEXT",
+        "value": "Search"
+      },
+      "Placeholder#47:0": {
+        "type": "TEXT",
+        "value": "Search"
+      },
+      "size": {
+        "value": "small",
+        "type": "VARIANT",
+        "boundVariables": {}
+      },
+      "state": {
+        "value": "default",
+        "type": "VARIANT",
+        "boundVariables": {}
+      }
+    },
+    "main": {
+      "id": "47:55",
+      "name": "size=small, state=default",
+      "parent": "Search",
+      "remote": false
+    }
+  },
+  {
+    "id": "430:16463",
+    "name": "options",
+    "type": "FRAME",
+    "width": 298,
+    "height": 200,
+    "layoutMode": "VERTICAL",
+    "layoutSizingHorizontal": "FILL",
+    "layoutSizingVertical": "HUG",
+    "itemSpacing": 0,
+    "paddingLeft": 0,
+    "paddingRight": 0,
+    "paddingTop": 0,
+    "paddingBottom": 0,
+    "fills": [],
+    "strokes": [],
+    "strokeWeight": 1,
+    "effects": [],
+    "boundVariables": {},
+    "visible": true,
+    "maxHeight": null,
+    "cornerRadius": 0,
+    "children": [
+      {
+        "id": "430:16412",
+        "name": "Dropdown item",
+        "type": "INSTANCE",
+        "width": 298,
+        "height": 40
+      },
+      {
+        "id": "430:16413",
+        "name": "Dropdown item",
+        "type": "INSTANCE",
+        "width": 298,
+        "height": 40
+      },
+      {
+        "id": "430:16414",
+        "name": "Dropdown item",
+        "type": "INSTANCE",
+        "width": 298,
+        "height": 40
+      },
+      {
+        "id": "430:16415",
+        "name": "Dropdown item",
+        "type": "INSTANCE",
+        "width": 298,
+        "height": 40
+      },
+      {
+        "id": "430:16416",
+        "name": "Dropdown item",
+        "type": "INSTANCE",
+        "width": 298,
+        "height": 40
+      }
+    ]
+  },
+  {
+    "id": "430:16417",
+    "name": "Scrollbar",
+    "type": "INSTANCE",
+    "width": 12,
+    "height": 208,
+    "layoutMode": "VERTICAL",
+    "layoutSizingHorizontal": "FIXED",
+    "layoutSizingVertical": "FIXED",
+    "itemSpacing": 0,
+    "paddingLeft": 4,
+    "paddingRight": 4,
+    "paddingTop": 4,
+    "paddingBottom": 4,
+    "fills": [],
+    "strokes": [],
+    "strokeWeight": 1,
+    "effects": [],
+    "boundVariables": {
+      "itemSpacing": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:627"
+      },
+      "paddingLeft": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:638"
+      },
+      "paddingTop": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:638"
+      },
+      "paddingRight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:638"
+      },
+      "paddingBottom": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:638"
+      },
+      "width": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:639"
+      },
+      "topLeftRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:640"
+      },
+      "topRightRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:640"
+      },
+      "bottomLeftRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:640"
+      },
+      "bottomRightRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:640"
+      }
+    },
+    "visible": true,
+    "maxHeight": null,
+    "cornerRadius": 9999,
+    "children": [
+      {
+        "id": "I430:16417;119:12",
+        "name": "Thumb",
+        "type": "FRAME",
+        "width": 4,
+        "height": 50
+      },
+      {
+        "id": "I430:16417;119:13",
+        "name": "Remaining 1",
+        "type": "FRAME",
+        "width": 4,
+        "height": 50
+      },
+      {
+        "id": "I430:16417;119:14",
+        "name": "Remaining 2",
+        "type": "FRAME",
+        "width": 4,
+        "height": 50
+      },
+      {
+        "id": "I430:16417;119:15",
+        "name": "Remaining 3",
+        "type": "FRAME",
+        "width": 4,
+        "height": 50
+      }
+    ],
+    "props": {},
+    "main": {
+      "id": "119:11",
+      "name": "__Dropdown/Scrollbar small vertical",
+      "parent": "Dropdown",
+      "remote": false
+    }
+  }
+]

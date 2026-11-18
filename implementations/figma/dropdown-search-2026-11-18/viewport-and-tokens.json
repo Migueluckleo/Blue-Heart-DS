@@ -1,0 +1,134 @@
+{
+  "tokens": [
+    {
+      "id": "VariableID:486:33",
+      "name": "size/318",
+      "valuesByMode": {
+        "10:0": 318
+      },
+      "scopes": []
+    },
+    {
+      "id": "VariableID:486:34",
+      "name": "size-318",
+      "valuesByMode": {
+        "6:19": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:486:33"
+        }
+      },
+      "scopes": []
+    },
+    {
+      "id": "VariableID:486:35",
+      "name": "dropdown/size/menu-content-max",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:486:34"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:486:34"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:486:34"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:486:34"
+        }
+      },
+      "scopes": []
+    },
+    {
+      "id": "VariableID:486:36",
+      "name": "dropdown/size/menu-search-height",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:265"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:265"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:265"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:265"
+        }
+      },
+      "scopes": []
+    }
+  ],
+  "menu": {
+    "height": 210,
+    "props": {
+      "Options#119:0": {
+        "type": "SLOT",
+        "description": "Instancias de Dropdown item del mismo size. En selección simple, como máximo una option selected; header y divider no eligen.",
+        "slotSettings": {
+          "stretchChildOnInsert": true,
+          "displayEmptyByDefault": false,
+          "minChildren": 1,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": true
+        },
+        "preferredValues": [
+          {
+            "type": "COMPONENT_SET",
+            "key": "cce41e00be54980badfdc725fcb5094b13909494"
+          }
+        ]
+      },
+      "Show scrollbar#119:1": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      "Show search#481:0": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      }
+    }
+  },
+  "results": {
+    "id": "481:34",
+    "height": 208,
+    "maxHeight": 318,
+    "fixed": 1,
+    "overflow": "VERTICAL",
+    "children": [
+      {
+        "id": "486:37",
+        "type": "FRAME",
+        "name": "Search height reserve",
+        "height": 32,
+        "position": "AUTO",
+        "visible": false
+      },
+      {
+        "id": "119:18",
+        "type": "SLOT",
+        "name": "Options",
+        "height": 200,
+        "position": "AUTO",
+        "visible": true
+      },
+      {
+        "id": "486:38",
+        "type": "FRAME",
+        "name": "Pinned Search",
+        "height": 100,
+        "position": "ABSOLUTE",
+        "visible": false
+      }
+    ]
+  },
+  "spacer": "486:37",
+  "fixed": "486:38"
+}

@@ -1,0 +1,292 @@
+{
+  "status": "PASS",
+  "transport": "LOCAL_CATALOG_HASH_AUDIT",
+  "remote_workflow_execution": "NOT_RUN",
+  "ds_digest": "bb0c078275796da2f9e9b22a6dd30426cacef62cfbaa1ff780c651b1614cf0eb",
+  "manifest_sha256": "71156e8df921358efcafe4d332f6377924f79bf9211f4afa20a2093ddd7868de",
+  "manifest_files": 1279,
+  "components": 52,
+  "queries": [
+    {
+      "component": "DROPDOWN-MENU-001",
+      "intent": "component",
+      "status": "PASS",
+      "mode": "graph",
+      "documents": [
+        "specs/components/dropdown-item.contract.v1.0.0.md",
+        "specs/components/dropdown-menu.contract.v1.0.0.md",
+        "specs/components/dropdown-menu.search.amendment.v1.0.0.md",
+        "specs/components/input.contract.v1.0.0.md",
+        "specs/components/search.contract.v1.0.0.md",
+        "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+        "specs/foundations/token-visibility.contract.v1.0.0.md",
+        "specs/data/dropdown-menu.v1.0.0.json",
+        "specs/data/dropdown-scrollbar.v1.0.0.json",
+        "specs/tokens/dropdown-menu.search.v1.0.0.json"
+      ],
+      "tokens": [],
+      "metrics": {
+        "files_read": 10,
+        "bytes_read": 91579,
+        "index_bytes": 393751,
+        "nodes_visited": 10,
+        "duration_ms": 2.854,
+        "context_bytes": 103843
+      }
+    },
+    {
+      "component": "DROPDOWN-MENU-001",
+      "intent": "dependencies",
+      "status": "PASS",
+      "mode": "graph",
+      "documents": [
+        "specs/components/dropdown-item.contract.v1.0.0.md",
+        "specs/components/dropdown-menu.contract.v1.0.0.md",
+        "specs/components/dropdown-menu.search.amendment.v1.0.0.md",
+        "specs/components/input.contract.v1.0.0.md",
+        "specs/components/search.contract.v1.0.0.md",
+        "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+        "specs/foundations/token-visibility.contract.v1.0.0.md",
+        "specs/data/dropdown-menu.v1.0.0.json",
+        "specs/data/dropdown-scrollbar.v1.0.0.json",
+        "specs/tokens/dropdown-menu.search.v1.0.0.json"
+      ],
+      "tokens": [],
+      "metrics": {
+        "files_read": 10,
+        "bytes_read": 91579,
+        "index_bytes": 393751,
+        "nodes_visited": 10,
+        "duration_ms": 1.161,
+        "context_bytes": 103843
+      }
+    },
+    {
+      "component": "DROPDOWN-MENU-001",
+      "intent": "tokens",
+      "status": "PASS",
+      "mode": "graph",
+      "documents": [
+        "specs/components/dropdown-item.contract.v1.0.0.md",
+        "specs/components/dropdown-menu.contract.v1.0.0.md",
+        "specs/components/dropdown-menu.search.amendment.v1.0.0.md",
+        "specs/components/input.contract.v1.0.0.md",
+        "specs/components/search.contract.v1.0.0.md",
+        "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+        "specs/foundations/token-visibility.contract.v1.0.0.md",
+        "specs/data/dropdown-menu.v1.0.0.json",
+        "specs/data/dropdown-scrollbar.v1.0.0.json",
+        "specs/tokens/blueheart-variables.v0.1.2.json",
+        "specs/tokens/component-layer.correction.json",
+        "specs/tokens/dropdown-menu.search.v1.0.0.json",
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "tokens": [
+        "specs/tokens/dropdown-menu.search.v1.0.0.json#/collections/2/variables/0"
+      ],
+      "metrics": {
+        "files_read": 13,
+        "bytes_read": 1357194,
+        "index_bytes": 393751,
+        "nodes_visited": 13,
+        "duration_ms": 8.633,
+        "context_bytes": 43852
+      }
+    },
+    {
+      "component": "CHAT-DOCUMENT-VIEWER-001",
+      "intent": "component",
+      "status": "PASS",
+      "mode": "graph",
+      "documents": [
+        "specs/components/app-shell.document-preview.amendment.v1.0.0.md",
+        "specs/components/buttons.contract.v1.0.0.md",
+        "specs/components/chat-document-viewer.contract.v1.0.0.md",
+        "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+        "specs/foundations/token-visibility.contract.v1.0.0.md",
+        "specs/tokens/chat-document-viewer.v1.0.0.json"
+      ],
+      "tokens": [],
+      "metrics": {
+        "files_read": 6,
+        "bytes_read": 54913,
+        "index_bytes": 393751,
+        "nodes_visited": 6,
+        "duration_ms": 2.321,
+        "context_bytes": 61324
+      }
+    },
+    {
+      "component": "CHAT-DOCUMENT-VIEWER-001",
+      "intent": "dependencies",
+      "status": "PASS",
+      "mode": "graph",
+      "documents": [
+        "specs/components/app-shell.document-preview.amendment.v1.0.0.md",
+        "specs/components/buttons.contract.v1.0.0.md",
+        "specs/components/buttons.usage.amendment.v1.0.1.md",
+        "specs/components/chat-document-viewer.contract.v1.0.0.md",
+        "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+        "specs/foundations/token-visibility.contract.v1.0.0.md",
+        "specs/tokens/chat-document-viewer.v1.0.0.json"
+      ],
+      "tokens": [],
+      "metrics": {
+        "files_read": 7,
+        "bytes_read": 60730,
+        "index_bytes": 393751,
+        "nodes_visited": 7,
+        "duration_ms": 0.943,
+        "context_bytes": 67585
+      }
+    },
+    {
+      "component": "CHAT-DOCUMENT-VIEWER-001",
+      "intent": "tokens",
+      "status": "PASS",
+      "mode": "graph",
+      "documents": [
+        "specs/components/app-shell.document-preview.amendment.v1.0.0.md",
+        "specs/components/buttons.contract.v1.0.0.md",
+        "specs/components/chat-document-viewer.contract.v1.0.0.md",
+        "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+        "specs/foundations/token-visibility.contract.v1.0.0.md",
+        "specs/tokens/blueheart-variables.v0.1.2.json",
+        "specs/tokens/chat-document-viewer.v1.0.0.json",
+        "specs/tokens/component-layer.correction.json",
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "tokens": [
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/126",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/127",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/128",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/129",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/130",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/131",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/132",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/133",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/134",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/135",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/136",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/137",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/140",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/37",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/89",
+        "specs/tokens/chat-document-viewer.v1.0.0.json#/collections/2/variables/15"
+      ],
+      "metrics": {
+        "files_read": 9,
+        "bytes_read": 1320528,
+        "index_bytes": 393751,
+        "nodes_visited": 9,
+        "duration_ms": 17.78,
+        "context_bytes": 49040
+      }
+    },
+    {
+      "component": "APP-SHELL-001",
+      "intent": "component",
+      "status": "PASS",
+      "mode": "graph",
+      "documents": [
+        "specs/components/app-shell.contract.v1.0.0.md",
+        "specs/components/app-shell.document-preview.amendment.v1.0.0.md",
+        "specs/components/chat-document-viewer.contract.v1.0.0.md",
+        "specs/components/chat-sidebar.contract.v1.0.0.md",
+        "specs/components/chat.contract.v1.0.0.md",
+        "specs/components/header.contract.v1.0.0.md",
+        "specs/components/section-header.contract.v1.0.0.md",
+        "specs/components/sidebar.contract.v1.0.0.md",
+        "specs/components/sidebar.secondary-control.amendment.v1.0.1.md",
+        "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+        "specs/data/app-shell.v1.0.0.json",
+        "specs/tokens/component-layer.correction.json"
+      ],
+      "tokens": [],
+      "metrics": {
+        "files_read": 12,
+        "bytes_read": 269366,
+        "index_bytes": 393751,
+        "nodes_visited": 12,
+        "duration_ms": 3.016,
+        "context_bytes": 296754
+      }
+    },
+    {
+      "component": "APP-SHELL-001",
+      "intent": "dependencies",
+      "status": "PASS",
+      "mode": "graph",
+      "documents": [
+        "specs/components/app-shell.contract.v1.0.0.md",
+        "specs/components/app-shell.document-preview.amendment.v1.0.0.md",
+        "specs/components/chat-document-viewer.contract.v1.0.0.md",
+        "specs/components/chat-sidebar.contract.v1.0.0.md",
+        "specs/components/chat.contract.v1.0.0.md",
+        "specs/components/header.contract.v1.0.0.md",
+        "specs/components/section-header.contract.v1.0.0.md",
+        "specs/components/sidebar.contract.v1.0.0.md",
+        "specs/components/sidebar.secondary-control.amendment.v1.0.1.md",
+        "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+        "specs/data/app-shell.v1.0.0.json",
+        "specs/tokens/component-layer.correction.json"
+      ],
+      "tokens": [],
+      "metrics": {
+        "files_read": 12,
+        "bytes_read": 269366,
+        "index_bytes": 393751,
+        "nodes_visited": 12,
+        "duration_ms": 1.413,
+        "context_bytes": 296754
+      }
+    },
+    {
+      "component": "APP-SHELL-001",
+      "intent": "tokens",
+      "status": "PASS",
+      "mode": "graph",
+      "documents": [
+        "specs/components/app-shell.contract.v1.0.0.md",
+        "specs/components/app-shell.document-preview.amendment.v1.0.0.md",
+        "specs/components/chat-document-viewer.contract.v1.0.0.md",
+        "specs/components/chat-sidebar.contract.v1.0.0.md",
+        "specs/components/chat.contract.v1.0.0.md",
+        "specs/components/header.contract.v1.0.0.md",
+        "specs/components/section-header.contract.v1.0.0.md",
+        "specs/components/sidebar.contract.v1.0.0.md",
+        "specs/components/sidebar.secondary-control.amendment.v1.0.1.md",
+        "specs/foundations/blueheart-variables.contract.v0.1.2.md",
+        "specs/data/app-shell.v1.0.0.json",
+        "specs/tokens/blueheart-variables.v0.1.2.json",
+        "specs/tokens/component-layer.correction.json",
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "tokens": [
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/126",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/127",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/128",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/129",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/130",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/131",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/132",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/133",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/134",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/135",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/136",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/137",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/140",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/37",
+        "specs/tokens/blueheart-variables.v0.1.2.json#/collections/0/variables/89"
+      ],
+      "metrics": {
+        "files_read": 14,
+        "bytes_read": 1474649,
+        "index_bytes": 393751,
+        "nodes_visited": 14,
+        "duration_ms": 23.362,
+        "context_bytes": 72416
+      }
+    }
+  ]
+}
