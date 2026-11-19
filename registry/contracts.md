@@ -100,3 +100,7 @@ v1.0.0 · DELEGATED_FOR_BUILD. [Contrato](../specs/components/chat.contract.v1.0
 ## Dropdown menu · búsqueda opcional
 
 [Enmienda DROPDOWN-MENU-001-SEARCH](../specs/components/dropdown-menu.search.amendment.v1.0.0.md): DELEGATED_FOR_BUILD, QA documental PASS, user_audit NOT_REQUIRED. Preserva maestro, Slot y defaults; distingue diseño observado de filtro y accesibilidad web derivados.
+
+## Body · Ampliación semántica por propiedad · 2026-11-18
+
+[FOUNDATIONS-BODY-SEMANTIC-COLORS-001](../specs/foundations/body.semantic-colors.amendment.v1.0.0.md): DELEGATED_FOR_BUILD, QA documental PASS. Añade 19 colores, suma 52 Body y actualiza visibilidad y consumo de producto. IDs/aliases y tipografía iniciales conservados.

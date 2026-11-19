@@ -17,7 +17,15 @@ for(const source of config.token_sources){
     }
   }
 }
-assert.equal(bodyTokens.length,33);
+assert.equal(bodyTokens.length,52);
+const bodyByName=new Map(bodyTokens.map(token=>[token.name,token]));
+const manifest=JSON.parse(await readFile(resolve(repo,'implementations/web/src/generated/tokens.manifest.json'),'utf8'));
+const policy=JSON.parse(await readFile(resolve(repo,'specs/tokens/visibility.body-only.correction.json'),'utf8')).selectorVisibilityPolicy;
+assert.equal(policy.bodyTokens.length,52);
+for(const token of manifest.tokens){
+  const declared=token.collection==='component'&&token.name.startsWith('body/')?policy.bodyTokens.find(row=>row.name===token.name):null;
+  assert.deepEqual(token.scopes,declared?.scopes??[],token.name);
+}
 function value(token,mode){const v=token.values[mode]??token.values.Value;return v?.type==='VARIABLE_ALIAS'?value(byId.get(v.id),mode):v;}
 function rgb(v){return `rgb(${['r','g','b'].map(k=>Math.round(v[k]*255)).join(', ')})`;}
 function luminance(v){return ['r','g','b'].map(k=>v[k]<=.04045?v[k]/12.92:((v[k]+.055)/1.055)**2.4).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);}
@@ -71,9 +79,26 @@ try{
         const color=getComputedStyle(probe).color;probe.remove();return color;
       },role);
       assert.equal(measured,rgb(color),mode+' '+role);
-      for(const bg of bodyTokens.filter(t=>t.name.startsWith('body/color/bg/'))){const ratio=contrast(color,value(bg,mode));assert.ok(ratio>=4.5,`${mode} ${role} ${bg.name} ${ratio}`);pairs.push(ratio);}
+      for(const bg of bodyTokens.filter(t=>['body/color/bg/primary','body/color/bg/emphasis'].includes(t.name))){const ratio=contrast(color,value(bg,mode));assert.ok(ratio>=4.5,`${mode} ${role} ${bg.name} ${ratio}`);pairs.push(ratio);}
     }
-    themes.push({mode,minContrast:Math.min(...pairs),colors:actual});
+    const semanticPairs=[];
+    for(const tone of ['primary','secondary','brand','warning','success','danger','information']){
+      const row=page.locator(`.bh-body-color-row[data-color-tone="${tone}"]`),bgTone=tone==='secondary'?'emphasis':tone;
+      const measured=await row.evaluate(el=>{
+        const style=property=>getComputedStyle(el.querySelector(`[data-color-property="${property}"]`));
+        return {text:style('text').color,bg:style('bg').backgroundColor,pairedText:style('bg').color,
+          stroke:style('stroke').borderColor,shape:getComputedStyle(el.querySelector('svg')).fill};
+      });
+      const colors=Object.fromEntries(['text','bg','stroke','shape'].map(group=>[group,value(bodyByName.get(`body/color/${group}/${group==='bg'?bgTone:tone}`),mode)]));
+      for(const group of Object.keys(colors))assert.equal(measured[group],rgb(colors[group]),mode+' '+tone+' '+group);
+      assert.equal(measured.pairedText,rgb(colors.text));
+      const textRatio=contrast(colors.text,colors.bg),shapeRatio=contrast(colors.shape,colors.bg);
+      const strokeRatio=contrast(colors.stroke,value(bodyByName.get('body/color/bg/primary'),mode));
+      assert.ok(textRatio>=4.5,mode+' '+tone+' text');assert.ok(shapeRatio>=3,mode+' '+tone+' shape');
+      if(tone!=='secondary')assert.ok(strokeRatio>=3,mode+' '+tone+' stroke');
+      semanticPairs.push({tone,textRatio,shapeRatio,strokeRatio,decorativeBorder:tone==='secondary'});
+    }
+    themes.push({mode,minContrast:Math.min(...pairs),colors:actual,semanticPairs});
   }
   const widths=[];
   for(const expanded of [false,true,false]){
@@ -94,9 +119,12 @@ try{
   await page.getByRole('button',{name:'Ver Referencia y RFC',exact:true}).focus();await page.keyboard.press('Space');
   assert.match(await page.getByRole('status').textContent(),/Referencia y RFC/);
   await page.getByRole('combobox',{name:'Tema del Playground'}).selectOption('Contable');
-  const out=resolve(repo,'output/qa/body-tokens-2026-11-17');await mkdir(out,{recursive:true});
-  await page.locator('[data-blueheart="app-shell"]').screenshot({path:resolve(out,'web-playground.png')});
+  const out=resolve(repo,'output/qa/body-semantic-colors-2026-11-18');await mkdir(out,{recursive:true});
+  await page.locator('.bh-body-color-specimen').screenshot({path:resolve(out,'web-color-roles.png')});
+  await page.setViewportSize({width:320,height:900});
+  assert.equal(await page.locator('.bh-body-color-row').count(),7);
+  assert.ok(await page.locator('.bh-body-color-scroll').evaluate(el=>el.scrollWidth>el.clientWidth));
   assert.deepEqual(errors,[]);
-  const result={status:'PASS',cards:5,tokens:33,metrics,themes,shellBodyWidths:widths,keyboard:true};
+  const result={status:'PASS',cards:5,tokens:52,colorTokens:28,newColorTokens:19,visibleScopes:52,metrics,themes,shellBodyWidths:widths,keyboard:true,narrowSpecimenScroll:true};
   await writeFile(resolve(out,'chrome.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
 }finally{await browser?.close();server.close();}

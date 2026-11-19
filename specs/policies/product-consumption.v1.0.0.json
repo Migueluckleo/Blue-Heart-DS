@@ -12,7 +12,14 @@
     "prefix": "body/",
     "contract": "specs/foundations/body.contract.v1.0.0.md",
     "data": "specs/tokens/body.v1.0.0.json",
-    "visibility_contract": "specs/foundations/token-visibility.contract.v1.0.0.md"
+    "visibility_contract": "specs/foundations/token-visibility.contract.v1.0.0.md",
+    "data_sources": [
+      "specs/tokens/body.v1.0.0.json",
+      "specs/tokens/body.semantic-colors.v1.0.0.json"
+    ],
+    "amendments": [
+      "specs/foundations/body.semantic-colors.amendment.v1.0.0.md"
+    ]
   },
   "controls": "OFFICIAL_DS_ONLY",
   "component_tokens": "PRESERVE_INTERNAL",

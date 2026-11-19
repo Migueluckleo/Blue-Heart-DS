@@ -211,8 +211,15 @@ def preflight(runtime, plan, base, qa_page_id=None):
     if consumption_path in reader.manifest['files']:
         contract_text(reader, consumption_path)
         consumption = parse(reader.source('specs/policies/product-consumption.v1.0.0.json'))
-        body = parse(reader.source(consumption['body']['data']))
-        body_names = {v['name'] for c in body['collections'] if c['name'] == consumption['body']['collection'] for v in c['variables']}
+        body_config = consumption['body']
+        body_sources = body_config.get('data_sources', [body_config['data']])
+        need(isinstance(body_sources, list) and body_sources and all(isinstance(p, str) and p for p in body_sources)
+             and len(body_sources) == len(set(body_sources)) and body_config['data'] in body_sources,
+             'Declare the complete canonical Body source list')
+        for path in body_sources:
+            body = parse(reader.source(path))
+            body_names.update(v['name'] for c in body['collections'] if c['name'] == body_config['collection']
+                              for v in c['variables'] if v['name'].startswith(body_config['prefix']))
         for screen in screens:
             need(any(use.get('screen') == screen and use.get('kind') == 'ds-instance'
                      and use.get('family') == consumption['product_host']['family'] for use in uses.values()),

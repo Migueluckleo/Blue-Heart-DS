@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 import { EyeIcon } from '@phosphor-icons/react/dist/csr/Eye';
 import { AppShell } from '../components/app-shell';
 import { MenuItem } from '../components/menu-item';
@@ -82,5 +82,37 @@ export function BodyPlayground() {
         </div>
       </AppShell>
     </div>
+    <section className="bh-body-color-specimen" aria-labelledby="body-color-title">
+      <div className="bh-body-title-description">
+        <h2 className="bh-body-h2" id="body-color-title">Body · Colores por propiedad</h2>
+        <p className="bh-body-description">Roles para contenido específico de producto: texto, fondos, bordes y formas.</p>
+      </div>
+      <div className="bh-body-color-scroll">
+        <div className="bh-body-color-head bh-body-caption" aria-hidden="true">
+          <span>Rol</span><span>Texto</span><span>Fondo</span><span>Borde</span><span>Forma / icono</span>
+        </div>
+        <dl className="bh-body-color-rows">
+          {(['primary','secondary','brand','warning','success','danger','information'] as const).map(tone=>{
+            const labels={primary:'Principal',secondary:'Secundario',brand:'Marca',warning:'Advertencia',success:'Éxito',danger:'Peligro',information:'Información'};
+            const bg=tone==='secondary'?'emphasis':tone;
+            return <div className="bh-body-color-row" key={tone} data-color-tone={tone} style={{
+              '--bh-body-sample-text':`var(--body-color-text-${tone})`,
+              '--bh-body-sample-bg':`var(--body-color-bg-${bg})`,
+              '--bh-body-sample-stroke':`var(--body-color-stroke-${tone})`,
+              '--bh-body-sample-shape':`var(--body-color-shape-${tone})`,
+            } as CSSProperties}>
+              <dt className="bh-body-h3">{tone}</dt>
+              <dd className="bh-body-color-text bh-body-description" data-color-property="text" aria-label={`Texto ${tone}`}>{labels[tone]}</dd>
+              <dd className="bh-body-color-bg bh-body-description" data-color-property="bg" aria-label={`Fondo ${bg}`}>{labels[tone]}</dd>
+              <dd className="bh-body-color-stroke bh-body-caption" data-color-property="stroke" aria-label={`Borde ${tone}`}>{tone==='secondary'?'Decorativo':'Contorno'}</dd>
+              <dd className="bh-body-color-shape bh-body-caption" data-color-property="shape" aria-label={`Forma ${tone}`}>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>Relleno
+              </dd>
+            </div>;
+          })}
+        </dl>
+      </div>
+      <p className="bh-body-caption">Borde secondary es un separador decorativo. Figma comparte SHAPE_FILL para formas e iconos; los fondos de shapes también aparecen en ese selector.</p>
+    </section>
   </main>;
 }

@@ -1,0 +1,43 @@
+{
+  "status": "PASS_SCOPED_INDEPENDENT_REVIEW",
+  "files_reviewed": [
+    "workflows/skills/contpaqi-figma-screens/scripts/verify_figma_usage.py",
+    "specs/policies/product-consumption.v1.0.0.json",
+    "tests/test_product_consumption_figma.py"
+  ],
+  "findings": [],
+  "evidence": [
+    {
+      "file": "workflows/skills/contpaqi-figma-screens/scripts/verify_figma_usage.py",
+      "lines": "L213-L222",
+      "result": "The verified policy declares two Body sources. The consumer reads each through Reader.source and unions only names in the component collection with exact body/ prefix. Every declared source is read; a missing extension propagates failure instead of preserving an initial-only PASS."
+    },
+    {
+      "file": "specs/policies/product-consumption.v1.0.0.json",
+      "lines": "L10-L22",
+      "result": "body.data is preserved, body.data_sources includes initial and extension JSON exactly once, and amendment path is explicit."
+    },
+    {
+      "file": "tests/test_product_consumption_figma.py",
+      "lines": "L76-L90",
+      "result": "Tests accept each of the19 new role names and assert FileNotFoundError when extension file is absent. Existing component-token preservation and readback cases also remain covered."
+    }
+  ],
+  "tests_executed": {
+    "command": "python3 -m unittest discover -s tests -p 'test_product_consumption_figma.py' -v",
+    "count": 10,
+    "status": "PASS"
+  },
+  "not_executed": [
+    "The six GitHub tests pending catalogue regeneration and the full21-test final suite were not executed by this reviewer."
+  ],
+  "semantic_merge": {
+    "updated_existing_ids": [
+      "specs_foundations_body_contract_v1_0_0_body_component_token_alias_chain",
+      "specs_foundations_token_visibility_contract_v1_0_0_function_specific_body_selector_scopes",
+      "registry_sources_visibility_correction_provenance"
+    ],
+    "drop_ids": []
+  },
+  "usage_status": "UNAVAILABLE"
+}

@@ -73,3 +73,7 @@ Chat Document Viewer 430:15516, página oficial 452:2; App Shell conversation-pr
 ## Dropdown menu · búsqueda opcional
 
 Maestro 119:17 conserva key y Options#119:0. Show search añade Search small local con viewport intrínseco y capa fija. React DropdownField/DropdownMenu incorporan filtrado local opcional; Search embedded evita forms anidados. [QA](../qa/implementations/dropdown-menu.search.v1.0.0.review.md).
+
+## Body · Colores semánticos por propiedad · 2026-11-18
+
+[Muestra editable](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=504-9685), FRAME en Playground, con 19 tokens nuevos y 52 Body visibles. [Readback](../implementations/figma/body-semantic-colors-2026-11-18/readback.json). Web /playground/body muestra los mismos colores por propiedad; las cinco Cards y sus controles conservan anatomía y espaciado.

@@ -1,0 +1,626 @@
+{
+  "schema_version": 1,
+  "kind": "DELEGATED_TOKEN_DATA",
+  "contract": "FOUNDATIONS-BODY-SEMANTIC-COLORS-001",
+  "version": "1.0.0",
+  "source": "Solicitud del usuario 2026-11-18 y aclaración explícita de scopes por propiedad.",
+  "collections": [
+    {
+      "name": "component",
+      "modes": [
+        {
+          "name": "Contable",
+          "modeId": "Contable"
+        },
+        {
+          "name": "Administrativo",
+          "modeId": "Administrativo"
+        },
+        {
+          "name": "Servicios",
+          "modeId": "Servicios"
+        },
+        {
+          "name": "Personas",
+          "modeId": "Personas"
+        }
+      ],
+      "variables": [
+        {
+          "id": "body-semantic:component:bg-brand",
+          "name": "body/color/bg/brand",
+          "resolvedType": "COLOR",
+          "description": "Body · Superficie sutil de marca para contenido de producto. Consume brand-subtle/brand-administrativo-subtle/brand-servicios-subtle/brand-personas-subtle según el tema.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-bg-brand)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:151"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:161"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:175"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:180"
+            }
+          },
+          "targetId": "VariableID:502:2"
+        },
+        {
+          "id": "body-semantic:component:bg-warning",
+          "name": "body/color/bg/warning",
+          "resolvedType": "COLOR",
+          "description": "Body · Fondo warning para bloques de contenido específicos. Consume warning-subtle según el tema.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-bg-warning)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:149"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:149"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:149"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:149"
+            }
+          },
+          "targetId": "VariableID:502:3"
+        },
+        {
+          "id": "body-semantic:component:bg-success",
+          "name": "body/color/bg/success",
+          "resolvedType": "COLOR",
+          "description": "Body · Fondo success para bloques de contenido específicos. Consume positive-subtle según el tema.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-bg-success)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:159"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:159"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:159"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:159"
+            }
+          },
+          "targetId": "VariableID:502:4"
+        },
+        {
+          "id": "body-semantic:component:bg-danger",
+          "name": "body/color/bg/danger",
+          "resolvedType": "COLOR",
+          "description": "Body · Fondo danger para bloques de contenido específicos. Consume danger-subtle según el tema.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-bg-danger)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:187"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:187"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:187"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:187"
+            }
+          },
+          "targetId": "VariableID:502:5"
+        },
+        {
+          "id": "body-semantic:component:bg-information",
+          "name": "body/color/bg/information",
+          "resolvedType": "COLOR",
+          "description": "Body · Fondo information para bloques de contenido específicos. Consume information-subtle según el tema.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-bg-information)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:157"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:157"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:157"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:157"
+            }
+          },
+          "targetId": "VariableID:502:6"
+        },
+        {
+          "id": "body-semantic:component:stroke-primary",
+          "name": "body/color/stroke/primary",
+          "resolvedType": "COLOR",
+          "description": "Body · Borde principal. Borde de separación perceptible. Consume neutral-medium según el tema.",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-stroke-primary)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            }
+          },
+          "targetId": "VariableID:502:7"
+        },
+        {
+          "id": "body-semantic:component:stroke-secondary",
+          "name": "body/color/stroke/secondary",
+          "resolvedType": "COLOR",
+          "description": "Body · Borde secundario; borde sutil decorativo. Consume neutral-muted según el tema.",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-stroke-secondary)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            }
+          },
+          "targetId": "VariableID:502:8"
+        },
+        {
+          "id": "body-semantic:component:stroke-brand",
+          "name": "body/color/stroke/brand",
+          "resolvedType": "COLOR",
+          "description": "Body · Borde de marca para contenido específico. Consume brand-strong/brand-administrativo-strong/brand-servicios-strong/brand-personas-strong según el tema.",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-stroke-brand)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:164"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:178"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:185"
+            }
+          },
+          "targetId": "VariableID:502:9"
+        },
+        {
+          "id": "body-semantic:component:stroke-warning",
+          "name": "body/color/stroke/warning",
+          "resolvedType": "COLOR",
+          "description": "Body · Borde warning para contenido específico. Consume warning-strong según el tema.",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-stroke-warning)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "body:semantic:warning-strong"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "body:semantic:warning-strong"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "body:semantic:warning-strong"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "body:semantic:warning-strong"
+            }
+          },
+          "targetId": "VariableID:502:10"
+        },
+        {
+          "id": "body-semantic:component:stroke-success",
+          "name": "body/color/stroke/success",
+          "resolvedType": "COLOR",
+          "description": "Body · Borde success para contenido específico. Consume positive-default según el tema.",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-stroke-success)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:160"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:160"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:160"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:160"
+            }
+          },
+          "targetId": "VariableID:502:11"
+        },
+        {
+          "id": "body-semantic:component:stroke-danger",
+          "name": "body/color/stroke/danger",
+          "resolvedType": "COLOR",
+          "description": "Body · Borde danger para contenido específico. Consume danger-default según el tema.",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-stroke-danger)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:188"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:188"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:188"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:188"
+            }
+          },
+          "targetId": "VariableID:502:12"
+        },
+        {
+          "id": "body-semantic:component:stroke-information",
+          "name": "body/color/stroke/information",
+          "resolvedType": "COLOR",
+          "description": "Body · Borde information para contenido específico. Consume information-default según el tema.",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-stroke-information)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:158"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:158"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:158"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:158"
+            }
+          },
+          "targetId": "VariableID:502:13"
+        },
+        {
+          "id": "body-semantic:component:shape-primary",
+          "name": "body/color/shape/primary",
+          "resolvedType": "COLOR",
+          "description": "Body · Relleno de forma o icono principal de contenido específico. Consume neutral-maximum según el tema.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-shape-primary)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            }
+          },
+          "targetId": "VariableID:502:14"
+        },
+        {
+          "id": "body-semantic:component:shape-secondary",
+          "name": "body/color/shape/secondary",
+          "resolvedType": "COLOR",
+          "description": "Body · Relleno de forma o icono secundario de contenido específico. Consume neutral-strong según el tema.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-shape-secondary)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:171"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:171"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:171"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:171"
+            }
+          },
+          "targetId": "VariableID:502:15"
+        },
+        {
+          "id": "body-semantic:component:shape-brand",
+          "name": "body/color/shape/brand",
+          "resolvedType": "COLOR",
+          "description": "Body · Relleno de forma o icono de marca para contenido específico. Consume brand-strong/brand-administrativo-strong/brand-servicios-strong/brand-personas-strong según el tema.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-shape-brand)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:164"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:178"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:185"
+            }
+          },
+          "targetId": "VariableID:502:16"
+        },
+        {
+          "id": "body-semantic:component:shape-warning",
+          "name": "body/color/shape/warning",
+          "resolvedType": "COLOR",
+          "description": "Body · Relleno de forma o icono warning para contenido específico. Consume warning-strong según el tema.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-shape-warning)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "body:semantic:warning-strong"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "body:semantic:warning-strong"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "body:semantic:warning-strong"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "body:semantic:warning-strong"
+            }
+          },
+          "targetId": "VariableID:502:17"
+        },
+        {
+          "id": "body-semantic:component:shape-success",
+          "name": "body/color/shape/success",
+          "resolvedType": "COLOR",
+          "description": "Body · Relleno de forma o icono success para contenido específico. Consume positive-default según el tema.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-shape-success)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:160"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:160"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:160"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:160"
+            }
+          },
+          "targetId": "VariableID:502:18"
+        },
+        {
+          "id": "body-semantic:component:shape-danger",
+          "name": "body/color/shape/danger",
+          "resolvedType": "COLOR",
+          "description": "Body · Relleno de forma o icono danger para contenido específico. Consume danger-default según el tema.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-shape-danger)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:188"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:188"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:188"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:188"
+            }
+          },
+          "targetId": "VariableID:502:19"
+        },
+        {
+          "id": "body-semantic:component:shape-information",
+          "name": "body/color/shape/information",
+          "resolvedType": "COLOR",
+          "description": "Body · Relleno de forma o icono information para contenido específico. Consume information-default según el tema.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-shape-information)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:158"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:158"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:158"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:158"
+            }
+          },
+          "targetId": "VariableID:502:20"
+        }
+      ]
+    }
+  ]
+}

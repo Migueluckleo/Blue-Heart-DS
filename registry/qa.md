@@ -105,3 +105,7 @@ TOKEN-QA-01 se probó en seis maestros y auxiliares corregidos. Leyó 1.326 bind
 ## Dropdown menu con búsqueda · 2026-11-18
 
 [QA documental](../qa/contracts/dropdown-menu.search.v1.0.0.review.md) y [QA de implementación](../qa/implementations/dropdown-menu.search.v1.0.0.review.md): PASS. Show search opcional, Slot nativo preservado, scroll, filtro local, teclado/foco/IME, cuatro temas y TOKEN-QA-01/02/03. Se preservan 33 scopes y cinco estilos Body. El listbox se excluye del Tab implícito del navegador.
+
+## Body · Colores semánticos por propiedad · 2026-11-18
+
+[QA documental](../qa/contracts/body.semantic-colors.v1.0.0.review.md) y [QA de implementación](../qa/implementations/body.semantic-colors.v1.0.0.review.md): aliases/scopes, 112 valores de color por cuatro temas, tipografía preservada y regresión de las cinco Cards. El preflight consume todas las fuentes Body declaradas.

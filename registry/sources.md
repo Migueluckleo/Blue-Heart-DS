@@ -60,7 +60,7 @@ Solicitud explícita del usuario del 17 de noviembre de 2026: roles Body para co
 
 ## Política de visibilidad de tokens · 2026-11-17
 
-SRC-TOKEN-VISIBILITY-20261117: solicitud explícita del usuario y [datos canónicos de scopes](../specs/tokens/visibility.body-only.correction.json), SHA-256 bfeff78297e413e05a989523fecf5adb8f79850f99cd15cd25196a78b2e88397. [Lecturas Figma](../implementations/figma/token-visibility-2026-11-17/before.json) conservadas antes/después; el cambio no sustituye valores ni aliases históricos.
+SRC-TOKEN-VISIBILITY-20261117: solicitud explícita del usuario y [datos de scopes de ese corte, conservados antes de ampliar Body](../sources/figma-snapshots/body-semantic-colors-2026-11-18/visibility-policy-before.json), SHA-256 bfeff78297e413e05a989523fecf5adb8f79850f99cd15cd25196a78b2e88397. [Lecturas Figma](../implementations/figma/token-visibility-2026-11-17/before.json) conservadas antes/después; el cambio no sustituye valores ni aliases históricos.
 
 ## Chat Document Viewer y layout de documento · 2026-11-18
 
@@ -69,3 +69,7 @@ SRC-CHAT-DOCUMENT-VIEWER-20261118: nodos aportados 430:15516 (principal) y 430:5
 ## Dropdown menu con búsqueda · 2026-11-18
 
 SRC-DROPDOWN-SEARCH-20261118: fuente aportada 430:16410 en el maestro autorizado. [Lectura conservada](../sources/figma-snapshots/dropdown-search-2026-11-18/source-before.json). [Datos delegados](../specs/tokens/dropdown-menu.search.v1.0.0.json), SHA-256 6e815076a56f45c2c2d31a344beb10c3cf4b4460620eadf47cb08a4e25ee9ab7. 16/32/4 px observados; 318 px derivados del viewport con borde. Autorización explícita de push a main, incluida la limpieza Azure y ajustes de consumo.
+
+## Body · Colores semánticos por propiedad · 2026-11-18
+
+SRC-BODY-SEMANTIC-COLORS-20261118: solicitud y aclaración explícitas del usuario: scopes por texto, fondo, borde y formas/iconos para contenido específico. [Inventario y metadata previos](../sources/figma-snapshots/body-semantic-colors-2026-11-18/before-before.json). [Datos añadidos](../specs/tokens/body.semantic-colors.v1.0.0.json) SHA-256 efdc5fda96bb9ad4e06ef0a8b0d04a054f1f38e4513568328359d2b982f440e0; política vigente SHA-256 baafd084303a190465a32a99a0e09429d7fcc2b9c492e56090318387917be41a. No se alteran primitivas ni semánticos existentes. El usuario solicita avisar al chat Estado de Github para verificar Graphify y publicar main al terminar.

@@ -8,7 +8,7 @@ version: 1.0.0
 user_audit: NOT_REQUIRED
 human_review_policy: OPTIONAL_NON_BLOCKING
 source_data_ref: specs/policies/product-consumption.v1.0.0.json
-source_data_digest_sha256: 940b65ee5ac42f9fb715747a5f1ac09e3d51873d87303269e801cabb309e62ae
+source_data_digest_sha256: 81a604b1d49696f3baf2031eeeb0792959c323ccb97d1deac1f273744e0d4823
 data_refs: [specs/policies/product-consumption.v1.0.0.json]
 dependencies: [FOUNDATIONS-BODY-001, FOUNDATIONS-TOKEN-VISIBILITY-001, LINEAR-PROGRESS-001, BUTTON-001, APP-SHELL-001]
 ---
@@ -40,6 +40,8 @@ Todo contenido visual propio de una molécula consume exclusivamente los roles d
 Los componentes oficiales mantienen sus tokens internos y tipografía. Introducir un Button o Linear Progress dentro de una tarjeta Body no cambia sus tokens por Body. La [visibilidad de tokens](token-visibility.contract.v1.0.0.md) conserva activos los tokens internos aunque sus scopes estén vacíos. El inventario de cada molécula distingue tokens Body de composición y tokens propios de los componentes que contiene.
 
 La geometría estructural que no tiene un token Body aplicable, como Fill, Hug, dirección del Auto Layout, orden o columnas responsivas, se decide según el brief y se documenta. Esta decisión no autoriza inventar colores, escalas tipográficas, espaciados o controles.
+
+El inventario vigente agrega los colores de [Body por propiedad](body.semantic-colors.amendment.v1.0.0.md). La política enumera todas las fuentes en body.data_sources y conserva body.data como referencia inicial. El preflight lee cada fuente verificada y une solo los nombres de la colección component con prefijo exacto body/. No puede omitir una ampliación ni volver al inventario inicial si una fuente falta.
 
 ## CONSUMPTION-04 · GitHub es la fuente de consumo
 

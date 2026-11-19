@@ -9,7 +9,7 @@ target_file_key: yZsIpXywybsPDytjolwcP4
 user_audit: NOT_REQUIRED
 human_review_policy: OPTIONAL_NON_BLOCKING
 source_data_ref: specs/tokens/visibility.body-only.correction.json
-source_data_digest_sha256: bfeff78297e413e05a989523fecf5adb8f79850f99cd15cd25196a78b2e88397
+source_data_digest_sha256: baafd084303a190465a32a99a0e09429d7fcc2b9c492e56090318387917be41a
 data_refs: [specs/tokens/visibility.body-only.correction.json]
 dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001, FOUNDATIONS-BODY-001]
 ---
@@ -30,6 +30,8 @@ Todos los tokens ajenos a esa selección deben tener `scopes = []` donde Figma l
 |---|---|---|
 | Color de texto | COLOR | TEXT_FILL |
 | Fondo de frame o shape | COLOR | FRAME_FILL, SHAPE_FILL |
+| Color de borde | COLOR | STROKE_COLOR |
+| Relleno de forma o icono | COLOR | SHAPE_FILL |
 | Familia tipográfica | STRING | FONT_FAMILY |
 | Estilo/peso textual Regular/Semibold | STRING | FONT_STYLE |
 | Tamaño de letra | FLOAT | FONT_SIZE |
@@ -38,9 +40,11 @@ Todos los tokens ajenos a esa selección deben tener `scopes = []` donde Figma l
 | Gap y padding | FLOAT | GAP |
 | Radius | FLOAT | CORNER_RADIUS |
 
-Los 33 tokens Body actuales se limitan a esas funciones. No usar `ALL_SCOPES` ni `ALL_FILLS`. La API de Figma representa gap y padding mediante `GAP`; no existe un scope independiente de padding. Los pesos Body actuales son STRING: conservar `FONT_STYLE`, sin convertirlos a pesos numéricos.
+Los 52 tokens Body actuales incluyen los 33 iniciales y los 19 colores de la [ampliación semántica](body.semantic-colors.amendment.v1.0.0.md), con esas funciones. No usar `ALL_SCOPES` ni `ALL_FILLS`. La API de Figma representa gap y padding mediante `GAP`; no existe un scope independiente de padding. Los pesos Body actuales son STRING: conservar `FONT_STYLE`, sin convertirlos a pesos numéricos.
 
 Para futuras altas, declarar cada token `component/body/` por nombre, tipo y función en el JSON delegado y seleccionar exclusivamente los scopes que necesite. Un token Body sin declaración bloquea el QA/generación. Si se autoriza un rol de borde, usar `STROKE_COLOR` para color o `STROKE_FLOAT` para grosor; sizing usa `WIDTH_HEIGHT`, peso numérico `FONT_WEIGHT`, opacidad `OPACITY`, efectos `EFFECT_COLOR`/`EFFECT_FLOAT` y propiedades de párrafo sus scopes específicos. Estas correspondencias no crean tokens nuevos ni exponen tokens internos. Toda nueva familia y todo token fuera de Body nacen con `[]` y conservan el consumo interno por aliases.
+
+Figma no distingue un scope exclusivo de icono: SHAPE_FILL abarca formas, vectores e iconos. Los fondos de shapes también requieren SHAPE_FILL, por lo que ambos grupos pueden coexistir en ese selector. Los nombres bg y shape y sus descripciones distinguen el uso; no se usa ALL_FILLS para resolverlo.
 
 ## Preservación obligatoria
 

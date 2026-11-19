@@ -823,3 +823,4 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Conservan su identidad y alcance propios; consultar relaciones explícitas en cada documento.
 
 - [specs/components/dropdown-menu.search.amendment.v1.0.0.md](../../specs/components/dropdown-menu.search.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD.
+- [specs/foundations/body.semantic-colors.amendment.v1.0.0.md](../../specs/foundations/body.semantic-colors.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD.

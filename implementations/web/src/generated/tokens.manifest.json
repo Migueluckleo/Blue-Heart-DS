@@ -12,7 +12,8 @@
     "specs/tokens/body.v1.0.0.json": "d9862b8642147af2499f8a3527d8e2947daace0d8ab23e86705ed7d77af21d0b",
     "specs/tokens/chat-document-viewer.v1.0.0.json": "5d3792222fde1e9f92b5bace9ad55021c3fc747e9abd45d869e3a68ce576bde4",
     "specs/tokens/dropdown-menu.search.v1.0.0.json": "6e815076a56f45c2c2d31a344beb10c3cf4b4460620eadf47cb08a4e25ee9ab7",
-    "specs/tokens/visibility.body-only.correction.json": "bfeff78297e413e05a989523fecf5adb8f79850f99cd15cd25196a78b2e88397"
+    "specs/tokens/body.semantic-colors.v1.0.0.json": "efdc5fda96bb9ad4e06ef0a8b0d04a054f1f38e4513568328359d2b982f440e0",
+    "specs/tokens/visibility.body-only.correction.json": "baafd084303a190465a32a99a0e09429d7fcc2b9c492e56090318387917be41a"
   },
   "modes": [
     "Contable",
@@ -1994,6 +1995,70 @@
       }
     },
     {
+      "name": "body/color/bg/brand",
+      "collection": "component",
+      "css": "--body-color-bg-brand",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Superficie sutil de marca para contenido de producto. Consume brand-subtle/brand-administrativo-subtle/brand-servicios-subtle/brand-personas-subtle según el tema.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:151"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:161"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:175"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:180"
+        }
+      }
+    },
+    {
+      "name": "body/color/bg/danger",
+      "collection": "component",
+      "css": "--body-color-bg-danger",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Fondo danger para bloques de contenido específicos. Consume danger-subtle según el tema.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:187"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:187"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:187"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:187"
+        }
+      }
+    },
+    {
       "name": "body/color/bg/emphasis",
       "collection": "component",
       "css": "--body-color-bg-emphasis",
@@ -2026,6 +2091,38 @@
       }
     },
     {
+      "name": "body/color/bg/information",
+      "collection": "component",
+      "css": "--body-color-bg-information",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Fondo information para bloques de contenido específicos. Consume information-subtle según el tema.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:157"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:157"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:157"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:157"
+        }
+      }
+    },
+    {
       "name": "body/color/bg/primary",
       "collection": "component",
       "css": "--body-color-bg-primary",
@@ -2054,6 +2151,504 @@
         "Personas": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:166"
+        }
+      }
+    },
+    {
+      "name": "body/color/bg/success",
+      "collection": "component",
+      "css": "--body-color-bg-success",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Fondo success para bloques de contenido específicos. Consume positive-subtle según el tema.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:159"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:159"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:159"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:159"
+        }
+      }
+    },
+    {
+      "name": "body/color/bg/warning",
+      "collection": "component",
+      "css": "--body-color-bg-warning",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Fondo warning para bloques de contenido específicos. Consume warning-subtle según el tema.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:149"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:149"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:149"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:149"
+        }
+      }
+    },
+    {
+      "name": "body/color/shape/brand",
+      "collection": "component",
+      "css": "--body-color-shape-brand",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Relleno de forma o icono de marca para contenido específico. Consume brand-strong/brand-administrativo-strong/brand-servicios-strong/brand-personas-strong según el tema.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:155"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:164"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:178"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:185"
+        }
+      }
+    },
+    {
+      "name": "body/color/shape/danger",
+      "collection": "component",
+      "css": "--body-color-shape-danger",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Relleno de forma o icono danger para contenido específico. Consume danger-default según el tema.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:188"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:188"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:188"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:188"
+        }
+      }
+    },
+    {
+      "name": "body/color/shape/information",
+      "collection": "component",
+      "css": "--body-color-shape-information",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Relleno de forma o icono information para contenido específico. Consume information-default según el tema.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:158"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:158"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:158"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:158"
+        }
+      }
+    },
+    {
+      "name": "body/color/shape/primary",
+      "collection": "component",
+      "css": "--body-color-shape-primary",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Relleno de forma o icono principal de contenido específico. Consume neutral-maximum según el tema.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        }
+      }
+    },
+    {
+      "name": "body/color/shape/secondary",
+      "collection": "component",
+      "css": "--body-color-shape-secondary",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Relleno de forma o icono secundario de contenido específico. Consume neutral-strong según el tema.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        }
+      }
+    },
+    {
+      "name": "body/color/shape/success",
+      "collection": "component",
+      "css": "--body-color-shape-success",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Relleno de forma o icono success para contenido específico. Consume positive-default según el tema.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:160"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:160"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:160"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:160"
+        }
+      }
+    },
+    {
+      "name": "body/color/shape/warning",
+      "collection": "component",
+      "css": "--body-color-shape-warning",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Relleno de forma o icono warning para contenido específico. Consume warning-strong según el tema.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "body:semantic:warning-strong"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "body:semantic:warning-strong"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "body:semantic:warning-strong"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "body:semantic:warning-strong"
+        }
+      }
+    },
+    {
+      "name": "body/color/stroke/brand",
+      "collection": "component",
+      "css": "--body-color-stroke-brand",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Borde de marca para contenido específico. Consume brand-strong/brand-administrativo-strong/brand-servicios-strong/brand-personas-strong según el tema.",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:155"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:164"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:178"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:185"
+        }
+      }
+    },
+    {
+      "name": "body/color/stroke/danger",
+      "collection": "component",
+      "css": "--body-color-stroke-danger",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Borde danger para contenido específico. Consume danger-default según el tema.",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:188"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:188"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:188"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:188"
+        }
+      }
+    },
+    {
+      "name": "body/color/stroke/information",
+      "collection": "component",
+      "css": "--body-color-stroke-information",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Borde information para contenido específico. Consume information-default según el tema.",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:158"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:158"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:158"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:158"
+        }
+      }
+    },
+    {
+      "name": "body/color/stroke/primary",
+      "collection": "component",
+      "css": "--body-color-stroke-primary",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Borde principal. Borde de separación perceptible. Consume neutral-medium según el tema.",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:170"
+        }
+      }
+    },
+    {
+      "name": "body/color/stroke/secondary",
+      "collection": "component",
+      "css": "--body-color-stroke-secondary",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Borde secundario; borde sutil decorativo. Consume neutral-muted según el tema.",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        }
+      }
+    },
+    {
+      "name": "body/color/stroke/success",
+      "collection": "component",
+      "css": "--body-color-stroke-success",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Borde success para contenido específico. Consume positive-default según el tema.",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:160"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:160"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:160"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:160"
+        }
+      }
+    },
+    {
+      "name": "body/color/stroke/warning",
+      "collection": "component",
+      "css": "--body-color-stroke-warning",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Borde warning para contenido específico. Consume warning-strong según el tema.",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "body:semantic:warning-strong"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "body:semantic:warning-strong"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "body:semantic:warning-strong"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "body:semantic:warning-strong"
         }
       }
     },

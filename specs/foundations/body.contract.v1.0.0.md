@@ -10,7 +10,7 @@ user_audit: NOT_REQUIRED
 human_review_policy: OPTIONAL_NON_BLOCKING
 source_data_ref: specs/tokens/body.v1.0.0.json
 source_data_digest_sha256: d9862b8642147af2499f8a3527d8e2947daace0d8ab23e86705ed7d77af21d0b
-data_refs: [specs/tokens/body.v1.0.0.json, specs/tokens/visibility.body-only.correction.json]
+data_refs: [specs/tokens/body.v1.0.0.json, specs/tokens/body.semantic-colors.v1.0.0.json, specs/tokens/visibility.body-only.correction.json]
 dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001]
 ---
 
@@ -41,6 +41,8 @@ Los tokens `body/*` viven dentro de la colección **component**, no en una cuart
 | body/color/bg/emphasis | neutral-subtle | Énfasis sutil en neutrales. |
 
 DERIVED: Brand usa los roles strong de marca para lectura en tamaños pequeños sobre ambos fondos. Warning incorpora un rol semántico warning-strong enlazado a amber/800: warning-default no ofrece contraste suficiente para texto normal en estos fondos. Se reutiliza la paleta; no cambia el inventario de primitivas ni los aliases de los componentes existentes. El significado debe expresarse también en el texto; el color no sustituye el mensaje.
+
+La [ampliación semántica por propiedad](body.semantic-colors.amendment.v1.0.0.md) incorpora 19 roles: fondos brand/semánticos, bordes y formas/iconos. Conserva estos nueve colores y sus IDs/aliases; Body suma 52 tokens. Lee también sus [datos delegados](../tokens/body.semantic-colors.v1.0.0.json).
 
 ## Tipografía
 
@@ -95,6 +97,6 @@ Los aliases CSS se generan desde los datos delegados. Por ejemplo, una composici
 
 ## Aceptación
 
-Verificar los 33 tokens Body, el alias warning-strong, descripciones, scopes, sintaxis WEB, identidad y cadena por los cuatro modos. Cotejar los tamaños tipográficos, espaciamientos, radios y los cinco estilos compartidos. Validar cinco demos insertadas dentro del Slot Body de una instancia oficial de App Shell en Playground, con Fill en ancho, sin altas de familia ni fichas de Cards. Probar el consumo web, temas y menú del Shell; documentar el QA técnico de los tokens y la composición sin documentar las Cards como componentes.
+Verificar los 52 tokens Body (33 iniciales y 19 colores añadidos), el alias warning-strong, descripciones, scopes, sintaxis WEB, identidad y cadena por los cuatro modos. Cotejar los tamaños tipográficos, espaciamientos, radios y los cinco estilos compartidos. Validar cinco demos insertadas dentro del Slot Body de una instancia oficial de App Shell en Playground, con Fill en ancho, sin altas de familia ni fichas de Cards. Probar el consumo web, temas y menú del Shell; documentar el QA técnico de los tokens y la composición sin documentar las Cards como componentes.
 
 [QA técnico](../../qa/implementations/body.v1.0.0.review.md) · [Lectura de bindings](../../implementations/figma/body-tokens-2026-11-17/readback.json).

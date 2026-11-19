@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "policy_id": "TOKEN-VISIBILITY-BODY-001",
+  "kind": "CORRECTION",
+  "description": "Body es la interfaz de tokens para construir contenido específico de producto. Los demás tokens conservan su función como dependencias internas del sistema.",
+  "selectorVisibilityPolicy": {
+    "collection": "component",
+    "namePrefix": "body/",
+    "defaultScopes": [],
+    "bodyTokens": [
+      {
+        "name": "body/color/text/primary",
+        "resolvedType": "COLOR",
+        "scopes": [
+          "TEXT_FILL"
+        ]
+      },
+      {
+        "name": "body/color/text/secondary",
+        "resolvedType": "COLOR",
+        "scopes": [
+          "TEXT_FILL"
+        ]
+      },
+      {
+        "name": "body/color/text/brand",
+        "resolvedType": "COLOR",
+        "scopes": [
+          "TEXT_FILL"
+        ]
+      },
+      {
+        "name": "body/color/text/warning",
+        "resolvedType": "COLOR",
+        "scopes": [
+          "TEXT_FILL"
+        ]
+      },
+      {
+        "name": "body/color/text/success",
+        "resolvedType": "COLOR",
+        "scopes": [
+          "TEXT_FILL"
+        ]
+      },
+      {
+        "name": "body/color/text/danger",
+        "resolvedType": "COLOR",
+        "scopes": [
+          "TEXT_FILL"
+        ]
+      },
+      {
+        "name": "body/color/text/information",
+        "resolvedType": "COLOR",
+        "scopes": [
+          "TEXT_FILL"
+        ]
+      },
+      {
+        "name": "body/color/bg/primary",
+        "resolvedType": "COLOR",
+        "scopes": [
+          "FRAME_FILL",
+          "SHAPE_FILL"
+        ]
+      },
+      {
+        "name": "body/color/bg/emphasis",
+        "resolvedType": "COLOR",
+        "scopes": [
+          "FRAME_FILL",
+          "SHAPE_FILL"
+        ]
+      },
+      {
+        "name": "body/font/heading/h1/size",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "FONT_SIZE"
+        ]
+      },
+      {
+        "name": "body/font/heading/h1/line-height",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "LINE_HEIGHT"
+        ]
+      },
+      {
+        "name": "body/font/heading/h2/size",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "FONT_SIZE"
+        ]
+      },
+      {
+        "name": "body/font/heading/h2/line-height",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "LINE_HEIGHT"
+        ]
+      },
+      {
+        "name": "body/font/heading/h3/size",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "FONT_SIZE"
+        ]
+      },
+      {
+        "name": "body/font/heading/h3/line-height",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "LINE_HEIGHT"
+        ]
+      },
+      {
+        "name": "body/font/description/size",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "FONT_SIZE"
+        ]
+      },
+      {
+        "name": "body/font/description/line-height",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "LINE_HEIGHT"
+        ]
+      },
+      {
+        "name": "body/font/caption/size",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "FONT_SIZE"
+        ]
+      },
+      {
+        "name": "body/font/caption/line-height",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "LINE_HEIGHT"
+        ]
+      },
+      {
+        "name": "body/font/family",
+        "resolvedType": "STRING",
+        "scopes": [
+          "FONT_FAMILY"
+        ]
+      },
+      {
+        "name": "body/font/heading/weight",
+        "resolvedType": "STRING",
+        "scopes": [
+          "FONT_STYLE"
+        ]
+      },
+      {
+        "name": "body/font/text/weight",
+        "resolvedType": "STRING",
+        "scopes": [
+          "FONT_STYLE"
+        ]
+      },
+      {
+        "name": "body/font/tracking",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "LETTER_SPACING"
+        ]
+      },
+      {
+        "name": "body/spacing/xl",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "GAP"
+        ]
+      },
+      {
+        "name": "body/spacing/lg",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "GAP"
+        ]
+      },
+      {
+        "name": "body/spacing/md",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "GAP"
+        ]
+      },
+      {
+        "name": "body/spacing/sm",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "GAP"
+        ]
+      },
+      {
+        "name": "body/spacing/xs",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "GAP"
+        ]
+      },
+      {
+        "name": "body/spacing/null",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "GAP"
+        ]
+      },
+      {
+        "name": "body/radius/lg",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "CORNER_RADIUS"
+        ]
+      },
+      {
+        "name": "body/radius/md",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "CORNER_RADIUS"
+        ]
+      },
+      {
+        "name": "body/radius/sm",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "CORNER_RADIUS"
+        ]
+      },
+      {
+        "name": "body/radius/null",
+        "resolvedType": "FLOAT",
+        "scopes": [
+          "CORNER_RADIUS"
+        ]
+      }
+    ]
+  }
+}
