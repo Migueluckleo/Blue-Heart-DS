@@ -1,0 +1,756 @@
+{
+  "set": {
+    "id": "122:274",
+    "props": {
+      "Show title#122:4": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Title#122:10": {
+        "type": "TEXT",
+        "defaultValue": "Title"
+      },
+      "Show description#122:16": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Description#122:22": {
+        "type": "TEXT",
+        "defaultValue": "Description text that explains what happened. View details."
+      },
+      "Show icon#122:28": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Show dismiss#122:34": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Show CTA#581:0": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      "type": {
+        "type": "VARIANT",
+        "defaultValue": "neutral",
+        "variantOptions": [
+          "neutral",
+          "info",
+          "success",
+          "warning",
+          "error"
+        ]
+      }
+    }
+  },
+  "rows": [
+    {
+      "host": "122:53",
+      "type": "neutral",
+      "content": "122:54",
+      "oldIcon": "122:119",
+      "indicator": "596:555",
+      "body": "581:28",
+      "text": "122:121",
+      "cta": "581:29",
+      "indicatorProps": {
+        "Isotipo#595:3": {
+          "type": "INSTANCE_SWAP",
+          "value": "595:363",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "5303d06b1101548d4bdcaaa0a2f2c04c81fa5a7a"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2649421fd1d3ecdd2d892768e839c14b5e6e194d"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2263ec47ef507216a90164ab9290b30e38722735"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a8a6fae2a3621fad9264bd64a6c476f5fae10ce5"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a42e38a5f81ce78af9e444d8f85fe16eb7730ecd"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "29c9cfefdb5816a1991cf038e51f0113f318f019"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ae9718e6c7c8e957533d0d246562798e40e4e840"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2d0c6bf5482cf09536c3e3db6a6ac65664dd67b3"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "dd374c13e9f8e9ff193898fe33f8f3a7547b34cb"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "6ba3c693d7a144007cb394a03121cfe49cfdb5b1"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ea53258c851b6665ecbd29a31c5be612b751de6a"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "b5a03dc605287453cb32cf6fe8cb8129d2256369"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a073c0be626f1ceea7ced0087d771df66fcc4bd4"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "5673b48bf37b2942e90eaa45e6e36a95ce9946be"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "61b1e4e0b3e34ba4380f861bbfc89d817f03f9ba"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "de2cf983268eb734ad4c604c1bf1cb5342bc856d"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "d825140025d27c34e784b9c7be174962b748159c"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "17c32c24e2554197a6a1024fb4363ffaa3196c49"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "20ae29e998450537694d82aa613cba8f37bd5378"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4063c8bb911132fb5fcc24e2fe8f2096725b8739"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "befbbf8870338510625b40cb5b895f076d96ce64"
+            }
+          ]
+        },
+        "Icon#595:0": {
+          "type": "INSTANCE_SWAP",
+          "value": "122:56",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "27962798645349b2b27ba120b6bb1db551e4c8a3"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4b8a12b3aa942823e8f1ecea2a3b8af2759cd7cc"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "c05dcb9e418a4827e9999640903ed093e850fdc0"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "75ba7898c02f2522c78786982ea96e00a557bec0"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a553df531f5cbc790fbf9481e2d13c0a39c6d540"
+            }
+          ]
+        },
+        "source": {
+          "value": "icon",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "indicatorWidth": 24,
+      "indicatorHeight": 24
+    },
+    {
+      "host": "122:132",
+      "type": "info",
+      "content": "122:133",
+      "oldIcon": "122:177",
+      "indicator": "596:559",
+      "body": "581:37",
+      "text": "122:179",
+      "cta": "581:38",
+      "indicatorProps": {
+        "Isotipo#595:3": {
+          "type": "INSTANCE_SWAP",
+          "value": "595:363",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "5303d06b1101548d4bdcaaa0a2f2c04c81fa5a7a"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2649421fd1d3ecdd2d892768e839c14b5e6e194d"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2263ec47ef507216a90164ab9290b30e38722735"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a8a6fae2a3621fad9264bd64a6c476f5fae10ce5"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a42e38a5f81ce78af9e444d8f85fe16eb7730ecd"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "29c9cfefdb5816a1991cf038e51f0113f318f019"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ae9718e6c7c8e957533d0d246562798e40e4e840"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2d0c6bf5482cf09536c3e3db6a6ac65664dd67b3"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "dd374c13e9f8e9ff193898fe33f8f3a7547b34cb"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "6ba3c693d7a144007cb394a03121cfe49cfdb5b1"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ea53258c851b6665ecbd29a31c5be612b751de6a"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "b5a03dc605287453cb32cf6fe8cb8129d2256369"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a073c0be626f1ceea7ced0087d771df66fcc4bd4"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "5673b48bf37b2942e90eaa45e6e36a95ce9946be"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "61b1e4e0b3e34ba4380f861bbfc89d817f03f9ba"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "de2cf983268eb734ad4c604c1bf1cb5342bc856d"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "d825140025d27c34e784b9c7be174962b748159c"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "17c32c24e2554197a6a1024fb4363ffaa3196c49"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "20ae29e998450537694d82aa613cba8f37bd5378"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4063c8bb911132fb5fcc24e2fe8f2096725b8739"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "befbbf8870338510625b40cb5b895f076d96ce64"
+            }
+          ]
+        },
+        "Icon#595:0": {
+          "type": "INSTANCE_SWAP",
+          "value": "122:139",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "27962798645349b2b27ba120b6bb1db551e4c8a3"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4b8a12b3aa942823e8f1ecea2a3b8af2759cd7cc"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "c05dcb9e418a4827e9999640903ed093e850fdc0"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "75ba7898c02f2522c78786982ea96e00a557bec0"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a553df531f5cbc790fbf9481e2d13c0a39c6d540"
+            }
+          ]
+        },
+        "source": {
+          "value": "icon",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "indicatorWidth": 24,
+      "indicatorHeight": 24
+    },
+    {
+      "host": "122:189",
+      "type": "success",
+      "content": "122:190",
+      "oldIcon": "122:191",
+      "indicator": "596:563",
+      "body": "581:44",
+      "text": "122:193",
+      "cta": "581:45",
+      "indicatorProps": {
+        "Isotipo#595:3": {
+          "type": "INSTANCE_SWAP",
+          "value": "595:363",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "5303d06b1101548d4bdcaaa0a2f2c04c81fa5a7a"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2649421fd1d3ecdd2d892768e839c14b5e6e194d"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2263ec47ef507216a90164ab9290b30e38722735"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a8a6fae2a3621fad9264bd64a6c476f5fae10ce5"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a42e38a5f81ce78af9e444d8f85fe16eb7730ecd"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "29c9cfefdb5816a1991cf038e51f0113f318f019"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ae9718e6c7c8e957533d0d246562798e40e4e840"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2d0c6bf5482cf09536c3e3db6a6ac65664dd67b3"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "dd374c13e9f8e9ff193898fe33f8f3a7547b34cb"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "6ba3c693d7a144007cb394a03121cfe49cfdb5b1"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ea53258c851b6665ecbd29a31c5be612b751de6a"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "b5a03dc605287453cb32cf6fe8cb8129d2256369"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a073c0be626f1ceea7ced0087d771df66fcc4bd4"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "5673b48bf37b2942e90eaa45e6e36a95ce9946be"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "61b1e4e0b3e34ba4380f861bbfc89d817f03f9ba"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "de2cf983268eb734ad4c604c1bf1cb5342bc856d"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "d825140025d27c34e784b9c7be174962b748159c"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "17c32c24e2554197a6a1024fb4363ffaa3196c49"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "20ae29e998450537694d82aa613cba8f37bd5378"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4063c8bb911132fb5fcc24e2fe8f2096725b8739"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "befbbf8870338510625b40cb5b895f076d96ce64"
+            }
+          ]
+        },
+        "Icon#595:0": {
+          "type": "INSTANCE_SWAP",
+          "value": "43:227",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "27962798645349b2b27ba120b6bb1db551e4c8a3"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4b8a12b3aa942823e8f1ecea2a3b8af2759cd7cc"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "c05dcb9e418a4827e9999640903ed093e850fdc0"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "75ba7898c02f2522c78786982ea96e00a557bec0"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a553df531f5cbc790fbf9481e2d13c0a39c6d540"
+            }
+          ]
+        },
+        "source": {
+          "value": "icon",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "indicatorWidth": 24,
+      "indicatorHeight": 24
+    },
+    {
+      "host": "122:203",
+      "type": "warning",
+      "content": "122:204",
+      "oldIcon": "122:248",
+      "indicator": "596:567",
+      "body": "581:51",
+      "text": "122:250",
+      "cta": "581:52",
+      "indicatorProps": {
+        "Isotipo#595:3": {
+          "type": "INSTANCE_SWAP",
+          "value": "595:363",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "5303d06b1101548d4bdcaaa0a2f2c04c81fa5a7a"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2649421fd1d3ecdd2d892768e839c14b5e6e194d"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2263ec47ef507216a90164ab9290b30e38722735"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a8a6fae2a3621fad9264bd64a6c476f5fae10ce5"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a42e38a5f81ce78af9e444d8f85fe16eb7730ecd"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "29c9cfefdb5816a1991cf038e51f0113f318f019"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ae9718e6c7c8e957533d0d246562798e40e4e840"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2d0c6bf5482cf09536c3e3db6a6ac65664dd67b3"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "dd374c13e9f8e9ff193898fe33f8f3a7547b34cb"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "6ba3c693d7a144007cb394a03121cfe49cfdb5b1"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ea53258c851b6665ecbd29a31c5be612b751de6a"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "b5a03dc605287453cb32cf6fe8cb8129d2256369"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a073c0be626f1ceea7ced0087d771df66fcc4bd4"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "5673b48bf37b2942e90eaa45e6e36a95ce9946be"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "61b1e4e0b3e34ba4380f861bbfc89d817f03f9ba"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "de2cf983268eb734ad4c604c1bf1cb5342bc856d"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "d825140025d27c34e784b9c7be174962b748159c"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "17c32c24e2554197a6a1024fb4363ffaa3196c49"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "20ae29e998450537694d82aa613cba8f37bd5378"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4063c8bb911132fb5fcc24e2fe8f2096725b8739"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "befbbf8870338510625b40cb5b895f076d96ce64"
+            }
+          ]
+        },
+        "Icon#595:0": {
+          "type": "INSTANCE_SWAP",
+          "value": "122:210",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "27962798645349b2b27ba120b6bb1db551e4c8a3"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4b8a12b3aa942823e8f1ecea2a3b8af2759cd7cc"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "c05dcb9e418a4827e9999640903ed093e850fdc0"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "75ba7898c02f2522c78786982ea96e00a557bec0"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a553df531f5cbc790fbf9481e2d13c0a39c6d540"
+            }
+          ]
+        },
+        "source": {
+          "value": "icon",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "indicatorWidth": 24,
+      "indicatorHeight": 24
+    },
+    {
+      "host": "122:260",
+      "type": "error",
+      "content": "122:261",
+      "oldIcon": "122:262",
+      "indicator": "596:571",
+      "body": "581:58",
+      "text": "122:264",
+      "cta": "581:59",
+      "indicatorProps": {
+        "Isotipo#595:3": {
+          "type": "INSTANCE_SWAP",
+          "value": "595:363",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "5303d06b1101548d4bdcaaa0a2f2c04c81fa5a7a"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2649421fd1d3ecdd2d892768e839c14b5e6e194d"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2263ec47ef507216a90164ab9290b30e38722735"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a8a6fae2a3621fad9264bd64a6c476f5fae10ce5"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a42e38a5f81ce78af9e444d8f85fe16eb7730ecd"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "29c9cfefdb5816a1991cf038e51f0113f318f019"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ae9718e6c7c8e957533d0d246562798e40e4e840"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "2d0c6bf5482cf09536c3e3db6a6ac65664dd67b3"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "dd374c13e9f8e9ff193898fe33f8f3a7547b34cb"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "6ba3c693d7a144007cb394a03121cfe49cfdb5b1"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "ea53258c851b6665ecbd29a31c5be612b751de6a"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "b5a03dc605287453cb32cf6fe8cb8129d2256369"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a073c0be626f1ceea7ced0087d771df66fcc4bd4"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "5673b48bf37b2942e90eaa45e6e36a95ce9946be"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "61b1e4e0b3e34ba4380f861bbfc89d817f03f9ba"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "de2cf983268eb734ad4c604c1bf1cb5342bc856d"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "d825140025d27c34e784b9c7be174962b748159c"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "17c32c24e2554197a6a1024fb4363ffaa3196c49"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "20ae29e998450537694d82aa613cba8f37bd5378"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4063c8bb911132fb5fcc24e2fe8f2096725b8739"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "befbbf8870338510625b40cb5b895f076d96ce64"
+            }
+          ]
+        },
+        "Icon#595:0": {
+          "type": "INSTANCE_SWAP",
+          "value": "43:168",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "27962798645349b2b27ba120b6bb1db551e4c8a3"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "4b8a12b3aa942823e8f1ecea2a3b8af2759cd7cc"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "c05dcb9e418a4827e9999640903ed093e850fdc0"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "75ba7898c02f2522c78786982ea96e00a557bec0"
+            },
+            {
+              "type": "COMPONENT",
+              "key": "a553df531f5cbc790fbf9481e2d13c0a39c6d540"
+            }
+          ]
+        },
+        "source": {
+          "value": "icon",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "indicatorWidth": 24,
+      "indicatorHeight": 24
+    }
+  ],
+  "mutatedIds": [
+    "122:274",
+    "122:53",
+    "122:54",
+    "596:555",
+    "581:28",
+    "122:121",
+    "581:29",
+    "122:132",
+    "122:133",
+    "596:559",
+    "581:37",
+    "122:179",
+    "581:38",
+    "122:189",
+    "122:190",
+    "596:563",
+    "581:44",
+    "122:193",
+    "581:45",
+    "122:203",
+    "122:204",
+    "596:567",
+    "581:51",
+    "122:250",
+    "581:52",
+    "122:260",
+    "122:261",
+    "596:571",
+    "581:58",
+    "122:264",
+    "581:59"
+  ]
+}

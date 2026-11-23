@@ -19,6 +19,8 @@ dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001, FOUNDATIONS-TOKEN-VISIBILITY
 
 # Chat Document Viewer · CHAT-DOCUMENT-VIEWER-001
 
+Vigencia del 19 de noviembre de 2026: la [enmienda de actions y controles Ghost](chat-document-viewer.actions.amendment.v1.0.0.md) sustituye CDV-02 y solo el alcance de acciones de Anatomy, Properties, States, Composition rules, Design ↔ Code mapping y Acceptance criteria. El texto original siguiente y su QA conservan el alcance histórico del alta. Consultar la enmienda para configuración actual, Description sincronizada y QA de paridad web. La identidad y versión 1.0.0 se mantienen.
+
 ## 1. Purpose
 
 Presenta el documento entregado durante una conversación. Mantiene acciones, título, descripción y contenido reemplazable. No define la estructura de cada documento, la generación de archivos ni reglas fiscales. La fuente EXPLICIT del encargo es el nodo [430:15516](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=430-15516), inspeccionado el 18 de noviembre de 2026.

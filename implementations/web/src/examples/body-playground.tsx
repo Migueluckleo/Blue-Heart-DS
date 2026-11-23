@@ -92,8 +92,8 @@ export function BodyPlayground() {
           <span>Rol</span><span>Texto</span><span>Fondo</span><span>Borde</span><span>Forma / icono</span>
         </div>
         <dl className="bh-body-color-rows">
-          {(['primary','secondary','brand','warning','success','danger','information'] as const).map(tone=>{
-            const labels={primary:'Principal',secondary:'Secundario',brand:'Marca',warning:'Advertencia',success:'Éxito',danger:'Peligro',information:'Información'};
+          {(['primary','secondary','brand','warning','caution','success','danger','information'] as const).map(tone=>{
+            const labels={primary:'Principal',secondary:'Secundario',brand:'Marca',warning:'Advertencia',caution:'Precaución',success:'Éxito',danger:'Peligro',information:'Información'};
             const bg=tone==='secondary'?'emphasis':tone;
             return <div className="bh-body-color-row" key={tone} data-color-tone={tone} style={{
               '--bh-body-sample-text':`var(--body-color-text-${tone})`,
@@ -111,6 +111,14 @@ export function BodyPlayground() {
             </div>;
           })}
         </dl>
+      </div>
+      <div className="bh-body-inverse-sample" data-color-role="inverse">
+        <span className="bh-body-h3">shape/inverse</span>
+        <svg viewBox="0 0 80 48" width="80" height="48" role="img" aria-label="Forma blanca inverse sobre una forma de marca">
+          <rect width="80" height="48" />
+          <circle cx="40" cy="24" r="12" />
+        </svg>
+        <p className="bh-body-caption">Blanco para formas e iconos sobre superficies gráficas oscuras o intensas. Consume neutral-base → neutral/100 (#FFFFFF); solo SHAPE_FILL.</p>
       </div>
       <p className="bh-body-caption">Borde secondary es un separador decorativo. Figma comparte SHAPE_FILL para formas e iconos; los fondos de shapes también aparecen en ese selector.</p>
     </section>

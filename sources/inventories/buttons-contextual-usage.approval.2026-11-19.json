@@ -1,0 +1,46 @@
+{
+  "source_id": "SRC-BUTTON-CONTEXTUAL-USAGE-2026-11-19",
+  "date": "2026-11-19",
+  "status": "APPROVED",
+  "evidence_class": "EXPLICIT",
+  "reviewed_artifact": {
+    "filename": "blueheart-botones-guia-contextual-propuesta-v0.1.pdf",
+    "sha256": "525283712f4e47ed69dbaffa4d5fb71c11b50ebf43e4a96ed9fd9958687ddcaf",
+    "pages": 16,
+    "focus_clarification_pages": [
+      7,
+      12
+    ]
+  },
+  "user_decision": "Así queda bien, ahora sí crea el Markdown de botones con la aclaración de Focus e intégralo a sus componentes y patrones para que lo consuman las skills autocontenidas.",
+  "scope": [
+    "Contextual usage of BUTTON-001",
+    "Five button action composition patterns",
+    "Focus visible for keyboard navigation with Tab and Shift+Tab; not hover or click",
+    "Local documentation and self-contained consumer integration"
+  ],
+  "published_documents": [
+    {
+      "path": "specs/components/buttons.contextual-usage.amendment.v1.0.2.md",
+      "sha256": "ae82a9a67a4e0a04699dafc847d6a52c9a67811eef594a588737e6afb0d6481a"
+    },
+    {
+      "path": "specs/patterns/buttons.actions.amendment.v1.0.0.md",
+      "sha256": "55ce62e2548edd9c1dc2cfe28624bbba65f80892890458e09208e1801304b01e"
+    }
+  ],
+  "administrative_transformations": [
+    "Markdown structure and stable rule/pattern IDs",
+    "Frontmatter, links and family/component mappings",
+    "Review/procedural last page excluded as requested"
+  ],
+  "not_authorized_by_this_record": [
+    "Remote publication",
+    "Figma master edits"
+  ],
+  "invariant_inputs": {
+    "specs/data/buttons.v1.0.0.json": "d271e1de91be664fe0c78eef8ea311fdafa52073535f4349a7d78f7611d4c9fa",
+    "implementations/web/src/components/button.tsx": "e8c6b4bb63fd7c44ff9e904fb9de4364d321e60a3d2d399c170f68c87f6f8773",
+    "implementations/web/src/generated/buttons-recipes.json": "824a72139b77b7cafe50502895f2a978e4980c3f803cae4cd9efeaf882c1ab62"
+  }
+}

@@ -8,7 +8,7 @@ Familia `CONVERSATION-001` · API local 0.1.0 · categoría conversación.
 
 Fuente: [guía del contrato](../../../../specs/components/conversation-composer.contract.v1.0.0.md#guía-semántica-normativa).
 
-Usa Conversation Composer en la zona de redacción de una conversación. Usa Text Area para un campo multilínea autónomo en un formulario e Inline Notification para avisos que gobiernan una sección completa. Mantén la jerarquía de acciones secundaria/primaria visible y utiliza los Slots únicamente para contenido pertinente al borrador. [Contrato Text Area](text-area.contract.v1.0.0.md) · [Contrato Inline Notification](inline-notification.contract.v1.0.0.md)
+Usa Conversation Composer en la zona de redacción de una conversación. Usa Text Area para un campo multilínea autónomo en un formulario e Inline Notification para avisos que gobiernan una sección completa. Mantén la jerarquía de acciones secundaria/primaria visible y utiliza los Slots únicamente para contenido pertinente al borrador. [Contrato Text Area](../../../../specs/components/text-area.contract.v1.0.0.md) · [Contrato Inline Notification](../../../../specs/components/inline-notification.contract.v1.0.0.md)
 
 | Situación | Haz | Evita |
 |---|---|---|

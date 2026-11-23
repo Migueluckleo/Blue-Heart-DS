@@ -1,0 +1,551 @@
+{
+  "nodes": 1140,
+  "invisible": 422,
+  "types": {
+    "COMPONENT": 1,
+    "SLOT": 7,
+    "FRAME": 135,
+    "TEXT": 103,
+    "INSTANCE": 501,
+    "VECTOR": 205,
+    "RECTANGLE": 180,
+    "ELLIPSE": 8
+  },
+  "master": {
+    "id": "430:15516",
+    "key": "8fd980d14fcda0e04773de154aeaa23677f9d4d7",
+    "description": "CHAT-DOCUMENT-VIEWER-001 · Presenta un documento entregado junto a Chat. Edita Title, Description y los Slots actions y preview desde la instancia. La muestra usa Descargar xls Secondary y Expandir/Cerrar Icon Buttons Ghost medium. El anfitrión controla archivo, visibilidad y foco; el documento específico permanece en preview.",
+    "properties": {
+      "preview#430:0": {
+        "type": "SLOT",
+        "description": "Contenido del documento. Inserta, retira, sustituye o reordena contenido específico del producto.",
+        "slotSettings": {
+          "stretchChildOnInsert": true,
+          "displayEmptyByDefault": false,
+          "minChildren": null,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": false
+        },
+        "preferredValues": []
+      },
+      "Title#453:2": {
+        "type": "TEXT",
+        "defaultValue": "Distribución de facturas de personas físicas con IVA retenido en marzo 2025"
+      },
+      "Description#453:3": {
+        "type": "TEXT",
+        "defaultValue": "Los datos mostrados son solo informativos. Si quieres conocer toda la relación de elementos descarga el xls."
+      },
+      "actions#519:0": {
+        "type": "SLOT",
+        "description": "Acciones del documento. Inserta, retira, sustituye o reordena controles oficiales. La muestra usa Descargar Secondary y Expandir/Cerrar Ghost; el contenido no se estira automáticamente.",
+        "slotSettings": {
+          "stretchChildOnInsert": false,
+          "displayEmptyByDefault": false,
+          "minChildren": null,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": false
+        },
+        "preferredValues": []
+      }
+    },
+    "bindings": {
+      "itemSpacing": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:9"
+      },
+      "paddingLeft": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:13"
+      },
+      "paddingTop": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:13"
+      },
+      "paddingRight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:13"
+      },
+      "paddingBottom": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:13"
+      },
+      "topLeftRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:14"
+      },
+      "topRightRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:14"
+      },
+      "bottomLeftRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:14"
+      },
+      "bottomRightRadius": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:14"
+      },
+      "fills": [
+        {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:451:6"
+        }
+      ]
+    }
+  },
+  "temporaryFrameAbsent": true,
+  "pageChildren": [
+    {
+      "id": "430:15516",
+      "name": "Chat Document Viewer",
+      "type": "COMPONENT"
+    }
+  ],
+  "images": [
+    {
+      "id": "I430:13918;331:2470;430:14014;139:156;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:2470;430:14016;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:2470;430:14019;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:2470;430:14022;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:2470;430:14025;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:2470;430:14028;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:2470;430:14031;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:2470;430:14034;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:2470;430:14037;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13924;139:156;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13925;139:156;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13926;139:156;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13927;139:156;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13928;139:156;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13929;139:156;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13930;139:156;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13931;139:156;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13932;139:156;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13934;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13935;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13936;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13937;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13938;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13939;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13940;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13944;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13945;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13946;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13947;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13948;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13949;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13950;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13954;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13955;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13956;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13957;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13958;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13959;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13960;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13964;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13965;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13966;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13967;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13968;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13969;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13970;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13974;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13975;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13976;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13977;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13978;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13979;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13980;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13984;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13985;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13986;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13987;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13988;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13989;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13990;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13994;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13995;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13996;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13997;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13998;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:13999;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:14000;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:14004;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:14005;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:14006;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:14007;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:14008;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:14009;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    },
+    {
+      "id": "I430:13918;331:1549;430:14010;139:145;83:13",
+      "width": 24,
+      "height": 24,
+      "visible": true
+    }
+  ]
+}

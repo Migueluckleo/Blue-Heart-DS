@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "removedNodeIds": [
+    "529:9686"
+  ],
+  "temporaryFrameAbsent": true,
+  "id": "430:15516",
+  "key": "8fd980d14fcda0e04773de154aeaa23677f9d4d7",
+  "description": "CHAT-DOCUMENT-VIEWER-001 · Presenta un documento entregado junto a Chat. Edita Title, Description y los Slots actions y preview desde la instancia. La muestra usa Descargar xls Secondary y Expandir/Cerrar Icon Buttons Ghost medium. El anfitrión controla archivo, visibilidad y foco; el documento específico permanece en preview.",
+  "properties": {
+    "preview#430:0": {
+      "type": "SLOT",
+      "description": "Contenido del documento. Inserta, retira, sustituye o reordena contenido específico del producto.",
+      "slotSettings": {
+        "stretchChildOnInsert": true,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "preferredValues": []
+    },
+    "Title#453:2": {
+      "type": "TEXT",
+      "defaultValue": "Distribución de facturas de personas físicas con IVA retenido en marzo 2025"
+    },
+    "Description#453:3": {
+      "type": "TEXT",
+      "defaultValue": "Los datos mostrados son solo informativos. Si quieres conocer toda la relación de elementos descarga el xls."
+    },
+    "actions#519:0": {
+      "type": "SLOT",
+      "description": "Acciones del documento. Inserta, retira, sustituye o reordena controles oficiales. La muestra usa Descargar Secondary y Expandir/Cerrar Ghost; el contenido no se estira automáticamente.",
+      "slotSettings": {
+        "stretchChildOnInsert": false,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "preferredValues": []
+    }
+  },
+  "bindings": {
+    "itemSpacing": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:9"
+    },
+    "paddingLeft": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:13"
+    },
+    "paddingTop": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:13"
+    },
+    "paddingRight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:13"
+    },
+    "paddingBottom": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:13"
+    },
+    "topLeftRadius": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:14"
+    },
+    "topRightRadius": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:14"
+    },
+    "bottomLeftRadius": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:14"
+    },
+    "bottomRightRadius": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:14"
+    },
+    "fills": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:6"
+      }
+    ]
+  },
+  "totalNodes": 472,
+  "types": {
+    "COMPONENT": 1,
+    "SLOT": 7,
+    "FRAME": 50,
+    "TEXT": 83,
+    "INSTANCE": 184,
+    "VECTOR": 51,
+    "RECTANGLE": 88,
+    "ELLIPSE": 8
+  },
+  "images": [],
+  "pageChildren": [
+    {
+      "id": "430:15516",
+      "type": "COMPONENT",
+      "name": "Chat Document Viewer"
+    }
+  ]
+}

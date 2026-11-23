@@ -77,3 +77,19 @@ Maestro 119:17 conserva key y Options#119:0. Show search añade Search small loc
 ## Body · Colores semánticos por propiedad · 2026-11-18
 
 [Muestra editable](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=504-9685), FRAME en Playground, con 19 tokens nuevos y 52 Body visibles. [Readback](../implementations/figma/body-semantic-colors-2026-11-18/readback.json). Web /playground/body muestra los mismos colores por propiedad; las cinco Cards y sus controles conservan anatomía y espaciado.
+
+## Caution · 2026-11-23
+
+FOUNDATIONS-CAUTION-001 v1.0.0 · Figma VALIDATED. [Mapa/readback](../implementations/figma/caution-2026-11-23/readback.json): 21 tokens nuevos; Badge 21 variantes; Linear Progress 105. Body 57 roles totales. Playground 576:9686 es muestra editable, no componente nuevo. Código web VALIDATED y fichas regeneradas. [QA](../qa/implementations/caution.v1.0.0.review.md). Sin publicación ni instalación.
+
+## Inline Notification CTA · 2026-11-23
+
+Figma y web PASS conforme a [INLINE-NOTIFICATION-001-CTA](../specs/components/inline-notification.cta.amendment.v1.0.0.md). Set 122:274 y cinco ID/key preservados; Show CTA#581:0=false; Secondary small expuesto, label y visibilidad preservados entre tipos. [QA](../qa/implementations/inline-notification.cta.v1.0.0.review.md), 56 tokens en cuatro temas, 17 pruebas/build y Chrome. Cierre derivado y aviso a Github encargados al chat Verificar Graphify actualizado según solicitud explícita. Sin publicación o instalación.
+
+## Inline Notification · CTA derecho e Isotipo · 2026-11-23
+
+Figma y web PASS conforme a [INLINE-NOTIFICATION-001-LAYOUT-ISOTIPO](../specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md). Sustituye el layout vertical inicial por CTA derecho/alineado abajo y agrega indicador icon/isotipo, máximo 32×32 proporcional. Mismo set principal y cinco tipos; helpers internos y 21 wrappers de marca. [QA](../qa/implementations/inline-notification.layout-isotipo.v1.0.0.review.md): 21 swaps, maestros preservados, token interno 32 con scopes vacíos, cuatro temas, 18 pruebas/build y Chrome. Cierre derivado encargado a Verificar Graphify actualizado con run nuevo; aviso a Github solo después de CURRENT.
+
+## Body disabled y descriptions Dropdown · 2026-11-23
+
+Figma VALIDATED: cuatro colores disabled en component/body/ (IDs 616:2–5), 61 Body visibles y 1,536 tokens locales; cinco descriptions Dropdown sincronizadas desde su JSON sin otros cambios. [QA Figma/web PASS](../qa/implementations/body.disabled.v1.0.0.review.md), [readback](../implementations/figma/body-disabled-2026-11-23/readback.json) y [datos delegados](../specs/tokens/body.disabled.v1.0.0.json). Generación, 18 tests, build y Chrome por cuatro temas correctos.

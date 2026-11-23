@@ -8,7 +8,7 @@ Familia `CONVERSATION-RESPONSE-001` · API local 0.1.0 · categoría conversaci�
 
 Fuente: [guía del contrato](../../../../specs/components/conversation-response.contract.v1.0.0.md#guía-semántica-normativa).
 
-Usa Conversation Response para la respuesta de un agente en el historial. Usa Conversation Composer para el campo de redacción y los controles de quien pregunta. Para un resultado que puede leerse junto a la respuesta, usa Previews. Usa las acciones de resultado para efectos sobre el contenido y reserva la fila de feedback para valorar o copiar. [Conversation Composer](conversation-composer.contract.v1.0.0.md)
+Usa Conversation Response para la respuesta de un agente en el historial. Usa Conversation Composer para el campo de redacción y los controles de quien pregunta. Para un resultado que puede leerse junto a la respuesta, usa Previews. Usa las acciones de resultado para efectos sobre el contenido y reserva la fila de feedback para valorar o copiar. [Conversation Composer](../../../../specs/components/conversation-composer.contract.v1.0.0.md)
 
 | Situación | Haz | Evita |
 |---|---|---|

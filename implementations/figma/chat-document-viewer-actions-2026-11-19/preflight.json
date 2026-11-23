@@ -1,0 +1,470 @@
+{
+  "id": "430:15516",
+  "key": "8fd980d14fcda0e04773de154aeaa23677f9d4d7",
+  "description": "Chat Document Viewer · CHAT-DOCUMENT-VIEWER-001. Presenta un documento entregado en conversación. Edita Title, Description y el Slot preview desde una instancia. Reutiliza sus acciones Secondary/Text y conserva los componentes del contenido. El anfitrión controla descargar, expandir y cerrar.",
+  "definitions": {
+    "preview#430:0": {
+      "type": "SLOT",
+      "description": "Contenido del documento. Inserta, retira, sustituye o reordena contenido específico del producto.",
+      "slotSettings": {
+        "stretchChildOnInsert": true,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "preferredValues": []
+    },
+    "Title#453:2": {
+      "type": "TEXT",
+      "defaultValue": "Distribución de facturas de personas físicas con IVA retenido en marzo 2025"
+    },
+    "Description#453:3": {
+      "type": "TEXT",
+      "defaultValue": "Los datos mostrados son solo informativos. Si quieres conocer toda la relación de elementos descarga el xls."
+    },
+    "actions#519:0": {
+      "type": "SLOT",
+      "description": "",
+      "slotSettings": {
+        "stretchChildOnInsert": false,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "preferredValues": []
+    }
+  },
+  "page": {
+    "id": "452:2",
+    "name": "Chat Document Viewer",
+    "children": [
+      {
+        "id": "430:15516",
+        "type": "COMPONENT",
+        "name": "Chat Document Viewer"
+      }
+    ]
+  },
+  "dimensions": {
+    "width": 755,
+    "height": 717
+  },
+  "rootBindings": {
+    "itemSpacing": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:9"
+    },
+    "paddingLeft": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:13"
+    },
+    "paddingTop": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:13"
+    },
+    "paddingRight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:13"
+    },
+    "paddingBottom": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:13"
+    },
+    "topLeftRadius": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:14"
+    },
+    "topRightRadius": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:14"
+    },
+    "bottomLeftRadius": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:14"
+    },
+    "bottomRightRadius": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:451:14"
+    },
+    "fills": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:6"
+      }
+    ]
+  },
+  "actions": {
+    "id": "430:13897",
+    "type": "SLOT",
+    "bindings": {
+      "itemSpacing": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:13"
+      },
+      "paddingLeft": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:13"
+      },
+      "paddingTop": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:13"
+      },
+      "paddingRight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:13"
+      },
+      "paddingBottom": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:13"
+      }
+    },
+    "refs": {
+      "slotContentId": "actions#519:0"
+    }
+  },
+  "toolbar": {
+    "id": "430:13898",
+    "width": 755,
+    "height": 40,
+    "bindings": {
+      "itemSpacing": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:10"
+      },
+      "paddingLeft": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:13"
+      },
+      "paddingTop": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:13"
+      },
+      "paddingRight": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:13"
+      },
+      "paddingBottom": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:13"
+      },
+      "counterAxisSpacing": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:451:10"
+      }
+    }
+  },
+  "controls": [
+    {
+      "id": "430:13899",
+      "name": "Button/secondary",
+      "type": "INSTANCE",
+      "width": 152,
+      "height": 40,
+      "main": {
+        "id": "23:847",
+        "key": "bd8b9dbb99ea57bea0f61004b97c23e9faffa9c5",
+        "remote": false
+      },
+      "properties": {
+        "Left icon#23:152": {
+          "type": "INSTANCE_SWAP",
+          "value": "430:7043",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Show right icon#23:133": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Right icon#23:171": {
+          "type": "INSTANCE_SWAP",
+          "value": "23:684",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Show left icon#23:114": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Label#23:95": {
+          "type": "TEXT",
+          "value": "Descargar xls"
+        },
+        "size": {
+          "value": "medium",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "state": {
+          "value": "default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    {
+      "id": "430:13900",
+      "name": "Icon Button/ghost",
+      "type": "INSTANCE",
+      "width": 40,
+      "height": 40,
+      "main": {
+        "id": "59:72",
+        "key": "49f638a539c04cdc0276b2bebe3b6a9032da275e",
+        "remote": false
+      },
+      "properties": {
+        "Show badge#59:7": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Icon#59:0": {
+          "type": "INSTANCE_SWAP",
+          "value": "430:7040",
+          "preferredValues": []
+        },
+        "size": {
+          "value": "medium",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "selected": {
+          "value": "false",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "state": {
+          "value": "default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    },
+    {
+      "id": "430:13901",
+      "name": "Icon Button/ghost",
+      "type": "INSTANCE",
+      "width": 40,
+      "height": 40,
+      "main": {
+        "id": "59:72",
+        "key": "49f638a539c04cdc0276b2bebe3b6a9032da275e",
+        "remote": false
+      },
+      "properties": {
+        "Show badge#59:7": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Icon#59:0": {
+          "type": "INSTANCE_SWAP",
+          "value": "43:166",
+          "preferredValues": []
+        },
+        "size": {
+          "value": "medium",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "selected": {
+          "value": "false",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "state": {
+          "value": "default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      }
+    }
+  ],
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "Thumbnail"
+    },
+    {
+      "id": "65:274",
+      "name": "----"
+    },
+    {
+      "id": "105:2",
+      "name": "App Shell"
+    },
+    {
+      "id": "83:2",
+      "name": "Avatars"
+    },
+    {
+      "id": "64:2",
+      "name": "Badge"
+    },
+    {
+      "id": "47:74",
+      "name": "Breadcrumbs"
+    },
+    {
+      "id": "22:3",
+      "name": "Buttons"
+    },
+    {
+      "id": "187:14",
+      "name": "Characters"
+    },
+    {
+      "id": "242:658",
+      "name": "Chat"
+    },
+    {
+      "id": "452:2",
+      "name": "Chat Document Viewer"
+    },
+    {
+      "id": "257:586",
+      "name": "Chat History Item"
+    },
+    {
+      "id": "257:624",
+      "name": "Chat Plan Usage"
+    },
+    {
+      "id": "258:3325",
+      "name": "Chat Sidebar"
+    },
+    {
+      "id": "257:603",
+      "name": "Chat Sidebar Section"
+    },
+    {
+      "id": "257:497",
+      "name": "Chat Tool Item"
+    },
+    {
+      "id": "42:2",
+      "name": "Checkbox"
+    },
+    {
+      "id": "126:2",
+      "name": "Chips"
+    },
+    {
+      "id": "216:109",
+      "name": "Conversation Composer"
+    },
+    {
+      "id": "222:309",
+      "name": "Conversation Response"
+    },
+    {
+      "id": "32:26",
+      "name": "Dot"
+    },
+    {
+      "id": "118:2",
+      "name": "Dropdown"
+    },
+    {
+      "id": "42:31",
+      "name": "File Upload"
+    },
+    {
+      "id": "122:2",
+      "name": "Floating Actions"
+    },
+    {
+      "id": "90:2",
+      "name": "Header"
+    },
+    {
+      "id": "59:2",
+      "name": "Icon Buttons"
+    },
+    {
+      "id": "122:49",
+      "name": "Inline Notification"
+    },
+    {
+      "id": "93:2",
+      "name": "Input"
+    },
+    {
+      "id": "39:2",
+      "name": "Linear Progress Bar"
+    },
+    {
+      "id": "22:2",
+      "name": "Loader"
+    },
+    {
+      "id": "170:2",
+      "name": "Logos"
+    },
+    {
+      "id": "109:2",
+      "name": "Pagination"
+    },
+    {
+      "id": "32:119",
+      "name": "Radio Buttons"
+    },
+    {
+      "id": "47:2",
+      "name": "Search"
+    },
+    {
+      "id": "96:2",
+      "name": "Section Header"
+    },
+    {
+      "id": "54:2",
+      "name": "Sidebar"
+    },
+    {
+      "id": "155:2",
+      "name": "Steppers"
+    },
+    {
+      "id": "128:2",
+      "name": "Table"
+    },
+    {
+      "id": "113:2",
+      "name": "Tabs"
+    },
+    {
+      "id": "116:2",
+      "name": "Text Area"
+    },
+    {
+      "id": "32:74",
+      "name": "Toggle"
+    },
+    {
+      "id": "38:2",
+      "name": "Tooltip"
+    },
+    {
+      "id": "237:20",
+      "name": "User message"
+    },
+    {
+      "id": "203:92",
+      "name": "----"
+    },
+    {
+      "id": "203:93",
+      "name": "Playground"
+    }
+  ]
+}

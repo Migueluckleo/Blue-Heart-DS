@@ -64,3 +64,11 @@ El usuario cambió ambos controles de Sidebar en AI Blueheart DS a Icon Button/s
 ## Corrección de bindings de componente · 2026-11-12
 
 La solicitud exige que las propiedades tokenizadas de los componentes consuman la colección component en Figma y web. Los aliases pasan por semantic hacia primitives. Se corrigen las versiones vigentes. [QA documental y delegación](../qa/contracts/component-token-layer.correction.review.md)
+
+## DEC-CAUTION-001 · 2026-11-23
+
+El usuario solicitó construir e implementar Caution en Figma desde primitivos hasta componentes, inicialmente Body, Linear Progress Bar y Badge. Conserva la decisión explícita anterior «para caution quitale el stroke». Ante el uso actual de orange por Servicios eligió «Crear caution-orange/100–900 y conservar Servicios (recomendado)». La [enmienda](../specs/foundations/caution.amendment.v1.0.0.md) registra la ampliación; no autoriza umbrales de negocio ni publicación o instalaciones.
+
+## Body disabled y actualización de paquetes sin cambio de versión · 2026-11-23
+
+EXPLICIT: el usuario pidió corregir las cinco descriptions Dropdown en Figma, actualizar paquetes Figma local/portable con todos los tokens, agregar disabled de Body con sus focus y hacer QA/documentación. Aclaración vigente: focus son scopes por propiedad, no estados de foco. En un mensaje posterior solicitó verificar JSON canónicos, enviar el corte a los dos chats de skills autocontenidas conservando versiones, verificar todos los grafos y hacer push GitHub cuando todo esté al día. DERIVED: disabled reutiliza neutral-soft (text/shape), neutral-subtle (bg) y neutral-muted (stroke), según usos existentes. Esta solicitud no exige instalar; se preparan y sincronizan los paquetes, preservando los cortes anteriores.

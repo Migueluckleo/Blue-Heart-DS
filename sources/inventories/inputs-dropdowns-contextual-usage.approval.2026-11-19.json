@@ -1,0 +1,55 @@
+{
+  "source_id": "SRC-INPUT-DROPDOWN-CONTEXTUAL-USAGE-2026-11-19",
+  "date": "2026-11-19",
+  "status": "APPROVED",
+  "evidence_class": "EXPLICIT",
+  "reviewed_artifact": {
+    "filename": "blueheart-inputs-dropdowns-guia-contextual-propuesta-v0.1.pdf",
+    "sha256": "39e50c0e3a464472189af6b4cd12418e39e0367b9c0f4cea6cac61d698cf17c8",
+    "pages": 20
+  },
+  "user_decision": "Así queda bien, crea el Markdown de inputs y dropdowns e intégralo a sus componentes y patrones para que lo consuman las skills autocontenidas.",
+  "scope": [
+    "Contextual usage of INPUT-001, DROPDOWN-MENU-001 and DROPDOWN-ITEM-001",
+    "Shared form/dependent-field/filter/validation patterns",
+    "Input editing focus by keyboard or click; option active distinct from selected; Button rule unchanged",
+    "Local canonical documentation and self-contained consumer integration"
+  ],
+  "published_documents": [
+    {
+      "path": "specs/components/input.contextual-usage.amendment.v1.0.1.md",
+      "sha256": "aff1f6c99b555acb2962c04badd878776f3a3642f34dcd648b01841c90b27fdc"
+    },
+    {
+      "path": "specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md",
+      "sha256": "63ddeab29c441760b64ebbdad1517fc683971c2b7bda1ad81dfd80338293ca18"
+    },
+    {
+      "path": "specs/components/dropdown-item.contextual-usage.amendment.v1.0.1.md",
+      "sha256": "2ba61dcc3e1757a4be147b1102724444086e07c0698779c6330c2b5d384defec"
+    },
+    {
+      "path": "specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md",
+      "sha256": "5523f57bfd8ea56fc98cb79bd6afb257a89010935eba879bf94d112f7bcc150b"
+    }
+  ],
+  "administrative_transformations": [
+    "Markdown structure and stable rule/pattern IDs",
+    "Frontmatter, explicit family bindings and local source references"
+  ],
+  "invariant_inputs": {
+    "specs/data/input.v1.0.0.json": "278e03f496399925f22ceb36cd061e5bf381a11ee83f39609c3f958f6f2bc87a",
+    "specs/data/dropdown-menu.v1.0.0.json": "e2a20a99097c07168aeab4801b312087a90c26dc2e1e7189cd03fd57fe1713ad",
+    "specs/data/dropdown-item.v1.0.0.json": "2cd71e5cc4abec7858d87a8413364f1e9f6fd3f99f3a16c3eca682449ea1fc22",
+    "specs/tokens/dropdown-menu.search.v1.0.0.json": "6e815076a56f45c2c2d31a344beb10c3cf4b4460620eadf47cb08a4e25ee9ab7",
+    "implementations/web/src/components/input.tsx": "fa62fc379fcda18b98d50b1d34ca2a989155aca68c1b5310b39dc2008bf8bac5",
+    "implementations/web/src/components/dropdown-menu.tsx": "2397797d530ce4c7b22f2b28ea2ecbe9c07353bdbfc4686012b27aa24750728f",
+    "implementations/web/src/components/dropdown-item.tsx": "5fd78dfa219338654d05eed9f260da1a0781bc5d0299cefd2c513235963cc434",
+    "implementations/web/src/styles.css": "a65c54f35a617028a48df722e45de6363f37eab8458a0d174496d7b549424fbb",
+    "specs/components/buttons.contextual-usage.amendment.v1.0.2.md": "ae82a9a67a4e0a04699dafc847d6a52c9a67811eef594a588737e6afb0d6481a"
+  },
+  "excluded_actions": [
+    "Remote publication",
+    "Figma edits"
+  ]
+}

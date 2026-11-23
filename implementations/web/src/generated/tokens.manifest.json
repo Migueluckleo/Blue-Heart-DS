@@ -12,8 +12,11 @@
     "specs/tokens/body.v1.0.0.json": "d9862b8642147af2499f8a3527d8e2947daace0d8ab23e86705ed7d77af21d0b",
     "specs/tokens/chat-document-viewer.v1.0.0.json": "5d3792222fde1e9f92b5bace9ad55021c3fc747e9abd45d869e3a68ce576bde4",
     "specs/tokens/dropdown-menu.search.v1.0.0.json": "6e815076a56f45c2c2d31a344beb10c3cf4b4460620eadf47cb08a4e25ee9ab7",
-    "specs/tokens/body.semantic-colors.v1.0.0.json": "efdc5fda96bb9ad4e06ef0a8b0d04a054f1f38e4513568328359d2b982f440e0",
-    "specs/tokens/visibility.body-only.correction.json": "baafd084303a190465a32a99a0e09429d7fcc2b9c492e56090318387917be41a"
+    "specs/tokens/body.semantic-colors.v1.0.0.json": "0ea0106dd8f55cb826ebdc83f4243d6828edc56207480759145edcedd2a68490",
+    "specs/tokens/visibility.body-only.correction.json": "5195b867541467cf9207f5ef307a415b88c2d69915fad4cb847f5c28372e50a5",
+    "specs/tokens/caution.v1.0.0.json": "73296fcba662f7aacf2e6b6d637a4fe06ffb83e32e238db30cd7478725f3e217",
+    "specs/tokens/inline-notification.indicator.v1.0.0.json": "dce1ea183b44f6af12ee0b8752f278600241cec20a14d59155e5a47b81c52697",
+    "specs/tokens/body.disabled.v1.0.0.json": "c7db141e768de6a8f45091427e396d135b8323182ec11db684101660d6b7544c"
   },
   "modes": [
     "Contable",
@@ -1009,6 +1012,35 @@
       }
     },
     {
+      "name": "badge/color/bg/caution",
+      "collection": "component",
+      "css": "--badge-color-bg-caution",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Fondo de Badge Caution sin stroke. Consume caution-subtle → caution-orange; invariante en Contable, Administrativo, Servicios y Personas.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-subtle"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-subtle"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-subtle"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-subtle"
+        }
+      }
+    },
+    {
       "name": "badge/color/bg/error",
       "collection": "component",
       "css": "--badge-color-bg-error",
@@ -1183,6 +1215,35 @@
       }
     },
     {
+      "name": "badge/color/icon/caution",
+      "collection": "component",
+      "css": "--badge-color-icon-caution",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Iconos decorativos opcionales de Badge Caution. Consume caution-strong → caution-orange; invariante en Contable, Administrativo, Servicios y Personas.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        }
+      }
+    },
+    {
       "name": "badge/color/icon/error",
       "collection": "component",
       "css": "--badge-color-icon-error",
@@ -1353,6 +1414,35 @@
         "Personas": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:168"
+        }
+      }
+    },
+    {
+      "name": "badge/color/text/caution",
+      "collection": "component",
+      "css": "--badge-color-text-caution",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Texto de Badge Caution. Consume caution-strong → caution-orange; invariante en Contable, Administrativo, Servicios y Personas.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
         }
       }
     },
@@ -2027,6 +2117,38 @@
       }
     },
     {
+      "name": "body/color/bg/caution",
+      "collection": "component",
+      "css": "--body-color-bg-caution",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Fondo de contenido de producto que requiere precaución. Consume caution-subtle → caution-orange; invariante en Contable, Administrativo, Servicios y Personas.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-subtle"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-subtle"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-subtle"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-subtle"
+        }
+      }
+    },
+    {
       "name": "body/color/bg/danger",
       "collection": "component",
       "css": "--body-color-bg-danger",
@@ -2055,6 +2177,38 @@
         "Personas": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:187"
+        }
+      }
+    },
+    {
+      "name": "body/color/bg/disabled",
+      "collection": "component",
+      "css": "--body-color-bg-disabled",
+      "source": "specs/tokens/body.disabled.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Superficie de fondo para contenido de producto no disponible (disabled). Consume neutral-subtle en los cuatro temas. Scope exclusivo por propiedad; el color no deshabilita interacciones.",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:167"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:167"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:167"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:167"
         }
       }
     },
@@ -2250,6 +2404,37 @@
       }
     },
     {
+      "name": "body/color/shape/caution",
+      "collection": "component",
+      "css": "--body-color-shape-caution",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Forma o icono de precaución en contenido de producto. Consume caution-strong → caution-orange; invariante en Contable, Administrativo, Servicios y Personas.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        }
+      }
+    },
+    {
       "name": "body/color/shape/danger",
       "collection": "component",
       "css": "--body-color-shape-danger",
@@ -2281,6 +2466,37 @@
       }
     },
     {
+      "name": "body/color/shape/disabled",
+      "collection": "component",
+      "css": "--body-color-shape-disabled",
+      "source": "specs/tokens/body.disabled.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Relleno de formas e iconos para contenido de producto no disponible (disabled). Consume neutral-soft en los cuatro temas. Scope exclusivo por propiedad; el color no deshabilita interacciones.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        }
+      }
+    },
+    {
       "name": "body/color/shape/information",
       "collection": "component",
       "css": "--body-color-shape-information",
@@ -2308,6 +2524,37 @@
         "Personas": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:158"
+        }
+      }
+    },
+    {
+      "name": "body/color/shape/inverse",
+      "collection": "component",
+      "css": "--body-color-shape-inverse",
+      "source": "specs/tokens/body.semantic-colors.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Relleno blanco inverse para formas e iconos sobre superficies gráficas oscuras o intensas. Consume neutral-base → neutral/100 (#FFFFFF) en los cuatro temas. Scope exclusivo SHAPE_FILL.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
         }
       }
     },
@@ -2467,6 +2714,37 @@
       }
     },
     {
+      "name": "body/color/stroke/caution",
+      "collection": "component",
+      "css": "--body-color-stroke-caution",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Contorno de precaución en contenido de producto; no prescribe borde para Badge. Consume caution-strong → caution-orange; invariante en Contable, Administrativo, Servicios y Personas.",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        }
+      }
+    },
+    {
       "name": "body/color/stroke/danger",
       "collection": "component",
       "css": "--body-color-stroke-danger",
@@ -2494,6 +2772,37 @@
         "Personas": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:188"
+        }
+      }
+    },
+    {
+      "name": "body/color/stroke/disabled",
+      "collection": "component",
+      "css": "--body-color-stroke-disabled",
+      "source": "specs/tokens/body.disabled.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Borde para contenido de producto no disponible (disabled). Consume neutral-muted en los cuatro temas. Scope exclusivo por propiedad; el color no deshabilita interacciones.",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
         }
       }
     },
@@ -2684,6 +2993,37 @@
       }
     },
     {
+      "name": "body/color/text/caution",
+      "collection": "component",
+      "css": "--body-color-text-caution",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Texto de precaución en contenido de producto. Consume caution-strong → caution-orange; invariante en Contable, Administrativo, Servicios y Personas.",
+      "scopes": [
+        "TEXT_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-strong"
+        }
+      }
+    },
+    {
       "name": "body/color/text/danger",
       "collection": "component",
       "css": "--body-color-text-danger",
@@ -2711,6 +3051,37 @@
         "Personas": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:188"
+        }
+      }
+    },
+    {
+      "name": "body/color/text/disabled",
+      "collection": "component",
+      "css": "--body-color-text-disabled",
+      "source": "specs/tokens/body.disabled.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Body · Texto para contenido de producto no disponible (disabled). Consume neutral-soft en los cuatro temas. Scope exclusivo por propiedad; el color no deshabilita interacciones.",
+      "scopes": [
+        "TEXT_FILL"
+      ],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
         }
       }
     },
@@ -20231,6 +20602,35 @@
       }
     },
     {
+      "name": "inline-notification/size/isotipo-max",
+      "collection": "component",
+      "css": "--inline-notification-size-isotipo-max",
+      "source": "specs/tokens/inline-notification.indicator.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Inline Notification · Máximo de 32 px para ancho y alto del contenedor Isotipo. El arte se escala uniformemente para encajar conservando su proporción, sin recolorear ni recortar. Token interno oculto en selectores.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:239"
+        }
+      }
+    },
+    {
       "name": "inline-notification/size/min-width",
       "collection": "component",
       "css": "--inline-notification-size-min-width",
@@ -21619,6 +22019,35 @@
         "Personas": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:227"
+        }
+      }
+    },
+    {
+      "name": "linear-progress/color/indicator/caution",
+      "collection": "component",
+      "css": "--linear-progress-color-indicator-caution",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Indicador Caution determinado e indeterminado; conserva avance y geometría. Consume caution-default → caution-orange; invariante en Contable, Administrativo, Servicios y Personas.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-default"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-default"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-default"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:semantic:caution-default"
         }
       }
     },
@@ -33832,6 +34261,177 @@
       }
     },
     {
+      "name": "caution-orange/100",
+      "collection": "primitive",
+      "css": "--primitive-caution-orange-100",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Caution · Primitiva naranja 100, #FDEADB. Gama independiente de orange y la marca Servicios; escala aprobada en el chat.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "r": 0.9921568627450981,
+          "g": 0.9176470588235294,
+          "b": 0.8588235294117647,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "caution-orange/200",
+      "collection": "primitive",
+      "css": "--primitive-caution-orange-200",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Caution · Primitiva naranja 200, #F6C39A. Gama independiente de orange y la marca Servicios; escala aprobada en el chat.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "r": 0.9647058823529412,
+          "g": 0.7647058823529411,
+          "b": 0.6039215686274509,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "caution-orange/300",
+      "collection": "primitive",
+      "css": "--primitive-caution-orange-300",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Caution · Primitiva naranja 300, #F5A86B. Gama independiente de orange y la marca Servicios; escala aprobada en el chat.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "r": 0.9607843137254902,
+          "g": 0.6588235294117647,
+          "b": 0.4196078431372549,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "caution-orange/400",
+      "collection": "primitive",
+      "css": "--primitive-caution-orange-400",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Caution · Primitiva naranja 400, #F28F3D. Gama independiente de orange y la marca Servicios; escala aprobada en el chat.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "r": 0.9490196078431372,
+          "g": 0.5607843137254902,
+          "b": 0.23921568627450981,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "caution-orange/500",
+      "collection": "primitive",
+      "css": "--primitive-caution-orange-500",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Caution · Primitiva naranja 500, #EE7A1A. Gama independiente de orange y la marca Servicios; escala aprobada en el chat.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "r": 0.9333333333333333,
+          "g": 0.47843137254901963,
+          "b": 0.10196078431372549,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "caution-orange/600",
+      "collection": "primitive",
+      "css": "--primitive-caution-orange-600",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Caution · Primitiva naranja 600, #C45C0A. Gama independiente de orange y la marca Servicios; escala aprobada en el chat.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "r": 0.7686274509803922,
+          "g": 0.3607843137254902,
+          "b": 0.0392156862745098,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "caution-orange/700",
+      "collection": "primitive",
+      "css": "--primitive-caution-orange-700",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Caution · Primitiva naranja 700, #9A3F06. Gama independiente de orange y la marca Servicios; escala aprobada en el chat.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "r": 0.6039215686274509,
+          "g": 0.24705882352941178,
+          "b": 0.023529411764705882,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "caution-orange/800",
+      "collection": "primitive",
+      "css": "--primitive-caution-orange-800",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Caution · Primitiva naranja 800, #662904. Gama independiente de orange y la marca Servicios; escala aprobada en el chat.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "r": 0.4,
+          "g": 0.1607843137254902,
+          "b": 0.01568627450980392,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "caution-orange/900",
+      "collection": "primitive",
+      "css": "--primitive-caution-orange-900",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Caution · Primitiva naranja 900, #3B1702. Gama independiente de orange y la marca Servicios; escala aprobada en el chat.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "r": 0.23137254901960785,
+          "g": 0.09019607843137255,
+          "b": 0.00784313725490196,
+          "a": 1
+        }
+      }
+    },
+    {
       "name": "amber/100",
       "collection": "primitives",
       "css": "--primitive-amber-100",
@@ -37362,6 +37962,74 @@
         "Value": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:128"
+        }
+      }
+    },
+    {
+      "name": "caution-accent",
+      "collection": "semantic",
+      "css": "--caution-accent",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Caution · Acento suave para composición. Alias a caution-orange/200; invariante entre los cuatro temas.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:primitive:caution-orange/200"
+        }
+      }
+    },
+    {
+      "name": "caution-default",
+      "collection": "semantic",
+      "css": "--caution-default",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Caution · Indicador y énfasis gráfico. Alias a caution-orange/500; invariante entre los cuatro temas.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:primitive:caution-orange/500"
+        }
+      }
+    },
+    {
+      "name": "caution-strong",
+      "collection": "semantic",
+      "css": "--caution-strong",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Caution · Texto, iconos y contornos legibles. Alias a caution-orange/700; invariante entre los cuatro temas.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:primitive:caution-orange/700"
+        }
+      }
+    },
+    {
+      "name": "caution-subtle",
+      "collection": "semantic",
+      "css": "--caution-subtle",
+      "source": "specs/tokens/caution.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Caution · Superficie suave. Alias a caution-orange/100; invariante entre los cuatro temas.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "caution:primitive:caution-orange/100"
         }
       }
     },

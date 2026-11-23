@@ -488,6 +488,7 @@
 
   .bh-linear-progress[data-type="success"] { --bh-progress-color: var(--linear-progress-color-indicator-success); }
   .bh-linear-progress[data-type="warning"] { --bh-progress-color: var(--linear-progress-color-indicator-warning); }
+  .bh-linear-progress[data-type="caution"] { --bh-progress-color: var(--linear-progress-color-indicator-caution); }
   .bh-linear-progress[data-type="error"] { --bh-progress-color: var(--linear-progress-color-indicator-error); }
   .bh-linear-progress:is([data-size="medium"], [data-size="large"]) {
     --bh-progress-label-size: var(--linear-progress-font-size-14);
@@ -1954,7 +1955,32 @@
     block-size: calc(var(--inline-notification-size-status-icon) * 1px);
     color: var(--bh-inline-icon);
   }
-  .bh-inline-text { display: grid; gap: calc(var(--inline-notification-spacing-text) * 1px); overflow-wrap: anywhere; }
+  .bh-inline-body {
+    display: flex;
+    flex: 1;
+    min-inline-size: 0;
+    align-items: flex-end;
+    gap: calc(var(--inline-notification-spacing-content) * 1px);
+  }
+  .bh-inline-body > .bh-button { flex: none; }
+  .bh-inline-text { display: grid; flex: 1; min-inline-size: 0; gap: calc(var(--inline-notification-spacing-text) * 1px); overflow-wrap: anywhere; }
+  .bh-inline-isotipo {
+    display: grid;
+    place-items: center;
+    flex: none;
+    inline-size: calc(var(--inline-notification-size-isotipo-max) * 1px);
+    block-size: calc(var(--inline-notification-size-isotipo-max) * 1px);
+  }
+  .bh-inline-isotipo img {
+    display: block;
+    inline-size: auto;
+    block-size: auto;
+    min-inline-size: 0;
+    min-block-size: 0;
+    max-inline-size: calc(var(--inline-notification-size-isotipo-max) * 1px);
+    max-block-size: calc(var(--inline-notification-size-isotipo-max) * 1px);
+    object-fit: contain;
+  }
   .bh-inline-title {
     color: var(--inline-notification-color-text-primary-default);
     font-size: calc(var(--inline-notification-font-size-title) * 1px);
@@ -2635,6 +2661,7 @@
   .bh-body-caption { font-size: calc(var(--body-font-caption-size) * 1px); line-height: calc(var(--body-font-caption-line-height) * 1px); }
   .bh-body-brand { color: var(--body-color-text-brand); }
   [data-body-tone="warning"] { color: var(--body-color-text-warning); }
+  [data-body-tone="caution"] { color: var(--body-color-text-caution); }
   [data-body-tone="success"] { color: var(--body-color-text-success); }
   [data-body-tone="danger"] { color: var(--body-color-text-danger); }
   [data-body-tone="information"] { color: var(--body-color-text-information); }
@@ -2692,6 +2719,18 @@
   .bh-body-color-row .bh-body-color-bg { color: var(--bh-body-sample-text); background: var(--bh-body-sample-bg); }
   .bh-body-color-stroke { border: 1px solid var(--bh-body-sample-stroke); background: var(--body-color-bg-primary); }
   .bh-body-color-shape svg { inline-size: 24px; block-size: 24px; fill: var(--bh-body-sample-shape); }
+  .bh-body-inverse-sample {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: calc(var(--body-spacing-md) * 1px);
+    padding: calc(var(--body-spacing-sm) * 1px);
+  }
+  .bh-body-inverse-sample > .bh-body-h3 { inline-size: 120px; }
+  .bh-body-inverse-sample svg { flex: none; }
+  .bh-body-inverse-sample p { flex: 1 1 240px; }
+  .bh-body-inverse-sample rect { fill: var(--body-color-shape-brand); rx: calc(var(--body-radius-md) * 1px); }
+  .bh-body-inverse-sample circle { fill: var(--body-color-shape-inverse); }
 }
 
 
@@ -2712,6 +2751,15 @@
   .bh-document-viewer-actions {
     display: flex;
     flex: none;
+    align-items: center;
+    min-inline-size: 0;
+    gap: calc(var(--chat-document-viewer-spacing-none) * 1px);
+    padding: calc(var(--chat-document-viewer-spacing-none) * 1px);
+  }
+  .bh-document-viewer-toolbar {
+    display: flex;
+    flex: 1;
+    min-inline-size: 0;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
@@ -2779,7 +2827,11 @@
     gap: calc(var(--body-spacing-md) * 1px);
     min-inline-size: 0;
   }
-  .bh-delivered-document-toolbar > .bh-search { flex: 1; min-inline-size: 0; }
+  .bh-delivered-document-toolbar > .bh-search {
+    flex: 1;
+    min-inline-size: 0;
+    grid-template-columns: minmax(0, 1fr);
+  }
   .bh-delivered-document-toolbar > button { flex: none; }
   .bh-delivered-document-visualization {
     display: flex;

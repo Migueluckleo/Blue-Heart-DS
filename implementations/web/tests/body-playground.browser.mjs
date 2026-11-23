@@ -17,11 +17,11 @@ for(const source of config.token_sources){
     }
   }
 }
-assert.equal(bodyTokens.length,52);
+assert.equal(bodyTokens.length,61);
 const bodyByName=new Map(bodyTokens.map(token=>[token.name,token]));
 const manifest=JSON.parse(await readFile(resolve(repo,'implementations/web/src/generated/tokens.manifest.json'),'utf8'));
 const policy=JSON.parse(await readFile(resolve(repo,'specs/tokens/visibility.body-only.correction.json'),'utf8')).selectorVisibilityPolicy;
-assert.equal(policy.bodyTokens.length,52);
+assert.equal(policy.bodyTokens.length,61);
 for(const token of manifest.tokens){
   const declared=token.collection==='component'&&token.name.startsWith('body/')?policy.bodyTokens.find(row=>row.name===token.name):null;
   assert.deepEqual(token.scopes,declared?.scopes??[],token.name);
@@ -30,6 +30,14 @@ function value(token,mode){const v=token.values[mode]??token.values.Value;return
 function rgb(v){return `rgb(${['r','g','b'].map(k=>Math.round(v[k]*255)).join(', ')})`;}
 function luminance(v){return ['r','g','b'].map(k=>v[k]<=.04045?v[k]/12.92:((v[k]+.055)/1.055)**2.4).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);}
 function contrast(a,b){const [lo,hi]=[luminance(a),luminance(b)].sort((a,b)=>a-b);return (hi+.05)/(lo+.05);}
+const inverseToken=bodyByName.get('body/color/shape/inverse');
+assert.deepEqual(inverseToken.scopes,['SHAPE_FILL']);
+for(const mode of config.modes){
+  const alias=inverseToken.values[mode];assert.equal(alias.type,'VARIABLE_ALIAS');
+  const semantic=byId.get(alias.id);assert.equal(semantic.name,'neutral-base');
+  const primitive=byId.get((semantic.values[mode]??semantic.values.Value).id);assert.equal(primitive.name,'neutral/100');
+  assert.deepEqual(value(inverseToken,mode),{r:1,g:1,b:1,a:1});
+}
 const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.woff2':'font/woff2','.svg':'image/svg+xml'};
 const server=createServer(async(req,res)=>{
   const path=new URL(req.url,'http://localhost').pathname;
@@ -69,7 +77,7 @@ try{
     await page.getByRole('combobox',{name:'Tema del Playground'}).selectOption(mode);
     const actual=await page.locator('main').evaluate(el=>{
       const s=getComputedStyle(el),read=token=>s.getPropertyValue('--'+token.replaceAll('/','-')).trim();
-      return Object.fromEntries(['primary','secondary','brand','warning','success','danger','information'].map(role=>[role,read('body/color/text/'+role)]));
+      return Object.fromEntries(['primary','secondary','brand','warning','caution','success','danger','information'].map(role=>[role,read('body/color/text/'+role)]));
     });
     const pairs=[];
     for(const token of bodyTokens.filter(t=>t.name.startsWith('body/color/text/'))){
@@ -79,10 +87,10 @@ try{
         const color=getComputedStyle(probe).color;probe.remove();return color;
       },role);
       assert.equal(measured,rgb(color),mode+' '+role);
-      for(const bg of bodyTokens.filter(t=>['body/color/bg/primary','body/color/bg/emphasis'].includes(t.name))){const ratio=contrast(color,value(bg,mode));assert.ok(ratio>=4.5,`${mode} ${role} ${bg.name} ${ratio}`);pairs.push(ratio);}
+      if(role!=='disabled')for(const bg of bodyTokens.filter(t=>['body/color/bg/primary','body/color/bg/emphasis'].includes(t.name))){const ratio=contrast(color,value(bg,mode));assert.ok(ratio>=4.5,`${mode} ${role} ${bg.name} ${ratio}`);pairs.push(ratio);}
     }
     const semanticPairs=[];
-    for(const tone of ['primary','secondary','brand','warning','success','danger','information']){
+    for(const tone of ['primary','secondary','brand','warning','caution','success','danger','information']){
       const row=page.locator(`.bh-body-color-row[data-color-tone="${tone}"]`),bgTone=tone==='secondary'?'emphasis':tone;
       const measured=await row.evaluate(el=>{
         const style=property=>getComputedStyle(el.querySelector(`[data-color-property="${property}"]`));
@@ -98,7 +106,22 @@ try{
       if(tone!=='secondary')assert.ok(strokeRatio>=3,mode+' '+tone+' stroke');
       semanticPairs.push({tone,textRatio,shapeRatio,strokeRatio,decorativeBorder:tone==='secondary'});
     }
-    themes.push({mode,minContrast:Math.min(...pairs),colors:actual,semanticPairs});
+    const inverse=await page.locator('[data-color-role="inverse"]').evaluate(el=>({
+      shape:getComputedStyle(el.querySelector('circle')).fill,backgroundShape:getComputedStyle(el.querySelector('rect')).fill,
+    }));
+    assert.equal(inverse.shape,rgb(value(inverseToken,mode)),mode+' inverse');
+    const brandShape=value(bodyByName.get('body/color/shape/brand'),mode);
+    assert.equal(inverse.backgroundShape,rgb(brandShape));
+    const inverseContrast=contrast(value(inverseToken,mode),brandShape);
+    assert.ok(inverseContrast>=3,mode+' inverse/brand shape contrast');
+    const disabled=await page.locator('main').evaluate(el=>{
+      const probe=document.createElement('div');probe.style.cssText='color:var(--body-color-text-disabled);background:var(--body-color-bg-disabled);border:1px solid var(--body-color-stroke-disabled)';
+      const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.style.fill='var(--body-color-shape-disabled)';probe.appendChild(svg);el.appendChild(probe);
+      const style=getComputedStyle(probe),result={text:style.color,bg:style.backgroundColor,stroke:style.borderColor,shape:getComputedStyle(svg).fill};probe.remove();return result;
+    });
+    for(const group of ['text','bg','stroke','shape'])assert.equal(disabled[group],rgb(value(bodyByName.get(`body/color/${group}/disabled`),mode)),mode+' disabled '+group);
+    assert.deepEqual(disabled,{text:'rgb(148, 163, 184)',bg:'rgb(241, 245, 249)',stroke:'rgb(226, 232, 240)',shape:'rgb(148, 163, 184)'});
+    themes.push({mode,minContrast:Math.min(...pairs),colors:actual,semanticPairs,disabled,inverse:{...inverse,contrast:inverseContrast}});
   }
   const widths=[];
   for(const expanded of [false,true,false]){
@@ -119,12 +142,15 @@ try{
   await page.getByRole('button',{name:'Ver Referencia y RFC',exact:true}).focus();await page.keyboard.press('Space');
   assert.match(await page.getByRole('status').textContent(),/Referencia y RFC/);
   await page.getByRole('combobox',{name:'Tema del Playground'}).selectOption('Contable');
-  const out=resolve(repo,'output/qa/body-semantic-colors-2026-11-18');await mkdir(out,{recursive:true});
+  const out=resolve(repo,process.env.BODY_QA_DIR??'qa/implementations/caution-2026-11-23/body-regression');await mkdir(out,{recursive:true});
   await page.locator('.bh-body-color-specimen').screenshot({path:resolve(out,'web-color-roles.png')});
   await page.setViewportSize({width:320,height:900});
-  assert.equal(await page.locator('.bh-body-color-row').count(),7);
+  assert.equal(await page.locator('.bh-body-color-row').count(),8);
+  const inverseSample=page.locator('[data-color-role="inverse"]');
+  assert.equal(await inverseSample.count(),1);
+  assert.equal(await inverseSample.evaluate(el=>el.scrollWidth<=el.clientWidth),true);
   assert.ok(await page.locator('.bh-body-color-scroll').evaluate(el=>el.scrollWidth>el.clientWidth));
   assert.deepEqual(errors,[]);
-  const result={status:'PASS',cards:5,tokens:52,colorTokens:28,newColorTokens:19,visibleScopes:52,metrics,themes,shellBodyWidths:widths,keyboard:true,narrowSpecimenScroll:true};
+  const result={status:'PASS',cards:5,tokens:bodyTokens.length,colorTokens:bodyTokens.filter(t=>t.resolvedType==='COLOR').length,newColorTokens:28,visibleScopes:policy.bodyTokens.length,shapeRoles:bodyTokens.filter(t=>t.name.startsWith('body/color/shape/')).length,disabledPropertyChecks:themes.length*4,inverseAliasChain:true,metrics,themes,shellBodyWidths:widths,keyboard:true,narrowSpecimenScroll:true};
   await writeFile(resolve(out,'chrome.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
 }finally{await browser?.close();server.close();}

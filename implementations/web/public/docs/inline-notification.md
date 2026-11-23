@@ -18,7 +18,7 @@ Usa Inline Notification junto al contenido afectado. Carbon sitúa el mensaje ce
 
 ## Uso sin backend
 
-Usa el tipo según gravedad, agrega un destino real si hay enlace y deja al anfitrión el cierre.
+CTA opcional, apagado por defecto, Secondary small a la derecha del Body. Indicador de estado o Isotipo oficial ≤32×32 sin deformar. El anfitrión conecta acción, enlace y cierre.
 
 ```tsx
 'use client';
@@ -36,16 +36,27 @@ const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading'
 
 export function InlineNotificationExample() {
   const [show,setShow]=useState(true);
-  return <div className="my-4 grid max-w-[602px] gap-3">
+  const [showCta,setShowCta]=useState(false);
+  const [ctaActivations,setCtaActivations]=useState(0);
+  const [isotipo,setIsotipo]=useState<{src:string;alt:string}>();
+  const cta={showCta,ctaLabel:'Ver detalles',onCta:()=>setCtaActivations(count=>count+1),isotipo};
+  return <div id="demo-inline-notification" className="my-4 grid max-w-[602px] gap-3">
+    <Checkbox label="Mostrar CTA de las notificaciones" showLabel selected={showCta} onSelectedChange={setShowCta}/>
+    <div className="flex flex-wrap gap-2">
+      <Button variant="text" size="small" label="Ícono de estado" onClick={()=>setIsotipo(undefined)}/>
+      <Button variant="text" size="small" label="Isotipo Contabilidad" onClick={()=>setIsotipo({src:'/assets/inline-notification-isotipo-contabilidad.svg',alt:'Contabilidad'})}/>
+      <Button variant="text" size="small" label="Isotipo XML en línea" onClick={()=>setIsotipo({src:'/assets/inline-notification-isotipo-xml-en-linea.svg',alt:'XML en línea'})}/>
+    </div>
     <Button id="demo-inline-restore" variant="secondary" label="Mostrar aviso informativo" onClick={()=>setShow(true)}/>
-    {show&&<InlineNotification type="info" title="Actualización disponible"
+    {show&&<InlineNotification {...cta} type="info" title="Actualización disponible"
       description="Consulta el historial de la revisión." link={{href:'#demo-inline-details',label:'Ver historial'}}
       dismissLabel="Cerrar aviso informativo"
       onDismiss={()=>{setShow(false);document.getElementById('demo-inline-restore')?.focus();}}/>}
-    <InlineNotification type="neutral" title="Resumen" description="Los datos corresponden al periodo seleccionado."/>
-    <InlineNotification type="success" title="Conciliación completa" description="Puedes continuar con la siguiente revisión."/>
-    <InlineNotification type="warning" title="Revisión pendiente" description="Hay comprobantes que requieren atención."/>
-    <InlineNotification type="error" title="Archivo pendiente" description="Adjunta el archivo para completar el registro." showDismiss={false}/>
+    <InlineNotification {...cta} type="neutral" title="Resumen" description="Los datos corresponden al periodo seleccionado."/>
+    <InlineNotification {...cta} type="success" title="Conciliación completa" description="Puedes continuar con la siguiente revisión."/>
+    <InlineNotification {...cta} type="warning" title="Revisión pendiente" description="Hay comprobantes que requieren atención."/>
+    <InlineNotification {...cta} type="error" title="Archivo pendiente" description="Adjunta el archivo para completar el registro." showDismiss={false}/>
+    <p id="demo-inline-cta-result" role="status">Activaciones locales de CTA: {ctaActivations}</p>
     <p id="demo-inline-details">Historial de revisión del catálogo.</p>
   </div>;
 }
@@ -71,6 +82,11 @@ export interface InlineNotificationProps {
   showDismiss?: boolean;
   onDismiss?: () => void;
   dismissLabel?: string;
+  showCta?: boolean;
+  ctaLabel?: string;
+  onCta?: () => void;
+  /** Official product Isotipo; aspect ratio is preserved within 32 by 32 px. */
+  isotipo?: {src: string; alt: string};
   className?: string;
 }
 ```
@@ -81,14 +97,15 @@ Las firmas siguientes se extraen de las funciones, incluidos sus valores por def
 
 ```tsx
 InlineNotification: {type='neutral',title,description,link,showTitle=true,showDescription=true,
-  showIcon=true,showDismiss=true,onDismiss,dismissLabel='Cerrar notificación',className}: InlineNotificationProps
+  showIcon=true,showDismiss=true,onDismiss,dismissLabel='Cerrar notificación',
+  showCta=false,ctaLabel='Ver detalles',onCta,isotipo,className}: InlineNotificationProps
 ```
 
 Props `on…` son callbacks locales. No atribuyen autorización, carga, guardado ni resultados de negocio.
 
 ## Composición y Slots
 
-P-SLOTS: **NOT_APPLICABLE**. Contenido, indicador y cierre tienen posiciones fijas. ReactNode/listas tipadas son la traducción web de las regiones, no evidencia de Slots Figma. El anfitrión conserva el orden y los IDs de listas; las cantidades de las demos no son límites de producto.
+P-SLOTS: **NOT_APPLICABLE**. Contenido, indicador, cierre y un único CTA opcional de anatomía fija; Show CTA controla visibilidad, no una región abierta. ReactNode/listas tipadas son la traducción web de las regiones, no evidencia de Slots Figma. El anfitrión conserva el orden y los IDs de listas; las cantidades de las demos no son límites de producto.
 
 ## Estilos y Next.js
 
@@ -98,10 +115,13 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [inline-notification.contract.v1.0.0.md](../../../../specs/components/inline-notification.contract.v1.0.0.md) · SHA-256 `622aca6f7fe4eaa960deee54d581971ffe46941364744de678d3480db269c661`.
+- [inline-notification.contract.v1.0.0.md](../../../../specs/components/inline-notification.contract.v1.0.0.md) · SHA-256 `1114301cad0a867e21219ab91cae7a9b18d7f22e40c7577ee7a7287d959f9670`.
+- [forms.app-shell.amendment.v1.0.0.md](../../../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) · SHA-256 `0e4c9655879b4847db021522fe49bc86f8dcac095a01c63fb3d75d03b5db8b8b`.
+- [inline-notification.cta.amendment.v1.0.0.md](../../../../specs/components/inline-notification.cta.amendment.v1.0.0.md) · SHA-256 `84a68d752343cc04cb9ea66550ddadabb05a64592e6b6efde0e16ed66a115765`.
+- [inline-notification.layout-isotipo.amendment.v1.0.0.md](../../../../specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md) · SHA-256 `07c9f9f2bb5f4236c6e3e71e346d5f1328a2772a9a5684deb3a24b2e28f7b001`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 
 ## Verificación
 
-`pnpm verify` comprueba generación/cobertura, TypeScript, pruebas y build estático. `pnpm test:browser` valida los recorridos locales. [Evidencia de QA](../../../../qa/implementations/actions-notification.v1.0.0.review.md) identifica alcance, resultados y límites; una demo visible por sí sola no es un PASS visual.
+`pnpm verify` comprueba generación/cobertura, TypeScript, pruebas y build estático. `pnpm test:browser` valida los recorridos locales. [Evidencia de QA](../../../../qa/implementations/inline-notification.layout-isotipo.v1.0.0.review.md) identifica alcance, resultados y límites; una demo visible por sí sola no es un PASS visual.

@@ -10,11 +10,13 @@ from urllib.parse import unquote
 from ds_core import yaml_documents, markdown_links, local_target, read_json, explicit_yaml_file_references
 from ds_skills import source_inputs, safe, digest, compact
 from consumer_graph import PUBLIC_ROOTS, validate_index
+from ds_dependencies import declared_dependency_targets
 
 PREPARED = 'catalog/prepared/consumption-graph.json'
 ATTESTATION = 'catalog/prepared/consumption-proof.json'
 TOOLING = ['schemas/consumption-query.v1.schema.json','scripts/ds_consumption.py','scripts/consumer_graph.py','scripts/ds_remote.py','scripts/ds_skills.py',
            'scripts/ds_core.py','scripts/ds_graph_engine.py', 'scripts/ds_graph.py', 'scripts/ds_incremental.py',
+           'scripts/ds_dependencies.py',
     'scripts/ds_session.py', 'scripts/ds_close.py','scripts/ds_yaml.rb','config/ds-skills.json','config/ds-project.json']
 
 
@@ -44,30 +46,6 @@ def reference_targets(root, path, text):
 def location(value):
     # Historical Graphify outputs sometimes store a one-based line as an integer.
     return 'L'+str(value) if type(value) is int and value > 0 else value if isinstance(value,str) else ''
-
-
-def declared_dependency_targets(texts, metadata, components):
-    """Resolve only contract IDs explicitly declared in root YAML metadata."""
-    targets = {c['id']: c['contract'] for c in components}
-    for path, row in metadata.items():
-        meta = row.get('value') or {}
-        if path.startswith('specs/foundations/') and meta.get('contract_id'):
-            targets[meta['contract_id']] = path
-    references = {}
-    for path, row in metadata.items():
-        dependencies = (row.get('value') or {}).get('dependencies', [])
-        if not dependencies:
-            continue
-        match = re.search(r'^dependencies\s*:', texts[path], re.M)
-        if not isinstance(dependencies, list) or match is None:
-            raise ValueError('Invalid contract dependencies: ' + path)
-        line = texts[path].count('\n', 0, match.start()) + 1
-        for dependency in dependencies:
-            target = targets.get(dependency)
-            if target not in texts:
-                raise ValueError(f'Unresolved declared dependency {dependency} in {path}')
-            references.setdefault(path, set()).add((line, target))
-    return references
 
 
 def project(root, state, graph, commit):

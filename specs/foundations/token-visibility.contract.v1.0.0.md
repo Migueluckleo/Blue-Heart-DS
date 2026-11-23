@@ -9,7 +9,7 @@ target_file_key: yZsIpXywybsPDytjolwcP4
 user_audit: NOT_REQUIRED
 human_review_policy: OPTIONAL_NON_BLOCKING
 source_data_ref: specs/tokens/visibility.body-only.correction.json
-source_data_digest_sha256: baafd084303a190465a32a99a0e09429d7fcc2b9c492e56090318387917be41a
+source_data_digest_sha256: 5195b867541467cf9207f5ef307a415b88c2d69915fad4cb847f5c28372e50a5
 data_refs: [specs/tokens/visibility.body-only.correction.json]
 dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001, FOUNDATIONS-BODY-001]
 ---
@@ -40,7 +40,15 @@ Todos los tokens ajenos a esa selección deben tener `scopes = []` donde Figma l
 | Gap y padding | FLOAT | GAP |
 | Radius | FLOAT | CORNER_RADIUS |
 
-Los 52 tokens Body actuales incluyen los 33 iniciales y los 19 colores de la [ampliación semántica](body.semantic-colors.amendment.v1.0.0.md), con esas funciones. No usar `ALL_SCOPES` ni `ALL_FILLS`. La API de Figma representa gap y padding mediante `GAP`; no existe un scope independiente de padding. Los pesos Body actuales son STRING: conservar `FONT_STYLE`, sin convertirlos a pesos numéricos.
+Los 53 tokens Body actuales incluyen los 33 iniciales y los 20 colores de la [ampliación semántica](body.semantic-colors.amendment.v1.0.0.md), con esas funciones. `body/color/shape/inverse` consume neutral-base (blanco) y declara exclusivamente SHAPE_FILL, igual que los demás roles shape. No usar `ALL_SCOPES` ni `ALL_FILLS`. La API de Figma representa gap y padding mediante `GAP`; no existe un scope independiente de padding. Los pesos Body actuales son STRING: conservar `FONT_STYLE`, sin convertirlos a pesos numéricos.
+
+La misma política se aplica a todas las medidas, no solo a COLOR: `body/spacing/*` se ofrece en gap y padding; `body/radius/*`, únicamente en corner radius; tamaños e interlineados tipográficos, en sus propiedades específicas. Los tokens numéricos internos de cada familia, semantic y primitives permanecen con scopes vacíos. No exponer spacing como sizing o radius por compartir tipo FLOAT.
+
+### Lectura del selector frente al binding existente
+
+OBSERVED en el editor, 2026-11-19: un campo que ya consume un token interno puede mostrar ese token actualmente asignado, incluso dentro del selector. Esto conserva la referencia activa y no significa que los demás tokens internos estén disponibles para construir contenido nuevo. Comprobar la oferta en un campo sin binding: debe mostrar únicamente los Body compatibles. No desvincular ni convertir el token activo a literal para hacer desaparecer su etiqueta, ni modificar publicabilidad. El gestor de Variables sigue siendo una interfaz de administración de dependencias; no es el selector de una propiedad.
+
+La [revalidación de medidas](../../qa/implementations/token-visibility.measures.2026-11-19.review.md) contrasta scopes y UI real para gap, padding y corner radius; distingue el token ya asignado de las opciones ofrecidas en un campo nuevo.
 
 Para futuras altas, declarar cada token `component/body/` por nombre, tipo y función en el JSON delegado y seleccionar exclusivamente los scopes que necesite. Un token Body sin declaración bloquea el QA/generación. Si se autoriza un rol de borde, usar `STROKE_COLOR` para color o `STROKE_FLOAT` para grosor; sizing usa `WIDTH_HEIGHT`, peso numérico `FONT_WEIGHT`, opacidad `OPACITY`, efectos `EFFECT_COLOR`/`EFFECT_FLOAT` y propiedades de párrafo sus scopes específicos. Estas correspondencias no crean tokens nuevos ni exponen tokens internos. Toda nueva familia y todo token fuera de Body nacen con `[]` y conservan el consumo interno por aliases.
 
@@ -61,3 +69,11 @@ TOKEN-QA-03 se ejecuta en cada alta o corrección junto a TOKEN-QA-01/02: releer
 Registrar por tipo cualquier rechazo real de la API al configurar scopes sin alterar su función, publicabilidad ni valores. El inventario actual contiene COLOR, FLOAT y STRING; BOOLEAN no está presente, por lo que no se afirma validación de ese tipo. Un tipo futuro se prueba explícitamente antes de cerrar; una incompatibilidad se reporta como limitación y bloquea la afirmación de visibilidad universal para ese tipo.
 
 La solicitud autoriza implementación tras [QA documental](../../qa/contracts/token-visibility.v1.0.0.review.md), bajo DEC-AI-TECHNICAL-CLOSURE-001. Los resultados y límites se registran en el [QA de implementación](../../qa/implementations/token-visibility.v1.0.0.review.md) y sus lecturas de Figma. No publicar la biblioteca, modificar `hiddenFromPublishing` ni instalar skills como parte de esta corrección.
+
+## Caution · 2026-11-23
+
+La [enmienda Caution](caution.amendment.v1.0.0.md) amplía la política delegada con cuatro roles compatibles Body. El inventario efectivo suma 57 Body; primitivos, semánticos y demás componentes mantienen scopes vacíos.
+
+## Body disabled · 2026-11-23
+
+La [ampliación disabled](body.disabled.amendment.v1.0.0.md) agrega text/disabled, bg/disabled, stroke/disabled y shape/disabled con TEXT_FILL, FRAME_FILL/SHAPE_FILL, STROKE_COLOR y SHAPE_FILL respectivamente. Body suma 61 nombres visibles; los demás tokens siguen ocultos. Focus significa scopes por propiedad, según aclaración explícita del usuario; no introduce un foco de teclado.

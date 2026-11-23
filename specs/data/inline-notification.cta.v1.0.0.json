@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "kind": "DELEGATED_COMPONENT_AMENDMENT",
+  "contract": "INLINE-NOTIFICATION-001-CTA",
+  "version": "1.0.0",
+  "source": "Solicitud explícita del usuario 2026-11-23: CTA opcional, apagado por defecto, Button Secondary al activarlo.",
+  "target": {
+    "file_key": "yZsIpXywybsPDytjolwcP4",
+    "page_id": "122:49",
+    "set_id": "122:274",
+    "set_key": "7015680d121d3f5d709db132375826a019133a09"
+  },
+  "properties": {
+    "show_cta": {
+      "figma_name": "Show CTA",
+      "figma_type": "BOOLEAN",
+      "default": false,
+      "web_name": "showCta",
+      "target_property_id": "Show CTA#581:0"
+    },
+    "cta_label": {
+      "figma_owner": "Nested Button/secondary · Label",
+      "default": "Ver detalles",
+      "web_name": "ctaLabel"
+    },
+    "cta_action": {
+      "web_name": "onCta",
+      "owner": "host",
+      "automatic_dismiss": false
+    }
+  },
+  "composition": {
+    "cardinality": "one optional fixed Button",
+    "component": "BUTTON-001",
+    "variant": "secondary",
+    "size": "small",
+    "state": "default",
+    "secondary_set_id": "23:952",
+    "secondary_default_id": "23:853",
+    "position": "below message, aligned with text",
+    "body_layout": "VERTICAL",
+    "body_gap_token": "inline-notification/spacing/content",
+    "body_gap_target_id": "VariableID:13:3",
+    "body_gap_px": 16,
+    "body_padding_token": "inline-notification/spacing/none",
+    "body_padding_target_id": "VariableID:13:10",
+    "body_padding_px": 0,
+    "width": "FILL",
+    "height": "HUG",
+    "button_width": "HUG",
+    "button_height_px": 32
+  },
+  "preserve": {
+    "types": [
+      "neutral",
+      "info",
+      "success",
+      "warning",
+      "error"
+    ],
+    "previous_figma_properties": 7,
+    "resulting_figma_properties": 8,
+    "reference_width_px": 602,
+    "min_width_px": 320,
+    "default_height_px": 76,
+    "source_data_sha256": "3a7579f36f020e1f8242673fc39cb371aff6336e75df15c70942e523681b04ea"
+  },
+  "implementation": {
+    "rows": [
+      {
+        "variant": "122:53",
+        "content": "122:54",
+        "text": "122:121",
+        "body": "581:28",
+        "cta": "581:29"
+      },
+      {
+        "variant": "122:132",
+        "content": "122:133",
+        "text": "122:179",
+        "body": "581:37",
+        "cta": "581:38"
+      },
+      {
+        "variant": "122:189",
+        "content": "122:190",
+        "text": "122:193",
+        "body": "581:44",
+        "cta": "581:45"
+      },
+      {
+        "variant": "122:203",
+        "content": "122:204",
+        "text": "122:250",
+        "body": "581:51",
+        "cta": "581:52"
+      },
+      {
+        "variant": "122:260",
+        "content": "122:261",
+        "text": "122:264",
+        "body": "581:58",
+        "cta": "581:59"
+      }
+    ]
+  }
+}

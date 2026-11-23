@@ -13,6 +13,7 @@ from pathlib import Path
 from ds_session import coordinated
 
 from ds_core import ROOT, corpus, paths_of, read_json, sha, dump, relative
+from ds_dependencies import dependency_references, dependency_coverage
 
 LIVE = ROOT / "graphify-out"
 OUTPUTS = ["graph.json", "graph.html", "GRAPH_REPORT.md", "manifest.json",
@@ -67,6 +68,9 @@ def check_graph(config, detection=None):
             errors.append("duplicate IDs")
         if any(e["source"] not in ids or e["target"] not in ids for e in edges):
             errors.append("broken endpoints")
+        dependencies = dependency_coverage(graph, dependency_references(ROOT))
+        if dependencies['status'] != 'PASS':
+            errors.append({'incomplete_declared_dependencies': dependencies['missing']})
         closure_path = LIVE / "ds-closure.json"
         closure = read_json(closure_path) if closure_path.exists() else None
         if closure is None:
@@ -86,6 +90,7 @@ def check_graph(config, detection=None):
             errors.append("configuration changed since closure")
         return {"status": "STALE" if errors else "CURRENT", "errors": errors,
                 "files": delta["corpus_files"], "nodes": len(nodes), "edges": len(edges),
+                "declared_dependencies": dependencies,
                 "scope": "Graph freshness/integrity, not Figma validation"}
     except (ValueError, OSError, KeyError) as error:
         return {"status": "BLOCKED", "errors": [str(error)]}
@@ -289,6 +294,7 @@ def close(config, name):
         "config_sha256": sha(ROOT / "config/ds-project.json"),
         "output_sha256": {p: sha(run / "staged" / p) for p in OUTPUTS},
         "source_link_limitations": len(verification["source_link_limitations"]),
+        "declared_dependencies": verification['declared_dependencies'],
         "semantic_usage": "UNAVAILABLE; not zero",
         "scope": "Local corpus freshness, deterministic documentation checks, no Figma QA or design approval"}
     from ds_incremental import tool_digest

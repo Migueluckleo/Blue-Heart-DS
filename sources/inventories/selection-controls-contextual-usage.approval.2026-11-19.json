@@ -1,0 +1,70 @@
+{
+  "source_id": "SRC-SELECTION-CONTROLS-CONTEXTUAL-USAGE-2026-11-19",
+  "date": "2026-11-19",
+  "status": "APPROVED",
+  "evidence_class": "EXPLICIT",
+  "reviewed_artifact": {
+    "filename": "blueheart-checkboxes-radios-toggles-guia-contextual-propuesta-v0.1.pdf",
+    "sha256": "4dcd2cbd521970687416a406e174a69bae07b369afdcd5d5bbec02bf59ebfbed",
+    "pages": 20
+  },
+  "user_decision": "Así queda bien, crea el Markdown de checkboxes, radio buttons y toggles e intégralo a sus componentes y patrones para que lo consuman las skills autocontenidas.",
+  "scope": [
+    "Contextual guides for CHECKBOX-001, RADIO-001, RADIO-GROUP-001 and TOGGLE-001",
+    "Five shared decision patterns",
+    "Keyboard Focus distinct from selection; Radio arrows change selection; mixed calculated by host",
+    "Radio first-line recipe retained; observed web multiline centering documented, not adopted or corrected",
+    "Local canonical and self-contained consumer integration"
+  ],
+  "published_documents": [
+    {
+      "path": "specs/components/checkbox.contextual-usage.amendment.v1.0.1.md",
+      "sha256": "25f0ae5152cb7fe3496b5720521d1408537af4e77817ead61aad2c30bdd11019"
+    },
+    {
+      "path": "specs/components/radio.contextual-usage.amendment.v1.0.1.md",
+      "sha256": "ff566e03f1d02322aeb3eb7d6c270a2791ede6af3cb948f07934b22aece4f7b5"
+    },
+    {
+      "path": "specs/components/radio-group.contextual-usage.amendment.v1.0.1.md",
+      "sha256": "5bcc9653d79e3ce578ebc22fa61d2e721c0f332e8c1870ab7249078bd900f172"
+    },
+    {
+      "path": "specs/components/toggle.contextual-usage.amendment.v1.0.1.md",
+      "sha256": "d5d96b3869896ca0a62a36996ca6333cafb9293af859c9196c25309f9595e11e"
+    },
+    {
+      "path": "specs/patterns/selection-controls.decisions.amendment.v1.0.0.md",
+      "sha256": "475cbf939a69291170f79eece14cf88848d0fd4bec4268de9c7f5b9a6486dcbc"
+    }
+  ],
+  "administrative_transformations": [
+    "Markdown structure, stable rule/pattern IDs, frontmatter and explicit family bindings",
+    "Description prepared for future authorized Figma sync; no write claimed"
+  ],
+  "invariant_inputs": {
+    "specs/components/checkbox.contract.v1.0.0.md": "fd1bf81cba70bac10fdd8069c963734ac506db7b4d8cf763d768250303794c56",
+    "specs/data/checkbox.v1.0.0.json": "938e096280e8bf6890394c518181f6e4785bed7114f3a491a22c87204d1f0b5a",
+    "implementations/web/src/components/checkbox.tsx": "8360f983ea17584150a06e3662af42e0109340bdf30776cf90d1c56e374e6847",
+    "specs/components/radio.contract.v1.0.0.md": "d23b3e151a7d530f3611b8a9f2d2b86c095861622412ea59692b31dd07900fef",
+    "specs/data/radio.v1.0.0.json": "13023fc62683575609568abe29ec4060bbd069fc5d4df7be9fab96a641e62ee6",
+    "implementations/web/src/components/radio.tsx": "2774576d615c7e58a0ee9767d42eba983d8d3b6ce96e20a7d7d0905c676fd3fd",
+    "specs/components/radio-group.contract.v1.0.0.md": "640f7616ccc82c29e5c134fa887d97cfeb65235af0448f1cdcfa8e93988850cb",
+    "specs/data/radio-group.v1.0.0.json": "ffd4ddf4116e552149cb3c8e4a1aea3670ae24f56482e7284862e3e39e79a52f",
+    "implementations/web/src/components/radio-group.tsx": "5d021b9bab956ca599f7bdd2358c95af39d857a63d70564b22eedc2f56d7b27d",
+    "specs/components/toggle.contract.v1.0.0.md": "18fd1f9c1e182511bfd22d431d360e809cd095879d2d31d8ad4bb01799e5f29c",
+    "specs/data/toggle.v1.0.0.json": "92b7e82ac3fc039fc4beb58d391fbcb0e3fce540e411ded54e769b397996105e",
+    "implementations/web/src/components/toggle.tsx": "5967acbac9beb4287b7469fbdbedec078c5f7877999077c76153147574bfe1e4",
+    "specs/data/checkbox.label-position.v1.0.0.json": "e1c14cbc1676d5f40d75459551fb565ce2164cc1755d3c34d54bb35b001a5e8e",
+    "implementations/web/src/styles.css": "a65c54f35a617028a48df722e45de6363f37eab8458a0d174496d7b549424fbb",
+    "specs/components/buttons.contextual-usage.amendment.v1.0.2.md": "ae82a9a67a4e0a04699dafc847d6a52c9a67811eef594a588737e6afb0d6481a",
+    "specs/components/input.contextual-usage.amendment.v1.0.1.md": "aff1f6c99b555acb2962c04badd878776f3a3642f34dcd648b01841c90b27fdc",
+    "specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md": "63ddeab29c441760b64ebbdad1517fc683971c2b7bda1ad81dfd80338293ca18",
+    "specs/components/dropdown-item.contextual-usage.amendment.v1.0.1.md": "2ba61dcc3e1757a4be147b1102724444086e07c0698779c6330c2b5d384defec"
+  },
+  "excluded_actions": [
+    "Remote publication",
+    "Figma edits",
+    "Changing component code or design data"
+  ]
+}

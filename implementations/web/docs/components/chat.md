@@ -8,7 +8,7 @@ Familia `CHAT-001` · API local 0.1.0 · categoría conversación.
 
 Fuente: [guía del contrato](../../../../specs/components/chat.contract.v1.0.0.md#guía-semántica-normativa).
 
-Usa Standby para ofrecer un comienzo y Started para mostrar los mensajes de la conversación. Usa Composer para la entrada y el Slot Messages para mensajes en orden cronológico. [Conversation Composer](conversation-composer.contract.v1.0.0.md) · [Conversation Response](conversation-response.contract.v1.0.0.md) · [User message](user-message.contract.v1.0.0.md)
+Usa Standby para ofrecer un comienzo y Started para mostrar los mensajes de la conversación. Usa Composer para la entrada y el Slot Messages para mensajes en orden cronológico. [Conversation Composer](../../../../specs/components/conversation-composer.contract.v1.0.0.md) · [Conversation Response](../../../../specs/components/conversation-response.contract.v1.0.0.md) · [User message](../../../../specs/components/user-message.contract.v1.0.0.md)
 
 | Situación | Haz | Evita |
 |---|---|---|

@@ -1,0 +1,11 @@
+const collection=await figma.variables.getVariableCollectionByIdAsync('VariableCollectionId:6:22');
+const semantic=await figma.variables.getVariableByIdAsync('VariableID:8:192');
+if(!collection||collection.name!=='component'||!semantic||semantic.name!=='neutral-base'||semantic.valuesByMode['6:19']?.id!=='VariableID:11:86')throw Error('Target or semantic changed');
+const existing=(await figma.variables.getLocalVariablesAsync('COLOR')).filter(v=>v.variableCollectionId===collection.id&&v.name==='body/color/shape/inverse');
+if(existing.length)throw Error('inverse already exists; read and reconcile before mutation');
+const variable=figma.variables.createVariable('body/color/shape/inverse',collection,'COLOR');
+variable.description='Body · Relleno blanco inverse para formas e iconos sobre superficies gráficas oscuras o intensas. Consume neutral-base → neutral/100 (#FFFFFF) en los cuatro temas. Scope exclusivo SHAPE_FILL.';
+variable.scopes=['SHAPE_FILL'];
+variable.setVariableCodeSyntax('WEB','var(--body-color-shape-inverse)');
+for(const mode of collection.modes)variable.setValueForMode(mode.modeId,figma.variables.createVariableAlias(semantic));
+return {id:variable.id,key:variable.key,name:variable.name,type:variable.resolvedType,collection:variable.variableCollectionId,description:variable.description,scopes:variable.scopes,valuesByMode:variable.valuesByMode,codeSyntax:variable.codeSyntax,hiddenFromPublishing:variable.hiddenFromPublishing};

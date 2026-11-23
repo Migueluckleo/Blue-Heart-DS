@@ -8,7 +8,7 @@ Familia `USER-MESSAGE-001` · API local 0.1.0 · categoría conversación.
 
 Fuente: [guía del contrato](../../../../specs/components/user-message.contract.v1.0.0.md#guía-semántica-normativa).
 
-Usa User message para el texto que la persona ya envió. [Conversation Composer](conversation-composer.contract.v1.0.0.md) cubre la redacción. [Conversation Response](conversation-response.contract.v1.0.0.md) presenta la respuesta del agente.
+Usa User message para el texto que la persona ya envió. [Conversation Composer](../../../../specs/components/conversation-composer.contract.v1.0.0.md) cubre la redacción. [Conversation Response](../../../../specs/components/conversation-response.contract.v1.0.0.md) presenta la respuesta del agente.
 
 | Situación | Haz | Evita |
 |---|---|---|

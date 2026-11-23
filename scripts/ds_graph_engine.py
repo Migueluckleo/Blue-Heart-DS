@@ -6,6 +6,7 @@ from pathlib import Path
 import json, hashlib, shutil, sys, re
 from collections import Counter
 from graphify.detect import detect
+from ds_dependencies import dependency_references, dependency_coverage
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = json.loads((ROOT / 'config/ds-project.json').read_text())
@@ -31,6 +32,46 @@ def digest(p, algorithm='md5'):
 def rel(p):
     p = Path(p)
     return p.resolve().relative_to(ROOT).as_posix() if p.is_absolute() else p.as_posix()
+
+def normalize_file_artifacts(data):
+    """Apply Graphify's file identity rule before consolidating edge evidence.
+
+    Otherwise the builder can merge two already-consolidated pairs and discard
+    one pair's declared dependencies when semantic file roots alias artifacts.
+    The untouched extraction remains in combined-raw.json.
+    """
+    from graphify.build import _is_file_node_label
+    artifacts = {n['source_file']: n['id'] for n in data['nodes']
+                 if n.get('source_file') and n.get('sha256')}
+    remap = {}
+    for node in data['nodes']:
+        if node.get('_origin') == 'ast':
+            continue
+        label = node.get('label', '')
+        own_source = node.get('source_file')
+        if own_source in artifacts and _is_file_node_label(label, own_source):
+            matches = {artifacts[own_source]}
+        else:
+            matches = {identity for source, identity in artifacts.items()
+                       if _is_file_node_label(label, source)}
+        if len(matches) == 1:
+            target = next(iter(matches))
+            if target != node['id']:
+                remap[node['id']] = target
+    def endpoint_record(record):
+        out = dict(record)
+        for field in ['source', 'target']:
+            if out.get(field) in remap:
+                out.setdefault('original_' + field, out[field])
+                out[field] = remap[out[field]]
+        if 'evidence_records' in out:
+            out['evidence_records'] = [endpoint_record(r) for r in out['evidence_records']]
+        return out
+    normalized = dict(data, nodes=[n for n in data['nodes'] if n['id'] not in remap],
+                      edges=[endpoint_record(e) for e in data['edges']],
+                      hyperedges=[dict(h, nodes=list(dict.fromkeys(remap.get(n, n) for n in h.get('nodes', []))))
+                                  for h in data.get('hyperedges', [])])
+    return normalized, remap
 
 def normalize_prior_evidence(record, corpus_paths, relocations):
     """Resolve old checkout citations only by unique complete corpus-relative suffix.
@@ -114,10 +155,13 @@ def supplement():
     paths={rel(p):Path(p) for group in d['files'].values() for p in group}
     from ds_incremental import supplement_seed
     selected, nodes, edges, broken = supplement_seed(ROOT, RUN, paths)
-    def edge(a,b,f,loc,relation='references'):
+    # Re-resolve declarations globally: a selected target may change while the
+    # declaring document's bytes remain unchanged.
+    edges = [item for item in edges if not item.get('declared_dependency')]
+    def edge(a,b,f,loc,relation='references', **evidence):
         if a != b: edges.append({'source':a,'target':b,'relation':relation,
              'confidence':'EXTRACTED','confidence_score':1.0,'weight':1.0,
-             'source_file':f,'source_location':loc,'_origin':'ast'})
+             'source_file':f,'source_location':loc,'_origin':'ast', **evidence})
     for p in selected:
         f = paths[p]
         ft='image' if f.suffix.lower() in ('.png','.jpg','.jpeg') else 'document'
@@ -207,6 +251,12 @@ def supplement():
                 if isinstance(val,dict) and val.get('type')=='VARIABLE_ALIAS' and val.get('name') in canonical_by_name:
                     edge(n['id'],canonical_by_name[val['name']],n['source_file'],
                          (n.get('source_location') or '')+'/valuesByMode/'+mode)
+    for source, targets in sorted(dependency_references(ROOT).items()):
+        for line, target in sorted(targets):
+            if source not in paths or target not in paths:
+                raise ValueError(f'Declared dependency outside graph corpus: {source} -> {target}')
+            edge(artifact_id(source), artifact_id(target), source, 'L' + str(line),
+                 'depends_on', declared_dependency=True)
     dump(RUN/'structural-supplement.json',{'nodes':nodes,'edges':edges,'hyperedges':[],
           'input_tokens':0,'output_tokens':0,'broken_links':broken})
     print(json.dumps({'artifacts':len(paths),'nodes':len(nodes),'references':len(edges),'broken_links':broken}))
@@ -252,6 +302,7 @@ def assemble():
                     for r in prior.get('evidence_records', [prior])]
         evidence=[r for r in normalized
                   if rel(r.get('source_file') or '') not in replaced
+                  and not r.get('declared_dependency')
                   and (not r.get('source_file') or rel(r['source_file']) in current_sources)]
         if evidence:
             edge=dict(prior)
@@ -295,8 +346,14 @@ def assemble():
         h for fragment in sem for h in fragment.get('hyperedges',[])],
         'input_tokens':0,'output_tokens':0}
     mint_external_stubs_in_data(raw)
-    nodes={n['id']:n for n in raw['nodes']}
     dump(RUN/'combined-raw.json',raw)
+    raw, file_identity_map = normalize_file_artifacts(raw)
+    edges = raw['edges']
+    nodes={n['id']:n for n in raw['nodes']}
+    dump(RUN/'file-identity-normalization.json', {
+        'mapping': file_identity_map,
+        'rule': 'Unique Graphify file-label identity; normalize before edge consolidation; preserve original endpoints and raw extraction',
+    })
     missing=[e for e in edges if e['source'] not in nodes or e['target'] not in nodes]
     if missing:
         raise ValueError('Missing graph endpoints: ' + str(missing[:5]))
@@ -309,7 +366,7 @@ def assemble():
         key=(e['source'],e['target']) if directed else tuple(sorted([e['source'],e['target']]))
         if key not in pairs:
             pairs[key]=dict(e);pairs[key]['evidence_records']=[]
-        records=e.get('evidence_records') or [{k:e.get(k) for k in ['source','target','relation','confidence','confidence_score','source_file','source_location']}]
+        records=e.get('evidence_records') or [{k:e.get(k) for k in ['source','target','relation','confidence','confidence_score','source_file','source_location','declared_dependency']}]
         for rec in records:
             if rec not in pairs[key]['evidence_records']:pairs[key]['evidence_records'].append(rec)
     for e in pairs.values():
@@ -394,6 +451,8 @@ def assemble():
     report+='Full corpus, exact supplemental token paths, raw edge provenance and backup live under runs/'+RUN.name+'/.\n'
     report+='Effective scope: '+str(d['total_files'])+' files, including '+str(len(EXACT_DATA))+' explicitly inspected design-data JSON files and explicitly configured Mermaid diagram sources. Derived exports, temporary renders and graph outputs excluded.\n'
     report+='Suggested questions and community heuristics above are navigation aids, not authorized tasks or confirmed Design System defects.\n'
+    dependencies = dependency_coverage(read(OUT/'graph.json'), dependency_references(ROOT))
+    report+='Declared contract dependencies: '+str(dependencies['verified'])+'/'+str(dependencies['declared'])+' verified with direct depends_on evidence; '+str(len(dependencies['missing']))+' missing.\n'
     historical_links=structural.get('broken_links',[])
     report+='Source-link limitation: '+str(len(historical_links))+' unresolved relative links remain quoted in archived/historical evidence. They are listed in structural-supplement.json; original evidence was not rewritten and no graph relationship was invented for those targets. This is distinct from missing graph endpoints.\n'
     (OUT/'GRAPH_REPORT.md').write_text(report)
@@ -419,6 +478,9 @@ def verify():
     if len(ids)!=len(nodes):errors.append('Duplicate node IDs')
     if any(e['source'] not in ids or e['target'] not in ids for e in edges):errors.append('Missing edge endpoint')
     if any(e['source']==e['target'] for e in edges):errors.append('Self-loop')
+    dependencies = dependency_coverage(g, dependency_references(ROOT))
+    if dependencies['status'] != 'PASS':
+        errors.append({'incomplete_declared_dependencies': dependencies['missing']})
     for p in files:
         if not (ROOT/p).exists():errors.append({'missing_source':p})
     report=(OUT/'GRAPH_REPORT.md').read_text()
@@ -472,6 +534,7 @@ def verify():
     result={'date':RUN_DATE,'status':'PASS' if not errors else 'FAILED','errors':errors,
       'corpus_files':len(files),'represented_files':len(files&sources),'graph_nodes':len(nodes),
       'graph_edges':len(edges),'protected_data':CONFIG['protected_data'],
+      'declared_dependencies':dependencies,
       'source_link_limitations':read(RUN/'structural-supplement.json').get('broken_links',[]),
       'scoped_path_smoke_tests':smoke,
       'reference_only_missing_paths':sorted(p for p in sources-files if not (ROOT/p).exists()),

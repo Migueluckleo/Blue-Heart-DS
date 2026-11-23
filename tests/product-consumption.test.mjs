@@ -24,7 +24,8 @@ const texts={
   'implementations/web/src/index.ts':'// fixture public exports',
 };
 for(const c of components)texts[c.contract]=`---\ncontract_id: ${c.id}\nstatus: DELEGATED_FOR_BUILD\n---\n# ${c.id}\n`;
-for(const file of ['specs/foundations/product-consumption.contract.v1.0.0.md','specs/policies/product-consumption.v1.0.0.json','specs/tokens/body.v1.0.0.json'])texts[file]=readFileSync(path.join(repo,file),'utf8');
+const bodySources=JSON.parse(readFileSync(path.join(repo,'specs/policies/product-consumption.v1.0.0.json'),'utf8')).body.data_sources;
+for(const file of ['specs/foundations/product-consumption.contract.v1.0.0.md','specs/policies/product-consumption.v1.0.0.json',...bodySources])texts[file]=readFileSync(path.join(repo,file),'utf8');
 const files=Object.fromEntries(Object.keys(texts).sort().map(file=>[file,hash(texts[file])]));
 for(const [file,text]of Object.entries(texts))write('references/design-system/'+file,text);
 const manifest={schema_version:1,components,files,ds_digest:hash(JSON.stringify(files))};

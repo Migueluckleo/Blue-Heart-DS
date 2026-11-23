@@ -8,7 +8,7 @@ version: 1.0.0
 user_audit: NOT_REQUIRED
 human_review_policy: OPTIONAL_NON_BLOCKING
 source_data_ref: specs/policies/product-consumption.v1.0.0.json
-source_data_digest_sha256: 81a604b1d49696f3baf2031eeeb0792959c323ccb97d1deac1f273744e0d4823
+source_data_digest_sha256: c5d348419a96a59884345e84115f907a74013f10e928073f4d552121930395c8
 data_refs: [specs/policies/product-consumption.v1.0.0.json]
 dependencies: [FOUNDATIONS-BODY-001, FOUNDATIONS-TOKEN-VISIBILITY-001, LINEAR-PROGRESS-001, BUTTON-001, APP-SHELL-001]
 ---
@@ -41,7 +41,7 @@ Los componentes oficiales mantienen sus tokens internos y tipografía. Introduci
 
 La geometría estructural que no tiene un token Body aplicable, como Fill, Hug, dirección del Auto Layout, orden o columnas responsivas, se decide según el brief y se documenta. Esta decisión no autoriza inventar colores, escalas tipográficas, espaciados o controles.
 
-El inventario vigente agrega los colores de [Body por propiedad](body.semantic-colors.amendment.v1.0.0.md). La política enumera todas las fuentes en body.data_sources y conserva body.data como referencia inicial. El preflight lee cada fuente verificada y une solo los nombres de la colección component con prefijo exacto body/. No puede omitir una ampliación ni volver al inventario inicial si una fuente falta.
+El inventario vigente incluye los colores de [Body por propiedad](body.semantic-colors.amendment.v1.0.0.md), [Caution](caution.amendment.v1.0.0.md) y [disabled](body.disabled.amendment.v1.0.0.md), con 61 tokens Body. La política enumera todas las fuentes en body.data_sources y conserva body.data como referencia inicial. El preflight lee cada fuente verificada y une solo los nombres de la colección component con prefijo exacto body/. No puede omitir una ampliación ni volver al inventario inicial si una fuente falta.
 
 ## CONSUMPTION-04 · GitHub es la fuente de consumo
 

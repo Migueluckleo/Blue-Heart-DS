@@ -109,3 +109,15 @@ TOKEN-QA-01 se probó en seis maestros y auxiliares corregidos. Leyó 1.326 bind
 ## Body · Colores semánticos por propiedad · 2026-11-18
 
 [QA documental](../qa/contracts/body.semantic-colors.v1.0.0.review.md) y [QA de implementación](../qa/implementations/body.semantic-colors.v1.0.0.review.md): aliases/scopes, 112 valores de color por cuatro temas, tipografía preservada y regresión de las cinco Cards. El preflight consume todas las fuentes Body declaradas.
+
+## Caution · 2026-11-23
+
+[CONTRACT_REVIEW PASS](../qa/contracts/caution.v1.0.0.review.md) y [IMPLEMENTATION_REVIEW PASS](../qa/implementations/caution.v1.0.0.review.md) contra FOUNDATIONS-CAUTION-001 v1.0.0. Cadena de tokens, cuatro temas, 24 nuevas variantes, Badge sin stroke, reacciones e instancias comprobadas por IDs; muestra visual, build, ds:check, typecheck, tests y Chrome PASS. Auditoría humana NOT_REQUIRED.
+
+## Inline Notification CTA · 2026-11-23
+
+[QA documental PASS](../qa/contracts/inline-notification.cta.v1.0.0.review.md) y [QA Figma/web PASS](../qa/implementations/inline-notification.cta.v1.0.0.review.md). Default apagado; cinco tipos, ocho propiedades; Secondary small, overrides, Fill/Hug, cuatro modos y cadenas; Chrome: cuatro temas, 320 px y 28 activaciones, enlace/cierre independientes. Graphify y push tienen su coordinación y comprobante separados.
+
+## Inline Notification · Corrección de layout e Isotipo · 2026-11-23
+
+[Documental PASS](../qa/contracts/inline-notification.layout-isotipo.v1.0.0.review.md) y [Figma/web PASS](../qa/implementations/inline-notification.layout-isotipo.v1.0.0.review.md). Default CTA apagado, fila derecha/alineación inferior, logo proporcional y selección preservada. El QA vertical anterior queda histórico. Cero internos visibles; fuente 589:81 y 21 maestros de marca preservados. Frescura derivada y push se acreditan por el nuevo cierre y los chats solicitados.

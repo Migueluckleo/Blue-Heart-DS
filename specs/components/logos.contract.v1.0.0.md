@@ -27,6 +27,8 @@ La [selección de Librería v1.1.0](https://www.figma.com/design/9zs5RMR8LB5wHjW
 
 El usuario autorizó consumo exclusivo desde AI Blueheart DS en Figma. Web y prototipador PO tienen alcance NOT_APPLICABLE para esta familia. Los logos de marca usan esta fuente específica. Las reglas de iconografía Phosphor siguen aplicando a iconos funcionales.
 
+La [enmienda de Inline Notification](inline-notification.layout-isotipo.amendment.v1.0.0.md), solicitada el 23 de noviembre de 2026, añade el uso embebido de Isotipos dentro de ese componente y sus ejemplos web. El anfitrión limita ambas dimensiones a 32 px y conserva proporciones y arte. Esta excepción de consumo no crea un export React de Logos, no cambia los maestros ni extiende la galería general de marcas a web.
+
 ## Anatomía y propiedades
 
 Conserva el arte fuente por instancia, su geometría, vectores, grupos, máscaras, colores sólidos, gradientes y fills de imagen originales. Los logos y sus partes llevan cero bindings a variables o tokens. La inspección fuente encontró cero bindings de arte, estilos vinculados e instancias anidadas. Los parámetros seleccionan el arte fijo. P-SLOTS NOT_APPLICABLE por composición fija de marca.

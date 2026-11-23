@@ -165,6 +165,9 @@ export function LinearProgressExample() {
     <button type="button" className="rounded border px-3 py-2" disabled={value === 100}
       onClick={() => setValue(current => Math.min(100, current + 25))}>Completar siguiente paso de muestra</button>
     <LinearProgress id="demo-progress-unknown" label="Calculando total" size="large"/>
+    <LinearProgress id="demo-progress-caution" label="Revisar capacidad disponible" type="caution" value={75}
+      helperText="Precaución de muestra · El anfitrión aporta el significado del estado"/>
+    <LinearProgress id="demo-progress-caution-unknown" label="Verificación con precaución" type="caution" size="large"/>
   </div>;
 }
 
@@ -314,6 +317,7 @@ export function BadgeExample() {
     <Badge label="Conciliado" type="success" size="medium"
       showLeftIcon leftIcon={CheckCircleIcon} leftWeight="light"/>
     <Badge label="Requiere revisión" type="warning" size="large"/>
+    <Badge label="Precaución" type="caution" size="large"/>
   </div>;
 }
 
@@ -630,16 +634,27 @@ export function FloatingActionsExample() {
 // example: inline-notification
 export function InlineNotificationExample() {
   const [show,setShow]=useState(true);
-  return <div className="my-4 grid max-w-[602px] gap-3">
+  const [showCta,setShowCta]=useState(false);
+  const [ctaActivations,setCtaActivations]=useState(0);
+  const [isotipo,setIsotipo]=useState<{src:string;alt:string}>();
+  const cta={showCta,ctaLabel:'Ver detalles',onCta:()=>setCtaActivations(count=>count+1),isotipo};
+  return <div id="demo-inline-notification" className="my-4 grid max-w-[602px] gap-3">
+    <Checkbox label="Mostrar CTA de las notificaciones" showLabel selected={showCta} onSelectedChange={setShowCta}/>
+    <div className="flex flex-wrap gap-2">
+      <Button variant="text" size="small" label="Ícono de estado" onClick={()=>setIsotipo(undefined)}/>
+      <Button variant="text" size="small" label="Isotipo Contabilidad" onClick={()=>setIsotipo({src:'/assets/inline-notification-isotipo-contabilidad.svg',alt:'Contabilidad'})}/>
+      <Button variant="text" size="small" label="Isotipo XML en línea" onClick={()=>setIsotipo({src:'/assets/inline-notification-isotipo-xml-en-linea.svg',alt:'XML en línea'})}/>
+    </div>
     <Button id="demo-inline-restore" variant="secondary" label="Mostrar aviso informativo" onClick={()=>setShow(true)}/>
-    {show&&<InlineNotification type="info" title="Actualización disponible"
+    {show&&<InlineNotification {...cta} type="info" title="Actualización disponible"
       description="Consulta el historial de la revisión." link={{href:'#demo-inline-details',label:'Ver historial'}}
       dismissLabel="Cerrar aviso informativo"
       onDismiss={()=>{setShow(false);document.getElementById('demo-inline-restore')?.focus();}}/>}
-    <InlineNotification type="neutral" title="Resumen" description="Los datos corresponden al periodo seleccionado."/>
-    <InlineNotification type="success" title="Conciliación completa" description="Puedes continuar con la siguiente revisión."/>
-    <InlineNotification type="warning" title="Revisión pendiente" description="Hay comprobantes que requieren atención."/>
-    <InlineNotification type="error" title="Archivo pendiente" description="Adjunta el archivo para completar el registro." showDismiss={false}/>
+    <InlineNotification {...cta} type="neutral" title="Resumen" description="Los datos corresponden al periodo seleccionado."/>
+    <InlineNotification {...cta} type="success" title="Conciliación completa" description="Puedes continuar con la siguiente revisión."/>
+    <InlineNotification {...cta} type="warning" title="Revisión pendiente" description="Hay comprobantes que requieren atención."/>
+    <InlineNotification {...cta} type="error" title="Archivo pendiente" description="Adjunta el archivo para completar el registro." showDismiss={false}/>
+    <p id="demo-inline-cta-result" role="status">Activaciones locales de CTA: {ctaActivations}</p>
     <p id="demo-inline-details">Historial de revisión del catálogo.</p>
   </div>;
 }

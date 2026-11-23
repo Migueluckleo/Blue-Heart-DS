@@ -1,0 +1,67 @@
+{
+  "source_id": "SRC-BADGES-CHIPS-CONTEXTUAL-USAGE-2026-11-19",
+  "date": "2026-11-19",
+  "status": "APPROVED",
+  "evidence_class": "EXPLICIT",
+  "reviewed_artifact": {
+    "filename": "blueheart-badges-chips-guia-contextual-propuesta-v0.1.pdf",
+    "sha256": "9dc89b828dcc0cb7ac2665451e24312e84c001b7f281fec88bc034c511115ee0",
+    "pages": 21
+  },
+  "user_decision": "Así queda bien, crea el Markdown de badges y chips e intégralo a sus componentes y patrones para que lo consuman las skills autocontenidas.",
+  "scope": [
+    "Two contextual guides and five status/filter patterns",
+    "Badge noninteractive; Chip single/multiple/removable, keyboard Focus, stable names, counters and removal focus",
+    "18 Badge variants,40 Chip variants,16 optional visibility combinations; no new modes or properties",
+    "Local documentation, catalog and self-contained consumer integration"
+  ],
+  "published_documents": [
+    {
+      "path": "specs/components/badge.contextual-usage.amendment.v1.0.1.md",
+      "sha256": "59a48a8a290034ec7a36dcfa64fde9147a820320453e770eb25f54a93ac6ab1a"
+    },
+    {
+      "path": "specs/components/chip.contextual-usage.amendment.v1.0.1.md",
+      "sha256": "56d5970845b06e04e19c0688fc2ba594d4b8bc46085f9f83d67db13cad28757f"
+    },
+    {
+      "path": "specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md",
+      "sha256": "d730fa5d62f171469afaf7315f01b36d13a1bd8901e95c333080e76b042aa119"
+    }
+  ],
+  "administrative_transformations": [
+    "Markdown structure, stable rule/pattern IDs, frontmatter and family bindings",
+    "Description text prepared for future authorized Figma sync; no new writes claimed"
+  ],
+  "invariant_inputs": {
+    "specs/components/badge.contract.v1.0.0.md": "98e904066c0387b88dfc1db6679d4b35fc6665a1da266dde8dbac7c8c81a0213",
+    "specs/data/badge.v1.0.0.json": "e75335e5221e58c0807f4271ce0665b25ebcd6760cc36a157c6171daea7df781",
+    "implementations/web/src/components/badge.tsx": "1e88e39c6d4c3a29f43d1b09d61ca05756194ce833b907cfabb01dd3a1ed4d35",
+    "specs/components/chip.contract.v1.0.0.md": "10c3a4dbf70aa981dc8e8596a467d263183b3e84ecf32f47695cc3d29206c7f4",
+    "specs/data/chip.v1.0.0.json": "b1f96ccc268c66ca5a4e6c841ef0821b417789bd1f6e8fdee7ffdb0a227926d3",
+    "implementations/web/src/components/chip.tsx": "791016b8260a384e25755baeb2b45d94e8b876b90e69127ae659dbedf6daa17d",
+    "implementations/web/src/styles.css": "08b1d452292cd96d3aed77b83cc6a5b96e939664aafe13da6046cf3036581b31",
+    "implementations/web/src/generated/chip-recipes.css": "1e40a9d476a3fa89cc19003c8a1a495d0deeb463da88c08b85ca7e3fb199d173",
+    "specs/components/toggle.contextual-usage.amendment.v1.0.1.md": "d5d96b3869896ca0a62a36996ca6333cafb9293af859c9196c25309f9595e11e",
+    "specs/components/radio.contextual-usage.amendment.v1.0.1.md": "ff566e03f1d02322aeb3eb7d6c270a2791ede6af3cb948f07934b22aece4f7b5",
+    "specs/components/checkbox.contextual-usage.amendment.v1.0.1.md": "25f0ae5152cb7fe3496b5720521d1408537af4e77817ead61aad2c30bdd11019",
+    "specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md": "63ddeab29c441760b64ebbdad1517fc683971c2b7bda1ad81dfd80338293ca18",
+    "specs/components/input.contextual-usage.amendment.v1.0.1.md": "aff1f6c99b555acb2962c04badd878776f3a3642f34dcd648b01841c90b27fdc",
+    "specs/components/buttons.contextual-usage.amendment.v1.0.2.md": "ae82a9a67a4e0a04699dafc847d6a52c9a67811eef594a588737e6afb0d6481a",
+    "specs/components/dropdown-item.contextual-usage.amendment.v1.0.1.md": "2ba61dcc3e1757a4be147b1102724444086e07c0698779c6330c2b5d384defec",
+    "specs/components/radio-group.contextual-usage.amendment.v1.0.1.md": "5bcc9653d79e3ce578ebc22fa61d2e721c0f332e8c1870ab7249078bd900f172",
+    "specs/patterns/selection-controls.decisions.amendment.v1.0.0.md": "475cbf939a69291170f79eece14cf88848d0fd4bec4268de9c7f5b9a6486dcbc",
+    "specs/patterns/buttons.actions.amendment.v1.0.0.md": "55ce62e2548edd9c1dc2cfe28624bbba65f80892890458e09208e1801304b01e",
+    "specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md": "5523f57bfd8ea56fc98cb79bd6afb257a89010935eba879bf94d112f7bcc150b"
+  },
+  "pdf_source_stylesheet_change_since_review": {
+    "classification": "OBSERVED",
+    "scope": "Current global stylesheet differs from PDF source only in Chat Document Viewer actions/toolbar and scoped delivered-document Search host; Badge/Chip styles and data/code unchanged. Latest completed producer cut is incorporated in new offline packages.",
+    "evidence": "badges-chips-documentation-delivery/producer-css-delta.diff"
+  },
+  "excluded_actions": [
+    "Remote publication",
+    "Figma edits",
+    "Changing Badge/Chip code, tokens or data"
+  ]
+}

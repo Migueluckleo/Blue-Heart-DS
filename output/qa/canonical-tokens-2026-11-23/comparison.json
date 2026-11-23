@@ -1,0 +1,614 @@
+{
+  "kind": "READ_ONLY_TOKEN_AUDIT",
+  "date": "2026-11-23",
+  "authority": "DELEGATED_BASE_PLUS_ORDERED_AMENDMENTS",
+  "sources": {
+    "specs/tokens/blueheart-variables.v0.1.2.json": "09a96d3707735fa129e3cfa99de6ccac1a9d94ccf5cc19fa5d282de867629993",
+    "specs/data/stepper.tokens.v1.0.0.json": "3e918c4eab16ad1e267f7e54cc4029c2ddfbf15e716bf5dd42475c632dc49f56",
+    "specs/tokens/characters.identity.v1.0.0.json": "b2ca64b7c2c2a5823981bec759f1c1c2d406ca363f69b5eb2423929223232422",
+    "specs/tokens/component-layer.correction.json": "3bbdc83a5e69674c68e33febc75187c3cffad4498586eeabce5d8bcd3c190c2a",
+    "specs/tokens/user-message.v1.0.0.json": "751c840291a40808d1c258186f31ad053dd67f7261daa5a2a5ad120b934147b7",
+    "specs/tokens/chat.v1.0.0.json": "4950488963f3818edf8b0b8201c2d83eab961075bd26e649987b7a998a2a23d7",
+    "specs/tokens/chat-sidebar.v1.0.0.json": "b28c5fcdb307ce1feb81401ccdb7397fe30b1598820d4b7fbe566864f9b77d80",
+    "specs/tokens/table.sticky-actions.v1.0.0.json": "94d6d16e2939eb323a33e90e94aac04f19b891e2083a7d3fa2e86b026cb9ebe9",
+    "specs/tokens/body.v1.0.0.json": "d9862b8642147af2499f8a3527d8e2947daace0d8ab23e86705ed7d77af21d0b",
+    "specs/tokens/chat-document-viewer.v1.0.0.json": "5d3792222fde1e9f92b5bace9ad55021c3fc747e9abd45d869e3a68ce576bde4",
+    "specs/tokens/dropdown-menu.search.v1.0.0.json": "6e815076a56f45c2c2d31a344beb10c3cf4b4460620eadf47cb08a4e25ee9ab7",
+    "specs/tokens/body.semantic-colors.v1.0.0.json": "0ea0106dd8f55cb826ebdc83f4243d6828edc56207480759145edcedd2a68490",
+    "specs/tokens/visibility.body-only.correction.json": "99f113fd06a414b17d3865f3c9a5ef95e0bd1860278db46a0bff8c512fb30f1e",
+    "specs/tokens/caution.v1.0.0.json": "73296fcba662f7aacf2e6b6d637a4fe06ffb83e32e238db30cd7478725f3e217",
+    "specs/tokens/inline-notification.indicator.v1.0.0.json": "dce1ea183b44f6af12ee0b8752f278600241cec20a14d59155e5a47b81c52697"
+  },
+  "counts": {
+    "primitives": 201,
+    "semantic": 159,
+    "component": 1172
+  },
+  "types": {
+    "COLOR": 603,
+    "STRING": 122,
+    "FLOAT": 807
+  },
+  "tokens_compared": 1532,
+  "mode_values_resolved": 5048,
+  "body_visible": 57,
+  "non_body_visible": [],
+  "all_scopes": [],
+  "missing": [],
+  "extra": [],
+  "differences": [
+    {
+      "token": "component::dropdown/size/menu-content-max",
+      "field": "description",
+      "expected": "Dropdown menu · Límite interior de 318 px.",
+      "actual": "Dropdown · Límite interior de 318 px para conservar el scroll dentro del borde.",
+      "source": "specs/tokens/dropdown-menu.search.v1.0.0.json"
+    },
+    {
+      "token": "component::dropdown/size/menu-search-height",
+      "field": "description",
+      "expected": "Dropdown menu · Reserva de altura de Search small de 32 px.",
+      "actual": "Dropdown · Reserva de altura para Search small de 32 px.",
+      "source": "specs/tokens/dropdown-menu.search.v1.0.0.json"
+    },
+    {
+      "token": "component::dropdown/spacing/menu-search-gap",
+      "field": "description",
+      "expected": "Dropdown menu · Separación Search–Options 16 px, alias semantic spacing-lg.",
+      "actual": "Dropdown menu · Separación de 16 px entre Search small y Options. Alias semántico spacing-lg.",
+      "source": "specs/tokens/dropdown-menu.search.v1.0.0.json"
+    },
+    {
+      "token": "primitives::size/318",
+      "field": "description",
+      "expected": "Interior máximo de 318 px: viewport 320 menos dos bordes de 1 px. DERIVED.",
+      "actual": "Viewport interior de Dropdown: 320 px menos dos bordes de 1 px.",
+      "source": "specs/tokens/dropdown-menu.search.v1.0.0.json"
+    },
+    {
+      "token": "semantic::size-318",
+      "field": "description",
+      "expected": "Límite interior de viewport de 318 px.",
+      "actual": "Viewport interior máximo de Dropdown derivado de 320 − 2 × 1.",
+      "source": "specs/tokens/dropdown-menu.search.v1.0.0.json"
+    }
+  ],
+  "alias_or_mode_failures": [],
+  "identity_checks": 1187,
+  "identity_errors": [],
+  "explicit_target_id_checks": 89,
+  "precision": {
+    "tolerance": 1e-07,
+    "within_tolerance_channels": 197,
+    "max_delta": 2.6179294954076227e-08
+  },
+  "manifest_missing": [],
+  "manifest_extra": [],
+  "manifest_differences": [],
+  "manifest_sha256": "ab28003ad794fd66403539d11852a0f445ced226de4ba42a63346fbfe1d1e6d2",
+  "figma_capture_sha256": "18e4c7083657fd021ee29b3d796f224815ffca7fa685bfc548ad2f8b37ae862a",
+  "caution": [
+    {
+      "token": "primitives::caution-orange/100",
+      "id": "VariableID:573:2",
+      "key": "4d16e46074e5b5b888144c3c1e48d41d59eff21c",
+      "values": {
+        "Value": {
+          "r": 0.9921568627450981,
+          "g": 0.9176470588235294,
+          "b": 0.8588235294117647,
+          "a": 1
+        }
+      },
+      "rgba": {
+        "r": 0.9921568627450981,
+        "g": 0.9176470588235294,
+        "b": 0.8588235294117647,
+        "a": 1
+      },
+      "hex": "#FDEADB",
+      "scopes": []
+    },
+    {
+      "token": "primitives::caution-orange/200",
+      "id": "VariableID:573:3",
+      "key": "bf7f7133f25ab2fd2f010d2841684c0681a8e495",
+      "values": {
+        "Value": {
+          "r": 0.9647058823529412,
+          "g": 0.7647058823529411,
+          "b": 0.6039215686274509,
+          "a": 1
+        }
+      },
+      "rgba": {
+        "r": 0.9647058823529412,
+        "g": 0.7647058823529411,
+        "b": 0.6039215686274509,
+        "a": 1
+      },
+      "hex": "#F6C39A",
+      "scopes": []
+    },
+    {
+      "token": "primitives::caution-orange/300",
+      "id": "VariableID:573:4",
+      "key": "cb7d02c6edacd8062895a8086290d4ff1d8cda73",
+      "values": {
+        "Value": {
+          "r": 0.9607843137254902,
+          "g": 0.6588235294117647,
+          "b": 0.4196078431372549,
+          "a": 1
+        }
+      },
+      "rgba": {
+        "r": 0.9607843137254902,
+        "g": 0.6588235294117647,
+        "b": 0.4196078431372549,
+        "a": 1
+      },
+      "hex": "#F5A86B",
+      "scopes": []
+    },
+    {
+      "token": "primitives::caution-orange/400",
+      "id": "VariableID:573:5",
+      "key": "33eeafc69d701f2fccb7f971f9f564d125d1f299",
+      "values": {
+        "Value": {
+          "r": 0.9490196078431372,
+          "g": 0.5607843137254902,
+          "b": 0.23921568627450981,
+          "a": 1
+        }
+      },
+      "rgba": {
+        "r": 0.9490196078431372,
+        "g": 0.5607843137254902,
+        "b": 0.23921568627450981,
+        "a": 1
+      },
+      "hex": "#F28F3D",
+      "scopes": []
+    },
+    {
+      "token": "primitives::caution-orange/500",
+      "id": "VariableID:573:6",
+      "key": "35d07415c3920eaebbb659f08327c92fe78d130e",
+      "values": {
+        "Value": {
+          "r": 0.9333333333333333,
+          "g": 0.47843137254901963,
+          "b": 0.10196078431372549,
+          "a": 1
+        }
+      },
+      "rgba": {
+        "r": 0.9333333333333333,
+        "g": 0.47843137254901963,
+        "b": 0.10196078431372549,
+        "a": 1
+      },
+      "hex": "#EE7A1A",
+      "scopes": []
+    },
+    {
+      "token": "primitives::caution-orange/600",
+      "id": "VariableID:573:7",
+      "key": "044953b802466041efa086988d07618aefdfc33b",
+      "values": {
+        "Value": {
+          "r": 0.7686274509803922,
+          "g": 0.3607843137254902,
+          "b": 0.0392156862745098,
+          "a": 1
+        }
+      },
+      "rgba": {
+        "r": 0.7686274509803922,
+        "g": 0.3607843137254902,
+        "b": 0.0392156862745098,
+        "a": 1
+      },
+      "hex": "#C45C0A",
+      "scopes": []
+    },
+    {
+      "token": "primitives::caution-orange/700",
+      "id": "VariableID:573:8",
+      "key": "b410998251e2b2951b070a96c9b3f9b0b9539fb4",
+      "values": {
+        "Value": {
+          "r": 0.6039215686274509,
+          "g": 0.24705882352941178,
+          "b": 0.023529411764705882,
+          "a": 1
+        }
+      },
+      "rgba": {
+        "r": 0.6039215686274509,
+        "g": 0.24705882352941178,
+        "b": 0.023529411764705882,
+        "a": 1
+      },
+      "hex": "#9A3F06",
+      "scopes": []
+    },
+    {
+      "token": "primitives::caution-orange/800",
+      "id": "VariableID:573:9",
+      "key": "2fc71ab44e5ff490a37785774b37ba6de3f875b7",
+      "values": {
+        "Value": {
+          "r": 0.4,
+          "g": 0.1607843137254902,
+          "b": 0.01568627450980392,
+          "a": 1
+        }
+      },
+      "rgba": {
+        "r": 0.4,
+        "g": 0.1607843137254902,
+        "b": 0.01568627450980392,
+        "a": 1
+      },
+      "hex": "#662904",
+      "scopes": []
+    },
+    {
+      "token": "primitives::caution-orange/900",
+      "id": "VariableID:573:10",
+      "key": "f387b7f0e2cae5988eb8c47dc3476b8f5c9af275",
+      "values": {
+        "Value": {
+          "r": 0.23137254901960785,
+          "g": 0.09019607843137255,
+          "b": 0.00784313725490196,
+          "a": 1
+        }
+      },
+      "rgba": {
+        "r": 0.23137254901960785,
+        "g": 0.09019607843137255,
+        "b": 0.00784313725490196,
+        "a": 1
+      },
+      "hex": "#3B1702",
+      "scopes": []
+    },
+    {
+      "token": "semantic::caution-subtle",
+      "id": "VariableID:573:11",
+      "key": "619437e7b55f1a26576acc3ecda2a72c648a458e",
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "target": "primitives::caution-orange/100"
+        }
+      },
+      "rgba": {
+        "r": 0.9921568627450981,
+        "g": 0.9176470588235294,
+        "b": 0.8588235294117647,
+        "a": 1
+      },
+      "hex": "#FDEADB",
+      "scopes": []
+    },
+    {
+      "token": "semantic::caution-accent",
+      "id": "VariableID:573:12",
+      "key": "544895f972a100fb0ae79e5c167d5158eb9059b3",
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "target": "primitives::caution-orange/200"
+        }
+      },
+      "rgba": {
+        "r": 0.9647058823529412,
+        "g": 0.7647058823529411,
+        "b": 0.6039215686274509,
+        "a": 1
+      },
+      "hex": "#F6C39A",
+      "scopes": []
+    },
+    {
+      "token": "semantic::caution-default",
+      "id": "VariableID:573:13",
+      "key": "592a8658bed907ad3799ebae90545e3b4258577d",
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "target": "primitives::caution-orange/500"
+        }
+      },
+      "rgba": {
+        "r": 0.9333333333333333,
+        "g": 0.47843137254901963,
+        "b": 0.10196078431372549,
+        "a": 1
+      },
+      "hex": "#EE7A1A",
+      "scopes": []
+    },
+    {
+      "token": "semantic::caution-strong",
+      "id": "VariableID:573:14",
+      "key": "fe33a9a7e4554ccaa49c662ee4a079520be2831f",
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "target": "primitives::caution-orange/700"
+        }
+      },
+      "rgba": {
+        "r": 0.6039215686274509,
+        "g": 0.24705882352941178,
+        "b": 0.023529411764705882,
+        "a": 1
+      },
+      "hex": "#9A3F06",
+      "scopes": []
+    },
+    {
+      "token": "component::body/color/bg/caution",
+      "id": "VariableID:573:15",
+      "key": "671ef1c3fa10b9418f1238ff9442e9ac7c12a786",
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-subtle"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-subtle"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-subtle"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-subtle"
+        }
+      },
+      "rgba": {
+        "r": 0.9921568627450981,
+        "g": 0.9176470588235294,
+        "b": 0.8588235294117647,
+        "a": 1
+      },
+      "hex": "#FDEADB",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ]
+    },
+    {
+      "token": "component::body/color/text/caution",
+      "id": "VariableID:573:16",
+      "key": "97958fffb641293ab35a305a6618e1f6b2857e1d",
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        }
+      },
+      "rgba": {
+        "r": 0.6039215686274509,
+        "g": 0.24705882352941178,
+        "b": 0.023529411764705882,
+        "a": 1
+      },
+      "hex": "#9A3F06",
+      "scopes": [
+        "TEXT_FILL"
+      ]
+    },
+    {
+      "token": "component::body/color/stroke/caution",
+      "id": "VariableID:573:17",
+      "key": "876bc59e26198416e27ebb832890177197cbf6f5",
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        }
+      },
+      "rgba": {
+        "r": 0.6039215686274509,
+        "g": 0.24705882352941178,
+        "b": 0.023529411764705882,
+        "a": 1
+      },
+      "hex": "#9A3F06",
+      "scopes": [
+        "STROKE_COLOR"
+      ]
+    },
+    {
+      "token": "component::body/color/shape/caution",
+      "id": "VariableID:573:18",
+      "key": "288dedbc014ca72f00cf4df46e868c0c063b40d9",
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        }
+      },
+      "rgba": {
+        "r": 0.6039215686274509,
+        "g": 0.24705882352941178,
+        "b": 0.023529411764705882,
+        "a": 1
+      },
+      "hex": "#9A3F06",
+      "scopes": [
+        "SHAPE_FILL"
+      ]
+    },
+    {
+      "token": "component::badge/color/bg/caution",
+      "id": "VariableID:573:19",
+      "key": "0a06fa8d4c3a87b2184fd0fad6a26a446e875b2f",
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-subtle"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-subtle"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-subtle"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-subtle"
+        }
+      },
+      "rgba": {
+        "r": 0.9921568627450981,
+        "g": 0.9176470588235294,
+        "b": 0.8588235294117647,
+        "a": 1
+      },
+      "hex": "#FDEADB",
+      "scopes": []
+    },
+    {
+      "token": "component::badge/color/text/caution",
+      "id": "VariableID:573:20",
+      "key": "3a5659dab96d8f912d101bf920a18ce2c18a4f31",
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        }
+      },
+      "rgba": {
+        "r": 0.6039215686274509,
+        "g": 0.24705882352941178,
+        "b": 0.023529411764705882,
+        "a": 1
+      },
+      "hex": "#9A3F06",
+      "scopes": []
+    },
+    {
+      "token": "component::badge/color/icon/caution",
+      "id": "VariableID:573:21",
+      "key": "c3798b14705a6c5e526968b27e2cd851ec5e49b7",
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-strong"
+        }
+      },
+      "rgba": {
+        "r": 0.6039215686274509,
+        "g": 0.24705882352941178,
+        "b": 0.023529411764705882,
+        "a": 1
+      },
+      "hex": "#9A3F06",
+      "scopes": []
+    },
+    {
+      "token": "component::linear-progress/color/indicator/caution",
+      "id": "VariableID:573:22",
+      "key": "2ee45a28e38db1ff304c1ef95108a0f5cc5f144b",
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-default"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-default"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-default"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "target": "semantic::caution-default"
+        }
+      },
+      "rgba": {
+        "r": 0.9333333333333333,
+        "g": 0.47843137254901963,
+        "b": 0.10196078431372549,
+        "a": 1
+      },
+      "hex": "#EE7A1A",
+      "scopes": []
+    }
+  ]
+}

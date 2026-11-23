@@ -1,0 +1,2360 @@
+{
+  "set": {
+    "id": "122:274",
+    "key": "7015680d121d3f5d709db132375826a019133a09",
+    "props": {
+      "Show title#122:4": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Title#122:10": {
+        "type": "TEXT",
+        "defaultValue": "Title"
+      },
+      "Show description#122:16": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Description#122:22": {
+        "type": "TEXT",
+        "defaultValue": "Description text that explains what happened. View details."
+      },
+      "Show icon#122:28": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Show dismiss#122:34": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Show CTA#581:0": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      "type": {
+        "type": "VARIANT",
+        "defaultValue": "neutral",
+        "variantOptions": [
+          "neutral",
+          "info",
+          "success",
+          "warning",
+          "error"
+        ]
+      }
+    },
+    "description": "INLINE-NOTIFICATION-001 · Usa Inline Notification para explicar un estado junto al contenido afectado. Show CTA está apagado por defecto; al activarlo muestra un Button Secondary/small debajo del mensaje, con label editable. El anfitrión conecta la acción y decide cuándo se cierra; el CTA no descarta el aviso automáticamente. Elige el tipo según gravedad y evita depender solo del color. Ficha local Inline Notification / INLINE-NOTIFICATION-001."
+  },
+  "variants": [
+    {
+      "id": "122:53",
+      "key": "171047d2f66a776a8ef9ae80a7abd0ff214a9679",
+      "name": "type=neutral",
+      "width": 602,
+      "height": 76,
+      "descriptionMatches": true
+    },
+    {
+      "id": "122:132",
+      "key": "95942f6ae76d612b795b5259e028fd7acf56a758",
+      "name": "type=info",
+      "width": 602,
+      "height": 76,
+      "descriptionMatches": true
+    },
+    {
+      "id": "122:189",
+      "key": "d63187de83e8e7071e2a1fe96d93caab17e3940e",
+      "name": "type=success",
+      "width": 602,
+      "height": 76,
+      "descriptionMatches": true
+    },
+    {
+      "id": "122:203",
+      "key": "957f6a05460acdc7e2204224e0abc173f92049fc",
+      "name": "type=warning",
+      "width": 602,
+      "height": 76,
+      "descriptionMatches": true
+    },
+    {
+      "id": "122:260",
+      "key": "7dd89d794fb9a4b77deb58d07480109aadb8e1a6",
+      "name": "type=error",
+      "width": 602,
+      "height": 76,
+      "descriptionMatches": true
+    }
+  ],
+  "nodes": [
+    {
+      "id": "122:274",
+      "name": "Inline Notification",
+      "type": "COMPONENT_SET",
+      "visible": true,
+      "width": 650,
+      "height": 524,
+      "h": "FIXED",
+      "v": "HUG",
+      "b": {},
+      "refs": null
+    },
+    {
+      "id": "122:53",
+      "name": "type=neutral",
+      "type": "COMPONENT",
+      "visible": true,
+      "width": 602,
+      "height": 76,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:4"
+        ],
+        "paddingTop": [
+          "VariableID:13:2"
+        ],
+        "paddingRight": [
+          "VariableID:13:3"
+        ],
+        "paddingBottom": [
+          "VariableID:13:3"
+        ],
+        "topLeftRadius": [
+          "VariableID:13:6"
+        ],
+        "topRightRadius": [
+          "VariableID:13:6"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:13:6"
+        ],
+        "bottomRightRadius": [
+          "VariableID:13:6"
+        ],
+        "strokeTopWeight": [
+          "VariableID:13:9"
+        ],
+        "strokeBottomWeight": [
+          "VariableID:13:9"
+        ],
+        "strokeLeftWeight": [
+          "VariableID:13:9"
+        ],
+        "strokeRightWeight": [
+          "VariableID:13:9"
+        ],
+        "minWidth": [
+          "VariableID:13:7"
+        ],
+        "fills": [
+          "VariableID:13:5"
+        ],
+        "strokes": [
+          "VariableID:13:8"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:132",
+      "name": "type=info",
+      "type": "COMPONENT",
+      "visible": true,
+      "width": 602,
+      "height": 76,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:4"
+        ],
+        "paddingTop": [
+          "VariableID:13:2"
+        ],
+        "paddingRight": [
+          "VariableID:13:3"
+        ],
+        "paddingBottom": [
+          "VariableID:13:3"
+        ],
+        "topLeftRadius": [
+          "VariableID:13:6"
+        ],
+        "topRightRadius": [
+          "VariableID:13:6"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:13:6"
+        ],
+        "bottomRightRadius": [
+          "VariableID:13:6"
+        ],
+        "minWidth": [
+          "VariableID:13:7"
+        ],
+        "fills": [
+          "VariableID:13:25"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:189",
+      "name": "type=success",
+      "type": "COMPONENT",
+      "visible": true,
+      "width": 602,
+      "height": 76,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:4"
+        ],
+        "paddingTop": [
+          "VariableID:13:2"
+        ],
+        "paddingRight": [
+          "VariableID:13:3"
+        ],
+        "paddingBottom": [
+          "VariableID:13:3"
+        ],
+        "topLeftRadius": [
+          "VariableID:13:6"
+        ],
+        "topRightRadius": [
+          "VariableID:13:6"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:13:6"
+        ],
+        "bottomRightRadius": [
+          "VariableID:13:6"
+        ],
+        "minWidth": [
+          "VariableID:13:7"
+        ],
+        "fills": [
+          "VariableID:13:27"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:203",
+      "name": "type=warning",
+      "type": "COMPONENT",
+      "visible": true,
+      "width": 602,
+      "height": 76,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:4"
+        ],
+        "paddingTop": [
+          "VariableID:13:2"
+        ],
+        "paddingRight": [
+          "VariableID:13:3"
+        ],
+        "paddingBottom": [
+          "VariableID:13:3"
+        ],
+        "topLeftRadius": [
+          "VariableID:13:6"
+        ],
+        "topRightRadius": [
+          "VariableID:13:6"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:13:6"
+        ],
+        "bottomRightRadius": [
+          "VariableID:13:6"
+        ],
+        "minWidth": [
+          "VariableID:13:7"
+        ],
+        "fills": [
+          "VariableID:13:29"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:260",
+      "name": "type=error",
+      "type": "COMPONENT",
+      "visible": true,
+      "width": 602,
+      "height": 76,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:4"
+        ],
+        "paddingTop": [
+          "VariableID:13:2"
+        ],
+        "paddingRight": [
+          "VariableID:13:3"
+        ],
+        "paddingBottom": [
+          "VariableID:13:3"
+        ],
+        "topLeftRadius": [
+          "VariableID:13:6"
+        ],
+        "topRightRadius": [
+          "VariableID:13:6"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:13:6"
+        ],
+        "bottomRightRadius": [
+          "VariableID:13:6"
+        ],
+        "minWidth": [
+          "VariableID:13:7"
+        ],
+        "fills": [
+          "VariableID:13:31"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:54",
+      "name": "Content",
+      "type": "FRAME",
+      "visible": true,
+      "width": 514,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:124",
+      "name": "Dismiss target",
+      "type": "FRAME",
+      "visible": true,
+      "width": 32,
+      "height": 32,
+      "h": "HUG",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:10"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {
+        "visible": "Show dismiss#122:34"
+      }
+    },
+    {
+      "id": "122:133",
+      "name": "Content",
+      "type": "FRAME",
+      "visible": true,
+      "width": 514,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:182",
+      "name": "Dismiss target",
+      "type": "FRAME",
+      "visible": true,
+      "width": 32,
+      "height": 32,
+      "h": "HUG",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:10"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {
+        "visible": "Show dismiss#122:34"
+      }
+    },
+    {
+      "id": "122:190",
+      "name": "Content",
+      "type": "FRAME",
+      "visible": true,
+      "width": 514,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:196",
+      "name": "Dismiss target",
+      "type": "FRAME",
+      "visible": true,
+      "width": 32,
+      "height": 32,
+      "h": "HUG",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:10"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {
+        "visible": "Show dismiss#122:34"
+      }
+    },
+    {
+      "id": "122:204",
+      "name": "Content",
+      "type": "FRAME",
+      "visible": true,
+      "width": 514,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:253",
+      "name": "Dismiss target",
+      "type": "FRAME",
+      "visible": true,
+      "width": 32,
+      "height": 32,
+      "h": "HUG",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:10"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {
+        "visible": "Show dismiss#122:34"
+      }
+    },
+    {
+      "id": "122:261",
+      "name": "Content",
+      "type": "FRAME",
+      "visible": true,
+      "width": 514,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:267",
+      "name": "Dismiss target",
+      "type": "FRAME",
+      "visible": true,
+      "width": 32,
+      "height": 32,
+      "h": "HUG",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:10"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {
+        "visible": "Show dismiss#122:34"
+      }
+    },
+    {
+      "id": "122:119",
+      "name": "Icon",
+      "type": "INSTANCE",
+      "visible": true,
+      "width": 24,
+      "height": 24,
+      "h": "FIXED",
+      "v": "FIXED",
+      "b": {
+        "width": [
+          "VariableID:13:11"
+        ],
+        "height": [
+          "VariableID:13:11"
+        ]
+      },
+      "refs": {
+        "visible": "Show icon#122:28"
+      }
+    },
+    {
+      "id": "581:28",
+      "name": "Body",
+      "type": "FRAME",
+      "visible": true,
+      "width": 474,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:125",
+      "name": "Dismiss",
+      "type": "INSTANCE",
+      "visible": true,
+      "width": 32,
+      "height": 32,
+      "h": "FIXED",
+      "v": "FIXED",
+      "b": {
+        "itemSpacing": [
+          "VariableID:8:804"
+        ],
+        "paddingLeft": [
+          "VariableID:8:804"
+        ],
+        "paddingTop": [
+          "VariableID:8:804"
+        ],
+        "paddingRight": [
+          "VariableID:8:804"
+        ],
+        "paddingBottom": [
+          "VariableID:8:804"
+        ],
+        "width": [
+          "VariableID:8:812"
+        ],
+        "height": [
+          "VariableID:8:812"
+        ],
+        "topLeftRadius": [
+          "VariableID:8:805"
+        ],
+        "topRightRadius": [
+          "VariableID:8:805"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:8:805"
+        ],
+        "bottomRightRadius": [
+          "VariableID:8:805"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:177",
+      "name": "Icon",
+      "type": "INSTANCE",
+      "visible": true,
+      "width": 24,
+      "height": 24,
+      "h": "FIXED",
+      "v": "FIXED",
+      "b": {
+        "width": [
+          "VariableID:13:11"
+        ],
+        "height": [
+          "VariableID:13:11"
+        ]
+      },
+      "refs": {
+        "visible": "Show icon#122:28"
+      }
+    },
+    {
+      "id": "581:37",
+      "name": "Body",
+      "type": "FRAME",
+      "visible": true,
+      "width": 474,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:183",
+      "name": "Dismiss",
+      "type": "INSTANCE",
+      "visible": true,
+      "width": 32,
+      "height": 32,
+      "h": "FIXED",
+      "v": "FIXED",
+      "b": {
+        "itemSpacing": [
+          "VariableID:8:804"
+        ],
+        "paddingLeft": [
+          "VariableID:8:804"
+        ],
+        "paddingTop": [
+          "VariableID:8:804"
+        ],
+        "paddingRight": [
+          "VariableID:8:804"
+        ],
+        "paddingBottom": [
+          "VariableID:8:804"
+        ],
+        "width": [
+          "VariableID:8:812"
+        ],
+        "height": [
+          "VariableID:8:812"
+        ],
+        "topLeftRadius": [
+          "VariableID:8:805"
+        ],
+        "topRightRadius": [
+          "VariableID:8:805"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:8:805"
+        ],
+        "bottomRightRadius": [
+          "VariableID:8:805"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:191",
+      "name": "Icon",
+      "type": "INSTANCE",
+      "visible": true,
+      "width": 24,
+      "height": 24,
+      "h": "FIXED",
+      "v": "FIXED",
+      "b": {
+        "width": [
+          "VariableID:13:11"
+        ],
+        "height": [
+          "VariableID:13:11"
+        ]
+      },
+      "refs": {
+        "visible": "Show icon#122:28"
+      }
+    },
+    {
+      "id": "581:44",
+      "name": "Body",
+      "type": "FRAME",
+      "visible": true,
+      "width": 474,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:197",
+      "name": "Dismiss",
+      "type": "INSTANCE",
+      "visible": true,
+      "width": 32,
+      "height": 32,
+      "h": "FIXED",
+      "v": "FIXED",
+      "b": {
+        "itemSpacing": [
+          "VariableID:8:804"
+        ],
+        "paddingLeft": [
+          "VariableID:8:804"
+        ],
+        "paddingTop": [
+          "VariableID:8:804"
+        ],
+        "paddingRight": [
+          "VariableID:8:804"
+        ],
+        "paddingBottom": [
+          "VariableID:8:804"
+        ],
+        "width": [
+          "VariableID:8:812"
+        ],
+        "height": [
+          "VariableID:8:812"
+        ],
+        "topLeftRadius": [
+          "VariableID:8:805"
+        ],
+        "topRightRadius": [
+          "VariableID:8:805"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:8:805"
+        ],
+        "bottomRightRadius": [
+          "VariableID:8:805"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:248",
+      "name": "Icon",
+      "type": "INSTANCE",
+      "visible": true,
+      "width": 24,
+      "height": 24,
+      "h": "FIXED",
+      "v": "FIXED",
+      "b": {
+        "width": [
+          "VariableID:13:11"
+        ],
+        "height": [
+          "VariableID:13:11"
+        ]
+      },
+      "refs": {
+        "visible": "Show icon#122:28"
+      }
+    },
+    {
+      "id": "581:51",
+      "name": "Body",
+      "type": "FRAME",
+      "visible": true,
+      "width": 474,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:254",
+      "name": "Dismiss",
+      "type": "INSTANCE",
+      "visible": true,
+      "width": 32,
+      "height": 32,
+      "h": "FIXED",
+      "v": "FIXED",
+      "b": {
+        "itemSpacing": [
+          "VariableID:8:804"
+        ],
+        "paddingLeft": [
+          "VariableID:8:804"
+        ],
+        "paddingTop": [
+          "VariableID:8:804"
+        ],
+        "paddingRight": [
+          "VariableID:8:804"
+        ],
+        "paddingBottom": [
+          "VariableID:8:804"
+        ],
+        "width": [
+          "VariableID:8:812"
+        ],
+        "height": [
+          "VariableID:8:812"
+        ],
+        "topLeftRadius": [
+          "VariableID:8:805"
+        ],
+        "topRightRadius": [
+          "VariableID:8:805"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:8:805"
+        ],
+        "bottomRightRadius": [
+          "VariableID:8:805"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:262",
+      "name": "Icon",
+      "type": "INSTANCE",
+      "visible": true,
+      "width": 24,
+      "height": 24,
+      "h": "FIXED",
+      "v": "FIXED",
+      "b": {
+        "width": [
+          "VariableID:13:11"
+        ],
+        "height": [
+          "VariableID:13:11"
+        ]
+      },
+      "refs": {
+        "visible": "Show icon#122:28"
+      }
+    },
+    {
+      "id": "581:58",
+      "name": "Body",
+      "type": "FRAME",
+      "visible": true,
+      "width": 474,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:3"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:268",
+      "name": "Dismiss",
+      "type": "INSTANCE",
+      "visible": true,
+      "width": 32,
+      "height": 32,
+      "h": "FIXED",
+      "v": "FIXED",
+      "b": {
+        "itemSpacing": [
+          "VariableID:8:804"
+        ],
+        "paddingLeft": [
+          "VariableID:8:804"
+        ],
+        "paddingTop": [
+          "VariableID:8:804"
+        ],
+        "paddingRight": [
+          "VariableID:8:804"
+        ],
+        "paddingBottom": [
+          "VariableID:8:804"
+        ],
+        "width": [
+          "VariableID:8:812"
+        ],
+        "height": [
+          "VariableID:8:812"
+        ],
+        "topLeftRadius": [
+          "VariableID:8:805"
+        ],
+        "topRightRadius": [
+          "VariableID:8:805"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:8:805"
+        ],
+        "bottomRightRadius": [
+          "VariableID:8:805"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "122:121",
+      "name": "Text",
+      "type": "FRAME",
+      "visible": true,
+      "width": 474,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:13"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "581:29",
+      "name": "CTA",
+      "type": "INSTANCE",
+      "visible": false,
+      "width": 71,
+      "height": 32,
+      "h": "HUG",
+      "v": "FIXED",
+      "b": {
+        "itemSpacing": [
+          "VariableID:8:438"
+        ],
+        "paddingLeft": [
+          "VariableID:8:440"
+        ],
+        "paddingTop": [
+          "VariableID:8:438"
+        ],
+        "paddingRight": [
+          "VariableID:8:440"
+        ],
+        "paddingBottom": [
+          "VariableID:8:438"
+        ],
+        "height": [
+          "VariableID:8:435"
+        ],
+        "topLeftRadius": [
+          "VariableID:8:429"
+        ],
+        "topRightRadius": [
+          "VariableID:8:429"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:8:429"
+        ],
+        "bottomRightRadius": [
+          "VariableID:8:429"
+        ],
+        "strokeTopWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeBottomWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeLeftWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeRightWeight": [
+          "VariableID:8:441"
+        ],
+        "fills": [
+          "VariableID:8:413"
+        ],
+        "strokes": [
+          "VariableID:8:416"
+        ]
+      },
+      "refs": {
+        "visible": "Show CTA#581:0"
+      }
+    },
+    {
+      "id": "122:179",
+      "name": "Text",
+      "type": "FRAME",
+      "visible": true,
+      "width": 474,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:13"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "581:38",
+      "name": "CTA",
+      "type": "INSTANCE",
+      "visible": false,
+      "width": 71,
+      "height": 32,
+      "h": "HUG",
+      "v": "FIXED",
+      "b": {
+        "itemSpacing": [
+          "VariableID:8:438"
+        ],
+        "paddingLeft": [
+          "VariableID:8:440"
+        ],
+        "paddingTop": [
+          "VariableID:8:438"
+        ],
+        "paddingRight": [
+          "VariableID:8:440"
+        ],
+        "paddingBottom": [
+          "VariableID:8:438"
+        ],
+        "height": [
+          "VariableID:8:435"
+        ],
+        "topLeftRadius": [
+          "VariableID:8:429"
+        ],
+        "topRightRadius": [
+          "VariableID:8:429"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:8:429"
+        ],
+        "bottomRightRadius": [
+          "VariableID:8:429"
+        ],
+        "strokeTopWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeBottomWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeLeftWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeRightWeight": [
+          "VariableID:8:441"
+        ],
+        "fills": [
+          "VariableID:8:413"
+        ],
+        "strokes": [
+          "VariableID:8:416"
+        ]
+      },
+      "refs": {
+        "visible": "Show CTA#581:0"
+      }
+    },
+    {
+      "id": "122:193",
+      "name": "Text",
+      "type": "FRAME",
+      "visible": true,
+      "width": 474,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:13"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "581:45",
+      "name": "CTA",
+      "type": "INSTANCE",
+      "visible": false,
+      "width": 71,
+      "height": 32,
+      "h": "HUG",
+      "v": "FIXED",
+      "b": {
+        "itemSpacing": [
+          "VariableID:8:438"
+        ],
+        "paddingLeft": [
+          "VariableID:8:440"
+        ],
+        "paddingTop": [
+          "VariableID:8:438"
+        ],
+        "paddingRight": [
+          "VariableID:8:440"
+        ],
+        "paddingBottom": [
+          "VariableID:8:438"
+        ],
+        "height": [
+          "VariableID:8:435"
+        ],
+        "topLeftRadius": [
+          "VariableID:8:429"
+        ],
+        "topRightRadius": [
+          "VariableID:8:429"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:8:429"
+        ],
+        "bottomRightRadius": [
+          "VariableID:8:429"
+        ],
+        "strokeTopWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeBottomWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeLeftWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeRightWeight": [
+          "VariableID:8:441"
+        ],
+        "fills": [
+          "VariableID:8:413"
+        ],
+        "strokes": [
+          "VariableID:8:416"
+        ]
+      },
+      "refs": {
+        "visible": "Show CTA#581:0"
+      }
+    },
+    {
+      "id": "122:250",
+      "name": "Text",
+      "type": "FRAME",
+      "visible": true,
+      "width": 474,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:13"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "581:52",
+      "name": "CTA",
+      "type": "INSTANCE",
+      "visible": false,
+      "width": 71,
+      "height": 32,
+      "h": "HUG",
+      "v": "FIXED",
+      "b": {
+        "itemSpacing": [
+          "VariableID:8:438"
+        ],
+        "paddingLeft": [
+          "VariableID:8:440"
+        ],
+        "paddingTop": [
+          "VariableID:8:438"
+        ],
+        "paddingRight": [
+          "VariableID:8:440"
+        ],
+        "paddingBottom": [
+          "VariableID:8:438"
+        ],
+        "height": [
+          "VariableID:8:435"
+        ],
+        "topLeftRadius": [
+          "VariableID:8:429"
+        ],
+        "topRightRadius": [
+          "VariableID:8:429"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:8:429"
+        ],
+        "bottomRightRadius": [
+          "VariableID:8:429"
+        ],
+        "strokeTopWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeBottomWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeLeftWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeRightWeight": [
+          "VariableID:8:441"
+        ],
+        "fills": [
+          "VariableID:8:413"
+        ],
+        "strokes": [
+          "VariableID:8:416"
+        ]
+      },
+      "refs": {
+        "visible": "Show CTA#581:0"
+      }
+    },
+    {
+      "id": "122:264",
+      "name": "Text",
+      "type": "FRAME",
+      "visible": true,
+      "width": 474,
+      "height": 48,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "itemSpacing": [
+          "VariableID:13:13"
+        ],
+        "paddingLeft": [
+          "VariableID:13:10"
+        ],
+        "paddingTop": [
+          "VariableID:13:10"
+        ],
+        "paddingRight": [
+          "VariableID:13:10"
+        ],
+        "paddingBottom": [
+          "VariableID:13:10"
+        ]
+      },
+      "refs": {}
+    },
+    {
+      "id": "581:59",
+      "name": "CTA",
+      "type": "INSTANCE",
+      "visible": false,
+      "width": 71,
+      "height": 32,
+      "h": "HUG",
+      "v": "FIXED",
+      "b": {
+        "itemSpacing": [
+          "VariableID:8:438"
+        ],
+        "paddingLeft": [
+          "VariableID:8:440"
+        ],
+        "paddingTop": [
+          "VariableID:8:438"
+        ],
+        "paddingRight": [
+          "VariableID:8:440"
+        ],
+        "paddingBottom": [
+          "VariableID:8:438"
+        ],
+        "height": [
+          "VariableID:8:435"
+        ],
+        "topLeftRadius": [
+          "VariableID:8:429"
+        ],
+        "topRightRadius": [
+          "VariableID:8:429"
+        ],
+        "bottomLeftRadius": [
+          "VariableID:8:429"
+        ],
+        "bottomRightRadius": [
+          "VariableID:8:429"
+        ],
+        "strokeTopWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeBottomWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeLeftWeight": [
+          "VariableID:8:441"
+        ],
+        "strokeRightWeight": [
+          "VariableID:8:441"
+        ],
+        "fills": [
+          "VariableID:8:413"
+        ],
+        "strokes": [
+          "VariableID:8:416"
+        ]
+      },
+      "refs": {
+        "visible": "Show CTA#581:0"
+      }
+    },
+    {
+      "id": "122:122",
+      "name": "Title",
+      "type": "TEXT",
+      "visible": true,
+      "width": 474,
+      "height": 24,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "fills": [
+          "VariableID:13:14"
+        ],
+        "letterSpacing": [
+          "VariableID:13:19"
+        ],
+        "fontSize": [
+          "VariableID:13:17"
+        ],
+        "fontStyle": [
+          "VariableID:13:16"
+        ],
+        "fontFamily": [
+          "VariableID:13:15"
+        ],
+        "lineHeight": [
+          "VariableID:13:18"
+        ]
+      },
+      "refs": {
+        "visible": "Show title#122:4",
+        "characters": "Title#122:10"
+      },
+      "characters": "Title",
+      "textStyleId": "S:e8d37c7037d273a6e3ed6941c9a7813f87e88117,"
+    },
+    {
+      "id": "122:123",
+      "name": "Description",
+      "type": "TEXT",
+      "visible": true,
+      "width": 474,
+      "height": 20,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "letterSpacing": [
+          "VariableID:13:19"
+        ],
+        "fontSize": [
+          "VariableID:13:22"
+        ],
+        "fontStyle": [
+          "VariableID:13:16",
+          "VariableID:13:21"
+        ],
+        "fontFamily": [
+          "VariableID:13:15"
+        ],
+        "lineHeight": [
+          "VariableID:13:23"
+        ],
+        "textRangeFills": [
+          "VariableID:13:20",
+          "VariableID:13:24"
+        ]
+      },
+      "refs": {
+        "visible": "Show description#122:16",
+        "characters": "Description#122:22"
+      },
+      "characters": "Description text that explains what happened. View details."
+    },
+    {
+      "id": "122:180",
+      "name": "Title",
+      "type": "TEXT",
+      "visible": true,
+      "width": 474,
+      "height": 24,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "fills": [
+          "VariableID:13:14"
+        ],
+        "letterSpacing": [
+          "VariableID:13:19"
+        ],
+        "fontSize": [
+          "VariableID:13:17"
+        ],
+        "fontStyle": [
+          "VariableID:13:16"
+        ],
+        "fontFamily": [
+          "VariableID:13:15"
+        ],
+        "lineHeight": [
+          "VariableID:13:18"
+        ]
+      },
+      "refs": {
+        "visible": "Show title#122:4",
+        "characters": "Title#122:10"
+      },
+      "characters": "Title",
+      "textStyleId": "S:e8d37c7037d273a6e3ed6941c9a7813f87e88117,"
+    },
+    {
+      "id": "122:181",
+      "name": "Description",
+      "type": "TEXT",
+      "visible": true,
+      "width": 474,
+      "height": 20,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "letterSpacing": [
+          "VariableID:13:19"
+        ],
+        "fontSize": [
+          "VariableID:13:22"
+        ],
+        "fontStyle": [
+          "VariableID:13:16",
+          "VariableID:13:21"
+        ],
+        "fontFamily": [
+          "VariableID:13:15"
+        ],
+        "lineHeight": [
+          "VariableID:13:23"
+        ],
+        "textRangeFills": [
+          "VariableID:13:20",
+          "VariableID:13:24"
+        ]
+      },
+      "refs": {
+        "visible": "Show description#122:16",
+        "characters": "Description#122:22"
+      },
+      "characters": "Description text that explains what happened. View details."
+    },
+    {
+      "id": "122:194",
+      "name": "Title",
+      "type": "TEXT",
+      "visible": true,
+      "width": 474,
+      "height": 24,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "fills": [
+          "VariableID:13:14"
+        ],
+        "letterSpacing": [
+          "VariableID:13:19"
+        ],
+        "fontSize": [
+          "VariableID:13:17"
+        ],
+        "fontStyle": [
+          "VariableID:13:16"
+        ],
+        "fontFamily": [
+          "VariableID:13:15"
+        ],
+        "lineHeight": [
+          "VariableID:13:18"
+        ]
+      },
+      "refs": {
+        "visible": "Show title#122:4",
+        "characters": "Title#122:10"
+      },
+      "characters": "Title",
+      "textStyleId": "S:e8d37c7037d273a6e3ed6941c9a7813f87e88117,"
+    },
+    {
+      "id": "122:195",
+      "name": "Description",
+      "type": "TEXT",
+      "visible": true,
+      "width": 474,
+      "height": 20,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "letterSpacing": [
+          "VariableID:13:19"
+        ],
+        "fontSize": [
+          "VariableID:13:22"
+        ],
+        "fontStyle": [
+          "VariableID:13:16",
+          "VariableID:13:21"
+        ],
+        "fontFamily": [
+          "VariableID:13:15"
+        ],
+        "lineHeight": [
+          "VariableID:13:23"
+        ],
+        "textRangeFills": [
+          "VariableID:13:20",
+          "VariableID:13:24"
+        ]
+      },
+      "refs": {
+        "visible": "Show description#122:16",
+        "characters": "Description#122:22"
+      },
+      "characters": "Description text that explains what happened. View details."
+    },
+    {
+      "id": "122:251",
+      "name": "Title",
+      "type": "TEXT",
+      "visible": true,
+      "width": 474,
+      "height": 24,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "fills": [
+          "VariableID:13:14"
+        ],
+        "letterSpacing": [
+          "VariableID:13:19"
+        ],
+        "fontSize": [
+          "VariableID:13:17"
+        ],
+        "fontStyle": [
+          "VariableID:13:16"
+        ],
+        "fontFamily": [
+          "VariableID:13:15"
+        ],
+        "lineHeight": [
+          "VariableID:13:18"
+        ]
+      },
+      "refs": {
+        "visible": "Show title#122:4",
+        "characters": "Title#122:10"
+      },
+      "characters": "Title",
+      "textStyleId": "S:e8d37c7037d273a6e3ed6941c9a7813f87e88117,"
+    },
+    {
+      "id": "122:252",
+      "name": "Description",
+      "type": "TEXT",
+      "visible": true,
+      "width": 474,
+      "height": 20,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "letterSpacing": [
+          "VariableID:13:19"
+        ],
+        "fontSize": [
+          "VariableID:13:22"
+        ],
+        "fontStyle": [
+          "VariableID:13:16",
+          "VariableID:13:21"
+        ],
+        "fontFamily": [
+          "VariableID:13:15"
+        ],
+        "lineHeight": [
+          "VariableID:13:23"
+        ],
+        "textRangeFills": [
+          "VariableID:13:20",
+          "VariableID:13:24"
+        ]
+      },
+      "refs": {
+        "visible": "Show description#122:16",
+        "characters": "Description#122:22"
+      },
+      "characters": "Description text that explains what happened. View details."
+    },
+    {
+      "id": "122:265",
+      "name": "Title",
+      "type": "TEXT",
+      "visible": true,
+      "width": 474,
+      "height": 24,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "fills": [
+          "VariableID:13:14"
+        ],
+        "letterSpacing": [
+          "VariableID:13:19"
+        ],
+        "fontSize": [
+          "VariableID:13:17"
+        ],
+        "fontStyle": [
+          "VariableID:13:16"
+        ],
+        "fontFamily": [
+          "VariableID:13:15"
+        ],
+        "lineHeight": [
+          "VariableID:13:18"
+        ]
+      },
+      "refs": {
+        "visible": "Show title#122:4",
+        "characters": "Title#122:10"
+      },
+      "characters": "Title",
+      "textStyleId": "S:e8d37c7037d273a6e3ed6941c9a7813f87e88117,"
+    },
+    {
+      "id": "122:266",
+      "name": "Description",
+      "type": "TEXT",
+      "visible": true,
+      "width": 474,
+      "height": 20,
+      "h": "FILL",
+      "v": "HUG",
+      "b": {
+        "letterSpacing": [
+          "VariableID:13:19"
+        ],
+        "fontSize": [
+          "VariableID:13:22"
+        ],
+        "fontStyle": [
+          "VariableID:13:16",
+          "VariableID:13:21"
+        ],
+        "fontFamily": [
+          "VariableID:13:15"
+        ],
+        "lineHeight": [
+          "VariableID:13:23"
+        ],
+        "textRangeFills": [
+          "VariableID:13:20",
+          "VariableID:13:24"
+        ]
+      },
+      "refs": {
+        "visible": "Show description#122:16",
+        "characters": "Description#122:22"
+      },
+      "characters": "Description text that explains what happened. View details."
+    }
+  ],
+  "descriptions": [
+    {
+      "id": "122:123",
+      "ranges": [
+        {
+          "characters": "Description text that explains what happened. ",
+          "start": 0,
+          "end": 46,
+          "fontSize": 14,
+          "fontName": {
+            "family": "Manrope",
+            "style": "Regular",
+            "variationSettings": {
+              "wght": 400
+            }
+          },
+          "textDecoration": "NONE",
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.27843138575553894,
+                "g": 0.3333333432674408,
+                "b": 0.4117647111415863
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:13:20"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "characters": "View details.",
+          "start": 46,
+          "end": 59,
+          "fontSize": 14,
+          "fontName": {
+            "family": "Manrope",
+            "style": "SemiBold",
+            "variationSettings": {
+              "wght": 600
+            }
+          },
+          "textDecoration": "UNDERLINE",
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.19607843458652496,
+                "g": 0.3333333432674408,
+                "b": 0.9686274528503418
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:13:24"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "122:181",
+      "ranges": [
+        {
+          "characters": "Description text that explains what happened. ",
+          "start": 0,
+          "end": 46,
+          "fontSize": 14,
+          "fontName": {
+            "family": "Manrope",
+            "style": "Regular",
+            "variationSettings": {
+              "wght": 400
+            }
+          },
+          "textDecoration": "NONE",
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.27843138575553894,
+                "g": 0.3333333432674408,
+                "b": 0.4117647111415863
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:13:20"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "characters": "View details.",
+          "start": 46,
+          "end": 59,
+          "fontSize": 14,
+          "fontName": {
+            "family": "Manrope",
+            "style": "SemiBold",
+            "variationSettings": {
+              "wght": 600
+            }
+          },
+          "textDecoration": "UNDERLINE",
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.19607843458652496,
+                "g": 0.3333333432674408,
+                "b": 0.9686274528503418
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:13:24"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "122:195",
+      "ranges": [
+        {
+          "characters": "Description text that explains what happened. ",
+          "start": 0,
+          "end": 46,
+          "fontSize": 14,
+          "fontName": {
+            "family": "Manrope",
+            "style": "Regular",
+            "variationSettings": {
+              "wght": 400
+            }
+          },
+          "textDecoration": "NONE",
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.27843138575553894,
+                "g": 0.3333333432674408,
+                "b": 0.4117647111415863
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:13:20"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "characters": "View details.",
+          "start": 46,
+          "end": 59,
+          "fontSize": 14,
+          "fontName": {
+            "family": "Manrope",
+            "style": "SemiBold",
+            "variationSettings": {
+              "wght": 600
+            }
+          },
+          "textDecoration": "UNDERLINE",
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.19607843458652496,
+                "g": 0.3333333432674408,
+                "b": 0.9686274528503418
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:13:24"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "122:252",
+      "ranges": [
+        {
+          "characters": "Description text that explains what happened. ",
+          "start": 0,
+          "end": 46,
+          "fontSize": 14,
+          "fontName": {
+            "family": "Manrope",
+            "style": "Regular",
+            "variationSettings": {
+              "wght": 400
+            }
+          },
+          "textDecoration": "NONE",
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.27843138575553894,
+                "g": 0.3333333432674408,
+                "b": 0.4117647111415863
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:13:20"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "characters": "View details.",
+          "start": 46,
+          "end": 59,
+          "fontSize": 14,
+          "fontName": {
+            "family": "Manrope",
+            "style": "SemiBold",
+            "variationSettings": {
+              "wght": 600
+            }
+          },
+          "textDecoration": "UNDERLINE",
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.19607843458652496,
+                "g": 0.3333333432674408,
+                "b": 0.9686274528503418
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:13:24"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "122:266",
+      "ranges": [
+        {
+          "characters": "Description text that explains what happened. ",
+          "start": 0,
+          "end": 46,
+          "fontSize": 14,
+          "fontName": {
+            "family": "Manrope",
+            "style": "Regular",
+            "variationSettings": {
+              "wght": 400
+            }
+          },
+          "textDecoration": "NONE",
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.27843138575553894,
+                "g": 0.3333333432674408,
+                "b": 0.4117647111415863
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:13:20"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "characters": "View details.",
+          "start": 46,
+          "end": 59,
+          "fontSize": 14,
+          "fontName": {
+            "family": "Manrope",
+            "style": "SemiBold",
+            "variationSettings": {
+              "wght": 600
+            }
+          },
+          "textDecoration": "UNDERLINE",
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.19607843458652496,
+                "g": 0.3333333432674408,
+                "b": 0.9686274528503418
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:13:24"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tokenIds": [
+    "VariableID:13:3",
+    "VariableID:13:4",
+    "VariableID:13:2",
+    "VariableID:13:6",
+    "VariableID:13:9",
+    "VariableID:13:7",
+    "VariableID:13:5",
+    "VariableID:13:8",
+    "VariableID:13:25",
+    "VariableID:13:27",
+    "VariableID:13:29",
+    "VariableID:13:31",
+    "VariableID:13:10",
+    "VariableID:13:11",
+    "VariableID:8:804",
+    "VariableID:8:812",
+    "VariableID:8:805",
+    "VariableID:13:12",
+    "VariableID:13:13",
+    "VariableID:8:438",
+    "VariableID:8:440",
+    "VariableID:8:435",
+    "VariableID:8:429",
+    "VariableID:8:441",
+    "VariableID:8:413",
+    "VariableID:8:416",
+    "VariableID:8:813",
+    "VariableID:13:26",
+    "VariableID:13:28",
+    "VariableID:13:30",
+    "VariableID:13:32",
+    "VariableID:13:14",
+    "VariableID:13:19",
+    "VariableID:13:17",
+    "VariableID:13:16",
+    "VariableID:13:15",
+    "VariableID:13:18",
+    "VariableID:13:22",
+    "VariableID:13:21",
+    "VariableID:13:23",
+    "VariableID:13:20",
+    "VariableID:13:24",
+    "VariableID:8:436",
+    "VariableID:8:419",
+    "VariableID:8:423",
+    "VariableID:8:427",
+    "VariableID:8:425",
+    "VariableID:8:422",
+    "VariableID:8:424",
+    "VariableID:8:830",
+    "VariableID:8:521",
+    "VariableID:8:525",
+    "VariableID:8:526",
+    "VariableID:8:517",
+    "VariableID:8:519",
+    "VariableID:8:403"
+  ],
+  "pageChildren": [
+    {
+      "id": "122:274",
+      "name": "Inline Notification",
+      "type": "COMPONENT_SET"
+    }
+  ],
+  "variableCount": 1531,
+  "visibleNonBody": [],
+  "visibleBodyCount": 57,
+  "nestedDetail": "Token references collected across all descendants; detailed records limited to prior anatomy and new Body/CTA roots."
+}

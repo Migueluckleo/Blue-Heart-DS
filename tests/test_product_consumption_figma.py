@@ -29,7 +29,8 @@ class ConsumptionTests(unittest.TestCase):
             path = 'specs/components/' + family.lower() + '.contract.v1.0.0.md'
             texts[path] = f'---\ncontract_id: {family}\nstatus: DELEGATED_FOR_BUILD\n---\n# {name}\n'.encode()
             self.components.append({'id': family, 'name': name, 'slug': name, 'exports': [name], 'contract': path, 'amendments': []})
-        for path in ['config/figma-links.json', 'specs/foundations/product-consumption.contract.v1.0.0.md', 'specs/policies/product-consumption.v1.0.0.json', 'specs/tokens/body.v1.0.0.json', 'specs/tokens/body.semantic-colors.v1.0.0.json']:
+        body_sources = json.loads((ROOT / 'specs/policies/product-consumption.v1.0.0.json').read_text())['body']['data_sources']
+        for path in ['config/figma-links.json', 'specs/foundations/product-consumption.contract.v1.0.0.md', 'specs/policies/product-consumption.v1.0.0.json', *body_sources]:
             texts[path] = (ROOT / path).read_bytes()
         files = {p: sha(b) for p, b in texts.items()}
         manifest = {'schema_version': 1, 'components': self.components, 'files': files, 'ds_digest': sha(canonical(files))}
@@ -76,13 +77,32 @@ class ConsumptionTests(unittest.TestCase):
     def test_accepts_every_added_body_color_from_the_declared_sources(self):
         data = json.loads((ROOT / 'specs/tokens/body.semantic-colors.v1.0.0.json').read_text())
         tokens = [v['name'] for c in data['collections'] for v in c['variables']]
-        self.assertEqual(len(tokens), 19)
+        self.assertEqual(len(tokens), 20)
         for token in tokens:
             with self.subTest(token=token):
                 plan = copy.deepcopy(self.plan)
                 card = next(use for use in plan['uses'] if use['id'] == 'card')
                 card['body_bindings'].append({'property': 'strokes.0.color' if '/stroke/' in token else 'fills.0.color', 'token': token})
                 self.assertEqual(self.preflight(plan)['status'], 'PASS')
+
+    def test_body_policy_covers_every_active_body_token_source(self):
+        config = json.loads((ROOT / 'config/web-inputs.json').read_text())
+        expected = set()
+        for source in config['token_sources']:
+            data = json.loads((ROOT / source['path']).read_text())
+            if any(c['name'] == 'component' and any(v['name'].startswith('body/') for v in c['variables']) for c in data.get('collections', [])):
+                expected.add(source['path'])
+        policy = json.loads((ROOT / 'specs/policies/product-consumption.v1.0.0.json').read_text())
+        self.assertEqual(set(policy['body']['data_sources']), expected)
+
+    def test_preflight_accepts_disabled_and_caution_body_roles_from_their_sources(self):
+        for tone in ['disabled', 'caution']:
+            for group in ['text', 'bg', 'stroke', 'shape']:
+                with self.subTest(tone=tone, group=group):
+                    plan = copy.deepcopy(self.plan)
+                    card = next(use for use in plan['uses'] if use['id'] == 'card')
+                    card['body_bindings'].append({'property': 'strokes.0.color' if group == 'stroke' else 'fills.0.color', 'token': f'body/color/{group}/{tone}'})
+                    self.assertEqual(self.preflight(plan)['status'], 'PASS')
 
     def test_missing_body_extension_does_not_fall_back_to_the_initial_inventory(self):
         (self.runtime / 'assets/design-system/specs/tokens/body.semantic-colors.v1.0.0.json').unlink()

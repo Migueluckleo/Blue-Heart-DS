@@ -39,3 +39,7 @@ BADGE-001 · Usa Badge para un estado o atributo sin interacción. Elige un text
 ## Aceptación
 
 Verificar 18 variantes, tres estilos, roles invariantes, geometría HUG, borde subtle y dos swaps Phosphor. Comprobar visibilidad independiente, contenido largo y contraste observado. En web verificar que la etiqueta permanece legible, con iconos decorativos y sin foco propio.
+
+## Ampliación Caution · 2026-11-23
+
+La [enmienda Caution 1.0.0](../foundations/caution.amendment.v1.0.0.md) amplía los roles y variantes de esta entidad. Sus datos delegados y QA gobiernan únicamente el nuevo alcance y sustituyen las cantidades históricas donde corresponda.

@@ -3,7 +3,7 @@ import type { Icon, IconWeight } from '@phosphor-icons/react';
 import type { CSSProperties } from 'react';
 import { token } from './loader';
 
-export type BadgeType = 'neutral' | 'subtle' | 'info' | 'success' | 'warning' | 'error';
+export type BadgeType = 'neutral' | 'subtle' | 'info' | 'success' | 'warning' | 'caution' | 'error';
 export type BadgeSize = 'small' | 'medium' | 'large';
 
 export interface BadgeProps {

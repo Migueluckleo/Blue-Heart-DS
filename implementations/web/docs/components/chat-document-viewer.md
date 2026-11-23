@@ -6,13 +6,15 @@ Familia `CHAT-DOCUMENT-VIEWER-001` · API local 0.1.0 · categoría conversació
 
 ## Guía semántica normativa
 
-Fuente: [guía del contrato](../../../../specs/components/chat-document-viewer.contract.v1.0.0.md#guía-semántica-normativa).
+Fuente: [guía del contrato](../../../../specs/components/chat-document-viewer.actions.amendment.v1.0.0.md#guía-semántica-normativa).
 
-Usa el visor cuando un resultado de conversación necesita espacio de lectura junto a Chat. Usa Conversation Response Preview para referenciar el resultado dentro del mensaje y Chat Document Viewer para su contenido ampliado. Evita convertir el contenido específico del documento en nuevas variantes del DS.
+Usa Chat Document Viewer para leer un documento entregado junto a la conversación. Title y Description identifican el resultado; preview contiene el documento específico de producto. actions aloja controles oficiales para actuar sobre ese documento. Su muestra usa Descargar xls Secondary y Expandir/Cerrar Icon Buttons Ghost medium; la composición y cantidad pueden variar sin convertirlas en variantes de documento.
+
+Conserva ambos Slots y sus responsabilidades de sizing: preview estira hijos al insertarlos; actions no lo hace automáticamente. Usa un toolbar FILL con alineación al final y separación de 16 px para reproducir la muestra. Mantén los nombres accesibles de los iconos y la responsabilidad del anfitrión sobre archivo, visibilidad y foco. El contenido tabular es un ejemplo. En web usa actions para contenido de acciones y children para preview. Omite actions para el toolbar estándar o pasa null para vacío; el anfitrión conserva accesibilidad y comportamiento del contenido que suministra.
 
 ## Uso sin backend
 
-Documento entregado junto al Chat, con acciones del anfitrión y contenido reemplazable mediante preview.
+actions reemplaza el toolbar predeterminado; undefined conserva Descargar Secondary y Expandir/Cerrar Ghost medium, null lo deja vacío. children conserva preview. El anfitrión define handlers, nombres accesibles y foco de las acciones suministradas.
 
 ```tsx
 'use client';
@@ -70,8 +72,19 @@ export function ChatDocumentViewerExample() {
   const [expanded, setExpanded] = useState(false);
   const [showDescription, setShowDescription] = useState(true);
   const [content, setContent] = useState('table');
+  const [actionsMode, setActionsMode] = useState('default');
+  const [actionsEnabled, setActionsEnabled] = useState(true);
   const [action, setAction] = useState('Datos ficticios. Las acciones de descarga se delegan al anfitrión.');
   const reopen = useRef<HTMLButtonElement>(null);
+  const actionIds = Array.from({length: actionsMode === 'many' ? 12 : 5}, (_, index) => index + 1);
+  if (actionsMode === 'reversed') actionIds.reverse();
+  const customActions = actionsMode === 'default' ? undefined : actionsMode === 'empty' ? null
+    : actionsMode === 'single' ? <IconButton variant="ghost" size="medium" label="Consultar documento de muestra"
+      icon={FileTextIcon} onClick={() => setAction('Consulta local del documento de muestra.')}/>
+    : <div className="bh-document-viewer-toolbar">
+      {actionIds.map(id => <IconButton key={id} variant="ghost" size="medium" label={`Acción de muestra ${id}`}
+        icon={FileTextIcon} onClick={() => setAction(`Solicitud local de acción de muestra ${id}.`)}/>)}
+    </div>;
   return <div className="grid gap-4">
     <div className="flex flex-wrap items-center gap-4">
       <label><input type="checkbox" checked={showDescription}
@@ -80,13 +93,22 @@ export function ChatDocumentViewerExample() {
         <option value="table">Tabla</option><option value="empty">Vacío</option>
         <option value="single">Un bloque</option><option value="multiple">Varios bloques</option>
       </select></label>
+      <label><input type="checkbox" checked={actionsEnabled}
+        onChange={event => setActionsEnabled(event.currentTarget.checked)}/> Acciones predeterminadas habilitadas</label>
+      <label>Contenido de actions <select value={actionsMode} onChange={event => setActionsMode(event.currentTarget.value)}>
+        <option value="default">Predeterminado</option><option value="empty">Vacío</option>
+        <option value="single">Una acción</option><option value="multiple">Cinco acciones</option>
+        <option value="reversed">Cinco en orden inverso</option><option value="many">Doce acciones</option>
+      </select></label>
     </div>
     <button ref={reopen} type="button" className="bh-document-reopen" aria-expanded={open}
       onClick={() => {setOpen(true); setExpanded(false);}}>Abrir documento entregado</button>
     {open && <div className="bh-document-viewer-example" data-expanded={expanded}>
       <ChatDocumentViewer title={deliveredDocumentTitle} description={showDescription ? deliveredDocumentDescription : undefined} expanded={expanded}
-        onDownload={() => setAction('El anfitrión recibe la solicitud de descarga; la demo no genera archivos.')}
-        onExpand={() => setExpanded(value => !value)} onClose={() => {setOpen(false); reopen.current?.focus();}}>
+        actions={customActions}
+        onDownload={actionsEnabled ? () => setAction('El anfitrión recibe la solicitud de descarga; la demo no genera archivos.') : undefined}
+        onExpand={actionsEnabled ? () => setExpanded(value => !value) : undefined}
+        onClose={actionsEnabled ? () => {setOpen(false); reopen.current?.focus();} : undefined}>
         {content === 'table' ? <DeliveredDocumentPreview onAction={setAction}/>
           : content === 'empty' ? null : Array.from({length:content === 'single' ? 1 : 3},(_,index) =>
             <p key={index} className="bh-body-description" data-preview-block>Bloque de documento de muestra {index + 1}</p>)}
@@ -108,6 +130,8 @@ export interface ChatDocumentViewerProps {
   title: string;
   description?: string;
   children?: ReactNode;
+  /** Replaces the default toolbar. Omit for defaults; null leaves the Slot empty. */
+  actions?: ReactNode;
   downloadLabel?: string;
   expandLabel?: string;
   closeLabel?: string;
@@ -125,7 +149,7 @@ export interface ChatDocumentViewerProps {
 Las firmas siguientes se extraen de las funciones, incluidos sus valores por defecto. Una prop sin asignación `=` es obligatoria o permanece undefined según su tipo; no se rellena con reglas de negocio.
 
 ```tsx
-ChatDocumentViewer: {title, description, children, downloadLabel = 'Descargar xls',
+ChatDocumentViewer: {title, description, children, actions, downloadLabel = 'Descargar xls',
   expandLabel, closeLabel = 'Cerrar', expanded = false, onDownload, onExpand, onClose,
   headingLevel = 2, className}: ChatDocumentViewerProps
 ```
@@ -134,7 +158,7 @@ Props `on…` son callbacks locales. No atribuyen autorización, carga, guardado
 
 ## Composición y Slots
 
-P-SLOTS: **REQUIRED**. preview es un Slot nativo con contenido y cantidad editables. ReactNode/listas tipadas son la traducción web de las regiones, no evidencia de Slots Figma. El anfitrión conserva el orden y los IDs de listas; las cantidades de las demos no son límites de producto.
+P-SLOTS: **REQUIRED**. Figma: actions#519:0 y preview#430:0 nativos. React: actions y children; contenido reemplazable y cantidades/orden editables. Un toolbar FILL reproduce la alineación al final; un hijo directo no se estira. ReactNode/listas tipadas son la traducción web de las regiones, no evidencia de Slots Figma. El anfitrión conserva el orden y los IDs de listas; las cantidades de las demos no son límites de producto.
 
 ## Estilos y Next.js
 
@@ -144,10 +168,11 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [chat-document-viewer.contract.v1.0.0.md](../../../../specs/components/chat-document-viewer.contract.v1.0.0.md) · SHA-256 `76ec33a7c2ab21ef97b3eab1bce873f67548b3730f193462a93b4823eef6af54`.
+- [chat-document-viewer.contract.v1.0.0.md](../../../../specs/components/chat-document-viewer.contract.v1.0.0.md) · SHA-256 `9c55f655d521dbeaec4e2f88f282d488b290b8b4be8fca99047da95c6cc1679e`.
+- [chat-document-viewer.actions.amendment.v1.0.0.md](../../../../specs/components/chat-document-viewer.actions.amendment.v1.0.0.md) · SHA-256 `36897ddbdee0a18fdd60292b161fdc658ad73b25884368d3fc7cfac6101db533`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 
 ## Verificación
 
-`pnpm verify` comprueba generación/cobertura, TypeScript, pruebas y build estático. `pnpm test:browser` valida los recorridos locales. [Evidencia de QA](../../../../qa/implementations/chat-document-viewer.v1.0.0.review.md) identifica alcance, resultados y límites; una demo visible por sí sola no es un PASS visual.
+`pnpm verify` comprueba generación/cobertura, TypeScript, pruebas y build estático. `pnpm test:browser` valida los recorridos locales. [Evidencia de QA](../../../../qa/implementations/chat-document-viewer.actions.v1.0.0.review.md) identifica alcance, resultados y límites; una demo visible por sí sola no es un PASS visual.

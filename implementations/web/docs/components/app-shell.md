@@ -17,7 +17,7 @@ Usa App Shell para reunir navegación global y el contenido principal de una pan
 | Menú expandido y contenido largo | Verifica espacio disponible y declara una región de scroll en el anfitrión. | Convertir el recorte del ejemplo Figma en contenido web inaccesible. |
 | Documento entregado durante una conversación | Usa conversation-preview con Chat en Body y el visor en Document preview. | Sustituir Chat por una tabla fija o desanclar las regiones. |
 
-La [enmienda de documento entregado](app-shell.document-preview.amendment.v1.0.0.md) añade dos variantes a las seis anteriores y documenta ancho, Slots, acciones y equivalencia web. El set vigente tiene ocho variantes; los contratos y QA anteriores conservan su alcance histórico.
+La [enmienda de documento entregado](../../../../specs/components/app-shell.document-preview.amendment.v1.0.0.md) añade dos variantes a las seis anteriores y documenta ancho, Slots, acciones y equivalencia web. El set vigente tiene ocho variantes; los contratos y QA anteriores conservan su alcance histórico.
 
 ## Uso sin backend
 
@@ -183,6 +183,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 - [app-shell.contract.v1.0.0.md](../../../../specs/components/app-shell.contract.v1.0.0.md) · SHA-256 `13b073133dbd4ee733e4ffdf999dd055726bbfdc1e94c26b866492cc8129f71d`.
 - [app-shell.document-preview.amendment.v1.0.0.md](../../../../specs/components/app-shell.document-preview.amendment.v1.0.0.md) · SHA-256 `f61282f2318487c1d050be4dc5fbea064dd50bf8a432eee9c6d8d2ff1ec8edde`.
+- [forms.app-shell.amendment.v1.0.0.md](../../../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) · SHA-256 `0e4c9655879b4847db021522fe49bc86f8dcac095a01c63fb3d75d03b5db8b8b`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

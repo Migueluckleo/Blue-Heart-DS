@@ -1,6 +1,6 @@
 import { useId, type CSSProperties } from 'react';
 
-export type LinearProgressType = 'primary' | 'success' | 'warning' | 'error';
+export type LinearProgressType = 'primary' | 'success' | 'warning' | 'caution' | 'error';
 export type LinearProgressSize = 'small' | 'medium' | 'large';
 
 export interface LinearProgressProps {

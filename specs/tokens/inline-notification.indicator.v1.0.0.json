@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "DELEGATED_TOKEN_DATA",
+  "contract": "INLINE-NOTIFICATION-001-LAYOUT-ISOTIPO",
+  "version": "1.0.0",
+  "source": "Solicitud explícita del usuario 2026-11-23: Isotipo con ancho y alto máximos de 32 px sin deformación.",
+  "collections": [
+    {
+      "name": "component",
+      "modes": [
+        {
+          "name": "Contable",
+          "modeId": "Contable"
+        },
+        {
+          "name": "Administrativo",
+          "modeId": "Administrativo"
+        },
+        {
+          "name": "Servicios",
+          "modeId": "Servicios"
+        },
+        {
+          "name": "Personas",
+          "modeId": "Personas"
+        }
+      ],
+      "variables": [
+        {
+          "id": "inline-notification:component:isotipo-max",
+          "name": "inline-notification/size/isotipo-max",
+          "resolvedType": "FLOAT",
+          "description": "Inline Notification · Máximo de 32 px para ancho y alto del contenedor Isotipo. El arte se escala uniformemente para encajar conservando su proporción, sin recolorear ni recortar. Token interno oculto en selectores.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--inline-notification-size-isotipo-max)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:239"
+            }
+          },
+          "targetId": "VariableID:594:2"
+        }
+      ]
+    }
+  ]
+}

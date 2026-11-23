@@ -3,7 +3,7 @@
   "kind": "DELEGATED_TOKEN_DATA",
   "contract": "FOUNDATIONS-BODY-SEMANTIC-COLORS-001",
   "version": "1.0.0",
-  "source": "Solicitud del usuario 2026-11-18 y aclaración explícita de scopes por propiedad.",
+  "source": "Solicitud del usuario 2026-11-18 y aclaración explícita de scopes por propiedad. Corrección explícita del 19 de noviembre de 2026: shape/inverse consume el semántico blanco neutral-base.",
   "collections": [
     {
       "name": "component",
@@ -619,6 +619,37 @@
             }
           },
           "targetId": "VariableID:502:20"
+        },
+        {
+          "id": "body-semantic:component:shape-inverse",
+          "name": "body/color/shape/inverse",
+          "resolvedType": "COLOR",
+          "description": "Body · Relleno blanco inverse para formas e iconos sobre superficies gráficas oscuras o intensas. Consume neutral-base → neutral/100 (#FFFFFF) en los cuatro temas. Scope exclusivo SHAPE_FILL.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-shape-inverse)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            }
+          },
+          "targetId": "VariableID:547:2"
         }
       ]
     }

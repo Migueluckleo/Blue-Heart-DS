@@ -49,3 +49,7 @@ El ancho mínimo es 120 px. El riel mide 4, 8 o 12 px según small, medium o lar
 ## Aceptación
 
 Comprobar los cuatro sets, 84 variantes, 22 variables de componente, dos estilos tipográficos, 12 enlaces a instancias del auxiliar, ratios, clipping, escalado, reacciones y guías. Cotejar el ancho mínimo y la independencia de las propiedades visibles. En web verificar valor accesible, avance controlado, indeterminado, proporciones y movimiento reducido. Documentar el alcance del presentador nativo según la evidencia ejecutada.
+
+## Ampliación Caution · 2026-11-23
+
+La [enmienda Caution 1.0.0](../foundations/caution.amendment.v1.0.0.md) amplía los roles y variantes de esta entidad. Sus datos delegados y QA gobiernan únicamente el nuevo alcance y sustituyen las cantidades históricas donde corresponda.

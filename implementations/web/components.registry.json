@@ -12,7 +12,8 @@
     "notes": "Grid, Flex, Conversación o Conversación con preview del documento. En preview, Chat conserva 374 px y el documento llena el espacio restante.",
     "base": "specs/components/app-shell.contract.v1.0.0.md",
     "amendments": [
-      "specs/components/app-shell.document-preview.amendment.v1.0.0.md"
+      "specs/components/app-shell.document-preview.amendment.v1.0.0.md",
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "REQUIRED",
@@ -66,14 +67,19 @@
       "Badge"
     ],
     "category": "estado",
-    "notes": "Compara una moneda, un estado confirmado y una advertencia. Los iconos son decorativos.",
+    "notes": "Compara una moneda, un estado confirmado y una advertencia. Los iconos son decorativos. Caution usa la gama caution-orange en los cuatro temas. Badge Caution no tiene borde; Linear Progress Caution conserva el valor real y admite indeterminado.",
     "base": "specs/components/badge.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/badge.contextual-usage.amendment.v1.0.1.md",
+      "specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md",
+      "specs/foundations/caution.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "El texto y ambos iconos forman una anatomía fija"
     },
-    "qa": "qa/implementations/badge.v1.0.0.review.md"
+    "qa": "qa/implementations/badge.v1.0.0.review.md",
+    "usage_guide": "specs/components/badge.contextual-usage.amendment.v1.0.1.md"
   },
   {
     "id": "BREADCRUMB-001",
@@ -123,14 +129,17 @@
     "notes": "Activa una acción local y usa Terminar demo para salir de loading.",
     "base": "specs/components/buttons.contract.v1.0.0.md",
     "amendments": [
-      "specs/components/buttons.usage.amendment.v1.0.1.md"
+      "specs/components/buttons.usage.amendment.v1.0.1.md",
+      "specs/components/buttons.contextual-usage.amendment.v1.0.2.md",
+      "specs/patterns/buttons.actions.amendment.v1.0.0.md",
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Label, visibilidad y swaps son propiedades acotadas"
     },
     "qa": "qa/implementations/buttons-loader.v1.0.0.review.md",
-    "usage_guide": "specs/components/buttons.usage.amendment.v1.0.1.md"
+    "usage_guide": "specs/components/buttons.contextual-usage.amendment.v1.0.2.md"
   },
   {
     "id": "CHARACTERS-001",
@@ -179,15 +188,18 @@
       "ChatDocumentViewer"
     ],
     "category": "conversación",
-    "notes": "Documento entregado junto al Chat, con acciones del anfitrión y contenido reemplazable mediante preview.",
+    "notes": "actions reemplaza el toolbar predeterminado; undefined conserva Descargar Secondary y Expandir/Cerrar Ghost medium, null lo deja vacío. children conserva preview. El anfitrión define handlers, nombres accesibles y foco de las acciones suministradas.",
     "base": "specs/components/chat-document-viewer.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/chat-document-viewer.actions.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "REQUIRED",
-      "reason": "preview es un Slot nativo con contenido y cantidad editables."
+      "reason": "Figma: actions#519:0 y preview#430:0 nativos. React: actions y children; contenido reemplazable y cantidades/orden editables. Un toolbar FILL reproduce la alineación al final; un hijo directo no se estira."
     },
-    "qa": "qa/implementations/chat-document-viewer.v1.0.0.review.md",
-    "example_source": "separate"
+    "qa": "qa/implementations/chat-document-viewer.actions.v1.0.0.review.md",
+    "example_source": "separate",
+    "usage_guide": "specs/components/chat-document-viewer.actions.amendment.v1.0.0.md"
   },
   {
     "id": "CHAT-HISTORY-ITEM-001",
@@ -295,12 +307,17 @@
     "category": "selección",
     "notes": "Elige labelPosition left o right cuando showLabel está activo. La etiqueta va a la derecha por defecto. El selector de la muestra permite alternar ambos lados; la segunda casilla está deshabilitada.",
     "base": "specs/components/checkbox.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/checkbox.contextual-usage.amendment.v1.0.1.md",
+      "specs/patterns/selection-controls.decisions.amendment.v1.0.0.md",
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Control, Box y Label son anatomía fija"
     },
-    "qa": "qa/implementations/file-upload-checkbox.v1.0.0.review.md"
+    "qa": "qa/implementations/file-upload-checkbox.v1.0.0.review.md",
+    "usage_guide": "specs/components/checkbox.contextual-usage.amendment.v1.0.1.md"
   },
   {
     "id": "CHIP-001",
@@ -313,12 +330,16 @@
     "category": "selection",
     "notes": "El ejemplo conserva una moneda activa, combina estados independientes y permite retirar filtros con foco restaurado.",
     "base": "specs/components/chip.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/chip.contextual-usage.amendment.v1.0.1.md",
+      "specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Texto, visibilidad y swaps de glyph cubren la anatomía fija"
     },
-    "qa": "qa/implementations/chip.v1.0.0.review.md"
+    "qa": "qa/implementations/chip.v1.0.0.review.md",
+    "usage_guide": "specs/components/chip.contextual-usage.amendment.v1.0.1.md"
   },
   {
     "id": "COMPANY-SELECTOR-001",
@@ -407,12 +428,17 @@
     "category": "formularios",
     "notes": "Usa Option para elegir. Header y Divider organizan el contenido.",
     "base": "specs/components/dropdown-item.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/dropdown-item.contextual-usage.amendment.v1.0.1.md",
+      "specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md",
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Option, Header y Divider tienen posiciones fijas"
     },
-    "qa": "qa/implementations/dropdown-chain.v1.0.0.review.md"
+    "qa": "qa/implementations/dropdown-chain.v1.0.0.review.md",
+    "usage_guide": "specs/components/dropdown-item.contextual-usage.amendment.v1.0.1.md"
   },
   {
     "id": "DROPDOWN-MENU-001",
@@ -427,13 +453,17 @@
     "notes": "DropdownField conserva selección simple y añade showSearch opcional, con filtrado local y Search small fuera del listbox. El host controla datos y selección.",
     "base": "specs/components/dropdown-menu.contract.v1.0.0.md",
     "amendments": [
-      "specs/components/dropdown-menu.search.amendment.v1.0.0.md"
+      "specs/components/dropdown-menu.search.amendment.v1.0.0.md",
+      "specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md",
+      "specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md",
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "REQUIRED",
       "reason": "Options admite insertar, quitar y reordenar ítems oficiales"
     },
-    "qa": "qa/implementations/dropdown-menu.search.v1.0.0.review.md"
+    "qa": "qa/implementations/dropdown-menu.search.v1.0.0.review.md",
+    "usage_guide": "specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md"
   },
   {
     "id": "FILE-UPLOAD-001",
@@ -534,14 +564,18 @@
       "InlineNotification"
     ],
     "category": "feedback",
-    "notes": "Usa el tipo según gravedad, agrega un destino real si hay enlace y deja al anfitrión el cierre.",
+    "notes": "CTA opcional, apagado por defecto, Secondary small a la derecha del Body. Indicador de estado o Isotipo oficial ≤32×32 sin deformar. El anfitrión conecta acción, enlace y cierre.",
     "base": "specs/components/inline-notification.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md",
+      "specs/components/inline-notification.cta.amendment.v1.0.0.md",
+      "specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
-      "reason": "Contenido, indicador y cierre tienen posiciones fijas"
+      "reason": "Contenido, indicador, cierre y un único CTA opcional de anatomía fija; Show CTA controla visibilidad, no una región abierta."
     },
-    "qa": "qa/implementations/actions-notification.v1.0.0.review.md"
+    "qa": "qa/implementations/inline-notification.layout-isotipo.v1.0.0.review.md"
   },
   {
     "id": "INPUT-001",
@@ -554,12 +588,17 @@
     "category": "formularios",
     "notes": "Captura una línea con etiqueta y ayuda vinculadas. El host controla la validación. Badge subtle indica una unidad.",
     "base": "specs/components/input.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/input.contextual-usage.amendment.v1.0.1.md",
+      "specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md",
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Etiqueta, campo, ayuda y accesorios ocupan posiciones fijas"
     },
-    "qa": "qa/implementations/input.v1.0.0.review.md"
+    "qa": "qa/implementations/input.v1.0.0.review.md",
+    "usage_guide": "specs/components/input.contextual-usage.amendment.v1.0.1.md"
   },
   {
     "id": "LINEAR-PROGRESS-001",
@@ -570,9 +609,11 @@
       "LinearProgress"
     ],
     "category": "estado",
-    "notes": "Completa cuatro pasos de muestra para ver el avance controlado. El segundo indicador representa un total desconocido.",
+    "notes": "Completa cuatro pasos de muestra para ver el avance controlado. El segundo indicador representa un total desconocido. Caution usa la gama caution-orange en los cuatro temas. Badge Caution no tiene borde; Linear Progress Caution conserva el valor real y admite indeterminado.",
     "base": "specs/components/linear-progress.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/foundations/caution.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Header, riel y ayuda tienen anatomía fija"
@@ -665,12 +706,17 @@
     "category": "selección",
     "notes": "Elige el medio de entrega por teclado o puntero.",
     "base": "specs/components/radio.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/radio.contextual-usage.amendment.v1.0.1.md",
+      "specs/patterns/selection-controls.decisions.amendment.v1.0.0.md",
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Label y Show label son propiedades acotadas del Radio individual"
     },
-    "qa": "qa/implementations/dot-toggle-radio.v1.0.0.review.md"
+    "qa": "qa/implementations/dot-toggle-radio.v1.0.0.review.md",
+    "usage_guide": "specs/components/radio.contextual-usage.amendment.v1.0.1.md"
   },
   {
     "id": "RADIO-GROUP-001",
@@ -683,12 +729,17 @@
     "category": "selección",
     "notes": "Selecciona un medio de entrega. La segunda muestra conserva el mensaje fijo de error.",
     "base": "specs/components/radio-group.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/radio-group.contextual-usage.amendment.v1.0.1.md",
+      "specs/patterns/selection-controls.decisions.amendment.v1.0.0.md",
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "REQUIRED",
       "reason": "Options es Slot Figma; la lista tipada controla cardinalidad y selección en web"
     },
-    "qa": "qa/implementations/radio-group.v1.0.0.review.md"
+    "qa": "qa/implementations/radio-group.v1.0.0.review.md",
+    "usage_guide": "specs/components/radio-group.contextual-usage.amendment.v1.0.1.md"
   },
   {
     "id": "SEARCH-001",
@@ -719,7 +770,9 @@
     "category": "navegación",
     "notes": "Selecciona el nivel del título según la página y compón Breadcrumb, Metadata, Inputs y General actions con los controles del anfitrión. Activa `logoInsteadTitle` para mostrar el logo de Beni en el lugar del título. Pasa `title` para el nombre accesible del encabezado.",
     "base": "specs/components/section-header.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "REQUIRED",
       "reason": "Tres regiones independientes admiten listas abiertas"
@@ -759,7 +812,9 @@
     "category": "navegación",
     "notes": "Progreso orientativo de un registro de empresa. Los controles del anfitrión cambian el paso y mueven el foco al título.",
     "base": "specs/components/stepper.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Cada paso tiene anatomía fija. El anfitrión aporta la colección."
@@ -850,7 +905,9 @@
     "category": "formularios",
     "notes": "Usa una etiqueta visible y elige el límite y altura en el anfitrión. Helper y Counter se asocian al control.",
     "base": "specs/components/text-area.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Etiqueta, campo, ayuda, contador y muesca tienen anatomía fija"
@@ -868,12 +925,17 @@
     "category": "selección",
     "notes": "Cambia una preferencia local. La segunda opción está deshabilitada.",
     "base": "specs/components/toggle.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/toggle.contextual-usage.amendment.v1.0.1.md",
+      "specs/patterns/selection-controls.decisions.amendment.v1.0.0.md",
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Label y Show label son propiedades acotadas"
     },
-    "qa": "qa/implementations/dot-toggle-radio.v1.0.0.review.md"
+    "qa": "qa/implementations/dot-toggle-radio.v1.0.0.review.md",
+    "usage_guide": "specs/components/toggle.contextual-usage.amendment.v1.0.1.md"
   },
   {
     "id": "TOOLTIP-001",

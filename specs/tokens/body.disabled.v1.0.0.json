@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "kind": "DELEGATED_TOKEN_DATA",
+  "contract": "FOUNDATIONS-BODY-DISABLED-001",
+  "version": "1.0.0",
+  "source": "Solicitud explícita del usuario 2026-11-23: colores disabled de Body con focus/scopes por propiedad. Mapeos DERIVED de Button/Input y de la escala neutral vigente.",
+  "collections": [
+    {
+      "name": "component",
+      "modes": [
+        {
+          "name": "Contable",
+          "modeId": "Contable"
+        },
+        {
+          "name": "Administrativo",
+          "modeId": "Administrativo"
+        },
+        {
+          "name": "Servicios",
+          "modeId": "Servicios"
+        },
+        {
+          "name": "Personas",
+          "modeId": "Personas"
+        }
+      ],
+      "variables": [
+        {
+          "id": "body-disabled:component:text",
+          "name": "body/color/text/disabled",
+          "resolvedType": "COLOR",
+          "description": "Body · Texto para contenido de producto no disponible (disabled). Consume neutral-soft en los cuatro temas. Scope exclusivo por propiedad; el color no deshabilita interacciones.",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-text-disabled)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            }
+          }
+        },
+        {
+          "id": "body-disabled:component:bg",
+          "name": "body/color/bg/disabled",
+          "resolvedType": "COLOR",
+          "description": "Body · Superficie de fondo para contenido de producto no disponible (disabled). Consume neutral-subtle en los cuatro temas. Scope exclusivo por propiedad; el color no deshabilita interacciones.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-bg-disabled)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            }
+          }
+        },
+        {
+          "id": "body-disabled:component:stroke",
+          "name": "body/color/stroke/disabled",
+          "resolvedType": "COLOR",
+          "description": "Body · Borde para contenido de producto no disponible (disabled). Consume neutral-muted en los cuatro temas. Scope exclusivo por propiedad; el color no deshabilita interacciones.",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-stroke-disabled)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            }
+          }
+        },
+        {
+          "id": "body-disabled:component:shape",
+          "name": "body/color/shape/disabled",
+          "resolvedType": "COLOR",
+          "description": "Body · Relleno de formas e iconos para contenido de producto no disponible (disabled). Consume neutral-soft en los cuatro temas. Scope exclusivo por propiedad; el color no deshabilita interacciones.",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-shape-disabled)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

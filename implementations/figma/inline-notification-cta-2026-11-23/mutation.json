@@ -1,0 +1,358 @@
+{
+  "set": {
+    "id": "122:274",
+    "key": "7015680d121d3f5d709db132375826a019133a09",
+    "properties": {
+      "Show title#122:4": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Title#122:10": {
+        "type": "TEXT",
+        "defaultValue": "Title"
+      },
+      "Show description#122:16": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Description#122:22": {
+        "type": "TEXT",
+        "defaultValue": "Description text that explains what happened. View details."
+      },
+      "Show icon#122:28": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Show dismiss#122:34": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      },
+      "Show CTA#581:0": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      "type": {
+        "type": "VARIANT",
+        "defaultValue": "neutral",
+        "variantOptions": [
+          "neutral",
+          "info",
+          "success",
+          "warning",
+          "error"
+        ]
+      }
+    },
+    "description": "INLINE-NOTIFICATION-001 · Usa Inline Notification para explicar un estado junto al contenido afectado. Show CTA está apagado por defecto; al activarlo muestra un Button Secondary/small debajo del mensaje, con label editable. El anfitrión conecta la acción y decide cuándo se cierra; el CTA no descarta el aviso automáticamente. Elige el tipo según gravedad y evita depender solo del color. Ficha local Inline Notification / INLINE-NOTIFICATION-001."
+  },
+  "rows": [
+    {
+      "variant": "122:53",
+      "content": "122:54",
+      "text": "122:121",
+      "body": "581:28",
+      "cta": "581:29",
+      "ctaProperties": {
+        "Right icon#23:171": {
+          "type": "INSTANCE_SWAP",
+          "value": "23:684",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Left icon#23:152": {
+          "type": "INSTANCE_SWAP",
+          "value": "23:684",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Show right icon#23:133": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show left icon#23:114": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Label#23:95": {
+          "type": "TEXT",
+          "value": "Ver detalles"
+        },
+        "size": {
+          "value": "small",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "state": {
+          "value": "default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "visible": false,
+      "isExposedInstance": true,
+      "refs": {
+        "visible": "Show CTA#581:0"
+      }
+    },
+    {
+      "variant": "122:132",
+      "content": "122:133",
+      "text": "122:179",
+      "body": "581:37",
+      "cta": "581:38",
+      "ctaProperties": {
+        "Right icon#23:171": {
+          "type": "INSTANCE_SWAP",
+          "value": "23:684",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Left icon#23:152": {
+          "type": "INSTANCE_SWAP",
+          "value": "23:684",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Show right icon#23:133": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show left icon#23:114": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Label#23:95": {
+          "type": "TEXT",
+          "value": "Ver detalles"
+        },
+        "size": {
+          "value": "small",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "state": {
+          "value": "default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "visible": false,
+      "isExposedInstance": true,
+      "refs": {
+        "visible": "Show CTA#581:0"
+      }
+    },
+    {
+      "variant": "122:189",
+      "content": "122:190",
+      "text": "122:193",
+      "body": "581:44",
+      "cta": "581:45",
+      "ctaProperties": {
+        "Right icon#23:171": {
+          "type": "INSTANCE_SWAP",
+          "value": "23:684",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Left icon#23:152": {
+          "type": "INSTANCE_SWAP",
+          "value": "23:684",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Show right icon#23:133": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show left icon#23:114": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Label#23:95": {
+          "type": "TEXT",
+          "value": "Ver detalles"
+        },
+        "size": {
+          "value": "small",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "state": {
+          "value": "default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "visible": false,
+      "isExposedInstance": true,
+      "refs": {
+        "visible": "Show CTA#581:0"
+      }
+    },
+    {
+      "variant": "122:203",
+      "content": "122:204",
+      "text": "122:250",
+      "body": "581:51",
+      "cta": "581:52",
+      "ctaProperties": {
+        "Right icon#23:171": {
+          "type": "INSTANCE_SWAP",
+          "value": "23:684",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Left icon#23:152": {
+          "type": "INSTANCE_SWAP",
+          "value": "23:684",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Show right icon#23:133": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show left icon#23:114": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Label#23:95": {
+          "type": "TEXT",
+          "value": "Ver detalles"
+        },
+        "size": {
+          "value": "small",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "state": {
+          "value": "default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "visible": false,
+      "isExposedInstance": true,
+      "refs": {
+        "visible": "Show CTA#581:0"
+      }
+    },
+    {
+      "variant": "122:260",
+      "content": "122:261",
+      "text": "122:264",
+      "body": "581:58",
+      "cta": "581:59",
+      "ctaProperties": {
+        "Right icon#23:171": {
+          "type": "INSTANCE_SWAP",
+          "value": "23:684",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Left icon#23:152": {
+          "type": "INSTANCE_SWAP",
+          "value": "23:684",
+          "preferredValues": [
+            {
+              "type": "COMPONENT",
+              "key": "46d251bb4099700c5852180f2370d265e5166432"
+            }
+          ]
+        },
+        "Show right icon#23:133": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Show left icon#23:114": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Label#23:95": {
+          "type": "TEXT",
+          "value": "Ver detalles"
+        },
+        "size": {
+          "value": "small",
+          "type": "VARIANT",
+          "boundVariables": {}
+        },
+        "state": {
+          "value": "default",
+          "type": "VARIANT",
+          "boundVariables": {}
+        }
+      },
+      "visible": false,
+      "isExposedInstance": true,
+      "refs": {
+        "visible": "Show CTA#581:0"
+      }
+    }
+  ],
+  "mutatedIds": [
+    "122:274",
+    "122:53",
+    "122:54",
+    "122:121",
+    "581:28",
+    "581:29",
+    "122:132",
+    "122:133",
+    "122:179",
+    "581:37",
+    "581:38",
+    "122:189",
+    "122:190",
+    "122:193",
+    "581:44",
+    "581:45",
+    "122:203",
+    "122:204",
+    "122:250",
+    "581:51",
+    "581:52",
+    "122:260",
+    "122:261",
+    "122:264",
+    "581:58",
+    "581:59"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "kind": "VERIFIED_TOOLING_CORRECTION",
+  "original_run": "2026-11-23-body-disabled-consumption",
+  "failure": "Declared dependency token-visibility -> body was lost when semantic file-root nodes were normalized after edge-pair consolidation. Structural extraction contained the dependency; builder overwrote its pair attributes.",
+  "change": "Normalize exact source-owned or unambiguous file-root identities before consolidating evidence; preserve original endpoints and untouched raw extraction; retain ambiguous file mentions.",
+  "files": [
+    "scripts/ds_graph_engine.py",
+    "tests/test_graph_dependency_coverage.py"
+  ],
+  "validation": {
+    "test_graph_dependency_coverage": "PASS, 7 tests",
+    "scope": "Dependency plus citation preservation, same-basename safety, no mutation of raw extraction, existing CURRENT/dependency gates"
+  },
+  "final_run": "2026-11-23-body-disabled-final",
+  "token_definitions_changed_by_fix": false
+}

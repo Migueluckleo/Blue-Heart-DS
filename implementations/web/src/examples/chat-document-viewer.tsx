@@ -54,8 +54,19 @@ export function ChatDocumentViewerExample() {
   const [expanded, setExpanded] = useState(false);
   const [showDescription, setShowDescription] = useState(true);
   const [content, setContent] = useState('table');
+  const [actionsMode, setActionsMode] = useState('default');
+  const [actionsEnabled, setActionsEnabled] = useState(true);
   const [action, setAction] = useState('Datos ficticios. Las acciones de descarga se delegan al anfitrión.');
   const reopen = useRef<HTMLButtonElement>(null);
+  const actionIds = Array.from({length: actionsMode === 'many' ? 12 : 5}, (_, index) => index + 1);
+  if (actionsMode === 'reversed') actionIds.reverse();
+  const customActions = actionsMode === 'default' ? undefined : actionsMode === 'empty' ? null
+    : actionsMode === 'single' ? <IconButton variant="ghost" size="medium" label="Consultar documento de muestra"
+      icon={FileTextIcon} onClick={() => setAction('Consulta local del documento de muestra.')}/>
+    : <div className="bh-document-viewer-toolbar">
+      {actionIds.map(id => <IconButton key={id} variant="ghost" size="medium" label={`Acción de muestra ${id}`}
+        icon={FileTextIcon} onClick={() => setAction(`Solicitud local de acción de muestra ${id}.`)}/>)}
+    </div>;
   return <div className="grid gap-4">
     <div className="flex flex-wrap items-center gap-4">
       <label><input type="checkbox" checked={showDescription}
@@ -64,13 +75,22 @@ export function ChatDocumentViewerExample() {
         <option value="table">Tabla</option><option value="empty">Vacío</option>
         <option value="single">Un bloque</option><option value="multiple">Varios bloques</option>
       </select></label>
+      <label><input type="checkbox" checked={actionsEnabled}
+        onChange={event => setActionsEnabled(event.currentTarget.checked)}/> Acciones predeterminadas habilitadas</label>
+      <label>Contenido de actions <select value={actionsMode} onChange={event => setActionsMode(event.currentTarget.value)}>
+        <option value="default">Predeterminado</option><option value="empty">Vacío</option>
+        <option value="single">Una acción</option><option value="multiple">Cinco acciones</option>
+        <option value="reversed">Cinco en orden inverso</option><option value="many">Doce acciones</option>
+      </select></label>
     </div>
     <button ref={reopen} type="button" className="bh-document-reopen" aria-expanded={open}
       onClick={() => {setOpen(true); setExpanded(false);}}>Abrir documento entregado</button>
     {open && <div className="bh-document-viewer-example" data-expanded={expanded}>
       <ChatDocumentViewer title={deliveredDocumentTitle} description={showDescription ? deliveredDocumentDescription : undefined} expanded={expanded}
-        onDownload={() => setAction('El anfitrión recibe la solicitud de descarga; la demo no genera archivos.')}
-        onExpand={() => setExpanded(value => !value)} onClose={() => {setOpen(false); reopen.current?.focus();}}>
+        actions={customActions}
+        onDownload={actionsEnabled ? () => setAction('El anfitrión recibe la solicitud de descarga; la demo no genera archivos.') : undefined}
+        onExpand={actionsEnabled ? () => setExpanded(value => !value) : undefined}
+        onClose={actionsEnabled ? () => {setOpen(false); reopen.current?.focus();} : undefined}>
         {content === 'table' ? <DeliveredDocumentPreview onAction={setAction}/>
           : content === 'empty' ? null : Array.from({length:content === 'single' ? 1 : 3},(_,index) =>
             <p key={index} className="bh-body-description" data-preview-block>Bloque de documento de muestra {index + 1}</p>)}

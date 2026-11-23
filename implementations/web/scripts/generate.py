@@ -1,10 +1,22 @@
 #!/usr/bin/env python3
 """P07: una familia activa necesita export, API y ejemplo documentado y ejecutable."""
-import argparse, base64, hashlib, json, re, subprocess
+import argparse, base64, hashlib, json, re, subprocess, os
 from pathlib import Path
 import tokens, typography
 from check_component_tokens import check_component_tokens
 ROOT, WEB=tokens.ROOT,tokens.WEB
+
+def rebase_guide_links(text, source, destination):
+    """Preserve canonical destinations when a usage guide is copied to API docs."""
+    def replace(match):
+        label, href = match.groups()
+        if href.startswith(('#', 'http:', 'https:', 'mailto:')):
+            return match[0]
+        path, separator, anchor = href.partition('#')
+        target = ((ROOT/source).parent/path).resolve()
+        relative = Path(os.path.relpath(target, destination.parent)).as_posix()
+        return f'[{label}]({relative}{separator}{anchor})'
+    return re.sub(r'\[([^\]]+)\]\(([^)\s]+)\)', replace, text)
 
 def build():
     rows=json.loads((WEB/'components.registry.json').read_text())
@@ -259,6 +271,7 @@ def build():
         for name in row['exports']:
             m=re.search(r'export function '+name+r'(?:<[^\n]+?>)?\((.*?)\)\s*\{',code,re.S)
             if m:defaults.append(name+': '+m.group(1).strip())
+        guide_text=rebase_guide_links(guide[1].strip(), guide_source, WEB/f'docs/components/{row["slug"]}.md')
         doc=f'''# {row['name']} · React / TypeScript
 
 Documento técnico generado por `pnpm ds:generate`. Editar la API en código, el ejemplo ejecutable o las notas de `components.registry.json`, y regenerar. No es otra aprobación del contrato visual.
@@ -269,7 +282,7 @@ Familia `{row['id']}` · API local 0.1.0 · categoría {row['category']}.
 
 Fuente: [guía del contrato](../../../../{guide_source}#guía-semántica-normativa).
 
-{guide[1].strip()}
+{guide_text}
 
 ## Uso sin backend
 

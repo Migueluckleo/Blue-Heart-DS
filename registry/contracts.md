@@ -97,6 +97,8 @@ v1.0.0 · DELEGATED_FOR_BUILD. [Contrato](../specs/components/chat.contract.v1.0
 
 [CHAT-DOCUMENT-VIEWER-001](../specs/components/chat-document-viewer.contract.v1.0.0.md) y [APP-SHELL-DOCUMENT-PREVIEW-001](../specs/components/app-shell.document-preview.amendment.v1.0.0.md): DELEGATED_FOR_BUILD tras QA documental. Visor con Slot nativo y dos variantes adicionales de App Shell, preservando las seis anteriores.
 
+La [enmienda CHAT-DOCUMENT-VIEWER-001-ACTIONS](../specs/components/chat-document-viewer.actions.amendment.v1.0.0.md), 2026-11-19, documenta actions#519:0 nativo y Expandir/Cerrar Icon Buttons Ghost medium, con el mismo ID/key y versión. [QA documental inicial](../qa/contracts/chat-document-viewer.actions.v1.0.0.review.md) conservado. El [cierre de implementación](../qa/implementations/chat-document-viewer.actions.v1.0.0.review.md) registra Description/Slot sincronizados, actions ReactNode y Ghost, operaciones nativas desde instancia, tokens y QA web actual. La instancia de QA se retiró; identidad y versión permanecen. No amplía el QA histórico fuera del alcance ni publica o instala.
+
 ## Dropdown menu · búsqueda opcional
 
 [Enmienda DROPDOWN-MENU-001-SEARCH](../specs/components/dropdown-menu.search.amendment.v1.0.0.md): DELEGATED_FOR_BUILD, QA documental PASS, user_audit NOT_REQUIRED. Preserva maestro, Slot y defaults; distingue diseño observado de filtro y accesibilidad web derivados.
@@ -104,3 +106,47 @@ v1.0.0 · DELEGATED_FOR_BUILD. [Contrato](../specs/components/chat.contract.v1.0
 ## Body · Ampliación semántica por propiedad · 2026-11-18
 
 [FOUNDATIONS-BODY-SEMANTIC-COLORS-001](../specs/foundations/body.semantic-colors.amendment.v1.0.0.md): DELEGATED_FOR_BUILD, QA documental PASS. Añade 19 colores, suma 52 Body y actualiza visibilidad y consumo de producto. IDs/aliases y tipografía iniciales conservados.
+
+## Buttons · Uso contextual y patrones · 2026-11-19
+
+[Guía contextual v1.0.2](../specs/components/buttons.contextual-usage.amendment.v1.0.2.md) y [patrones de acciones v1.0.0](../specs/patterns/buttons.actions.amendment.v1.0.0.md) · APPROVED por revisión explícita del PDF de 16 páginas, incluida Focus solo en navegación de teclado. La guía sustituye únicamente la semántica y Description de uso v1.0.1. Conserva base, recetas, API y defaults. [Evidencia de aprobación](../sources/inventories/buttons-contextual-usage.approval.2026-11-19.json).
+
+## Inputs y Dropdowns · Uso contextual · 2026-11-19
+
+[Input v1.0.1](../specs/components/input.contextual-usage.amendment.v1.0.1.md), [Dropdown menu v1.0.1](../specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md), [Dropdown item v1.0.1](../specs/components/dropdown-item.contextual-usage.amendment.v1.0.1.md) y [patrones de captura/selección](../specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md) · APPROVED por el PDF contextual de 20 páginas. Conservan variantes, datos, API, defaults y DM-S01/08. El foco de edición de Input admite teclado o clic y no altera la regla de Button. [Fuente y digests](../sources/inventories/inputs-dropdowns-contextual-usage.approval.2026-11-19.json).
+
+## Checkboxes, Radio Buttons y Toggles · Uso contextual · 2026-11-19
+
+[Checkbox v1.0.1](../specs/components/checkbox.contextual-usage.amendment.v1.0.1.md), [Radio v1.0.1](../specs/components/radio.contextual-usage.amendment.v1.0.1.md), [Radio group v1.0.1](../specs/components/radio-group.contextual-usage.amendment.v1.0.1.md), [Toggle v1.0.1](../specs/components/toggle.contextual-usage.amendment.v1.0.1.md) y [cinco patrones de decisión](../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md) · APPROVED por revisión explícita del PDF de 20 páginas. Conserva 30/10/4/8 variantes, tamaños únicos, API y datos; la diferencia web de alineación Radio multilínea permanece observada y no cambia la receta. [Aprobación y hashes](../sources/inventories/selection-controls-contextual-usage.approval.2026-11-19.json).
+
+## Badges y Chips · Uso contextual · 2026-11-19
+
+[Badge v1.0.1](../specs/components/badge.contextual-usage.amendment.v1.0.1.md), [Chip v1.0.1](../specs/components/chip.contextual-usage.amendment.v1.0.1.md) y [cinco patrones de estado/filtros](../specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md) · APPROVED por revisión explícita del PDF de 21 páginas. Conserva 18/40 variantes, tipos, tamaños, modos, datos y API. Distingue Badge no interactivo, Focus/selección/presión de Chip, Counter cero y remoción con foco del anfitrión. Warning conserva su excepción local de contraste. [Aprobación y digests](../sources/inventories/badges-chips-contextual-usage.approval.2026-11-19.json).
+
+## Visibilidad de medidas Body · Revalidación 2026-11-19
+
+La [política vigente](../specs/foundations/token-visibility.contract.v1.0.0.md) se verificó también en gap, padding y corner radius del editor. [QA PASS](../qa/implementations/token-visibility.measures.2026-11-19.review.md): 52 Body visibles, 1,457 internos ocultos, cero variables modificadas. Se aclara la etiqueta del binding interno ya asignado; los campos nuevos ofrecen únicamente Body compatibles. Identidades, valores y consumo permanecen; sin nueva versión, publicación o instalación.
+
+## Body · Corrección shape inverse · 2026-11-19
+
+[FOUNDATIONS-BODY-SEMANTIC-COLORS-001](../specs/foundations/body.semantic-colors.amendment.v1.0.0.md) conserva versión 1.0.0 e incorpora el rol shape/inverse → neutral-base blanco, exclusivo SHAPE_FILL. [QA documental PASS](../qa/contracts/body.shape-inverse.2026-11-19.review.md), preparación READY y delegación DELEGATED_FOR_BUILD. Datos y política declaran 53 Body. [QA de implementación PASS](../qa/implementations/body.shape-inverse.2026-11-19.review.md): blanco en cuatro temas, scopes y aliases leídos, 52 definiciones previas y cinco estilos conservados, muestra editable y QA web/build correctos. Sin publicación o instalación.
+
+## Formularios dentro de App Shell · 2026-11-20
+
+- FORMS-APP-SHELL-PATTERNS-001 · v1.0.0 · APPROVED. [Patrón](../specs/patterns/forms.app-shell.amendment.v1.0.0.md), asociado a App Shell y doce familias de composición/captura/feedback. Doce IDs de patrón conservan filas 1/2/3, acciones locales alineadas a la caja del input, relaciones, jerarquías, validación, guardado y salida. No crea familia Form ni altera tokens/API. [Aprobación](../sources/inventories/forms-app-shell.approval.2026-11-20.json) · [QA documental](../qa/contracts/forms.app-shell.v1.0.0.review.md).
+
+## Caution · 2026-11-23
+
+[FOUNDATIONS-CAUTION-001 v1.0.0](../specs/foundations/caution.amendment.v1.0.0.md) · DELEGATED_FOR_BUILD · [QA documental PASS](../qa/contracts/caution.v1.0.0.review.md). Ampliación autorizada para nueve primitivas, cuatro semánticos y ocho tokens component. Body 57 roles; Badge 21 variantes; Linear Progress 105.
+
+## Inline Notification · CTA opcional · 2026-11-23
+
+[INLINE-NOTIFICATION-001-CTA](../specs/components/inline-notification.cta.amendment.v1.0.0.md), DELEGATED_FOR_BUILD tras [QA documental PASS](../qa/contracts/inline-notification.cta.v1.0.0.review.md). Solicitud explícita: Show CTA apagado por defecto, un Button Secondary al activarlo. Preserva cinco tipos y siete propiedades previas; añade una booleana, label de la dependencia y mapeo web. P-SLOTS NOT_APPLICABLE por parte fija única.
+
+## Inline Notification · CTA a la derecha e Isotipo · 2026-11-23
+
+[INLINE-NOTIFICATION-001-LAYOUT-ISOTIPO](../specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md), DELEGATED_FOR_BUILD tras [QA documental PASS](../qa/contracts/inline-notification.layout-isotipo.v1.0.0.review.md). La corrección explícita sustituye la ubicación vertical inicial del CTA por fila con alineación inferior y agrega selección de Logos Isotipo con máximo 32×32 y proporción intacta. El QA vertical previo conserva su alcance histórico. P-SLOTS NOT_APPLICABLE por indicador reemplazable y acción fija única.
+
+## Body disabled y descriptions Dropdown · 2026-11-23
+
+[FOUNDATIONS-BODY-DISABLED-001](../specs/foundations/body.disabled.amendment.v1.0.0.md): DELEGATED_FOR_BUILD tras [QA documental PASS](../qa/contracts/body.disabled.v1.0.0.review.md). Cuatro roles disabled en component/body/, 61 Body y 1,536 tokens efectivos; solo scopes por propiedad y aliases semánticos existentes. La solicitud también autoriza corregir cinco descriptions Dropdown en Figma desde sus datos canónicos. Se conservan las versiones de los componentes y las skills.

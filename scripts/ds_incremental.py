@@ -18,7 +18,9 @@ def relative(root, path):
 
 
 def tool_digest(root):
-    names = ['scripts/ds_graph_engine.py', 'scripts/ds_incremental.py', 'config/ds-project.json']
+    names = ['scripts/ds_graph_engine.py', 'scripts/ds_incremental.py',
+             'scripts/ds_dependencies.py', 'scripts/ds_skills.py', 'scripts/ds_core.py',
+             'scripts/consumer_graph.py', 'config/ds-project.json', 'config/ds-skills.json']
     return hashlib.sha256(json.dumps({p: sha(root / p) for p in names}, sort_keys=True).encode()).hexdigest()
 
 

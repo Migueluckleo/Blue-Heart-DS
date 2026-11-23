@@ -21,7 +21,7 @@ En web proporciona nombre accesible, rango de 0 a 100 y valor actual si es deter
 
 ## Uso sin backend
 
-Completa cuatro pasos de muestra para ver el avance controlado. El segundo indicador representa un total desconocido.
+Completa cuatro pasos de muestra para ver el avance controlado. El segundo indicador representa un total desconocido. Caution usa la gama caution-orange en los cuatro temas. Badge Caution no tiene borde; Linear Progress Caution conserva el valor real y admite indeterminado.
 
 ```tsx
 'use client';
@@ -46,6 +46,9 @@ export function LinearProgressExample() {
     <button type="button" className="rounded border px-3 py-2" disabled={value === 100}
       onClick={() => setValue(current => Math.min(100, current + 25))}>Completar siguiente paso de muestra</button>
     <LinearProgress id="demo-progress-unknown" label="Calculando total" size="large"/>
+    <LinearProgress id="demo-progress-caution" label="Revisar capacidad disponible" type="caution" value={75}
+      helperText="Precaución de muestra · El anfitrión aporta el significado del estado"/>
+    <LinearProgress id="demo-progress-caution-unknown" label="Verificación con precaución" type="caution" size="large"/>
   </div>;
 }
 ```
@@ -57,7 +60,7 @@ Ejemplo compilado en [examples.tsx](../../src/examples.tsx). Usa React state en 
 Importar desde [src/index.ts](../../src/index.ts), con `@/index` dentro del catálogo. Código propietario: [linear-progress.tsx](../../src/components/linear-progress.tsx). Los atributos HTML heredados mantienen los tipos de React; callbacks y datos controlados pertenecen a la pantalla.
 
 ```tsx
-export type LinearProgressType = 'primary' | 'success' | 'warning' | 'error';
+export type LinearProgressType = 'primary' | 'success' | 'warning' | 'caution' | 'error';
 
 export type LinearProgressSize = 'small' | 'medium' | 'large';
 
@@ -102,7 +105,8 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [linear-progress.contract.v1.0.0.md](../../../../specs/components/linear-progress.contract.v1.0.0.md) · SHA-256 `4b2d43ab2ede543322ca177340d290b2e8e232abb5503d1f061ab64302fb1ad7`.
+- [linear-progress.contract.v1.0.0.md](../../../../specs/components/linear-progress.contract.v1.0.0.md) · SHA-256 `6fc0673335dd42d7536f5fd4595084773e6df84bbde894d6e0be5b0bab2aa801`.
+- [caution.amendment.v1.0.0.md](../../../../specs/foundations/caution.amendment.v1.0.0.md) · SHA-256 `3a1f2c61951535da83f92dc942feac5744846cfbe12bd7a2f14e53ff1b564503`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 
