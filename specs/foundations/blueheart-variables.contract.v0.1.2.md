@@ -11,6 +11,7 @@ human_review_policy: OPTIONAL_NON_BLOCKING
 source_data_ref: specs/tokens/blueheart-variables.v0.1.2.json
 source_data_digest_sha256: 09a96d3707735fa129e3cfa99de6ccac1a9d94ccf5cc19fa5d282de867629993
 data_refs:
+  - specs/tokens/header-app-shell.spacing.v1.0.0.json
   - specs/tokens/visibility.body-only.correction.json
   - specs/tokens/blueheart-variables.v0.1.2.json
   - sources/figma-snapshots/variables-2026-11-11/capture-manifest.json
@@ -93,3 +94,5 @@ Conservan sufijo numérico 6, 18, 72, 104, 120, 200, 234, 240, 294, 320, 358, 55
 `VALIDATED` para variables del maestro. [Mapa de IDs](../../implementations/figma/variables-2026-11-11/id-map.json) y [readback final](../../implementations/figma/variables-2026-11-11/final-collections.readback.json). La publicación remota sigue en HOLD. Este alcance no establece conversiones CSS ni reglas visuales de familias.
 
 La [corrección de bindings de componente](../tokens/component-layer.correction.json) aporta los aliases delegados para App Shell, Conversation Composer, Conversation Response y Stepper en las versiones vigentes.
+
+La [enmienda Header/App Shell del 24 de noviembre](../components/header-app-shell.spacing.amendment.v1.0.0.md) incorpora dos tokens de componente para exterior 32 y ausencia de separación 0. Su [JSON delegado](../tokens/header-app-shell.spacing.v1.0.0.json) se consume junto con las demás fuentes activas. El inventario original conserva sus bytes, IDs y valores; el corte efectivo pasa de 1,536 a 1,538 variables y mantiene 61 Body visibles.

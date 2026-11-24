@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "preserved": [
+    "oldVariablesSha256",
+    "collectionsSha256",
+    "bodyStylesSha256",
+    "visualAndLayoutSha256"
+  ],
+  "old_variables": 1536,
+  "total_variables": 1538,
+  "new_variables": [
+    {
+      "id": "VariableID:653:191",
+      "key": "08752a48c51f7e8d6d2abf7315d8112b2ae7e12f",
+      "name": "header/spacing/container-padding",
+      "resolvedType": "FLOAT",
+      "variableCollectionId": "VariableCollectionId:6:22",
+      "description": "Header · Padding exterior del contenedor. Conserva los 32 px elegidos por el usuario y consume spacing-2xl en los cuatro temas. Token interno oculto de los selectores.",
+      "scopes": [],
+      "codeSyntax": {
+        "WEB": "var(--header-spacing-container-padding)"
+      },
+      "hiddenFromPublishing": false,
+      "remote": false,
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:257"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:257"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:257"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:257"
+        }
+      }
+    },
+    {
+      "id": "VariableID:653:192",
+      "key": "58a644bb737f09a11c64781097e016803e1de905",
+      "name": "app-shell/spacing/none",
+      "resolvedType": "FLOAT",
+      "variableCollectionId": "VariableCollectionId:6:22",
+      "description": "App Shell · Ausencia de separación: 0 px para el gap Header–Content y el padding superior de Content. Consume spacing-none en los cuatro temas. Token interno oculto de los selectores.",
+      "scopes": [],
+      "codeSyntax": {
+        "WEB": "var(--app-shell-spacing-none)"
+      },
+      "hiddenFromPublishing": false,
+      "remote": false,
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:217"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:217"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:217"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:217"
+        }
+      }
+    }
+  ],
+  "body_visible": 61,
+  "outside_body_visible": 0,
+  "scope": "All previous variable metadata/values/aliases, collections, five Body styles and visual/layout properties remain byte-equivalent under stable JSON SHA-256."
+}

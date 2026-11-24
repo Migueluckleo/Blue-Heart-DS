@@ -8,7 +8,7 @@ import { verifyConversationComposer } from './conversation-composer.browser.mjs'
 import { verifyConversationResponse } from './conversation-response.browser.mjs';
 import { verifyUserMessage } from './user-message.browser.mjs';
 import { verifyChat } from './chat.browser.mjs';
-import { verifyChatSidebar } from './chat-sidebar.browser.mjs';
+import { verifyChatRailItem, verifyChatSidebar } from './chat-sidebar.browser.mjs';
 import { verifyStickyTable } from './table-sticky-actions.browser.mjs';
 
 const root = resolve('out');
@@ -332,7 +332,7 @@ try {
   await page.keyboard.press('Space');
   assert.equal(await page.locator('#demo-header-action-status').textContent(),'Acción de muestra: notifications');
   const header = page.locator('[data-blueheart="header"]').filter({has:page.locator('#demo-header-company')});
-  assert.equal((await header.boundingBox()).height,96);
+  assert.equal((await header.boundingBox()).height,112);
   assert.ok((await header.boundingBox()).width>=1152);
   await header.getByRole('img',{name:'CONTPAQi Contabilidad'}).evaluate(el=>el.decode());
   assert.equal(await header.locator('[data-blueheart="badge"]').textContent(),'Alpha 1');
@@ -443,20 +443,20 @@ try {
   const rightSidebar = shell.locator('[data-slot=right-sidebar]');
   const shellRail = rightSidebar.locator('[data-mode=rail]');
   const shellPanel = rightSidebar.locator('[data-mode=panel]');
-  assert.equal((await conversationBody.boundingBox()).width,1193);
+  assert.equal((await conversationBody.boundingBox()).width,1161);
   assert.equal(await shellRail.getByRole('button',{pressed:true}).count(),0);
   assert.equal(await shellPanel.count(),0);
   await shellRail.getByRole('button',{name:'Chats',exact:true}).focus();
   await page.keyboard.press('Space');
   assert.equal((await shellPanel.boundingBox()).width,264);
-  assert.equal((await conversationBody.boundingBox()).width,929);
+  assert.equal((await conversationBody.boundingBox()).width,897);
   const compose = conversationBody.getByRole('textbox',{name:'Redactar en conversación de App Shell'});
   await compose.fill('Conversación de muestra');
   await conversationBody.getByRole('button',{name:'Enviar mensaje'}).click();
   assert.equal(await conversationBody.locator('[data-state=started] [data-slot=messages]').innerText(),'Conversación de muestra');
   await shellPanel.getByRole('button',{name:'Cerrar panel'}).focus();
   await page.keyboard.press('Space');
-  assert.equal((await conversationBody.boundingBox()).width,1193);
+  assert.equal((await conversationBody.boundingBox()).width,1161);
   assert.equal(await shellRail.getByRole('button',{pressed:true}).count(),0);
   const pagination = page.getByRole('navigation',{name:'Paginación de comprobantes'});
   assert.equal(await pagination.locator('[aria-current=page]').getAttribute('aria-label'),'Página 5');
@@ -802,6 +802,7 @@ try {
   const userMessage = await verifyUserMessage(page);
   const chat = await verifyChat(page);
   const chatSidebar = await verifyChatSidebar(page);
+  const chatRailItem = await verifyChatRailItem(page);
   assert.deepEqual(errors,[]);
   console.log(JSON.stringify({status:'PASS',height,width,font,colors,keyboard:true,duplicateActivationsBlocked:true,
     reset:true,disabled:true,navigation:true,loaderWidth:24,reducedMotion:'1.6s',
@@ -810,7 +811,7 @@ try {
     searchKeyboardAndClear:true,breadcrumbNavigation:true,sidebarSlotsAndKeyboard:true,sidebarSecondary:true,iconButtonPressed:true,warningContrast,
     localAvatarImage:true,avatarOverflow:true,headerKeyboard:true,inputMatrix:42,inputEmptyBorderContrast,sectionHeader:true,appShell:true,pagination:true,tabs:true,tabContrasts:tabContrasts[0],
     textArea:true,textAreaBorderContrast,dropdown:true,dropdownContrasts,floatingActions:true,inlineWarningContrast,
-    chip:true,chipContrasts:chipContrasts[0],table:true,tableLinkHoverContrast,stickyTable,characters,conversationComposer,conversationResponse,userMessage,chat,chatSidebar}));
+    chip:true,chipContrasts:chipContrasts[0],table:true,tableLinkHoverContrast,stickyTable,characters,conversationComposer,conversationResponse,userMessage,chat,chatSidebar,chatRailItem}));
 } finally {
   await browser?.close();
   server.close();

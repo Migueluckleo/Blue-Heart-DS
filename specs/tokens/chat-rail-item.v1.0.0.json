@@ -1,0 +1,479 @@
+{
+  "schema_version": 1,
+  "kind": "DELEGATED_TOKEN_DATA",
+  "contract": "CHAT-RAIL-ITEM-001",
+  "version": "1.0.0",
+  "collections": [
+    {
+      "name": "component",
+      "modes": [
+        {
+          "name": "Contable",
+          "modeId": "Contable"
+        },
+        {
+          "name": "Administrativo",
+          "modeId": "Administrativo"
+        },
+        {
+          "name": "Servicios",
+          "modeId": "Servicios"
+        },
+        {
+          "name": "Personas",
+          "modeId": "Personas"
+        }
+      ],
+      "variables": [
+        {
+          "id": "chat-rail-item:component:color-icon-default",
+          "name": "chat-rail-item/color/icon/default",
+          "description": "Chat Rail Item · Icono en las vistas disponibles sin selección.",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-color-icon-default)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:color-icon-selected",
+          "name": "chat-rail-item/color/icon/selected",
+          "description": "Chat Rail Item · Icono sobre la superficie seleccionada.",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-color-icon-selected)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:color-icon-disabled",
+          "name": "chat-rail-item/color/icon/disabled",
+          "description": "Chat Rail Item · Icono cuando la vista está deshabilitada.",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-color-icon-disabled)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:170"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:color-bg-hover",
+          "name": "chat-rail-item/color/bg/hover",
+          "description": "Chat Rail Item · Superficie al pasar el puntero sobre una vista sin selección.",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-color-bg-hover)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:color-bg-selected",
+          "name": "chat-rail-item/color/bg/selected",
+          "description": "Chat Rail Item · Superficie de la vista activa. Conserva #0F172A en los cuatro temas.",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-color-bg-selected)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:color-bg-selected-hover",
+          "name": "chat-rail-item/color/bg/selected-hover",
+          "description": "Chat Rail Item · Superficie al pasar el puntero sobre la vista activa.",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-color-bg-selected-hover)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:173"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:173"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:173"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:173"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:color-bg-selected-disabled",
+          "name": "chat-rail-item/color/bg/selected-disabled",
+          "description": "Chat Rail Item · Superficie de una vista que sigue activa y está deshabilitada.",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-color-bg-selected-disabled)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:color-stroke-focus",
+          "name": "chat-rail-item/color/stroke/focus",
+          "description": "Chat Rail Item · Contorno de foco de teclado. Consume brand-strong, el mismo rol de foco que Icon Button.",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-color-stroke-focus)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:size-control",
+          "name": "chat-rail-item/size/control",
+          "description": "Chat Rail Item · Lado del área de interacción de 48 px.",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-size-control)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:233"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:233"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:233"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:233"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:size-icon",
+          "name": "chat-rail-item/size/icon",
+          "description": "Chat Rail Item · Lado del icono Phosphor de 24 px.",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-size-icon)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:238"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:size-focus",
+          "name": "chat-rail-item/size/focus",
+          "description": "Chat Rail Item · Lado exterior de 56 px del marco de foco.",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-size-focus)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:192"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:192"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:192"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:192"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:radius-control",
+          "name": "chat-rail-item/radius/control",
+          "description": "Chat Rail Item · Radio de 8 px de la superficie.",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-radius-control)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:245"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:radius-focus",
+          "name": "chat-rail-item/radius/focus",
+          "description": "Chat Rail Item · Radio de 12 px del marco de foco.",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-radius-focus)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:246"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:246"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:246"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:246"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:spacing-none",
+          "name": "chat-rail-item/spacing/none",
+          "description": "Chat Rail Item · Espaciado cero de la estructura del control.",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-spacing-none)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:spacing-notification-inset",
+          "name": "chat-rail-item/spacing/notification-inset",
+          "description": "Chat Rail Item · Inset superior y derecho de 4 px del indicador.",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-spacing-notification-inset)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            }
+          }
+        },
+        {
+          "id": "chat-rail-item:component:stroke-focus",
+          "name": "chat-rail-item/stroke/focus",
+          "description": "Chat Rail Item · Grosor de 2 px del marco de foco.",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--chat-rail-item-stroke-focus)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:226"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:226"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:226"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:226"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

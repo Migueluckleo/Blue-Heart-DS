@@ -103,3 +103,7 @@ La corrección `specs/components/inline-notification.layout-isotipo.amendment.v1
 ## Body disabled · corte vigente
 
 Lee `specs/foundations/body.disabled.amendment.v1.0.0.md` y `specs/tokens/body.disabled.v1.0.0.json` junto con los datos iniciales, colores semánticos, Caution y la policy del mismo corte. Body suma 61 tokens. Consume `--body-color-text-disabled`, `--body-color-bg-disabled`, `--body-color-stroke-disabled` y `--body-color-shape-disabled` según su propiedad para contenido de producto no disponible; configura la interacción y semántica disabled en el anfitrión. No sustituye los tokens de los componentes oficiales. Mantén la cadena de aliases y los scopes específicos en el handoff.
+
+## Tabs y Chips por intención
+
+Para secciones/pestañas del mismo contexto resuelve TABS-001 + TAB-001 y lee sus guías contextuales v1.0.0 y specs/patterns/tabs.local-navigation.amendment.v1.0.0.md. Tabs abre un panel por sección; Chip selecciona o filtra dentro de la vista actual. Pill/Segmented siguen siendo Tabs. Dos paneles pueden reutilizar una tabla: decide por intención y alcance, no por forma, Label o contador. Registra contexto, familia y por qué, ID/Label/panel, tipo y selección antes de construir. No sustituir Tabs por Chip por facilidad de receta; resolver export/instancia real. Flechas mueven Focus sin activar; Enter/Espacio abre el panel. Conservar límites de URL, overflow, captura y contraste.

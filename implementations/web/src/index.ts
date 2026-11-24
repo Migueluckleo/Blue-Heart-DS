@@ -97,3 +97,5 @@ export type { ChatProps } from './components/chat';
 
 export { ChatSidebar, ChatToolItem, ChatHistoryItem, ChatSidebarSection, ChatPlanUsage } from './components/chat-sidebar';
 export type { ChatSidebarProps, ChatToolItemProps, ChatHistoryItemProps, ChatSidebarSectionProps, ChatPlanUsageProps } from './components/chat-sidebar';
+export { ChatRailItem } from './components/chat-rail-item';
+export type { ChatRailItemProps } from './components/chat-rail-item';

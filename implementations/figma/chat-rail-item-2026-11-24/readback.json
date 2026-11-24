@@ -1,0 +1,2436 @@
+{
+  "status": "PASS",
+  "file_key": "yZsIpXywybsPDytjolwcP4",
+  "page": {
+    "id": "662:18",
+    "at": 12,
+    "neighbors": [
+      [
+        "257:624",
+        "Chat Plan Usage"
+      ],
+      [
+        "662:18",
+        "Chat Rail Item"
+      ],
+      [
+        "258:3325",
+        "Chat Sidebar"
+      ]
+    ],
+    "previousVerified": true
+  },
+  "master": {
+    "id": "662:19",
+    "key": "710bb7bea62b699e4757bed7cb1b3b327faf000f",
+    "properties": {
+      "Icon#662:0": {
+        "type": "INSTANCE_SWAP",
+        "defaultValue": "246:2409",
+        "preferredValues": []
+      },
+      "Show notification#662:9": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+      },
+      "State": {
+        "type": "VARIANT",
+        "defaultValue": "Default",
+        "variantOptions": [
+          "Default",
+          "Hover",
+          "Focus",
+          "Disabled"
+        ]
+      },
+      "Selected": {
+        "type": "VARIANT",
+        "defaultValue": "false",
+        "variantOptions": [
+          "false",
+          "true"
+        ]
+      }
+    },
+    "variants": [
+      {
+        "state": "Default",
+        "selected": false,
+        "id": "662:20",
+        "key": "87575632cf023c4b890a80587d2e7b14d724cf7e",
+        "wh": [
+          48,
+          48
+        ]
+      },
+      {
+        "state": "Hover",
+        "selected": false,
+        "id": "662:25",
+        "key": "925e3d4ae654d0515301a0f0d9f7d3e0829a75b8",
+        "wh": [
+          48,
+          48
+        ]
+      },
+      {
+        "state": "Focus",
+        "selected": false,
+        "id": "662:30",
+        "key": "dee1605869100436dbbeb25fb4122d501e7e2aec",
+        "wh": [
+          48,
+          48
+        ]
+      },
+      {
+        "state": "Disabled",
+        "selected": false,
+        "id": "662:36",
+        "key": "7c72bae4192ece894e6e70288ce8ce4578a4d552",
+        "wh": [
+          48,
+          48
+        ]
+      },
+      {
+        "state": "Default",
+        "selected": true,
+        "id": "662:41",
+        "key": "bf5e63ce5b4067e463e56f84e592d63fa6100429",
+        "wh": [
+          48,
+          48
+        ]
+      },
+      {
+        "state": "Hover",
+        "selected": true,
+        "id": "662:46",
+        "key": "cf59513b82c076cea5c7d607b16b5148e5908b00",
+        "wh": [
+          48,
+          48
+        ]
+      },
+      {
+        "state": "Focus",
+        "selected": true,
+        "id": "662:51",
+        "key": "f9c190e01d4505434f67866552f1d239768df4d4",
+        "wh": [
+          48,
+          48
+        ]
+      },
+      {
+        "state": "Disabled",
+        "selected": true,
+        "id": "662:57",
+        "key": "95e3cd49e4a25aa056a6f1de7250b6dd740faa3a",
+        "wh": [
+          48,
+          48
+        ]
+      }
+    ]
+  },
+  "tokens": [
+    {
+      "id": "VariableID:662:2",
+      "name": "chat-rail-item/color/icon/default",
+      "scopes": [],
+      "description": "Chat Rail Item · Icono en las vistas disponibles sin selección.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:200"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:200"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:200"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:200"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-color-icon-default)"
+      },
+      "local": true,
+      "key": "02a609293611f0983721dc75878e6f544ff75a7c",
+      "logicalId": "chat-rail-item:component:color-icon-default",
+      "semanticId": "VariableID:8:200",
+      "semanticName": "neutral-maximum"
+    },
+    {
+      "id": "VariableID:662:3",
+      "name": "chat-rail-item/color/icon/selected",
+      "scopes": [],
+      "description": "Chat Rail Item · Icono sobre la superficie seleccionada.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:192"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:192"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:192"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:192"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-color-icon-selected)"
+      },
+      "local": true,
+      "key": "68c5e0858cb8908cd1f9593ba497815ae62e4871",
+      "logicalId": "chat-rail-item:component:color-icon-selected",
+      "semanticId": "VariableID:8:192",
+      "semanticName": "neutral-base"
+    },
+    {
+      "id": "VariableID:662:4",
+      "name": "chat-rail-item/color/icon/disabled",
+      "scopes": [],
+      "description": "Chat Rail Item · Icono cuando la vista está deshabilitada.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:196"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:196"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:196"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:196"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-color-icon-disabled)"
+      },
+      "local": true,
+      "key": "60c1126cd4361ad6c72ebb18f5f141cd3430b0e2",
+      "logicalId": "chat-rail-item:component:color-icon-disabled",
+      "semanticId": "VariableID:8:196",
+      "semanticName": "neutral-medium"
+    },
+    {
+      "id": "VariableID:662:5",
+      "name": "chat-rail-item/color/bg/hover",
+      "scopes": [],
+      "description": "Chat Rail Item · Superficie al pasar el puntero sobre una vista sin selección.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:193"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:193"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:193"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:193"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-color-bg-hover)"
+      },
+      "local": true,
+      "key": "68960c592fca6f44437ed74ad4a4d0de0c240694",
+      "logicalId": "chat-rail-item:component:color-bg-hover",
+      "semanticId": "VariableID:8:193",
+      "semanticName": "neutral-subtle"
+    },
+    {
+      "id": "VariableID:662:6",
+      "name": "chat-rail-item/color/bg/selected",
+      "scopes": [],
+      "description": "Chat Rail Item · Superficie de la vista activa. Conserva #0F172A en los cuatro temas.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:200"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:200"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:200"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:200"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-color-bg-selected)"
+      },
+      "local": true,
+      "key": "982812cb5242b13af82c3db539d6e0b77c798076",
+      "logicalId": "chat-rail-item:component:color-bg-selected",
+      "semanticId": "VariableID:8:200",
+      "semanticName": "neutral-maximum"
+    },
+    {
+      "id": "VariableID:662:7",
+      "name": "chat-rail-item/color/bg/selected-hover",
+      "scopes": [],
+      "description": "Chat Rail Item · Superficie al pasar el puntero sobre la vista activa.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:199"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:199"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:199"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:199"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-color-bg-selected-hover)"
+      },
+      "local": true,
+      "key": "2c84d88d4a4f3630c24847455f6998c05ebc27e9",
+      "logicalId": "chat-rail-item:component:color-bg-selected-hover",
+      "semanticId": "VariableID:8:199",
+      "semanticName": "neutral-deep"
+    },
+    {
+      "id": "VariableID:662:8",
+      "name": "chat-rail-item/color/bg/selected-disabled",
+      "scopes": [],
+      "description": "Chat Rail Item · Superficie de una vista que sigue activa y está deshabilitada.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:194"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:194"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:194"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:194"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-color-bg-selected-disabled)"
+      },
+      "local": true,
+      "key": "6935049ed384093c0be03d62e9c9b5007a812ef5",
+      "logicalId": "chat-rail-item:component:color-bg-selected-disabled",
+      "semanticId": "VariableID:8:194",
+      "semanticName": "neutral-muted"
+    },
+    {
+      "id": "VariableID:662:9",
+      "name": "chat-rail-item/color/stroke/focus",
+      "scopes": [],
+      "description": "Chat Rail Item · Contorno de foco de teclado. Consume brand-strong, el mismo rol de foco que Icon Button.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:181"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:181"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:181"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:181"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-color-stroke-focus)"
+      },
+      "local": true,
+      "key": "b7061b5ea15bc48502a22e3fea11c36886f13c43",
+      "logicalId": "chat-rail-item:component:color-stroke-focus",
+      "semanticId": "VariableID:8:181",
+      "semanticName": "brand-strong"
+    },
+    {
+      "id": "VariableID:662:10",
+      "name": "chat-rail-item/size/control",
+      "scopes": [],
+      "description": "Chat Rail Item · Lado del área de interacción de 48 px.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:259"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:259"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:259"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:259"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-size-control)"
+      },
+      "local": true,
+      "key": "7a67397f960218251c7722d1d237b9c7a4f58b71",
+      "logicalId": "chat-rail-item:component:size-control",
+      "semanticId": "VariableID:8:259",
+      "semanticName": "spacing-4xl"
+    },
+    {
+      "id": "VariableID:662:11",
+      "name": "chat-rail-item/size/icon",
+      "scopes": [],
+      "description": "Chat Rail Item · Lado del icono Phosphor de 24 px.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:264"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:264"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:264"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:264"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-size-icon)"
+      },
+      "local": true,
+      "key": "c417f39efc2a7fe7b26d550f6d160bc6e1ef3c42",
+      "logicalId": "chat-rail-item:component:size-icon",
+      "semanticId": "VariableID:8:264",
+      "semanticName": "size-2xl"
+    },
+    {
+      "id": "VariableID:662:12",
+      "name": "chat-rail-item/size/focus",
+      "scopes": [],
+      "description": "Chat Rail Item · Lado exterior de 56 px del marco de foco.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:218"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:218"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:218"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:218"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-size-focus)"
+      },
+      "local": true,
+      "key": "bd47e0cb7d3bfeef190407e9b807ad6fc15911d3",
+      "logicalId": "chat-rail-item:component:size-focus",
+      "semanticId": "VariableID:8:218",
+      "semanticName": "spacing-5xl"
+    },
+    {
+      "id": "VariableID:662:13",
+      "name": "chat-rail-item/radius/control",
+      "scopes": [],
+      "description": "Chat Rail Item · Radio de 8 px de la superficie.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:271"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:271"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:271"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:271"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-radius-control)"
+      },
+      "local": true,
+      "key": "b8588c09ecd2c1641359be672792b1f8ca5dac6c",
+      "logicalId": "chat-rail-item:component:radius-control",
+      "semanticId": "VariableID:8:271",
+      "semanticName": "radius-md"
+    },
+    {
+      "id": "VariableID:662:14",
+      "name": "chat-rail-item/radius/focus",
+      "scopes": [],
+      "description": "Chat Rail Item · Radio de 12 px del marco de foco.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:272"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:272"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:272"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:272"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-radius-focus)"
+      },
+      "local": true,
+      "key": "a523318bf2d9bf355442f48d29004f35398ba7bc",
+      "logicalId": "chat-rail-item:component:radius-focus",
+      "semanticId": "VariableID:8:272",
+      "semanticName": "radius-lg"
+    },
+    {
+      "id": "VariableID:662:15",
+      "name": "chat-rail-item/spacing/none",
+      "scopes": [],
+      "description": "Chat Rail Item · Espaciado cero de la estructura del control.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:217"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:217"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:217"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:217"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-spacing-none)"
+      },
+      "local": true,
+      "key": "286eb3c42b0c637b73d363443fbc04fffd23040e",
+      "logicalId": "chat-rail-item:component:spacing-none",
+      "semanticId": "VariableID:8:217",
+      "semanticName": "spacing-none"
+    },
+    {
+      "id": "VariableID:662:16",
+      "name": "chat-rail-item/spacing/notification-inset",
+      "scopes": [],
+      "description": "Chat Rail Item · Inset superior y derecho de 4 px del indicador.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:253"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:253"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:253"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:253"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-spacing-notification-inset)"
+      },
+      "local": true,
+      "key": "63e1cde5f735e052d52a8a4a6db4c1b711c84c38",
+      "logicalId": "chat-rail-item:component:spacing-notification-inset",
+      "semanticId": "VariableID:8:253",
+      "semanticName": "spacing-xs"
+    },
+    {
+      "id": "VariableID:662:17",
+      "name": "chat-rail-item/stroke/focus",
+      "scopes": [],
+      "description": "Chat Rail Item · Grosor de 2 px del marco de foco.",
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:252"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:252"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:252"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:252"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--chat-rail-item-stroke-focus)"
+      },
+      "local": true,
+      "key": "e67fdbc1da5ae496400f3227787ae3c8c1b109c0",
+      "logicalId": "chat-rail-item:component:stroke-focus",
+      "semanticId": "VariableID:8:252",
+      "semanticName": "stroke-md"
+    }
+  ],
+  "tokenQA": {
+    "bindingCount": 510,
+    "overrideCount": 90,
+    "findings": [],
+    "bodyVisible": 61,
+    "visibleOther": [],
+    "total": 1554
+  },
+  "rail": [
+    {
+      "id": "258:2500",
+      "view": "none",
+      "active": [],
+      "children": 4,
+      "dimensions": [
+        79,
+        791
+      ]
+    },
+    {
+      "id": "283:8726",
+      "view": "Chats",
+      "active": [
+        "Chats"
+      ],
+      "children": 4,
+      "dimensions": [
+        79,
+        791
+      ]
+    },
+    {
+      "id": "258:2720",
+      "view": "Indicadores",
+      "active": [
+        "Indicadores"
+      ],
+      "children": 4,
+      "dimensions": [
+        79,
+        791
+      ]
+    },
+    {
+      "id": "258:2940",
+      "view": "Papeles de trabajo",
+      "active": [
+        "Papeles de trabajo"
+      ],
+      "children": 4,
+      "dimensions": [
+        79,
+        791
+      ]
+    },
+    {
+      "id": "258:3160",
+      "view": "Vinculaciones",
+      "active": [
+        "Vinculaciones"
+      ],
+      "children": 4,
+      "dimensions": [
+        79,
+        791
+      ]
+    }
+  ],
+  "migrated": [
+    {
+      "beforeId": "258:2637",
+      "id": "663:345",
+      "view": "Chats",
+      "rail": "258:2500",
+      "icon": "246:2409",
+      "state": "default",
+      "box": [
+        -0.5,
+        0,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        0
+      ]
+    },
+    {
+      "beforeId": "258:2644",
+      "id": "663:351",
+      "view": "Indicadores",
+      "rail": "258:2500",
+      "icon": "246:3861",
+      "state": "default",
+      "box": [
+        -0.5,
+        80,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        80
+      ]
+    },
+    {
+      "beforeId": "258:2651",
+      "id": "663:356",
+      "view": "Papeles de trabajo",
+      "rail": "258:2500",
+      "icon": "218:1205",
+      "state": "default",
+      "box": [
+        -0.5,
+        160,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        160
+      ]
+    },
+    {
+      "beforeId": "258:2658",
+      "id": "663:361",
+      "view": "Vinculaciones",
+      "rail": "258:2500",
+      "icon": "251:4774",
+      "state": "default",
+      "box": [
+        -0.5,
+        240,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        240
+      ]
+    },
+    {
+      "beforeId": "283:8728",
+      "id": "663:366",
+      "view": "Chats",
+      "rail": "283:8726",
+      "icon": "246:2409",
+      "state": "selected",
+      "box": [
+        -0.5,
+        0,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        0
+      ]
+    },
+    {
+      "beforeId": "283:8729",
+      "id": "663:372",
+      "view": "Indicadores",
+      "rail": "283:8726",
+      "icon": "246:3861",
+      "state": "default",
+      "box": [
+        -0.5,
+        80,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        80
+      ]
+    },
+    {
+      "beforeId": "283:8730",
+      "id": "663:377",
+      "view": "Papeles de trabajo",
+      "rail": "283:8726",
+      "icon": "218:1205",
+      "state": "default",
+      "box": [
+        -0.5,
+        160,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        160
+      ]
+    },
+    {
+      "beforeId": "283:8731",
+      "id": "663:382",
+      "view": "Vinculaciones",
+      "rail": "283:8726",
+      "icon": "251:4774",
+      "state": "default",
+      "box": [
+        -0.5,
+        240,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        240
+      ]
+    },
+    {
+      "beforeId": "258:2857",
+      "id": "663:387",
+      "view": "Chats",
+      "rail": "258:2720",
+      "icon": "246:2409",
+      "state": "default",
+      "box": [
+        -0.5,
+        0,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        0
+      ]
+    },
+    {
+      "beforeId": "258:2864",
+      "id": "663:392",
+      "view": "Indicadores",
+      "rail": "258:2720",
+      "icon": "246:3861",
+      "state": "selected",
+      "box": [
+        -0.5,
+        80,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        80
+      ]
+    },
+    {
+      "beforeId": "258:2871",
+      "id": "663:397",
+      "view": "Papeles de trabajo",
+      "rail": "258:2720",
+      "icon": "218:1205",
+      "state": "default",
+      "box": [
+        -0.5,
+        160,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        160
+      ]
+    },
+    {
+      "beforeId": "258:2878",
+      "id": "663:402",
+      "view": "Vinculaciones",
+      "rail": "258:2720",
+      "icon": "251:4774",
+      "state": "default",
+      "box": [
+        -0.5,
+        240,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        240
+      ]
+    },
+    {
+      "beforeId": "258:3077",
+      "id": "663:407",
+      "view": "Chats",
+      "rail": "258:2940",
+      "icon": "246:2409",
+      "state": "default",
+      "box": [
+        -0.5,
+        0,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        0
+      ]
+    },
+    {
+      "beforeId": "258:3084",
+      "id": "663:412",
+      "view": "Indicadores",
+      "rail": "258:2940",
+      "icon": "246:3861",
+      "state": "default",
+      "box": [
+        -0.5,
+        80,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        80
+      ]
+    },
+    {
+      "beforeId": "258:3091",
+      "id": "663:417",
+      "view": "Papeles de trabajo",
+      "rail": "258:2940",
+      "icon": "218:1205",
+      "state": "selected",
+      "box": [
+        -0.5,
+        160,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        160
+      ]
+    },
+    {
+      "beforeId": "258:3098",
+      "id": "663:422",
+      "view": "Vinculaciones",
+      "rail": "258:2940",
+      "icon": "251:4774",
+      "state": "default",
+      "box": [
+        -0.5,
+        240,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        240
+      ]
+    },
+    {
+      "beforeId": "258:3297",
+      "id": "663:427",
+      "view": "Chats",
+      "rail": "258:3160",
+      "icon": "246:2409",
+      "state": "default",
+      "box": [
+        -0.5,
+        0,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        0
+      ]
+    },
+    {
+      "beforeId": "258:3304",
+      "id": "663:432",
+      "view": "Indicadores",
+      "rail": "258:3160",
+      "icon": "246:3861",
+      "state": "default",
+      "box": [
+        -0.5,
+        80,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        80
+      ]
+    },
+    {
+      "beforeId": "258:3311",
+      "id": "663:437",
+      "view": "Papeles de trabajo",
+      "rail": "258:3160",
+      "icon": "218:1205",
+      "state": "default",
+      "box": [
+        -0.5,
+        160,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        160
+      ]
+    },
+    {
+      "beforeId": "258:3318",
+      "id": "663:442",
+      "view": "Vinculaciones",
+      "rail": "258:3160",
+      "icon": "251:4774",
+      "state": "selected",
+      "box": [
+        -0.5,
+        240,
+        48,
+        48
+      ],
+      "oldXY": [
+        -0.5,
+        240
+      ]
+    }
+  ],
+  "consumers": [
+    {
+      "id": "299:1331",
+      "rails": [
+        {
+          "id": "299:1331",
+          "main": "258:2500",
+          "view": "none",
+          "count": 4,
+          "w": 79,
+          "h": 741
+        }
+      ]
+    },
+    {
+      "id": "299:2119",
+      "rails": [
+        {
+          "id": "299:2119",
+          "main": "258:2500",
+          "view": "none",
+          "count": 4,
+          "w": 79,
+          "h": 741
+        }
+      ]
+    },
+    {
+      "id": "453:5316",
+      "rails": [
+        {
+          "id": "453:5316",
+          "main": "258:2500",
+          "view": "none",
+          "count": 4,
+          "w": 79,
+          "h": 741
+        }
+      ]
+    },
+    {
+      "id": "453:5440",
+      "rails": [
+        {
+          "id": "453:5440",
+          "main": "258:2500",
+          "view": "none",
+          "count": 4,
+          "w": 79,
+          "h": 741
+        }
+      ]
+    },
+    {
+      "id": "283:9471",
+      "rails": [
+        {
+          "id": "283:9479",
+          "main": "258:2500",
+          "view": "none",
+          "count": 4,
+          "w": 79,
+          "h": 749
+        }
+      ]
+    },
+    {
+      "id": "283:9809",
+      "rails": [
+        {
+          "id": "283:9817",
+          "main": "283:8726",
+          "view": "Chats",
+          "count": 4,
+          "w": 79,
+          "h": 749
+        }
+      ]
+    },
+    {
+      "id": "290:11665",
+      "rails": [
+        {
+          "id": "290:11673",
+          "main": "283:8726",
+          "view": "Chats",
+          "count": 4,
+          "w": 79,
+          "h": 749
+        }
+      ]
+    },
+    {
+      "id": "283:10148",
+      "rails": [
+        {
+          "id": "283:10156",
+          "main": "258:2720",
+          "view": "Indicadores",
+          "count": 4,
+          "w": 79,
+          "h": 749
+        }
+      ]
+    },
+    {
+      "id": "290:10546",
+      "rails": [
+        {
+          "id": "290:10554",
+          "main": "258:2940",
+          "view": "Papeles de trabajo",
+          "count": 4,
+          "w": 79,
+          "h": 749
+        }
+      ]
+    },
+    {
+      "id": "290:11110",
+      "rails": [
+        {
+          "id": "290:11118",
+          "main": "258:3160",
+          "view": "Vinculaciones",
+          "count": 4,
+          "w": 79,
+          "h": 749
+        }
+      ]
+    }
+  ],
+  "brandFocus": {
+    "id": "VariableID:662:9",
+    "key": "b7061b5ea15bc48502a22e3fea11c36886f13c43",
+    "name": "chat-rail-item/color/stroke/focus",
+    "description": "Chat Rail Item · Contorno de foco de teclado. Consume brand-strong, el mismo rol de foco que Icon Button.",
+    "codeSyntax": {
+      "WEB": "var(--chat-rail-item-color-stroke-focus)"
+    },
+    "scopes": [],
+    "valuesByMode": {
+      "6:20": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:181"
+      },
+      "6:21": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:181"
+      },
+      "6:22": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:181"
+      },
+      "6:23": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:181"
+      }
+    },
+    "semantic": {
+      "id": "VariableID:8:181",
+      "name": "brand-strong"
+    },
+    "primitive": {
+      "id": "VariableID:11:11",
+      "name": "blue/500",
+      "value": {
+        "10:0": {
+          "r": 0.15294118225574493,
+          "g": 0.18431372940540314,
+          "b": 0.8352941274642944,
+          "a": 1
+        }
+      }
+    },
+    "rings": [
+      {
+        "id": "662:35",
+        "stroke": {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.15294118225574493,
+            "g": 0.18431372940540314,
+            "b": 0.8352941274642944
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:662:9"
+            }
+          }
+        },
+        "strokeWeight": 2,
+        "align": "INSIDE",
+        "dimensions": [
+          56,
+          56
+        ]
+      },
+      {
+        "id": "662:56",
+        "stroke": {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.15294118225574493,
+            "g": 0.18431372940540314,
+            "b": 0.8352941274642944
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:662:9"
+            }
+          }
+        },
+        "strokeWeight": 2,
+        "align": "INSIDE",
+        "dimensions": [
+          56,
+          56
+        ]
+      }
+    ]
+  },
+  "height": {
+    "before": {
+      "list": [
+        {
+          "id": "258:1820",
+          "name": "View=Chats, Mode=Panel",
+          "wh": [
+            264,
+            791
+          ],
+          "minHeight": 791,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": null
+        },
+        {
+          "id": "258:2011",
+          "name": "View=Indicadores, Mode=Panel",
+          "wh": [
+            264,
+            791
+          ],
+          "minHeight": 791,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": null
+        },
+        {
+          "id": "258:2183",
+          "name": "View=Papeles de trabajo, Mode=Panel",
+          "wh": [
+            264,
+            791
+          ],
+          "minHeight": 791,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": null
+        },
+        {
+          "id": "258:2331",
+          "name": "View=Vinculaciones, Mode=Panel",
+          "wh": [
+            264,
+            791
+          ],
+          "minHeight": 791,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": null
+        },
+        {
+          "id": "258:2500",
+          "name": "View=none, Mode=Rail",
+          "wh": [
+            79,
+            791
+          ],
+          "minHeight": 791,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": null
+        },
+        {
+          "id": "283:8726",
+          "name": "View=Chats, Mode=Rail",
+          "wh": [
+            79,
+            791
+          ],
+          "minHeight": 791,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": null
+        },
+        {
+          "id": "258:2720",
+          "name": "View=Indicadores, Mode=Rail",
+          "wh": [
+            79,
+            791
+          ],
+          "minHeight": 791,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": null
+        },
+        {
+          "id": "258:2940",
+          "name": "View=Papeles de trabajo, Mode=Rail",
+          "wh": [
+            79,
+            791
+          ],
+          "minHeight": 791,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": null
+        },
+        {
+          "id": "258:3160",
+          "name": "View=Vinculaciones, Mode=Rail",
+          "wh": [
+            79,
+            791
+          ],
+          "minHeight": 791,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": null
+        }
+      ],
+      "refs": [
+        {
+          "id": "299:1331",
+          "name": "Chat Sidebar",
+          "wh": [
+            79,
+            741
+          ],
+          "minHeight": null,
+          "maxHeight": null,
+          "sizing": "FILL",
+          "binding": null,
+          "override": [
+            "fills",
+            "height",
+            "layoutPositioning",
+            "minHeight",
+            "minWidth",
+            "width"
+          ],
+          "parent": "299:2110"
+        },
+        {
+          "id": "299:2119",
+          "name": "Chat Sidebar",
+          "wh": [
+            79,
+            741
+          ],
+          "minHeight": null,
+          "maxHeight": null,
+          "sizing": "FILL",
+          "binding": null,
+          "override": [
+            "fills",
+            "height",
+            "layoutPositioning",
+            "minHeight",
+            "minWidth",
+            "width"
+          ],
+          "parent": "299:2661"
+        },
+        {
+          "id": "453:5316",
+          "name": "Chat Sidebar",
+          "wh": [
+            79,
+            741
+          ],
+          "minHeight": null,
+          "maxHeight": null,
+          "sizing": "FILL",
+          "binding": null,
+          "override": [
+            "fills",
+            "height",
+            "layoutPositioning",
+            "minHeight",
+            "minWidth",
+            "width"
+          ],
+          "parent": "455:5809"
+        },
+        {
+          "id": "453:5440",
+          "name": "Chat Sidebar",
+          "wh": [
+            79,
+            741
+          ],
+          "minHeight": null,
+          "maxHeight": null,
+          "sizing": "FILL",
+          "binding": null,
+          "override": [
+            "fills",
+            "height",
+            "layoutPositioning",
+            "minHeight",
+            "minWidth",
+            "width"
+          ],
+          "parent": "455:6682"
+        },
+        {
+          "id": "283:9479",
+          "name": "Chat Sidebar",
+          "wh": [
+            79,
+            749
+          ],
+          "minHeight": null,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": [
+            "fills",
+            "height",
+            "layoutPositioning",
+            "minHeight",
+            "minWidth",
+            "width"
+          ],
+          "parent": "283:9473"
+        },
+        {
+          "id": "283:9817",
+          "name": "Chat Sidebar",
+          "wh": [
+            79,
+            749
+          ],
+          "minHeight": null,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": [
+            "fills",
+            "height",
+            "layoutPositioning",
+            "minHeight",
+            "minWidth",
+            "width"
+          ],
+          "parent": "283:9811"
+        },
+        {
+          "id": "290:11673",
+          "name": "Chat Sidebar",
+          "wh": [
+            79,
+            749
+          ],
+          "minHeight": null,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": [
+            "fills",
+            "height",
+            "layoutPositioning",
+            "minHeight",
+            "minWidth",
+            "width"
+          ],
+          "parent": "290:11667"
+        },
+        {
+          "id": "283:10156",
+          "name": "Chat Sidebar",
+          "wh": [
+            79,
+            749
+          ],
+          "minHeight": null,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": [
+            "boundVariables",
+            "fills",
+            "height",
+            "itemSpacing",
+            "layoutPositioning",
+            "minHeight",
+            "minWidth",
+            "primaryAxisAlignItems",
+            "width"
+          ],
+          "parent": "283:10150"
+        },
+        {
+          "id": "290:10554",
+          "name": "Chat Sidebar",
+          "wh": [
+            79,
+            749
+          ],
+          "minHeight": null,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": [
+            "boundVariables",
+            "fills",
+            "height",
+            "itemSpacing",
+            "layoutPositioning",
+            "minHeight",
+            "minWidth",
+            "primaryAxisAlignItems",
+            "width"
+          ],
+          "parent": "290:10548"
+        },
+        {
+          "id": "290:11118",
+          "name": "Chat Sidebar",
+          "wh": [
+            79,
+            749
+          ],
+          "minHeight": null,
+          "maxHeight": null,
+          "sizing": "FIXED",
+          "binding": null,
+          "override": [
+            "boundVariables",
+            "fills",
+            "height",
+            "itemSpacing",
+            "layoutPositioning",
+            "minHeight",
+            "minWidth",
+            "primaryAxisAlignItems",
+            "width"
+          ],
+          "parent": "290:11112"
+        }
+      ]
+    },
+    "after": [
+      {
+        "id": "258:1820",
+        "name": "View=Chats, Mode=Panel",
+        "minHeight": null,
+        "wh": [
+          264,
+          791
+        ],
+        "sizing": "FIXED"
+      },
+      {
+        "id": "258:2011",
+        "name": "View=Indicadores, Mode=Panel",
+        "minHeight": null,
+        "wh": [
+          264,
+          791
+        ],
+        "sizing": "FIXED"
+      },
+      {
+        "id": "258:2183",
+        "name": "View=Papeles de trabajo, Mode=Panel",
+        "minHeight": null,
+        "wh": [
+          264,
+          791
+        ],
+        "sizing": "FIXED"
+      },
+      {
+        "id": "258:2331",
+        "name": "View=Vinculaciones, Mode=Panel",
+        "minHeight": null,
+        "wh": [
+          264,
+          791
+        ],
+        "sizing": "FIXED"
+      },
+      {
+        "id": "258:2500",
+        "name": "View=none, Mode=Rail",
+        "minHeight": null,
+        "wh": [
+          79,
+          791
+        ],
+        "sizing": "FIXED"
+      },
+      {
+        "id": "283:8726",
+        "name": "View=Chats, Mode=Rail",
+        "minHeight": null,
+        "wh": [
+          79,
+          791
+        ],
+        "sizing": "FIXED"
+      },
+      {
+        "id": "258:2720",
+        "name": "View=Indicadores, Mode=Rail",
+        "minHeight": null,
+        "wh": [
+          79,
+          791
+        ],
+        "sizing": "FIXED"
+      },
+      {
+        "id": "258:2940",
+        "name": "View=Papeles de trabajo, Mode=Rail",
+        "minHeight": null,
+        "wh": [
+          79,
+          791
+        ],
+        "sizing": "FIXED"
+      },
+      {
+        "id": "258:3160",
+        "name": "View=Vinculaciones, Mode=Rail",
+        "minHeight": null,
+        "wh": [
+          79,
+          791
+        ],
+        "sizing": "FIXED"
+      }
+    ],
+    "probe": {
+      "resize": [
+        {
+          "probe": "666:8186",
+          "main": "258:1820",
+          "wh": [
+            264,
+            440
+          ],
+          "minHeight": null,
+          "content": {
+            "height": 287,
+            "clips": true
+          }
+        },
+        {
+          "probe": "666:8405",
+          "main": "258:2011",
+          "wh": [
+            264,
+            440
+          ],
+          "minHeight": null,
+          "content": {
+            "height": 287,
+            "clips": true
+          }
+        },
+        {
+          "probe": "666:8575",
+          "main": "258:2183",
+          "wh": [
+            264,
+            440
+          ],
+          "minHeight": null,
+          "content": {
+            "height": 287,
+            "clips": true
+          }
+        },
+        {
+          "probe": "666:8745",
+          "main": "258:2331",
+          "wh": [
+            264,
+            440
+          ],
+          "minHeight": null,
+          "content": {
+            "height": 60.07997512817383,
+            "clips": true
+          }
+        },
+        {
+          "probe": "666:8832",
+          "main": "258:2500",
+          "wh": [
+            79,
+            440
+          ],
+          "minHeight": null,
+          "content": null
+        },
+        {
+          "probe": "666:8859",
+          "main": "283:8726",
+          "wh": [
+            79,
+            440
+          ],
+          "minHeight": null,
+          "content": null
+        },
+        {
+          "probe": "666:8886",
+          "main": "258:2720",
+          "wh": [
+            79,
+            440
+          ],
+          "minHeight": null,
+          "content": null
+        },
+        {
+          "probe": "666:8913",
+          "main": "258:2940",
+          "wh": [
+            79,
+            440
+          ],
+          "minHeight": null,
+          "content": null
+        },
+        {
+          "probe": "666:8940",
+          "main": "258:3160",
+          "wh": [
+            79,
+            440
+          ],
+          "minHeight": null,
+          "content": null
+        }
+      ],
+      "sample": {
+        "id": "662:125",
+        "variant": {
+          "Show notification#662:9": {
+            "type": "BOOLEAN",
+            "value": true
+          },
+          "Icon#662:0": {
+            "type": "INSTANCE_SWAP",
+            "value": "246:3861",
+            "preferredValues": []
+          },
+          "State": {
+            "value": "Focus",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "Selected": {
+            "value": "true",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "icon": "246:3861",
+        "iconAlias": "VariableID:662:3",
+        "dotVisible": true,
+        "dotSize": [
+          12,
+          12
+        ],
+        "dotPosition": [
+          32,
+          4
+        ],
+        "ringAlias": "VariableID:662:9"
+      }
+    }
+  },
+  "slot": {
+    "property": {
+      "set": "258:3326",
+      "key": "Content#258:0",
+      "prior": {
+        "type": "SLOT",
+        "description": "Secciones del panel expandido.",
+        "slotSettings": {
+          "stretchChildOnInsert": true,
+          "displayEmptyByDefault": false,
+          "minChildren": null,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": false
+        },
+        "preferredValues": []
+      },
+      "updated": {
+        "type": "SLOT",
+        "description": "Navegación en Rail y secciones en Panel. El plan compacto queda fuera del Slot.",
+        "slotSettings": {
+          "stretchChildOnInsert": true,
+          "displayEmptyByDefault": false,
+          "minChildren": null,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": false
+        },
+        "preferredValues": []
+      },
+      "slots": [
+        {
+          "id": "258:3327",
+          "ref": "Content#258:0",
+          "variant": "258:1820",
+          "mode": "Panel",
+          "originCount": 3,
+          "minHeight": null
+        },
+        {
+          "id": "258:3366",
+          "ref": "Content#258:0",
+          "variant": "258:2011",
+          "mode": "Panel",
+          "originCount": 3,
+          "minHeight": null
+        },
+        {
+          "id": "258:3400",
+          "ref": "Content#258:0",
+          "variant": "258:2183",
+          "mode": "Panel",
+          "originCount": 3,
+          "minHeight": null
+        },
+        {
+          "id": "258:3434",
+          "ref": "Content#258:0",
+          "variant": "258:2331",
+          "mode": "Panel",
+          "originCount": 1,
+          "minHeight": null
+        },
+        {
+          "id": "258:2446",
+          "ref": "Content#258:0",
+          "variant": "258:2500",
+          "mode": "Rail",
+          "originCount": 4,
+          "minHeight": null
+        },
+        {
+          "id": "283:8727",
+          "ref": "Content#258:0",
+          "variant": "283:8726",
+          "mode": "Rail",
+          "originCount": 4,
+          "minHeight": null
+        },
+        {
+          "id": "258:2666",
+          "ref": "Content#258:0",
+          "variant": "258:2720",
+          "mode": "Rail",
+          "originCount": 4,
+          "minHeight": null
+        },
+        {
+          "id": "258:2886",
+          "ref": "Content#258:0",
+          "variant": "258:2940",
+          "mode": "Rail",
+          "originCount": 4,
+          "minHeight": null
+        },
+        {
+          "id": "258:3106",
+          "ref": "Content#258:0",
+          "variant": "258:3160",
+          "mode": "Rail",
+          "originCount": 4,
+          "minHeight": null
+        }
+      ]
+    },
+    "operations": {
+      "status": "PERFORMED",
+      "failure": null,
+      "def": {
+        "type": "SLOT",
+        "description": "Secciones del panel expandido.",
+        "slotSettings": {
+          "stretchChildOnInsert": true,
+          "displayEmptyByDefault": false,
+          "minChildren": null,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": false
+        },
+        "preferredValues": []
+      },
+      "masterSlots": [
+        {
+          "id": "258:2446",
+          "owner": "258:2500",
+          "spacing": 32,
+          "align": [
+            "MIN",
+            "CENTER"
+          ],
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "clips": false,
+          "overflow": "NONE",
+          "minHeight": 32,
+          "bindings": {}
+        },
+        {
+          "id": "283:8727",
+          "owner": "283:8726",
+          "spacing": 32,
+          "align": [
+            "MIN",
+            "CENTER"
+          ],
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "clips": false,
+          "overflow": "NONE",
+          "minHeight": 32,
+          "bindings": {}
+        },
+        {
+          "id": "258:2666",
+          "owner": "258:2720",
+          "spacing": 32,
+          "align": [
+            "MIN",
+            "CENTER"
+          ],
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "clips": false,
+          "overflow": "NONE",
+          "minHeight": 32,
+          "bindings": {}
+        },
+        {
+          "id": "258:2886",
+          "owner": "258:2940",
+          "spacing": 32,
+          "align": [
+            "MIN",
+            "CENTER"
+          ],
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "clips": false,
+          "overflow": "NONE",
+          "minHeight": 32,
+          "bindings": {}
+        },
+        {
+          "id": "258:3106",
+          "owner": "258:3160",
+          "spacing": 32,
+          "align": [
+            "MIN",
+            "CENTER"
+          ],
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "clips": false,
+          "overflow": "NONE",
+          "minHeight": 32,
+          "bindings": {}
+        }
+      ],
+      "cases": [
+        {
+          "label": "4 inherited",
+          "slot": "I668:31;258:2446",
+          "type": "SLOT",
+          "children": [
+            [
+              "I668:31;663:345",
+              "Chat Rail Item / Chats",
+              48,
+              48,
+              -0.5,
+              0
+            ],
+            [
+              "I668:31;663:351",
+              "Chat Rail Item / Indicadores",
+              48,
+              48,
+              -0.5,
+              80
+            ],
+            [
+              "I668:31;663:356",
+              "Chat Rail Item / Papeles de trabajo",
+              48,
+              48,
+              -0.5,
+              160
+            ],
+            [
+              "I668:31;663:361",
+              "Chat Rail Item / Vinculaciones",
+              48,
+              48,
+              -0.5,
+              240
+            ]
+          ],
+          "size": [
+            47,
+            712
+          ],
+          "violations": [],
+          "plan": "I668:31;258:2632"
+        },
+        {
+          "label": "0 after removal",
+          "slot": "I668:31;258:2446",
+          "type": "SLOT",
+          "children": [],
+          "size": [
+            47,
+            712
+          ],
+          "violations": [],
+          "plan": "I668:31;258:2632"
+        },
+        {
+          "label": "1 after insertion",
+          "slot": "I668:31;258:2446",
+          "type": "SLOT",
+          "children": [
+            [
+              "668:81",
+              "QA custom A",
+              47,
+              48,
+              0,
+              0
+            ]
+          ],
+          "size": [
+            47,
+            712
+          ],
+          "violations": [],
+          "plan": "I668:31;258:2632"
+        },
+        {
+          "label": "5 after insertion",
+          "slot": "I668:31;258:2446",
+          "type": "SLOT",
+          "children": [
+            [
+              "668:81",
+              "QA custom A",
+              47,
+              48,
+              0,
+              0
+            ],
+            [
+              "668:87",
+              "QA custom B",
+              47,
+              48,
+              0,
+              80
+            ],
+            [
+              "668:93",
+              "QA custom C",
+              47,
+              48,
+              0,
+              160
+            ],
+            [
+              "668:99",
+              "QA custom D",
+              47,
+              48,
+              0,
+              240
+            ],
+            [
+              "668:105",
+              "QA custom E",
+              47,
+              48,
+              0,
+              320
+            ]
+          ],
+          "size": [
+            47,
+            712
+          ],
+          "violations": [],
+          "plan": "I668:31;258:2632"
+        },
+        {
+          "label": "5 reordered",
+          "slot": "I668:31;258:2446",
+          "type": "SLOT",
+          "children": [
+            [
+              "668:105",
+              "QA custom E",
+              47,
+              48,
+              0,
+              0
+            ],
+            [
+              "668:81",
+              "QA custom A",
+              47,
+              48,
+              0,
+              80
+            ],
+            [
+              "668:87",
+              "QA custom B",
+              47,
+              48,
+              0,
+              160
+            ],
+            [
+              "668:93",
+              "QA custom C",
+              47,
+              48,
+              0,
+              240
+            ],
+            [
+              "668:99",
+              "QA custom D",
+              47,
+              48,
+              0,
+              320
+            ]
+          ],
+          "size": [
+            47,
+            712
+          ],
+          "violations": [],
+          "plan": "I668:31;258:2632"
+        },
+        {
+          "label": "5 one replaced",
+          "slot": "I668:31;258:2446",
+          "type": "SLOT",
+          "children": [
+            [
+              "668:105",
+              "QA custom E",
+              47,
+              48,
+              0,
+              0
+            ],
+            [
+              "668:81",
+              "QA custom A",
+              47,
+              48,
+              0,
+              80
+            ],
+            [
+              "668:111",
+              "QA replacement",
+              47,
+              48,
+              0,
+              160
+            ],
+            [
+              "668:93",
+              "QA custom C",
+              47,
+              48,
+              0,
+              240
+            ],
+            [
+              "668:99",
+              "QA custom D",
+              47,
+              48,
+              0,
+              320
+            ]
+          ],
+          "size": [
+            47,
+            712
+          ],
+          "violations": [],
+          "plan": "I668:31;258:2632"
+        },
+        {
+          "label": "5 after View switch",
+          "slot": "I668:31;283:8727",
+          "type": "SLOT",
+          "children": [
+            [
+              "I668:31;283:8727;668:110",
+              "QA custom E",
+              47,
+              48,
+              0,
+              0
+            ],
+            [
+              "I668:31;283:8727;668:86",
+              "QA custom A",
+              47,
+              48,
+              0,
+              80
+            ],
+            [
+              "I668:31;283:8727;668:116",
+              "QA replacement",
+              47,
+              48,
+              0,
+              160
+            ],
+            [
+              "I668:31;283:8727;668:98",
+              "QA custom C",
+              47,
+              48,
+              0,
+              240
+            ],
+            [
+              "I668:31;283:8727;668:104",
+              "QA custom D",
+              47,
+              48,
+              0,
+              320
+            ]
+          ],
+          "size": [
+            47,
+            712
+          ],
+          "violations": [],
+          "plan": "I668:31;283:8732"
+        },
+        {
+          "label": "medium notification retained",
+          "value": true,
+          "size": [
+            12,
+            12
+          ]
+        }
+      ],
+      "sampleId": "668:31",
+      "cleanup": [
+        "662:19"
+      ]
+    }
+  },
+  "temporary": {
+    "removed": [
+      "662:120",
+      "662:125",
+      "662:130",
+      "662:136",
+      "666:8186",
+      "666:8405",
+      "666:8575",
+      "666:8745",
+      "666:8832",
+      "666:8859",
+      "666:8886",
+      "666:8913",
+      "666:8940"
+    ],
+    "page": "662:18",
+    "children": [
+      [
+        "662:19",
+        "Chat Rail Item",
+        "COMPONENT_SET"
+      ]
+    ]
+  }
+}

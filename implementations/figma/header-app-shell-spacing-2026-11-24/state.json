@@ -1,0 +1,81 @@
+{
+  "runId": "2026-11-24-header-app-shell-own-spacing",
+  "scope": "reconciliation",
+  "user_request": "Documentar modificaciones de Header/App Shell y reemplazar Body por tokens propios conservando medidas.",
+  "phase": "FINAL_QA_PASS",
+  "readiness": "READY",
+  "figma_file_key": "yZsIpXywybsPDytjolwcP4",
+  "session_id": "eaa7e2f9-34ea-4c47-9af4-c208977d9720",
+  "target_pages": {
+    "Header": "90:2",
+    "App Shell": "105:2"
+  },
+  "masters": {
+    "Header": "90:439",
+    "App Shell": "105:7"
+  },
+  "variables_before": 1536,
+  "new_tokens": [
+    {
+      "logical_id": "layout-spacing:component:header-container-padding",
+      "name": "header/spacing/container-padding",
+      "semantic_source_id": "VariableID:6:231"
+    },
+    {
+      "logical_id": "layout-spacing:component:app-shell-none",
+      "name": "app-shell/spacing/none",
+      "semantic_source_id": "VariableID:6:191"
+    }
+  ],
+  "planned_bindings": 62,
+  "completed_mutations": [
+    {
+      "node": "90:439",
+      "bindings": 4
+    },
+    {
+      "nodes": [
+        "105:3",
+        "105:4",
+        "105:5",
+        "105:6",
+        "299:1332",
+        "299:2120",
+        "453:5306",
+        "453:5430",
+        "105:8",
+        "105:267",
+        "105:717",
+        "105:837",
+        "105:1145",
+        "105:1265",
+        "105:1489",
+        "105:1609",
+        "299:1324",
+        "299:1325",
+        "299:2112",
+        "299:2113",
+        "453:5307",
+        "453:5308",
+        "453:5431",
+        "453:5432",
+        "299:1329",
+        "299:2117"
+      ],
+      "bindings": 58
+    }
+  ],
+  "pending_validations": [
+    "local_closure"
+  ],
+  "source_pins": {
+    "specs/tokens/header-app-shell.spacing.v1.0.0.json": "33e03dbc7c8557a467758de98e7b255b43643ebd7047b25491d32f1cc6ccef19",
+    "specs/data/header-app-shell.spacing.v1.0.0.json": "b72072e0473b7bd6577c37749185c1b6ec5f8d880fe575d456197e2e70dde88c",
+    "specs/components/header-app-shell.spacing.amendment.v1.0.0.md": "ae33ac4bc80963d491ea867ade3b4fc0ac930be62d9f0f6d4ecb5b90fd58e818",
+    "qa/contracts/header-app-shell.spacing.v1.0.0.review.md": "eaf9943344ddfe6b3b0283ba0ab081de3cfccabc91c05b27adaf1041de36f87a"
+  },
+  "created_variables": {
+    "header/spacing/container-padding": "VariableID:653:191",
+    "app-shell/spacing/none": "VariableID:653:192"
+  }
+}

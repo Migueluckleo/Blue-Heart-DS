@@ -1,0 +1,4551 @@
+{
+  "captured_at": "2026-11-24T15:59:58.202Z",
+  "read_only": true,
+  "roots": [
+    {
+      "root": {
+        "id": "90:439",
+        "key": "184bc49c10c9c61b024cc49f5df95c4438f2f73d",
+        "name": "Header",
+        "type": "COMPONENT",
+        "description": "HEADER-001 · Usa Header para identificar producto y contexto global. Conserva el logo oficial y compón versión, acciones, empresa y cuenta. Evita recortar el logo o inferir destinos. Ejemplo: encabezado de Contabilidad. Ficha local: Header / HEADER-001.",
+        "componentPropertyDefinitions": {
+          "Show version#90:10": {
+            "type": "BOOLEAN",
+            "defaultValue": true
+          },
+          "Show company#90:11": {
+            "type": "BOOLEAN",
+            "defaultValue": true
+          },
+          "Show actions#90:12": {
+            "type": "BOOLEAN",
+            "defaultValue": true
+          },
+          "Show user#90:13": {
+            "type": "BOOLEAN",
+            "defaultValue": true
+          },
+          "Show release badge#90:14": {
+            "type": "BOOLEAN",
+            "defaultValue": true
+          },
+          "Version#90:15": {
+            "type": "TEXT",
+            "defaultValue": "2.0.0"
+          }
+        }
+      },
+      "page": {
+        "id": "90:2",
+        "name": "Header",
+        "type": "PAGE"
+      },
+      "owned": [
+        {
+          "id": "90:439",
+          "name": "Header",
+          "type": "COMPONENT",
+          "parent": null,
+          "box": [
+            1500,
+            800,
+            1280,
+            112
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FIXED",
+            "HUG",
+            "SPACE_BETWEEN",
+            "CENTER"
+          ],
+          "pad": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            1152,
+            null
+          ],
+          "b": {
+            "paddingLeft": "VariableID:344:26",
+            "paddingTop": "VariableID:344:26",
+            "paddingRight": "VariableID:344:26",
+            "paddingBottom": "VariableID:344:26",
+            "minWidth": "VariableID:8:746",
+            "fills": [
+              "VariableID:8:747"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": null,
+          "propertyRefs": {}
+        },
+        {
+          "id": "90:1138",
+          "name": "contables",
+          "type": "INSTANCE",
+          "parent": "90:439",
+          "box": [
+            32,
+            32,
+            176,
+            48
+          ],
+          "layout": [
+            "NONE",
+            "NO_WRAP",
+            "FIXED",
+            "FIXED",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "height": "VariableID:8:748"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "product": "contabilidad",
+            "type": "horizontal"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "90:1189",
+          "name": "Content",
+          "type": "FRAME",
+          "parent": "90:439",
+          "box": [
+            361,
+            32,
+            887,
+            48
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "HUG",
+            "HUG",
+            "MIN",
+            "CENTER"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:8:749",
+            "paddingLeft": "VariableID:8:749",
+            "paddingTop": "VariableID:8:749",
+            "paddingRight": "VariableID:8:749",
+            "paddingBottom": "VariableID:8:749"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "90:1190",
+          "name": "Version",
+          "type": "FRAME",
+          "parent": "90:1189",
+          "box": [
+            0,
+            0,
+            149,
+            48
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "HUG",
+            "HUG",
+            "MIN",
+            "CENTER"
+          ],
+          "pad": [
+            0,
+            24,
+            0,
+            0
+          ],
+          "gap": [
+            24,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:8:745",
+            "paddingLeft": "VariableID:8:749",
+            "paddingTop": "VariableID:8:749",
+            "paddingRight": "VariableID:8:745",
+            "paddingBottom": "VariableID:8:749"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "visible": "Show version#90:10"
+          }
+        },
+        {
+          "id": "90:1202",
+          "name": "Actions",
+          "type": "FRAME",
+          "parent": "90:1189",
+          "box": [
+            149,
+            0,
+            321,
+            48
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "HUG",
+            "HUG",
+            "MIN",
+            "CENTER"
+          ],
+          "pad": [
+            0,
+            24,
+            0,
+            0
+          ],
+          "gap": [
+            24,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:8:745",
+            "paddingLeft": "VariableID:8:749",
+            "paddingTop": "VariableID:8:749",
+            "paddingRight": "VariableID:8:745",
+            "paddingBottom": "VariableID:8:749"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "visible": "Show actions#90:12"
+          }
+        },
+        {
+          "id": "90:1240",
+          "name": "Company",
+          "type": "FRAME",
+          "parent": "90:1189",
+          "box": [
+            470,
+            0,
+            329,
+            48
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "HUG",
+            "HUG",
+            "MIN",
+            "CENTER"
+          ],
+          "pad": [
+            0,
+            24,
+            0,
+            0
+          ],
+          "gap": [
+            24,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:8:745",
+            "paddingLeft": "VariableID:8:749",
+            "paddingTop": "VariableID:8:749",
+            "paddingRight": "VariableID:8:745",
+            "paddingBottom": "VariableID:8:749"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "visible": "Show company#90:11"
+          }
+        },
+        {
+          "id": "90:1251",
+          "name": "User interaction",
+          "type": "FRAME",
+          "parent": "90:1189",
+          "box": [
+            799,
+            0,
+            88,
+            48
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "HUG",
+            "HUG",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:8:749",
+            "paddingLeft": "VariableID:8:749",
+            "paddingTop": "VariableID:8:749",
+            "paddingRight": "VariableID:8:749",
+            "paddingBottom": "VariableID:8:749"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "90:1191",
+          "name": "Version info",
+          "type": "FRAME",
+          "parent": "90:1190",
+          "box": [
+            0,
+            0,
+            100,
+            48
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "HUG",
+            "FIXED",
+            "MIN",
+            "CENTER"
+          ],
+          "pad": [
+            8,
+            0,
+            8,
+            0
+          ],
+          "gap": [
+            8,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:8:750",
+            "paddingLeft": "VariableID:8:749",
+            "paddingTop": "VariableID:8:750",
+            "paddingRight": "VariableID:8:749",
+            "paddingBottom": "VariableID:8:750"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "90:1201",
+          "name": "Divider",
+          "type": "RECTANGLE",
+          "parent": "90:1190",
+          "box": [
+            124,
+            8,
+            1,
+            32
+          ],
+          "layout": [
+            null,
+            null,
+            "FIXED",
+            "FIXED",
+            null,
+            null
+          ],
+          "pad": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "gap": [
+            null,
+            null
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "width": "VariableID:8:758",
+            "height": "VariableID:8:759",
+            "fills": [
+              "VariableID:8:757"
+            ]
+          },
+          "grid": {},
+          "propertyRefs": {}
+        },
+        {
+          "id": "90:1203",
+          "name": "Header actions",
+          "type": "INSTANCE",
+          "parent": "90:1202",
+          "box": [
+            0,
+            0,
+            272,
+            48
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "HUG",
+            "HUG",
+            "MIN",
+            "CENTER"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            8,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:8:761",
+            "paddingLeft": "VariableID:8:760",
+            "paddingTop": "VariableID:8:760",
+            "paddingRight": "VariableID:8:760",
+            "paddingBottom": "VariableID:8:760"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "actions": "5"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "90:1239",
+          "name": "Divider",
+          "type": "RECTANGLE",
+          "parent": "90:1202",
+          "box": [
+            296,
+            8,
+            1,
+            32
+          ],
+          "layout": [
+            null,
+            null,
+            "FIXED",
+            "FIXED",
+            null,
+            null
+          ],
+          "pad": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "gap": [
+            null,
+            null
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "width": "VariableID:8:758",
+            "height": "VariableID:8:759",
+            "fills": [
+              "VariableID:8:757"
+            ]
+          },
+          "grid": {},
+          "propertyRefs": {}
+        },
+        {
+          "id": "90:1241",
+          "name": "Company selector",
+          "type": "INSTANCE",
+          "parent": "90:1240",
+          "box": [
+            0,
+            0,
+            280,
+            48
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FIXED",
+            "FIXED",
+            "MIN",
+            "CENTER"
+          ],
+          "pad": [
+            4,
+            12,
+            4,
+            8
+          ],
+          "gap": [
+            12,
+            0
+          ],
+          "min": [
+            240,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:8:763",
+            "paddingLeft": "VariableID:8:764",
+            "paddingTop": "VariableID:8:762",
+            "paddingRight": "VariableID:8:763",
+            "paddingBottom": "VariableID:8:762",
+            "height": "VariableID:8:771",
+            "topLeftRadius": "VariableID:8:769",
+            "topRightRadius": "VariableID:8:769",
+            "bottomLeftRadius": "VariableID:8:769",
+            "bottomRightRadius": "VariableID:8:769",
+            "strokeTopWeight": "VariableID:8:770",
+            "strokeBottomWeight": "VariableID:8:770",
+            "strokeLeftWeight": "VariableID:8:770",
+            "strokeRightWeight": "VariableID:8:770",
+            "minWidth": "VariableID:8:765",
+            "maxWidth": "VariableID:8:766",
+            "fills": [
+              "VariableID:8:767"
+            ],
+            "strokes": [
+              "VariableID:8:768"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "state": "default"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "90:1250",
+          "name": "Divider",
+          "type": "RECTANGLE",
+          "parent": "90:1240",
+          "box": [
+            304,
+            8,
+            1,
+            32
+          ],
+          "layout": [
+            null,
+            null,
+            "FIXED",
+            "FIXED",
+            null,
+            null
+          ],
+          "pad": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "gap": [
+            null,
+            null
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "width": "VariableID:8:758",
+            "height": "VariableID:8:759",
+            "fills": [
+              "VariableID:8:757"
+            ]
+          },
+          "grid": {},
+          "propertyRefs": {}
+        },
+        {
+          "id": "90:1252",
+          "name": "User selector",
+          "type": "INSTANCE",
+          "parent": "90:1251",
+          "box": [
+            0,
+            0,
+            88,
+            48
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "HUG",
+            "HUG",
+            "MIN",
+            "CENTER"
+          ],
+          "pad": [
+            0,
+            8,
+            0,
+            0
+          ],
+          "gap": [
+            8,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:8:794",
+            "paddingLeft": "VariableID:8:793",
+            "paddingTop": "VariableID:8:793",
+            "paddingRight": "VariableID:8:794",
+            "paddingBottom": "VariableID:8:793",
+            "topLeftRadius": "VariableID:8:796",
+            "topRightRadius": "VariableID:8:797",
+            "bottomLeftRadius": "VariableID:8:796",
+            "bottomRightRadius": "VariableID:8:797",
+            "fills": [
+              "VariableID:8:795"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "state": "default"
+          },
+          "propertyRefs": {
+            "visible": "Show user#90:13"
+          }
+        },
+        {
+          "id": "90:1192",
+          "name": "Version",
+          "type": "TEXT",
+          "parent": "90:1191",
+          "box": [
+            0,
+            12,
+            37,
+            24
+          ],
+          "layout": [
+            null,
+            null,
+            "HUG",
+            "HUG",
+            null,
+            null
+          ],
+          "pad": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "gap": [
+            null,
+            null
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "fills": [
+              "VariableID:8:751"
+            ],
+            "letterSpacing": [
+              "VariableID:8:756"
+            ],
+            "fontSize": [
+              "VariableID:8:754"
+            ],
+            "fontStyle": [
+              "VariableID:8:753"
+            ],
+            "fontFamily": [
+              "VariableID:8:752"
+            ],
+            "lineHeight": [
+              "VariableID:8:755"
+            ]
+          },
+          "grid": {},
+          "propertyRefs": {
+            "characters": "Version#90:15"
+          }
+        },
+        {
+          "id": "90:1193",
+          "name": "Release badge",
+          "type": "INSTANCE",
+          "parent": "90:1191",
+          "box": [
+            45,
+            12,
+            55,
+            24
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "HUG",
+            "HUG",
+            "MIN",
+            "CENTER"
+          ],
+          "pad": [
+            4,
+            8,
+            4,
+            8
+          ],
+          "gap": [
+            4,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:8:357",
+            "paddingLeft": "VariableID:8:356",
+            "paddingTop": "VariableID:8:357",
+            "paddingRight": "VariableID:8:356",
+            "paddingBottom": "VariableID:8:357",
+            "topLeftRadius": "VariableID:8:359",
+            "topRightRadius": "VariableID:8:359",
+            "bottomLeftRadius": "VariableID:8:359",
+            "bottomRightRadius": "VariableID:8:359",
+            "maxHeight": "VariableID:8:370",
+            "fills": [
+              "VariableID:8:342"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "type": "info",
+            "size": "medium"
+          },
+          "propertyRefs": {
+            "visible": "Show release badge#90:14"
+          }
+        }
+      ],
+      "dependencies": [
+        {
+          "id": "171:1523",
+          "key": "62ef7f9c865fb36d36d37f90e89da07cefd515fb",
+          "name": "product=contabilidad, type=horizontal",
+          "remote": false,
+          "parent": {
+            "id": "171:1289",
+            "name": "contables",
+            "type": "COMPONENT_SET"
+          }
+        },
+        {
+          "id": "90:142",
+          "key": "64af53e41f68e723a42ef95ae1c64bcf512162db",
+          "name": "actions=5",
+          "remote": false,
+          "parent": {
+            "id": "90:437",
+            "name": "Header actions",
+            "type": "COMPONENT_SET"
+          }
+        },
+        {
+          "id": "90:5",
+          "key": "3423db533e650a947e6b3813204b123d6e9062c4",
+          "name": "state=default",
+          "remote": false,
+          "parent": {
+            "id": "90:105",
+            "name": "Company selector",
+            "type": "COMPONENT_SET"
+          }
+        },
+        {
+          "id": "90:109",
+          "key": "b6c06360ba23edb6afce27a1872853b5132d7bde",
+          "name": "state=default",
+          "remote": false,
+          "parent": {
+            "id": "90:138",
+            "name": "User selector",
+            "type": "COMPONENT_SET"
+          }
+        },
+        {
+          "id": "64:109",
+          "key": "dfa4e5906aafdc0b92acc32e332d59ede3d294f7",
+          "name": "type=info, size=medium",
+          "remote": false,
+          "parent": {
+            "id": "64:90",
+            "name": "Badge",
+            "type": "COMPONENT_SET"
+          }
+        }
+      ],
+      "visited": 120
+    },
+    {
+      "root": {
+        "id": "105:7",
+        "key": "cbfcacde93f758008ffcca20849b497fd80ac803",
+        "name": "App Shell",
+        "type": "COMPONENT_SET",
+        "description": "App Shell · APP-SHELL-001. Grid y Flex para contenido general; Conversation para Chat; Conversation preview para Chat junto al documento entregado. Edita Body, Document preview y Right sidebar. El documento absorbe el ancho restante y el anfitrión controla abrir, expandir y cerrar.",
+        "componentPropertyDefinitions": {
+          "Body#105:0": {
+            "type": "SLOT",
+            "description": "Sustituye los ejemplos por contenido de la pantalla. Mantén la rejilla o la composición de filas que corresponda.",
+            "slotSettings": {
+              "stretchChildOnInsert": false,
+              "displayEmptyByDefault": false,
+              "minChildren": null,
+              "maxChildren": null,
+              "allowPreferredValuesOnly": false
+            },
+            "preferredValues": []
+          },
+          "Right sidebar#299:7": {
+            "type": "SLOT",
+            "description": "Panel opcional seguido del Rail de Chat Sidebar.",
+            "preferredValues": []
+          },
+          "Document preview#454:0": {
+            "type": "SLOT",
+            "description": "Documento entregado junto al Chat. Contenido editable del visor; el ancho llena el espacio restante.",
+            "slotSettings": {
+              "stretchChildOnInsert": true,
+              "displayEmptyByDefault": false,
+              "minChildren": null,
+              "maxChildren": null,
+              "allowPreferredValuesOnly": false
+            },
+            "preferredValues": []
+          },
+          "menu": {
+            "type": "VARIANT",
+            "defaultValue": "collapsed",
+            "variantOptions": [
+              "collapsed",
+              "expanded"
+            ]
+          },
+          "body layout": {
+            "type": "VARIANT",
+            "defaultValue": "grid",
+            "variantOptions": [
+              "grid",
+              "flex",
+              "conversation",
+              "conversation-preview"
+            ]
+          }
+        }
+      },
+      "page": {
+        "id": "105:2",
+        "name": "App Shell",
+        "type": "PAGE"
+      },
+      "owned": [
+        {
+          "id": "105:7",
+          "name": "App Shell",
+          "type": "COMPONENT_SET",
+          "parent": null,
+          "box": [
+            -666,
+            -226,
+            3088,
+            4352
+          ],
+          "layout": [
+            "NONE",
+            "NO_WRAP",
+            "FIXED",
+            "FIXED",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {},
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": null
+        },
+        {
+          "id": "105:3",
+          "name": "menu=collapsed, body layout=grid",
+          "type": "COMPONENT",
+          "parent": "105:7",
+          "box": [
+            32,
+            32,
+            1440,
+            1024
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FIXED",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:344:31",
+            "fills": [
+              "VariableID:227:66"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "menu": "collapsed",
+            "body layout": "grid"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:4",
+          "name": "menu=expanded, body layout=grid",
+          "type": "COMPONENT",
+          "parent": "105:7",
+          "box": [
+            1536,
+            32,
+            1440,
+            1024
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FIXED",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:344:31",
+            "fills": [
+              "VariableID:227:66"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "menu": "expanded",
+            "body layout": "grid"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:5",
+          "name": "menu=collapsed, body layout=flex",
+          "type": "COMPONENT",
+          "parent": "105:7",
+          "box": [
+            32,
+            1120,
+            1440,
+            1024
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FIXED",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:344:31",
+            "fills": [
+              "VariableID:227:66"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "menu": "collapsed",
+            "body layout": "flex"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:6",
+          "name": "menu=expanded, body layout=flex",
+          "type": "COMPONENT",
+          "parent": "105:7",
+          "box": [
+            1536,
+            1120,
+            1440,
+            1024
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FIXED",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:344:31",
+            "fills": [
+              "VariableID:227:66"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "menu": "expanded",
+            "body layout": "flex"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "299:1332",
+          "name": "menu=collapsed, body layout=conversation",
+          "type": "COMPONENT",
+          "parent": "105:7",
+          "box": [
+            48,
+            2192,
+            1440,
+            1024
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FIXED",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:344:31",
+            "fills": [
+              "VariableID:227:66"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "menu": "collapsed",
+            "body layout": "conversation"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "299:2120",
+          "name": "menu=expanded, body layout=conversation",
+          "type": "COMPONENT",
+          "parent": "105:7",
+          "box": [
+            1600,
+            2192,
+            1440,
+            1024
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FIXED",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:344:31",
+            "fills": [
+              "VariableID:227:66"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "menu": "expanded",
+            "body layout": "conversation"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "453:5306",
+          "name": "menu=collapsed, body layout=conversation-preview",
+          "type": "COMPONENT",
+          "parent": "105:7",
+          "box": [
+            48,
+            3280,
+            1440,
+            1024
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FIXED",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:344:31",
+            "fills": [
+              "VariableID:227:66"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "menu": "collapsed",
+            "body layout": "conversation-preview"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "453:5430",
+          "name": "menu=expanded, body layout=conversation-preview",
+          "type": "COMPONENT",
+          "parent": "105:7",
+          "box": [
+            1600,
+            3280,
+            1440,
+            1024
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FIXED",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:344:31",
+            "fills": [
+              "VariableID:227:66"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "menu": "expanded",
+            "body layout": "conversation-preview"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:8",
+          "name": "Header",
+          "type": "INSTANCE",
+          "parent": "105:3",
+          "box": [
+            0,
+            0,
+            1440,
+            112
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "SPACE_BETWEEN",
+            "CENTER"
+          ],
+          "pad": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            1152,
+            null
+          ],
+          "b": {
+            "paddingLeft": "VariableID:344:26",
+            "paddingTop": "VariableID:344:26",
+            "paddingRight": "VariableID:344:26",
+            "paddingBottom": "VariableID:344:26",
+            "minWidth": "VariableID:8:746",
+            "fills": [
+              "VariableID:8:747"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": null,
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:267",
+          "name": "Content",
+          "type": "FRAME",
+          "parent": "105:3",
+          "box": [
+            0,
+            112,
+            1440,
+            912
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65",
+            "paddingLeft": "VariableID:227:65",
+            "paddingTop": "VariableID:344:31",
+            "paddingRight": "VariableID:227:65",
+            "paddingBottom": "VariableID:344:26"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:717",
+          "name": "Header",
+          "type": "INSTANCE",
+          "parent": "105:4",
+          "box": [
+            0,
+            0,
+            1440,
+            112
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "SPACE_BETWEEN",
+            "CENTER"
+          ],
+          "pad": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            1152,
+            null
+          ],
+          "b": {
+            "paddingLeft": "VariableID:344:26",
+            "paddingTop": "VariableID:344:26",
+            "paddingRight": "VariableID:344:26",
+            "paddingBottom": "VariableID:344:26",
+            "minWidth": "VariableID:8:746",
+            "fills": [
+              "VariableID:8:747"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": null,
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:837",
+          "name": "Content",
+          "type": "FRAME",
+          "parent": "105:4",
+          "box": [
+            0,
+            112,
+            1440,
+            912
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65",
+            "paddingLeft": "VariableID:227:65",
+            "paddingTop": "VariableID:344:31",
+            "paddingRight": "VariableID:227:65",
+            "paddingBottom": "VariableID:344:26"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:1145",
+          "name": "Header",
+          "type": "INSTANCE",
+          "parent": "105:5",
+          "box": [
+            0,
+            0,
+            1440,
+            112
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "SPACE_BETWEEN",
+            "CENTER"
+          ],
+          "pad": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            1152,
+            null
+          ],
+          "b": {
+            "paddingLeft": "VariableID:344:26",
+            "paddingTop": "VariableID:344:26",
+            "paddingRight": "VariableID:344:26",
+            "paddingBottom": "VariableID:344:26",
+            "minWidth": "VariableID:8:746",
+            "fills": [
+              "VariableID:8:747"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": null,
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:1265",
+          "name": "Content",
+          "type": "FRAME",
+          "parent": "105:5",
+          "box": [
+            0,
+            112,
+            1440,
+            912
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65",
+            "paddingLeft": "VariableID:227:65",
+            "paddingTop": "VariableID:344:31",
+            "paddingRight": "VariableID:227:65",
+            "paddingBottom": "VariableID:344:26"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:1489",
+          "name": "Header",
+          "type": "INSTANCE",
+          "parent": "105:6",
+          "box": [
+            0,
+            0,
+            1440,
+            112
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "SPACE_BETWEEN",
+            "CENTER"
+          ],
+          "pad": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            1152,
+            null
+          ],
+          "b": {
+            "paddingLeft": "VariableID:344:26",
+            "paddingTop": "VariableID:344:26",
+            "paddingRight": "VariableID:344:26",
+            "paddingBottom": "VariableID:344:26",
+            "minWidth": "VariableID:8:746",
+            "fills": [
+              "VariableID:8:747"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": null,
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:1609",
+          "name": "Content",
+          "type": "FRAME",
+          "parent": "105:6",
+          "box": [
+            0,
+            112,
+            1440,
+            912
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65",
+            "paddingLeft": "VariableID:227:65",
+            "paddingTop": "VariableID:344:31",
+            "paddingRight": "VariableID:227:65",
+            "paddingBottom": "VariableID:344:26"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "299:1324",
+          "name": "Header",
+          "type": "INSTANCE",
+          "parent": "299:1332",
+          "box": [
+            0,
+            0,
+            1440,
+            112
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "SPACE_BETWEEN",
+            "CENTER"
+          ],
+          "pad": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            1152,
+            null
+          ],
+          "b": {
+            "paddingLeft": "VariableID:344:26",
+            "paddingTop": "VariableID:344:26",
+            "paddingRight": "VariableID:344:26",
+            "paddingBottom": "VariableID:344:26",
+            "minWidth": "VariableID:8:746",
+            "fills": [
+              "VariableID:8:747"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": null,
+          "propertyRefs": {}
+        },
+        {
+          "id": "299:1325",
+          "name": "Content",
+          "type": "FRAME",
+          "parent": "299:1332",
+          "box": [
+            0,
+            112,
+            1440,
+            912
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65",
+            "paddingLeft": "VariableID:227:65",
+            "paddingTop": "VariableID:344:31",
+            "paddingRight": "VariableID:227:65",
+            "paddingBottom": "VariableID:344:26"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "299:2112",
+          "name": "Header",
+          "type": "INSTANCE",
+          "parent": "299:2120",
+          "box": [
+            0,
+            0,
+            1440,
+            112
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "SPACE_BETWEEN",
+            "CENTER"
+          ],
+          "pad": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            1152,
+            null
+          ],
+          "b": {
+            "paddingLeft": "VariableID:344:26",
+            "paddingTop": "VariableID:344:26",
+            "paddingRight": "VariableID:344:26",
+            "paddingBottom": "VariableID:344:26",
+            "minWidth": "VariableID:8:746",
+            "fills": [
+              "VariableID:8:747"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": null,
+          "propertyRefs": {}
+        },
+        {
+          "id": "299:2113",
+          "name": "Content",
+          "type": "FRAME",
+          "parent": "299:2120",
+          "box": [
+            0,
+            112,
+            1440,
+            912
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65",
+            "paddingLeft": "VariableID:227:65",
+            "paddingTop": "VariableID:344:31",
+            "paddingRight": "VariableID:227:65",
+            "paddingBottom": "VariableID:344:26"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "453:5307",
+          "name": "Header",
+          "type": "INSTANCE",
+          "parent": "453:5306",
+          "box": [
+            0,
+            0,
+            1440,
+            112
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "SPACE_BETWEEN",
+            "CENTER"
+          ],
+          "pad": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            1152,
+            null
+          ],
+          "b": {
+            "paddingLeft": "VariableID:344:26",
+            "paddingTop": "VariableID:344:26",
+            "paddingRight": "VariableID:344:26",
+            "paddingBottom": "VariableID:344:26",
+            "minWidth": "VariableID:8:746",
+            "fills": [
+              "VariableID:8:747"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": null,
+          "propertyRefs": {}
+        },
+        {
+          "id": "453:5308",
+          "name": "Content",
+          "type": "FRAME",
+          "parent": "453:5306",
+          "box": [
+            0,
+            112,
+            1440,
+            912
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65",
+            "paddingLeft": "VariableID:227:65",
+            "paddingTop": "VariableID:344:31",
+            "paddingRight": "VariableID:227:65",
+            "paddingBottom": "VariableID:344:26"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "453:5431",
+          "name": "Header",
+          "type": "INSTANCE",
+          "parent": "453:5430",
+          "box": [
+            0,
+            0,
+            1440,
+            112
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "SPACE_BETWEEN",
+            "CENTER"
+          ],
+          "pad": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            1152,
+            null
+          ],
+          "b": {
+            "paddingLeft": "VariableID:344:26",
+            "paddingTop": "VariableID:344:26",
+            "paddingRight": "VariableID:344:26",
+            "paddingBottom": "VariableID:344:26",
+            "minWidth": "VariableID:8:746",
+            "fills": [
+              "VariableID:8:747"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": null,
+          "propertyRefs": {}
+        },
+        {
+          "id": "453:5432",
+          "name": "Content",
+          "type": "FRAME",
+          "parent": "453:5430",
+          "box": [
+            0,
+            112,
+            1440,
+            912
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            32,
+            32,
+            32
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65",
+            "paddingLeft": "VariableID:227:65",
+            "paddingTop": "VariableID:344:31",
+            "paddingRight": "VariableID:227:65",
+            "paddingBottom": "VariableID:344:26"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:268",
+          "name": "Sidebar",
+          "type": "INSTANCE",
+          "parent": "105:267",
+          "box": [
+            32,
+            0,
+            72,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FILL",
+            "MIN",
+            "MAX"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:257",
+            "paddingLeft": "VariableID:13:257",
+            "paddingTop": "VariableID:13:257",
+            "paddingRight": "VariableID:13:257",
+            "paddingBottom": "VariableID:13:257",
+            "width": "VariableID:13:258",
+            "topLeftRadius": "VariableID:13:259",
+            "topRightRadius": "VariableID:13:259",
+            "bottomLeftRadius": "VariableID:13:259",
+            "bottomRightRadius": "VariableID:13:259",
+            "fills": [
+              "VariableID:13:260"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "state": "collapsed"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:425",
+          "name": "Main",
+          "type": "FRAME",
+          "parent": "105:267",
+          "box": [
+            136,
+            0,
+            1272,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:838",
+          "name": "Sidebar",
+          "type": "INSTANCE",
+          "parent": "105:837",
+          "box": [
+            32,
+            0,
+            234,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FILL",
+            "MIN",
+            "MAX"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:257",
+            "paddingLeft": "VariableID:13:257",
+            "paddingTop": "VariableID:13:257",
+            "paddingRight": "VariableID:13:257",
+            "paddingBottom": "VariableID:13:257",
+            "width": "VariableID:13:266",
+            "topLeftRadius": "VariableID:13:259",
+            "topRightRadius": "VariableID:13:259",
+            "bottomLeftRadius": "VariableID:13:259",
+            "bottomRightRadius": "VariableID:13:259",
+            "fills": [
+              "VariableID:13:267"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "state": "expanded"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:993",
+          "name": "Main",
+          "type": "FRAME",
+          "parent": "105:837",
+          "box": [
+            298,
+            0,
+            1110,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:1266",
+          "name": "Sidebar",
+          "type": "INSTANCE",
+          "parent": "105:1265",
+          "box": [
+            32,
+            0,
+            72,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FILL",
+            "MIN",
+            "MAX"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:257",
+            "paddingLeft": "VariableID:13:257",
+            "paddingTop": "VariableID:13:257",
+            "paddingRight": "VariableID:13:257",
+            "paddingBottom": "VariableID:13:257",
+            "width": "VariableID:13:258",
+            "topLeftRadius": "VariableID:13:259",
+            "topRightRadius": "VariableID:13:259",
+            "bottomLeftRadius": "VariableID:13:259",
+            "bottomRightRadius": "VariableID:13:259",
+            "fills": [
+              "VariableID:13:260"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "state": "collapsed"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:1343",
+          "name": "Main",
+          "type": "FRAME",
+          "parent": "105:1265",
+          "box": [
+            136,
+            0,
+            1272,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:1610",
+          "name": "Sidebar",
+          "type": "INSTANCE",
+          "parent": "105:1609",
+          "box": [
+            32,
+            0,
+            234,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FILL",
+            "MIN",
+            "MAX"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:257",
+            "paddingLeft": "VariableID:13:257",
+            "paddingTop": "VariableID:13:257",
+            "paddingRight": "VariableID:13:257",
+            "paddingBottom": "VariableID:13:257",
+            "width": "VariableID:13:266",
+            "topLeftRadius": "VariableID:13:259",
+            "topRightRadius": "VariableID:13:259",
+            "bottomLeftRadius": "VariableID:13:259",
+            "bottomRightRadius": "VariableID:13:259",
+            "fills": [
+              "VariableID:13:267"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "state": "expanded"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:1692",
+          "name": "Main",
+          "type": "FRAME",
+          "parent": "105:1609",
+          "box": [
+            298,
+            0,
+            1110,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "299:1326",
+          "name": "Sidebar",
+          "type": "INSTANCE",
+          "parent": "299:1325",
+          "box": [
+            32,
+            0,
+            72,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FILL",
+            "MIN",
+            "MAX"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:257",
+            "paddingLeft": "VariableID:13:257",
+            "paddingTop": "VariableID:13:257",
+            "paddingRight": "VariableID:13:257",
+            "paddingBottom": "VariableID:13:257",
+            "width": "VariableID:13:258",
+            "topLeftRadius": "VariableID:13:259",
+            "topRightRadius": "VariableID:13:259",
+            "bottomLeftRadius": "VariableID:13:259",
+            "bottomRightRadius": "VariableID:13:259",
+            "fills": [
+              "VariableID:13:260"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "state": "collapsed"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "299:1327",
+          "name": "Main",
+          "type": "FRAME",
+          "parent": "299:1325",
+          "box": [
+            136,
+            0,
+            1272,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "299:2114",
+          "name": "Sidebar",
+          "type": "INSTANCE",
+          "parent": "299:2113",
+          "box": [
+            32,
+            0,
+            234,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FILL",
+            "MIN",
+            "MAX"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:257",
+            "paddingLeft": "VariableID:13:257",
+            "paddingTop": "VariableID:13:257",
+            "paddingRight": "VariableID:13:257",
+            "paddingBottom": "VariableID:13:257",
+            "width": "VariableID:13:266",
+            "topLeftRadius": "VariableID:13:259",
+            "topRightRadius": "VariableID:13:259",
+            "bottomLeftRadius": "VariableID:13:259",
+            "bottomRightRadius": "VariableID:13:259",
+            "fills": [
+              "VariableID:13:267"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "state": "expanded"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "299:2115",
+          "name": "Main",
+          "type": "FRAME",
+          "parent": "299:2113",
+          "box": [
+            298,
+            0,
+            1110,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "453:5309",
+          "name": "Sidebar",
+          "type": "INSTANCE",
+          "parent": "453:5308",
+          "box": [
+            32,
+            0,
+            72,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FILL",
+            "MIN",
+            "MAX"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:257",
+            "paddingLeft": "VariableID:13:257",
+            "paddingTop": "VariableID:13:257",
+            "paddingRight": "VariableID:13:257",
+            "paddingBottom": "VariableID:13:257",
+            "width": "VariableID:13:258",
+            "topLeftRadius": "VariableID:13:259",
+            "topRightRadius": "VariableID:13:259",
+            "bottomLeftRadius": "VariableID:13:259",
+            "bottomRightRadius": "VariableID:13:259",
+            "fills": [
+              "VariableID:13:260"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "state": "collapsed"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "453:5310",
+          "name": "Main",
+          "type": "FRAME",
+          "parent": "453:5308",
+          "box": [
+            136,
+            0,
+            1272,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "453:5433",
+          "name": "Sidebar",
+          "type": "INSTANCE",
+          "parent": "453:5432",
+          "box": [
+            32,
+            0,
+            234,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FILL",
+            "MIN",
+            "MAX"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:257",
+            "paddingLeft": "VariableID:13:257",
+            "paddingTop": "VariableID:13:257",
+            "paddingRight": "VariableID:13:257",
+            "paddingBottom": "VariableID:13:257",
+            "width": "VariableID:13:266",
+            "topLeftRadius": "VariableID:13:259",
+            "topRightRadius": "VariableID:13:259",
+            "bottomLeftRadius": "VariableID:13:259",
+            "bottomRightRadius": "VariableID:13:259",
+            "fills": [
+              "VariableID:13:267"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "state": "expanded"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "453:5434",
+          "name": "Main",
+          "type": "FRAME",
+          "parent": "453:5432",
+          "box": [
+            298,
+            0,
+            1110,
+            880
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:426",
+          "name": "Section Header",
+          "type": "INSTANCE",
+          "parent": "105:425",
+          "box": [
+            0,
+            0,
+            1272,
+            219
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "gap": [
+            16,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:321",
+            "paddingLeft": "VariableID:13:320",
+            "paddingTop": "VariableID:13:320",
+            "paddingRight": "VariableID:13:320",
+            "paddingBottom": "VariableID:13:320",
+            "topLeftRadius": "VariableID:13:319",
+            "topRightRadius": "VariableID:13:319",
+            "bottomLeftRadius": "VariableID:13:319",
+            "bottomRightRadius": "VariableID:13:319",
+            "fills": [
+              "VariableID:13:316"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "logo instead title": "false"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:706",
+          "name": "Body",
+          "type": "SLOT",
+          "parent": "105:425",
+          "box": [
+            0,
+            251,
+            1272,
+            629
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "slotContentId": "Body#105:0"
+          }
+        },
+        {
+          "id": "105:994",
+          "name": "Section Header",
+          "type": "INSTANCE",
+          "parent": "105:993",
+          "box": [
+            0,
+            0,
+            1110,
+            219
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "gap": [
+            16,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:321",
+            "paddingLeft": "VariableID:13:320",
+            "paddingTop": "VariableID:13:320",
+            "paddingRight": "VariableID:13:320",
+            "paddingBottom": "VariableID:13:320",
+            "topLeftRadius": "VariableID:13:319",
+            "topRightRadius": "VariableID:13:319",
+            "bottomLeftRadius": "VariableID:13:319",
+            "bottomRightRadius": "VariableID:13:319",
+            "fills": [
+              "VariableID:13:316"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "logo instead title": "false"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:1134",
+          "name": "Body",
+          "type": "SLOT",
+          "parent": "105:993",
+          "box": [
+            0,
+            251,
+            1110,
+            629
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "slotContentId": "Body#105:0"
+          }
+        },
+        {
+          "id": "105:1344",
+          "name": "Section Header",
+          "type": "INSTANCE",
+          "parent": "105:1343",
+          "box": [
+            0,
+            0,
+            1272,
+            219
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "gap": [
+            16,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:321",
+            "paddingLeft": "VariableID:13:320",
+            "paddingTop": "VariableID:13:320",
+            "paddingRight": "VariableID:13:320",
+            "paddingBottom": "VariableID:13:320",
+            "topLeftRadius": "VariableID:13:319",
+            "topRightRadius": "VariableID:13:319",
+            "bottomLeftRadius": "VariableID:13:319",
+            "bottomRightRadius": "VariableID:13:319",
+            "fills": [
+              "VariableID:13:316"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "logo instead title": "false"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:1484",
+          "name": "Body",
+          "type": "SLOT",
+          "parent": "105:1343",
+          "box": [
+            0,
+            251,
+            1272,
+            605
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FIXED",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "slotContentId": "Body#105:0"
+          }
+        },
+        {
+          "id": "105:1693",
+          "name": "Section Header",
+          "type": "INSTANCE",
+          "parent": "105:1692",
+          "box": [
+            0,
+            0,
+            1110,
+            219
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "gap": [
+            16,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:321",
+            "paddingLeft": "VariableID:13:320",
+            "paddingTop": "VariableID:13:320",
+            "paddingRight": "VariableID:13:320",
+            "paddingBottom": "VariableID:13:320",
+            "topLeftRadius": "VariableID:13:319",
+            "topRightRadius": "VariableID:13:319",
+            "bottomLeftRadius": "VariableID:13:319",
+            "bottomRightRadius": "VariableID:13:319",
+            "fills": [
+              "VariableID:13:316"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "logo instead title": "false"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "105:1833",
+          "name": "Body",
+          "type": "SLOT",
+          "parent": "105:1692",
+          "box": [
+            0,
+            251,
+            1110,
+            605
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FIXED",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "slotContentId": "Body#105:0"
+          }
+        },
+        {
+          "id": "299:1328",
+          "name": "Section Header",
+          "type": "INSTANCE",
+          "parent": "299:1327",
+          "box": [
+            0,
+            0,
+            1272,
+            107
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "gap": [
+            16,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:321",
+            "paddingLeft": "VariableID:13:320",
+            "paddingTop": "VariableID:13:320",
+            "paddingRight": "VariableID:13:320",
+            "paddingBottom": "VariableID:13:320",
+            "topLeftRadius": "VariableID:13:319",
+            "topRightRadius": "VariableID:13:319",
+            "bottomLeftRadius": "VariableID:13:319",
+            "bottomRightRadius": "VariableID:13:319",
+            "fills": [
+              "VariableID:13:316"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "logo instead title": "true"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "299:1329",
+          "name": "Conversation layout",
+          "type": "FRAME",
+          "parent": "299:1327",
+          "box": [
+            0,
+            139,
+            1272,
+            741
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:344:26"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "299:2116",
+          "name": "Section Header",
+          "type": "INSTANCE",
+          "parent": "299:2115",
+          "box": [
+            0,
+            0,
+            1110,
+            107
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "gap": [
+            16,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:321",
+            "paddingLeft": "VariableID:13:320",
+            "paddingTop": "VariableID:13:320",
+            "paddingRight": "VariableID:13:320",
+            "paddingBottom": "VariableID:13:320",
+            "topLeftRadius": "VariableID:13:319",
+            "topRightRadius": "VariableID:13:319",
+            "bottomLeftRadius": "VariableID:13:319",
+            "bottomRightRadius": "VariableID:13:319",
+            "fills": [
+              "VariableID:13:316"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "logo instead title": "true"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "299:2117",
+          "name": "Conversation layout",
+          "type": "FRAME",
+          "parent": "299:2115",
+          "box": [
+            0,
+            139,
+            1110,
+            741
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:344:26"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "453:5311",
+          "name": "Section Header",
+          "type": "INSTANCE",
+          "parent": "453:5310",
+          "box": [
+            0,
+            0,
+            1272,
+            107
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "gap": [
+            16,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:321",
+            "paddingLeft": "VariableID:13:320",
+            "paddingTop": "VariableID:13:320",
+            "paddingRight": "VariableID:13:320",
+            "paddingBottom": "VariableID:13:320",
+            "topLeftRadius": "VariableID:13:319",
+            "topRightRadius": "VariableID:13:319",
+            "bottomLeftRadius": "VariableID:13:319",
+            "bottomRightRadius": "VariableID:13:319",
+            "fills": [
+              "VariableID:13:316"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "logo instead title": "true"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "453:5312",
+          "name": "Conversation layout",
+          "type": "FRAME",
+          "parent": "453:5310",
+          "box": [
+            0,
+            139,
+            1272,
+            741
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "453:5435",
+          "name": "Section Header",
+          "type": "INSTANCE",
+          "parent": "453:5434",
+          "box": [
+            0,
+            0,
+            1110,
+            107
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "HUG",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "gap": [
+            16,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:13:321",
+            "paddingLeft": "VariableID:13:320",
+            "paddingTop": "VariableID:13:320",
+            "paddingRight": "VariableID:13:320",
+            "paddingBottom": "VariableID:13:320",
+            "topLeftRadius": "VariableID:13:319",
+            "topRightRadius": "VariableID:13:319",
+            "bottomLeftRadius": "VariableID:13:319",
+            "bottomRightRadius": "VariableID:13:319",
+            "fills": [
+              "VariableID:13:316"
+            ]
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "variant": {
+            "logo instead title": "true"
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "453:5436",
+          "name": "Conversation layout",
+          "type": "FRAME",
+          "parent": "453:5434",
+          "box": [
+            0,
+            139,
+            1110,
+            741
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            32,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "itemSpacing": "VariableID:227:65"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {}
+        },
+        {
+          "id": "299:2109",
+          "name": "Body",
+          "type": "SLOT",
+          "parent": "299:1329",
+          "box": [
+            0,
+            0,
+            1161,
+            741
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {},
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "slotContentId": "Body#105:0"
+          }
+        },
+        {
+          "id": "299:2110",
+          "name": "Right sidebar",
+          "type": "SLOT",
+          "parent": "299:1329",
+          "box": [
+            1193,
+            0,
+            79,
+            741
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "HUG",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {},
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "slotContentId": "Right sidebar#299:7"
+          }
+        },
+        {
+          "id": "299:2660",
+          "name": "Body",
+          "type": "SLOT",
+          "parent": "299:2117",
+          "box": [
+            0,
+            0,
+            999,
+            741
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {},
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "slotContentId": "Body#105:0"
+          }
+        },
+        {
+          "id": "299:2661",
+          "name": "Right sidebar",
+          "type": "SLOT",
+          "parent": "299:2117",
+          "box": [
+            1031,
+            0,
+            79,
+            741
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "HUG",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {},
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "slotContentId": "Right sidebar#299:7"
+          }
+        },
+        {
+          "id": "455:5193",
+          "name": "Body",
+          "type": "SLOT",
+          "parent": "453:5312",
+          "box": [
+            0,
+            0,
+            374,
+            741
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "width": "VariableID:451:21"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "slotContentId": "Body#105:0"
+          }
+        },
+        {
+          "id": "455:5542",
+          "name": "Document preview",
+          "type": "SLOT",
+          "parent": "453:5312",
+          "box": [
+            406,
+            0,
+            755,
+            741
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {},
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "slotContentId": "Document preview#454:0"
+          }
+        },
+        {
+          "id": "455:5809",
+          "name": "Right sidebar",
+          "type": "SLOT",
+          "parent": "453:5312",
+          "box": [
+            1193,
+            0,
+            79,
+            741
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "HUG",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {},
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "slotContentId": "Right sidebar#299:7"
+          }
+        },
+        {
+          "id": "455:6112",
+          "name": "Body",
+          "type": "SLOT",
+          "parent": "453:5436",
+          "box": [
+            0,
+            0,
+            374,
+            741
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FIXED",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {
+            "width": "VariableID:451:21"
+          },
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "slotContentId": "Body#105:0"
+          }
+        },
+        {
+          "id": "455:6379",
+          "name": "Document preview",
+          "type": "SLOT",
+          "parent": "453:5436",
+          "box": [
+            406,
+            0,
+            593,
+            741
+          ],
+          "layout": [
+            "VERTICAL",
+            "NO_WRAP",
+            "FILL",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {},
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "slotContentId": "Document preview#454:0"
+          }
+        },
+        {
+          "id": "455:6682",
+          "name": "Right sidebar",
+          "type": "SLOT",
+          "parent": "453:5436",
+          "box": [
+            1031,
+            0,
+            79,
+            741
+          ],
+          "layout": [
+            "HORIZONTAL",
+            "NO_WRAP",
+            "HUG",
+            "FILL",
+            "MIN",
+            "MIN"
+          ],
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": [
+            0,
+            0
+          ],
+          "min": [
+            null,
+            null
+          ],
+          "b": {},
+          "grid": {
+            "gridRowGap": 0,
+            "gridColumnGap": 0,
+            "gridRowCount": 0,
+            "gridColumnCount": 0,
+            "gridRowSizes": [],
+            "gridColumnSizes": []
+          },
+          "propertyRefs": {
+            "slotContentId": "Right sidebar#299:7"
+          }
+        }
+      ],
+      "dependencies": [
+        {
+          "id": "90:439",
+          "key": "184bc49c10c9c61b024cc49f5df95c4438f2f73d",
+          "name": "Header",
+          "remote": false,
+          "parent": {
+            "id": "90:2",
+            "name": "Header",
+            "type": "PAGE"
+          }
+        },
+        {
+          "id": "61:219",
+          "key": "4159a969a971c38e70fb6acb9e80ff07f3fc4fbe",
+          "name": "state=collapsed",
+          "remote": false,
+          "parent": {
+            "id": "61:426",
+            "name": "Sidebar",
+            "type": "COMPONENT_SET"
+          }
+        },
+        {
+          "id": "61:309",
+          "key": "06205cbb8b7252c9a237242fd53953ecb74e6b69",
+          "name": "state=expanded",
+          "remote": false,
+          "parent": {
+            "id": "61:426",
+            "name": "Sidebar",
+            "type": "COMPONENT_SET"
+          }
+        },
+        {
+          "id": "96:5",
+          "key": "719eebd9eed6de600a34b8ce57ec9713925ae453",
+          "name": "logo instead title=false",
+          "remote": false,
+          "parent": {
+            "id": "287:461",
+            "name": "Section Header",
+            "type": "COMPONENT_SET"
+          }
+        },
+        {
+          "id": "287:151",
+          "key": "3c145a787d8a027685fba56eb69dbbbbc080ea51",
+          "name": "logo instead title=true",
+          "remote": false,
+          "parent": {
+            "id": "287:461",
+            "name": "Section Header",
+            "type": "COMPONENT_SET"
+          }
+        }
+      ],
+      "visited": 5659
+    }
+  ]
+}

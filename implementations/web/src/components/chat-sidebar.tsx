@@ -13,6 +13,7 @@ import { SidebarIcon } from '@phosphor-icons/react/dist/csr/Sidebar';
 import { SirenIcon } from '@phosphor-icons/react/dist/csr/Siren';
 import { TableIcon } from '@phosphor-icons/react/dist/csr/Table';
 import { IconButton } from './icon-button';
+import { ChatRailItem, type ChatRailItemProps } from './chat-rail-item';
 
 const views = [
   ['Chats', ChatsIcon],
@@ -111,7 +112,11 @@ export function ChatPlanUsage({plan, used, limit, mode = 'expanded'}: ChatPlanUs
   </div>;
 }
 
-export type ChatSidebarProps = ({ mode?: 'panel'; view: View } | { mode: 'rail'; view: View | 'none' }) & {
+export type ChatSidebarProps = ({ mode?: 'panel'; view: View } | {
+  mode: 'rail';
+  view: View | 'none';
+  railItems?: Partial<Record<View, Pick<ChatRailItemProps, 'disabled' | 'showNotification'>>>;
+}) & {
   children?: ReactNode;
   shortcuts?: ReactNode;
   plan?: Omit<ChatPlanUsageProps, 'mode'>;
@@ -120,12 +125,14 @@ export type ChatSidebarProps = ({ mode?: 'panel'; view: View } | { mode: 'rail';
   onCollapse?: () => void;
 };
 
-export function ChatSidebar({view, mode = 'panel', children, shortcuts, plan, onViewChange, onSearch, onCollapse}: ChatSidebarProps) {
+export function ChatSidebar(props: ChatSidebarProps) {
+  const {view, mode = 'panel', children, shortcuts, plan, onViewChange, onSearch, onCollapse} = props;
+  const railItems = props.mode === 'rail' ? props.railItems : undefined;
   return <aside className="bh-chat-sidebar" data-blueheart="chat-sidebar" data-mode={mode} aria-label={view === 'none' ? 'Panel lateral de chat' : `Panel lateral · ${view}`}>
     {mode === 'rail' ? <>
-      <nav className="bh-chat-sidebar-nav" aria-label="Herramientas de chat">
-        {views.map(([name, icon]) => <IconButton key={name} variant="ghost" size="large" selected={name === view}
-          icon={icon} label={name} onClick={() => onViewChange(name)}/>)}
+      <nav className="bh-chat-sidebar-nav" aria-label="Herramientas de chat" data-slot="content">
+        {children === undefined ? views.map(([name, icon]) => <ChatRailItem key={name} selected={name === view}
+          icon={icon} label={name} onActivate={() => onViewChange(name)} {...railItems?.[name]}/>) : children}
       </nav>
       {plan && <ChatPlanUsage {...plan} mode="compact"/>}
     </> : <>

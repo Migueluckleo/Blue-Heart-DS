@@ -1,0 +1,9 @@
+# QA documental · Header y App Shell / espaciado propio
+
+2026-11-24 · CONTRACT_REVIEW PASS para [HEADER-APP-SHELL-SPACING-001](../../specs/components/header-app-shell.spacing.amendment.v1.0.0.md). Delegación DELEGATED_FOR_BUILD; Figma y adaptación web de espaciado READY. user_audit NOT_REQUIRED; human_review_policy OPTIONAL_NON_BLOCKING, conforme a DEC-AI-TECHNICAL-CLOSURE-001 y solicitud explícita de ajustar los bindings.
+
+Los valores observados están separados de la autoridad del contrato y de los IDs lógicos. La referencia original Header usa otro ID; no se fabrica un before local. El mapa contiene exactamente 62 propiedades: 36 de Header (4 maestro y 32 instancias), 16 ceros de App Shell y diez usos del token content de 32. Dos nuevos FLOAT aliasan semánticos locales existentes, sin modificar valores de los 1,536 tokens previos ni del padding interno de 24. Los 44 bindings de producto dentro de Slots quedan expresamente fuera del reemplazo.
+
+Se verificaron por lectura Header 90:439/página 90:2 y App Shell 105:7/página 105:2, ocho variantes y propiedades nativas. Mapa semántico: fuente spacing-2xl VariableID:6:231 → destino VariableID:8:257 → primitive VariableID:11:161; spacing-none fuente VariableID:6:191 → destino VariableID:8:217 → primitive VariableID:11:153. Los IDs de destino de los dos tokens nuevos se obtendrán de la creación y se conservarán en el mapa de implementación, sin reemplazar los IDs canónicos lógicos.
+
+H-AS-01–08 son verificables; scopes=[] y cadena component → semantic → primitives por cuatro modos están declarados. P-SLOTS no añade requisitos de composición para esta operación y conserva la aplicabilidad de las familias. La autorización permite la corrección Figma y su adaptación de espaciado en web; no permite publicar o instalar. Este PASS documental no acredita que los bindings ya estén escritos ni que el QA de implementación esté ejecutado.

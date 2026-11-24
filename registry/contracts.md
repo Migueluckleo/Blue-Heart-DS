@@ -150,3 +150,23 @@ La [política vigente](../specs/foundations/token-visibility.contract.v1.0.0.md)
 ## Body disabled y descriptions Dropdown · 2026-11-23
 
 [FOUNDATIONS-BODY-DISABLED-001](../specs/foundations/body.disabled.amendment.v1.0.0.md): DELEGATED_FOR_BUILD tras [QA documental PASS](../qa/contracts/body.disabled.v1.0.0.review.md). Cuatro roles disabled en component/body/, 61 Body y 1,536 tokens efectivos; solo scopes por propiedad y aliases semánticos existentes. La solicitud también autoriza corregir cinco descriptions Dropdown en Figma desde sus datos canónicos. Se conservan las versiones de los componentes y las skills.
+
+## Tabs · Uso contextual · 2026-11-24
+
+[Tabs](../specs/components/tabs.contextual-usage.amendment.v1.0.0.md), [Tab](../specs/components/tab.contextual-usage.amendment.v1.0.0.md) y [cinco patrones](../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) · APPROVED. Asociados a once familias. Conservar paneles/IDs, tres tipos, activación manual, Focus independiente, Dot y límites del anfitrión. [Aprobación](../sources/inventories/tabs-contextual-usage.approval.2026-11-24.json).
+
+## Conversation Response · Preview en fila · 2026-11-24
+
+[CONVERSATION-RESPONSE-001-PREVIEW-LAYOUT](../specs/components/conversation-response.preview-layout.amendment.v1.0.0.md) · v1.0.0 · DELEGATED_FOR_BUILD tras [QA documental PASS](../qa/contracts/conversation-response.preview-layout.v1.0.0.review.md). [Datos de layout](../specs/data/conversation-response.preview-layout.v1.0.0.json) SHA-256 380474480ca64ef1e329121841de5e349dd829154e625a2992f93aa332e4af80. Sustituye solo la composición del auxiliar: Title FILL/HUG y Badge HUG/HUG en fila, sin nueva familia ni cambios de tokens. Figma observado conforme a esa estructura; web STALE_FOR_PREVIEW_LAYOUT por flex-col existente. La solicitud es documental; no se implementa ni se declara nuevo QA web.
+
+## Chat History Item · Indicador opcional · 2026-11-24
+
+[CHAT-HISTORY-ITEM-001-NOTIFICATION](../specs/components/chat-history-item.notification.amendment.v1.0.0.md) · v1.0.0 · DELEGATED_FOR_BUILD tras [QA documental PASS](../qa/contracts/chat-history-item.notification.v1.0.0.review.md). [Datos delegados](../specs/data/chat-history-item.notification.v1.0.0.json) SHA-256 4dd414b3c9f634929eaffdb5a1b9367124ad95575c1fe0e850f992b53ee72fe9. Sustituye solo la superficie nueva show notification y su Dot en cuatro variantes; seis props y Slots/identidad conservados. Documentación Figma comprobada por lectura; web STALE_FOR_NOTIFICATION, descriptions de variantes antiguas pendientes, sin nueva implementación ni cambios de versión.
+
+## Header y App Shell · Layout y tokens propios · 2026-11-24
+
+[HEADER-APP-SHELL-SPACING-001](../specs/components/header-app-shell.spacing.amendment.v1.0.0.md) · v1.0.0 · DELEGATED_FOR_BUILD tras [QA documental PASS](../qa/contracts/header-app-shell.spacing.v1.0.0.review.md), Figma/web READY para espaciado. [Tokens nuevos](../specs/tokens/header-app-shell.spacing.v1.0.0.json), SHA-256 33e03dbc7c8557a467758de98e7b255b43643ebd7047b25491d32f1cc6ccef19; [mapa de 62 campos](../specs/data/header-app-shell.spacing.v1.0.0.json), SHA-256 b72072e0473b7bd6577c37749185c1b6ec5f8d880fe575d456197e2e70dde88c. Padding Header 32; Shell gap raíz/top 0 e interiores 32, ocho variantes. Dos FLOAT internos aliasan semantic; no repunta valores anteriores. [QA Figma/web PASS](../qa/implementations/header-app-shell.spacing.v1.0.0.review.md). P-SLOTS no cambia mecanismo; las familias mantienen su aplicabilidad.
+
+## Chat Rail Item y Chat Sidebar · 2026-11-24
+
+[CHAT-RAIL-ITEM-001](../specs/components/chat-rail-item.contract.v1.0.0.md) y [CHAT-SIDEBAR-001-RAIL-ITEM](../specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md) v1.0.0 DELEGATED_FOR_BUILD. Ocho variantes con Selected independiente, Dot medium 12×12 y foco brand-strong. [16 tokens](../specs/tokens/chat-rail-item.v1.0.0.json) con scopes internos y aliases en cuatro modos. Chat Sidebar comparte Content#258:0 en nueve variantes, todas sin altura mínima en el maestro. [QA documental PASS](../qa/contracts/chat-rail-item.v1.0.0.review.md).

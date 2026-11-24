@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "kind": "DELEGATED_TOKEN_DATA",
+  "contract": "HEADER-APP-SHELL-SPACING-001",
+  "version": "1.0.0",
+  "source": "Solicitud explícita 2026-11-24: documentar modificaciones y sustituir Body por tokens propios sin alterar las medidas observadas. IDs de este archivo son lógicos; el mapa de implementación conserva los IDs Figma reales.",
+  "collections": [
+    {
+      "name": "component",
+      "modes": [
+        {
+          "name": "Contable",
+          "modeId": "Contable"
+        },
+        {
+          "name": "Administrativo",
+          "modeId": "Administrativo"
+        },
+        {
+          "name": "Servicios",
+          "modeId": "Servicios"
+        },
+        {
+          "name": "Personas",
+          "modeId": "Personas"
+        }
+      ],
+      "variables": [
+        {
+          "id": "layout-spacing:component:header-container-padding",
+          "name": "header/spacing/container-padding",
+          "resolvedType": "FLOAT",
+          "description": "Header · Padding exterior del contenedor. Conserva los 32 px elegidos por el usuario y consume spacing-2xl en los cuatro temas. Token interno oculto de los selectores.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--header-spacing-container-padding)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:231"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:231"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:231"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:231"
+            }
+          }
+        },
+        {
+          "id": "layout-spacing:component:app-shell-none",
+          "name": "app-shell/spacing/none",
+          "resolvedType": "FLOAT",
+          "description": "App Shell · Ausencia de separación: 0 px para el gap Header–Content y el padding superior de Content. Consume spacing-none en los cuatro temas. Token interno oculto de los selectores.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--app-shell-spacing-none)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

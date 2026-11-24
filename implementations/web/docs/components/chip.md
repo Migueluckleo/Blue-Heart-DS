@@ -116,7 +116,7 @@ P-SLOTS NOT_APPLICABLE: anatomía fija con texto/booleanos/swaps acotados. No ha
 
 ## Uso sin backend
 
-El ejemplo conserva una moneda activa, combina estados independientes y permite retirar filtros con foco restaurado.
+El ejemplo conserva una moneda activa, combina estados independientes y permite retirar filtros con foco restaurado. Para abrir secciones hermanas con panel propio usa Tabs; la forma Pill/Segmented no cambia esa decisión.
 
 ```tsx
 'use client';
@@ -225,6 +225,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 - [chip.contract.v1.0.0.md](../../../../specs/components/chip.contract.v1.0.0.md) · SHA-256 `10c3a4dbf70aa981dc8e8596a467d263183b3e84ecf32f47695cc3d29206c7f4`.
 - [chip.contextual-usage.amendment.v1.0.1.md](../../../../specs/components/chip.contextual-usage.amendment.v1.0.1.md) · SHA-256 `56d5970845b06e04e19c0688fc2ba594d4b8bc46085f9f83d67db13cad28757f`.
 - [badges-chips.status-filters.amendment.v1.0.0.md](../../../../specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md) · SHA-256 `d730fa5d62f171469afaf7315f01b36d13a1bd8901e95c333080e76b042aa119`.
+- [tabs.local-navigation.amendment.v1.0.0.md](../../../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) · SHA-256 `b297a1444e4ffcb17456d8ebcbba6bcb58b8349dad25038010b852b724ab39c0`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

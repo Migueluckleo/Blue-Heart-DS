@@ -8,11 +8,11 @@ Familia `CHAT-SIDEBAR-001` · API local 0.1.0 · categoría conversación.
 
 Fuente: [guía del contrato](../../../../specs/components/chat-sidebar.contract.v1.0.0.md#guía-semántica-normativa).
 
-Usa el rail para cambiar de vista y el panel para mostrar acciones y listas de esa vista. Mantén visibles la selección y los nombres de acción.
+Usa el Rail para cambiar de vista y el Panel para mostrar acciones y listas de esa vista. Mantén visibles la selección y los nombres de acción. Compón Content con ítems de navegación en Rail y con secciones en Panel.
 
 ## Uso sin backend
 
-Composición y acciones de muestra del panel lateral.
+Rail con navegación neutral, aro de foco de marca y Dot medium opcional. Content admite ítems personalizados en Rail, secciones en Panel y altura del anfitrión. Chat History Item conserva la opción de notificación documentada en Figma, con paridad web del indicador de fila pendiente.
 
 ```tsx
 'use client';
@@ -48,6 +48,7 @@ export function ChatSidebarExample() {
   return <div className="grid gap-4">
     <div className="flex h-[791px] items-stretch">
       <ChatSidebar view={open ? view : 'none'} mode="rail" plan={{plan: 'Pro Plan', used: 42, limit: 150}}
+        railItems={{Chats: {showNotification: true}}}
         onViewChange={next => {setView(next); setOpen(true); setFolder(false); setActive('pinned');}}/>
       {open && <ChatSidebar view={view} onViewChange={setView} onSearch={() => setAction('Buscar')} onCollapse={() => setOpen(false)}
         shortcuts={<>
@@ -86,7 +87,11 @@ export interface ChatPlanUsageProps {
   mode?: 'expanded' | 'compact';
 }
 
-export type ChatSidebarProps = ({ mode?: 'panel'; view: View } | { mode: 'rail'; view: View | 'none' }) & {
+export type ChatSidebarProps = ({ mode?: 'panel'; view: View } | {
+  mode: 'rail';
+  view: View | 'none';
+  railItems?: Partial<Record<View, Pick<ChatRailItemProps, 'disabled' | 'showNotification'>>>;
+}) & {
   children?: ReactNode;
   shortcuts?: ReactNode;
   plan?: Omit<ChatPlanUsageProps, 'mode'>;
@@ -101,14 +106,14 @@ export type ChatSidebarProps = ({ mode?: 'panel'; view: View } | { mode: 'rail';
 Las firmas siguientes se extraen de las funciones, incluidos sus valores por defecto. Una prop sin asignación `=` es obligatoria o permanece undefined según su tipo; no se rellena con reglas de negocio.
 
 ```tsx
-ChatSidebar: {view, mode = 'panel', children, shortcuts, plan, onViewChange, onSearch, onCollapse}: ChatSidebarProps
+ChatSidebar: props: ChatSidebarProps
 ```
 
 Props `on…` son callbacks locales. No atribuyen autorización, carga, guardado ni resultados de negocio.
 
 ## Composición y Slots
 
-P-SLOTS: **REQUIRED**. Región de contenido reemplazable. ReactNode/listas tipadas son la traducción web de las regiones, no evidencia de Slots Figma. El anfitrión conserva el orden y los IDs de listas; las cantidades de las demos no son límites de producto.
+P-SLOTS: **REQUIRED**. Content nativo compartido. children acepta navegación en Rail y secciones en Panel. ReactNode/listas tipadas son la traducción web de las regiones, no evidencia de Slots Figma. El anfitrión conserva el orden y los IDs de listas; las cantidades de las demos no son límites de producto.
 
 ## Estilos y Next.js
 
@@ -118,10 +123,11 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [chat-sidebar.contract.v1.0.0.md](../../../../specs/components/chat-sidebar.contract.v1.0.0.md) · SHA-256 `0123dc6d1622783256a4f2cc569e60b22f365f48122099d46961d53ca9cb7fbc`.
+- [chat-sidebar.contract.v1.0.0.md](../../../../specs/components/chat-sidebar.contract.v1.0.0.md) · SHA-256 `567d9211003298e14c104e0e03991834481ff55e3aefe789ef161e968bf090e9`.
+- [chat-sidebar.rail-item.amendment.v1.0.0.md](../../../../specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md) · SHA-256 `fb639d9127733ebbcf686bb744f5d1a2d3b6235cac8e4f6d71192e191fc3e00f`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 
 ## Verificación
 
-`pnpm verify` comprueba generación/cobertura, TypeScript, pruebas y build estático. `pnpm test:browser` valida los recorridos locales. [Evidencia de QA](../../../../qa/implementations/chat-sidebar.v1.0.0.review.md) identifica alcance, resultados y límites; una demo visible por sí sola no es un PASS visual.
+`pnpm verify` comprueba generación/cobertura, TypeScript, pruebas y build estático. `pnpm test:browser` valida los recorridos locales. [Evidencia de QA](../../../../qa/implementations/chat-rail-item.v1.0.0.review.md) identifica alcance, resultados y límites; una demo visible por sí sola no es un PASS visual.

@@ -20,7 +20,7 @@ Identifica el producto y su contexto global. Muestra versión, etapa, acciones, 
 
 ## Uso sin backend
 
-Compone el logo oficial, la versión y las opciones locales de empresa y cuenta.
+Compone el logo oficial, la versión y las opciones locales de empresa y cuenta. Revisión 2026-11-24: padding exterior 32 con token propio, interior 24, versión/Badge agrupados con gap 8 y bloques separados por sus divisores.
 
 ```tsx
 'use client';
@@ -111,7 +111,8 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [header.contract.v1.0.0.md](../../../../specs/components/header.contract.v1.0.0.md) · SHA-256 `dc5ca484eee68821be102d575712811aa692a317142728f51cd1bb37d127c4f5`.
+- [header.contract.v1.0.0.md](../../../../specs/components/header.contract.v1.0.0.md) · SHA-256 `4e426f3ad50a5ada3c3f964f547b0f25cc769a0be2081821c6d2a0f028fb09f5`.
+- [header-app-shell.spacing.amendment.v1.0.0.md](../../../../specs/components/header-app-shell.spacing.amendment.v1.0.0.md) · SHA-256 `ae33ac4bc80963d491ea867ade3b4fc0ac930be62d9f0f6d4ecb5b90fd58e818`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

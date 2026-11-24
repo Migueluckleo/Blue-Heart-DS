@@ -14,7 +14,7 @@ human_review_policy: OPTIONAL_NON_BLOCKING
 slot_applicability: REQUIRED
 source_data_ref: specs/data/conversation-response.v1.0.0.json
 source_data_digest_sha256: 60d61d1039c903b358a492299d72f3726e6273f44c30bc1a620a7e60bc8e4291
-data_refs: [specs/data/conversation-response.v1.0.0.json]
+data_refs: [specs/data/conversation-response.v1.0.0.json, specs/data/conversation-response.preview-layout.v1.0.0.json]
 dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001, CHARACTERS-001, BADGE-001, BUTTON-001, ICON-BUTTON-001]
 ---
 
@@ -31,6 +31,8 @@ Se oficializa el set provisional 218:1236 conservando la propuesta de Playground
 ## Anatomía
 
 A la izquierda va el personaje. La columna de contenido contiene identidad (nombre y Badge), Body, Previews, Secondary content, Additional actions y Feedback actions. El auxiliar privado `.Conversation / Preview` contiene el glyph Phosphor Table Outline Light, título editable y un Badge Tabla. El auxiliar es una tarjeta informativa.
+
+La [enmienda de layout del Preview](conversation-response.preview-layout.amendment.v1.0.0.md) documenta la revisión del 24 de noviembre: título y Badge comparten una fila, con Title FILL/HUG y Badge HUG/HUG. Sustituye solo la composición del auxiliar y deja registrada la diferencia pendiente en web.
 
 ## Propiedades
 
@@ -123,6 +125,8 @@ Versiona cambios de anatomía, Slots, identidad, comportamientos y roles. Los ef
 ## Historial
 
 2026-11-12 · v1.0.0 · Oficialización delegada del set provisional.
+
+2026-11-24 · v1.0.0 · Revisión documental del auxiliar Preview enlazada mediante enmienda y datos de layout. Se conservan los datos base y la evidencia histórica.
 
 ## Guía semántica normativa
 

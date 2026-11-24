@@ -9,11 +9,13 @@
       "AppShellGridItem"
     ],
     "category": "navegación",
-    "notes": "Grid, Flex, Conversación o Conversación con preview del documento. En preview, Chat conserva 374 px y el documento llena el espacio restante.",
+    "notes": "Grid, Flex, Conversación o Conversación con preview del documento. En preview, Chat conserva 374 px y el documento llena el espacio restante. Revisión 2026-11-24: Header–Content gap 0, Content con padding top 0 y laterales/bottom 32; conversación usa gap 32. Todas las medidas propias consumen tokens Header/App Shell.",
     "base": "specs/components/app-shell.contract.v1.0.0.md",
     "amendments": [
       "specs/components/app-shell.document-preview.amendment.v1.0.0.md",
-      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md",
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md",
+      "specs/components/header-app-shell.spacing.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "REQUIRED",
@@ -132,7 +134,8 @@
       "specs/components/buttons.usage.amendment.v1.0.1.md",
       "specs/components/buttons.contextual-usage.amendment.v1.0.2.md",
       "specs/patterns/buttons.actions.amendment.v1.0.0.md",
-      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md",
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "NOT_APPLICABLE",
@@ -210,9 +213,11 @@
       "ChatHistoryItem"
     ],
     "category": "conversación",
-    "notes": "Composición y acciones de muestra del panel lateral.",
+    "notes": "Composición y acciones de muestra del panel lateral. Revisión Figma 2026-11-24: show notification=false controla Dot notification/small/default, absoluto 8×8 con inset top/right 4. La API web todavía no incluye esta opción; paridad pendiente documentada.",
     "base": "specs/components/chat-history-item.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/chat-history-item.notification.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "REQUIRED",
       "reason": "Región de contenido reemplazable"
@@ -240,6 +245,25 @@
     "example_source": "separate"
   },
   {
+    "id": "CHAT-RAIL-ITEM-001",
+    "slug": "chat-rail-item",
+    "name": "Chat Rail Item",
+    "module": "chat-rail-item",
+    "exports": [
+      "ChatRailItem"
+    ],
+    "category": "conversación",
+    "notes": "Cambia la vista del panel lateral. Selección neutral, foco visible por teclado y Dot medium cuando la vista tiene novedades.",
+    "base": "specs/components/chat-rail-item.contract.v1.0.0.md",
+    "amendments": [],
+    "slots": {
+      "status": "NOT_APPLICABLE",
+      "reason": "Icono intercambiable y Dot fijo opcional"
+    },
+    "qa": "qa/implementations/chat-rail-item.v1.0.0.review.md",
+    "example_source": "separate"
+  },
+  {
     "id": "CHAT-SIDEBAR-001",
     "slug": "chat-sidebar",
     "name": "Chat Sidebar",
@@ -248,14 +272,16 @@
       "ChatSidebar"
     ],
     "category": "conversación",
-    "notes": "Composición y acciones de muestra del panel lateral.",
+    "notes": "Rail con navegación neutral, aro de foco de marca y Dot medium opcional. Content admite ítems personalizados en Rail, secciones en Panel y altura del anfitrión. Chat History Item conserva la opción de notificación documentada en Figma, con paridad web del indicador de fila pendiente.",
     "base": "specs/components/chat-sidebar.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "REQUIRED",
-      "reason": "Región de contenido reemplazable"
+      "reason": "Content nativo compartido. children acepta navegación en Rail y secciones en Panel."
     },
-    "qa": "qa/implementations/chat-sidebar.v1.0.0.review.md",
+    "qa": "qa/implementations/chat-rail-item.v1.0.0.review.md",
     "example_source": "separate"
   },
   {
@@ -328,11 +354,12 @@
       "Chip"
     ],
     "category": "selection",
-    "notes": "El ejemplo conserva una moneda activa, combina estados independientes y permite retirar filtros con foco restaurado.",
+    "notes": "El ejemplo conserva una moneda activa, combina estados independientes y permite retirar filtros con foco restaurado. Para abrir secciones hermanas con panel propio usa Tabs; la forma Pill/Segmented no cambia esa decisión.",
     "base": "specs/components/chip.contract.v1.0.0.md",
     "amendments": [
       "specs/components/chip.contextual-usage.amendment.v1.0.1.md",
-      "specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md"
+      "specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md",
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "NOT_APPLICABLE",
@@ -389,9 +416,11 @@
       "ConversationResponseCopyIcon"
     ],
     "category": "conversación",
-    "notes": "Alterna BENI y NAVI, muestra u oculta regiones y acciona los controles de resultado y valoración.",
+    "notes": "Alterna BENI y NAVI, muestra u oculta regiones y acciona los controles de resultado y valoración. Revisión Figma 2026-11-24: Preview details coloca título y Badge en una fila (Title Fill, Badge Hug). La web conserva la disposición vertical; sincronización de ese layout pendiente, documentada en la enmienda.",
     "base": "specs/components/conversation-response.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/conversation-response.preview-layout.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "REQUIRED",
       "reason": "Cinco Slots nativos editables desde una instancia vinculada"
@@ -410,7 +439,9 @@
     "category": "estado",
     "notes": "Consulta presencia y conteos en el contexto de su anfitrión.",
     "base": "specs/components/dot.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Count y Max count son propiedades acotadas de texto"
@@ -456,7 +487,8 @@
       "specs/components/dropdown-menu.search.amendment.v1.0.0.md",
       "specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md",
       "specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md",
-      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md",
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "REQUIRED",
@@ -510,9 +542,11 @@
       "Header"
     ],
     "category": "navegación",
-    "notes": "Compone el logo oficial, la versión y las opciones locales de empresa y cuenta.",
+    "notes": "Compone el logo oficial, la versión y las opciones locales de empresa y cuenta. Revisión 2026-11-24: padding exterior 32 con token propio, interior 24, versión/Badge agrupados con gap 8 y bloques separados por sus divisores.",
     "base": "specs/components/header.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/header-app-shell.spacing.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Regiones fijas con visibilidad booleana"
@@ -709,7 +743,8 @@
     "amendments": [
       "specs/components/radio.contextual-usage.amendment.v1.0.1.md",
       "specs/patterns/selection-controls.decisions.amendment.v1.0.0.md",
-      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md",
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "NOT_APPLICABLE",
@@ -732,7 +767,8 @@
     "amendments": [
       "specs/components/radio-group.contextual-usage.amendment.v1.0.1.md",
       "specs/patterns/selection-controls.decisions.amendment.v1.0.0.md",
-      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md",
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "REQUIRED",
@@ -771,7 +807,8 @@
     "notes": "Selecciona el nivel del título según la página y compón Breadcrumb, Metadata, Inputs y General actions con los controles del anfitrión. Activa `logoInsteadTitle` para mostrar el logo de Beni en el lugar del título. Pasa `title` para el nombre accesible del encabezado.",
     "base": "specs/components/section-header.contract.v1.0.0.md",
     "amendments": [
-      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md",
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "REQUIRED",
@@ -813,7 +850,8 @@
     "notes": "Progreso orientativo de un registro de empresa. Los controles del anfitrión cambian el paso y mueven el foco al título.",
     "base": "specs/components/stepper.contract.v1.0.0.md",
     "amendments": [
-      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md",
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "NOT_APPLICABLE",
@@ -830,14 +868,18 @@
       "Tab"
     ],
     "category": "navegación",
-    "notes": "Mantén una etiqueta visible y proporciona el significado accesible del conteo.",
+    "notes": "Nombra una sección dentro de Tabs: Label visible, icono izquierdo y Dot opcionales. Focus es independiente de selected; no hay size, icono derecho ni Remove.",
     "base": "specs/components/tab.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/tab.contextual-usage.amendment.v1.0.0.md",
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Etiqueta, icono y Dot tienen posiciones fijas"
     },
-    "qa": "qa/implementations/tabs-chain.v1.0.0.review.md"
+    "qa": "qa/implementations/tabs-chain.v1.0.0.review.md",
+    "usage_guide": "specs/components/tab.contextual-usage.amendment.v1.0.0.md"
   },
   {
     "id": "TABLE-001",
@@ -885,14 +927,18 @@
       "Tabs"
     ],
     "category": "navegación",
-    "notes": "Mantén selección controlada e IDs estables. Flechas mueven foco y Enter o Espacio cambia el panel.",
+    "notes": "Abre secciones hermanas del mismo contexto con panel propio. No sustituir por Chips para filtrar. Underline, Pill y Segmented conservan navegación; flechas mueven foco y Enter/Espacio activa.",
     "base": "specs/components/tabs.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/tabs.contextual-usage.amendment.v1.0.0.md",
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "REQUIRED",
       "reason": "Tabs admite inserción, retirada y reordenamiento de instancias Tab"
     },
-    "qa": "qa/implementations/tabs-chain.v1.0.0.review.md"
+    "qa": "qa/implementations/tabs-chain.v1.0.0.review.md",
+    "usage_guide": "specs/components/tabs.contextual-usage.amendment.v1.0.0.md"
   },
   {
     "id": "TEXT-AREA-001",

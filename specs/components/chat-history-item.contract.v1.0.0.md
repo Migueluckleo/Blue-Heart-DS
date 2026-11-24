@@ -14,8 +14,8 @@ human_review_policy: OPTIONAL_NON_BLOCKING
 slot_applicability: REQUIRED
 source_data_ref: specs/tokens/chat-sidebar.v1.0.0.json
 source_data_digest_sha256: b28c5fcdb307ce1feb81401ccdb7397fe30b1598820d4b7fbe566864f9b77d80
-data_refs: [specs/tokens/chat-sidebar.v1.0.0.json]
-dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001, ICON-BUTTON-001]
+data_refs: [specs/tokens/chat-sidebar.v1.0.0.json, specs/data/chat-history-item.notification.v1.0.0.json]
+dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001, ICON-BUTTON-001, DOT-001]
 ---
 
 # Chat History Item · CHAT-HISTORY-ITEM-001
@@ -27,6 +27,8 @@ Fila de historial con título truncable, fecha relativa y Slot Actions. Title es
 ## Variantes, propiedades y estados
 
 Selected = false o true. State = Default o Hover. Se conservan las cuatro combinaciones.
+
+La [enmienda de notificación del 24 de noviembre](chat-history-item.notification.amendment.v1.0.0.md) documenta show notification#628:0=false y una instancia Dot oficial por variante. Conserva las otras cinco propiedades, Slots y versión; registra por separado la metadata antigua de variantes y la paridad web pendiente.
 
 ## Tokens y composición
 

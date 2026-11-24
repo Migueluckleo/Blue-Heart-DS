@@ -24,8 +24,10 @@ export function Header({version='2.0.0',showVersion=true,showReleaseBadge=true,s
     <img className="bh-header-logo" src="/assets/contabilidad-header.png" alt="CONTPAQi Contabilidad"/>
     <div className="bh-header-content">
       {showVersion && <div className="bh-header-block">
-        <span className="bh-header-version">{version}</span>
-        {showReleaseBadge && <Badge type="info" size="medium" label="Alpha 1" {...badge}/>}
+        <div className="bh-header-version-info">
+          <span className="bh-header-version">{version}</span>
+          {showReleaseBadge && <Badge type="info" size="medium" label="Alpha 1" {...badge}/>}
+        </div>
         <span className="bh-header-divider" aria-hidden="true"/>
       </div>}
       {showActions && actions && <div className="bh-header-block">

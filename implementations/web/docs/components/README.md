@@ -14,6 +14,7 @@
 - [Chat Document Viewer](chat-document-viewer.md) · CHAT-DOCUMENT-VIEWER-001
 - [Chat History Item](chat-history-item.md) · CHAT-HISTORY-ITEM-001
 - [Chat Plan Usage](chat-plan-usage.md) · CHAT-PLAN-USAGE-001
+- [Chat Rail Item](chat-rail-item.md) · CHAT-RAIL-ITEM-001
 - [Chat Sidebar](chat-sidebar.md) · CHAT-SIDEBAR-001
 - [Chat Sidebar Section](chat-sidebar-section.md) · CHAT-SIDEBAR-SECTION-001
 - [Chat Tool Item](chat-tool-item.md) · CHAT-TOOL-ITEM-001

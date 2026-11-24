@@ -1,0 +1,85 @@
+{
+  "kind": "ACTUAL_FIGMA_DESTINATION_MAP",
+  "file_key": "yZsIpXywybsPDytjolwcP4",
+  "contract": "HEADER-APP-SHELL-SPACING-001",
+  "canonical_token_source": "specs/tokens/header-app-shell.spacing.v1.0.0.json",
+  "modes": {
+    "Contable": "6:20",
+    "Administrativo": "6:21",
+    "Servicios": "6:22",
+    "Personas": "6:23"
+  },
+  "new_tokens": [
+    {
+      "logical_id": "layout-spacing:component:header-container-padding",
+      "name": "header/spacing/container-padding",
+      "destination_variable_id": "VariableID:653:191",
+      "destination_key": "08752a48c51f7e8d6d2abf7315d8112b2ae7e12f",
+      "semantic_source_ids": [
+        "VariableID:6:231"
+      ],
+      "semantic_destination_ids": [
+        "VariableID:8:257"
+      ],
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:257"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:257"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:257"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:257"
+        }
+      },
+      "scopes": [],
+      "codeSyntax": {
+        "WEB": "var(--header-spacing-container-padding)"
+      }
+    },
+    {
+      "logical_id": "layout-spacing:component:app-shell-none",
+      "name": "app-shell/spacing/none",
+      "destination_variable_id": "VariableID:653:192",
+      "destination_key": "58a644bb737f09a11c64781097e016803e1de905",
+      "semantic_source_ids": [
+        "VariableID:6:191"
+      ],
+      "semantic_destination_ids": [
+        "VariableID:8:217"
+      ],
+      "valuesByMode": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:217"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:217"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:217"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:217"
+        }
+      },
+      "scopes": [],
+      "codeSyntax": {
+        "WEB": "var(--app-shell-spacing-none)"
+      }
+    }
+  ],
+  "reused": {
+    "app-shell/spacing/content": "VariableID:227:65"
+  }
+}

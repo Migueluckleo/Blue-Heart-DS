@@ -32,6 +32,7 @@ export function ChatSidebarExample() {
   return <div className="grid gap-4">
     <div className="flex h-[791px] items-stretch">
       <ChatSidebar view={open ? view : 'none'} mode="rail" plan={{plan: 'Pro Plan', used: 42, limit: 150}}
+        railItems={{Chats: {showNotification: true}}}
         onViewChange={next => {setView(next); setOpen(true); setFolder(false); setActive('pinned');}}/>
       {open && <ChatSidebar view={view} onViewChange={setView} onSearch={() => setAction('Buscar')} onCollapse={() => setOpen(false)}
         shortcuts={<>

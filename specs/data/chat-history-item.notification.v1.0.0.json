@@ -1,0 +1,1025 @@
+{
+  "schema_version": 1,
+  "contract": "CHAT-HISTORY-ITEM-001-NOTIFICATION",
+  "base_contract": "CHAT-HISTORY-ITEM-001",
+  "version": "1.0.0",
+  "delegated_scope": "New optional notification property, dependency/variant/Slot locators and observed layout only. Existing token authorities remain unchanged.",
+  "source": {
+    "file_key": "yZsIpXywybsPDytjolwcP4",
+    "node_id": "257:498",
+    "snapshot": "sources/figma-snapshots/chat-history-item-2026-11-24/raw-evidence.json",
+    "sha256": "21a26b7c3a50f1d4fd2a29a9a2adaa05613b0cfb841ffeb93070b539cfd0f89b",
+    "evidence": "OBSERVED",
+    "captured_at": "2026-11-24T15:44:54.161Z"
+  },
+  "property_definitions": {
+    "show notification#628:0": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Title#796:13": {
+      "type": "SLOT",
+      "description": "Contenido variable editable desde instancia, sin límites de cantidad inferidos.",
+      "slotSettings": {
+        "stretchChildOnInsert": true,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "preferredValues": []
+    },
+    "Updated#796:14": {
+      "type": "TEXT",
+      "defaultValue": "1 sem"
+    },
+    "Actions#796:15": {
+      "type": "SLOT",
+      "description": "Contenido variable editable desde instancia, sin límites de cantidad inferidos.",
+      "slotSettings": {
+        "stretchChildOnInsert": false,
+        "displayEmptyByDefault": false,
+        "minChildren": null,
+        "maxChildren": null,
+        "allowPreferredValuesOnly": false
+      },
+      "preferredValues": []
+    },
+    "Selected": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    },
+    "State": {
+      "type": "VARIANT",
+      "defaultValue": "Default",
+      "variantOptions": [
+        "Default",
+        "Hover"
+      ]
+    }
+  },
+  "notification": {
+    "property": "show notification#628:0",
+    "default": false,
+    "dependency_contract": "DOT-001",
+    "main_component": {
+      "id": "32:41",
+      "key": "012c408fce0c65c1432f38da2d881e12e0fdf857",
+      "name": "type=notification, size=small, color=default",
+      "type": "COMPONENT",
+      "remote": false,
+      "parent": {
+        "id": "32:33",
+        "name": "Dot",
+        "type": "COMPONENT_SET"
+      }
+    },
+    "instances": [
+      {
+        "id": "628:9010",
+        "parent": "257:499",
+        "visible": false,
+        "componentPropertyReferences": {
+          "visible": "show notification#628:0"
+        },
+        "position": [
+          246,
+          4
+        ],
+        "dimensions": [
+          8,
+          8
+        ],
+        "layoutPositioning": "ABSOLUTE",
+        "constraints": {
+          "horizontal": "MAX",
+          "vertical": "MIN"
+        },
+        "boundVariables": {
+          "width": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:521"
+          },
+          "height": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:521"
+          },
+          "topLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "topRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "bottomLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "bottomRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "strokeTopWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeBottomWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeLeftWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeRightWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:8:517"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:8:519"
+            }
+          ]
+        }
+      },
+      {
+        "id": "628:9015",
+        "parent": "257:506",
+        "visible": false,
+        "componentPropertyReferences": {
+          "visible": "show notification#628:0"
+        },
+        "position": [
+          246,
+          4
+        ],
+        "dimensions": [
+          8,
+          8
+        ],
+        "layoutPositioning": "ABSOLUTE",
+        "constraints": {
+          "horizontal": "MAX",
+          "vertical": "MIN"
+        },
+        "boundVariables": {
+          "width": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:521"
+          },
+          "height": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:521"
+          },
+          "topLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "topRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "bottomLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "bottomRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "strokeTopWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeBottomWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeLeftWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeRightWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:8:517"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:8:519"
+            }
+          ]
+        }
+      },
+      {
+        "id": "628:9011",
+        "parent": "257:513",
+        "visible": false,
+        "componentPropertyReferences": {
+          "visible": "show notification#628:0"
+        },
+        "position": [
+          246,
+          4
+        ],
+        "dimensions": [
+          8,
+          8
+        ],
+        "layoutPositioning": "ABSOLUTE",
+        "constraints": {
+          "horizontal": "MAX",
+          "vertical": "MIN"
+        },
+        "boundVariables": {
+          "width": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:521"
+          },
+          "height": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:521"
+          },
+          "topLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "topRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "bottomLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "bottomRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "strokeTopWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeBottomWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeLeftWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeRightWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:8:517"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:8:519"
+            }
+          ]
+        }
+      },
+      {
+        "id": "628:9013",
+        "parent": "257:520",
+        "visible": false,
+        "componentPropertyReferences": {
+          "visible": "show notification#628:0"
+        },
+        "position": [
+          246,
+          4
+        ],
+        "dimensions": [
+          8,
+          8
+        ],
+        "layoutPositioning": "ABSOLUTE",
+        "constraints": {
+          "horizontal": "MAX",
+          "vertical": "MIN"
+        },
+        "boundVariables": {
+          "width": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:521"
+          },
+          "height": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:521"
+          },
+          "topLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "topRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "bottomLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "bottomRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "strokeTopWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeBottomWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeLeftWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeRightWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:8:517"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:8:519"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "variants": [
+    {
+      "id": "257:499",
+      "key": "21482a589fc01b58d4914f7647241b09245f9455",
+      "axes": {
+        "Selected": "false",
+        "State": "Default"
+      },
+      "reference": [
+        258,
+        40
+      ],
+      "sizing": [
+        "FIXED",
+        "HUG"
+      ],
+      "gap": 8,
+      "padding": [
+        8,
+        16,
+        8,
+        16
+      ],
+      "children": [
+        {
+          "id": "257:500",
+          "name": "Title",
+          "type": "SLOT",
+          "visible": true
+        },
+        {
+          "id": "257:502",
+          "name": "Updated",
+          "type": "TEXT",
+          "visible": true
+        },
+        {
+          "id": "257:503",
+          "name": "Actions",
+          "type": "SLOT",
+          "visible": false
+        },
+        {
+          "id": "628:9010",
+          "name": "Dot",
+          "type": "INSTANCE",
+          "visible": false
+        }
+      ],
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "257:506",
+            "navigation": "CHANGE_TO",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.30000001192092896
+            },
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "257:506",
+              "navigation": "CHANGE_TO",
+              "transition": {
+                "type": "SMART_ANIMATE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.30000001192092896
+              },
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_HOVER"
+          }
+        }
+      ]
+    },
+    {
+      "id": "257:506",
+      "key": "23f154e47ec925825924f32d546a8bc5863acdeb",
+      "axes": {
+        "Selected": "false",
+        "State": "Hover"
+      },
+      "reference": [
+        258,
+        48
+      ],
+      "sizing": [
+        "FIXED",
+        "HUG"
+      ],
+      "gap": 16,
+      "padding": [
+        8,
+        16,
+        8,
+        16
+      ],
+      "children": [
+        {
+          "id": "257:507",
+          "name": "Title",
+          "type": "SLOT",
+          "visible": true
+        },
+        {
+          "id": "257:509",
+          "name": "Updated",
+          "type": "TEXT",
+          "visible": false
+        },
+        {
+          "id": "257:510",
+          "name": "Actions",
+          "type": "SLOT",
+          "visible": true
+        },
+        {
+          "id": "628:9015",
+          "name": "Dot",
+          "type": "INSTANCE",
+          "visible": false
+        }
+      ],
+      "reactions": []
+    },
+    {
+      "id": "257:513",
+      "key": "5e9333476b3c790a86531b56638387f1da4ca7ac",
+      "axes": {
+        "Selected": "true",
+        "State": "Default"
+      },
+      "reference": [
+        258,
+        40
+      ],
+      "sizing": [
+        "FIXED",
+        "HUG"
+      ],
+      "gap": 16,
+      "padding": [
+        8,
+        16,
+        8,
+        16
+      ],
+      "children": [
+        {
+          "id": "257:514",
+          "name": "Title",
+          "type": "SLOT",
+          "visible": true
+        },
+        {
+          "id": "257:516",
+          "name": "Updated",
+          "type": "TEXT",
+          "visible": true
+        },
+        {
+          "id": "257:517",
+          "name": "Actions",
+          "type": "SLOT",
+          "visible": false
+        },
+        {
+          "id": "628:9011",
+          "name": "Dot",
+          "type": "INSTANCE",
+          "visible": false
+        }
+      ],
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "257:520",
+            "navigation": "CHANGE_TO",
+            "transition": {
+              "type": "SMART_ANIMATE",
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.30000001192092896
+            },
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "257:520",
+              "navigation": "CHANGE_TO",
+              "transition": {
+                "type": "SMART_ANIMATE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.30000001192092896
+              },
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_HOVER"
+          }
+        }
+      ]
+    },
+    {
+      "id": "257:520",
+      "key": "a5beab9dd2db0df517f5fa0df1529a6163fc15e4",
+      "axes": {
+        "Selected": "true",
+        "State": "Hover"
+      },
+      "reference": [
+        258,
+        48
+      ],
+      "sizing": [
+        "FIXED",
+        "HUG"
+      ],
+      "gap": 16,
+      "padding": [
+        8,
+        16,
+        8,
+        16
+      ],
+      "children": [
+        {
+          "id": "257:521",
+          "name": "Title",
+          "type": "SLOT",
+          "visible": true
+        },
+        {
+          "id": "257:523",
+          "name": "Updated",
+          "type": "TEXT",
+          "visible": false
+        },
+        {
+          "id": "257:524",
+          "name": "Actions",
+          "type": "SLOT",
+          "visible": true
+        },
+        {
+          "id": "628:9013",
+          "name": "Dot",
+          "type": "INSTANCE",
+          "visible": false
+        }
+      ],
+      "reactions": []
+    }
+  ],
+  "consumers": {
+    "scope": "Chat Sidebar set 258:3326 only; matches by exact instance name",
+    "visited": 552,
+    "matches": [
+      {
+        "id": "I258:3328;257:602;258:3342",
+        "name": "Chat History Item",
+        "mainComponent": {
+          "id": "257:513",
+          "key": "5e9333476b3c790a86531b56638387f1da4ca7ac"
+        },
+        "width": 232,
+        "height": 40,
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "componentProperties": {
+          "Actions#796:15": {
+            "type": "SLOT",
+            "preferredValues": []
+          },
+          "Title#796:13": {
+            "type": "SLOT",
+            "preferredValues": []
+          },
+          "Updated#796:14": {
+            "type": "TEXT",
+            "value": "1 sem"
+          },
+          "show notification#628:0": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Selected": {
+            "value": "true",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "overrides": [
+          {
+            "id": "I258:3328;257:602;258:3342",
+            "overriddenFields": [
+              "height",
+              "width"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "I258:3328;257:602;258:3343",
+        "name": "Chat History Item",
+        "mainComponent": {
+          "id": "257:499",
+          "key": "21482a589fc01b58d4914f7647241b09245f9455"
+        },
+        "width": 232,
+        "height": 40,
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "componentProperties": {
+          "Actions#796:15": {
+            "type": "SLOT",
+            "preferredValues": []
+          },
+          "Title#796:13": {
+            "type": "SLOT",
+            "preferredValues": []
+          },
+          "Updated#796:14": {
+            "type": "TEXT",
+            "value": "1 sem"
+          },
+          "show notification#628:0": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Selected": {
+            "value": "false",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "overrides": [
+          {
+            "id": "I258:3328;257:602;258:3343",
+            "overriddenFields": [
+              "height",
+              "width"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "I258:3355;257:602;258:3365",
+        "name": "Chat History Item",
+        "mainComponent": {
+          "id": "257:499",
+          "key": "21482a589fc01b58d4914f7647241b09245f9455"
+        },
+        "width": 232,
+        "height": 40,
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "componentProperties": {
+          "Actions#796:15": {
+            "type": "SLOT",
+            "preferredValues": []
+          },
+          "Title#796:13": {
+            "type": "SLOT",
+            "preferredValues": []
+          },
+          "Updated#796:14": {
+            "type": "TEXT",
+            "value": "1 sem"
+          },
+          "show notification#628:0": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Selected": {
+            "value": "false",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "overrides": [
+          {
+            "id": "I258:3355;257:602;258:3365",
+            "overriddenFields": [
+              "height",
+              "width"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "I258:3367;257:602;258:3377",
+        "name": "Chat History Item",
+        "mainComponent": {
+          "id": "257:513",
+          "key": "5e9333476b3c790a86531b56638387f1da4ca7ac"
+        },
+        "width": 232,
+        "height": 40,
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "componentProperties": {
+          "Actions#796:15": {
+            "type": "SLOT",
+            "preferredValues": []
+          },
+          "Title#796:13": {
+            "type": "SLOT",
+            "preferredValues": []
+          },
+          "Updated#796:14": {
+            "type": "TEXT",
+            "value": "1 sem"
+          },
+          "show notification#628:0": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Selected": {
+            "value": "true",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "overrides": [
+          {
+            "id": "I258:3367;257:602;258:3377",
+            "overriddenFields": [
+              "height",
+              "width"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "I258:3389;257:602;258:3399",
+        "name": "Chat History Item",
+        "mainComponent": {
+          "id": "257:499",
+          "key": "21482a589fc01b58d4914f7647241b09245f9455"
+        },
+        "width": 232,
+        "height": 40,
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "componentProperties": {
+          "Actions#796:15": {
+            "type": "SLOT",
+            "preferredValues": []
+          },
+          "Title#796:13": {
+            "type": "SLOT",
+            "preferredValues": []
+          },
+          "Updated#796:14": {
+            "type": "TEXT",
+            "value": "1 sem"
+          },
+          "show notification#628:0": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Selected": {
+            "value": "false",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "overrides": [
+          {
+            "id": "I258:3389;257:602;258:3399",
+            "overriddenFields": [
+              "height",
+              "width"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "I258:3401;257:602;258:3411",
+        "name": "Chat History Item",
+        "mainComponent": {
+          "id": "257:513",
+          "key": "5e9333476b3c790a86531b56638387f1da4ca7ac"
+        },
+        "width": 232,
+        "height": 40,
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "componentProperties": {
+          "Actions#796:15": {
+            "type": "SLOT",
+            "preferredValues": []
+          },
+          "Title#796:13": {
+            "type": "SLOT",
+            "preferredValues": []
+          },
+          "Updated#796:14": {
+            "type": "TEXT",
+            "value": "1 sem"
+          },
+          "show notification#628:0": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Selected": {
+            "value": "true",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "overrides": [
+          {
+            "id": "I258:3401;257:602;258:3411",
+            "overriddenFields": [
+              "height",
+              "width"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "I258:3423;257:602;258:3433",
+        "name": "Chat History Item",
+        "mainComponent": {
+          "id": "257:499",
+          "key": "21482a589fc01b58d4914f7647241b09245f9455"
+        },
+        "width": 232,
+        "height": 40,
+        "layoutSizingHorizontal": "FILL",
+        "layoutSizingVertical": "HUG",
+        "componentProperties": {
+          "Actions#796:15": {
+            "type": "SLOT",
+            "preferredValues": []
+          },
+          "Title#796:13": {
+            "type": "SLOT",
+            "preferredValues": []
+          },
+          "Updated#796:14": {
+            "type": "TEXT",
+            "value": "1 sem"
+          },
+          "show notification#628:0": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Selected": {
+            "value": "false",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "overrides": [
+          {
+            "id": "I258:3423;257:602;258:3433",
+            "overriddenFields": [
+              "height",
+              "width"
+            ]
+          }
+        ]
+      }
+    ],
+    "captured_at": "2026-11-24T15:51:12.233Z",
+    "read_only": true
+  },
+  "qa_scope": {
+    "nodes": 65,
+    "instances": 28,
+    "unique_components": 4,
+    "variables": 84,
+    "direct_variables": 26,
+    "transitive_alias_variables": 58,
+    "named_styles": 0,
+    "modes": [
+      "Contable",
+      "Administrativo",
+      "Servicios",
+      "Personas"
+    ],
+    "unresolved_aliases": 0,
+    "boolean_toggle_test": "NOT_EXECUTED",
+    "slot_operations": "NOT_REEXECUTED",
+    "web_status": "STALE_FOR_NOTIFICATION",
+    "figma_variant_description_version_tag": "v0.1.0 (observed; unchanged)"
+  }
+}

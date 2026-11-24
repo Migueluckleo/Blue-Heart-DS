@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "run": "2026-11-24-chat-history-header-app-shell",
+  "closure_status": "COMPLETE_LOCAL",
+  "source_fingerprint": "0af169be246a589269fb1ebb8d94c68f8f3bbc4f455fff99cc64add092aa93e9",
+  "ds_digest": "e707e7ea46fe8e01e2e61a5418e74a566d2232796970a05bc6edb124523258ff",
+  "graph": {
+    "status": "CURRENT",
+    "files": 1509,
+    "nodes": 6937,
+    "edges": 13911,
+    "declared_dependencies": {
+      "status": "PASS",
+      "declared": 170,
+      "verified": 170,
+      "missing": []
+    },
+    "verified_output_sha256": {
+      "graph.json": "6aef9d67e3f1bccc955d9e8a5d63f76fa969a30a8817ef980747b1d26e7d51b9",
+      "graph.html": "08955d379255b9147465cd945489938b6f39229bef8eb2710ebd269349e04529",
+      "GRAPH_REPORT.md": "491004b75386f611a73b716240fee1fc8c6894404906c278cc11e914c41c23e1",
+      "manifest.json": "55f6260e287eee8d1a4469bdf7673169adad90d2bdcf0fee259a2c3443a2fb09",
+      ".graphify_health.json": "d1500d3d0bc8b20f896a4b137806273968c5680a3ce4ae0ebf58a3a827405cb8",
+      ".graphify_labels.json": "c6528bcae7e8b45e3c149f463c7a23150bdf6248b927ccfe32259c4a28cad5bc",
+      ".graphify_labels.json.sig": "ab55e10de9a171a39f95b37ce0b288a30a47ba850a831a4acdc8f736362a1c74",
+      "cost.json": "463107c0a28928064d100d696c3e8ef27b871ba6600f96b69fd30c7a2a3d9f22"
+    },
+    "paths": 5,
+    "query": "Bounded BFS query (900 tokens) was truncated; five exact-ID undirected paths separately verified. No completeness inferred from query.",
+    "cli_path_limitation": "CLI path resolved both full-ID arguments to the same artifact node; its failure is preserved in graph-path-header.txt. The five PASS paths were computed separately from exact IDs in the verified graph.json using undirected BFS."
+  },
+  "catalog": {
+    "status": "CURRENT",
+    "files": 1468,
+    "families": 52,
+    "manifest": "catalog/releases/17d2855db8f7afc3d8cc9ba868f5edd9be243709bb82a45d462a6cdfb552e319/manifest.json",
+    "manifest_sha256": "17d2855db8f7afc3d8cc9ba868f5edd9be243709bb82a45d462a6cdfb552e319",
+    "bundle_sha256": "793f2ea2681871fd79ff705a51a89814c7dd35879a35d460e2d350194111bb51"
+  },
+  "canonical_tokens": {
+    "sources": 17,
+    "effective": 1538,
+    "body": 61,
+    "caution": 21,
+    "all_source_hashes_match_catalog": true
+  },
+  "launchers": {
+    "version": "1.0.9",
+    "operation": "UNCHANGED",
+    "manifest_sha256": "6acc1ad75f99b4ba5307a583fe169a0c655ebb4324175caa06ec6006adffcb41"
+  },
+  "publication": "NOT_RUN",
+  "installation": "NOT_RUN",
+  "pins": {
+    "output/closures/2026-11-24-chat-history-header-app-shell.json": "5a8d2dba2e7cacf297b3a0bda14ee8502b32b7194679acadbc417e1667a8f272",
+    "catalog/current.json": "09860fba98b9b078763c057aa8fbbf95ae24b38e9162797f0e6ac24b80fbd3e4",
+    "catalog/releases/17d2855db8f7afc3d8cc9ba868f5edd9be243709bb82a45d462a6cdfb552e319/manifest.json": "17d2855db8f7afc3d8cc9ba868f5edd9be243709bb82a45d462a6cdfb552e319",
+    "graphify-out/ds-closure.json": "b687751314363587ec2edf46ceb2228c282438e593d5dbf9774072ad9d973d1b",
+    "implementations/web/src/generated/tokens.manifest.json": "96d31245dc9d1380b586de7621718fda22713d89af8510fbc6a407a43d582420",
+    "config/web-inputs.json": "ec72966f963b25a220a0fcd7bfe6a141a6111814dfe375bae0c1c1027b735b12",
+    "output/skills/current.json": "3706287bcb8932b7981c23b4e6e5c116a31695d0443de690b6c76c8b792eeb02"
+  },
+  "pending_web": [
+    "ConversationResponsePreview inline title/Badge layout",
+    "ChatHistoryItem notification boolean/Dot"
+  ],
+  "pending_figma_metadata": [
+    "Chat History Item variant descriptions still v0.1.0"
+  ],
+  "usage_status": "UNAVAILABLE, not zero"
+}

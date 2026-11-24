@@ -1,0 +1,3216 @@
+{
+  "before": {
+    "page": "258:3325",
+    "properties": {
+      "Content#258:0": {
+        "type": "SLOT",
+        "description": "Secciones del panel expandido.",
+        "slotSettings": {
+          "stretchChildOnInsert": true,
+          "displayEmptyByDefault": false,
+          "minChildren": null,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": false
+        },
+        "preferredValues": []
+      },
+      "View": {
+        "type": "VARIANT",
+        "defaultValue": "Chats",
+        "variantOptions": [
+          "Chats",
+          "Indicadores",
+          "Papeles de trabajo",
+          "Vinculaciones",
+          "none"
+        ]
+      },
+      "Mode": {
+        "type": "VARIANT",
+        "defaultValue": "Panel",
+        "variantOptions": [
+          "Panel",
+          "Rail"
+        ]
+      }
+    },
+    "variants": [
+      {
+        "id": "258:1820",
+        "name": "View=Chats, Mode=Panel",
+        "wh": [
+          264,
+          791
+        ],
+        "children": [
+          [
+            "258:1766",
+            "Header",
+            "FRAME"
+          ],
+          [
+            "258:1771",
+            "Frame 2",
+            "FRAME"
+          ],
+          [
+            "258:1773",
+            "Content region",
+            "FRAME"
+          ],
+          [
+            "258:1816",
+            "__Dropdown/Scrollbar small vertical",
+            "INSTANCE"
+          ]
+        ]
+      },
+      {
+        "id": "258:2011",
+        "name": "View=Indicadores, Mode=Panel",
+        "wh": [
+          264,
+          791
+        ],
+        "children": [
+          [
+            "258:1964",
+            "Header",
+            "FRAME"
+          ],
+          [
+            "258:1969",
+            "Frame 2",
+            "FRAME"
+          ],
+          [
+            "258:1971",
+            "Content region",
+            "FRAME"
+          ],
+          [
+            "258:2007",
+            "__Dropdown/Scrollbar small vertical",
+            "INSTANCE"
+          ]
+        ]
+      },
+      {
+        "id": "258:2183",
+        "name": "View=Papeles de trabajo, Mode=Panel",
+        "wh": [
+          264,
+          791
+        ],
+        "children": [
+          [
+            "258:2136",
+            "Header",
+            "FRAME"
+          ],
+          [
+            "258:2141",
+            "Frame 2",
+            "FRAME"
+          ],
+          [
+            "258:2143",
+            "Content region",
+            "FRAME"
+          ],
+          [
+            "258:2179",
+            "__Dropdown/Scrollbar small vertical",
+            "INSTANCE"
+          ]
+        ]
+      },
+      {
+        "id": "258:2331",
+        "name": "View=Vinculaciones, Mode=Panel",
+        "wh": [
+          264,
+          791
+        ],
+        "children": [
+          [
+            "258:2308",
+            "Header",
+            "FRAME"
+          ],
+          [
+            "258:2313",
+            "Frame 2",
+            "FRAME"
+          ],
+          [
+            "258:2326",
+            "Content region",
+            "FRAME"
+          ]
+        ]
+      },
+      {
+        "id": "258:2500",
+        "name": "View=none, Mode=Rail",
+        "wh": [
+          79,
+          791
+        ],
+        "children": [
+          [
+            "258:2446",
+            "Header",
+            "FRAME"
+          ],
+          [
+            "258:2632",
+            "collapsed plan",
+            "INSTANCE"
+          ]
+        ],
+        "controls": [
+          {
+            "id": "258:2637",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              0
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "246:2409",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "246:2409",
+              "key": "81c10c25593d451160897a03ccc39cd1fc7fad27",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:2637;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:2637;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "258:2644",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              80
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "246:3861",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "246:3861",
+              "key": "9c503743dfd1c4221544004d27ad53c079802dd6",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:2644;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:2644;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "258:2651",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              160
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "218:1205",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "218:1205",
+              "key": "90e6fea88275f3f4a8691a863e5a3bbb3bfc17e8",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:2651;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:2651;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "258:2658",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              240
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "251:4774",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "251:4774",
+              "key": "fe6b9a04ab933f080e2bffda99b1f92d7a2d4e92",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:2658;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:2658;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "283:8726",
+        "name": "View=Chats, Mode=Rail",
+        "wh": [
+          79,
+          791
+        ],
+        "children": [
+          [
+            "283:8727",
+            "Header",
+            "FRAME"
+          ],
+          [
+            "283:8732",
+            "collapsed plan",
+            "INSTANCE"
+          ]
+        ],
+        "controls": [
+          {
+            "id": "283:8728",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              0
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0.05882352963089943,
+                  "g": 0.09019608050584793,
+                  "b": 0.16470588743686676
+                },
+                "boundVariables": {}
+              }
+            ],
+            "props": {
+              "Show badge#59:55": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:46": {
+                "type": "INSTANCE_SWAP",
+                "value": "246:2409",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "246:2409",
+              "key": "81c10c25593d451160897a03ccc39cd1fc7fad27",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 1,
+                      "g": 1,
+                      "b": 1
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:809"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I283:8728;59:246",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I283:8728;59:248",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "283:8729",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              80
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "246:3861",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "246:3861",
+              "key": "9c503743dfd1c4221544004d27ad53c079802dd6",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I283:8729;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I283:8729;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "283:8730",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              160
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "218:1205",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "218:1205",
+              "key": "90e6fea88275f3f4a8691a863e5a3bbb3bfc17e8",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I283:8730;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I283:8730;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "283:8731",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              240
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "251:4774",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "251:4774",
+              "key": "fe6b9a04ab933f080e2bffda99b1f92d7a2d4e92",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I283:8731;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I283:8731;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "258:2720",
+        "name": "View=Indicadores, Mode=Rail",
+        "wh": [
+          79,
+          791
+        ],
+        "children": [
+          [
+            "258:2666",
+            "Header",
+            "FRAME"
+          ],
+          [
+            "258:2852",
+            "collapsed plan",
+            "INSTANCE"
+          ]
+        ],
+        "controls": [
+          {
+            "id": "258:2857",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              0
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "246:2409",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "246:2409",
+              "key": "81c10c25593d451160897a03ccc39cd1fc7fad27",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:2857;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:2857;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "258:2864",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              80
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0.05882352963089943,
+                  "g": 0.09019608050584793,
+                  "b": 0.16470588743686676
+                },
+                "boundVariables": {}
+              }
+            ],
+            "props": {
+              "Show badge#59:55": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:46": {
+                "type": "INSTANCE_SWAP",
+                "value": "246:3861",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "246:3861",
+              "key": "9c503743dfd1c4221544004d27ad53c079802dd6",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 1,
+                      "g": 1,
+                      "b": 1
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:809"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:2864;59:246",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:2864;59:248",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "258:2871",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              160
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "218:1205",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "218:1205",
+              "key": "90e6fea88275f3f4a8691a863e5a3bbb3bfc17e8",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:2871;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:2871;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "258:2878",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              240
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "251:4774",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "251:4774",
+              "key": "fe6b9a04ab933f080e2bffda99b1f92d7a2d4e92",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:2878;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:2878;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "258:2940",
+        "name": "View=Papeles de trabajo, Mode=Rail",
+        "wh": [
+          79,
+          791
+        ],
+        "children": [
+          [
+            "258:2886",
+            "Header",
+            "FRAME"
+          ],
+          [
+            "258:3072",
+            "collapsed plan",
+            "INSTANCE"
+          ]
+        ],
+        "controls": [
+          {
+            "id": "258:3077",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              0
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "246:2409",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "246:2409",
+              "key": "81c10c25593d451160897a03ccc39cd1fc7fad27",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:3077;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:3077;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "258:3084",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              80
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "246:3861",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "246:3861",
+              "key": "9c503743dfd1c4221544004d27ad53c079802dd6",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:3084;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:3084;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "258:3091",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              160
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0.05882352963089943,
+                  "g": 0.09019608050584793,
+                  "b": 0.16470588743686676
+                },
+                "boundVariables": {}
+              }
+            ],
+            "props": {
+              "Show badge#59:55": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:46": {
+                "type": "INSTANCE_SWAP",
+                "value": "218:1205",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "218:1205",
+              "key": "90e6fea88275f3f4a8691a863e5a3bbb3bfc17e8",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 1,
+                      "g": 1,
+                      "b": 1
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:809"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:3091;59:246",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:3091;59:248",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "258:3098",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              240
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "251:4774",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "251:4774",
+              "key": "fe6b9a04ab933f080e2bffda99b1f92d7a2d4e92",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:3098;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:3098;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "258:3160",
+        "name": "View=Vinculaciones, Mode=Rail",
+        "wh": [
+          79,
+          791
+        ],
+        "children": [
+          [
+            "258:3106",
+            "Header",
+            "FRAME"
+          ],
+          [
+            "258:3292",
+            "collapsed plan",
+            "INSTANCE"
+          ]
+        ],
+        "controls": [
+          {
+            "id": "258:3297",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              0
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "246:2409",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "246:2409",
+              "key": "81c10c25593d451160897a03ccc39cd1fc7fad27",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:3297;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:3297;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "258:3304",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              80
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "246:3861",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "246:3861",
+              "key": "9c503743dfd1c4221544004d27ad53c079802dd6",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:3304;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:3304;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "258:3311",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              160
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [],
+            "props": {
+              "Show badge#59:7": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:0": {
+                "type": "INSTANCE_SWAP",
+                "value": "218:1205",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "selected": {
+                "value": "false",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "218:1205",
+              "key": "90e6fea88275f3f4a8691a863e5a3bbb3bfc17e8",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 0.05882352963089943,
+                      "g": 0.09019608050584793,
+                      "b": 0.16470588743686676
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:830"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:3311;59:42",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:3311;59:44",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          },
+          {
+            "id": "258:3318",
+            "name": "Sidebar control",
+            "xy": [
+              -0.5,
+              240
+            ],
+            "wh": [
+              48,
+              48
+            ],
+            "radius": 8,
+            "fills": [
+              {
+                "type": "SOLID",
+                "visible": true,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 0.05882352963089943,
+                  "g": 0.09019608050584793,
+                  "b": 0.16470588743686676
+                },
+                "boundVariables": {}
+              }
+            ],
+            "props": {
+              "Show badge#59:55": {
+                "type": "BOOLEAN",
+                "value": false
+              },
+              "Icon#59:46": {
+                "type": "INSTANCE_SWAP",
+                "value": "251:4774",
+                "preferredValues": []
+              },
+              "size": {
+                "value": "large",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "state": {
+                "value": "default",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            },
+            "icon": {
+              "id": "251:4774",
+              "key": "fe6b9a04ab933f080e2bffda99b1f92d7a2d4e92",
+              "name": "Format=Outline, Weight=Light",
+              "remote": true
+            },
+            "vectors": [
+              [
+                "Vector",
+                true,
+                [
+                  {
+                    "type": "SOLID",
+                    "visible": true,
+                    "opacity": 1,
+                    "blendMode": "NORMAL",
+                    "color": {
+                      "r": 1,
+                      "g": 1,
+                      "b": 1
+                    },
+                    "boundVariables": {
+                      "color": {
+                        "type": "VARIABLE_ALIAS",
+                        "id": "VariableID:8:809"
+                      }
+                    }
+                  }
+                ]
+              ]
+            ],
+            "children": [
+              [
+                "I258:3318;59:246",
+                "Icon",
+                "INSTANCE",
+                true,
+                24,
+                24
+              ],
+              [
+                "I258:3318;59:248",
+                "Badge anchor",
+                "FRAME",
+                true,
+                0.00009999999747378752,
+                20
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "pages": [
+      [
+        "0:1",
+        "Thumbnail"
+      ],
+      [
+        "65:274",
+        "----"
+      ],
+      [
+        "105:2",
+        "App Shell"
+      ],
+      [
+        "83:2",
+        "Avatars"
+      ],
+      [
+        "64:2",
+        "Badge"
+      ],
+      [
+        "47:74",
+        "Breadcrumbs"
+      ],
+      [
+        "22:3",
+        "Buttons"
+      ],
+      [
+        "187:14",
+        "Characters"
+      ],
+      [
+        "242:658",
+        "Chat"
+      ],
+      [
+        "452:2",
+        "Chat Document Viewer"
+      ],
+      [
+        "257:586",
+        "Chat History Item"
+      ],
+      [
+        "257:624",
+        "Chat Plan Usage"
+      ],
+      [
+        "258:3325",
+        "Chat Sidebar"
+      ],
+      [
+        "257:603",
+        "Chat Sidebar Section"
+      ],
+      [
+        "257:497",
+        "Chat Tool Item"
+      ],
+      [
+        "42:2",
+        "Checkbox"
+      ],
+      [
+        "126:2",
+        "Chips"
+      ],
+      [
+        "216:109",
+        "Conversation Composer"
+      ],
+      [
+        "222:309",
+        "Conversation Response"
+      ],
+      [
+        "32:26",
+        "Dot"
+      ],
+      [
+        "118:2",
+        "Dropdown"
+      ],
+      [
+        "42:31",
+        "File Upload"
+      ],
+      [
+        "122:2",
+        "Floating Actions"
+      ],
+      [
+        "90:2",
+        "Header"
+      ],
+      [
+        "59:2",
+        "Icon Buttons"
+      ],
+      [
+        "122:49",
+        "Inline Notification"
+      ],
+      [
+        "93:2",
+        "Input"
+      ],
+      [
+        "39:2",
+        "Linear Progress Bar"
+      ],
+      [
+        "22:2",
+        "Loader"
+      ],
+      [
+        "170:2",
+        "Logos"
+      ],
+      [
+        "109:2",
+        "Pagination"
+      ],
+      [
+        "32:119",
+        "Radio Buttons"
+      ],
+      [
+        "47:2",
+        "Search"
+      ],
+      [
+        "96:2",
+        "Section Header"
+      ],
+      [
+        "54:2",
+        "Sidebar"
+      ],
+      [
+        "155:2",
+        "Steppers"
+      ],
+      [
+        "128:2",
+        "Table"
+      ],
+      [
+        "113:2",
+        "Tabs"
+      ],
+      [
+        "116:2",
+        "Text Area"
+      ],
+      [
+        "32:74",
+        "Toggle"
+      ],
+      [
+        "38:2",
+        "Tooltip"
+      ],
+      [
+        "237:20",
+        "User message"
+      ],
+      [
+        "203:92",
+        "----"
+      ],
+      [
+        "203:93",
+        "Playground"
+      ]
+    ]
+  },
+  "badge": {
+    "badge": [
+      {
+        "id": "I258:2637;59:45",
+        "name": "Badge",
+        "visible": false,
+        "w": 20,
+        "h": 20,
+        "m": "32:42",
+        "props": {
+          "Max count#32:5": {
+            "type": "TEXT",
+            "value": "99+"
+          },
+          "Count#32:0": {
+            "type": "TEXT",
+            "value": "1"
+          },
+          "type": {
+            "value": "count",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "size": {
+            "value": "large",
+            "type": "VARIANT",
+            "boundVariables": {}
+          },
+          "color": {
+            "value": "default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      }
+    ],
+    "parent": "258:2446",
+    "clip": [
+      false,
+      false
+    ],
+    "references": [
+      {
+        "id": "299:1331",
+        "name": "Chat Sidebar",
+        "main": "View=none, Mode=Rail",
+        "wh": [
+          79,
+          741
+        ],
+        "overrides": [
+          {
+            "id": "299:1331",
+            "overriddenFields": [
+              "fills",
+              "height",
+              "layoutPositioning",
+              "minHeight",
+              "minWidth",
+              "width"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "299:2119",
+        "name": "Chat Sidebar",
+        "main": "View=none, Mode=Rail",
+        "wh": [
+          79,
+          741
+        ],
+        "overrides": [
+          {
+            "id": "299:2119",
+            "overriddenFields": [
+              "fills",
+              "height",
+              "layoutPositioning",
+              "minHeight",
+              "minWidth",
+              "width"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "453:5316",
+        "name": "Chat Sidebar",
+        "main": "View=none, Mode=Rail",
+        "wh": [
+          79,
+          741
+        ],
+        "overrides": [
+          {
+            "id": "453:5316",
+            "overriddenFields": [
+              "fills",
+              "height",
+              "layoutPositioning",
+              "minHeight",
+              "minWidth",
+              "width"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "453:5440",
+        "name": "Chat Sidebar",
+        "main": "View=none, Mode=Rail",
+        "wh": [
+          79,
+          741
+        ],
+        "overrides": [
+          {
+            "id": "453:5440",
+            "overriddenFields": [
+              "fills",
+              "height",
+              "layoutPositioning",
+              "minHeight",
+              "minWidth",
+              "width"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "local_foundations": {
+    "look": [
+      {
+        "id": "258:2637",
+        "main": "59:3",
+        "parent": [
+          "258:2446",
+          "Header",
+          47,
+          "VERTICAL",
+          32
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "59:47",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "59:47",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false,
+                "resetScrollPosition": true
+              }
+            ],
+            "trigger": {
+              "type": "MOUSE_ENTER",
+              "delay": 0
+            }
+          }
+        ],
+        "strokes": [],
+        "bv": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:804"
+          },
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:804"
+          },
+          "paddingTop": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:804"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:804"
+          },
+          "paddingBottom": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:804"
+          },
+          "width": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:806"
+          },
+          "height": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:806"
+          },
+          "topLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:805"
+          },
+          "topRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:805"
+          },
+          "bottomLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:805"
+          },
+          "bottomRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:805"
+          }
+        },
+        "children": [
+          {
+            "name": "Icon",
+            "id": "I258:2637;59:42",
+            "type": "INSTANCE",
+            "x": 11.999950408935547,
+            "y": 12,
+            "w": 24,
+            "h": 24,
+            "abs": "AUTO",
+            "mRef": "246:2409",
+            "fill": [
+              {
+                "type": "SOLID",
+                "visible": false,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "boundVariables": {}
+              }
+            ],
+            "bv": {
+              "width": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:808"
+              },
+              "height": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:808"
+              }
+            }
+          },
+          {
+            "name": "Badge anchor",
+            "id": "I258:2637;59:44",
+            "type": "FRAME",
+            "x": 46,
+            "y": 2,
+            "w": 0.00009999999747378752,
+            "h": 20,
+            "abs": "ABSOLUTE",
+            "mRef": null,
+            "fill": [],
+            "bv": {
+              "itemSpacing": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:804"
+              },
+              "paddingLeft": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:804"
+              },
+              "paddingTop": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:804"
+              },
+              "paddingRight": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:804"
+              },
+              "paddingBottom": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:804"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "283:8728",
+        "main": "59:245",
+        "parent": [
+          "283:8727",
+          "Header",
+          47,
+          "VERTICAL",
+          32
+        ],
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "59:262",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "59:262",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false,
+                "resetScrollPosition": true
+              }
+            ],
+            "trigger": {
+              "type": "MOUSE_ENTER",
+              "delay": 0
+            }
+          }
+        ],
+        "strokes": [],
+        "bv": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:804"
+          },
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:804"
+          },
+          "paddingTop": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:804"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:804"
+          },
+          "paddingBottom": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:804"
+          },
+          "width": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:806"
+          },
+          "height": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:806"
+          },
+          "topLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:805"
+          },
+          "topRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:805"
+          },
+          "bottomLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:805"
+          },
+          "bottomRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:805"
+          }
+        },
+        "children": [
+          {
+            "name": "Icon",
+            "id": "I283:8728;59:246",
+            "type": "INSTANCE",
+            "x": 11.999950408935547,
+            "y": 12,
+            "w": 24,
+            "h": 24,
+            "abs": "AUTO",
+            "mRef": "246:2409",
+            "fill": [
+              {
+                "type": "SOLID",
+                "visible": false,
+                "opacity": 1,
+                "blendMode": "NORMAL",
+                "color": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1
+                },
+                "boundVariables": {}
+              }
+            ],
+            "bv": {
+              "width": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:808"
+              },
+              "height": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:808"
+              }
+            }
+          },
+          {
+            "name": "Badge anchor",
+            "id": "I283:8728;59:248",
+            "type": "FRAME",
+            "x": 46,
+            "y": 2,
+            "w": 0.00009999999747378752,
+            "h": 20,
+            "abs": "ABSOLUTE",
+            "mRef": null,
+            "fill": [],
+            "bv": {
+              "itemSpacing": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:804"
+              },
+              "paddingLeft": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:804"
+              },
+              "paddingTop": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:804"
+              },
+              "paddingRight": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:804"
+              },
+              "paddingBottom": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:804"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "32:41",
+        "main": "32:41",
+        "parent": [
+          "32:33",
+          "Dot",
+          1059,
+          "NONE",
+          0
+        ],
+        "reactions": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:8:519"
+              }
+            }
+          }
+        ],
+        "bv": {
+          "width": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:521"
+          },
+          "height": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:521"
+          },
+          "topLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "topRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "bottomLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "bottomRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:525"
+          },
+          "strokeTopWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeBottomWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeLeftWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "strokeRightWeight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:8:526"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:8:517"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:8:519"
+            }
+          ]
+        },
+        "children": []
+      }
+    ],
+    "tokens": [
+      [
+        "neutral-base",
+        "VariableID:8:192",
+        "neutral/100"
+      ],
+      [
+        "neutral-subtle",
+        "VariableID:8:193",
+        "neutral/200"
+      ],
+      [
+        "neutral-muted",
+        "VariableID:8:194",
+        "neutral/300"
+      ],
+      [
+        "neutral-soft",
+        "VariableID:8:195",
+        "neutral/400"
+      ],
+      [
+        "neutral-medium",
+        "VariableID:8:196",
+        "neutral/500"
+      ],
+      [
+        "neutral-strong",
+        "VariableID:8:197",
+        "neutral/600"
+      ],
+      [
+        "neutral-intense",
+        "VariableID:8:198",
+        "neutral/700"
+      ],
+      [
+        "neutral-deep",
+        "VariableID:8:199",
+        "neutral/800"
+      ],
+      [
+        "neutral-maximum",
+        "VariableID:8:200",
+        "neutral/900"
+      ],
+      [
+        "spacing-none",
+        "VariableID:8:217",
+        "spacing/0"
+      ],
+      [
+        "spacing-5xl",
+        "VariableID:8:218",
+        "spacing/56"
+      ],
+      [
+        "spacing-6xl",
+        "VariableID:8:219",
+        "spacing/64"
+      ],
+      [
+        "size-md",
+        "VariableID:8:245",
+        "size/md"
+      ],
+      [
+        "spacing-md",
+        "VariableID:8:246",
+        "spacing/12"
+      ],
+      [
+        "radius-none",
+        "VariableID:8:248",
+        "radius/0"
+      ],
+      [
+        "stroke-none",
+        "VariableID:8:249",
+        "stroke/0"
+      ],
+      [
+        "stroke-xs",
+        "VariableID:8:250",
+        "stroke/1"
+      ],
+      [
+        "stroke-sm",
+        "VariableID:8:251",
+        "stroke/1-5"
+      ],
+      [
+        "stroke-md",
+        "VariableID:8:252",
+        "stroke/2"
+      ],
+      [
+        "spacing-xs",
+        "VariableID:8:253",
+        "spacing/4"
+      ],
+      [
+        "spacing-sm",
+        "VariableID:8:254",
+        "spacing/8"
+      ],
+      [
+        "spacing-lg",
+        "VariableID:8:255",
+        "spacing/16"
+      ],
+      [
+        "spacing-xl",
+        "VariableID:8:256",
+        "spacing/24"
+      ],
+      [
+        "spacing-2xl",
+        "VariableID:8:257",
+        "spacing/32"
+      ],
+      [
+        "spacing-3xl",
+        "VariableID:8:258",
+        "spacing/40"
+      ],
+      [
+        "spacing-4xl",
+        "VariableID:8:259",
+        "spacing/48"
+      ],
+      [
+        "size-xs",
+        "VariableID:8:260",
+        "size/xs"
+      ],
+      [
+        "size-sm",
+        "VariableID:8:261",
+        "size/sm"
+      ],
+      [
+        "size-lg",
+        "VariableID:8:262",
+        "size/lg"
+      ],
+      [
+        "radius-xs",
+        "VariableID:8:263",
+        "radius/2"
+      ],
+      [
+        "size-2xl",
+        "VariableID:8:264",
+        "size/2xl"
+      ],
+      [
+        "size-3xl",
+        "VariableID:8:265",
+        "size/3xl"
+      ],
+      [
+        "size-4xl",
+        "VariableID:8:266",
+        "size/4xl"
+      ],
+      [
+        "size-5xl",
+        "VariableID:8:267",
+        "size/5xl"
+      ],
+      [
+        "size-6xl",
+        "VariableID:8:268",
+        "size/6xl"
+      ],
+      [
+        "size-7xl",
+        "VariableID:8:269",
+        "size/7xl"
+      ],
+      [
+        "radius-sm",
+        "VariableID:8:270",
+        "radius/4"
+      ],
+      [
+        "radius-md",
+        "VariableID:8:271",
+        "radius/8"
+      ],
+      [
+        "radius-lg",
+        "VariableID:8:272",
+        "radius/12"
+      ],
+      [
+        "radius-xl",
+        "VariableID:8:273",
+        "radius/16"
+      ],
+      [
+        "radius-2xl",
+        "VariableID:8:274",
+        "radius/24"
+      ],
+      [
+        "radius-3xl",
+        "VariableID:8:275",
+        "radius/32"
+      ],
+      [
+        "radius-full",
+        "VariableID:8:276",
+        "radius/9999"
+      ],
+      [
+        "size-xl",
+        "VariableID:8:277",
+        "size/xl"
+      ],
+      [
+        "stroke-lg",
+        "VariableID:8:278",
+        "stroke/4"
+      ],
+      [
+        "stroke-xl",
+        "VariableID:8:279",
+        "stroke/6"
+      ],
+      [
+        "stroke-2xl",
+        "VariableID:8:280",
+        "stroke/8"
+      ],
+      [
+        "spacing-overlap-xs",
+        "VariableID:8:281",
+        "spacing/negative-4"
+      ],
+      [
+        "spacing-overlap-sm",
+        "VariableID:8:282",
+        "spacing/negative-6"
+      ],
+      [
+        "spacing-overlap-md",
+        "VariableID:8:283",
+        "spacing/negative-8"
+      ],
+      [
+        "size-8xl",
+        "VariableID:8:284",
+        "size/8xl"
+      ],
+      [
+        "neutral-minimum",
+        "VariableID:8:286",
+        "neutral/50"
+      ],
+      [
+        "size-18",
+        "VariableID:8:287",
+        "size/18"
+      ],
+      [
+        "size-320",
+        "VariableID:8:288",
+        "size/320"
+      ],
+      [
+        "size-6",
+        "VariableID:8:290",
+        "size/6"
+      ],
+      [
+        "spacing-negative-2",
+        "VariableID:8:291",
+        "spacing/negative-2"
+      ],
+      [
+        "size-120",
+        "VariableID:8:292",
+        "size/120"
+      ],
+      [
+        "size-1152",
+        "VariableID:8:297",
+        "size/1152"
+      ],
+      [
+        "size-240",
+        "VariableID:8:298",
+        "size/240"
+      ],
+      [
+        "size-104",
+        "VariableID:8:299",
+        "size/104"
+      ],
+      [
+        "size-234",
+        "VariableID:8:302",
+        "size/234"
+      ],
+      [
+        "size-72",
+        "VariableID:8:304",
+        "size/72"
+      ],
+      [
+        "size-200",
+        "VariableID:8:305",
+        "size/200"
+      ],
+      [
+        "size-294",
+        "VariableID:8:306",
+        "size/294"
+      ],
+      [
+        "size-358",
+        "VariableID:8:307",
+        "size/358"
+      ],
+      [
+        "size-554",
+        "VariableID:8:308",
+        "size/554"
+      ],
+      [
+        "size-80",
+        "VariableID:227:3",
+        "size/80"
+      ],
+      [
+        "size-494",
+        "VariableID:237:3",
+        "size/494"
+      ],
+      [
+        "size-816",
+        "VariableID:242:417",
+        "size/816"
+      ],
+      [
+        "size-616",
+        "VariableID:245:195",
+        "size/616"
+      ],
+      [
+        "size-264",
+        "VariableID:257:365",
+        "size/264"
+      ],
+      [
+        "size-79",
+        "VariableID:257:366",
+        "size/79"
+      ],
+      [
+        "size-47",
+        "VariableID:257:367",
+        "size/47"
+      ],
+      [
+        "size-374",
+        "VariableID:451:4",
+        "size/374"
+      ],
+      [
+        "size-318",
+        "VariableID:486:34",
+        "size/318"
+      ]
+    ],
+    "collections": [
+      [
+        "semantic",
+        "VariableCollectionId:6:21",
+        [
+          {
+            "name": "Value",
+            "modeId": "6:19"
+          }
+        ]
+      ],
+      [
+        "component",
+        "VariableCollectionId:6:22",
+        [
+          {
+            "name": "Contable",
+            "modeId": "6:20"
+          },
+          {
+            "name": "Administrativo",
+            "modeId": "6:21"
+          },
+          {
+            "name": "Servicios",
+            "modeId": "6:22"
+          },
+          {
+            "name": "Personas",
+            "modeId": "6:23"
+          }
+        ]
+      ],
+      [
+        "primitives",
+        "VariableCollectionId:10:2",
+        [
+          {
+            "name": "Value",
+            "modeId": "10:0"
+          }
+        ]
+      ]
+    ],
+    "count": 1538,
+    "visible": [],
+    "exactBlack": [
+      [
+        "VariableID:11:85",
+        "neutral/900"
+      ]
+    ]
+  }
+}

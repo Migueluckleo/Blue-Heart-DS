@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "contract": "HEADER-APP-SHELL-SPACING-001",
+  "figma_requested_bindings": 62,
+  "figma_binding_count": 214,
+  "figma_overrides_checked": 36,
+  "figma_findings": [],
+  "existing_variables_preserved": 1536,
+  "effective_variables": 1538,
+  "new_variables": 2,
+  "preserved_body_product_bindings": 44,
+  "body_product_binding_equality": "EXACT",
+  "visible_body_tokens": 61,
+  "visible_non_body_tokens": 0,
+  "preservation": [
+    "oldVariablesSha256",
+    "collectionsSha256",
+    "bodyStylesSha256",
+    "visualAndLayoutSha256"
+  ],
+  "raster_comparison": {
+    "header": {
+      "status": "PASS",
+      "before_sha256": "1e6ecc9109481e9c9c7169a1bcc9dd06e781cd44f93e0564d02337b7801a505f",
+      "after_sha256": "1e6ecc9109481e9c9c7169a1bcc9dd06e781cd44f93e0564d02337b7801a505f"
+    },
+    "app-shell-grid": {
+      "status": "PASS",
+      "before_sha256": "f9a6e0a50caca32cdc741e7581210f818b5cac5c8a3567ae482f0b6c33e93f32",
+      "after_sha256": "f9a6e0a50caca32cdc741e7581210f818b5cac5c8a3567ae482f0b6c33e93f32"
+    },
+    "app-shell-conversation": {
+      "status": "PASS",
+      "before_sha256": "42a7a75b737a26263b1d1acd3c46c0594c1363e67d02fba2bb9e7cf082a2374f",
+      "after_sha256": "42a7a75b737a26263b1d1acd3c46c0594c1363e67d02fba2bb9e7cf082a2374f"
+    }
+  },
+  "canonical_manifest": {
+    "sources": 17,
+    "tokens": 1538,
+    "by_collection": {
+      "component": 1178,
+      "primitive": 9,
+      "primitives": 192,
+      "semantic": 159
+    },
+    "body": 61,
+    "caution_source_tokens": 21,
+    "sources_verified": true,
+    "normalized_collections": {
+      "primitives": 201,
+      "semantic": 159,
+      "component": 1178
+    },
+    "collection_note": "The Caution source uses collection label primitive (9); mapped into the existing Figma primitives collection with its prior 192. No collection rename or fourth physical collection."
+  },
+  "web": {
+    "status": "PASS",
+    "themes": 4,
+    "layout_cases": 32,
+    "interaction_groups": 4,
+    "page_errors": [],
+    "unit_tests": 18,
+    "typecheck": "PASS",
+    "build": "PASS",
+    "token_qa_02": "PASS"
+  },
+  "web_visuals_reviewed": [
+    "web-header.png",
+    "web-app-shell-grid.png",
+    "web-app-shell-conversation.png",
+    "web-app-shell-conversation-preview.png"
+  ],
+  "limitations": [
+    "Spacing scope only; no global raster equivalence between Figma and web product examples.",
+    "Preview inline layout and Chat History notification remain stale in web; documentary scope for those families.",
+    "No new native Slot editing gestures, responsive promise or full accessibility certification.",
+    "First sandbox attempt could not listen on localhost. Three verifier recovery attempts corrected fixture/selector assumptions; no resulting product fix."
+  ],
+  "input_sha256": {
+    "specs/tokens/header-app-shell.spacing.v1.0.0.json": "33e03dbc7c8557a467758de98e7b255b43643ebd7047b25491d32f1cc6ccef19",
+    "specs/data/header-app-shell.spacing.v1.0.0.json": "b72072e0473b7bd6577c37749185c1b6ec5f8d880fe575d456197e2e70dde88c",
+    "output/qa/header-app-shell-2026-11-24/web-browser.json": "2a9c860e20bf86bd8c50ec23682d7471bbdfa3a295da0697515a566dc8d343ae",
+    "output/qa/header-app-shell-2026-11-24/before.fingerprints.json": "ec371d9de12284f5c9b0dbf762c46371208de4b7ce3d312d8164f856bf8f80b4",
+    "output/qa/header-app-shell-2026-11-24/after.fingerprints.json": "c8202befdcfaef1b74b8fdedc7fbebc364fc51a5b55030d829cb9f4321ee0c60"
+  }
+}

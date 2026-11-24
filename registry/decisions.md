@@ -72,3 +72,23 @@ El usuario solicitó construir e implementar Caution en Figma desde primitivos h
 ## Body disabled y actualización de paquetes sin cambio de versión · 2026-11-23
 
 EXPLICIT: el usuario pidió corregir las cinco descriptions Dropdown en Figma, actualizar paquetes Figma local/portable con todos los tokens, agregar disabled de Body con sus focus y hacer QA/documentación. Aclaración vigente: focus son scopes por propiedad, no estados de foco. En un mensaje posterior solicitó verificar JSON canónicos, enviar el corte a los dos chats de skills autocontenidas conservando versiones, verificar todos los grafos y hacer push GitHub cuando todo esté al día. DERIVED: disabled reutiliza neutral-soft (text/shape), neutral-subtle (bg) y neutral-muted (stroke), según usos existentes. Esta solicitud no exige instalar; se preparan y sincronizan los paquetes, preservando los cortes anteriores.
+
+## Tabs · Uso contextual · 2026-11-24
+
+DEC-TABS-CONTEXTUAL-USAGE-001 · El usuario aprueba la guía PDF y ordena integrarla al consumo autocontenido. Tabs abre secciones hermanas; Chips selecciona/filtra en la vista actual. Forma redondeada, tabla común o contador no deciden familia. Preparar paquetes verificables sin instalar ni publicar; conservar snapshots anteriores.
+
+## Conversation Response · Documentar Preview modificado · 2026-11-24
+
+DEC-CONVERSATION-PREVIEW-DOCUMENTATION-001 · EXPLICIT: «Modifiqué este componente, documenta el cambio», nodo 222:111. Autoriza inspección y documentación del ajuste del auxiliar privado, conservando familia y versión. OBSERVED: Preview details pasa de la referencia histórica vertical a una fila con Title Fill y Badge Hug. [Enmienda acotada](../specs/components/conversation-response.preview-layout.amendment.v1.0.0.md) y [QA documental](../qa/contracts/conversation-response.preview-layout.v1.0.0.review.md). La adopción documental sigue DEC-AI-TECHNICAL-CLOSURE-001, no una aprobación humana de artefactos posteriores. La web conserva su layout anterior y se registra STALE en ese alcance; esta solicitud no ejecuta código de aplicación, escrituras Figma, instalación o publicación.
+
+## Chat History Item · Documentar indicador · 2026-11-24
+
+DEC-CHAT-HISTORY-NOTIFICATION-DOCUMENTATION-001 · EXPLICIT: documentar las modificaciones de 257:498. OBSERVED: sexta booleana show notification apagada y cuatro Dot oficiales; se preservan versión, variantes, Title/Actions y consumidores. Delegación documental conforme DEC-AI-TECHNICAL-CLOSURE-001. No se implementa la prop web ausente ni se editan descriptions en Figma; ambas diferencias se registran, sin inventar criterios de notificación del producto. [Enmienda](../specs/components/chat-history-item.notification.amendment.v1.0.0.md).
+
+## Header y App Shell · Sustituir Body en estructura propia · 2026-11-24
+
+DEC-HEADER-APP-SHELL-OWN-SPACING-001 · EXPLICIT: documentar sus modificaciones y ajustar los paddings/gaps Body para consumir tokens propios. DERIVED y delegado con QA documental: crear header/spacing/container-padding=32 y app-shell/spacing/none=0 aliased a semantic existente; reutilizar app-shell/spacing/content=32. Conservar header/spacing/padding=24, app-shell/spacing/header-gap=8 y todos los datos previos. Corregir 62 campos, incluidos overrides Header de ocho variantes, sin alterar medidas o contenido. Los 44 bindings Body dentro de Slots de producto conservan su función; no se convierten muestras en componentes. Autoriza adaptación del espaciado web y QA local. [Enmienda](../specs/components/header-app-shell.spacing.amendment.v1.0.0.md). Sin publicación, reinstalación o cambio de versión.
+
+## DEC-CHAT-RAIL-ITEM-001 · 2026-11-24
+
+Crear un elemento de navegación separado de Icon Button por selección persistente, apertura de vistas y novedades, en una página propia. Decisiones explícitas posteriores: Dot medium, focus ring de marca, sin altura mínima en Rail y Panel, y documentar Slot Content nativo añadido por el usuario al Rail. El seleccionado mantiene exactamente #0F172A con neutral-maximum y el aro consume brand-strong. El Slot del Rail comparte key con Panel, con plan compacto separado. [Enmienda](../specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md).

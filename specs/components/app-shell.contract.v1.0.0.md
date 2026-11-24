@@ -14,7 +14,7 @@ human_review_policy: OPTIONAL_NON_BLOCKING
 slot_applicability: REQUIRED
 source_data_ref: specs/data/app-shell.v1.0.0.json
 source_data_digest_sha256: 15c5ff0d45d7f615b58ab2d64daabd3993ba7dd7a6426d2eaff069df70f5ec26
-data_refs: [specs/data/app-shell.v1.0.0.json]
+data_refs: [specs/data/app-shell.v1.0.0.json, specs/tokens/header-app-shell.spacing.v1.0.0.json, specs/data/header-app-shell.spacing.v1.0.0.json]
 dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001, HEADER-001, SIDEBAR-001, SECTION-HEADER-001, CHAT-001, CHAT-SIDEBAR-001]
 ---
 
@@ -22,15 +22,17 @@ dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001, HEADER-001, SIDEBAR-001, SEC
 
 La [norma raíz](../../sources/figma-snapshots/root-families-2026-11-11/app-shell.1.0.0.md.txt) y el [JSON delegado](../data/app-shell.v1.0.0.json) gobiernan el set `940:1376`. Header precede a Content. Content coloca Sidebar junto a Main. Main apila Section Header y Body. Los ejes menu collapsed/expanded y body layout grid/flex producen las cuatro variantes de la fuente raíz. En el destino Sidebar consume Secondary small para expandir y contraer según su [enmienda](sidebar.secondary-control.amendment.v1.0.1.md).
 
-P-SLOTS REQUIRED. La raíz oficial actual comparte una propiedad Body entre las seis variantes. El Slot admite inserción, retirada, reordenamiento y sustitución sin mínimo ni máximo declarados. Los patrones históricos de Laboratorio usan otras claves. Grid contiene una rejilla nativa de cuatro tracks FLEX por eje y los spans 4, 1+1+1+1, 2+2 y 3+1. Flex contiene dos regiones iguales y una región de ancho completo. Los bloques son ejemplos reemplazables.
+P-SLOTS REQUIRED. La raíz oficial actual comparte una propiedad Body entre las ocho variantes. El Slot admite inserción, retirada, reordenamiento y sustitución sin mínimo ni máximo declarados. Los patrones históricos de Laboratorio usan otras claves. Grid contiene una rejilla nativa de cuatro tracks FLEX por eje y los spans 4, 1+1+1+1, 2+2 y 3+1. Flex contiene dos regiones iguales y una región de ancho completo. Los bloques son ejemplos reemplazables.
 
 La referencia Figma mide 1440 × 1024 y usa separaciones de 8 y 32, con las capas propias del Shell observadas como valores locales. El ancho de Main es 1272 con Sidebar de 72 o 1110 con Sidebar de 234. Figma y web consumen tokens App Shell para superficie, separación de Header e inset de Content. Los aliases conservan la superficie neutral base y las medidas de referencia. El contenido web puede crecer en el flujo del anfitrión y mantiene orden lógico de lectura. El anfitrión define desbordamiento, datos, permisos, rutas y mínimo de la pantalla.
+
+Ese espaciado corresponde al corte inicial. La [enmienda del 24 de noviembre](header-app-shell.spacing.amendment.v1.0.0.md) documenta el layout actual: Header–Content sin gap, Content con padding superior 0 e inferior/lateral 32 y filas de conversación separadas 32. Los bindings propios consumen Header/App Shell; el contenido específico de producto mantiene Body. Se conservan los valores de los tokens anteriores.
 
 ## Variantes de conversación
 
 El set [App Shell](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=105-7) ofrece `body layout=conversation` con menú colapsado (`299:1332`) o expandido (`299:2120`). El encabezado usa la opción de logo de Section Header en ambas muestras. Body contiene una instancia de Chat en Standby y admite cualquier contenido de conversación compatible. En el Slot opcional `Right sidebar`, deja el Rail sin selección al inicio. Para una vista seleccionada, coloca el Panel antes del Rail y usa la misma vista en ambos. El anfitrión controla selección, mensajes y apertura.
 
-La fila de conversación asigna Fill a Body y ajusta el ancho de la región derecha a su contenido. A 1440 px con menú izquierdo colapsado, Body mide 1193 px con Rail y 929 px con Rail y Panel. Con ambos laterales abiertos y menú izquierdo expandido, Body dispone de 767 px. La altura de las muestras del Shell es 1024 px. En React, usa `bodyLayout="conversation"`, pasa Chat como `children` y el Panel y Rail como `rightSidebar`. Chat conserva sus restricciones internas de tamaño. El [ejemplo React](../../implementations/web/docs/components/app-shell.md) abre el panel por teclado, admite envío local y permite cerrarlo.
+La fila de conversación asigna Fill a Body y ajusta el ancho de la región derecha a su contenido. En el corte actual, a 1440 px con Rail de 79 y gap 32, Body mide 1161 px con menú colapsado y 999 px con menú expandido; abrir el Panel reduce el espacio disponible según el contenido del Slot. Las medidas 1193/929/767 del QA del 13 de noviembre conservan su alcance histórico. La altura de las muestras del Shell es 1024 px. En React, usa `bodyLayout="conversation"`, pasa Chat como `children` y el Panel y Rail como `rightSidebar`. Chat conserva sus restricciones internas de tamaño. El [ejemplo React](../../implementations/web/docs/components/app-shell.md) abre el panel por teclado, admite envío local y permite cerrarlo.
 
 Los [layouts de Playground](../../implementations/figma/chat-playground-2026-11-13/README.md) sirven como referencias visuales. El componente reutilizable reserva el espacio del Rail en el flujo y deja el cuerpo flexible al abrir el panel. [QA de instancia](../../implementations/figma/app-shell-conversation/readback.json).
 
@@ -53,7 +55,7 @@ APP-SHELL-001 · Usa App Shell para componer navegación global y contenido de e
 
 ## Aceptación
 
-Verificar las seis variantes, el Slot Body compartido y el Slot Right sidebar en conversación, Grid nativo, spans y tamaños, las tres dependencias, sus propiedades y el control Secondary heredado. Probar edición de Body desde instancias y los cambios de ejes. En web, probar menú, Grid/Flex, foco, flujo y anchos 1272/1110 en la referencia de 1440.
+Verificar las ocho variantes, el Slot Body compartido, Right sidebar en conversación y Document preview donde corresponde, Grid nativo, spans y tamaños, dependencias, propiedades y control Secondary heredado. Probar edición de Body desde instancias y cambios de ejes cuando se modifique su composición. En web, probar menú, Grid/Flex, foco, flujo y anchos 1272/1110 en la referencia de 1440; la enmienda de espaciado rige sus nuevos gaps e insets.
 
 ## Corrección de bindings de componente · 2026-11-12
 

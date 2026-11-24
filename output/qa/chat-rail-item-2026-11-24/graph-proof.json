@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "relationships": [
+    {
+      "from": "specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md",
+      "to": "specs/components/chat-rail-item.contract.v1.0.0.md",
+      "relation": "depends_on",
+      "status": "PASS"
+    },
+    {
+      "from": "specs/components/chat-rail-item.contract.v1.0.0.md",
+      "to": "specs/components/dot.contract.v1.0.0.md",
+      "relation": "depends_on",
+      "status": "PASS"
+    },
+    {
+      "from": "specs/components/chat-sidebar.contract.v1.0.0.md",
+      "to": "specs/components/chat-rail-item.contract.v1.0.0.md",
+      "relation": "depends_on",
+      "status": "PASS"
+    }
+  ],
+  "slot": [
+    {
+      "id": "specs_components_chat_sidebar_rail_item_amendment_v1_0_0_shared_native_content_slot",
+      "label": "Shared native Content#258:0",
+      "source": "specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md"
+    }
+  ]
+}

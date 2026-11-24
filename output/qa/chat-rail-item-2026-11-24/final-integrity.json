@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "run": "2026-11-24-chat-rail-item-content",
+  "closure_status": "COMPLETE_LOCAL",
+  "catalog_families": 53,
+  "ds_digest": "dc5a6c963215c844c3bfebe39685d1a3a3a058163824720a2d0e280e3adb75ec",
+  "catalog_manifest_sha256": "a2769cd0af3c0931ee060724ef932b1f236ba7402d903d7bacfdb8e81b2d20b6",
+  "catalog_bundle_sha256": "8dd32630f538ff6ec8c14f7b9e6ea3b0a04ccd08aec59bb80cd26a5470be6cad",
+  "graph": {
+    "status": "CURRENT",
+    "files": 1520,
+    "nodes": 6993,
+    "edges": 14085,
+    "declared_dependencies": {
+      "status": "PASS",
+      "declared": 175,
+      "verified": 175,
+      "missing": []
+    },
+    "output_sha256": {
+      "graph.json": "2f17b3749425ca32e7678b7f85b8eadcaa9cef1763c14babcd716c5a49a12ac0",
+      "graph.html": "cc6f0ab85dd0ffd72316e8a9118f7732213d3f83eb6f4f6bca2de3c7dc894583",
+      "GRAPH_REPORT.md": "6d7826032c1e76307b8510c08464bc8da975746dc2f93c515ef0041fd4a55fc7",
+      "manifest.json": "f518f6eb956f1af74123a2ccf4f945958bcc14c249cbb6d755c518f738dd2d19",
+      ".graphify_health.json": "e2834dc4b44ad7eac8ae91b1bc3444dac90ef6eb4eb2b64bcf1ec18d2668f997",
+      ".graphify_labels.json": "eb96e5b7790cc1b467747d35530809226d499a64c0e10bdcd5693db02c8113ca",
+      ".graphify_labels.json.sig": "5e45ba3b5e68b32e07cf450a5df2cdb12149d3d371f86ad4278b15da525168e0",
+      "cost.json": "0e9dbed350b53d85b9a18a13dc2e5ff8a754dad165eb3351fff8e27b637fdfce"
+    }
+  },
+  "canonical": {
+    "status": "PASS",
+    "token_count": 1554,
+    "sources": 18,
+    "counts": {
+      "component": 1194,
+      "primitives": 201,
+      "semantic": 159
+    },
+    "new_roles": 16,
+    "token_alias_mode_comparisons": 64,
+    "body_visible": 61,
+    "other_visible": 0,
+    "sources_sha256": {
+      "specs/tokens/chat-rail-item.v1.0.0.json": "bbedf30b2a5ffbe286bfb082437a50e8f99a309503a4d5c4f8b7283b05622c70",
+      "specs/data/chat-sidebar.rail-content.v1.0.0.json": "81937696ccf2ef94aa674cb6e69e7860827aa34cbf1c273d05cebdad83296176",
+      "implementations/figma/chat-rail-item-2026-11-24/readback.json": "d5dd281e17a67b58b3d6363e9e89250715f9dd2616887b3bc54f7ef0edacf435",
+      "implementations/web/src/generated/tokens.manifest.json": "69710172f2662a3b2da45bd93b87dbff1ff0606e220e89819da58ea1ad2978eb"
+    },
+    "caution_source_tokens": 21
+  },
+  "launcher_version": "1.0.9",
+  "publication": "NOT_RUN",
+  "receipt_sha256": "dee931a92575010df1ab37c0108b93730b1a8ec696c863152bf4db362865c8e0",
+  "graph_closure_sha256": "d0480c2b0614be920509fadf6a62766cbe870f808a66007dbc68adec91e77b5e"
+}

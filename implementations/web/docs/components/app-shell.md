@@ -21,7 +21,7 @@ La [enmienda de documento entregado](../../../../specs/components/app-shell.docu
 
 ## Uso sin backend
 
-Grid, Flex, Conversación o Conversación con preview del documento. En preview, Chat conserva 374 px y el documento llena el espacio restante.
+Grid, Flex, Conversación o Conversación con preview del documento. En preview, Chat conserva 374 px y el documento llena el espacio restante. Revisión 2026-11-24: Header–Content gap 0, Content con padding top 0 y laterales/bottom 32; conversación usa gap 32. Todas las medidas propias consumen tokens Header/App Shell.
 
 ```tsx
 'use client';
@@ -181,9 +181,11 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [app-shell.contract.v1.0.0.md](../../../../specs/components/app-shell.contract.v1.0.0.md) · SHA-256 `13b073133dbd4ee733e4ffdf999dd055726bbfdc1e94c26b866492cc8129f71d`.
+- [app-shell.contract.v1.0.0.md](../../../../specs/components/app-shell.contract.v1.0.0.md) · SHA-256 `a8875408e0668864fceb868a9827d706b2e732ebedaf1b08aed209717f624775`.
 - [app-shell.document-preview.amendment.v1.0.0.md](../../../../specs/components/app-shell.document-preview.amendment.v1.0.0.md) · SHA-256 `f61282f2318487c1d050be4dc5fbea064dd50bf8a432eee9c6d8d2ff1ec8edde`.
 - [forms.app-shell.amendment.v1.0.0.md](../../../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) · SHA-256 `0e4c9655879b4847db021522fe49bc86f8dcac095a01c63fb3d75d03b5db8b8b`.
+- [tabs.local-navigation.amendment.v1.0.0.md](../../../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) · SHA-256 `b297a1444e4ffcb17456d8ebcbba6bcb58b8349dad25038010b852b724ab39c0`.
+- [header-app-shell.spacing.amendment.v1.0.0.md](../../../../specs/components/header-app-shell.spacing.amendment.v1.0.0.md) · SHA-256 `ae33ac4bc80963d491ea867ade3b4fc0ac930be62d9f0f6d4ecb5b90fd58e818`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

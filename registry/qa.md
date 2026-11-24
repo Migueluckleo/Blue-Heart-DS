@@ -121,3 +121,23 @@ TOKEN-QA-01 se probó en seis maestros y auxiliares corregidos. Leyó 1.326 bind
 ## Inline Notification · Corrección de layout e Isotipo · 2026-11-23
 
 [Documental PASS](../qa/contracts/inline-notification.layout-isotipo.v1.0.0.review.md) y [Figma/web PASS](../qa/implementations/inline-notification.layout-isotipo.v1.0.0.review.md). Default CTA apagado, fila derecha/alineación inferior, logo proporcional y selección preservada. El QA vertical anterior queda histórico. Cero internos visibles; fuente 589:81 y 21 maestros de marca preservados. Frescura derivada y push se acreditan por el nuevo cierre y los chats solicitados.
+
+## Tabs · Uso contextual · 2026-11-24
+
+[QA documental Tabs/Tab y navegación local](../qa/contracts/tabs.contextual-usage.v1.0.0.review.md). Cobertura y límites de la transcripción aprobada; QA de consumidores y cierre se registran en la entrega, sin promover pruebas históricas a nuevas ejecuciones.
+
+## Conversation Response · Preview en fila · 2026-11-24
+
+[QA documental PASS](../qa/contracts/conversation-response.preview-layout.v1.0.0.review.md), con [evidencia y digests](../sources/figma-snapshots/conversation-preview-2026-11-24/validation.json). 11 nodos, cuatro instancias/tres componentes, 29 variables directas y 44 de alias, un estilo; cero referencias pendientes, cuatro modos resueltos. Title/Badge en fila heredada por BENI/NAVI, límites de comparación histórica explícitos. TOKEN-QA-01/03 acotados a lectura; resize, navegador y nuevos gestos NOT_EXECUTED. Web STALE en el layout del auxiliar; el QA del 12 de noviembre conserva su alcance histórico. Figma y código sin modificaciones.
+
+## Chat History Item · Notificación · 2026-11-24
+
+[QA documental PASS](../qa/contracts/chat-history-item.notification.v1.0.0.review.md) y [modelo/validación](../sources/figma-snapshots/chat-history-item-2026-11-24/validation.json): seis props, cuatro refs booleanas, 65 nodos, 28 instancias/cuatro mains, 84 variables, 104 cadenas por cuatro modos y cero pendientes; siete instancias consumidoras en Fill. MD/YAML/JSON concordantes. Lectura únicamente; activación true, edición Slots, responsive y QA web NOT_EXECUTED. Web STALE_FOR_NOTIFICATION y descriptions v0.1.0 registradas, sin modificar.
+
+## Header y App Shell · Espaciado propio · 2026-11-24
+
+[QA documental PASS](../qa/contracts/header-app-shell.spacing.v1.0.0.review.md) y [QA Figma/web PASS](../qa/implementations/header-app-shell.spacing.v1.0.0.review.md), [validación](../implementations/figma/header-app-shell-spacing-2026-11-24/validation.json). TOKEN-QA-01: 214 bindings/36 overrides, cero hallazgos; 62 campos solicitados correctos. Dos altas, 1,538 tokens, 1,536 previos, cinco estilos y 44 bindings Body de producto intactos. Tres capturas Figma idénticas antes/después. TOKEN-QA-02/03 PASS: 17 fuentes, 61 Body visibles/ningún interno, TypeScript, 18 pruebas y build. Chrome: cuatro temas/32 layouts y cuatro grupos de interacción; cero pageerror. Preserva límites documentales Preview/History; no se atribuye nuevo QA de Slots nativos o accesibilidad global.
+
+## Chat Rail Item, Rail/Panel y Slot Content · 2026-11-24
+
+[Documental PASS](../qa/contracts/chat-rail-item.v1.0.0.review.md) · [Implementación Figma/web PASS](../qa/implementations/chat-rail-item.v1.0.0.review.md). Figma: 510 bindings, 90 overrides, 16 tokens internos, 61 Body visibles, 20 instancias y diez consumidores. Dot medium 12×12, aro de marca, negro seleccionado, nueve maestros a 440 px y Slot Rail con cero, uno o cinco ítems personalizados, reordenamiento, sustitución y cambio View preservado. Web: cuatro temas, teclado, disabled, selección, aviso accesible y geometría a 440 px. TypeScript, 19 pruebas y build completados.

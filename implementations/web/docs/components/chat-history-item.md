@@ -12,7 +12,7 @@ Usa esta fila para identificar un elemento de historial. Mantén accesible el t�
 
 ## Uso sin backend
 
-Composición y acciones de muestra del panel lateral.
+Composición y acciones de muestra del panel lateral. Revisión Figma 2026-11-24: show notification=false controla Dot notification/small/default, absoluto 8×8 con inset top/right 4. La API web todavía no incluye esta opción; paridad pendiente documentada.
 
 ```tsx
 'use client';
@@ -65,7 +65,8 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [chat-history-item.contract.v1.0.0.md](../../../../specs/components/chat-history-item.contract.v1.0.0.md) · SHA-256 `39ee33d51197eb8abcefd1fb61aa594be31e100e671c01bba19c219d57dff8da`.
+- [chat-history-item.contract.v1.0.0.md](../../../../specs/components/chat-history-item.contract.v1.0.0.md) · SHA-256 `53407d42ee69e4326419540b4369a6343b53a0da86b506a5cf5f397d0de63e84`.
+- [chat-history-item.notification.amendment.v1.0.0.md](../../../../specs/components/chat-history-item.notification.amendment.v1.0.0.md) · SHA-256 `eea292f1d9b8f7c972db3b5e857f0bc518a04910eff608719251b0d8822c27a6`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

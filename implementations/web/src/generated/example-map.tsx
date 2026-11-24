@@ -6,6 +6,7 @@ import * as Example_chat from '../examples/chat';
 import * as Example_chat_document_viewer from '../examples/chat-document-viewer';
 import * as Example_chat_history_item from '../examples/chat-history-item';
 import * as Example_chat_plan_usage from '../examples/chat-plan-usage';
+import * as Example_chat_rail_item from '../examples/chat-rail-item';
 import * as Example_chat_sidebar from '../examples/chat-sidebar';
 import * as Example_chat_sidebar_section from '../examples/chat-sidebar-section';
 import * as Example_chat_tool_item from '../examples/chat-tool-item';
@@ -26,6 +27,7 @@ export const examples: Record<string, ComponentType> = {
   "chat-document-viewer": Example_chat_document_viewer.ChatDocumentViewerExample,
   "chat-history-item": Example_chat_history_item.ChatHistoryItemExample,
   "chat-plan-usage": Example_chat_plan_usage.ChatPlanUsageExample,
+  "chat-rail-item": Example_chat_rail_item.ChatRailItemExample,
   "chat-sidebar": Example_chat_sidebar.ChatSidebarExample,
   "chat-sidebar-section": Example_chat_sidebar_section.ChatSidebarSectionExample,
   "chat-tool-item": Example_chat_tool_item.ChatToolItemExample,

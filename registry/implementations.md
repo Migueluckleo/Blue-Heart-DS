@@ -93,3 +93,15 @@ Figma y web PASS conforme a [INLINE-NOTIFICATION-001-LAYOUT-ISOTIPO](../specs/co
 ## Body disabled y descriptions Dropdown · 2026-11-23
 
 Figma VALIDATED: cuatro colores disabled en component/body/ (IDs 616:2–5), 61 Body visibles y 1,536 tokens locales; cinco descriptions Dropdown sincronizadas desde su JSON sin otros cambios. [QA Figma/web PASS](../qa/implementations/body.disabled.v1.0.0.review.md), [readback](../implementations/figma/body-disabled-2026-11-23/readback.json) y [datos delegados](../specs/tokens/body.disabled.v1.0.0.json). Generación, 18 tests, build y Chrome por cuatro temas correctos.
+
+## Chat History Item · Estado documental de notificación · 2026-11-24
+
+Maestro 257:498 y cuatro Dot observados; no se escriben o implementan en este encargo. [Enmienda](../specs/components/chat-history-item.notification.amendment.v1.0.0.md), [consumidores](../sources/figma-snapshots/chat-history-item-2026-11-24/consumers.json) y [QA documental](../qa/contracts/chat-history-item.notification.v1.0.0.review.md). La implementación web histórica queda STALE_FOR_NOTIFICATION frente a esta ampliación; su QA previo no acredita la booleana nueva.
+
+## Header y App Shell · Espaciado propio · 2026-11-24
+
+HEADER-APP-SHELL-SPACING-001 v1.0.0 · VALIDATED para el alcance de [QA Figma/web](../qa/implementations/header-app-shell.spacing.v1.0.0.review.md). [Mapa y scripts/readback](../implementations/figma/header-app-shell-spacing-2026-11-24/README.md). Header 90:439/page 90:2 y set App Shell 105:7/page 105:2: 62 bindings en 27 nodos, dos FLOAT nuevos VariableID:653:191/653:192, cuatro modos, scopes=[] y cadena semántica conservada. No se cambian medidas ni valores previos. Web consume los roles propios para exterior 32, ceros del Shell e interiores 32/24/8/0; contrato/API/versiones conservados. 32 layouts Chrome, menús, navegación y composición del documento PASS. Capturas Figma y 44 bindings Body de contenido preservados; sin publicar ni instalar.
+
+## Chat Rail Item · 2026-11-24
+
+[Maestro 662:19 y página 662:18](../implementations/figma/chat-rail-item-2026-11-24/README.md). VALIDATED en Figma y web. 20 controles del Rail migrados en cinco variantes, con selección y Phosphor existentes. Los nueve maestros Chat Sidebar conservan geometría de referencia y carecen de minHeight. Content#258:0 se comparte entre Rail y Panel, y los overrides Rail se preservan al cambiar View. [Readback](../implementations/figma/chat-rail-item-2026-11-24/readback.json).
