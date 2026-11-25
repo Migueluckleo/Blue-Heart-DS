@@ -6,6 +6,8 @@ import { HeaderActions, type HeaderActionsProps } from './header-actions';
 import { UserSelector, type UserSelectorProps } from './user-selector';
 
 export interface HeaderProps {
+  logo?: {src: string; alt: string};
+  logoHeight?: 40 | 44 | 48;
   version?: string;
   showVersion?: boolean;
   showReleaseBadge?: boolean;
@@ -18,10 +20,10 @@ export interface HeaderProps {
   user?: UserSelectorProps;
 }
 
-export function Header({version='2.0.0',showVersion=true,showReleaseBadge=true,showCompany=true,
+export function Header({logo={src:'/assets/contabilidad-header.png',alt:'CONTPAQi Contabilidad'},logoHeight=48,version='2.0.0',showVersion=true,showReleaseBadge=true,showCompany=true,
   showActions=true,showUser=true,badge,company,actions,user}:HeaderProps) {
   return <header className="bh-header" data-blueheart="header">
-    <img className="bh-header-logo" src="/assets/contabilidad-header.png" alt="CONTPAQi Contabilidad"/>
+    <img className="bh-header-logo" data-logo-height={logoHeight} src={logo.src} alt={logo.alt}/>
     <div className="bh-header-content">
       {showVersion && <div className="bh-header-block">
         <div className="bh-header-version-info">

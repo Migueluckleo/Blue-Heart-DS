@@ -105,3 +105,19 @@ HEADER-APP-SHELL-SPACING-001 v1.0.0 · VALIDATED para el alcance de [QA Figma/we
 ## Chat Rail Item · 2026-11-24
 
 [Maestro 662:19 y página 662:18](../implementations/figma/chat-rail-item-2026-11-24/README.md). VALIDATED en Figma y web. 20 controles del Rail migrados en cinco variantes, con selección y Phosphor existentes. Los nueve maestros Chat Sidebar conservan geometría de referencia y carecen de minHeight. Content#258:0 se comparte entre Rail y Panel, y los overrides Rail se preservan al cambiar View. [Readback](../implementations/figma/chat-rail-item-2026-11-24/readback.json).
+
+## IMPL-CHAT-SIDEBAR-V1-2026-11-24
+
+El set oficial 258:3326 incorpora Rail V1 711:354 y Panel V1 711:328. V2 permanece como default. Content#258:0 se conserva y se usa también en ambos nuevos maestros. [Figma y readback](../implementations/figma/chat-sidebar-v1-2026-11-24/README.md) · [API web](../implementations/web/docs/components/chat-sidebar.md).
+
+## IMPL-LOGOS-CORPORATE-SVG · 2026-11-24
+
+[Set CONTPAQi · 171:2535](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=171-2535). Los nuevos maestros son Mi CONTPAQi light2 (720:22), Mi Gestión light (720:67) y Portal Web light (720:68). El default sigue siendo 171:2719. [Readback](../implementations/figma/logos-2026-11-24/readback.json) · [Ficha](../implementations/figma/logos-2026-11-24/README.md).
+
+## IMPL-HEADER-LOGO-SIZING · 2026-11-25
+
+Header 90:439 conserva el nodo 90:1138 y expone Logotipo y Altura. El set 734:191 reúne 225 combinaciones. App Shell expone Header en los ocho maestros. La corrección se probó con Mi CONTPAQi / light en 105:8 y la revisión de sincronización confirmó que sigue disponible en el selector Logotipo. Web usa logo y logoHeight. [Figma y readback](../implementations/figma/header-logo-sizing-2026-11-25/README.md) · [API web](../implementations/web/docs/components/header.md).
+
+## IMPL-FLOATING-ACTIONS-SELECTION-SCOPE · 2026-11-25
+
+Floating Actions 122:6 conserva General actions 122:12 e incorpora el selector 759:29 y las cuatro filas de estado del set 758:29. Dot 32:33 tiene 36 combinaciones. Web expone selection y conserva selectAll. [Figma y readback](../implementations/figma/floating-selection-2026-11-25/README.md) · [Ficha web](../implementations/web/docs/components/floating-actions.md).

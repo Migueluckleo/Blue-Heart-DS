@@ -1,0 +1,3504 @@
+{
+  "status": "PASS",
+  "fileKey": "yZsIpXywybsPDytjolwcP4",
+  "build": {
+    "set": "258:3326",
+    "page": "258:3325",
+    "before": [
+      [
+        "258:1820",
+        "View=Chats, Mode=Panel"
+      ],
+      [
+        "258:2011",
+        "View=Indicadores, Mode=Panel"
+      ],
+      [
+        "258:2183",
+        "View=Papeles de trabajo, Mode=Panel"
+      ],
+      [
+        "258:2331",
+        "View=Vinculaciones, Mode=Panel"
+      ],
+      [
+        "258:2500",
+        "View=none, Mode=Rail"
+      ],
+      [
+        "283:8726",
+        "View=Chats, Mode=Rail"
+      ],
+      [
+        "258:2720",
+        "View=Indicadores, Mode=Rail"
+      ],
+      [
+        "258:2940",
+        "View=Papeles de trabajo, Mode=Rail"
+      ],
+      [
+        "258:3160",
+        "View=Vinculaciones, Mode=Rail"
+      ]
+    ],
+    "variants": [
+      [
+        "258:1820",
+        "View=Chats, Mode=Panel, Version=V2",
+        264,
+        791,
+        null,
+        0,
+        0
+      ],
+      [
+        "258:2011",
+        "View=Indicadores, Mode=Panel, Version=V2",
+        264,
+        791,
+        null,
+        296,
+        0
+      ],
+      [
+        "258:2183",
+        "View=Papeles de trabajo, Mode=Panel, Version=V2",
+        264,
+        791,
+        null,
+        592,
+        0
+      ],
+      [
+        "258:2331",
+        "View=Vinculaciones, Mode=Panel, Version=V2",
+        264,
+        791,
+        null,
+        888,
+        0
+      ],
+      [
+        "258:2500",
+        "View=none, Mode=Rail, Version=V2",
+        79,
+        791,
+        null,
+        4,
+        830
+      ],
+      [
+        "283:8726",
+        "View=Chats, Mode=Rail, Version=V2",
+        79,
+        791,
+        null,
+        169,
+        830
+      ],
+      [
+        "258:2720",
+        "View=Indicadores, Mode=Rail, Version=V2",
+        79,
+        791,
+        null,
+        296,
+        830
+      ],
+      [
+        "258:2940",
+        "View=Papeles de trabajo, Mode=Rail, Version=V2",
+        79,
+        791,
+        null,
+        592,
+        830
+      ],
+      [
+        "258:3160",
+        "View=Vinculaciones, Mode=Rail, Version=V2",
+        79,
+        791,
+        null,
+        888,
+        830
+      ],
+      [
+        "711:354",
+        "View=Chats, Mode=Rail, Version=V1",
+        64,
+        775,
+        null,
+        20,
+        1713
+      ],
+      [
+        "711:328",
+        "View=Chats, Mode=Panel, Version=V1",
+        310,
+        775,
+        null,
+        124,
+        1713
+      ]
+    ],
+    "slotIds": [
+      "711:371",
+      "711:372"
+    ],
+    "ids": {
+      "rail": "711:354",
+      "panel": "711:328",
+      "open": "711:323",
+      "close": "711:330",
+      "search": "711:336",
+      "title": "711:335",
+      "plan": "711:341"
+    },
+    "properties": {
+      "Content#258:0": {
+        "type": "SLOT",
+        "description": "V1: acceso en Rail o historial en Panel. V2: navegación en Rail o secciones en Panel. El plan queda fuera de Content.",
+        "slotSettings": {
+          "stretchChildOnInsert": true,
+          "displayEmptyByDefault": false,
+          "minChildren": null,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": false
+        },
+        "preferredValues": []
+      },
+      "History title#711:2": {
+        "type": "TEXT",
+        "defaultValue": "Historial de chats"
+      },
+      "View": {
+        "type": "VARIANT",
+        "defaultValue": "Chats",
+        "variantOptions": [
+          "Chats",
+          "Indicadores",
+          "Papeles de trabajo",
+          "Vinculaciones",
+          "none"
+        ]
+      },
+      "Mode": {
+        "type": "VARIANT",
+        "defaultValue": "Panel",
+        "variantOptions": [
+          "Panel",
+          "Rail"
+        ]
+      },
+      "Version": {
+        "type": "VARIANT",
+        "defaultValue": "V2",
+        "variantOptions": [
+          "V1",
+          "V2"
+        ]
+      }
+    },
+    "invariants": [
+      [
+        "258:1820",
+        true
+      ],
+      [
+        "258:2011",
+        true
+      ],
+      [
+        "258:2183",
+        true
+      ],
+      [
+        "258:2331",
+        true
+      ],
+      [
+        "258:2500",
+        true
+      ],
+      [
+        "283:8726",
+        true
+      ],
+      [
+        "258:2720",
+        true
+      ],
+      [
+        "258:2940",
+        true
+      ],
+      [
+        "258:3160",
+        true
+      ]
+    ],
+    "references": [
+      "21704:71850",
+      "21878:108548"
+    ]
+  },
+  "qa": {
+    "status": "PASS",
+    "issues": [],
+    "icons": [
+      [
+        "246:2409",
+        "Chats",
+        "81c10c25593d451160897a03ccc39cd1fc7fad27",
+        true
+      ],
+      [
+        "49:43",
+        "X",
+        "4046be769b352c4e707a75fd12c03a00eb63f3f4",
+        true
+      ],
+      [
+        "47:11",
+        "MagnifyingGlass",
+        "b0c91d0b43c046b2a817ae2ed32c6e0f75e96f49",
+        true
+      ],
+      [
+        "54:79",
+        "CaretDown",
+        "bc84188a38d95b6865a7c6a57820ee2330e43f34",
+        true
+      ],
+      [
+        "246:2445",
+        "MagicWand",
+        "83ef141671189ffc05d5b1da03149fb76dc4377c",
+        true
+      ],
+      [
+        "246:2406",
+        "NotePencil",
+        "1f315f9a08488d0b413cf8cd97518fe8187d147d",
+        true
+      ],
+      [
+        "206:1138",
+        "Plus",
+        "a7eab12525396b21f901983db82eecb38841c9ef",
+        true
+      ],
+      [
+        "246:4374",
+        "Folder",
+        "f590766fe326cbf502d6b3066f5a432e6db19294",
+        true
+      ],
+      [
+        "246:2373",
+        "PushPin",
+        "b0d66c2c04014490bfbefe7579e0c98cd16db0a2",
+        true
+      ],
+      [
+        "128:134",
+        "DotsThree",
+        "33bbf11fec95bfc540e85769b270534f2db07776",
+        true
+      ]
+    ],
+    "rows": [
+      {
+        "id": "711:354",
+        "depth": 0,
+        "name": "View=Chats, Mode=Rail, Version=V1",
+        "type": "COMPONENT",
+        "box": [
+          20,
+          1713,
+          64,
+          775
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 32,
+        "visible": true,
+        "bounds": null,
+        "master": null,
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:710:12",
+            "chat-sidebar/v1/spacing/region",
+            [
+              "spacing-2xl",
+              "spacing/32"
+            ]
+          ],
+          [
+            "paddingLeft",
+            "VariableID:710:11",
+            "chat-sidebar/v1/spacing/inset",
+            [
+              "spacing-lg",
+              "spacing/16"
+            ]
+          ],
+          [
+            "paddingTop",
+            "VariableID:710:11",
+            "chat-sidebar/v1/spacing/inset",
+            [
+              "spacing-lg",
+              "spacing/16"
+            ]
+          ],
+          [
+            "paddingRight",
+            "VariableID:710:11",
+            "chat-sidebar/v1/spacing/inset",
+            [
+              "spacing-lg",
+              "spacing/16"
+            ]
+          ],
+          [
+            "paddingBottom",
+            "VariableID:710:11",
+            "chat-sidebar/v1/spacing/inset",
+            [
+              "spacing-lg",
+              "spacing/16"
+            ]
+          ],
+          [
+            "width",
+            "VariableID:710:8",
+            "chat-sidebar/v1/size/rail",
+            [
+              "size-7xl",
+              "size/7xl"
+            ]
+          ],
+          [
+            "strokeLeftWeight",
+            "VariableID:710:16",
+            "chat-sidebar/v1/stroke/edge",
+            [
+              "stroke-xs",
+              "stroke/1"
+            ]
+          ],
+          [
+            "fills",
+            "VariableID:710:17",
+            "chat-sidebar/v1/color/bg/surface",
+            [
+              "neutral-base",
+              "neutral/100"
+            ]
+          ],
+          [
+            "strokes",
+            "VariableID:710:18",
+            "chat-sidebar/v1/color/stroke/edge",
+            [
+              "sidebar-divider-neutral",
+              "rail-palette/sidebar-v1-divider"
+            ]
+          ]
+        ],
+        "refs": {}
+      },
+      {
+        "id": "711:371",
+        "depth": 1,
+        "name": "Content",
+        "type": "SLOT",
+        "box": [
+          16,
+          16,
+          32,
+          743
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FILL",
+          "FILL"
+        ],
+        "gap": 32,
+        "visible": true,
+        "bounds": null,
+        "master": null,
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:710:12",
+            "chat-sidebar/v1/spacing/region",
+            [
+              "spacing-2xl",
+              "spacing/32"
+            ]
+          ],
+          [
+            "paddingLeft",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ],
+          [
+            "paddingTop",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ],
+          [
+            "paddingRight",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ],
+          [
+            "paddingBottom",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ]
+        ],
+        "refs": {
+          "slotContentId": "Content#258:0"
+        }
+      },
+      {
+        "id": "711:323",
+        "depth": 2,
+        "name": "Abrir historial de chats",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          32,
+          32
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "59:154",
+          "Icon Button/ghost",
+          "dc737950315cf97fb164c5fa223105f9b9ae31a9",
+          false
+        ],
+        "bindings": [
+          [
+            "fills",
+            "VariableID:710:19",
+            "chat-sidebar/v1/color/bg/disclosure",
+            [
+              "sidebar-disclosure-tint",
+              "rail-palette/sidebar-v1-control"
+            ]
+          ]
+        ],
+        "refs": {},
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "711:328",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "711:328",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false,
+                "resetScrollPosition": true
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "I711:323;59:155",
+        "depth": 3,
+        "name": "Icon",
+        "type": "INSTANCE",
+        "box": [
+          7.999950408935547,
+          8,
+          16,
+          16
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "246:2409",
+          "Chats",
+          "81c10c25593d451160897a03ccc39cd1fc7fad27",
+          true
+        ],
+        "bindings": [],
+        "refs": {
+          "mainComponent": "Icon#59:0"
+        }
+      },
+      {
+        "id": "I711:323;59:158",
+        "depth": 4,
+        "name": "Badge",
+        "type": "INSTANCE",
+        "box": [
+          -7.999899864196777,
+          0,
+          8,
+          8
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": false,
+        "bounds": null,
+        "master": [
+          "32:41",
+          "Dot",
+          "012c408fce0c65c1432f38da2d881e12e0fdf857",
+          false
+        ],
+        "bindings": [],
+        "refs": {
+          "visible": "Show badge#59:7"
+        }
+      },
+      {
+        "id": "711:328",
+        "depth": 0,
+        "name": "View=Chats, Mode=Panel, Version=V1",
+        "type": "COMPONENT",
+        "box": [
+          124,
+          1713,
+          310,
+          775
+        ],
+        "sizes": [
+          264,
+          310,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 32,
+        "visible": true,
+        "bounds": null,
+        "master": null,
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:710:12",
+            "chat-sidebar/v1/spacing/region",
+            [
+              "spacing-2xl",
+              "spacing/32"
+            ]
+          ],
+          [
+            "paddingLeft",
+            "VariableID:710:11",
+            "chat-sidebar/v1/spacing/inset",
+            [
+              "spacing-lg",
+              "spacing/16"
+            ]
+          ],
+          [
+            "paddingTop",
+            "VariableID:710:11",
+            "chat-sidebar/v1/spacing/inset",
+            [
+              "spacing-lg",
+              "spacing/16"
+            ]
+          ],
+          [
+            "paddingRight",
+            "VariableID:710:11",
+            "chat-sidebar/v1/spacing/inset",
+            [
+              "spacing-lg",
+              "spacing/16"
+            ]
+          ],
+          [
+            "paddingBottom",
+            "VariableID:710:11",
+            "chat-sidebar/v1/spacing/inset",
+            [
+              "spacing-lg",
+              "spacing/16"
+            ]
+          ],
+          [
+            "width",
+            "VariableID:710:10",
+            "chat-sidebar/v1/size/panel-max",
+            [
+              "sidebar-panel-max",
+              "size/sidebar-panel-310"
+            ]
+          ],
+          [
+            "strokeRightWeight",
+            "VariableID:710:16",
+            "chat-sidebar/v1/stroke/edge",
+            [
+              "stroke-xs",
+              "stroke/1"
+            ]
+          ],
+          [
+            "minWidth",
+            "VariableID:710:9",
+            "chat-sidebar/v1/size/panel-min",
+            [
+              "size-264",
+              "size/264"
+            ]
+          ],
+          [
+            "maxWidth",
+            "VariableID:710:10",
+            "chat-sidebar/v1/size/panel-max",
+            [
+              "sidebar-panel-max",
+              "size/sidebar-panel-310"
+            ]
+          ],
+          [
+            "fills",
+            "VariableID:710:17",
+            "chat-sidebar/v1/color/bg/surface",
+            [
+              "neutral-base",
+              "neutral/100"
+            ]
+          ],
+          [
+            "strokes",
+            "VariableID:710:18",
+            "chat-sidebar/v1/color/stroke/edge",
+            [
+              "sidebar-divider-neutral",
+              "rail-palette/sidebar-v1-divider"
+            ]
+          ]
+        ],
+        "refs": {}
+      },
+      {
+        "id": "711:329",
+        "depth": 1,
+        "name": "Header",
+        "type": "FRAME",
+        "box": [
+          16,
+          16,
+          278,
+          32
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FILL",
+          "HUG"
+        ],
+        "gap": 8,
+        "visible": true,
+        "bounds": null,
+        "master": null,
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:710:14",
+            "chat-sidebar/v1/spacing/header",
+            [
+              "spacing-sm",
+              "spacing/8"
+            ]
+          ],
+          [
+            "paddingLeft",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ],
+          [
+            "paddingTop",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ],
+          [
+            "paddingRight",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ],
+          [
+            "paddingBottom",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ]
+        ],
+        "refs": {}
+      },
+      {
+        "id": "711:372",
+        "depth": 1,
+        "name": "Content",
+        "type": "SLOT",
+        "box": [
+          16,
+          80,
+          278,
+          503
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FILL",
+          "FILL"
+        ],
+        "gap": 32,
+        "visible": true,
+        "bounds": null,
+        "master": null,
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:710:12",
+            "chat-sidebar/v1/spacing/region",
+            [
+              "spacing-2xl",
+              "spacing/32"
+            ]
+          ],
+          [
+            "paddingLeft",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ],
+          [
+            "paddingTop",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ],
+          [
+            "paddingRight",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ],
+          [
+            "paddingBottom",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ]
+        ],
+        "refs": {
+          "slotContentId": "Content#258:0"
+        }
+      },
+      {
+        "id": "711:341",
+        "depth": 1,
+        "name": "Chat Plan Usage",
+        "type": "INSTANCE",
+        "box": [
+          16,
+          615,
+          278,
+          144
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FILL",
+          "HUG"
+        ],
+        "gap": 16,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "257:615",
+          "Chat Plan Usage",
+          "ca45f4c194b910202eace9fe120a2e10d9cbd781",
+          false
+        ],
+        "bindings": [
+          [
+            "effects",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ],
+          [
+            "effects",
+            "VariableID:713:4",
+            "chat-sidebar/v1/shadow/color",
+            [
+              "shadow-md",
+              "shadow/md"
+            ]
+          ],
+          [
+            "effects",
+            "VariableID:713:5",
+            "chat-sidebar/v1/shadow/y",
+            [
+              "spacing-xs",
+              "spacing/4"
+            ]
+          ],
+          [
+            "effects",
+            "VariableID:713:6",
+            "chat-sidebar/v1/shadow/blur",
+            [
+              "size-6",
+              "size/6"
+            ]
+          ],
+          [
+            "effects",
+            "VariableID:713:7",
+            "chat-sidebar/v1/shadow/spread",
+            [
+              "spacing-negative-2",
+              "spacing/negative-2"
+            ]
+          ]
+        ],
+        "refs": {}
+      },
+      {
+        "id": "711:330",
+        "depth": 2,
+        "name": "Cerrar historial de chats",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          32,
+          32
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "59:154",
+          "Icon Button/ghost",
+          "dc737950315cf97fb164c5fa223105f9b9ae31a9",
+          false
+        ],
+        "bindings": [
+          [
+            "fills",
+            "VariableID:710:19",
+            "chat-sidebar/v1/color/bg/disclosure",
+            [
+              "sidebar-disclosure-tint",
+              "rail-palette/sidebar-v1-control"
+            ]
+          ]
+        ],
+        "refs": {},
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "711:354",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "711:354",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false,
+                "resetScrollPosition": true
+              }
+            ],
+            "trigger": {
+              "type": "ON_CLICK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "711:335",
+        "depth": 2,
+        "name": "Title",
+        "type": "TEXT",
+        "box": [
+          40,
+          6,
+          198,
+          20
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FILL",
+          "HUG"
+        ],
+        "visible": true,
+        "bounds": [
+          "Historial de chats",
+          {
+            "family": "Manrope",
+            "style": "Bold",
+            "variationSettings": {
+              "wght": 700
+            }
+          },
+          16,
+          {
+            "unit": "PIXELS",
+            "value": 20
+          },
+          {
+            "unit": "PIXELS",
+            "value": 0
+          }
+        ],
+        "master": null,
+        "bindings": [
+          [
+            "fills",
+            "VariableID:710:20",
+            "chat-sidebar/v1/color/text/title",
+            [
+              "neutral-maximum",
+              "neutral/900"
+            ]
+          ],
+          [
+            "letterSpacing",
+            "VariableID:710:25",
+            "chat-sidebar/v1/font/tracking",
+            [
+              "font-letter-spacing-normal",
+              "font-letter-spacing/normal"
+            ]
+          ],
+          [
+            "fontSize",
+            "VariableID:710:23",
+            "chat-sidebar/v1/font/size",
+            [
+              "font-size-md",
+              "font-size/16"
+            ]
+          ],
+          [
+            "fontStyle",
+            "VariableID:710:22",
+            "chat-sidebar/v1/font/weight",
+            [
+              "font-weight-bold",
+              "font-weight/bold"
+            ]
+          ],
+          [
+            "fontFamily",
+            "VariableID:710:21",
+            "chat-sidebar/v1/font/family",
+            [
+              "font-family-base",
+              "font-family/manrope"
+            ]
+          ],
+          [
+            "lineHeight",
+            "VariableID:710:24",
+            "chat-sidebar/v1/font/line-height",
+            [
+              "font-line-height-sm",
+              "font-line-height/20"
+            ]
+          ]
+        ],
+        "refs": {
+          "characters": "History title#711:2"
+        }
+      },
+      {
+        "id": "711:336",
+        "depth": 2,
+        "name": "Buscar chats",
+        "type": "INSTANCE",
+        "box": [
+          246,
+          0,
+          32,
+          32
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "59:154",
+          "Icon Button/ghost",
+          "dc737950315cf97fb164c5fa223105f9b9ae31a9",
+          false
+        ],
+        "bindings": [],
+        "refs": {},
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "59:165",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "59:165",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false,
+                "resetScrollPosition": true
+              }
+            ],
+            "trigger": {
+              "type": "MOUSE_ENTER",
+              "delay": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "711:355",
+        "depth": 2,
+        "name": "Nuevo chat",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          278,
+          40
+        ],
+        "sizes": [
+          null,
+          null,
+          40,
+          "FILL",
+          "HUG"
+        ],
+        "gap": 16,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "257:466",
+          "Chat Tool Item",
+          "84454a3b683efe1a399ecb061cd113ec16d4ab05",
+          false
+        ],
+        "bindings": [],
+        "refs": {},
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "257:473",
+              "navigation": "CHANGE_TO",
+              "transition": {
+                "type": "SMART_ANIMATE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.30000001192092896
+              },
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "257:473",
+                "navigation": "CHANGE_TO",
+                "transition": {
+                  "type": "SMART_ANIMATE",
+                  "easing": {
+                    "type": "EASE_OUT"
+                  },
+                  "duration": 0.30000001192092896
+                },
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_HOVER"
+            }
+          }
+        ]
+      },
+      {
+        "id": "711:362",
+        "depth": 2,
+        "name": "History groups",
+        "type": "FRAME",
+        "box": [
+          0,
+          72,
+          278,
+          216
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FILL",
+          "HUG"
+        ],
+        "gap": 16,
+        "visible": true,
+        "bounds": null,
+        "master": null,
+        "bindings": [
+          [
+            "itemSpacing",
+            "VariableID:710:13",
+            "chat-sidebar/v1/spacing/group",
+            [
+              "spacing-lg",
+              "spacing/16"
+            ]
+          ],
+          [
+            "paddingLeft",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ],
+          [
+            "paddingTop",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ],
+          [
+            "paddingRight",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ],
+          [
+            "paddingBottom",
+            "VariableID:710:15",
+            "chat-sidebar/v1/spacing/none",
+            [
+              "spacing-none",
+              "spacing/0"
+            ]
+          ]
+        ],
+        "refs": {}
+      },
+      {
+        "id": "I711:330;59:155",
+        "depth": 3,
+        "name": "Icon",
+        "type": "INSTANCE",
+        "box": [
+          7.999950408935547,
+          8,
+          16,
+          16
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "49:43",
+          "X",
+          "4046be769b352c4e707a75fd12c03a00eb63f3f4",
+          true
+        ],
+        "bindings": [],
+        "refs": {
+          "mainComponent": "Icon#59:0"
+        }
+      },
+      {
+        "id": "I711:336;59:155",
+        "depth": 3,
+        "name": "Icon",
+        "type": "INSTANCE",
+        "box": [
+          7.999950408935547,
+          8,
+          16,
+          16
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "47:11",
+          "MagnifyingGlass",
+          "b0c91d0b43c046b2a817ae2ed32c6e0f75e96f49",
+          true
+        ],
+        "bindings": [],
+        "refs": {
+          "mainComponent": "Icon#59:0"
+        }
+      },
+      {
+        "id": "I711:355;257:470",
+        "depth": 3,
+        "name": "CaretDown",
+        "type": "INSTANCE",
+        "box": [
+          146,
+          8,
+          24,
+          24
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": false,
+        "bounds": null,
+        "master": [
+          "54:79",
+          "CaretDown",
+          "bc84188a38d95b6865a7c6a57820ee2330e43f34",
+          true
+        ],
+        "bindings": [],
+        "refs": {
+          "visible": "Show caret#796:10"
+        }
+      },
+      {
+        "id": "711:373",
+        "depth": 3,
+        "name": "Carpetas",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          278,
+          124
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FILL",
+          "HUG"
+        ],
+        "gap": 16,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "257:587",
+          "Chat Sidebar Section",
+          "47b699231b1d942730441d4ba6c00e07c23fc999",
+          false
+        ],
+        "bindings": [],
+        "refs": {}
+      },
+      {
+        "id": "711:382",
+        "depth": 3,
+        "name": "Chats",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          140,
+          278,
+          76
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FILL",
+          "HUG"
+        ],
+        "gap": 16,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "257:587",
+          "Chat Sidebar Section",
+          "47b699231b1d942730441d4ba6c00e07c23fc999",
+          false
+        ],
+        "bindings": [],
+        "refs": {}
+      },
+      {
+        "id": "I711:341;257:606",
+        "depth": 3,
+        "name": "MagicWand",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          24,
+          24
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "246:2445",
+          "MagicWand",
+          "83ef141671189ffc05d5b1da03149fb76dc4377c",
+          true
+        ],
+        "bindings": [],
+        "refs": {}
+      },
+      {
+        "id": "I711:330;59:158",
+        "depth": 4,
+        "name": "Badge",
+        "type": "INSTANCE",
+        "box": [
+          -7.999899864196777,
+          0,
+          8,
+          8
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": false,
+        "bounds": null,
+        "master": [
+          "32:41",
+          "Dot",
+          "012c408fce0c65c1432f38da2d881e12e0fdf857",
+          false
+        ],
+        "bindings": [],
+        "refs": {
+          "visible": "Show badge#59:7"
+        }
+      },
+      {
+        "id": "I711:336;59:158",
+        "depth": 4,
+        "name": "Badge",
+        "type": "INSTANCE",
+        "box": [
+          -7.999899864196777,
+          0,
+          8,
+          8
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": false,
+        "bounds": null,
+        "master": [
+          "32:41",
+          "Dot",
+          "012c408fce0c65c1432f38da2d881e12e0fdf857",
+          false
+        ],
+        "bindings": [],
+        "refs": {
+          "visible": "Show badge#59:7"
+        }
+      },
+      {
+        "id": "I711:355;257:468",
+        "depth": 4,
+        "name": "NotePencil",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          24,
+          24
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "246:2406",
+          "NotePencil",
+          "1f315f9a08488d0b413cf8cd97518fe8187d147d",
+          true
+        ],
+        "bindings": [],
+        "refs": {
+          "mainComponent": "Icon#796:8"
+        }
+      },
+      {
+        "id": "I711:355;257:472",
+        "depth": 4,
+        "name": "Chats",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          24,
+          24
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "246:2409",
+          "Chats",
+          "81c10c25593d451160897a03ccc39cd1fc7fad27",
+          true
+        ],
+        "bindings": [],
+        "refs": {}
+      },
+      {
+        "id": "I711:373;257:596",
+        "depth": 5,
+        "name": "Sidebar control",
+        "type": "INSTANCE",
+        "box": [
+          200,
+          0,
+          32,
+          32
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": false,
+        "bounds": null,
+        "master": [
+          "59:154",
+          "Icon Button/ghost",
+          "dc737950315cf97fb164c5fa223105f9b9ae31a9",
+          false
+        ],
+        "bindings": [],
+        "refs": {
+          "visible": "Show action#257:6"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "59:165",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "59:165",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false,
+                "resetScrollPosition": true
+              }
+            ],
+            "trigger": {
+              "type": "MOUSE_ENTER",
+              "delay": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "I711:373;257:602;711:399",
+        "depth": 5,
+        "name": "Indicadores",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          278,
+          40
+        ],
+        "sizes": [
+          null,
+          null,
+          40,
+          "FILL",
+          "HUG"
+        ],
+        "gap": 16,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "257:466",
+          "Chat Tool Item",
+          "84454a3b683efe1a399ecb061cd113ec16d4ab05",
+          false
+        ],
+        "bindings": [],
+        "refs": {},
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "257:473",
+              "navigation": "CHANGE_TO",
+              "transition": {
+                "type": "SMART_ANIMATE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.30000001192092896
+              },
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "257:473",
+                "navigation": "CHANGE_TO",
+                "transition": {
+                  "type": "SMART_ANIMATE",
+                  "easing": {
+                    "type": "EASE_OUT"
+                  },
+                  "duration": 0.30000001192092896
+                },
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_HOVER"
+            }
+          }
+        ]
+      },
+      {
+        "id": "I711:373;257:602;711:410",
+        "depth": 5,
+        "name": "Papeles de trabajo 2026",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          48,
+          278,
+          40
+        ],
+        "sizes": [
+          null,
+          null,
+          40,
+          "FILL",
+          "HUG"
+        ],
+        "gap": 16,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "257:466",
+          "Chat Tool Item",
+          "84454a3b683efe1a399ecb061cd113ec16d4ab05",
+          false
+        ],
+        "bindings": [],
+        "refs": {},
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "257:473",
+              "navigation": "CHANGE_TO",
+              "transition": {
+                "type": "SMART_ANIMATE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.30000001192092896
+              },
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "257:473",
+                "navigation": "CHANGE_TO",
+                "transition": {
+                  "type": "SMART_ANIMATE",
+                  "easing": {
+                    "type": "EASE_OUT"
+                  },
+                  "duration": 0.30000001192092896
+                },
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_HOVER"
+            }
+          }
+        ]
+      },
+      {
+        "id": "I711:382;257:596",
+        "depth": 5,
+        "name": "Sidebar control",
+        "type": "INSTANCE",
+        "box": [
+          200,
+          0,
+          32,
+          32
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": false,
+        "bounds": null,
+        "master": [
+          "59:154",
+          "Icon Button/ghost",
+          "dc737950315cf97fb164c5fa223105f9b9ae31a9",
+          false
+        ],
+        "bindings": [],
+        "refs": {
+          "visible": "Show action#257:6"
+        },
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "59:165",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "59:165",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false,
+                "resetScrollPosition": true
+              }
+            ],
+            "trigger": {
+              "type": "MOUSE_ENTER",
+              "delay": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "I711:382;257:602;711:421",
+        "depth": 5,
+        "name": "Reporte de Ingresos 2026",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          278,
+          40
+        ],
+        "sizes": [
+          null,
+          null,
+          40,
+          "FILL",
+          "HUG"
+        ],
+        "gap": 8,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "257:499",
+          "Chat History Item",
+          "21482a589fc01b58d4914f7647241b09245f9455",
+          false
+        ],
+        "bindings": [],
+        "refs": {},
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "257:506",
+              "navigation": "CHANGE_TO",
+              "transition": {
+                "type": "SMART_ANIMATE",
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.30000001192092896
+              },
+              "resetVideoPosition": false
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "257:506",
+                "navigation": "CHANGE_TO",
+                "transition": {
+                  "type": "SMART_ANIMATE",
+                  "easing": {
+                    "type": "EASE_OUT"
+                  },
+                  "duration": 0.30000001192092896
+                },
+                "resetVideoPosition": false
+              }
+            ],
+            "trigger": {
+              "type": "ON_HOVER"
+            }
+          }
+        ]
+      },
+      {
+        "id": "I711:373;257:596;59:155",
+        "depth": 6,
+        "name": "Icon",
+        "type": "INSTANCE",
+        "box": [
+          7.999950408935547,
+          8,
+          16,
+          16
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "206:1138",
+          "Plus",
+          "a7eab12525396b21f901983db82eecb38841c9ef",
+          true
+        ],
+        "bindings": [],
+        "refs": {
+          "mainComponent": "Icon#59:0"
+        }
+      },
+      {
+        "id": "I711:373;257:602;711:399;257:470",
+        "depth": 6,
+        "name": "CaretDown",
+        "type": "INSTANCE",
+        "box": [
+          238,
+          8,
+          24,
+          24
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "54:79",
+          "CaretDown",
+          "bc84188a38d95b6865a7c6a57820ee2330e43f34",
+          true
+        ],
+        "bindings": [],
+        "refs": {
+          "visible": "Show caret#796:10"
+        }
+      },
+      {
+        "id": "I711:373;257:602;711:410;257:470",
+        "depth": 6,
+        "name": "CaretDown",
+        "type": "INSTANCE",
+        "box": [
+          238,
+          8,
+          24,
+          24
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "54:79",
+          "CaretDown",
+          "bc84188a38d95b6865a7c6a57820ee2330e43f34",
+          true
+        ],
+        "bindings": [],
+        "refs": {
+          "visible": "Show caret#796:10"
+        }
+      },
+      {
+        "id": "I711:382;257:596;59:155",
+        "depth": 6,
+        "name": "Icon",
+        "type": "INSTANCE",
+        "box": [
+          7.999950408935547,
+          8,
+          16,
+          16
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "206:1138",
+          "Plus",
+          "a7eab12525396b21f901983db82eecb38841c9ef",
+          true
+        ],
+        "bindings": [],
+        "refs": {
+          "mainComponent": "Icon#59:0"
+        }
+      },
+      {
+        "id": "I711:382;257:602;711:421;628:9010",
+        "depth": 6,
+        "name": "Dot",
+        "type": "INSTANCE",
+        "box": [
+          266,
+          4,
+          8,
+          8
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": false,
+        "bounds": null,
+        "master": [
+          "32:41",
+          "Dot",
+          "012c408fce0c65c1432f38da2d881e12e0fdf857",
+          false
+        ],
+        "bindings": [],
+        "refs": {
+          "visible": "show notification#628:0"
+        }
+      },
+      {
+        "id": "I711:373;257:596;59:158",
+        "depth": 7,
+        "name": "Badge",
+        "type": "INSTANCE",
+        "box": [
+          -7.999899864196777,
+          0,
+          8,
+          8
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": false,
+        "bounds": null,
+        "master": [
+          "32:41",
+          "Dot",
+          "012c408fce0c65c1432f38da2d881e12e0fdf857",
+          false
+        ],
+        "bindings": [],
+        "refs": {
+          "visible": "Show badge#59:7"
+        }
+      },
+      {
+        "id": "I711:373;257:602;711:399;257:468",
+        "depth": 7,
+        "name": "Folder",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          24,
+          24
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "246:4374",
+          "Folder",
+          "f590766fe326cbf502d6b3066f5a432e6db19294",
+          true
+        ],
+        "bindings": [],
+        "refs": {
+          "mainComponent": "Icon#796:8"
+        }
+      },
+      {
+        "id": "I711:373;257:602;711:399;257:472",
+        "depth": 7,
+        "name": "Chats",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          24,
+          24
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "246:2409",
+          "Chats",
+          "81c10c25593d451160897a03ccc39cd1fc7fad27",
+          true
+        ],
+        "bindings": [],
+        "refs": {}
+      },
+      {
+        "id": "I711:373;257:602;711:410;257:468",
+        "depth": 7,
+        "name": "Folder",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          24,
+          24
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "246:4374",
+          "Folder",
+          "f590766fe326cbf502d6b3066f5a432e6db19294",
+          true
+        ],
+        "bindings": [],
+        "refs": {
+          "mainComponent": "Icon#796:8"
+        }
+      },
+      {
+        "id": "I711:373;257:602;711:410;257:472",
+        "depth": 7,
+        "name": "Chats",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          24,
+          24
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "246:2409",
+          "Chats",
+          "81c10c25593d451160897a03ccc39cd1fc7fad27",
+          true
+        ],
+        "bindings": [],
+        "refs": {}
+      },
+      {
+        "id": "I711:382;257:596;59:158",
+        "depth": 7,
+        "name": "Badge",
+        "type": "INSTANCE",
+        "box": [
+          -7.999899864196777,
+          0,
+          8,
+          8
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": false,
+        "bounds": null,
+        "master": [
+          "32:41",
+          "Dot",
+          "012c408fce0c65c1432f38da2d881e12e0fdf857",
+          false
+        ],
+        "bindings": [],
+        "refs": {
+          "visible": "Show badge#59:7"
+        }
+      },
+      {
+        "id": "I711:382;257:602;711:421;257:529",
+        "depth": 7,
+        "name": "PushPin",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          32,
+          32
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "59:154",
+          "Icon Button/ghost",
+          "dc737950315cf97fb164c5fa223105f9b9ae31a9",
+          false
+        ],
+        "bindings": [],
+        "refs": {},
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "59:165",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "59:165",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false,
+                "resetScrollPosition": true
+              }
+            ],
+            "trigger": {
+              "type": "MOUSE_ENTER",
+              "delay": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "I711:382;257:602;711:421;257:536",
+        "depth": 7,
+        "name": "DotsThree",
+        "type": "INSTANCE",
+        "box": [
+          0,
+          0,
+          32,
+          32
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "59:154",
+          "Icon Button/ghost",
+          "dc737950315cf97fb164c5fa223105f9b9ae31a9",
+          false
+        ],
+        "bindings": [],
+        "refs": {},
+        "reactions": [
+          {
+            "action": {
+              "type": "NODE",
+              "destinationId": "59:165",
+              "navigation": "CHANGE_TO",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            },
+            "actions": [
+              {
+                "type": "NODE",
+                "destinationId": "59:165",
+                "navigation": "CHANGE_TO",
+                "transition": null,
+                "resetVideoPosition": false,
+                "resetScrollPosition": true
+              }
+            ],
+            "trigger": {
+              "type": "MOUSE_ENTER",
+              "delay": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "I711:382;257:602;711:421;257:529;59:155",
+        "depth": 8,
+        "name": "Icon",
+        "type": "INSTANCE",
+        "box": [
+          7.999950408935547,
+          8,
+          16,
+          16
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "246:2373",
+          "PushPin",
+          "b0d66c2c04014490bfbefe7579e0c98cd16db0a2",
+          true
+        ],
+        "bindings": [],
+        "refs": {
+          "mainComponent": "Icon#59:0"
+        }
+      },
+      {
+        "id": "I711:382;257:602;711:421;257:536;59:155",
+        "depth": 8,
+        "name": "Icon",
+        "type": "INSTANCE",
+        "box": [
+          7.999950408935547,
+          8,
+          16,
+          16
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": true,
+        "bounds": null,
+        "master": [
+          "128:134",
+          "DotsThree",
+          "33bbf11fec95bfc540e85769b270534f2db07776",
+          true
+        ],
+        "bindings": [],
+        "refs": {
+          "mainComponent": "Icon#59:0"
+        }
+      },
+      {
+        "id": "I711:382;257:602;711:421;257:529;59:158",
+        "depth": 9,
+        "name": "Badge",
+        "type": "INSTANCE",
+        "box": [
+          -7.999899864196777,
+          0,
+          8,
+          8
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": false,
+        "bounds": null,
+        "master": [
+          "32:41",
+          "Dot",
+          "012c408fce0c65c1432f38da2d881e12e0fdf857",
+          false
+        ],
+        "bindings": [],
+        "refs": {
+          "visible": "Show badge#59:7"
+        }
+      },
+      {
+        "id": "I711:382;257:602;711:421;257:536;59:158",
+        "depth": 9,
+        "name": "Badge",
+        "type": "INSTANCE",
+        "box": [
+          -7.999899864196777,
+          0,
+          8,
+          8
+        ],
+        "sizes": [
+          null,
+          null,
+          null,
+          "FIXED",
+          "FIXED"
+        ],
+        "gap": 0,
+        "visible": false,
+        "bounds": null,
+        "master": [
+          "32:41",
+          "Dot",
+          "012c408fce0c65c1432f38da2d881e12e0fdf857",
+          false
+        ],
+        "bindings": [],
+        "refs": {
+          "visible": "Show badge#59:7"
+        }
+      }
+    ],
+    "qa": [
+      {
+        "mode": "Panel",
+        "geometry": [
+          310,
+          440
+        ],
+        "slot": [
+          278,
+          168
+        ],
+        "footer": [
+          280,
+          144
+        ]
+      },
+      {
+        "mode": "Panel",
+        "width": 280,
+        "slotWidth": 248
+      },
+      {
+        "initial": [
+          "Nuevo chat",
+          "History groups"
+        ],
+        "after": [
+          [
+            "QA segundo",
+            248
+          ],
+          [
+            "QA primero",
+            248
+          ]
+        ],
+        "property": "Content#258:0"
+      },
+      {
+        "mode": "Rail",
+        "geometry": [
+          64,
+          440
+        ],
+        "slot": [
+          32,
+          408
+        ]
+      }
+    ],
+    "variants": [
+      [
+        "258:1820",
+        "View=Chats, Mode=Panel, Version=V2"
+      ],
+      [
+        "258:2011",
+        "View=Indicadores, Mode=Panel, Version=V2"
+      ],
+      [
+        "258:2183",
+        "View=Papeles de trabajo, Mode=Panel, Version=V2"
+      ],
+      [
+        "258:2331",
+        "View=Vinculaciones, Mode=Panel, Version=V2"
+      ],
+      [
+        "258:2500",
+        "View=none, Mode=Rail, Version=V2"
+      ],
+      [
+        "283:8726",
+        "View=Chats, Mode=Rail, Version=V2"
+      ],
+      [
+        "258:2720",
+        "View=Indicadores, Mode=Rail, Version=V2"
+      ],
+      [
+        "258:2940",
+        "View=Papeles de trabajo, Mode=Rail, Version=V2"
+      ],
+      [
+        "258:3160",
+        "View=Vinculaciones, Mode=Rail, Version=V2"
+      ],
+      [
+        "711:354",
+        "View=Chats, Mode=Rail, Version=V1"
+      ],
+      [
+        "711:328",
+        "View=Chats, Mode=Panel, Version=V1"
+      ]
+    ],
+    "sampleIds": [
+      "715:417",
+      "715:585"
+    ]
+  },
+  "regression": {
+    "consumers": [
+      {
+        "id": "299:1331",
+        "main": "258:2500",
+        "version": "V2",
+        "view": "none",
+        "mode": "Rail",
+        "w": 79,
+        "h": 741,
+        "count": 4,
+        "pass": true
+      },
+      {
+        "id": "299:2119",
+        "main": "258:2500",
+        "version": "V2",
+        "view": "none",
+        "mode": "Rail",
+        "w": 79,
+        "h": 741,
+        "count": 4,
+        "pass": true
+      },
+      {
+        "id": "453:5316",
+        "main": "258:2500",
+        "version": "V2",
+        "view": "none",
+        "mode": "Rail",
+        "w": 79,
+        "h": 741,
+        "count": 4,
+        "pass": true
+      },
+      {
+        "id": "453:5440",
+        "main": "258:2500",
+        "version": "V2",
+        "view": "none",
+        "mode": "Rail",
+        "w": 79,
+        "h": 741,
+        "count": 4,
+        "pass": true
+      },
+      {
+        "id": "283:9479",
+        "main": "258:2500",
+        "version": "V2",
+        "view": "none",
+        "mode": "Rail",
+        "w": 79,
+        "h": 749,
+        "count": 4,
+        "pass": true
+      },
+      {
+        "id": "283:9817",
+        "main": "283:8726",
+        "version": "V2",
+        "view": "Chats",
+        "mode": "Rail",
+        "w": 79,
+        "h": 749,
+        "count": 4,
+        "pass": true
+      },
+      {
+        "id": "290:11673",
+        "main": "283:8726",
+        "version": "V2",
+        "view": "Chats",
+        "mode": "Rail",
+        "w": 79,
+        "h": 749,
+        "count": 4,
+        "pass": true
+      },
+      {
+        "id": "283:10156",
+        "main": "258:2720",
+        "version": "V2",
+        "view": "Indicadores",
+        "mode": "Rail",
+        "w": 79,
+        "h": 749,
+        "count": 4,
+        "pass": true
+      },
+      {
+        "id": "290:10554",
+        "main": "258:2940",
+        "version": "V2",
+        "view": "Papeles de trabajo",
+        "mode": "Rail",
+        "w": 79,
+        "h": 749,
+        "count": 4,
+        "pass": true
+      },
+      {
+        "id": "290:11118",
+        "main": "258:3160",
+        "version": "V2",
+        "view": "Vinculaciones",
+        "mode": "Rail",
+        "w": 79,
+        "h": 749,
+        "count": 4,
+        "pass": true
+      }
+    ],
+    "collectionCounts": [
+      [
+        "semantic",
+        162
+      ],
+      [
+        "component",
+        1218
+      ],
+      [
+        "primitives",
+        204
+      ]
+    ],
+    "visible": 61,
+    "bodyOnly": true,
+    "v1": 24,
+    "scopes": true
+  },
+  "layout": {
+    "expected": [
+      [
+        "258:1820",
+        264,
+        791,
+        null
+      ],
+      [
+        "258:2011",
+        264,
+        791,
+        null
+      ],
+      [
+        "258:2183",
+        264,
+        791,
+        null
+      ],
+      [
+        "258:2331",
+        264,
+        791,
+        null
+      ],
+      [
+        "258:2500",
+        79,
+        791,
+        null
+      ],
+      [
+        "283:8726",
+        79,
+        791,
+        null
+      ],
+      [
+        "258:2720",
+        79,
+        791,
+        null
+      ],
+      [
+        "258:2940",
+        79,
+        791,
+        null
+      ],
+      [
+        "258:3160",
+        79,
+        791,
+        null
+      ]
+    ],
+    "rail": [
+      16,
+      32
+    ],
+    "observed": [
+      [
+        0,
+        "711:328",
+        "View=Chats, Mode=Panel, Version=V1",
+        "COMPONENT",
+        [
+          124,
+          1713,
+          310,
+          775
+        ],
+        "FIXED",
+        "FIXED"
+      ],
+      [
+        1,
+        "711:329",
+        "Header",
+        "FRAME",
+        [
+          16,
+          16,
+          278,
+          32
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        1,
+        "711:372",
+        "Content",
+        "SLOT",
+        [
+          16,
+          80,
+          278,
+          503
+        ],
+        "FILL",
+        "FILL"
+      ],
+      [
+        1,
+        "711:341",
+        "Chat Plan Usage",
+        "INSTANCE",
+        [
+          16,
+          615,
+          278,
+          144
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        2,
+        "711:330",
+        "Cerrar historial de chats",
+        "INSTANCE",
+        [
+          0,
+          0,
+          32,
+          32
+        ],
+        "FIXED",
+        "FIXED"
+      ],
+      [
+        2,
+        "711:335",
+        "Title",
+        "TEXT",
+        [
+          40,
+          6,
+          198,
+          20
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        2,
+        "711:336",
+        "Buscar chats",
+        "INSTANCE",
+        [
+          246,
+          0,
+          32,
+          32
+        ],
+        "FIXED",
+        "FIXED"
+      ],
+      [
+        2,
+        "711:355",
+        "Nuevo chat",
+        "INSTANCE",
+        [
+          0,
+          0,
+          278,
+          40
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        2,
+        "711:362",
+        "History groups",
+        "FRAME",
+        [
+          0,
+          72,
+          278,
+          208
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        2,
+        "I711:341;257:605",
+        "Plan heading",
+        "FRAME",
+        [
+          16,
+          16,
+          246,
+          24
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        2,
+        "I711:341;257:608",
+        "Usage",
+        "FRAME",
+        [
+          16,
+          56,
+          246,
+          36
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        2,
+        "I711:341;257:614",
+        "Usage percentage",
+        "TEXT",
+        [
+          16,
+          108,
+          246,
+          20
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        3,
+        "I711:330;59:155",
+        "Icon",
+        "INSTANCE",
+        [
+          7.999950408935547,
+          8,
+          16,
+          16
+        ],
+        "FIXED",
+        "FIXED"
+      ],
+      [
+        3,
+        "I711:330;59:157",
+        "Badge anchor",
+        "FRAME",
+        [
+          26,
+          6,
+          9.999999747378752e-05,
+          8
+        ],
+        "FIXED",
+        "HUG"
+      ],
+      [
+        3,
+        "I711:336;59:155",
+        "Icon",
+        "INSTANCE",
+        [
+          7.999950408935547,
+          8,
+          16,
+          16
+        ],
+        "FIXED",
+        "FIXED"
+      ],
+      [
+        3,
+        "I711:336;59:157",
+        "Badge anchor",
+        "FRAME",
+        [
+          26,
+          6,
+          9.999999747378752e-05,
+          8
+        ],
+        "FIXED",
+        "HUG"
+      ],
+      [
+        3,
+        "I711:355;257:467",
+        "Leading content",
+        "FRAME",
+        [
+          16,
+          8,
+          246,
+          24
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        3,
+        "711:373",
+        "Carpetas",
+        "INSTANCE",
+        [
+          0,
+          0,
+          278,
+          124
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        3,
+        "711:382",
+        "Chats",
+        "INSTANCE",
+        [
+          0,
+          140,
+          278,
+          76
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        3,
+        "I711:341;257:606",
+        "MagicWand",
+        "INSTANCE",
+        [
+          0,
+          0,
+          24,
+          24
+        ],
+        "FIXED",
+        "FIXED"
+      ],
+      [
+        3,
+        "I711:341;257:607",
+        "Plan name",
+        "TEXT",
+        [
+          32,
+          2,
+          214,
+          20
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        3,
+        "I711:341;257:609",
+        "Usage label",
+        "FRAME",
+        [
+          0,
+          0,
+          246,
+          20
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        3,
+        "I711:341;257:612",
+        "Usage track",
+        "FRAME",
+        [
+          0,
+          28,
+          246,
+          8
+        ],
+        "FILL",
+        "FIXED"
+      ],
+      [
+        4,
+        "I711:355;257:468",
+        "NotePencil",
+        "INSTANCE",
+        [
+          0,
+          0,
+          24,
+          24
+        ],
+        "FIXED",
+        "FIXED"
+      ],
+      [
+        4,
+        "I711:355;257:469",
+        "Label",
+        "TEXT",
+        [
+          28,
+          2,
+          218,
+          20
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        4,
+        "I711:373;257:588",
+        "Heading",
+        "FRAME",
+        [
+          0,
+          0,
+          278,
+          20
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        4,
+        "I711:373;257:602",
+        "Items",
+        "SLOT",
+        [
+          0,
+          36,
+          278,
+          88
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        4,
+        "I711:382;257:588",
+        "Heading",
+        "FRAME",
+        [
+          0,
+          0,
+          278,
+          20
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        4,
+        "I711:382;257:602",
+        "Items",
+        "SLOT",
+        [
+          0,
+          36,
+          278,
+          40
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        4,
+        "I711:341;257:610",
+        "Usage label",
+        "TEXT",
+        [
+          0,
+          0,
+          199,
+          20
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        4,
+        "I711:341;257:611",
+        "Usage quantity",
+        "TEXT",
+        [
+          207,
+          0,
+          39,
+          20
+        ],
+        "HUG",
+        "HUG"
+      ],
+      [
+        4,
+        "I711:341;257:613",
+        "Usage 28 percent",
+        "FRAME",
+        [
+          0,
+          0,
+          69.22613525390625,
+          8
+        ],
+        "FIXED",
+        "FIXED"
+      ],
+      [
+        5,
+        "I711:373;257:589",
+        "Chats title",
+        "TEXT",
+        [
+          8,
+          0,
+          61,
+          20
+        ],
+        "HUG",
+        "HUG"
+      ],
+      [
+        5,
+        "I711:373;257:602;711:399",
+        "Indicadores",
+        "INSTANCE",
+        [
+          0,
+          0,
+          278,
+          40
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        5,
+        "I711:373;257:602;711:410",
+        "Papeles de trabajo 2026",
+        "INSTANCE",
+        [
+          0,
+          48,
+          278,
+          40
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        5,
+        "I711:382;257:589",
+        "Chats title",
+        "TEXT",
+        [
+          8,
+          0,
+          40,
+          20
+        ],
+        "HUG",
+        "HUG"
+      ],
+      [
+        5,
+        "I711:382;257:602;711:421",
+        "Reporte de Ingresos 2026",
+        "INSTANCE",
+        [
+          0,
+          0,
+          278,
+          40
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        6,
+        "I711:373;257:602;711:399;257:467",
+        "Leading content",
+        "FRAME",
+        [
+          16,
+          8,
+          206,
+          24
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        6,
+        "I711:373;257:602;711:399;257:470",
+        "CaretDown",
+        "INSTANCE",
+        [
+          238,
+          8,
+          24,
+          24
+        ],
+        "FIXED",
+        "FIXED"
+      ],
+      [
+        6,
+        "I711:373;257:602;711:410;257:467",
+        "Leading content",
+        "FRAME",
+        [
+          16,
+          8,
+          206,
+          24
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        6,
+        "I711:373;257:602;711:410;257:470",
+        "CaretDown",
+        "INSTANCE",
+        [
+          238,
+          8,
+          24,
+          24
+        ],
+        "FIXED",
+        "FIXED"
+      ],
+      [
+        6,
+        "I711:382;257:602;711:421;257:500",
+        "Title",
+        "SLOT",
+        [
+          16,
+          10,
+          207,
+          20
+        ],
+        "FILL",
+        "HUG"
+      ],
+      [
+        6,
+        "I711:382;257:602;711:421;257:502",
+        "Updated",
+        "TEXT",
+        [
+          231,
+          10,
+          31,
+          20
+        ],
+        "HUG",
+        "HUG"
+      ]
+    ],
+    "planShadow": [
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "radius": 6,
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:713:4"
+          },
+          "spread": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:713:7"
+          },
+          "radius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:713:6"
+          },
+          "offsetX": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:710:15"
+          },
+          "offsetY": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:713:5"
+          }
+        },
+        "color": {
+          "r": 0.0470588244497776,
+          "g": 0.0470588244497776,
+          "b": 0.0470588244497776,
+          "a": 0.10000000149011612
+        },
+        "offset": {
+          "x": 0,
+          "y": 4
+        },
+        "spread": -2,
+        "blendMode": "NORMAL",
+        "showShadowBehindNode": false
+      }
+    ]
+  },
+  "referenceEffects": {
+    "plan": [
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "radius": 6,
+        "boundVariables": {},
+        "color": {
+          "r": 0.0470588244497776,
+          "g": 0.0470588244497776,
+          "b": 0.0470588244497776,
+          "a": 0.10000000149011612
+        },
+        "offset": {
+          "x": 0,
+          "y": 4
+        },
+        "spread": -2,
+        "blendMode": "NORMAL",
+        "showShadowBehindNode": false
+      }
+    ],
+    "strokes": [
+      false,
+      false
+    ],
+    "railActions": []
+  }
+}

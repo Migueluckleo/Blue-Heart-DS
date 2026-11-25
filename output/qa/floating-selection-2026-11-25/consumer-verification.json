@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "scope": "Current canonical cut, same-version PO and Figma distributions and verified graphs",
+  "canonical": {
+    "status": "CURRENT",
+    "run": "2026-11-25-floating-actions-selection-scope",
+    "canonical_files": 1515,
+    "sources": 21,
+    "tokens": 1613,
+    "collections": {
+      "component": 1243,
+      "primitives": 206,
+      "semantic": 164
+    },
+    "compared_to_figma": 25,
+    "graph_outputs": 8,
+    "canonical_ds_digest": "805afa0f8c4e10d407bd777b53f5c935cc2512997f39d1bd05777a0fadaec4ca",
+    "catalog_manifest_sha256": "cc88cf11aafa2137dfa41de52c8ebcbacdcf62add73a52a8754c7c2af91e0d05",
+    "closure_sha256": "1718a94b7a1724b47730b7324a701e056248fb3950d810bcd8f0ebe5f3335e4b",
+    "web_manifest_sha256": "8c71088e35d4ff221bdb6f757aad603248481eaba7441c2302c3c1e7fb0cfcf6"
+  },
+  "packages": {
+    "blueheart-figma-local": {
+      "version": "1.0.5",
+      "artifact_revision": "floating-actions-dot-2026-11-25",
+      "zip_sha256": "74aafdde829a9396512ea157dcd34dcab77ef5c0fdc66759275994d0e30abd76",
+      "tests": {
+        "test_flow.py": 41,
+        "test_transport.py": 14,
+        "test_updates.py": 13
+      },
+      "graph_cases": 37,
+      "files": 51,
+      "aliases": 9468,
+      "mode_values": 5342,
+      "tokens": 1613,
+      "graph": {
+        "nodes": 4549,
+        "edges": 13298,
+        "logical_sha256": "42dd8dc2e78c1de6a603da516bd2976cc75677ddfd61d1b1891f2a20f77a429c"
+      }
+    },
+    "blueheart-figma-portable": {
+      "version": "1.1.0",
+      "artifact_revision": "floating-actions-dot-2026-11-25",
+      "zip_sha256": "bf1e2e53203e4ed869beb438e0cb716817ad16ff76bf8389a3c2588073ce3f34",
+      "tests": {
+        "test_flow.py": 41,
+        "test_transport.py": 14,
+        "test_updates.py": 13,
+        "test_current_revision.py": 7
+      },
+      "graph_cases": 37,
+      "files": 57,
+      "aliases": 9468,
+      "mode_values": 5342,
+      "tokens": 1613,
+      "graph": {
+        "nodes": 4549,
+        "edges": 13652,
+        "logical_sha256": "576cd71e02c4f98bfbf6facfa7e3df82ec281afa67d7085472e321311467972f"
+      }
+    },
+    "po-prototypes-autocontenida": {
+      "version": "1.1.0",
+      "artifact_revision": "floating-actions-dot-2026-11-25",
+      "zip_sha256": "e4d15babc1483f529093957b87e357eb068602d3aa5e663acd7eecee12f89009",
+      "files": 127,
+      "aliases": 9468,
+      "mode_values": 5342,
+      "tokens": 1613,
+      "html_sha256": "2be0c13cb9386b3f78bbf4222e483cb1e9bbb38fd2fe5834c360e7487ec658f7",
+      "handoff_sha256": "065aea0ab6e4de9d1a3c654f884cd8edc5461db4d0ee97f11a7dd38b30f53717",
+      "tests": {
+        "guards_and_vende": 22,
+        "coverage": 24,
+        "release_phase": 21,
+        "body_browser": 244,
+        "icon_exports": 47
+      },
+      "graph_cases": 30,
+      "graph": {
+        "nodes": 7600,
+        "edges": 15887,
+        "logical_sha256": "ca84f87b81051fae46248c106603566876f0588267df5aced8cb83098c083012"
+      }
+    }
+  },
+  "shared": {
+    "status": "PASS",
+    "shared": {
+      "blueheart-figma-local": {
+        "matching_source_hashes": 1409,
+        "matching_aliases": 9468,
+        "handoff": "PREPARED",
+        "handoff_sha256": "065aea0ab6e4de9d1a3c654f884cd8edc5461db4d0ee97f11a7dd38b30f53717"
+      },
+      "blueheart-figma-portable": {
+        "matching_source_hashes": 1409,
+        "matching_aliases": 9468,
+        "handoff": "PREPARED",
+        "handoff_sha256": "065aea0ab6e4de9d1a3c654f884cd8edc5461db4d0ee97f11a7dd38b30f53717"
+      }
+    },
+    "canonical_ds_digest": "805afa0f8c4e10d407bd777b53f5c935cc2512997f39d1bd05777a0fadaec4ca"
+  },
+  "figma": {
+    "matches": 25,
+    "differences": [],
+    "counts": {
+      "semantic": 164,
+      "component": 1243,
+      "primitives": 206
+    },
+    "visible": 61
+  },
+  "installation": "UNCHANGED"
+}

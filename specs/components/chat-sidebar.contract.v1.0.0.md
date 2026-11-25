@@ -22,11 +22,11 @@ dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001, CHAT-TOOL-ITEM-001, CHAT-HIS
 
 ## Propósito y anatomía
 
-Panel lateral de herramientas de chat. Las vistas son Chats, Indicadores, Papeles de trabajo y Vinculaciones. Cada vista tiene un panel de 264 px y un rail de referencia de 79 px. El panel presenta título, búsqueda y cierre, atajos y contenido. El Rail presenta cuatro Chat Rail Item y el indicador compacto de plan. La [enmienda de navegación](chat-sidebar.rail-item.amendment.v1.0.0.md) documenta selección neutral, estados y Dot de novedades. El alto de 791 px es la referencia de Figma. El anfitrión controla selección, acciones, enlaces y los datos visibles. El Slot Content nativo es compartido por Rail y Panel. Permite editar la navegación en Rail o las secciones en Panel; el plan compacto queda fuera. El título y las acciones deben conservar el ancho disponible de su región. El Scrollbar nativo de Dropdown se reutiliza en tres especímenes Figma. Web usa el scroll del contenedor.
+Panel lateral de herramientas de chat. La [enmienda de versiones](chat-sidebar.v1-rail-panel.amendment.v1.0.0.md) agrega V1 para un historial de acceso único. Los requisitos de este contrato describen V2, que sigue siendo la opción predeterminada. Las vistas son Chats, Indicadores, Papeles de trabajo y Vinculaciones. Cada vista tiene un panel de 264 px y un rail de referencia de 79 px. El panel presenta título, búsqueda y cierre, atajos y contenido. El Rail presenta cuatro Chat Rail Item y el indicador compacto de plan. La [enmienda de navegación](chat-sidebar.rail-item.amendment.v1.0.0.md) documenta selección neutral, estados y Dot de novedades. El alto de 791 px es la referencia de Figma. El anfitrión controla selección, acciones, enlaces y los datos visibles. El Slot Content nativo es compartido por Rail y Panel. Permite editar la navegación en Rail o las secciones en Panel; el plan compacto queda fuera. El título y las acciones deben conservar el ancho disponible de su región. El Scrollbar nativo de Dropdown se reutiliza en tres especímenes Figma. Web usa el scroll del contenedor.
 
 ## Variantes y estados
 
-En Figma hay nueve combinaciones. Las cuatro vistas existentes se ofrecen en Panel y Rail. `View=none, Mode=Rail` (258:2500) deja sin selección los cuatro Chat Rail Item y mantiene el plan compacto. `View=Chats, Mode=Rail` (283:8726) conserva seleccionado el ítem de Chats. La composición inicial de Playground usa el Rail sin selección. Las otras cinco composiciones muestran un Rail con selección y su Panel asociado. [Layouts verificados](../../implementations/figma/chat-playground-2026-11-13/README.md).
+V2 tiene nueve combinaciones. Las cuatro vistas existentes se ofrecen en Panel y Rail. `View=none, Mode=Rail` (258:2500) deja sin selección los cuatro Chat Rail Item y mantiene el plan compacto. `View=Chats, Mode=Rail` (283:8726) conserva seleccionado el ítem de Chats. La composición inicial de Playground usa el Rail sin selección. Las otras cinco composiciones muestran un Rail con selección y su Panel asociado. [Layouts verificados](../../implementations/figma/chat-playground-2026-11-13/README.md).
 
 En React, `mode="rail"` admite `view="none"` para mostrar las cuatro vistas sin selección. Cada ítem emite su vista en `onViewChange`. El Panel requiere una vista activa. El ejemplo abre con el Rail sin selección y vuelve a ese estado al cerrar el Panel. El tamaño de referencia del Rail es 79 × 791 px. Rail y Panel tienen `minHeight=null` en las nueve variantes, conforme a la [enmienda](chat-sidebar.rail-item.amendment.v1.0.0.md).
 
@@ -51,11 +51,11 @@ El [mapa delegado](../tokens/chat-sidebar.v1.0.0.json) da a cada maestro sus rol
 
 ## Guía semántica normativa
 
-Usa el Rail para cambiar de vista y el Panel para mostrar acciones y listas de esa vista. Mantén visibles la selección y los nombres de acción. Compón Content con ítems de navegación en Rail y con secciones en Panel.
+Usa V1 para abrir o cerrar el historial de chats con un único control a la derecha. Usa V2, predeterminada, si el Rail cambia entre módulos y muestra selección y novedades por vista. Compón Content con el disparador o los ítems de navegación en Rail y con las secciones en Panel. El plan se mantiene fuera de Content.
 
 ## Description exacta
 
-Chat Sidebar · CHAT-SIDEBAR-001. Usa el Rail para cambiar de vista y el Panel para mostrar acciones y listas de esa vista. Mantén visibles la selección y los nombres de acción. Compón Content con ítems de navegación en Rail y con secciones en Panel.
+V2 (predeterminada): navegación multi-vista en Rail y secciones en Panel. V1: historial a la derecha con acceso único en Rail y Panel con búsqueda y plan. Content admite reemplazo desde instancia.
 
 ## Aceptación
 

@@ -1,0 +1,438 @@
+{
+  "figma": {
+    "status": "PASS",
+    "issues": [],
+    "checks": {
+      "menu": {
+        "box": [
+          0,
+          -157,
+          300,
+          153
+        ],
+        "layout": "ABSOLUTE",
+        "show": "Open",
+        "props": [
+          {
+            "Contexto#758:10": {
+              "type": "TEXT",
+              "value": "Página 1 de 12"
+            },
+            "Conteo#758:5": {
+              "type": "TEXT",
+              "value": "50 comprobantes"
+            },
+            "Acción#758:0": {
+              "type": "TEXT",
+              "value": "Seleccionar solo esta página"
+            },
+            "State": {
+              "value": "Default",
+              "type": "VARIANT",
+              "boundVariables": {}
+            }
+          },
+          {
+            "Contexto#758:10": {
+              "type": "TEXT",
+              "value": "Todas las páginas"
+            },
+            "Conteo#758:5": {
+              "type": "TEXT",
+              "value": "2,600 comprobantes"
+            },
+            "Acción#758:0": {
+              "type": "TEXT",
+              "value": "Seleccionar todo"
+            },
+            "State": {
+              "value": "Default",
+              "type": "VARIANT",
+              "boundVariables": {}
+            }
+          }
+        ]
+      },
+      "dot": [
+        47,
+        20,
+        8,
+        8,
+        "2600"
+      ],
+      "slot": [
+        "I761:48;122:12",
+        "General actions#122:0",
+        6
+      ],
+      "noActions": 0,
+      "oneAction": 1,
+      "sevenActions": 7,
+      "optOut": true
+    },
+    "clicks": [
+      [
+        "725:6894",
+        "CHANGE_TO",
+        "759:31"
+      ],
+      [
+        "759:32",
+        "CHANGE_TO",
+        "759:30"
+      ],
+      [
+        "759:37",
+        "CHANGE_TO",
+        "759:30"
+      ],
+      [
+        "759:44",
+        "CHANGE_TO",
+        "759:30"
+      ]
+    ],
+    "visual": "761:101",
+    "master": "122:6",
+    "itemStates": [
+      [
+        "758:30",
+        "Default",
+        300,
+        60
+      ],
+      [
+        "758:36",
+        "Hover",
+        300,
+        60
+      ],
+      [
+        "758:42",
+        "Focus",
+        300,
+        60
+      ],
+      [
+        "758:48",
+        "Disabled",
+        300,
+        60
+      ]
+    ],
+    "description": "FLOATING-ACTIONS-001 · Reúne acciones sobre elementos seleccionados. Usa Seleccionar para elegir la página actual o todo el histórico seleccionado. El anfitrión aporta el conteo, contexto y eventos. General actions admite acciones variables."
+  },
+  "main": {
+    "retained": {
+      "master": "122:6",
+      "slot": "122:12",
+      "slotProp": {
+        "slotContentId": "General actions#122:0"
+      },
+      "slotContents": [
+        "122:13",
+        "122:21",
+        "122:27",
+        "122:33",
+        "122:39",
+        "122:40"
+      ],
+      "dot": "122:8",
+      "oldTrigger": "725:6894"
+    },
+    "host": [
+      1024,
+      96
+    ],
+    "slot": [
+      "122:13",
+      "122:21",
+      "122:27",
+      "122:33",
+      "122:39",
+      "122:40"
+    ],
+    "description": "FLOATING-ACTIONS-001 · Reúne acciones sobre elementos seleccionados. Usa Seleccionar para elegir la página actual o todo el histórico seleccionado. El anfitrión aporta el conteo, contexto y eventos. General actions admite acciones variables.",
+    "set": "759:29",
+    "closed": "759:30",
+    "open": "759:31",
+    "instance": "759:54",
+    "trigger": [
+      "725:6894",
+      "759:32"
+    ],
+    "wrap": [
+      135,
+      48
+    ],
+    "row": [
+      "759:37",
+      "759:44"
+    ],
+    "menu": {
+      "id": "759:36",
+      "x": 0,
+      "y": -157,
+      "width": 300,
+      "height": 153,
+      "layout": "ABSOLUTE",
+      "bindings": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:756:21"
+        },
+        "paddingLeft": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:756:21"
+        },
+        "paddingTop": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:756:18"
+        },
+        "paddingRight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:756:21"
+        },
+        "paddingBottom": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:756:18"
+        },
+        "width": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:756:12"
+        },
+        "topLeftRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:756:22"
+        },
+        "topRightRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:756:22"
+        },
+        "bottomLeftRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:756:22"
+        },
+        "bottomRightRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:756:22"
+        },
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:756:4"
+          }
+        ],
+        "effects": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:756:11"
+          },
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:756:15"
+          }
+        ]
+      }
+    },
+    "props": {
+      "General actions#122:0": {
+        "type": "SLOT",
+        "description": "0..n acciones. Ajusta la cantidad al ancho disponible.",
+        "slotSettings": {
+          "stretchChildOnInsert": false,
+          "displayEmptyByDefault": false,
+          "minChildren": null,
+          "maxChildren": null,
+          "allowPreferredValuesOnly": false
+        },
+        "preferredValues": []
+      },
+      "Label#122:1": {
+        "type": "TEXT",
+        "defaultValue": "Elementos seleccionados"
+      },
+      "Select all#122:2": {
+        "type": "TEXT",
+        "defaultValue": "Seleccionar todos (245)"
+      },
+      "Show select all#122:3": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      }
+    }
+  },
+  "dot": {
+    "wide": [
+      [
+        "757:2",
+        {
+          "characters": "Count#32:0"
+        }
+      ],
+      [
+        "757:4",
+        {
+          "characters": "Count#32:0"
+        }
+      ],
+      [
+        "757:6",
+        {
+          "characters": "Count#32:0"
+        }
+      ],
+      [
+        "757:8",
+        {
+          "characters": "Count#32:0"
+        }
+      ],
+      [
+        "757:10",
+        {
+          "characters": "Count#32:0"
+        }
+      ],
+      [
+        "757:12",
+        {
+          "characters": "Count#32:0"
+        }
+      ],
+      [
+        "757:14",
+        {
+          "characters": "Count#32:0"
+        }
+      ],
+      [
+        "757:16",
+        {
+          "characters": "Count#32:0"
+        }
+      ]
+    ],
+    "tests": [
+      [
+        "count",
+        "7",
+        20,
+        20,
+        0,
+        0
+      ],
+      [
+        "count-multi",
+        "12",
+        29,
+        20,
+        8,
+        8
+      ],
+      [
+        "count-multi",
+        "2,600",
+        51,
+        20,
+        8,
+        8
+      ],
+      [
+        "count-expand",
+        "99+",
+        38,
+        20,
+        8,
+        8
+      ]
+    ]
+  },
+  "clip": {
+    "root": [
+      1024,
+      96,
+      false
+    ],
+    "summary": false,
+    "default": false,
+    "box": {
+      "x": -3408,
+      "y": -4032,
+      "width": 300,
+      "height": 153
+    },
+    "render": {
+      "x": -3416,
+      "y": -4040,
+      "width": 316,
+      "height": 169
+    },
+    "rows": [
+      [
+        "I761:102;759:54;759:37",
+        {
+          "x": -3408,
+          "y": -4016,
+          "width": 300,
+          "height": 60
+        }
+      ],
+      [
+        "I761:102;759:54;759:43",
+        {
+          "x": -3408,
+          "y": -3956,
+          "width": 300,
+          "height": 1
+        }
+      ],
+      [
+        "I761:102;759:54;759:44",
+        {
+          "x": -3408,
+          "y": -3955,
+          "width": 300,
+          "height": 60
+        }
+      ]
+    ]
+  },
+  "cleanup": {
+    "removed": true,
+    "page": [
+      [
+        "122:6",
+        "Floating Actions"
+      ],
+      [
+        "758:29",
+        "Floating Actions / Selection menu item"
+      ],
+      [
+        "759:29",
+        "Floating Actions / Selection scope"
+      ]
+    ],
+    "master": [
+      "122:6",
+      1024,
+      96
+    ],
+    "slot": {
+      "id": "122:12",
+      "prop": "General actions#122:0",
+      "children": 6
+    },
+    "scope": [
+      "759:54",
+      "Closed",
+      true
+    ],
+    "caret": [
+      "54:79",
+      "CaretDown",
+      true
+    ]
+  }
+}

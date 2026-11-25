@@ -7,7 +7,7 @@ import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
 import { EyeIcon } from '@phosphor-icons/react/dist/csr/Eye';
 import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
 import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
-import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from './index';
+import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from './index';
 
 const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];
 
@@ -387,6 +387,15 @@ export function HeaderActionsExample() {
 
 // example: header
 export function HeaderExample() {
+  const logos = [
+    {src:'/assets/contabilidad-header.png',alt:'CONTPAQi Contabilidad'},
+    {src:'/assets/header-portal-web.svg',alt:'Portal Web'},
+    {src:'/assets/header-mi-contpaqi.svg',alt:'Mi CONTPAQi'},
+    {src:'/assets/header-mi-gestion.svg',alt:'Mi Gestión'},
+  ];
+  const [logoIndex,setLogoIndex] = useState(0);
+  const logoHeights = [40,44,48] as const;
+  const [logoHeightIndex,setLogoHeightIndex] = useState(2);
   const [open, setOpen] = useState<'company'|'user'>();
   const [message, setMessage] = useState('');
   const toggle = (next:'company'|'user') => setOpen(current=>current===next ? undefined : next);
@@ -396,8 +405,20 @@ export function HeaderExample() {
   };
   useEffect(()=>{if(open)document.getElementById(`demo-header-${open}-option`)?.focus();},[open]);
   return <div className="my-4 space-y-2" onKeyDown={event=>{if(open&&event.key==='Escape')close();}}>
+    <label className="inline-flex items-center gap-2">
+      Logotipo del encabezado
+      <select value={logoIndex} onChange={event=>setLogoIndex(Number(event.currentTarget.value))}>
+        {logos.map((logo,index)=><option key={logo.src} value={index}>{logo.alt}</option>)}
+      </select>
+    </label>
+    <label className="inline-flex items-center gap-2">
+      Altura del logotipo
+      <select value={logoHeightIndex} onChange={event=>setLogoHeightIndex(Number(event.currentTarget.value))}>
+        {logoHeights.map((height,index)=><option key={height} value={index}>{height} px</option>)}
+      </select>
+    </label>
     <div className="overflow-x-auto">
-      <Header company={{id:'demo-header-company',companyName:'Empresa de muestra',rfc:'XAXX010101000',
+      <Header logo={logos[logoIndex]} logoHeight={logoHeights[logoHeightIndex]} company={{id:'demo-header-company',companyName:'Empresa de muestra',rfc:'XAXX010101000',
         open:open==='company',onToggle:()=>toggle('company'),controls:'demo-header-company-list'}}
         user={{id:'demo-header-user',name:'Julia Ávila',avatar:{initials:'JÁ'},
           open:open==='user',onToggle:()=>toggle('user'),controls:'demo-header-user-menu'}}
@@ -609,25 +630,6 @@ export function DropdownMenuExample() {
         showSearch searchLabel="Buscar moneda" searchPlaceholder="Buscar por nombre o código"
         onSelectionChange={setCurrency}/>
     </form>
-  </div>;
-}
-
-// example: floating-actions
-export function FloatingActionsExample() {
-  const [count,setCount]=useState(3);
-  const [message,setMessage]=useState('');
-  return <div className="my-4 space-y-3">
-    <Button id="demo-floating-open" label="Preparar selección" onClick={()=>{setCount(3);setMessage('');}}/>
-    {count>0&&<div className="overflow-x-auto">
-      <FloatingActions className="w-[1024px]" count={String(count)} label="Elementos seleccionados"
-        selectAll={count<8?{label:'Seleccionar todos (8)',onSelect:()=>{
-          setCount(8);document.getElementById('demo-floating-review')?.focus();
-        }}:undefined}
-        actions={<Button id="demo-floating-review" variant="text" label="Marcar como revisados" showLeftIcon
-          onClick={()=>setMessage(`Se marcaron ${count} comprobantes de muestra.`)}/>}
-        onDismiss={()=>{setCount(0);document.getElementById('demo-floating-open')?.focus();}}/>
-    </div>}
-    <p id="demo-floating-result" role="status">{message}</p>
   </div>;
 }
 

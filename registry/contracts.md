@@ -170,3 +170,19 @@ La [política vigente](../specs/foundations/token-visibility.contract.v1.0.0.md)
 ## Chat Rail Item y Chat Sidebar · 2026-11-24
 
 [CHAT-RAIL-ITEM-001](../specs/components/chat-rail-item.contract.v1.0.0.md) y [CHAT-SIDEBAR-001-RAIL-ITEM](../specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md) v1.0.0 DELEGATED_FOR_BUILD. Ocho variantes con Selected independiente, Dot medium 12×12 y foco brand-strong. [16 tokens](../specs/tokens/chat-rail-item.v1.0.0.json) con scopes internos y aliases en cuatro modos. Chat Sidebar comparte Content#258:0 en nueve variantes, todas sin altura mínima en el maestro. [QA documental PASS](../qa/contracts/chat-rail-item.v1.0.0.review.md).
+
+## Chat Sidebar · versiones V1 y V2 · 2026-11-24
+
+[CHAT-SIDEBAR-001-V1-V2](../specs/components/chat-sidebar.v1-rail-panel.amendment.v1.0.0.md), v1.0.0, DELEGATED_FOR_BUILD. Incorpora un Rail y un Panel V1 para historial de acceso único. Las nueve combinaciones previas corresponden a V2 y conservan sus maestros. [Datos](../specs/data/chat-sidebar.v1-rail-panel.v1.0.0.json), [tokens](../specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json) y [QA documental](../qa/contracts/chat-sidebar.v1-rail-panel.v1.0.0.review.md).
+
+## Logos corporativos · 2026-11-24
+
+[LOGOS-001-CORPORATE-SVG](../specs/components/logos.corporate-svg.amendment.v1.0.0.md) v1.0.0 DELEGATED_FOR_BUILD. Se agregan tres variantes al set CONTPAQi con alcance Figma. El total vigente es de seis sets y 75 variantes. [QA documental](../qa/contracts/logos.corporate-svg.v1.0.0.review.md).
+
+## Header · Logotipos proporcionales · 2026-11-25
+
+[HEADER-001-LOGO-SIZING](../specs/components/header.logo-sizing.amendment.v1.0.0.md) v1.0.0 DELEGATED_FOR_BUILD. Regla de 40, 44 o 48 px de altura con ancho proporcional y una sola región de marca. [Matriz](../specs/data/header.logo-sizing.v1.0.0.json) · [QA documental](../qa/contracts/header.logo-sizing.v1.0.0.review.md).
+
+## Floating Actions y Dot · Alcance de selección · 2026-11-25
+
+[FLOATING-ACTIONS-001-SELECTION-SCOPE](../specs/components/floating-actions.selection-scope.amendment.v1.0.0.md) y [DOT-001-COUNT-MULTI](../specs/components/dot.count-multi.amendment.v1.0.0.md), v1.0.0 DELEGATED_FOR_BUILD. El menú elige la página actual o todo el histórico seleccionado. Dot admite ocho combinaciones de ancho expandido y conserva las de presencia. [Datos](../specs/data/floating-actions.selection-scope.v1.0.0.json) · [QA documental](../qa/contracts/floating-actions.selection-scope.v1.0.0.review.md).

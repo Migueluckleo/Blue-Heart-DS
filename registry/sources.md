@@ -150,3 +150,19 @@ EXPLICIT: «Header y App Shell también sufrieron modificaciones no olvides docu
 ## SRC-CHAT-RAIL-ITEM-2026-11-24
 
 El usuario solicitó revisar la navegación de [Chat Sidebar 258:3326](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=258-3326), conservar su apariencia neutral, permitir novedades y ubicar un maestro nuevo en otra página. Aclaró Dot medium, focus ring de marca, quitar mínimo de Rail y Panel, y documentar Content añadido a los Rail. OBSERVED: 20 controles iniciales, cuatro superficies #0F172A literales y nueve mínimos de 791. [Lectura final y mapeo](../implementations/figma/chat-rail-item-2026-11-24/readback.json) · [datos de Content](../specs/data/chat-sidebar.rail-content.v1.0.0.json).
+
+## SRC-CHAT-SIDEBAR-V1-ANTICIPA · 2026-11-24
+
+OBSERVED. El usuario entregó [Rail 21704:71850](https://www.figma.com/design/zuUq3gcF9T3CLid44bjY6W/Anticipa-Junio2026?node-id=21704-71850) y [Panel 21878:108548](https://www.figma.com/design/zuUq3gcF9T3CLid44bjY6W/Anticipa-Junio2026?node-id=21878-108548) como fuentes de V1. [Captura estructurada y medidas](../sources/figma-snapshots/chat-sidebar-v1-2026-11-24/selection.json). El archivo de Anticipa se consultó en solo lectura.
+
+## SRC-LOGOS-CORPORATE-SVG · 2026-11-24
+
+El usuario entregó [Portal Web](../sources/assets/logos/2026-11-24/portal-web.svg), [Mi Contpaqi](../sources/assets/logos/2026-11-24/mi-contpaqi.svg) y [Mi Gestión](../sources/assets/logos/2026-11-24/mi-gestion.svg) para incorporarlos a Logos. Los bytes originales y sus hashes están preservados. [Inventario y localizadores](../specs/data/logos.v1.0.0.json).
+
+## SRC-HEADER-LOGO-SIZING · 2026-11-25
+
+El usuario pidió que las marcas conserven su proporción en Header y App Shell y aclaró que 40, 44 y 48 px corresponden a la altura. La instancia observada de App Shell Grid colapsado tenía Mi CONTPAQi / light con la caja de Contabilidad. [Matriz](../specs/data/header.logo-sizing.v1.0.0.json) · [Readback](../implementations/figma/header-logo-sizing-2026-11-25/readback.json).
+
+## SRC-FLOATING-ACTIONS-SELECTION-SCOPE · 2026-11-25
+
+El usuario entregó [Anticipa · selección](https://www.figma.com/design/9joCtnaaFn4M9SUabOjdBz/Anticipa-%7C-Blue-heart?node-id=324-37409) para agregar los alcances de página activa e histórico activo. La [captura estructurada](../sources/figma-snapshots/floating-selection-2026-11-25/selection.json) identifica el botón, las fichas de contexto, la superficie y las filas. Se solicitó además padding lateral de 8 px para Dot de dos o más dígitos.

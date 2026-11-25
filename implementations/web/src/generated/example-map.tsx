@@ -12,6 +12,7 @@ import * as Example_chat_sidebar_section from '../examples/chat-sidebar-section'
 import * as Example_chat_tool_item from '../examples/chat-tool-item';
 import * as Example_conversation_composer from '../examples/conversation-composer';
 import * as Example_conversation_response from '../examples/conversation-response';
+import * as Example_floating_actions from '../examples/floating-actions';
 import * as Example_user_message from '../examples/user-message';
 import type { ComponentType } from 'react';
 export const examples: Record<string, ComponentType> = {
@@ -40,7 +41,7 @@ export const examples: Record<string, ComponentType> = {
   "dropdown-item": Examples.DropdownItemExample,
   "dropdown-menu": Examples.DropdownMenuExample,
   "file-upload": Examples.FileUploadExample,
-  "floating-actions": Examples.FloatingActionsExample,
+  "floating-actions": Example_floating_actions.FloatingActionsExample,
   "header": Examples.HeaderExample,
   "header-actions": Examples.HeaderActionsExample,
   "icon-button": Examples.IconButtonExample,

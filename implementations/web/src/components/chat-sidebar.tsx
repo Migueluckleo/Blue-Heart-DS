@@ -12,6 +12,7 @@ import { PlusIcon } from '@phosphor-icons/react/dist/csr/Plus';
 import { SidebarIcon } from '@phosphor-icons/react/dist/csr/Sidebar';
 import { SirenIcon } from '@phosphor-icons/react/dist/csr/Siren';
 import { TableIcon } from '@phosphor-icons/react/dist/csr/Table';
+import { XIcon } from '@phosphor-icons/react/dist/csr/X';
 import { IconButton } from './icon-button';
 import { ChatRailItem, type ChatRailItemProps } from './chat-rail-item';
 
@@ -112,11 +113,14 @@ export function ChatPlanUsage({plan, used, limit, mode = 'expanded'}: ChatPlanUs
   </div>;
 }
 
-export type ChatSidebarProps = ({ mode?: 'panel'; view: View } | {
+export type ChatSidebarV2Props = ({ mode?: 'panel'; view: View } | {
   mode: 'rail';
   view: View | 'none';
   railItems?: Partial<Record<View, Pick<ChatRailItemProps, 'disabled' | 'showNotification'>>>;
-}) & {
+}) & {version?: 'v2'};
+
+export type ChatSidebarV1Props = {version: 'v1'; mode?: 'rail' | 'panel'; view: 'Chats'; title?: string};
+export type ChatSidebarProps = (ChatSidebarV1Props | ChatSidebarV2Props) & {
   children?: ReactNode;
   shortcuts?: ReactNode;
   plan?: Omit<ChatPlanUsageProps, 'mode'>;
@@ -125,10 +129,36 @@ export type ChatSidebarProps = ({ mode?: 'panel'; view: View } | {
   onCollapse?: () => void;
 };
 
+function ChatSidebarV1({mode = 'panel', title = 'Historial de chats', children, shortcuts, plan, onViewChange, onSearch, onCollapse}:
+  Extract<ChatSidebarProps, {version: 'v1'}>) {
+  return <aside className="bh-chat-sidebar" data-blueheart="chat-sidebar" data-version="v1" data-mode={mode} aria-label={title}>
+    {mode === 'rail' ? (
+      <div className="bh-chat-sidebar-nav" data-slot="content">
+        {children === undefined && <IconButton className="bh-chat-sidebar-disclosure" variant="ghost" size="small"
+          icon={ChatsIcon} label="Abrir historial de chats" aria-expanded={false} onClick={() => onViewChange('Chats')}/>}
+        {children}
+      </div>
+    ) : <>
+      <div className="bh-chat-sidebar-header">
+        {onCollapse && <IconButton className="bh-chat-sidebar-disclosure" variant="ghost" size="small"
+          icon={XIcon} label="Cerrar historial de chats" onClick={onCollapse}/>}
+        <h2>{title}</h2>
+        {onSearch && <IconButton variant="ghost" size="small" icon={MagnifyingGlassIcon} label="Buscar chats" onClick={onSearch}/>}
+      </div>
+      <div className="bh-chat-sidebar-content" data-slot="content">
+        {shortcuts}
+        {children}
+      </div>
+      {plan && <ChatPlanUsage {...plan}/>}
+    </>}
+  </aside>;
+}
+
 export function ChatSidebar(props: ChatSidebarProps) {
+  if (props.version === 'v1') return <ChatSidebarV1 {...props}/>;
   const {view, mode = 'panel', children, shortcuts, plan, onViewChange, onSearch, onCollapse} = props;
   const railItems = props.mode === 'rail' ? props.railItems : undefined;
-  return <aside className="bh-chat-sidebar" data-blueheart="chat-sidebar" data-mode={mode} aria-label={view === 'none' ? 'Panel lateral de chat' : `Panel lateral · ${view}`}>
+  return <aside className="bh-chat-sidebar" data-blueheart="chat-sidebar" data-version="v2" data-mode={mode} aria-label={view === 'none' ? 'Panel lateral de chat' : `Panel lateral · ${view}`}>
     {mode === 'rail' ? <>
       <nav className="bh-chat-sidebar-nav" aria-label="Herramientas de chat" data-slot="content">
         {children === undefined ? views.map(([name, icon]) => <ChatRailItem key={name} selected={name === view}

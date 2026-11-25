@@ -28,6 +28,9 @@ La referencia Figma mide 1440 × 1024 y usa separaciones de 8 y 32, con las capa
 
 Ese espaciado corresponde al corte inicial. La [enmienda del 24 de noviembre](header-app-shell.spacing.amendment.v1.0.0.md) documenta el layout actual: Header–Content sin gap, Content con padding superior 0 e inferior/lateral 32 y filas de conversación separadas 32. Los bindings propios consumen Header/App Shell; el contenido específico de producto mantiene Body. Se conservan los valores de los tokens anteriores.
 
+
+El Header expuesto permite elegir Logotipo y Altura. [Selección y proporciones de marca](header.logo-sizing.amendment.v1.0.0.md).
+
 ## Variantes de conversación
 
 El set [App Shell](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=105-7) ofrece `body layout=conversation` con menú colapsado (`299:1332`) o expandido (`299:2120`). El encabezado usa la opción de logo de Section Header en ambas muestras. Body contiene una instancia de Chat en Standby y admite cualquier contenido de conversación compatible. En el Slot opcional `Right sidebar`, deja el Rail sin selección al inicio. Para una vista seleccionada, coloca el Panel antes del Rail y usa la misma vista en ambos. El anfitrión controla selección, mensajes y apertura.

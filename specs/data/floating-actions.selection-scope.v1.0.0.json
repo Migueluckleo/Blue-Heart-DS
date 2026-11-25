@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "contract": "FLOATING-ACTIONS-001-SELECTION-SCOPE",
+  "version": "1.0.0",
+  "source": {
+    "file_key": "9joCtnaaFn4M9SUabOjdBz",
+    "id": "324:37409",
+    "capture": "sources/figma-snapshots/floating-selection-2026-11-25/selection.json",
+    "sha256": "4bcd5ca2fcf8f4f5c7a74dc62ed241b40417e8ef25afc38f2bd9e59ffbbae913"
+  },
+  "scope": [
+    {
+      "id": "page",
+      "label": "Seleccionar solo esta página",
+      "sample_count": "50 comprobantes",
+      "sample_context": "Página 1 de 12"
+    },
+    {
+      "id": "all",
+      "label": "Seleccionar todo",
+      "sample_count": "2,600 comprobantes",
+      "sample_context": "Todas las páginas"
+    }
+  ],
+  "floating_actions": {
+    "id": "122:6",
+    "page": "122:2",
+    "actions_slot": "122:12",
+    "actions_slot_property": "General actions#122:0",
+    "selector": "759:29",
+    "selector_instance": "759:54",
+    "closed": "759:30",
+    "open": "759:31",
+    "default": "Closed",
+    "states": {
+      "Default": "758:30",
+      "Hover": "758:36",
+      "Focus": "758:42",
+      "Disabled": "758:48"
+    },
+    "rows_set": "758:29",
+    "row_properties": [
+      "Acción#758:0",
+      "Conteo#758:5",
+      "Contexto#758:10"
+    ],
+    "activated_by": [
+      "725:6894",
+      "759:32"
+    ],
+    "entries": [
+      "759:37",
+      "759:44"
+    ],
+    "visibility_property": "Show select all#122:3",
+    "panel_id": "759:36",
+    "dimensions": {
+      "reference_width": 300,
+      "sample_height": 153,
+      "radius": 16,
+      "panel_inset_block": 16,
+      "row_inset_inline": 16,
+      "row_inset_block": 8,
+      "row_gap": 4,
+      "divider": 1,
+      "anchor_gap": 4
+    }
+  },
+  "dot": {
+    "set": "32:33",
+    "existing": 28,
+    "total": 36,
+    "multi_variant": "count-multi",
+    "multi_padding_each": 8,
+    "multi_token": "dot/spacing/counter-inline-wide",
+    "count_expand_padding_each": 8,
+    "compact_count": {
+      "type": "count",
+      "sample": "7",
+      "padding_each": 0
+    },
+    "variants": [
+      {
+        "original": "32:42",
+        "id": "757:2",
+        "properties": {
+          "type": "count-multi",
+          "size": "large",
+          "color": "default"
+        },
+        "padding": [
+          8,
+          8
+        ],
+        "count_property": "Count#32:0"
+      },
+      {
+        "original": "32:44",
+        "id": "757:4",
+        "properties": {
+          "type": "count-multi",
+          "size": "medium",
+          "color": "default"
+        },
+        "padding": [
+          8,
+          8
+        ],
+        "count_property": "Count#32:0"
+      },
+      {
+        "original": "32:50",
+        "id": "757:6",
+        "properties": {
+          "type": "count-multi",
+          "size": "large",
+          "color": "brand"
+        },
+        "padding": [
+          8,
+          8
+        ],
+        "count_property": "Count#32:0"
+      },
+      {
+        "original": "32:52",
+        "id": "757:8",
+        "properties": {
+          "type": "count-multi",
+          "size": "medium",
+          "color": "brand"
+        },
+        "padding": [
+          8,
+          8
+        ],
+        "count_property": "Count#32:0"
+      },
+      {
+        "original": "32:58",
+        "id": "757:10",
+        "properties": {
+          "type": "count-multi",
+          "size": "large",
+          "color": "neutral"
+        },
+        "padding": [
+          8,
+          8
+        ],
+        "count_property": "Count#32:0"
+      },
+      {
+        "original": "32:60",
+        "id": "757:12",
+        "properties": {
+          "type": "count-multi",
+          "size": "medium",
+          "color": "neutral"
+        },
+        "padding": [
+          8,
+          8
+        ],
+        "count_property": "Count#32:0"
+      },
+      {
+        "original": "32:66",
+        "id": "757:14",
+        "properties": {
+          "type": "count-multi",
+          "size": "large",
+          "color": "white"
+        },
+        "padding": [
+          8,
+          8
+        ],
+        "count_property": "Count#32:0"
+      },
+      {
+        "original": "32:68",
+        "id": "757:16",
+        "properties": {
+          "type": "count-multi",
+          "size": "medium",
+          "color": "white"
+        },
+        "padding": [
+          8,
+          8
+        ],
+        "count_property": "Count#32:0"
+      }
+    ],
+    "expand": [
+      "32:46",
+      "32:48",
+      "32:54",
+      "32:56",
+      "32:62",
+      "32:64",
+      "32:70",
+      "32:72"
+    ]
+  },
+  "tokens": "specs/tokens/floating-actions.selection-scope.v1.0.0.json"
+}

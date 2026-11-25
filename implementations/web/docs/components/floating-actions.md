@@ -8,7 +8,7 @@ Familia `FLOATING-ACTIONS-001` · API local 0.1.0 · categoría feedback.
 
 Fuente: [guía del contrato](../../../../specs/components/floating-actions.contract.v1.0.0.md#guía-semántica-normativa).
 
-Usa Floating Actions para mostrar las acciones aplicables a una selección existente. Carbon reúne las acciones en lote al seleccionar filas. BlueHeart conserva un resumen, una acción opcional de seleccionar todo y una región editable de acciones. [Carbon Data table](https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines)
+Usa Floating Actions para mostrar las acciones aplicables a una selección existente. Carbon reúne las acciones en lote al seleccionar filas. BlueHeart combina un resumen, un selector opcional de alcance y una región editable de acciones. [Carbon Data table](https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines)
 
 | Situación | Haz | Evita |
 |---|---|---|
@@ -18,34 +18,34 @@ Usa Floating Actions para mostrar las acciones aplicables a una selección exist
 
 ## Uso sin backend
 
-Muestra el resumen y las acciones de la selección vigente. El anfitrión controla conteo, selección y cierre.
+El menú Seleccionar ofrece la página actual y todo el histórico seleccionado. El anfitrión proporciona conteos, contexto, disponibilidad y callbacks. General actions conserva su composición abierta.
 
 ```tsx
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import { ImageSquareIcon } from '@phosphor-icons/react/dist/csr/ImageSquare';
-import { GearIcon } from '@phosphor-icons/react/dist/csr/Gear';
-import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
-import { EyeIcon } from '@phosphor-icons/react/dist/csr/Eye';
-import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
-import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
-import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
-
-const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];
+import { DownloadSimpleIcon } from '@phosphor-icons/react/dist/csr/DownloadSimple';
+import { useState } from 'react';
+import { Button, FloatingActions } from '@/index';
 
 export function FloatingActionsExample() {
   const [count,setCount]=useState(3);
   const [message,setMessage]=useState('');
+  const countLabel=count.toLocaleString('es-MX');
   return <div className="my-4 space-y-3">
     <Button id="demo-floating-open" label="Preparar selección" onClick={()=>{setCount(3);setMessage('');}}/>
     {count>0&&<div className="overflow-x-auto">
-      <FloatingActions className="w-[1024px]" count={String(count)} label="Elementos seleccionados"
-        selectAll={count<8?{label:'Seleccionar todos (8)',onSelect:()=>{
-          setCount(8);document.getElementById('demo-floating-review')?.focus();
-        }}:undefined}
-        actions={<Button id="demo-floating-review" variant="text" label="Marcar como revisados" showLeftIcon
-          onClick={()=>setMessage(`Se marcaron ${count} comprobantes de muestra.`)}/>}
+      <FloatingActions className="w-[1024px]" count={countLabel} label="Elementos seleccionados"
+        selection={{
+          page:{countLabel:'50 comprobantes',context:'Página 1 de 12'},
+          all:{countLabel:'2,600 comprobantes',context:'Todas las páginas'},
+          onSelect:scope=>setCount(scope==='page'?50:2600),
+        }}
+        actions={<>
+          <Button variant="text" label="Descargar XML" showLeftIcon leftIcon={{component:DownloadSimpleIcon}}
+            onClick={()=>setMessage(`Selección de muestra para XML: ${countLabel} comprobantes.`)}/>
+          <Button variant="text" label="Descargar PDF" showLeftIcon leftIcon={{component:DownloadSimpleIcon}}
+            onClick={()=>setMessage(`Selección de muestra para PDF: ${countLabel} comprobantes.`)}/>
+        </>}
         onDismiss={()=>{setCount(0);document.getElementById('demo-floating-open')?.focus();}}/>
     </div>}
     <p id="demo-floating-result" role="status">{message}</p>
@@ -53,22 +53,38 @@ export function FloatingActionsExample() {
 }
 ```
 
-Ejemplo compilado en [examples.tsx](../../src/examples.tsx). Usa React state en memoria; recargar restaura la muestra. No hay endpoint, credencial ni persistencia implícita.
+Ejemplo compilado en [examples/floating-actions.tsx](../../src/examples/floating-actions.tsx). Usa React state en memoria; recargar restaura la muestra. No hay endpoint, credencial ni persistencia implícita.
 
 ## API tipada
 
 Importar desde [src/index.ts](../../src/index.ts), con `@/index` dentro del catálogo. Código propietario: [floating-actions.tsx](../../src/components/floating-actions.tsx). Los atributos HTML heredados mantienen los tipos de React; callbacks y datos controlados pertenecen a la pantalla.
 
 ```tsx
+export type FloatingSelectionScope = 'page' | 'all';
+
+export interface FloatingSelectionOption {
+  countLabel: string;
+  context: string;
+  disabled?: boolean;
+}
+
+export interface FloatingSelectionProps {
+  page: FloatingSelectionOption;
+  all: FloatingSelectionOption;
+  onSelect: (scope: FloatingSelectionScope) => void;
+}
+
 export interface FloatingActionsProps {
   count: string;
   label: string;
   actions?: ReactNode;
+  selection?: FloatingSelectionProps;
   selectAll?: {label: string; onSelect: () => void};
   onDismiss?: () => void;
   dismissLabel?: string;
   className?: string;
 }
+
 ```
 
 ## Defaults y eventos
@@ -76,7 +92,7 @@ export interface FloatingActionsProps {
 Las firmas siguientes se extraen de las funciones, incluidos sus valores por defecto. Una prop sin asignación `=` es obligatoria o permanece undefined según su tipo; no se rellena con reglas de negocio.
 
 ```tsx
-FloatingActions: {count,label,actions,selectAll,onDismiss,dismissLabel='Cerrar acciones de selección',
+FloatingActions: {count,label,actions,selection,selectAll,onDismiss,dismissLabel='Cerrar acciones de selección',
   className}: FloatingActionsProps
 ```
 
@@ -94,10 +110,11 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [floating-actions.contract.v1.0.0.md](../../../../specs/components/floating-actions.contract.v1.0.0.md) · SHA-256 `0aa666a17d76d5a049abad0c834748e3bb63e19d3760c8fa43b84f8d17fce8f0`.
+- [floating-actions.contract.v1.0.0.md](../../../../specs/components/floating-actions.contract.v1.0.0.md) · SHA-256 `b3505fdb3466e5d8f05031bf7d8c000de02db7a40d2ea4caf365f3c84699afe5`.
+- [floating-actions.selection-scope.amendment.v1.0.0.md](../../../../specs/components/floating-actions.selection-scope.amendment.v1.0.0.md) · SHA-256 `f1bd67c88fe3615b351b36b2162eaaa2d576427abfabea9b017ed9bafbd3b900`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 
 ## Verificación
 
-`pnpm verify` comprueba generación/cobertura, TypeScript, pruebas y build estático. `pnpm test:browser` valida los recorridos locales. [Evidencia de QA](../../../../qa/implementations/actions-notification.v1.0.0.review.md) identifica alcance, resultados y límites; una demo visible por sí sola no es un PASS visual.
+`pnpm verify` comprueba generación/cobertura, TypeScript, pruebas y build estático. `pnpm test:browser` valida los recorridos locales. [Evidencia de QA](../../../../qa/implementations/floating-actions.selection-scope.v1.0.0.review.md) identifica alcance, resultados y límites; una demo visible por sí sola no es un PASS visual.

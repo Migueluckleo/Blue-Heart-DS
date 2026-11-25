@@ -1,0 +1,20 @@
+$ node tests/buttons-loader.browser.mjs
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+4 !== 3
+
+    at file:///Users/miguel.leo/Desktop/BlueHeart%20DS%202.0/blueheart-rebuild/implementations/web/tests/buttons-loader.browser.mjs:295:10 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 4,
+  expected: 3,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.3
+[ELIFECYCLE] Command failed with exit code 1.

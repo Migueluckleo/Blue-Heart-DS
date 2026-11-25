@@ -18,7 +18,10 @@
     "specs/tokens/inline-notification.indicator.v1.0.0.json": "dce1ea183b44f6af12ee0b8752f278600241cec20a14d59155e5a47b81c52697",
     "specs/tokens/body.disabled.v1.0.0.json": "c7db141e768de6a8f45091427e396d135b8323182ec11db684101660d6b7544c",
     "specs/tokens/header-app-shell.spacing.v1.0.0.json": "33e03dbc7c8557a467758de98e7b255b43643ebd7047b25491d32f1cc6ccef19",
-    "specs/tokens/chat-rail-item.v1.0.0.json": "bbedf30b2a5ffbe286bfb082437a50e8f99a309503a4d5c4f8b7283b05622c70"
+    "specs/tokens/chat-rail-item.v1.0.0.json": "bbedf30b2a5ffbe286bfb082437a50e8f99a309503a4d5c4f8b7283b05622c70",
+    "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json": "07a3ae3af98271a1735925cf2e41e85cf6e28b8a3e2869c7db5cfa51678ca11c",
+    "specs/tokens/header.logo-sizing.v1.0.0.json": "cefce080ad7498d161ad95eb5a7c96a1522c26151a310d3835aaed843546ca94",
+    "specs/tokens/floating-actions.selection-scope.v1.0.0.json": "26dacea3c88349c6b4aead66b1de50d61b25f211bd7da3f7c1cd22bef784d9c7"
   },
   "modes": [
     "Contable",
@@ -9468,6 +9471,702 @@
       }
     },
     {
+      "name": "chat-sidebar/v1/color/bg/disclosure",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-color-bg-disclosure",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Lavanda del disparador de apertura o cierre, en los cuatro modos.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:semantic:sidebar-disclosure-tint"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:semantic:sidebar-disclosure-tint"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:semantic:sidebar-disclosure-tint"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:semantic:sidebar-disclosure-tint"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/color/bg/surface",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-color-bg-surface",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Superficie blanca de ambas vistas.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/color/stroke/edge",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-color-stroke-edge",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Separador lateral neutro de la referencia.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:semantic:sidebar-divider-neutral"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:semantic:sidebar-divider-neutral"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:semantic:sidebar-divider-neutral"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:semantic:sidebar-divider-neutral"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/color/text/title",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-color-text-title",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Texto del encabezado en neutro máximo.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/font/family",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-font-family",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Familia Manrope del encabezado.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:194"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/font/line-height",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-font-line-height",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Altura de línea 20 px del encabezado.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/font/size",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-font-size",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Tamaño 16 px del encabezado.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:201"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:201"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:201"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:201"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/font/tracking",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-font-tracking",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Espaciado normal del encabezado.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:217"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:217"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:217"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:217"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/font/weight",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-font-weight",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Peso Bold del encabezado.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:198"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:198"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:198"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:198"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/shadow/blur",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-shadow-blur",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Desenfoque de 6 px de la sombra del plan.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:5"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:5"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:5"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:5"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/shadow/color",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-shadow-color",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Color neutro de la sombra del plan al pie.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:3"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:3"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:3"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:3"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/shadow/spread",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-shadow-spread",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Expansión de −2 px de la sombra del plan.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:7"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:7"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:7"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:7"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/shadow/y",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-shadow-y",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Desplazamiento vertical de 4 px de la sombra del plan.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/size/panel-max",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-size-panel-max",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Ancho máximo de la vista desplegada: 310 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:semantic:sidebar-panel-max"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:semantic:sidebar-panel-max"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:semantic:sidebar-panel-max"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:semantic:sidebar-panel-max"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/size/panel-min",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-size-panel-min",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Ancho mínimo de la vista desplegada: 264 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar:semantic:size-264"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar:semantic:size-264"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar:semantic:size-264"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar:semantic:size-264"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/size/rail",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-size-rail",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Ancho de la vista colapsada: 64 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:243"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:243"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:243"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:243"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/spacing/group",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-spacing-group",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Separación entre grupos de historial: 16 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/spacing/header",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-spacing-header",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Separación del título respecto al control: 8 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/spacing/inset",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-spacing-inset",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Padding de Rail y Panel: 16 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/spacing/items",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-spacing-items",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Separación de 8 px entre las filas de historial.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/spacing/none",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-spacing-none",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Padding y separación de regiones sin inset propio.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/spacing/region",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-spacing-region",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Separación de regiones del Panel: 32 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:231"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:231"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:231"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:231"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/spacing/section-label",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-spacing-section-label",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Inset inicial de 8 px de los títulos de sección.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        }
+      }
+    },
+    {
+      "name": "chat-sidebar/v1/stroke/edge",
+      "collection": "component",
+      "css": "--chat-sidebar-v1-stroke-edge",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Borde lateral interior de 1 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        }
+      }
+    },
+    {
       "name": "chat-tool-item/color/bg/hover",
       "collection": "component",
       "css": "--chat-tool-item-color-bg-hover",
@@ -14543,6 +15242,35 @@
       }
     },
     {
+      "name": "dot/spacing/counter-inline-wide",
+      "collection": "component",
+      "css": "--dot-spacing-counter-inline-wide",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Padding lateral de 8 px para dos o más dígitos y contador de límite.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        }
+      }
+    },
+    {
       "name": "dot/spacing/none",
       "collection": "component",
       "css": "--dot-spacing-none",
@@ -17617,6 +18345,644 @@
       }
     },
     {
+      "name": "floating-actions/selection/color/bg/hover",
+      "collection": "component",
+      "css": "--floating-actions-selection-color-bg-hover",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Superficie de fila bajo el puntero o con foco.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:167"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:167"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:167"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:167"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/color/bg/menu",
+      "collection": "component",
+      "css": "--floating-actions-selection-color-bg-menu",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Superficie de menú y fila en reposo.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:166"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/color/shadow",
+      "collection": "component",
+      "css": "--floating-actions-selection-color-shadow",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Color de la sombra de menú.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:3"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:3"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:3"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:393:3"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/color/stroke/divider",
+      "collection": "component",
+      "css": "--floating-actions-selection-color-stroke-divider",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Separación de los dos alcances.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:168"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/color/stroke/focus",
+      "collection": "component",
+      "css": "--floating-actions-selection-color-stroke-focus",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Aro de foco de teclado.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:155"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:155"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:155"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:155"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/color/text/disabled",
+      "collection": "component",
+      "css": "--floating-actions-selection-color-text-disabled",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Texto de una opción no disponible.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:169"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/color/text/label",
+      "collection": "component",
+      "css": "--floating-actions-selection-color-text-label",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Texto de la acción de selección.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:174"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/color/text/meta",
+      "collection": "component",
+      "css": "--floating-actions-selection-color-text-meta",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Conteo y contexto de cada opción.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:171"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/font/line-height",
+      "collection": "component",
+      "css": "--floating-actions-selection-font-line-height",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Altura de línea de 20 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:209"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/font/meta-size",
+      "collection": "component",
+      "css": "--floating-actions-selection-font-meta-size",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Tamaño 12 px de conteo y contexto.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:199"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:199"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:199"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:199"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/font/title-size",
+      "collection": "component",
+      "css": "--floating-actions-selection-font-title-size",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Tamaño 14 px de la etiqueta.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:200"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/radius/menu",
+      "collection": "component",
+      "css": "--floating-actions-selection-radius-menu",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Radio de 16 px de la superficie.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:247"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:247"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:247"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:247"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/size/divider",
+      "collection": "component",
+      "css": "--floating-actions-selection-size-divider",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Grosor de 1 px de la separación.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:224"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/size/focus",
+      "collection": "component",
+      "css": "--floating-actions-selection-size-focus",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Grosor de 2 px del foco.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:226"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:226"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:226"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:226"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/size/menu",
+      "collection": "component",
+      "css": "--floating-actions-selection-size-menu",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Ancho de referencia de 300 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "floating-selection:semantic:menu-300"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "floating-selection:semantic:menu-300"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "floating-selection:semantic:menu-300"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "floating-selection:semantic:menu-300"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/size/shadow-blur",
+      "collection": "component",
+      "css": "--floating-actions-selection-size-shadow-blur",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Desenfoque de sombra del menú de 8 px.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/spacing/anchor",
+      "collection": "component",
+      "css": "--floating-actions-selection-spacing-anchor",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Separación de 4 px del botón que abre el menú.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/spacing/inline",
+      "collection": "component",
+      "css": "--floating-actions-selection-spacing-inline",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Inset lateral de 16 px de la fila.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/spacing/menu-block",
+      "collection": "component",
+      "css": "--floating-actions-selection-spacing-menu-block",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Inset vertical de 16 px del menú.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:229"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/spacing/none",
+      "collection": "component",
+      "css": "--floating-actions-selection-spacing-none",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Separación o inset estructural de cero.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:191"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/spacing/row-block",
+      "collection": "component",
+      "css": "--floating-actions-selection-spacing-row-block",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Inset vertical de 8 px de una fila.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:228"
+        }
+      }
+    },
+    {
+      "name": "floating-actions/selection/spacing/row-gap",
+      "collection": "component",
+      "css": "--floating-actions-selection-spacing-row-gap",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Separación de 4 px entre etiqueta y contexto.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:227"
+        }
+      }
+    },
+    {
       "name": "floating-actions/size/divider-height",
       "collection": "component",
       "css": "--floating-actions-size-divider-height",
@@ -19092,6 +20458,64 @@
         "Personas": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:6:241"
+        }
+      }
+    },
+    {
+      "name": "header/size/logo-height-40",
+      "collection": "component",
+      "css": "--header-size-logo-height-40",
+      "source": "specs/tokens/header.logo-sizing.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Altura compacta de logotipo en Header.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:240"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:240"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:240"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:6:240"
+        }
+      }
+    },
+    {
+      "name": "header/size/logo-height-44",
+      "collection": "component",
+      "css": "--header-size-logo-height-44",
+      "source": "specs/tokens/header.logo-sizing.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Altura intermedia de logotipo en Header.",
+      "scopes": [],
+      "values": {
+        "Contable": {
+          "type": "VARIABLE_ALIAS",
+          "id": "header-logo-sizing:semantic:size-44"
+        },
+        "Administrativo": {
+          "type": "VARIABLE_ALIAS",
+          "id": "header-logo-sizing:semantic:size-44"
+        },
+        "Servicios": {
+          "type": "VARIABLE_ALIAS",
+          "id": "header-logo-sizing:semantic:size-44"
+        },
+        "Personas": {
+          "type": "VARIABLE_ALIAS",
+          "id": "header-logo-sizing:semantic:size-44"
         }
       }
     },
@@ -37125,6 +38549,44 @@
       }
     },
     {
+      "name": "rail-palette/sidebar-v1-control",
+      "collection": "primitives",
+      "css": "--primitive-rail-palette-sidebar-v1-control",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Fondo lavanda del control de apertura y cierre en la referencia V1.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "r": 0.7798227071762085,
+          "g": 0.812849223613739,
+          "b": 1,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "rail-palette/sidebar-v1-divider",
+      "collection": "primitives",
+      "css": "--primitive-rail-palette-sidebar-v1-divider",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Separador neutro de la referencia de Chat Sidebar V1.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "r": 0.8980392156862745,
+          "g": 0.9058823529411765,
+          "b": 0.9215686274509803,
+          "a": 1
+        }
+      }
+    },
+    {
       "name": "red/100",
       "collection": "primitives",
       "css": "--primitive-red-100",
@@ -37721,6 +39183,34 @@
       }
     },
     {
+      "name": "size/floating-selection-300",
+      "collection": "primitives",
+      "css": "--primitive-size-floating-selection-300",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Ancho de referencia del menú de selección.",
+      "scopes": [],
+      "values": {
+        "Value": 300
+      }
+    },
+    {
+      "name": "size/header-logo-44",
+      "collection": "primitives",
+      "css": "--primitive-size-header-logo-44",
+      "source": "specs/tokens/header.logo-sizing.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Valor base de 44 px para el tamaño intermedio.",
+      "scopes": [],
+      "values": {
+        "Value": 44
+      }
+    },
+    {
       "name": "size/lg",
       "collection": "primitives",
       "css": "--primitive-size-16",
@@ -37746,6 +39236,20 @@
       "scopes": [],
       "values": {
         "Value": 12
+      }
+    },
+    {
+      "name": "size/sidebar-panel-310",
+      "collection": "primitives",
+      "css": "--primitive-size-sidebar-panel-310",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Ancho máximo observado del Panel V1.",
+      "scopes": [],
+      "values": {
+        "Value": 310
       }
     },
     {
@@ -39714,6 +41218,57 @@
       }
     },
     {
+      "name": "sidebar-disclosure-tint",
+      "collection": "semantic",
+      "css": "--semantic-sidebar-disclosure-tint",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Fondo lavanda del control de apertura y cierre en la referencia V1.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:primitive:rail-palette-sidebar-v1-control"
+        }
+      }
+    },
+    {
+      "name": "sidebar-divider-neutral",
+      "collection": "semantic",
+      "css": "--semantic-sidebar-divider-neutral",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Separador neutro de la referencia de Chat Sidebar V1.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:primitive:rail-palette-sidebar-v1-divider"
+        }
+      }
+    },
+    {
+      "name": "sidebar-panel-max",
+      "collection": "semantic",
+      "css": "--semantic-sidebar-panel-max",
+      "source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Ancho máximo observado del Panel V1.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "chat-sidebar-v1:primitive:size-sidebar-panel-310"
+        }
+      }
+    },
+    {
       "name": "sidebar-rail-surface",
       "collection": "semantic",
       "css": "--semantic-sidebar-rail-surface",
@@ -40271,6 +41826,40 @@
         "Value": {
           "type": "VARIABLE_ALIAS",
           "id": "VariableID:245:2"
+        }
+      }
+    },
+    {
+      "name": "size-floating-selection-300",
+      "collection": "semantic",
+      "css": "--semantic-size-floating-selection-300",
+      "source": "specs/tokens/floating-actions.selection-scope.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Medida de 300 px del menú de selección.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "floating-selection:primitive:menu-300"
+        }
+      }
+    },
+    {
+      "name": "size-header-logo-44",
+      "collection": "semantic",
+      "css": "--semantic-size-header-logo-44",
+      "source": "specs/tokens/header.logo-sizing.v1.0.0.json",
+      "amendments": [
+        "specs/tokens/visibility.body-only.correction.json"
+      ],
+      "description": "Medida intermedia de 44 px para logotipos de Header.",
+      "scopes": [],
+      "values": {
+        "Value": {
+          "type": "VARIABLE_ALIAS",
+          "id": "header-logo-sizing:primitive:size-44"
         }
       }
     },

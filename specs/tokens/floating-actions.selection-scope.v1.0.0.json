@@ -1,0 +1,726 @@
+{
+  "schema_version": 1,
+  "kind": "DELEGATED_TOKEN_DATA",
+  "contract": "FLOATING-ACTIONS-001-SELECTION-SCOPE",
+  "version": "1.0.0",
+  "collections": [
+    {
+      "name": "primitives",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "Value"
+        }
+      ],
+      "variables": [
+        {
+          "id": "floating-selection:primitive:menu-300",
+          "name": "size/floating-selection-300",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Ancho de referencia del menú de selección.",
+          "codeSyntax": {
+            "WEB": "var(--primitive-size-floating-selection-300)"
+          },
+          "valuesByMode": {
+            "Value": 300
+          }
+        }
+      ]
+    },
+    {
+      "name": "semantic",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "Value"
+        }
+      ],
+      "variables": [
+        {
+          "id": "floating-selection:semantic:menu-300",
+          "name": "size-floating-selection-300",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Medida de 300 px del menú de selección.",
+          "codeSyntax": {
+            "WEB": "var(--semantic-size-floating-selection-300)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "floating-selection:primitive:menu-300"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "component",
+      "modes": [
+        {
+          "name": "Contable",
+          "modeId": "Contable"
+        },
+        {
+          "name": "Administrativo",
+          "modeId": "Administrativo"
+        },
+        {
+          "name": "Servicios",
+          "modeId": "Servicios"
+        },
+        {
+          "name": "Personas",
+          "modeId": "Personas"
+        }
+      ],
+      "variables": [
+        {
+          "id": "floating-selection:component:floating-actions-selection-color-bg-menu",
+          "name": "floating-actions/selection/color/bg/menu",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Superficie de menú y fila en reposo.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-color-bg-menu)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:166"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-color-bg-hover",
+          "name": "floating-actions/selection/color/bg/hover",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Superficie de fila bajo el puntero o con foco.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-color-bg-hover)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:167"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-color-text-label",
+          "name": "floating-actions/selection/color/text/label",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Texto de la acción de selección.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-color-text-label)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:174"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-color-text-meta",
+          "name": "floating-actions/selection/color/text/meta",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Conteo y contexto de cada opción.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-color-text-meta)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:171"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:171"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:171"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:171"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-color-text-disabled",
+          "name": "floating-actions/selection/color/text/disabled",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Texto de una opción no disponible.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-color-text-disabled)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:169"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-color-stroke-divider",
+          "name": "floating-actions/selection/color/stroke/divider",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Separación de los dos alcances.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-color-stroke-divider)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:168"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-color-stroke-focus",
+          "name": "floating-actions/selection/color/stroke/focus",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Aro de foco de teclado.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-color-stroke-focus)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:155"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-color-shadow",
+          "name": "floating-actions/selection/color/shadow",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "description": "Color de la sombra de menú.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-color-shadow)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:393:3"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:393:3"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:393:3"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:393:3"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-size-menu",
+          "name": "floating-actions/selection/size/menu",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Ancho de referencia de 300 px.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-size-menu)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "floating-selection:semantic:menu-300"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "floating-selection:semantic:menu-300"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "floating-selection:semantic:menu-300"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "floating-selection:semantic:menu-300"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-size-divider",
+          "name": "floating-actions/selection/size/divider",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Grosor de 1 px de la separación.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-size-divider)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:224"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:224"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:224"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:224"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-size-focus",
+          "name": "floating-actions/selection/size/focus",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Grosor de 2 px del foco.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-size-focus)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:226"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:226"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:226"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:226"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-size-shadow-blur",
+          "name": "floating-actions/selection/size/shadow-blur",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Desenfoque de sombra del menú de 8 px.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-size-shadow-blur)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-spacing-inline",
+          "name": "floating-actions/selection/spacing/inline",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Inset lateral de 16 px de la fila.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-spacing-inline)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-spacing-row-block",
+          "name": "floating-actions/selection/spacing/row-block",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Inset vertical de 8 px de una fila.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-spacing-row-block)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-spacing-menu-block",
+          "name": "floating-actions/selection/spacing/menu-block",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Inset vertical de 16 px del menú.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-spacing-menu-block)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:229"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-spacing-row-gap",
+          "name": "floating-actions/selection/spacing/row-gap",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Separación de 4 px entre etiqueta y contexto.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-spacing-row-gap)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-spacing-anchor",
+          "name": "floating-actions/selection/spacing/anchor",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Separación de 4 px del botón que abre el menú.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-spacing-anchor)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:227"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-spacing-none",
+          "name": "floating-actions/selection/spacing/none",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Separación o inset estructural de cero.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-spacing-none)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:191"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-radius-menu",
+          "name": "floating-actions/selection/radius/menu",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Radio de 16 px de la superficie.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-radius-menu)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:247"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:247"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:247"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:247"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-font-title-size",
+          "name": "floating-actions/selection/font/title-size",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Tamaño 14 px de la etiqueta.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-font-title-size)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:200"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-font-meta-size",
+          "name": "floating-actions/selection/font/meta-size",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Tamaño 12 px de conteo y contexto.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-font-meta-size)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:199"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:floating-actions-selection-font-line-height",
+          "name": "floating-actions/selection/font/line-height",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Altura de línea de 20 px.",
+          "codeSyntax": {
+            "WEB": "var(--floating-actions-selection-font-line-height)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:209"
+            }
+          }
+        },
+        {
+          "id": "floating-selection:component:dot-spacing-counter-inline-wide",
+          "name": "dot/spacing/counter-inline-wide",
+          "resolvedType": "FLOAT",
+          "scopes": [],
+          "description": "Padding lateral de 8 px para dos o más dígitos y contador de límite.",
+          "codeSyntax": {
+            "WEB": "var(--dot-spacing-counter-inline-wide)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:228"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

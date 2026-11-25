@@ -15,16 +15,16 @@ slot_applicability: NOT_APPLICABLE
 source_data_ref: specs/data/header.v1.0.0.json
 source_data_digest_sha256: 0fdeba3beb49476684bdc1f35701868cca2936aa8dd5834ff772f16737256bd9
 data_refs: [specs/data/header.v1.0.0.json, specs/data/header.assets.v1.0.0.json, specs/tokens/header-app-shell.spacing.v1.0.0.json, specs/data/header-app-shell.spacing.v1.0.0.json]
-dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001, BADGE-001, COMPANY-SELECTOR-001, USER-SELECTOR-001, HEADER-ACTIONS-001]
+dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001, BADGE-001, COMPANY-SELECTOR-001, USER-SELECTOR-001, HEADER-ACTIONS-001, LOGOS-001]
 ---
 
 # Header · HEADER-001
 
-El [contrato fuente v1.0.1](../../sources/figma-snapshots/root-families-2026-11-11/header.1.0.1.md.txt) y el [JSON delegado](../data/header.v1.0.0.json) gobiernan su composición. Conserva un maestro, cinco propiedades booleanas y Version. Reutiliza contables/contabilidad/horizontal, Badge info/medium, Header actions, Company selector y User selector. El badge vive dentro de Show version. Los divisores pertenecen a sus bloques. La fuente inicial mide 96 px de alto y mínimo 1152 px de ancho. La [enmienda de espaciado del 24 de noviembre](header-app-shell.spacing.amendment.v1.0.0.md) documenta la referencia actual de 112 px con padding exterior 32, conserva los 24 internos y delega sus bindings propios. P-SLOTS NOT_APPLICABLE por composición fija según la variante y controles acotados.
+El [contrato fuente v1.0.1](../../sources/figma-snapshots/root-families-2026-11-11/header.1.0.1.md.txt) y el [JSON delegado](../data/header.v1.0.0.json) gobiernan su composición. Conserva un maestro, cinco propiedades booleanas y Version. Reutiliza contables/contabilidad/horizontal, Badge info/medium, Header actions, Company selector y User selector. El badge vive dentro de Show version. Los divisores pertenecen a sus bloques. La fuente inicial mide 96 px de alto y mínimo 1152 px de ancho. La [enmienda de espaciado del 24 de noviembre](header-app-shell.spacing.amendment.v1.0.0.md) documenta la referencia actual de 112 px con padding exterior 32, conserva los 24 internos y delega sus bindings propios. La [enmienda de logotipos](header.logo-sizing.amendment.v1.0.0.md) documenta el selectores Logotipo y Altura de 40, 44 o 48 px con ancho proporcional. P-SLOTS NOT_APPLICABLE por composición fija según la variante y controles acotados.
 
 ## Guía semántica normativa
 
-Identifica el producto y su contexto global. Muestra versión, etapa, acciones, empresa y cuenta según el producto. Mantén la proporción del logo original y delega los menús, permisos y confirmaciones al anfitrión.
+Identifica el producto y su contexto global. Muestra versión, etapa, acciones, empresa y cuenta según el producto. Elige Logotipo y una altura de 40, 44 o 48 px, con ancho proporcional al original. Delega los menús, permisos y confirmaciones al anfitrión.
 
 | Situación | Haz | Evita |
 |---|---|---|
@@ -36,7 +36,7 @@ Identifica el producto y su contexto global. Muestra versión, etapa, acciones, 
 
 ## Description exacta
 
-HEADER-001 · Usa Header para identificar producto y contexto global. Conserva el logo oficial y compón versión, acciones, empresa y cuenta. Evita recortar el logo o inferir destinos. Ejemplo: encabezado de Contabilidad. Ficha local: Header / HEADER-001.
+HEADER-001 · Usa Header para identificar producto y contexto global. Elige Logotipo y Altura de 40, 44 o 48 px. El ancho conserva la proporción original. Compón versión, acciones, empresa y cuenta. Ficha local: Header / HEADER-001.
 
 ## Aceptación
 

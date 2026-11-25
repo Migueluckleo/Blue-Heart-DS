@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "kind": "DELEGATED_TOKEN_DATA",
+  "contract": "HEADER-001-LOGO-SIZING",
+  "version": "1.0.0",
+  "collections": [
+    {
+      "name": "primitives",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "Value"
+        }
+      ],
+      "variables": [
+        {
+          "id": "header-logo-sizing:primitive:size-44",
+          "name": "size/header-logo-44",
+          "resolvedType": "FLOAT",
+          "description": "Valor base de 44 px para el tamaño intermedio.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--primitive-size-header-logo-44)"
+          },
+          "valuesByMode": {
+            "Value": 44
+          }
+        }
+      ]
+    },
+    {
+      "name": "semantic",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "Value"
+        }
+      ],
+      "variables": [
+        {
+          "id": "header-logo-sizing:semantic:size-44",
+          "name": "size-header-logo-44",
+          "resolvedType": "FLOAT",
+          "description": "Medida intermedia de 44 px para logotipos de Header.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--semantic-size-header-logo-44)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "header-logo-sizing:primitive:size-44"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "component",
+      "modes": [
+        {
+          "name": "Contable",
+          "modeId": "Contable"
+        },
+        {
+          "name": "Administrativo",
+          "modeId": "Administrativo"
+        },
+        {
+          "name": "Servicios",
+          "modeId": "Servicios"
+        },
+        {
+          "name": "Personas",
+          "modeId": "Personas"
+        }
+      ],
+      "variables": [
+        {
+          "id": "header-logo-sizing:component:size-40",
+          "name": "header/size/logo-height-40",
+          "resolvedType": "FLOAT",
+          "description": "Altura compacta de logotipo en Header.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--header-size-logo-height-40)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:240"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:240"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:240"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:240"
+            }
+          }
+        },
+        {
+          "id": "header-logo-sizing:component:size-44",
+          "name": "header/size/logo-height-44",
+          "resolvedType": "FLOAT",
+          "description": "Altura intermedia de logotipo en Header.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--header-size-logo-height-44)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "header-logo-sizing:semantic:size-44"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "header-logo-sizing:semantic:size-44"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "header-logo-sizing:semantic:size-44"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "header-logo-sizing:semantic:size-44"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -6,6 +6,8 @@ type: component
 status: DELEGATED_FOR_BUILD
 version: 1.0.0
 figma_page_name: Floating Actions
+figma_page_id: "122:2"
+target_node_ids: ["122:6"]
 target_file_key: yZsIpXywybsPDytjolwcP4
 user_audit: NOT_REQUIRED
 human_review_policy: OPTIONAL_NON_BLOCKING
@@ -20,11 +22,11 @@ dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001, DOT-001, BUTTON-001, ICON-BU
 
 La [norma raíz](../../sources/figma-snapshots/root-families-2026-11-11/floating-actions.1.0.0.md.txt) y el [JSON delegado](../data/floating-actions.v1.0.0.json) gobiernan el principal de 1024 × 96. La captura de la raíz vigente muestra dos regiones FILL de 484 con gap central de 8. La norma describe 488 en su referencia histórica. El ancho de región es un resultado del layout, sin valor fijo ni token nuevo.
 
-La región Selection summary reutiliza Dot count/large/neutral, Label y Select all con visibilidad controlada. P-SLOTS REQUIRED. General actions es un Slot horizontal nativo de cardinalidad abierta. Su muestra incluye cuatro Button/text con PlusCircle Light, Divider y Close con Icon Button/ghost y X Light. Todas las acciones están dentro del Slot. El anfitrión aporta contenido, conteo y eventos.
+La región Selection summary reutiliza Dot, Label y el selector de alcance de la [enmienda vigente](floating-actions.selection-scope.amendment.v1.0.0.md). P-SLOTS REQUIRED. General actions es un Slot horizontal nativo de cardinalidad abierta. Su muestra incluye cuatro Button/text con PlusCircle Light, Divider y Close con Icon Button/ghost y X Light. Todas las acciones están dentro del Slot. El anfitrión aporta contenido, conteo y eventos.
 
 ## Guía semántica normativa
 
-Usa Floating Actions para mostrar las acciones aplicables a una selección existente. Carbon reúne las acciones en lote al seleccionar filas. BlueHeart conserva un resumen, una acción opcional de seleccionar todo y una región editable de acciones. [Carbon Data table](https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines)
+Usa Floating Actions para mostrar las acciones aplicables a una selección existente. Carbon reúne las acciones en lote al seleccionar filas. BlueHeart combina un resumen, un selector opcional de alcance y una región editable de acciones. [Carbon Data table](https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines)
 
 | Situación | Haz | Evita |
 |---|---|---|
@@ -34,7 +36,7 @@ Usa Floating Actions para mostrar las acciones aplicables a una selección exist
 
 ## Description exacta
 
-FLOATING-ACTIONS-001 · Usa Floating Actions para acciones sobre elementos seleccionados. Mantén el conteo, nombra las acciones y ajusta General actions al ancho. Evita fijar la cantidad de botones de la muestra. Ficha local Floating Actions / FLOATING-ACTIONS-001.
+FLOATING-ACTIONS-001 · Reúne acciones sobre elementos seleccionados. Usa Seleccionar para elegir la página actual o todo el histórico seleccionado. El anfitrión aporta el conteo, contexto y eventos. General actions admite acciones variables.
 
 ## Aceptación
 

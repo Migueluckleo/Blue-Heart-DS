@@ -2,8 +2,8 @@ import assert from 'node:assert/strict';
 
 export async function verifyChatSidebar(page) {
   const example = page.locator('section').filter({has: page.getByRole('heading', {name: 'Chat Sidebar', exact: true})});
-  const rail = example.locator('[data-blueheart=chat-sidebar][data-mode=rail]');
-  const panel = example.locator('[data-blueheart=chat-sidebar][data-mode=panel]');
+  const rail = example.locator('[data-blueheart=chat-sidebar][data-version=v2][data-mode=rail]');
+  const panel = example.locator('[data-blueheart=chat-sidebar][data-version=v2][data-mode=panel]');
   const nav = rail.getByRole('navigation');
   assert.equal((await rail.boundingBox()).width, 79);
   assert.equal(await panel.count(), 0);
@@ -137,4 +137,55 @@ export async function verifyChatRailItem(page) {
     themes.push({theme, selected: selected.bg, ring: selected.ring, dot: d.slice(0, 4)});
   }
   return {themes, keyboard: true, disabled: true, preservesNotification: true};
+}
+
+export async function verifyChatSidebarV1(page) {
+  const sample = page.getByRole('region', {name: 'Chat Sidebar V1', exact: true});
+  const component = sample.locator('[data-version=v1]');
+  const rail = component.and(sample.locator('[data-mode=rail]'));
+  const panel = component.and(sample.locator('[data-mode=panel]'));
+  const opener = rail.getByRole('button', {name: 'Abrir historial de chats'});
+  assert.equal((await rail.boundingBox()).width, 64);
+  assert.equal((await opener.boundingBox()).width, 32);
+  assert.equal(await rail.getByRole('meter').count(), 0);
+  await opener.focus();
+  await page.keyboard.press('Enter');
+
+  const close = panel.getByRole('button', {name: 'Cerrar historial de chats'});
+  await panel.getByRole('heading', {name: 'Historial de chats'}).waitFor();
+  await page.waitForFunction(() => document.activeElement?.getAttribute('aria-label') === 'Cerrar historial de chats');
+  const original = await panel.boundingBox();
+  assert.deepEqual([original.width, original.height], [310, 775]);
+  const content = panel.locator('[data-slot=content]');
+  const meter = panel.getByRole('meter', {name: 'Uso de IA de Pro Plan'});
+  assert.equal(await meter.getAttribute('aria-valuenow'), '41');
+  assert.equal(await content.getByRole('meter').count(), 0);
+  assert.equal((await content.boundingBox()).width, 278);
+  await page.keyboard.press('Tab');
+  const search = panel.getByRole('button', {name: 'Buscar chats'});
+  assert.equal(await search.evaluate(el => el === document.activeElement), true);
+  await page.keyboard.press('Enter');
+  assert.equal(await sample.getByLabel('Resultado del historial de chats').textContent(), 'Buscar chats');
+  await panel.getByRole('button', {name: 'Nuevo chat', exact: true}).click();
+  assert.equal(await sample.getByLabel('Resultado del historial de chats').textContent(), 'Nuevo chat');
+  const folder = panel.getByRole('button', {name: 'Papeles de trabajo 2026'});
+  await folder.click();
+  assert.equal(await folder.getAttribute('aria-expanded'), 'true');
+  const chat = panel.getByRole('button', {name: 'Reporte de Ingresos 2026'});
+  await chat.click();
+  assert.equal(await chat.getAttribute('aria-current'), 'true');
+
+  const host = component.locator('..');
+  await host.evaluate(el => {el.style.width = '280px'; el.style.height = '440px';});
+  assert.deepEqual(await panel.evaluate(el => [el.offsetWidth, el.offsetHeight]), [280, 440]);
+  assert.equal((await content.boundingBox()).width, 248);
+  assert.equal(await content.evaluate(el => el.scrollHeight > el.clientHeight && getComputedStyle(el).overflowY === 'auto'), true);
+  await host.evaluate(el => {el.style.width = '240px';});
+  assert.equal((await panel.boundingBox()).width, 264);
+  await host.evaluate(el => {el.style.removeProperty('width'); el.style.removeProperty('height');});
+  await close.focus();
+  await page.keyboard.press('Space');
+  await opener.waitFor();
+  await page.waitForFunction(() => document.activeElement?.getAttribute('aria-label') === 'Abrir historial de chats');
+  return {rail:64,panel:310,minWidth:264,shortHeight:440,keyboard:true,callbacks:true,focusRestore:true,meter:'41/150'};
 }

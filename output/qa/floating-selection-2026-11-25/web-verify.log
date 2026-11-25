@@ -1,0 +1,67 @@
+$ python3 scripts/generate.py --check
+P07: 52 familias cubiertas; 0 derivados desactualizados.
+$ tsc --noEmit
+$ node --import tsx --test tests/*.test.mjs
+✔ the delegated matrices expose 90 Button recipes and 24 Loader variants (9.858584ms)
+✔ busy Button exposes the shared Loader and native link semantics only when active (10.599166ms)
+✔ Loader is decorative by default and has a polite live label when requested (0.330333ms)
+✔ the generated catalogue covers the family registry (2.357333ms)
+✔ Icon Button and Menu item preserve the delegated visual matrices (1.100583ms)
+✔ Rail Content can use host items or stay empty and keeps the plan outside (5.79625ms)
+✔ V1 uses one history disclosure and places the expanded plan outside Content (1.312917ms)
+✔ search matches accents, case and description without changing the source (1.066917ms)
+✔ only separators between matching options and nonempty groups survive (0.091375ms)
+✔ disabled matches remain visible; no matches produce no fictional option (0.076792ms)
+✔ Dot applies the wide token to multiple decimal digits and limit labels (4.021958ms)
+✔ Floating Actions keeps independent scope metadata and supports the original selectAll API (1.500084ms)
+✔ Inline Notification keeps CTA off by default and uses one Secondary small when enabled (12.693ms)
+✔ Inline Notification CTA visibility is independent from description and dismissal (0.553625ms)
+✔ Inline Notification uses the provided Isotipo only when the indicator is visible (1.031166ms)
+✔ Linear Progress exposes its range, exact current value and associated help (6.75575ms)
+✔ Linear Progress supports unknown total and the File Upload rail-only composition (0.898292ms)
+✔ Pagination derives record ranges and clamps a partial final page in both layouts (12.240416ms)
+✔ Pagination keeps zero and single-result ranges visible with disabled boundaries (1.047416ms)
+✔ Pagination uses the selected rows value and preserves explicit range text (7.9235ms)
+✔ Radio group enforces the source cardinality by direction (7.634083ms)
+✔ Radio group keeps the fixed error message and a named group with hidden title (0.470083ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 465.007917
+$ next build --webpack
+▲ Next.js 16.4.5 (webpack)
+✓ Running next.config.ts took 13ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1229ms
+  Running TypeScript ...
+  Finished TypeScript in 525ms ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/5) ...
+  Generating static pages using 6 workers (1/5)
+  Generating static pages using 6 workers (2/5)
+  Generating static pages using 6 workers (3/5)
+✓ Generating static pages using 6 workers (5/5) in 289ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /playground/body
+└ ○ /playground/conversation-document
+
+
+○  (Static)  prerendered as static content
+
+
+├ ○ /_not-found
+├ ○ /playground/body
+└ ○ /playground/conversation-document
+
+
+○  (Static)  prerendered as static content

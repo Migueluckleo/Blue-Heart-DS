@@ -2,7 +2,7 @@
 
 import { PlusCircleIcon } from '@phosphor-icons/react/dist/csr/PlusCircle';
 import type { Icon } from '@phosphor-icons/react';
-import { useState, type CSSProperties, type MouseEvent } from 'react';
+import { useState, type AriaAttributes, type CSSProperties, type MouseEvent } from 'react';
 import data from '../generated/buttons-recipes.json';
 import { length, Loader, loaderKeyById, loaderRecipes, token, type LoaderColor, type LoaderSize } from './loader';
 
@@ -19,7 +19,7 @@ export interface ButtonIcon {
   weight?: 'thin' | 'light' | 'regular' | 'bold' | 'fill' | 'duotone';
 }
 
-export interface ButtonCommonProps {
+export interface ButtonCommonProps extends Pick<AriaAttributes, "aria-haspopup" | "aria-expanded" | "aria-controls"> {
   size?: ButtonSize;
   label?: string;
   loadingLabel?: string;
@@ -115,6 +115,7 @@ export function Button(props: ButtonProps) {
     'data-blueheart': 'button', 'data-variant': variant, 'data-size': size, 'data-state': state,
     'data-focus': ring ? 'true' : undefined, 'aria-busy': pending || undefined,
     'aria-disabled': blocked || undefined, 'aria-describedby': describedBy,
+    'aria-haspopup': props['aria-haspopup'], 'aria-expanded': props['aria-expanded'], 'aria-controls': props['aria-controls'],
     onPointerEnter: () => setHover(true), onPointerLeave: () => {setHover(false); setPressed(false);},
     onPointerDown: () => {if (!blocked) setPressed(true);}, onPointerUp: () => setPressed(false),
     onPointerCancel: () => setPressed(false),

@@ -16,13 +16,13 @@ Indica presencia, actividad, inactividad o una notificación sin captar foco. En
 | Contador | Muestra «7» en el acceso a pendientes y comunica «7 pendientes» con el nombre del anfitrión. | Hacer del Dot un segundo control tabulable. |
 | Exceso | Usa Count expand con «99+» si el consumidor aplica ese límite. | Esperar que un texto editable de Figma calcule el umbral. |
 
-Presencia y notificación usan 16, 12 u 8 px. Count y Count expand se ofrecen en large o medium. Los contadores admiten default, brand, neutral y white. El fondo y el separador distinguen la forma. El texto del contador pertenece a la variante. White usa texto y borde oscuros. Count y Max count son independientes. El anfitrión decide cuando ocultar cero y, si cambia el estado, aporta anuncio cuando corresponda.
+Presencia y notificación usan 16, 12 u 8 px. Count, Count multi y Count expand se ofrecen en large o medium. Count multi y Count expand usan 8 px a cada lado. Los contadores admiten default, brand, neutral y white. El fondo y el separador distinguen la forma. El texto del contador pertenece a la variante. White usa texto y borde oscuros. Count y Max count son independientes. El anfitrión decide cuando ocultar cero y, si cambia el estado, aporta anuncio cuando corresponda.
 
 Contraste editorial sobre indicadores compactos y etiquetas visibles. [Atlassian Badge](https://atlassian.design/components/badge/usage) · [Carbon Tag](https://www.carbondesignsystem.com/building-blocks/core/components/tag/guidelines)
 
 ## Uso sin backend
 
-Consulta presencia y conteos en el contexto de su anfitrión.
+Consulta presencia y conteos en el contexto de su anfitrión. Los conteos de dos o más dígitos y Count expand usan 8 px de padding por lado.
 
 ```tsx
 'use client';
@@ -34,7 +34,7 @@ import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
 import { EyeIcon } from '@phosphor-icons/react/dist/csr/Eye';
 import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
 import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
-import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
+import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
 
 const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];
 
@@ -92,11 +92,12 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [dot.contract.v1.0.0.md](../../../../specs/components/dot.contract.v1.0.0.md) · SHA-256 `c4418c9807ff26e4b52b6e18c997f07ad06fd4fa68fbf13c474ad08b974a318a`.
+- [dot.contract.v1.0.0.md](../../../../specs/components/dot.contract.v1.0.0.md) · SHA-256 `3853e73fc9ed37b68a1e1e56296c66316ba725b04b17625b5c77c55665477ef6`.
 - [tabs.local-navigation.amendment.v1.0.0.md](../../../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) · SHA-256 `b297a1444e4ffcb17456d8ebcbba6bcb58b8349dad25038010b852b724ab39c0`.
+- [dot.count-multi.amendment.v1.0.0.md](../../../../specs/components/dot.count-multi.amendment.v1.0.0.md) · SHA-256 `c416a78162b29cd70b74e5535f67580923e76b4842738eac464dca4b26d14465`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 
 ## Verificación
 
-`pnpm verify` comprueba generación/cobertura, TypeScript, pruebas y build estático. `pnpm test:browser` valida los recorridos locales. [Evidencia de QA](../../../../qa/implementations/dot-toggle-radio.v1.0.0.review.md) identifica alcance, resultados y límites; una demo visible por sí sola no es un PASS visual.
+`pnpm verify` comprueba generación/cobertura, TypeScript, pruebas y build estático. `pnpm test:browser` valida los recorridos locales. [Evidencia de QA](../../../../qa/implementations/floating-actions.selection-scope.v1.0.0.review.md) identifica alcance, resultados y límites; una demo visible por sí sola no es un PASS visual.

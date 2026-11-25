@@ -67,7 +67,7 @@ export type { DropdownEntry, DropdownItemProps, DropdownOption, DropdownSize } f
 export { DropdownField, DropdownMenu } from './components/dropdown-menu';
 export type { DropdownFieldProps, DropdownMenuProps } from './components/dropdown-menu';
 export { FloatingActions } from './components/floating-actions';
-export type { FloatingActionsProps } from './components/floating-actions';
+export type { FloatingActionsProps, FloatingSelectionProps, FloatingSelectionOption, FloatingSelectionScope } from './components/floating-actions';
 export { InlineNotification } from './components/inline-notification';
 export type { InlineNotificationProps, InlineNotificationType } from './components/inline-notification';
 export { Chip } from './components/chip';

@@ -14,6 +14,7 @@ export function Dot({type, size = 'large', color = 'default', count = '1', maxCo
     ? counter ? 'regular' : 'presence-medium' : counter ? 'count-large' : 'regular';
   const background = color !== 'default' ? color : type === 'active' || type === 'inactive' ? type : 'alert';
   const diameter = length(`--dot-size-${sizeRole}`);
+  const wideCount = type === 'count' && /\p{Nd}[^\p{Nd}]*\p{Nd}/u.test(count);
   const style: CSSProperties = {
     height: diameter,
     minWidth: diameter,
@@ -21,7 +22,7 @@ export function Dot({type, size = 'large', color = 'default', count = '1', maxCo
     outlineColor: token(color === 'white' ? '--dot-color-stroke-on-white' : '--dot-color-stroke-separator'),
     color: token(color === 'white' ? '--dot-color-text-on-white' : '--dot-color-text-inverse'),
     fontSize: counter ? length(`--dot-font-size-${size}`) : undefined,
-    paddingInline: type === 'count-expand' ? length('--dot-spacing-counter-inline') : undefined,
+    paddingInline: wideCount || type === 'count-expand' ? length('--dot-spacing-counter-inline-wide') : undefined,
   };
   return <span aria-hidden="true" className="bh-dot" data-blueheart="dot" data-type={type} style={style}>
     {type === 'count' ? count : type === 'count-expand' ? maxCount : null}

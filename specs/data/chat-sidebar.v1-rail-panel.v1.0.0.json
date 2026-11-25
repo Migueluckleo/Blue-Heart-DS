@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "contract": "CHAT-SIDEBAR-001-V1-V2",
+  "version": "1.0.0",
+  "references": {
+    "file_key": "zuUq3gcF9T3CLid44bjY6W",
+    "rail": "21704:71850",
+    "panel": "21878:108548",
+    "capture": "sources/figma-snapshots/chat-sidebar-v1-2026-11-24/selection.json",
+    "sha256": "43c3e17d4dff31de1c2a0ba33c264c8b6b09c8cf93e3e22238c3b9ae5d36667a"
+  },
+  "figma": {
+    "file_key": "yZsIpXywybsPDytjolwcP4",
+    "page_id": "258:3325",
+    "set_id": "258:3326",
+    "default_version": "V2",
+    "shared_content_property": "Content#258:0",
+    "title_property": "History title#711:2"
+  },
+  "v1": {
+    "view": "Chats",
+    "rail": {
+      "id": "711:354",
+      "slot": "711:371",
+      "width": 64,
+      "edge": "left",
+      "default_action": "open",
+      "plan": false
+    },
+    "panel": {
+      "id": "711:328",
+      "slot": "711:372",
+      "width": 310,
+      "min_width": 264,
+      "max_width": 310,
+      "edge": "right",
+      "default_title": "Historial de chats",
+      "actions": [
+        "close",
+        "search"
+      ],
+      "content": [
+        "shortcuts",
+        "history sections"
+      ],
+      "plan": "expanded"
+    },
+    "reference_height": 775,
+    "min_height": null,
+    "inset": 16,
+    "major_gap": 32,
+    "group_gap": 16,
+    "item_gap": 8,
+    "header_gap": 8,
+    "section_label_inset": 8,
+    "edge_width": 1,
+    "plan_shadow": {
+      "offset": [
+        0,
+        4
+      ],
+      "blur": 6,
+      "spread": -2,
+      "color_role": "shadow-md"
+    },
+    "body_sizing": [
+      "FILL",
+      "FILL"
+    ]
+  },
+  "v2": {
+    "default": true,
+    "unchanged_master_ids": [
+      "258:1820",
+      "258:2011",
+      "258:2183",
+      "258:2331",
+      "258:2500",
+      "283:8726",
+      "258:2720",
+      "258:2940",
+      "258:3160"
+    ]
+  },
+  "token_source": "specs/tokens/chat-sidebar.v1-rail-panel.v1.0.0.json"
+}

@@ -92,3 +92,19 @@ DEC-HEADER-APP-SHELL-OWN-SPACING-001 · EXPLICIT: documentar sus modificaciones 
 ## DEC-CHAT-RAIL-ITEM-001 · 2026-11-24
 
 Crear un elemento de navegación separado de Icon Button por selección persistente, apertura de vistas y novedades, en una página propia. Decisiones explícitas posteriores: Dot medium, focus ring de marca, sin altura mínima en Rail y Panel, y documentar Slot Content nativo añadido por el usuario al Rail. El seleccionado mantiene exactamente #0F172A con neutral-maximum y el aro consume brand-strong. El Slot del Rail comparte key con Panel, con plan compacto separado. [Enmienda](../specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md).
+
+## DEC-CHAT-SIDEBAR-V1-V2-001 · 2026-11-24
+
+La solicitud agrega las vistas colapsada y desplegada de Anticipa como V1. La versión oficial previa se conserva como V2 predeterminada en Figma y web. La composición reutiliza los átomos del DS y registra tokens propios internos para V1. [Enmienda](../specs/components/chat-sidebar.v1-rail-panel.amendment.v1.0.0.md).
+
+## DEC-LOGOS-CORPORATE-SVG-001 · 2026-11-24
+
+Agregar los tres SVG entregados a Logos. La incorporación conserva los maestros previos. Mi CONTPAQi usa light2 como composición clara alternativa. Mi Gestión y Portal Web usan light. El símbolo embebido de Portal Web conserva los píxeles PNG y el resto del logo conserva sus trazados. [Enmienda](../specs/components/logos.corporate-svg.amendment.v1.0.0.md).
+
+## DEC-HEADER-LOGO-SIZING-001 · 2026-11-25
+
+Logotipo y Altura son selecciones independientes en Header y App Shell. Se permite 40, 44 o 48 px de alto con 48 por defecto. El ancho deriva de la relación original. Los maestros oficiales conservan su tamaño y tienen bloqueo de proporción. [Enmienda](../specs/components/header.logo-sizing.amendment.v1.0.0.md).
+
+## DEC-FLOATING-ACTIONS-SELECTION-SCOPE-001 · 2026-11-25
+
+La página actual y el histórico activo son alcances distintos. El módulo aporta disponibilidad, conteo y contexto y aplica la selección. El DS aporta botón, menú y Dot proporcional al texto con 8 px a cada lado para dos o más cifras. [Enmienda](../specs/components/floating-actions.selection-scope.amendment.v1.0.0.md).

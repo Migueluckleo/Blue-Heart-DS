@@ -8,8 +8,10 @@ import { verifyConversationComposer } from './conversation-composer.browser.mjs'
 import { verifyConversationResponse } from './conversation-response.browser.mjs';
 import { verifyUserMessage } from './user-message.browser.mjs';
 import { verifyChat } from './chat.browser.mjs';
-import { verifyChatRailItem, verifyChatSidebar } from './chat-sidebar.browser.mjs';
+import { verifyChatRailItem, verifyChatSidebar, verifyChatSidebarV1 } from './chat-sidebar.browser.mjs';
 import { verifyStickyTable } from './table-sticky-actions.browser.mjs';
+import { verifyFloatingSelection } from './floating-selection.browser.mjs';
+import { verifyHeaderLogos } from './header-logo.browser.mjs';
 
 const root = resolve('out');
 const types = {'.html':'text/html', '.js':'text/javascript', '.css':'text/css', '.woff2':'font/woff2', '.svg':'image/svg+xml'};
@@ -335,6 +337,7 @@ try {
   assert.equal((await header.boundingBox()).height,112);
   assert.ok((await header.boundingBox()).width>=1152);
   await header.getByRole('img',{name:'CONTPAQi Contabilidad'}).evaluate(el=>el.decode());
+  const headerLogos=await verifyHeaderLogos(page);
   assert.equal(await header.locator('[data-blueheart="badge"]').textContent(),'Alpha 1');
   const amount = page.getByRole('textbox',{name:'Importe',exact:true});
   const amountRoot = page.locator('[data-blueheart=input]').filter({has:amount});
@@ -640,22 +643,7 @@ try {
   assert.equal(await currency.textContent(),'MXN');
   assert.equal(await currency.getAttribute('aria-expanded'),'false');
   assert.equal(await currency.evaluate(el=>el===document.activeElement),true);
-  const floating = page.getByRole('group',{name:'Acciones de selección'});
-  const floatingSize = await floating.boundingBox();
-  assert.deepEqual([floatingSize.width,floatingSize.height],[1024,96]);
-  assert.equal(await floating.getByRole('status').locator('.sr-only').textContent(),'3 ');
-  const selectAll = floating.getByRole('button',{name:'Seleccionar todos (8)'});
-  await selectAll.focus();
-  await page.keyboard.press('Enter');
-  assert.equal(await floating.locator('[data-blueheart=dot]').textContent(),'8');
-  assert.equal(await page.evaluate(()=>document.activeElement.id),'demo-floating-review');
-  const reviewSelection = floating.getByRole('button',{name:'Marcar como revisados'});
-  await reviewSelection.focus();
-  await page.keyboard.press('Space');
-  assert.equal(await page.locator('#demo-floating-result').textContent(),'Se marcaron 8 comprobantes de muestra.');
-  await floating.getByRole('button',{name:'Cerrar acciones de selección'}).click();
-  assert.equal(await floating.count(),0);
-  assert.equal(await page.evaluate(()=>document.activeElement.id),'demo-floating-open');
+  const floatingSelection = await verifyFloatingSelection(page);
   const infoNotice=page.locator('[data-blueheart=inline-notification][data-type=info]');
   const warningNotice=page.locator('[data-blueheart=inline-notification][data-type=warning]');
   const errorNotice=page.locator('[data-blueheart=inline-notification][data-type=error]');
@@ -802,6 +790,7 @@ try {
   const userMessage = await verifyUserMessage(page);
   const chat = await verifyChat(page);
   const chatSidebar = await verifyChatSidebar(page);
+  const chatSidebarV1 = await verifyChatSidebarV1(page);
   const chatRailItem = await verifyChatRailItem(page);
   assert.deepEqual(errors,[]);
   console.log(JSON.stringify({status:'PASS',height,width,font,colors,keyboard:true,duplicateActivationsBlocked:true,
@@ -809,8 +798,8 @@ try {
     dotGeometry:true,toggleSpace:true,toggleFocus:true,radioArrowSelection:true,radioGroupAria:true,tooltipDismissal:true,
     linearProgressRatios:true,linearProgressReducedMotion:true,checkboxMixed:true,fileUploadKeyboardAndDrop:true,
     searchKeyboardAndClear:true,breadcrumbNavigation:true,sidebarSlotsAndKeyboard:true,sidebarSecondary:true,iconButtonPressed:true,warningContrast,
-    localAvatarImage:true,avatarOverflow:true,headerKeyboard:true,inputMatrix:42,inputEmptyBorderContrast,sectionHeader:true,appShell:true,pagination:true,tabs:true,tabContrasts:tabContrasts[0],
-    textArea:true,textAreaBorderContrast,dropdown:true,dropdownContrasts,floatingActions:true,inlineWarningContrast,
+    localAvatarImage:true,avatarOverflow:true,headerKeyboard:true,headerLogos,inputMatrix:42,inputEmptyBorderContrast,sectionHeader:true,appShell:true,pagination:true,tabs:true,tabContrasts:tabContrasts[0],
+    textArea:true,textAreaBorderContrast,dropdown:true,dropdownContrasts,floatingSelection,inlineWarningContrast,
     chip:true,chipContrasts:chipContrasts[0],table:true,tableLinkHoverContrast,stickyTable,characters,conversationComposer,conversationResponse,userMessage,chat,chatSidebar,chatRailItem}));
 } finally {
   await browser?.close();

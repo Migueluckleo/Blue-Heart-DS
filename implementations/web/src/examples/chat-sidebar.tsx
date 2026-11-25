@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ChatIcon } from '@phosphor-icons/react/dist/csr/Chat';
 import { DotsThreeIcon } from '@phosphor-icons/react/dist/csr/DotsThree';
 import { FolderIcon } from '@phosphor-icons/react/dist/csr/Folder';
@@ -11,6 +11,13 @@ import { ChatSidebar, ChatHistoryItem, ChatSidebarSection, ChatToolItem, IconBut
 
 // example: chat-sidebar
 export function ChatSidebarExample() {
+  return <div className="grid gap-8">
+    <section aria-label="Chat Sidebar V2"><ChatSidebarV2Example/></section>
+    <section aria-label="Chat Sidebar V1"><ChatSidebarV1Example/></section>
+  </div>;
+}
+
+function ChatSidebarV2Example() {
   const [view, setView] = useState<Parameters<ChatSidebarProps['onViewChange']>[0]>('Chats');
   const [open, setOpen] = useState(false);
   const [folder, setFolder] = useState(false);
@@ -53,5 +60,47 @@ export function ChatSidebarExample() {
       </ChatSidebar>}
     </div>
     <output aria-label="Resultado de Chat Sidebar">{action}</output>
+  </div>;
+}
+
+
+function ChatSidebarV1Example() {
+  const [open, setOpen] = useState(false);
+  const [folder, setFolder] = useState<string>();
+  const [selected, setSelected] = useState(false);
+  const [action, setAction] = useState('');
+  const preview = useRef<HTMLDivElement>(null);
+  const moveFocus = useRef(false);
+
+  useEffect(() => {
+    if (moveFocus.current) preview.current?.querySelector<HTMLButtonElement>('.bh-chat-sidebar-disclosure')?.focus();
+    moveFocus.current = false;
+  }, [open]);
+
+  function showPanel(expanded: boolean) {
+    moveFocus.current = true;
+    setOpen(expanded);
+  }
+
+  return <div className="grid gap-4">
+    <div ref={preview} className="flex h-[775px] items-stretch">
+      <ChatSidebar version="v1" mode={open ? 'panel' : 'rail'} view="Chats"
+        onViewChange={() => showPanel(true)} onCollapse={() => showPanel(false)}
+        onSearch={() => setAction('Buscar chats')} plan={{plan: 'Pro Plan', used: 41, limit: 150}}
+        shortcuts={<ChatToolItem label="Nuevo chat" onActivate={() => setAction('Nuevo chat')}/>}>
+        {open ? <div className="bh-chat-sidebar-history-groups">
+          <ChatSidebarSection title="Carpetas">
+            {['Indicadores', 'Papeles de trabajo 2026'].map(label => <ChatToolItem
+              key={label} icon={FolderIcon} label={label} expanded={folder === label}
+              onActivate={() => {setFolder(folder === label ? undefined : label); setAction(label);}}/>)}
+          </ChatSidebarSection>
+          <ChatSidebarSection title="Chats">
+            <ChatHistoryItem title="Reporte de Ingresos 2026" updated="1 sem"
+              selected={selected} onSelect={() => setSelected(true)}/>
+          </ChatSidebarSection>
+        </div> : undefined}
+      </ChatSidebar>
+    </div>
+    <output aria-label="Resultado del historial de chats">{action}</output>
   </div>;
 }

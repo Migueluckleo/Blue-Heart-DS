@@ -141,3 +141,19 @@ TOKEN-QA-01 se probó en seis maestros y auxiliares corregidos. Leyó 1.326 bind
 ## Chat Rail Item, Rail/Panel y Slot Content · 2026-11-24
 
 [Documental PASS](../qa/contracts/chat-rail-item.v1.0.0.review.md) · [Implementación Figma/web PASS](../qa/implementations/chat-rail-item.v1.0.0.review.md). Figma: 510 bindings, 90 overrides, 16 tokens internos, 61 Body visibles, 20 instancias y diez consumidores. Dot medium 12×12, aro de marca, negro seleccionado, nueve maestros a 440 px y Slot Rail con cero, uno o cinco ítems personalizados, reordenamiento, sustitución y cambio View preservado. Web: cuatro temas, teclado, disabled, selección, aviso accesible y geometría a 440 px. TypeScript, 19 pruebas y build completados.
+
+## QA-CHAT-SIDEBAR-V1-2026-11-24
+
+[Documental](../qa/contracts/chat-sidebar.v1-rail-panel.v1.0.0.review.md) · [Implementación](../qa/implementations/chat-sidebar.v1-rail-panel.v1.0.0.review.md). Verificación centrada en V1 colapsado/desplegado, bindings y slots, y regresión de V2 en los maestros y sus consumidores.
+
+## QA-LOGOS-CORPORATE-SVG · 2026-11-24
+
+PASS documental y de implementación. Selección de ocho variantes, tres dimensiones de SVG, arte vectorial y PNG de Portal Web, sin bindings ni dependencias externas. [QA documental](../qa/contracts/logos.corporate-svg.v1.0.0.review.md) · [QA Figma](../qa/implementations/logos.corporate-svg.v1.0.0.review.md).
+
+## QA-HEADER-LOGO-SIZING · 2026-11-25
+
+Figma PASS en 225 cambios de Header, 48 de App Shell y 75 bloqueos de proporción de maestros. Chrome PASS en 24 casos enfocados de Header. [Implementación](../qa/implementations/header.logo-sizing.v1.0.0.review.md) · [QA documental](../qa/contracts/header.logo-sizing.v1.0.0.review.md).
+
+## QA-FLOATING-ACTIONS-SELECTION-SCOPE · 2026-11-25
+
+[Documental](../qa/contracts/floating-actions.selection-scope.v1.0.0.review.md) · [Implementación](../qa/implementations/floating-actions.selection-scope.v1.0.0.review.md). Comprueba menú, ambos alcances, ruta de foco, conservación del Slot y padding condicional de Dot.

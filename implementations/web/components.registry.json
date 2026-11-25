@@ -9,13 +9,14 @@
       "AppShellGridItem"
     ],
     "category": "navegación",
-    "notes": "Grid, Flex, Conversación o Conversación con preview del documento. En preview, Chat conserva 374 px y el documento llena el espacio restante. Revisión 2026-11-24: Header–Content gap 0, Content con padding top 0 y laterales/bottom 32; conversación usa gap 32. Todas las medidas propias consumen tokens Header/App Shell.",
+    "notes": "Grid, Flex, Conversación o Conversación con preview del documento. En preview, Chat conserva 374 px y el documento llena el espacio restante. Revisión 2026-11-24: Header–Content gap 0, Content con padding top 0 y laterales/bottom 32; conversación usa gap 32. Todas las medidas propias consumen tokens Header/App Shell. header.logo y header.logoHeight heredados de Header controlan la marca y su altura.",
     "base": "specs/components/app-shell.contract.v1.0.0.md",
     "amendments": [
       "specs/components/app-shell.document-preview.amendment.v1.0.0.md",
       "specs/patterns/forms.app-shell.amendment.v1.0.0.md",
       "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md",
-      "specs/components/header-app-shell.spacing.amendment.v1.0.0.md"
+      "specs/components/header-app-shell.spacing.amendment.v1.0.0.md",
+      "specs/components/header.logo-sizing.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "REQUIRED",
@@ -272,16 +273,17 @@
       "ChatSidebar"
     ],
     "category": "conversación",
-    "notes": "Rail con navegación neutral, aro de foco de marca y Dot medium opcional. Content admite ítems personalizados en Rail, secciones en Panel y altura del anfitrión. Chat History Item conserva la opción de notificación documentada en Figma, con paridad web del indicador de fila pendiente.",
+    "notes": "V2 predeterminada mantiene los cuatro módulos, el foco de marca y el Dot medium. version='v1' y view='Chats' muestran el historial con acceso único. onViewChange abre y onCollapse cierra; el anfitrión controla mode, búsqueda y datos. En V1, shortcuts precede a children en Content y plan se muestra al pie en modo panel. La notificación de fila de Chat History Item sigue disponible en Figma.",
     "base": "specs/components/chat-sidebar.contract.v1.0.0.md",
     "amendments": [
-      "specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md"
+      "specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md",
+      "specs/components/chat-sidebar.v1-rail-panel.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "REQUIRED",
-      "reason": "Content nativo compartido. children acepta navegación en Rail y secciones en Panel."
+      "reason": "Content nativo compartido por ambos modos y versiones. children sustituye el acceso o la navegación en Rail y compone las secciones en Panel."
     },
-    "qa": "qa/implementations/chat-rail-item.v1.0.0.review.md",
+    "qa": "qa/implementations/chat-sidebar.v1-rail-panel.v1.0.0.review.md",
     "example_source": "separate"
   },
   {
@@ -437,16 +439,17 @@
       "Dot"
     ],
     "category": "estado",
-    "notes": "Consulta presencia y conteos en el contexto de su anfitrión.",
+    "notes": "Consulta presencia y conteos en el contexto de su anfitrión. Los conteos de dos o más dígitos y Count expand usan 8 px de padding por lado.",
     "base": "specs/components/dot.contract.v1.0.0.md",
     "amendments": [
-      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md",
+      "specs/components/dot.count-multi.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Count y Max count son propiedades acotadas de texto"
     },
-    "qa": "qa/implementations/dot-toggle-radio.v1.0.0.review.md"
+    "qa": "qa/implementations/floating-actions.selection-scope.v1.0.0.review.md"
   },
   {
     "id": "DROPDOWN-ITEM-001",
@@ -524,14 +527,17 @@
       "FloatingActions"
     ],
     "category": "feedback",
-    "notes": "Muestra el resumen y las acciones de la selección vigente. El anfitrión controla conteo, selección y cierre.",
+    "notes": "El menú Seleccionar ofrece la página actual y todo el histórico seleccionado. El anfitrión proporciona conteos, contexto, disponibilidad y callbacks. General actions conserva su composición abierta.",
     "base": "specs/components/floating-actions.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/floating-actions.selection-scope.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "REQUIRED",
       "reason": "General actions admite reemplazar y reordenar controles"
     },
-    "qa": "qa/implementations/actions-notification.v1.0.0.review.md"
+    "qa": "qa/implementations/floating-actions.selection-scope.v1.0.0.review.md",
+    "example_source": "separate"
   },
   {
     "id": "HEADER-001",
@@ -542,16 +548,17 @@
       "Header"
     ],
     "category": "navegación",
-    "notes": "Compone el logo oficial, la versión y las opciones locales de empresa y cuenta. Revisión 2026-11-24: padding exterior 32 con token propio, interior 24, versión/Badge agrupados con gap 8 y bloques separados por sus divisores.",
+    "notes": "Compone el logo oficial, la versión y las opciones locales de empresa y cuenta. Revisión 2026-11-24: padding exterior 32 con token propio, interior 24, versión/Badge agrupados con gap 8 y bloques separados por sus divisores. logo admite src y alt. logoHeight selecciona 40, 44 o 48 px de alto con ancho proporcional. La galería permite probar las cuatro marcas.",
     "base": "specs/components/header.contract.v1.0.0.md",
     "amendments": [
-      "specs/components/header-app-shell.spacing.amendment.v1.0.0.md"
+      "specs/components/header-app-shell.spacing.amendment.v1.0.0.md",
+      "specs/components/header.logo-sizing.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Regiones fijas con visibilidad booleana"
     },
-    "qa": "qa/implementations/header-chain.v1.0.0.review.md"
+    "qa": "qa/implementations/header.logo-sizing.v1.0.0.review.md"
   },
   {
     "id": "HEADER-ACTIONS-001",
