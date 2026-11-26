@@ -82,6 +82,7 @@ export interface InlineNotificationProps {
   showDismiss?: boolean;
   onDismiss?: () => void;
   dismissLabel?: string;
+  /** Shows the optional Secondary action between the content and Dismiss. */
   showCta?: boolean;
   ctaLabel?: string;
   onCta?: () => void;
@@ -115,10 +116,10 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [inline-notification.contract.v1.0.0.md](../../../../specs/components/inline-notification.contract.v1.0.0.md) · SHA-256 `1114301cad0a867e21219ab91cae7a9b18d7f22e40c7577ee7a7287d959f9670`.
-- [forms.app-shell.amendment.v1.0.0.md](../../../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) · SHA-256 `0e4c9655879b4847db021522fe49bc86f8dcac095a01c63fb3d75d03b5db8b8b`.
+- [inline-notification.contract.v1.0.0.md](../../../../specs/components/inline-notification.contract.v1.0.0.md) · SHA-256 `dee4664651874ad99f30094e29e1ff7005f2b6d5f820f02ac62890a54cf730e0`.
+- [forms.app-shell.amendment.v1.0.0.md](../../../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) · SHA-256 `0981d971c7e675b226c79a31f7f64b4ed434c7133d5af86ad347a1f11177bda9`.
 - [inline-notification.cta.amendment.v1.0.0.md](../../../../specs/components/inline-notification.cta.amendment.v1.0.0.md) · SHA-256 `84a68d752343cc04cb9ea66550ddadabb05a64592e6b6efde0e16ed66a115765`.
-- [inline-notification.layout-isotipo.amendment.v1.0.0.md](../../../../specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md) · SHA-256 `07c9f9f2bb5f4236c6e3e71e346d5f1328a2772a9a5684deb3a24b2e28f7b001`.
+- [inline-notification.layout-isotipo.amendment.v1.0.0.md](../../../../specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md) · SHA-256 `3e92c3f0e0ddc262c4b30797451c2215d7e6a0043368af279b1b7b4cded8da0f`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

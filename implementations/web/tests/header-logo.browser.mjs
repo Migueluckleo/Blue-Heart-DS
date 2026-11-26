@@ -29,9 +29,9 @@ export async function verifyHeaderLogos(page) {
           assert.equal(size.name,name);
           assert.equal(size.height,height,name);
           assert.ok(Math.abs(size.width-size.ratio*height)<0.08,name);
-          assert.ok(size.gap>=-0.05 && size.right>=31.95,name);
+          assert.ok(size.gap>=-0.05 && size.right>=23.95,name);
           assert.equal(size.fit,'contain',name);
-          assert.equal(size.headerHeight,112,name);
+          assert.equal(size.headerHeight,96,name);
           results.push({host:width,name,height:size.height,width:size.width});
         }
       }

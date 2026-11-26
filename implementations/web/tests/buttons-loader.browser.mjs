@@ -336,7 +336,7 @@ try {
   await page.keyboard.press('Space');
   assert.equal(await page.locator('#demo-header-action-status').textContent(),'Acción de muestra: notifications');
   const header = page.locator('[data-blueheart="header"]').filter({has:page.locator('#demo-header-company')});
-  assert.equal((await header.boundingBox()).height,112);
+  assert.equal((await header.boundingBox()).height,96);
   assert.ok((await header.boundingBox()).width>=1152);
   await header.getByRole('img',{name:'CONTPAQi Contabilidad'}).evaluate(el=>el.decode());
   const headerLogos=await verifyHeaderLogos(page);

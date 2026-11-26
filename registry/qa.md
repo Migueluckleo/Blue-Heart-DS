@@ -163,3 +163,13 @@ Figma PASS en 225 cambios de Header, 48 de App Shell y 75 bloqueos de proporció
 ## Tablas, paginación y Floating Actions · Uso contextual · 2026-11-25
 
 [QA documental de tablas/paginación/selección](../qa/contracts/tables.contextual-usage.v1.0.0.review.md). El PDF conserva su evidencia local; los comprobantes de consumo corresponden a la nueva entrega.
+
+## Padding y separación de composición · 2026-11-26
+
+[QA de composición](../qa/implementations/composition-spacing.v1.0.0.review.md) PASS en la lectura de las ocho variantes de App Shell, 24 px en Header y superficies delimitadas, 0 en el wrapper, 32 entre bloques y 16 de Tabs a Table. Chrome verificó cuatro temas y el cambio de pestaña por teclado.
+
+El mismo [QA](../qa/implementations/composition-spacing.v1.0.0.review.md#aclaración-de-cards-y-variantes-de-icono-sobre-blanco--pass) verifica radio 16, sombra y padding 24 en las cinco Cards primary y ocho pares de icono sobre blanco en Chrome.
+
+## Inline Notification · CTA centrado · 2026-11-26
+
+[QA Figma/web PASS](../qa/implementations/inline-notification.centered-cta.v1.0.0.review.md). Cinco tipos, visibilidad sin espacio reservado, orden Content → CTA → Dismiss y prueba a 320 px. CTA responde a teclado y conserva su acción independiente.

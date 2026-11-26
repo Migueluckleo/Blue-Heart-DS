@@ -78,22 +78,26 @@ Se adopta la enumeración explícita de la solicitud: xs=4 y sm=8. La talla de B
 | body/radius/sm | 4 px | radius-sm |
 | body/radius/null | 0 px | radius-none |
 
-## Separación entre Cards y bloques independientes
+## Padding y separación en composición
 
-La separación entre Cards y entre bloques de información independientes usa `body/spacing/xl`, **32 px**. Esta regla es EXPLICIT por aclaración del usuario y se aplica al espacio exterior entre bloques. No se reemplaza por el espaciado interno de una Card.
+**BODY-COMPOSITION-SPACING-001 · EXPLICIT, 2026-11-26.** Aplica a pantallas de producto en Figma, web y sus dos workflows de consumo. Los límites visibles se miden en cada eje del layout según la relación entre componentes.
 
-## Estándar interno de composición de Cards
+| Situación | Regla |
+|---|---|
+| Card, módulo o widget con borde visible o superficie de color distinta de `primary` | **24 px** de padding interior en los cuatro lados, usando `body/spacing/lg`. Un Header con fondo propio consume su token de componente a 24 px. |
+| Card con fondo `primary` y radio de esquina de **16 px**, sombra visible o ambos | **24 px** de padding interior con `body/spacing/lg`. Cada rasgo basta para asignar el padding. |
+| Wrapper de producto transparente o con fondo `primary`, sin borde ni rasgos de Card que delimiten la superficie | **0 px** de padding interior, usando `body/spacing/null` cuando hay un binding para el rol. |
+| Bloques independientes | **32 px** entre límites visibles, usando `body/spacing/xl`. |
+| Control y contenido que gobierna | **16 px** entre sus límites visibles. Ejemplo: Tabs y su Table o Card asociada. La composición usa `body/spacing/md` y Tabs web aplica su rol de familia. |
+| Header y cuerpo dentro de App Shell | **32 px** superiores en Content, una sola vez, con `app-shell/spacing/content`. |
 
-- Padding interno de cada Card: `body/spacing/lg`, 24 px.
-- Separación entre segmentos de información: `body/spacing/md`, 16 px.
-- Separación dentro de un segmento: `body/spacing/sm`, 8 px.
-- Separación entre título y descripción: `body/spacing/xs`, 4 px.
+Para cada par de componentes del flujo, mide una separación positiva de **hasta 32 px**. Suma los márgenes, gaps e insets de wrappers sin límite visible que contribuyan al mismo tramo. Si un wrapper transparente aporta 24 px y su padre añade un gap de 32 px, la separación efectiva es 56 px y falla. El padding dentro de una superficie visible se mide desde su propio límite hacia el contenido. Las composiciones estructurales de un componente oficial conservan los requisitos de su contrato.
 
-El estándar 24/16/8/4 corresponde únicamente a elementos internos de cada Card, no al espacio entre Cards. Este es el estándar inicial. El producto puede ajustar la composición usando cualquiera de los tokens Body definidos, según el contenido y el espacio disponible. El radio se elige según la necesidad; la demostración usa lg. Estas reglas no fijan una anatomía universal, cantidad de segmentos, estado, acción, tamaño o catálogo de Cards.
+En una Card delimitada, usa 16 px entre segmentos de información, 8 px dentro de un segmento y 4 px entre título y descripción. El producto elige composición, contenido y radio con los tokens Body existentes.
 
-## Uso en web
+## Uso en Figma y web
 
-Los aliases CSS se generan desde los datos delegados. Por ejemplo, una composición de producto usa `padding: calc(var(--body-spacing-lg) * 1px)`, `gap: calc(var(--body-spacing-md) * 1px)`, `background: var(--body-color-bg-primary)` y `color: var(--body-color-text-primary)`. Sus segmentos usan sm y el par título/descripción usa xs. Las propiedades tipográficas consumen sus roles Body y aplican px solo a medidas; font-weight y tracking conservan la unidad correspondiente.
+En Figma, vincula Auto Layout a Body en las composiciones de producto y a los roles propios en los maestros oficiales. En web, usa los aliases generados. Una Card de fondo `primary` con stroke visible, radio de 16 px o sombra visible toma `--body-spacing-lg` para padding y `--body-spacing-md` entre segmentos. Un bloque transparente usa `--body-spacing-null` como padding. Verifica la distancia de caja a caja con contenido real y en los modos del layout. Coloca el gap de la composición en un solo nivel del tramo.
 
 ## Aceptación
 
@@ -107,4 +111,8 @@ La [enmienda Caution 1.0.0](caution.amendment.v1.0.0.md) añade cuatro roles Bod
 
 ## Ampliación disabled · 2026-11-23
 
-La [enmienda disabled](body.disabled.amendment.v1.0.0.md) agrega cuatro colores de texto, fondo, stroke y shape con scopes por propiedad. Body suma 61 tokens; Caution y los estilos anteriores se conservan. Lee sus [datos delegados](../tokens/body.disabled.v1.0.0.json) y la política vigente para obtener el inventario completo.
+La [enmienda disabled](body.disabled.amendment.v1.0.0.md) agrega cuatro colores de texto, fondo, stroke y shape con scopes por propiedad. Ese corte sumó 61 tokens Body y conservó Caution y los estilos anteriores. Lee sus [datos delegados](../tokens/body.disabled.v1.0.0.json) y la política vigente para obtener el inventario completo.
+
+## Iconos Warning y Caution sobre blanco · 2026-11-26
+
+Usa `body/color/shape/warning-on-white` y `body/color/shape/caution-on-white` para iconos de producto sobre bg/primary. La [enmienda](body.icons-on-white.amendment.v1.0.0.md) documenta aliases, contraste y scopes. Body suma 63 tokens.

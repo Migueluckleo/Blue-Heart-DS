@@ -181,13 +181,13 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [app-shell.contract.v1.0.0.md](../../../../specs/components/app-shell.contract.v1.0.0.md) · SHA-256 `ec6379ac0bfad8e0a8d25e37a6839e60bc2f5f5ff3430ee3679fe87564bc0e6a`.
+- [app-shell.contract.v1.0.0.md](../../../../specs/components/app-shell.contract.v1.0.0.md) · SHA-256 `63079e66f81f2c0067dc8a57d08dd8fabea4c98bc3b92488b03d546bc4704d49`.
 - [app-shell.document-preview.amendment.v1.0.0.md](../../../../specs/components/app-shell.document-preview.amendment.v1.0.0.md) · SHA-256 `f61282f2318487c1d050be4dc5fbea064dd50bf8a432eee9c6d8d2ff1ec8edde`.
-- [forms.app-shell.amendment.v1.0.0.md](../../../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) · SHA-256 `0e4c9655879b4847db021522fe49bc86f8dcac095a01c63fb3d75d03b5db8b8b`.
+- [forms.app-shell.amendment.v1.0.0.md](../../../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) · SHA-256 `0981d971c7e675b226c79a31f7f64b4ed434c7133d5af86ad347a1f11177bda9`.
 - [tabs.local-navigation.amendment.v1.0.0.md](../../../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) · SHA-256 `b297a1444e4ffcb17456d8ebcbba6bcb58b8349dad25038010b852b724ab39c0`.
-- [header-app-shell.spacing.amendment.v1.0.0.md](../../../../specs/components/header-app-shell.spacing.amendment.v1.0.0.md) · SHA-256 `ae33ac4bc80963d491ea867ade3b4fc0ac930be62d9f0f6d4ecb5b90fd58e818`.
+- [header-app-shell.spacing.amendment.v1.0.0.md](../../../../specs/components/header-app-shell.spacing.amendment.v1.0.0.md) · SHA-256 `005b70afe7c6de84b7add91f908e91f77e90c58d64d0d81489c0e3d240724578`.
 - [header.logo-sizing.amendment.v1.0.0.md](../../../../specs/components/header.logo-sizing.amendment.v1.0.0.md) · SHA-256 `b90452a3f6bc89f2be79d1c42e10cd34f0a6dd5026e856abc5c5ec66d56cffe1`.
-- [tables-pagination-selection.amendment.v1.0.0.md](../../../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) · SHA-256 `b4f3057e9a09e7f7651275e1a47afcba00a364bb8ffd02c562a440073d29955b`.
+- [tables-pagination-selection.amendment.v1.0.0.md](../../../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) · SHA-256 `581fa2d5311abea2a85ff738e0beeeb606f73d45689eaa030f0530c0c833c287`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

@@ -137,7 +137,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 - [floating-actions.contract.v1.0.0.md](../../../../specs/components/floating-actions.contract.v1.0.0.md) · SHA-256 `b3505fdb3466e5d8f05031bf7d8c000de02db7a40d2ea4caf365f3c84699afe5`.
 - [floating-actions.selection-scope.amendment.v1.0.0.md](../../../../specs/components/floating-actions.selection-scope.amendment.v1.0.0.md) · SHA-256 `f1bd67c88fe3615b351b36b2162eaaa2d576427abfabea9b017ed9bafbd3b900`.
 - [floating-actions.contextual-usage.amendment.v1.0.0.md](../../../../specs/components/floating-actions.contextual-usage.amendment.v1.0.0.md) · SHA-256 `83e467d077e3a39994d0ecabb080d60339fcc42dd3ca191bf0c47da42cd410e5`.
-- [tables-pagination-selection.amendment.v1.0.0.md](../../../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) · SHA-256 `b4f3057e9a09e7f7651275e1a47afcba00a364bb8ffd02c562a440073d29955b`.
+- [tables-pagination-selection.amendment.v1.0.0.md](../../../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) · SHA-256 `581fa2d5311abea2a85ff738e0beeeb606f73d45689eaa030f0530c0c833c287`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

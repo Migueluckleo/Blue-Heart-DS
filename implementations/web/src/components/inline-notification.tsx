@@ -23,6 +23,7 @@ export interface InlineNotificationProps {
   showDismiss?: boolean;
   onDismiss?: () => void;
   dismissLabel?: string;
+  /** Shows the optional Secondary action between the content and Dismiss. */
   showCta?: boolean;
   ctaLabel?: string;
   onCta?: () => void;
@@ -46,7 +47,6 @@ export function InlineNotification({type='neutral',title,description,link,showTi
       {showIcon&&(isotipo
         ? <span className="bh-inline-isotipo"><img src={isotipo.src} alt={isotipo.alt}/></span>
         : <Glyph className="bh-inline-indicator" weight={type==='neutral'?'regular':'fill'} aria-hidden="true"/>)}
-      <div className="bh-inline-body">
       {(titleVisible||descriptionVisible)&&<div className="bh-inline-text" role={role}>
         {titleVisible&&<p className="bh-inline-title">{title}</p>}
         {descriptionVisible&&<p className="bh-inline-description">{description}
@@ -54,9 +54,8 @@ export function InlineNotification({type='neutral',title,description,link,showTi
           {link&&<a className="bh-inline-link" href={link.href}>{link.label}</a>}
         </p>}
       </div>}
-      {showCta&&<Button variant="secondary" size="small" label={ctaLabel} onClick={onCta}/>}
-      </div>
     </div>
+    {showCta&&<Button variant="secondary" size="small" label={ctaLabel} onClick={onCta}/>}
     {dismissVisible&&<IconButton variant="ghost" size="small" icon={XIcon} label={dismissLabel} onClick={onDismiss}/>}
   </div>;
 }

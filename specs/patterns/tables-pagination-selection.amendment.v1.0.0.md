@@ -32,7 +32,7 @@ Tabs abre secciones hermanas; Chips agrega/quita criterios de la vista actual. E
 
 ### TABLE-APP-SHELL-001 · Ubicación y contexto
 
-Header/Sidebar mantienen navegación global; Section Header identifica el conjunto y Table vive en Body. En un listado convencional, Flex según contexto. Mantener título/criterios antes de tabla y Pagination debajo/fuera del viewport de filas. No duplicar empresa ni inventar bodyLayout table. El layout vigente mantiene Header con padding exterior 32, gap Header–Content 0 y Content con top 0/laterales e inferior 32, mediante sus roles propios. El contenido de producto usa Body por propiedad; no copiar esos tokens a internos oficiales.
+Header/Sidebar mantienen navegación global; Section Header identifica el conjunto y Table vive en Body. En un listado convencional, Flex según contexto. Mantener título/criterios antes de tabla y Pagination debajo/fuera del viewport de filas. No duplicar empresa ni inventar bodyLayout table. El layout vigente usa 24 px de padding interior en Header y 32 px arriba de Content entre Header y el cuerpo. Sus roles propios controlan esos tramos. Si Tabs gobierna Table, deja 16 px entre la barra y la tabla según la [regla de composición](../foundations/body.contract.v1.0.0.md#padding-y-separación-en-composición). El contenido de producto usa Body por propiedad; no copiar esos tokens a internos oficiales.
 
 Con dos listados independientes, identificar regiones, criterios, selecciones y paginadores por separado. La barra flotante siempre se centra en pantalla, no en el ancho disponible tras Sidebar. Su aparición no debe desplazar o sustituir la navegación global.
 

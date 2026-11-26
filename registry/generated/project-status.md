@@ -923,5 +923,6 @@ Conservan su identidad y alcance propios; consultar relaciones explícitas en ca
 - [specs/components/inline-notification.cta.amendment.v1.0.0.md](../../specs/components/inline-notification.cta.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD.
 - [specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md](../../specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD.
 - [specs/foundations/body.disabled.amendment.v1.0.0.md](../../specs/foundations/body.disabled.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD.
+- [specs/foundations/body.icons-on-white.amendment.v1.0.0.md](../../specs/foundations/body.icons-on-white.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD.
 - [specs/foundations/body.semantic-colors.amendment.v1.0.0.md](../../specs/foundations/body.semantic-colors.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD.
 - [specs/foundations/caution.amendment.v1.0.0.md](../../specs/foundations/caution.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD.

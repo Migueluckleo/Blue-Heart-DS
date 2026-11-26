@@ -264,9 +264,9 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 - [buttons.usage.amendment.v1.0.1.md](../../../../specs/components/buttons.usage.amendment.v1.0.1.md) · SHA-256 `39c8b5851fd42cc0e57257faab9c7bdac4d529422eea58378bc81a06f70bded8`.
 - [buttons.contextual-usage.amendment.v1.0.2.md](../../../../specs/components/buttons.contextual-usage.amendment.v1.0.2.md) · SHA-256 `ae82a9a67a4e0a04699dafc847d6a52c9a67811eef594a588737e6afb0d6481a`.
 - [buttons.actions.amendment.v1.0.0.md](../../../../specs/patterns/buttons.actions.amendment.v1.0.0.md) · SHA-256 `55ce62e2548edd9c1dc2cfe28624bbba65f80892890458e09208e1801304b01e`.
-- [forms.app-shell.amendment.v1.0.0.md](../../../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) · SHA-256 `0e4c9655879b4847db021522fe49bc86f8dcac095a01c63fb3d75d03b5db8b8b`.
+- [forms.app-shell.amendment.v1.0.0.md](../../../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) · SHA-256 `0981d971c7e675b226c79a31f7f64b4ed434c7133d5af86ad347a1f11177bda9`.
 - [tabs.local-navigation.amendment.v1.0.0.md](../../../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) · SHA-256 `b297a1444e4ffcb17456d8ebcbba6bcb58b8349dad25038010b852b724ab39c0`.
-- [tables-pagination-selection.amendment.v1.0.0.md](../../../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) · SHA-256 `b4f3057e9a09e7f7651275e1a47afcba00a364bb8ffd02c562a440073d29955b`.
+- [tables-pagination-selection.amendment.v1.0.0.md](../../../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) · SHA-256 `581fa2d5311abea2a85ff738e0beeeb606f73d45689eaa030f0530c0c833c287`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

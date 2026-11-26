@@ -165,7 +165,7 @@ La [política vigente](../specs/foundations/token-visibility.contract.v1.0.0.md)
 
 ## Header y App Shell · Layout y tokens propios · 2026-11-24
 
-[HEADER-APP-SHELL-SPACING-001](../specs/components/header-app-shell.spacing.amendment.v1.0.0.md) · v1.0.0 · DELEGATED_FOR_BUILD tras [QA documental PASS](../qa/contracts/header-app-shell.spacing.v1.0.0.review.md), Figma/web READY para espaciado. [Tokens nuevos](../specs/tokens/header-app-shell.spacing.v1.0.0.json), SHA-256 33e03dbc7c8557a467758de98e7b255b43643ebd7047b25491d32f1cc6ccef19; [mapa de 62 campos](../specs/data/header-app-shell.spacing.v1.0.0.json), SHA-256 b72072e0473b7bd6577c37749185c1b6ec5f8d880fe575d456197e2e70dde88c. Padding Header 32; Shell gap raíz/top 0 e interiores 32, ocho variantes. Dos FLOAT internos aliasan semantic; no repunta valores anteriores. [QA Figma/web PASS](../qa/implementations/header-app-shell.spacing.v1.0.0.review.md). P-SLOTS no cambia mecanismo; las familias mantienen su aplicabilidad.
+[HEADER-APP-SHELL-SPACING-001](../specs/components/header-app-shell.spacing.amendment.v1.0.0.md) · v1.0.0 · DELEGATED_FOR_BUILD tras [QA documental PASS](../qa/contracts/header-app-shell.spacing.v1.0.0.review.md), Figma/web READY para espaciado. [Tokens nuevos](../specs/tokens/header-app-shell.spacing.v1.0.0.json), SHA-256 c4c32f6b9aca7c41deb62062475b40c03ac48fc6d1068ec627006ce3503fe683; [mapa de 62 campos](../specs/data/header-app-shell.spacing.v1.0.0.json), SHA-256 5cb15ab2f6b22034a06d263071af3fca4af2f1eb5f66a79dbaaf66e9c6ad366c. La corrección del 26 de noviembre fija Header en 24 y Content en 32 superiores con gap raíz 0, en las ocho variantes. Los FLOAT internos conservan su identidad y el rol de Header consume spacing-xl. [QA Figma/web PASS](../qa/implementations/header-app-shell.spacing.v1.0.0.review.md). P-SLOTS no cambia mecanismo; las familias mantienen su aplicabilidad.
 
 ## Chat Rail Item y Chat Sidebar · 2026-11-24
 
@@ -190,3 +190,13 @@ La [política vigente](../specs/foundations/token-visibility.contract.v1.0.0.md)
 ## Tablas, paginación y Floating Actions · Uso contextual · 2026-11-25
 
 Cinco guías APPROVED de [Table](../specs/components/table.contextual-usage.amendment.v1.0.0.md), [Cell/Capture](../specs/components/table-cell.contextual-usage.amendment.v1.0.0.md), [Pagination](../specs/components/pagination.contextual-usage.amendment.v1.0.0.md), [item](../specs/components/pagination-item.contextual-usage.amendment.v1.0.0.md) y [Floating Actions](../specs/components/floating-actions.contextual-usage.amendment.v1.0.0.md), con [siete patrones](../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md). El contador Default se prescribe a la derecha sin cambiar la API implícita; X adopta limpieza de selección en este patrón.
+
+## Padding y separación de composición · 2026-11-26
+
+[BODY-COMPOSITION-SPACING-001](../specs/foundations/body.contract.v1.0.0.md#padding-y-separación-en-composición) · Padding interior 24 en superficies delimitadas y 0 en wrappers sin delimitación. Separación de 32 entre bloques independientes y 16 entre control y contenido; tope efectivo 32. La política de consumo delega estas medidas y roles a su JSON.
+
+La aclaración del mismo día incluye Cards primary con radio de 16 px, sombra visible o ambos en el padding interior de 24. [Iconos sobre blanco](../specs/foundations/body.icons-on-white.amendment.v1.0.0.md) agrega Warning y Caution con SHAPE_FILL. El inventario visible Body suma 63.
+
+## Inline Notification · CTA centrado · 2026-11-26
+
+[Layout vigente](../specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md) ordena Content, CTA y Dismiss en una fila centrada. Show CTA conserva el default false y la receta Secondary small.

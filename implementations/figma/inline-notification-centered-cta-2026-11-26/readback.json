@@ -1,0 +1,1392 @@
+{
+  "date": "2026-11-26",
+  "fileKey": "yZsIpXywybsPDytjolwcP4",
+  "setId": "122:274",
+  "baseline": [
+    {
+      "component": "122:53",
+      "key": "171047d2f66a776a8ef9ae80a7abd0ff214a9679",
+      "order": [
+        [
+          "122:54",
+          "Content"
+        ],
+        [
+          "122:124",
+          "Dismiss target"
+        ]
+      ],
+      "cta": {
+        "id": "581:29",
+        "name": "CTA",
+        "type": "INSTANCE",
+        "vis": false,
+        "align": "CENTER",
+        "space": 4,
+        "gapToken": "VariableID:8:438",
+        "x": 0,
+        "y": 0,
+        "w": 71,
+        "h": 32,
+        "horizontal": "HUG",
+        "vertical": "FIXED",
+        "prop": {
+          "visible": "Show CTA#581:0"
+        },
+        "main": "23:853"
+      }
+    },
+    {
+      "component": "122:132",
+      "key": "95942f6ae76d612b795b5259e028fd7acf56a758",
+      "order": [
+        [
+          "122:133",
+          "Content"
+        ],
+        [
+          "122:182",
+          "Dismiss target"
+        ]
+      ],
+      "cta": {
+        "id": "581:38",
+        "name": "CTA",
+        "type": "INSTANCE",
+        "vis": false,
+        "align": "CENTER",
+        "space": 4,
+        "gapToken": "VariableID:8:438",
+        "x": 0,
+        "y": 0,
+        "w": 71,
+        "h": 32,
+        "horizontal": "HUG",
+        "vertical": "FIXED",
+        "prop": {
+          "visible": "Show CTA#581:0"
+        },
+        "main": "23:853"
+      }
+    },
+    {
+      "component": "122:189",
+      "key": "d63187de83e8e7071e2a1fe96d93caab17e3940e",
+      "order": [
+        [
+          "122:190",
+          "Content"
+        ],
+        [
+          "122:196",
+          "Dismiss target"
+        ]
+      ],
+      "cta": {
+        "id": "581:45",
+        "name": "CTA",
+        "type": "INSTANCE",
+        "vis": false,
+        "align": "CENTER",
+        "space": 4,
+        "gapToken": "VariableID:8:438",
+        "x": 0,
+        "y": 0,
+        "w": 71,
+        "h": 32,
+        "horizontal": "HUG",
+        "vertical": "FIXED",
+        "prop": {
+          "visible": "Show CTA#581:0"
+        },
+        "main": "23:853"
+      }
+    },
+    {
+      "component": "122:203",
+      "key": "957f6a05460acdc7e2204224e0abc173f92049fc",
+      "order": [
+        [
+          "122:204",
+          "Content"
+        ],
+        [
+          "122:253",
+          "Dismiss target"
+        ]
+      ],
+      "cta": {
+        "id": "581:52",
+        "name": "CTA",
+        "type": "INSTANCE",
+        "vis": false,
+        "align": "CENTER",
+        "space": 4,
+        "gapToken": "VariableID:8:438",
+        "x": 0,
+        "y": 0,
+        "w": 71,
+        "h": 32,
+        "horizontal": "HUG",
+        "vertical": "FIXED",
+        "prop": {
+          "visible": "Show CTA#581:0"
+        },
+        "main": "23:853"
+      }
+    },
+    {
+      "component": "122:260",
+      "key": "7dd89d794fb9a4b77deb58d07480109aadb8e1a6",
+      "order": [
+        [
+          "122:261",
+          "Content"
+        ],
+        [
+          "122:267",
+          "Dismiss target"
+        ]
+      ],
+      "cta": {
+        "id": "581:59",
+        "name": "CTA",
+        "type": "INSTANCE",
+        "vis": false,
+        "align": "CENTER",
+        "space": 4,
+        "gapToken": "VariableID:8:438",
+        "x": 0,
+        "y": 0,
+        "w": 71,
+        "h": 32,
+        "horizontal": "HUG",
+        "vertical": "FIXED",
+        "prop": {
+          "visible": "Show CTA#581:0"
+        },
+        "main": "23:853"
+      }
+    }
+  ],
+  "mutation": {
+    "changed": [
+      "122:274",
+      "122:53",
+      "122:54",
+      "581:29",
+      "122:132",
+      "122:133",
+      "581:38",
+      "122:189",
+      "122:190",
+      "581:45",
+      "122:203",
+      "122:204",
+      "581:52",
+      "122:260",
+      "122:261",
+      "581:59"
+    ],
+    "set": "122:274",
+    "setKey": "7015680d121d3f5d709db132375826a019133a09",
+    "showCta": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "checks": [
+      {
+        "id": "122:53",
+        "key": "171047d2f66a776a8ef9ae80a7abd0ff214a9679",
+        "order": [
+          [
+            "122:54",
+            "Content"
+          ],
+          [
+            "581:29",
+            "CTA"
+          ],
+          [
+            "122:124",
+            "Dismiss target"
+          ]
+        ],
+        "parent": "122:53",
+        "shown": false,
+        "toggle": "Show CTA#581:0",
+        "exposed": true,
+        "alignment": "CENTER",
+        "contentAlign": "CENTER",
+        "rootGapToken": "VariableID:13:3",
+        "dismissToggle": "Show dismiss#122:34",
+        "description": "INLINE-NOTIFICATION-001 · Mensaje junto al contenido afectado. Show CTA inicia apagado. Al activarlo muestra Button Secondary/small centrado en la fila, entre Content y Dismiss. El indicador inicia como ícono de estado. Desde Indicator elige source=isotipo y reemplaza Isotipo por un producto oficial, máximo 32×32 sin deformar. Show icon controla ambas alternativas. El anfitrión conecta acción, enlace y cierre. El CTA actúa de forma independiente. Ficha Inline Notification / INLINE-NOTIFICATION-001."
+      },
+      {
+        "id": "122:132",
+        "key": "95942f6ae76d612b795b5259e028fd7acf56a758",
+        "order": [
+          [
+            "122:133",
+            "Content"
+          ],
+          [
+            "581:38",
+            "CTA"
+          ],
+          [
+            "122:182",
+            "Dismiss target"
+          ]
+        ],
+        "parent": "122:132",
+        "shown": false,
+        "toggle": "Show CTA#581:0",
+        "exposed": true,
+        "alignment": "CENTER",
+        "contentAlign": "CENTER",
+        "rootGapToken": "VariableID:13:3",
+        "dismissToggle": "Show dismiss#122:34",
+        "description": "INLINE-NOTIFICATION-001 · Mensaje junto al contenido afectado. Show CTA inicia apagado. Al activarlo muestra Button Secondary/small centrado en la fila, entre Content y Dismiss. El indicador inicia como ícono de estado. Desde Indicator elige source=isotipo y reemplaza Isotipo por un producto oficial, máximo 32×32 sin deformar. Show icon controla ambas alternativas. El anfitrión conecta acción, enlace y cierre. El CTA actúa de forma independiente. Ficha Inline Notification / INLINE-NOTIFICATION-001."
+      },
+      {
+        "id": "122:189",
+        "key": "d63187de83e8e7071e2a1fe96d93caab17e3940e",
+        "order": [
+          [
+            "122:190",
+            "Content"
+          ],
+          [
+            "581:45",
+            "CTA"
+          ],
+          [
+            "122:196",
+            "Dismiss target"
+          ]
+        ],
+        "parent": "122:189",
+        "shown": false,
+        "toggle": "Show CTA#581:0",
+        "exposed": true,
+        "alignment": "CENTER",
+        "contentAlign": "CENTER",
+        "rootGapToken": "VariableID:13:3",
+        "dismissToggle": "Show dismiss#122:34",
+        "description": "INLINE-NOTIFICATION-001 · Mensaje junto al contenido afectado. Show CTA inicia apagado. Al activarlo muestra Button Secondary/small centrado en la fila, entre Content y Dismiss. El indicador inicia como ícono de estado. Desde Indicator elige source=isotipo y reemplaza Isotipo por un producto oficial, máximo 32×32 sin deformar. Show icon controla ambas alternativas. El anfitrión conecta acción, enlace y cierre. El CTA actúa de forma independiente. Ficha Inline Notification / INLINE-NOTIFICATION-001."
+      },
+      {
+        "id": "122:203",
+        "key": "957f6a05460acdc7e2204224e0abc173f92049fc",
+        "order": [
+          [
+            "122:204",
+            "Content"
+          ],
+          [
+            "581:52",
+            "CTA"
+          ],
+          [
+            "122:253",
+            "Dismiss target"
+          ]
+        ],
+        "parent": "122:203",
+        "shown": false,
+        "toggle": "Show CTA#581:0",
+        "exposed": true,
+        "alignment": "CENTER",
+        "contentAlign": "CENTER",
+        "rootGapToken": "VariableID:13:3",
+        "dismissToggle": "Show dismiss#122:34",
+        "description": "INLINE-NOTIFICATION-001 · Mensaje junto al contenido afectado. Show CTA inicia apagado. Al activarlo muestra Button Secondary/small centrado en la fila, entre Content y Dismiss. El indicador inicia como ícono de estado. Desde Indicator elige source=isotipo y reemplaza Isotipo por un producto oficial, máximo 32×32 sin deformar. Show icon controla ambas alternativas. El anfitrión conecta acción, enlace y cierre. El CTA actúa de forma independiente. Ficha Inline Notification / INLINE-NOTIFICATION-001."
+      },
+      {
+        "id": "122:260",
+        "key": "7dd89d794fb9a4b77deb58d07480109aadb8e1a6",
+        "order": [
+          [
+            "122:261",
+            "Content"
+          ],
+          [
+            "581:59",
+            "CTA"
+          ],
+          [
+            "122:267",
+            "Dismiss target"
+          ]
+        ],
+        "parent": "122:260",
+        "shown": false,
+        "toggle": "Show CTA#581:0",
+        "exposed": true,
+        "alignment": "CENTER",
+        "contentAlign": "CENTER",
+        "rootGapToken": "VariableID:13:3",
+        "dismissToggle": "Show dismiss#122:34",
+        "description": "INLINE-NOTIFICATION-001 · Mensaje junto al contenido afectado. Show CTA inicia apagado. Al activarlo muestra Button Secondary/small centrado en la fila, entre Content y Dismiss. El indicador inicia como ícono de estado. Desde Indicator elige source=isotipo y reemplaza Isotipo por un producto oficial, máximo 32×32 sin deformar. Show icon controla ambas alternativas. El anfitrión conecta acción, enlace y cierre. El CTA actúa de forma independiente. Ficha Inline Notification / INLINE-NOTIFICATION-001."
+      }
+    ]
+  },
+  "qa": {
+    "temp": "857:562",
+    "created": [
+      "857:562",
+      "857:563",
+      "857:673",
+      "857:755",
+      "857:837",
+      "857:919"
+    ],
+    "count": 5,
+    "records": [
+      {
+        "id": "122:53",
+        "type": "neutral",
+        "rows": [
+          {
+            "width": 804,
+            "on": {
+              "width": 804,
+              "height": 96,
+              "contentWidth": 596,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 804,
+              "height": 76,
+              "contentWidth": 716,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -740,
+              "dismissGap": 685,
+              "offGap": 16,
+              "centerDelta": -20,
+              "dismissDelta": 20,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 804,
+              "height": 96,
+              "contentWidth": 644,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": -234,
+              "offGap": -114,
+              "centerDelta": 0,
+              "dismissDelta": -10,
+              "indicatorDelta": 0
+            }
+          },
+          {
+            "width": 602,
+            "on": {
+              "width": 602,
+              "height": 116,
+              "contentWidth": 394,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 602,
+              "height": 96,
+              "contentWidth": 514,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -538,
+              "dismissGap": 483,
+              "offGap": 16,
+              "centerDelta": -30,
+              "dismissDelta": 30,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 602,
+              "height": 96,
+              "contentWidth": 442,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": -32,
+              "offGap": 88,
+              "centerDelta": 0,
+              "dismissDelta": -10,
+              "indicatorDelta": 0
+            }
+          },
+          {
+            "width": 320,
+            "on": {
+              "width": 320,
+              "height": 316,
+              "contentWidth": 112,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 320,
+              "height": 136,
+              "contentWidth": 232,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -256,
+              "dismissGap": 201,
+              "offGap": 16,
+              "centerDelta": -50,
+              "dismissDelta": 50,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 320,
+              "height": 216,
+              "contentWidth": 160,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": 250,
+              "offGap": 370,
+              "centerDelta": 0,
+              "dismissDelta": -70,
+              "indicatorDelta": 0
+            }
+          }
+        ],
+        "swappedTo": "info",
+        "label": "Revisar"
+      },
+      {
+        "id": "122:132",
+        "type": "info",
+        "rows": [
+          {
+            "width": 804,
+            "on": {
+              "width": 804,
+              "height": 96,
+              "contentWidth": 596,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 804,
+              "height": 76,
+              "contentWidth": 716,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -740,
+              "dismissGap": 685,
+              "offGap": 16,
+              "centerDelta": -20,
+              "dismissDelta": 20,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 804,
+              "height": 96,
+              "contentWidth": 644,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": -234,
+              "offGap": -114,
+              "centerDelta": 0,
+              "dismissDelta": -10,
+              "indicatorDelta": 0
+            }
+          },
+          {
+            "width": 602,
+            "on": {
+              "width": 602,
+              "height": 116,
+              "contentWidth": 394,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 602,
+              "height": 96,
+              "contentWidth": 514,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -538,
+              "dismissGap": 483,
+              "offGap": 16,
+              "centerDelta": -30,
+              "dismissDelta": 30,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 602,
+              "height": 96,
+              "contentWidth": 442,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": -32,
+              "offGap": 88,
+              "centerDelta": 0,
+              "dismissDelta": -10,
+              "indicatorDelta": 0
+            }
+          },
+          {
+            "width": 320,
+            "on": {
+              "width": 320,
+              "height": 316,
+              "contentWidth": 112,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 320,
+              "height": 136,
+              "contentWidth": 232,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -256,
+              "dismissGap": 201,
+              "offGap": 16,
+              "centerDelta": -50,
+              "dismissDelta": 50,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 320,
+              "height": 216,
+              "contentWidth": 160,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": 250,
+              "offGap": 370,
+              "centerDelta": 0,
+              "dismissDelta": -70,
+              "indicatorDelta": 0
+            }
+          }
+        ],
+        "swappedTo": "success",
+        "label": "Revisar"
+      },
+      {
+        "id": "122:189",
+        "type": "success",
+        "rows": [
+          {
+            "width": 804,
+            "on": {
+              "width": 804,
+              "height": 96,
+              "contentWidth": 596,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 804,
+              "height": 76,
+              "contentWidth": 716,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -740,
+              "dismissGap": 685,
+              "offGap": 16,
+              "centerDelta": -20,
+              "dismissDelta": 20,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 804,
+              "height": 96,
+              "contentWidth": 644,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": -234,
+              "offGap": -114,
+              "centerDelta": 0,
+              "dismissDelta": -10,
+              "indicatorDelta": 0
+            }
+          },
+          {
+            "width": 602,
+            "on": {
+              "width": 602,
+              "height": 116,
+              "contentWidth": 394,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 602,
+              "height": 96,
+              "contentWidth": 514,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -538,
+              "dismissGap": 483,
+              "offGap": 16,
+              "centerDelta": -30,
+              "dismissDelta": 30,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 602,
+              "height": 96,
+              "contentWidth": 442,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": -32,
+              "offGap": 88,
+              "centerDelta": 0,
+              "dismissDelta": -10,
+              "indicatorDelta": 0
+            }
+          },
+          {
+            "width": 320,
+            "on": {
+              "width": 320,
+              "height": 316,
+              "contentWidth": 112,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 320,
+              "height": 136,
+              "contentWidth": 232,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -256,
+              "dismissGap": 201,
+              "offGap": 16,
+              "centerDelta": -50,
+              "dismissDelta": 50,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 320,
+              "height": 216,
+              "contentWidth": 160,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": 250,
+              "offGap": 370,
+              "centerDelta": 0,
+              "dismissDelta": -70,
+              "indicatorDelta": 0
+            }
+          }
+        ],
+        "swappedTo": "warning",
+        "label": "Revisar"
+      },
+      {
+        "id": "122:203",
+        "type": "warning",
+        "rows": [
+          {
+            "width": 804,
+            "on": {
+              "width": 804,
+              "height": 96,
+              "contentWidth": 596,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 804,
+              "height": 76,
+              "contentWidth": 716,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -740,
+              "dismissGap": 685,
+              "offGap": 16,
+              "centerDelta": -20,
+              "dismissDelta": 20,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 804,
+              "height": 96,
+              "contentWidth": 644,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": -234,
+              "offGap": -114,
+              "centerDelta": 0,
+              "dismissDelta": -10,
+              "indicatorDelta": 0
+            }
+          },
+          {
+            "width": 602,
+            "on": {
+              "width": 602,
+              "height": 116,
+              "contentWidth": 394,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 602,
+              "height": 96,
+              "contentWidth": 514,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -538,
+              "dismissGap": 483,
+              "offGap": 16,
+              "centerDelta": -30,
+              "dismissDelta": 30,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 602,
+              "height": 96,
+              "contentWidth": 442,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": -32,
+              "offGap": 88,
+              "centerDelta": 0,
+              "dismissDelta": -10,
+              "indicatorDelta": 0
+            }
+          },
+          {
+            "width": 320,
+            "on": {
+              "width": 320,
+              "height": 316,
+              "contentWidth": 112,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 320,
+              "height": 136,
+              "contentWidth": 232,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -256,
+              "dismissGap": 201,
+              "offGap": 16,
+              "centerDelta": -50,
+              "dismissDelta": 50,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 320,
+              "height": 216,
+              "contentWidth": 160,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": 250,
+              "offGap": 370,
+              "centerDelta": 0,
+              "dismissDelta": -70,
+              "indicatorDelta": 0
+            }
+          }
+        ],
+        "swappedTo": "error",
+        "label": "Revisar"
+      },
+      {
+        "id": "122:260",
+        "type": "error",
+        "rows": [
+          {
+            "width": 804,
+            "on": {
+              "width": 804,
+              "height": 96,
+              "contentWidth": 596,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 804,
+              "height": 76,
+              "contentWidth": 716,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -740,
+              "dismissGap": 685,
+              "offGap": 16,
+              "centerDelta": -20,
+              "dismissDelta": 20,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 804,
+              "height": 96,
+              "contentWidth": 644,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": -234,
+              "offGap": -114,
+              "centerDelta": 0,
+              "dismissDelta": -10,
+              "indicatorDelta": 0
+            }
+          },
+          {
+            "width": 602,
+            "on": {
+              "width": 602,
+              "height": 116,
+              "contentWidth": 394,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 602,
+              "height": 96,
+              "contentWidth": 514,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -538,
+              "dismissGap": 483,
+              "offGap": 16,
+              "centerDelta": -30,
+              "dismissDelta": 30,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 602,
+              "height": 96,
+              "contentWidth": 442,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": -32,
+              "offGap": 88,
+              "centerDelta": 0,
+              "dismissDelta": -10,
+              "indicatorDelta": 0
+            }
+          },
+          {
+            "width": 320,
+            "on": {
+              "width": 320,
+              "height": 316,
+              "contentWidth": 112,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "CTA",
+                "Dismiss target"
+              ],
+              "gap": 16,
+              "dismissGap": 16,
+              "offGap": 136,
+              "centerDelta": 0,
+              "dismissDelta": 0,
+              "indicatorDelta": 0
+            },
+            "off": {
+              "width": 320,
+              "height": 136,
+              "contentWidth": 232,
+              "ctaWidth": 71,
+              "ctaHeight": 32,
+              "ctaVisible": false,
+              "dismissVisible": true,
+              "visibleOrder": [
+                "Content",
+                "Dismiss target"
+              ],
+              "gap": -256,
+              "dismissGap": 201,
+              "offGap": 16,
+              "centerDelta": -50,
+              "dismissDelta": 50,
+              "indicatorDelta": 0
+            },
+            "withoutDismiss": {
+              "width": 320,
+              "height": 216,
+              "contentWidth": 160,
+              "ctaWidth": 104,
+              "ctaHeight": 32,
+              "ctaVisible": true,
+              "dismissVisible": false,
+              "visibleOrder": [
+                "Content",
+                "CTA"
+              ],
+              "gap": 16,
+              "dismissGap": 250,
+              "offGap": 370,
+              "centerDelta": 0,
+              "dismissDelta": -70,
+              "indicatorDelta": 0
+            }
+          }
+        ],
+        "swappedTo": "neutral",
+        "label": "Revisar"
+      }
+    ]
+  },
+  "visual": {
+    "id": "859:677",
+    "created": [
+      "859:677"
+    ],
+    "width": 602,
+    "height": 96,
+    "visibleOrder": [
+      "Content",
+      "CTA",
+      "Dismiss target"
+    ],
+    "descriptionParts": [
+      {
+        "text": "Description text that explains what happened. ",
+        "fill": "VariableID:13:20",
+        "font": "Regular"
+      },
+      {
+        "text": "View details.",
+        "fill": "VariableID:13:24",
+        "font": "SemiBold"
+      }
+    ]
+  },
+  "cleanup": {
+    "removed": [
+      "857:562",
+      "857:563",
+      "857:673",
+      "857:755",
+      "857:837",
+      "857:919",
+      "859:677"
+    ],
+    "verifiedAbsent": true,
+    "token": {
+      "name": "inline-notification/spacing/content",
+      "id": "VariableID:13:3",
+      "chain": [
+        {
+          "mode": "6:20",
+          "semantic": "spacing-lg",
+          "primitive": "spacing/16",
+          "value": 16,
+          "scopes": [
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "mode": "6:21",
+          "semantic": "spacing-lg",
+          "primitive": "spacing/16",
+          "value": 16,
+          "scopes": [
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "mode": "6:22",
+          "semantic": "spacing-lg",
+          "primitive": "spacing/16",
+          "value": 16,
+          "scopes": [
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "mode": "6:23",
+          "semantic": "spacing-lg",
+          "primitive": "spacing/16",
+          "value": 16,
+          "scopes": [
+            [],
+            [],
+            []
+          ]
+        }
+      ]
+    }
+  },
+  "status": "PASS"
+}

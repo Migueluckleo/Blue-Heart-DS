@@ -102,7 +102,7 @@ La corrección `specs/components/inline-notification.layout-isotipo.amendment.v1
 
 ## Body disabled · corte vigente
 
-Lee `specs/foundations/body.disabled.amendment.v1.0.0.md` y `specs/tokens/body.disabled.v1.0.0.json` junto con los datos iniciales, colores semánticos, Caution y la policy del mismo corte. Body suma 61 tokens. Consume `--body-color-text-disabled`, `--body-color-bg-disabled`, `--body-color-stroke-disabled` y `--body-color-shape-disabled` según su propiedad para contenido de producto no disponible; configura la interacción y semántica disabled en el anfitrión. No sustituye los tokens de los componentes oficiales. Mantén la cadena de aliases y los scopes específicos en el handoff.
+Lee `specs/foundations/body.disabled.amendment.v1.0.0.md` y `specs/tokens/body.disabled.v1.0.0.json` junto con los datos iniciales, colores semánticos, Caution y la policy del mismo corte. Body suma 63 tokens. Consume `--body-color-text-disabled`, `--body-color-bg-disabled`, `--body-color-stroke-disabled` y `--body-color-shape-disabled` según su propiedad para contenido de producto no disponible; configura la interacción y semántica disabled en el anfitrión. No sustituye los tokens de los componentes oficiales. Mantén la cadena de aliases y los scopes específicos en el handoff.
 
 ## Tabs y Chips por intención
 
@@ -111,3 +111,7 @@ Para secciones/pestañas del mismo contexto resuelve TABS-001 + TAB-001 y lee su
 ## Tablas, paginación y selección
 
 Para tablas de registros resuelve TABLE-001, TABLE-CELL-001, PAGINATION-001/PAGINATION-ITEM-001 y FLOATING-ACTIONS-001 según uso; lee sus guías contextuales v1.0.0 y specs/patterns/tables-pagination-selection.amendment.v1.0.0.md desde el índice. Usa IDs estables y acciones por fila o selección claramente separadas. Default lleva contador a la derecha con rangePosition right explícito. En tablas Floating Actions aparece desde dos IDs seleccionados, centrada en pantalla y a 32 px del borde inferior. Seleccionar distingue página e histórico activo con cantidad/contexto; no sumar esos números ni confundirlos con seleccionados. X limpia selección y restaura foco a tabla en este patrón. El anfitrión mantiene colección, persistencia entre páginas, consulta y resultados. Capture Cell no es editor ni grid. Registra alcance, anclaje, conteos y foco antes de construir; no inventes props o estados.
+
+## Padding y separación efectiva
+
+Aplica BODY-COMPOSITION-SPACING-001 de `specs/foundations/body.contract.v1.0.0.md`. Usa 24 px dentro de superficies de producto con borde visible o fondo distinto de primary, y 0 dentro de wrappers transparentes o primary sin delimitación. Una Card primary con radio de 16 px, sombra visible o ambos usa 24 px. Para iconos Warning y Caution sobre blanco usa los roles Body shape con sufijo `-on-white`. Separa bloques independientes 32 px y cada control de su contenido 16 px. Mide entre límites visibles y suma insets/gaps contiguos. El límite es 32 px y los componentes del flujo requieren separación. App Shell aporta 32 px arriba de Content una sola vez mediante su token propio. Comprueba geometría final y registra mediciones.

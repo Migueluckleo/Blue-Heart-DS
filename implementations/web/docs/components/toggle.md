@@ -135,7 +135,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 - [toggle.contract.v1.0.0.md](../../../../specs/components/toggle.contract.v1.0.0.md) · SHA-256 `18fd1f9c1e182511bfd22d431d360e809cd095879d2d31d8ad4bb01799e5f29c`.
 - [toggle.contextual-usage.amendment.v1.0.1.md](../../../../specs/components/toggle.contextual-usage.amendment.v1.0.1.md) · SHA-256 `d5d96b3869896ca0a62a36996ca6333cafb9293af859c9196c25309f9595e11e`.
 - [selection-controls.decisions.amendment.v1.0.0.md](../../../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md) · SHA-256 `475cbf939a69291170f79eece14cf88848d0fd4bec4268de9c7f5b9a6486dcbc`.
-- [forms.app-shell.amendment.v1.0.0.md](../../../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) · SHA-256 `0e4c9655879b4847db021522fe49bc86f8dcac095a01c63fb3d75d03b5db8b8b`.
+- [forms.app-shell.amendment.v1.0.0.md](../../../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) · SHA-256 `0981d971c7e675b226c79a31f7f64b4ed434c7133d5af86ad347a1f11177bda9`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

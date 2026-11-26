@@ -8,14 +8,14 @@ version: 1.0.0
 user_audit: NOT_REQUIRED
 human_review_policy: OPTIONAL_NON_BLOCKING
 source_data_ref: specs/policies/product-consumption.v1.0.0.json
-source_data_digest_sha256: c5d348419a96a59884345e84115f907a74013f10e928073f4d552121930395c8
+source_data_digest_sha256: 18839280fbde2ee7ca19b270963c573cd3f5d04c7ce8dd55f323465f309f2d08
 data_refs: [specs/policies/product-consumption.v1.0.0.json]
 dependencies: [FOUNDATIONS-BODY-001, FOUNDATIONS-TOKEN-VISIBILITY-001, LINEAR-PROGRESS-001, BUTTON-001, APP-SHELL-001]
 ---
 
 # Contrato primordial de consumo de producto
 
-Regla EXPLICIT del usuario, 17 de noviembre de 2026, obligatoria para los workflows web y Figma. Gobierna la construcción de interfaces de producto mediante el DS. Sus [datos de validación](../policies/product-consumption.v1.0.0.json) delegan identificadores, tipos de molécula y rutas; este contrato gobierna su significado. No modifica anatomías, valores ni la tipografía interna de las familias.
+Regla EXPLICIT del usuario, 17 de noviembre de 2026, obligatoria para los workflows web y Figma. Gobierna la construcción de interfaces de producto mediante el DS. Sus [datos de validación](../policies/product-consumption.v1.0.0.json) delegan identificadores, tipos de molécula y rutas; este contrato gobierna su significado. El layout de producto cumple [la regla de padding y separación de Body](body.contract.v1.0.0.md#padding-y-separación-en-composición), con validación de la distancia efectiva entre límites visibles.
 
 ## CONSUMPTION-01 · Componentes oficiales obligatorios
 
@@ -41,7 +41,7 @@ Los componentes oficiales mantienen sus tokens internos y tipografía. Introduci
 
 La geometría estructural que no tiene un token Body aplicable, como Fill, Hug, dirección del Auto Layout, orden o columnas responsivas, se decide según el brief y se documenta. Esta decisión no autoriza inventar colores, escalas tipográficas, espaciados o controles.
 
-El inventario vigente incluye los colores de [Body por propiedad](body.semantic-colors.amendment.v1.0.0.md), [Caution](caution.amendment.v1.0.0.md) y [disabled](body.disabled.amendment.v1.0.0.md), con 61 tokens Body. La política enumera todas las fuentes en body.data_sources y conserva body.data como referencia inicial. El preflight lee cada fuente verificada y une solo los nombres de la colección component con prefijo exacto body/. No puede omitir una ampliación ni volver al inventario inicial si una fuente falta.
+El inventario vigente incluye los colores de [Body por propiedad](body.semantic-colors.amendment.v1.0.0.md), [Caution](caution.amendment.v1.0.0.md) [disabled](body.disabled.amendment.v1.0.0.md) e [iconos sobre blanco](body.icons-on-white.amendment.v1.0.0.md), con 63 tokens Body. La política enumera todas las fuentes en body.data_sources y conserva body.data como referencia inicial. El preflight lee cada fuente verificada y une solo los nombres de la colección component con prefijo exacto body/. No puede omitir una ampliación ni volver al inventario inicial si una fuente falta.
 
 ## CONSUMPTION-04 · GitHub es la fuente de consumo
 

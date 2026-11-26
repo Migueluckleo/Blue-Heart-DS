@@ -64,8 +64,8 @@ export function TabExample() {
     <Tabs type="segmented" label="Vistas de la cuenta" selectedId={selected} onSelectionChange={setSelected}
       items={[
         {id:'summary',label:'Resumen',accessibleLabel:'Resumen, 12 pendientes',icon:ImageSquareIcon,badgeCount:'12',
-          panel:<p className="pt-3">Doce comprobantes requieren revisión.</p>},
-        {id:'documents',label:'Documentos',panel:<p className="pt-3">Documentos registrados de la cuenta.</p>},
+          panel:<p>Doce comprobantes requieren revisión.</p>},
+        {id:'documents',label:'Documentos',panel:<p>Documentos registrados de la cuenta.</p>},
       ]}/>
   </div>;
 }

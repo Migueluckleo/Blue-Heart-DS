@@ -552,8 +552,8 @@ export function TabExample() {
     <Tabs type="segmented" label="Vistas de la cuenta" selectedId={selected} onSelectionChange={setSelected}
       items={[
         {id:'summary',label:'Resumen',accessibleLabel:'Resumen, 12 pendientes',icon:ImageSquareIcon,badgeCount:'12',
-          panel:<p className="pt-3">Doce comprobantes requieren revisión.</p>},
-        {id:'documents',label:'Documentos',panel:<p className="pt-3">Documentos registrados de la cuenta.</p>},
+          panel:<p>Doce comprobantes requieren revisión.</p>},
+        {id:'documents',label:'Documentos',panel:<p>Documentos registrados de la cuenta.</p>},
       ]}/>
   </div>;
 }
@@ -564,10 +564,10 @@ export function TabsExample() {
   return <div className="my-4">
     <Tabs label="Tipos de comprobante" selectedId={selected} onSelectionChange={setSelected}
       items={[
-        {id:'invoices',label:'Facturas',panel:<p className="pt-3">Facturas del periodo seleccionado.</p>},
-        {id:'payments',label:'Pagos',disabled:true,panel:<p className="pt-3">Los pagos no están disponibles.</p>},
-        {id:'credit-notes',label:'Notas de crédito',panel:<p className="pt-3">Notas de crédito registradas.</p>},
-        {id:'complements',label:'Complementos',panel:<p className="pt-3">Complementos del periodo.</p>},
+        {id:'invoices',label:'Facturas',panel:<p>Facturas del periodo seleccionado.</p>},
+        {id:'payments',label:'Pagos',disabled:true,panel:<p>Los pagos no están disponibles.</p>},
+        {id:'credit-notes',label:'Notas de crédito',panel:<p>Notas de crédito registradas.</p>},
+        {id:'complements',label:'Complementos',panel:<p>Complementos del periodo.</p>},
       ]}/>
   </div>;
 }

@@ -20,7 +20,7 @@ dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001, TAB-001]
 
 La [norma raíz 3.1.0](../../sources/figma-snapshots/root-families-2026-11-11/tabs.3.1.0.md.txt) y el [JSON delegado](../data/tabs.v1.0.0.json) gobiernan underline, pill y segmented. P-SLOTS REQUIRED. Un Slot compartido Tabs admite mínimo dos, sin máximo declarado, con Tab como preferencia. Cada variante comienza con cuatro instancias del mismo tipo y una seleccionada. El anfitrión mantiene el tipo, orden, panel y selección. La muestra de cuatro no fija la cardinalidad.
 
-Underline usa divisor inferior estirable. Pill separa ítems por 4 px. Segmented conserva fondo, radio y padding de 4 px, con foco fuera del clip. Web usa tablist y tabpanels asociados, flechas horizontales, Home/End y activación manual con Enter o Espacio. El anfitrión controla la selección.
+Underline usa divisor inferior estirable. Pill separa ítems por 4 px. Segmented conserva fondo, radio y padding de 4 px, con foco fuera del clip. Web usa tablist y tabpanels asociados, flechas horizontales, Home/End y activación manual con Enter o Espacio. El anfitrión controla la selección. El panel asociado empieza a **16 px** de la barra. Web aplica `tab/spacing/lg` en el margen superior de su tabpanel. En Figma la composición anfitriona enlaza `body/spacing/md` al gap entre Tabs y el panel, sin sumar otro inset al mismo tramo.
 
 ## Guía semántica normativa
 

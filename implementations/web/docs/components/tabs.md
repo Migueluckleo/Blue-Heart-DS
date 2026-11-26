@@ -104,10 +104,10 @@ export function TabsExample() {
   return <div className="my-4">
     <Tabs label="Tipos de comprobante" selectedId={selected} onSelectionChange={setSelected}
       items={[
-        {id:'invoices',label:'Facturas',panel:<p className="pt-3">Facturas del periodo seleccionado.</p>},
-        {id:'payments',label:'Pagos',disabled:true,panel:<p className="pt-3">Los pagos no están disponibles.</p>},
-        {id:'credit-notes',label:'Notas de crédito',panel:<p className="pt-3">Notas de crédito registradas.</p>},
-        {id:'complements',label:'Complementos',panel:<p className="pt-3">Complementos del periodo.</p>},
+        {id:'invoices',label:'Facturas',panel:<p>Facturas del periodo seleccionado.</p>},
+        {id:'payments',label:'Pagos',disabled:true,panel:<p>Los pagos no están disponibles.</p>},
+        {id:'credit-notes',label:'Notas de crédito',panel:<p>Notas de crédito registradas.</p>},
+        {id:'complements',label:'Complementos',panel:<p>Complementos del periodo.</p>},
       ]}/>
   </div>;
 }
@@ -162,10 +162,10 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [tabs.contract.v1.0.0.md](../../../../specs/components/tabs.contract.v1.0.0.md) · SHA-256 `ffa4637ae231721e77ab9be88d4c3c0c951c6c978e9d2c546ca67f12bcb0e446`.
+- [tabs.contract.v1.0.0.md](../../../../specs/components/tabs.contract.v1.0.0.md) · SHA-256 `42ab0a5ee515dcb6b2230ef3b9b9f91278c01eb538e855b16f528b154114670b`.
 - [tabs.contextual-usage.amendment.v1.0.0.md](../../../../specs/components/tabs.contextual-usage.amendment.v1.0.0.md) · SHA-256 `927fb6232d5211817043ca7b8b68565875abf5752a43598007535d8f35bad229`.
 - [tabs.local-navigation.amendment.v1.0.0.md](../../../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) · SHA-256 `b297a1444e4ffcb17456d8ebcbba6bcb58b8349dad25038010b852b724ab39c0`.
-- [tables-pagination-selection.amendment.v1.0.0.md](../../../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) · SHA-256 `b4f3057e9a09e7f7651275e1a47afcba00a364bb8ffd02c562a440073d29955b`.
+- [tables-pagination-selection.amendment.v1.0.0.md](../../../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) · SHA-256 `581fa2d5311abea2a85ff738e0beeeb606f73d45689eaa030f0530c0c833c287`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

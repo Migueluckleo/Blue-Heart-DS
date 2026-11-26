@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "canonical_ds_digest": "2e985694d11a010d7d88df067de017ab4d3e65badfc13aa9928686ad3931f0ab",
+  "catalog_manifest_sha256": "29508fe59c43fdeec7051d8bc1167e9858da07b5e91b9b9d8d1f6c48398eea5f",
+  "canonical_sources": 1531,
+  "source_hashes": {
+    "specs/components/inline-notification.contract.v1.0.0.md": "dee4664651874ad99f30094e29e1ff7005f2b6d5f820f02ac62890a54cf730e0",
+    "specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md": "3e92c3f0e0ddc262c4b30797451c2215d7e6a0043368af279b1b7b4cded8da0f",
+    "specs/data/inline-notification.layout-isotipo.v1.0.0.json": "b69d6a1acdc27743fc9c352c9f96daaa6ab0a492a91a9364f51c355a460ddb7f",
+    "implementations/figma/inline-notification-centered-cta-2026-11-26/readback.json": "2a1575302442132857066bbc477b0da3587e72bc8119ac9638e8703e9c3d5637"
+  },
+  "canonical_graph": {
+    "status": "CURRENT",
+    "run": "2026-11-26-inline-notification-centered-cta",
+    "nodes": 7368,
+    "edges": 14871,
+    "declared_dependencies": {
+      "status": "PASS",
+      "declared": 206,
+      "verified": 206,
+      "missing": []
+    }
+  },
+  "layout": {
+    "root_order": [
+      "Content",
+      "CTA",
+      "Dismiss target"
+    ],
+    "counter_align": "CENTER",
+    "default_cta": false,
+    "gap": 16
+  },
+  "packages": [
+    {
+      "name": "po-prototypes-autocontenida",
+      "file": "po-prototypes-autocontenida-1.1.3.zip",
+      "version": "1.1.3",
+      "revision": "weekly-2026-11-26",
+      "zip_sha256": "21541e508d98238ac4ed276c8d4488391e093defca5679424818843e1a0d1e8c",
+      "matching_sources": 1531,
+      "graph": {
+        "nodes": 7622,
+        "edges": 15935,
+        "logical_sha256": "4b828e2b27527e3286747c4fc45e9e134137f557137b59460df100116bb043f8"
+      },
+      "cta_graph_path": [
+        {
+          "source": "INLINE-NOTIFICATION-001",
+          "relation": "amended_by",
+          "target": "doc:specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md",
+          "provenance": {
+            "authority": "MD_RULES_ONLY_WITH_DOCUMENTARY_QA",
+            "evidence": "EXTRACTED",
+            "sha256": "3e92c3f0e0ddc262c4b30797451c2215d7e6a0043368af279b1b7b4cded8da0f",
+            "source": "specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md",
+            "status": "DELEGATED_FOR_BUILD"
+          }
+        },
+        {
+          "source": "doc:specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md",
+          "relation": "delegates_data",
+          "target": "doc:specs/data/inline-notification.layout-isotipo.v1.0.0.json",
+          "provenance": {
+            "authority": "MD_RULES_ONLY_WITH_DOCUMENTARY_QA",
+            "evidence": "EXTRACTED",
+            "sha256": "3e92c3f0e0ddc262c4b30797451c2215d7e6a0043368af279b1b7b4cded8da0f",
+            "source": "specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md",
+            "status": "DELEGATED_FOR_BUILD"
+          }
+        }
+      ]
+    },
+    {
+      "name": "blueheart-figma-portable",
+      "file": "Blueheart-figma-portable-1.1.2.zip",
+      "version": "1.1.2",
+      "revision": "weekly-2026-11-26",
+      "zip_sha256": "bcffb54fafc67ca50636f7f4a76d93aa792129970e623276e19c5507e3dcfeb0",
+      "matching_sources": 1425,
+      "graph": {
+        "nodes": 4571,
+        "edges": 13776,
+        "logical_sha256": "33cf014baa927e527a73945499c11ce4c81d1468fd506d74916eeb9aa8532e5a"
+      },
+      "cta_graph_path": [
+        {
+          "source": "INLINE-NOTIFICATION-001",
+          "relation": "amended_by",
+          "target": "doc:specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md",
+          "provenance": {
+            "authority": "MD_RULES_ONLY_WITH_DOCUMENTARY_QA",
+            "evidence": "EXTRACTED",
+            "sha256": "3e92c3f0e0ddc262c4b30797451c2215d7e6a0043368af279b1b7b4cded8da0f",
+            "source": "specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md",
+            "status": "DELEGATED_FOR_BUILD"
+          }
+        },
+        {
+          "source": "doc:specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md",
+          "relation": "delegates_data",
+          "target": "doc:specs/data/inline-notification.layout-isotipo.v1.0.0.json",
+          "provenance": {
+            "authority": "MD_RULES_ONLY_WITH_DOCUMENTARY_QA",
+            "evidence": "EXTRACTED",
+            "sha256": "3e92c3f0e0ddc262c4b30797451c2215d7e6a0043368af279b1b7b4cded8da0f",
+            "source": "specs/components/inline-notification.layout-isotipo.amendment.v1.0.0.md",
+            "status": "DELEGATED_FOR_BUILD"
+          }
+        }
+      ]
+    }
+  ],
+  "po_handoff_sha256": "10b8e358a00bee2268f6b8775ee631e768fa37f650eab945dbdf484571329a9b",
+  "effective_tokens": 1616,
+  "handoff": {
+    "status": "PASS",
+    "reader_status": "PREPARED",
+    "source_checks": 74,
+    "states": 6,
+    "markdown_sha256": "10b8e358a00bee2268f6b8775ee631e768fa37f650eab945dbdf484571329a9b"
+  }
+}

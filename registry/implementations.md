@@ -123,3 +123,13 @@ Header 90:439 conserva el nodo 90:1138 y expone Logotipo y Altura. El set 734:19
 ## IMPL-FLOATING-ACTIONS-SELECTION-SCOPE · 2026-11-25
 
 Floating Actions 122:6 conserva General actions 122:12 e incorpora el selector 759:29 y las cuatro filas de estado del set 758:29. Dot 32:33 tiene 36 combinaciones. Web expone selection y conserva selectAll. [Figma y readback](../implementations/figma/floating-selection-2026-11-25/README.md) · [Ficha web](../implementations/web/docs/components/floating-actions.md).
+
+## Padding y separación de composición · 2026-11-26
+
+Header y App Shell, las cinco Cards de Playground, sus widgets y la composición Tabs–Table aplican [BODY-COMPOSITION-SPACING-001](../specs/foundations/body.contract.v1.0.0.md#padding-y-separación-en-composición). [Figma](../implementations/figma/composition-spacing-2026-11-26/readback.json) · [QA Figma/web](../qa/implementations/composition-spacing.v1.0.0.review.md).
+
+[Body · iconos sobre blanco](../implementations/figma/body-icons-on-white-2026-11-26/readback.json) registra dos roles visibles y su muestra. Web los muestra con Phosphor sobre bg/primary.
+
+## Inline Notification · CTA centrado · 2026-11-26
+
+Las cinco variantes y React colocan el Secondary small entre Content y Dismiss. Show CTA sigue apagado de inicio. [Lectura Figma](../implementations/figma/inline-notification-centered-cta-2026-11-26/readback.json) · [QA](../qa/implementations/inline-notification.centered-cta.v1.0.0.review.md).

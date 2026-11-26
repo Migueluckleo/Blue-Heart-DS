@@ -231,6 +231,7 @@
   --brand-subtle: var(--primitive-blue-100);
   --caution-accent: var(--primitive-caution-orange-200);
   --caution-default: var(--primitive-caution-orange-500);
+  --caution-icon-on-white: var(--primitive-caution-orange-600);
   --caution-strong: var(--primitive-caution-orange-700);
   --caution-subtle: var(--primitive-caution-orange-100);
   --color-identity-characters-beni-body: var(--characters-palette-beni-body);
@@ -455,6 +456,7 @@
   --body-color-bg-warning: var(--warning-subtle);
   --body-color-shape-brand: var(--brand-strong);
   --body-color-shape-caution: var(--caution-strong);
+  --body-color-shape-caution-on-white: var(--caution-icon-on-white);
   --body-color-shape-danger: var(--danger-default);
   --body-color-shape-disabled: var(--neutral-soft);
   --body-color-shape-information: var(--information-default);
@@ -463,6 +465,7 @@
   --body-color-shape-secondary: var(--neutral-strong);
   --body-color-shape-success: var(--positive-default);
   --body-color-shape-warning: var(--warning-strong);
+  --body-color-shape-warning-on-white: var(--warning-default);
   --body-color-stroke-brand: var(--brand-strong);
   --body-color-stroke-caution: var(--caution-strong);
   --body-color-stroke-danger: var(--danger-default);
@@ -1030,7 +1033,7 @@
   --floating-actions-spacing-surface: var(--spacing-xl);
   --header-actions-spacing-content: var(--spacing-sm);
   --header-actions-spacing-none: var(--spacing-none);
-  --header-color-bg-default: var(--neutral-base);
+  --header-color-bg-default: var(--neutral-subtle);
   --header-color-divider-default: var(--neutral-soft);
   --header-color-text-primary-default: var(--neutral-maximum);
   --company-selector-border-focus-width: var(--stroke-md);
@@ -1075,7 +1078,7 @@
   --header-size-logo-height-40: var(--size-4xl);
   --header-size-logo-height-44: var(--semantic-size-header-logo-44);
   --header-size-min-width: var(--semantic-size-1152);
-  --header-spacing-container-padding: var(--spacing-2xl);
+  --header-spacing-container-padding: var(--spacing-xl);
   --header-spacing-content: var(--spacing-sm);
   --header-spacing-none: var(--spacing-none);
   --header-spacing-padding: var(--spacing-xl);
@@ -1700,6 +1703,7 @@
   --body-color-bg-warning: var(--warning-subtle);
   --body-color-shape-brand: var(--brand-administrativo-strong);
   --body-color-shape-caution: var(--caution-strong);
+  --body-color-shape-caution-on-white: var(--caution-icon-on-white);
   --body-color-shape-danger: var(--danger-default);
   --body-color-shape-disabled: var(--neutral-soft);
   --body-color-shape-information: var(--information-default);
@@ -1708,6 +1712,7 @@
   --body-color-shape-secondary: var(--neutral-strong);
   --body-color-shape-success: var(--positive-default);
   --body-color-shape-warning: var(--warning-strong);
+  --body-color-shape-warning-on-white: var(--warning-default);
   --body-color-stroke-brand: var(--brand-administrativo-strong);
   --body-color-stroke-caution: var(--caution-strong);
   --body-color-stroke-danger: var(--danger-default);
@@ -2275,7 +2280,7 @@
   --floating-actions-spacing-surface: var(--spacing-xl);
   --header-actions-spacing-content: var(--spacing-sm);
   --header-actions-spacing-none: var(--spacing-none);
-  --header-color-bg-default: var(--neutral-base);
+  --header-color-bg-default: var(--neutral-subtle);
   --header-color-divider-default: var(--neutral-soft);
   --header-color-text-primary-default: var(--neutral-maximum);
   --company-selector-border-focus-width: var(--stroke-md);
@@ -2320,7 +2325,7 @@
   --header-size-logo-height-40: var(--size-4xl);
   --header-size-logo-height-44: var(--semantic-size-header-logo-44);
   --header-size-min-width: var(--semantic-size-1152);
-  --header-spacing-container-padding: var(--spacing-2xl);
+  --header-spacing-container-padding: var(--spacing-xl);
   --header-spacing-content: var(--spacing-sm);
   --header-spacing-none: var(--spacing-none);
   --header-spacing-padding: var(--spacing-xl);
@@ -2945,6 +2950,7 @@
   --body-color-bg-warning: var(--warning-subtle);
   --body-color-shape-brand: var(--brand-servicios-strong);
   --body-color-shape-caution: var(--caution-strong);
+  --body-color-shape-caution-on-white: var(--caution-icon-on-white);
   --body-color-shape-danger: var(--danger-default);
   --body-color-shape-disabled: var(--neutral-soft);
   --body-color-shape-information: var(--information-default);
@@ -2953,6 +2959,7 @@
   --body-color-shape-secondary: var(--neutral-strong);
   --body-color-shape-success: var(--positive-default);
   --body-color-shape-warning: var(--warning-strong);
+  --body-color-shape-warning-on-white: var(--warning-default);
   --body-color-stroke-brand: var(--brand-servicios-strong);
   --body-color-stroke-caution: var(--caution-strong);
   --body-color-stroke-danger: var(--danger-default);
@@ -3520,7 +3527,7 @@
   --floating-actions-spacing-surface: var(--spacing-xl);
   --header-actions-spacing-content: var(--spacing-sm);
   --header-actions-spacing-none: var(--spacing-none);
-  --header-color-bg-default: var(--neutral-base);
+  --header-color-bg-default: var(--neutral-subtle);
   --header-color-divider-default: var(--neutral-soft);
   --header-color-text-primary-default: var(--neutral-maximum);
   --company-selector-border-focus-width: var(--stroke-md);
@@ -3565,7 +3572,7 @@
   --header-size-logo-height-40: var(--size-4xl);
   --header-size-logo-height-44: var(--semantic-size-header-logo-44);
   --header-size-min-width: var(--semantic-size-1152);
-  --header-spacing-container-padding: var(--spacing-2xl);
+  --header-spacing-container-padding: var(--spacing-xl);
   --header-spacing-content: var(--spacing-sm);
   --header-spacing-none: var(--spacing-none);
   --header-spacing-padding: var(--spacing-xl);
@@ -4190,6 +4197,7 @@
   --body-color-bg-warning: var(--warning-subtle);
   --body-color-shape-brand: var(--brand-personas-strong);
   --body-color-shape-caution: var(--caution-strong);
+  --body-color-shape-caution-on-white: var(--caution-icon-on-white);
   --body-color-shape-danger: var(--danger-default);
   --body-color-shape-disabled: var(--neutral-soft);
   --body-color-shape-information: var(--information-default);
@@ -4198,6 +4206,7 @@
   --body-color-shape-secondary: var(--neutral-strong);
   --body-color-shape-success: var(--positive-default);
   --body-color-shape-warning: var(--warning-strong);
+  --body-color-shape-warning-on-white: var(--warning-default);
   --body-color-stroke-brand: var(--brand-personas-strong);
   --body-color-stroke-caution: var(--caution-strong);
   --body-color-stroke-danger: var(--danger-default);
@@ -4765,7 +4774,7 @@
   --floating-actions-spacing-surface: var(--spacing-xl);
   --header-actions-spacing-content: var(--spacing-sm);
   --header-actions-spacing-none: var(--spacing-none);
-  --header-color-bg-default: var(--neutral-base);
+  --header-color-bg-default: var(--neutral-subtle);
   --header-color-divider-default: var(--neutral-soft);
   --header-color-text-primary-default: var(--neutral-maximum);
   --company-selector-border-focus-width: var(--stroke-md);
@@ -4810,7 +4819,7 @@
   --header-size-logo-height-40: var(--size-4xl);
   --header-size-logo-height-44: var(--semantic-size-header-logo-44);
   --header-size-min-width: var(--semantic-size-1152);
-  --header-spacing-container-padding: var(--spacing-2xl);
+  --header-spacing-container-padding: var(--spacing-xl);
   --header-spacing-content: var(--spacing-sm);
   --header-spacing-none: var(--spacing-none);
   --header-spacing-padding: var(--spacing-xl);

@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "kind": "DELEGATED_TOKEN_DATA",
+  "contract": "FOUNDATIONS-BODY-ICONS-ON-WHITE-001",
+  "version": "1.0.0",
+  "source": "Solicitud explícita del 26 de noviembre de 2026: variantes Body de Warning y Caution para íconos sobre blanco, con tonos próximos a 500.",
+  "collections": [
+    {
+      "name": "semantic",
+      "modes": [
+        {
+          "modeId": "Value",
+          "name": "Value"
+        }
+      ],
+      "variables": [
+        {
+          "id": "body-icons-on-white:semantic:caution-icon-on-white",
+          "name": "caution-icon-on-white",
+          "description": "Caution · Icono sobre blanco. Alias a caution-orange/600 para un contraste gráfico de 4.30:1.",
+          "resolvedType": "COLOR",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--caution-icon-on-white)"
+          },
+          "valuesByMode": {
+            "Value": {
+              "type": "VARIABLE_ALIAS",
+              "id": "caution:primitive:caution-orange/600"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "component",
+      "modes": [
+        {
+          "modeId": "Contable",
+          "name": "Contable"
+        },
+        {
+          "modeId": "Administrativo",
+          "name": "Administrativo"
+        },
+        {
+          "modeId": "Servicios",
+          "name": "Servicios"
+        },
+        {
+          "modeId": "Personas",
+          "name": "Personas"
+        }
+      ],
+      "variables": [
+        {
+          "id": "body-icons-on-white:component:shape-warning-on-white",
+          "name": "body/color/shape/warning-on-white",
+          "description": "Body · Icono de Warning sobre blanco o bg/primary. Consume warning-default → amber/600; contraste gráfico 3.32:1.",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-shape-warning-on-white)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:150"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:150"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:150"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:6:150"
+            }
+          }
+        },
+        {
+          "id": "body-icons-on-white:component:shape-caution-on-white",
+          "name": "body/color/shape/caution-on-white",
+          "description": "Body · Icono de Caution sobre blanco o bg/primary. Consume caution-icon-on-white → caution-orange/600; contraste gráfico 4.30:1.",
+          "resolvedType": "COLOR",
+          "scopes": [
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--body-color-shape-caution-on-white)"
+          },
+          "valuesByMode": {
+            "Contable": {
+              "type": "VARIABLE_ALIAS",
+              "id": "body-icons-on-white:semantic:caution-icon-on-white"
+            },
+            "Administrativo": {
+              "type": "VARIABLE_ALIAS",
+              "id": "body-icons-on-white:semantic:caution-icon-on-white"
+            },
+            "Servicios": {
+              "type": "VARIABLE_ALIAS",
+              "id": "body-icons-on-white:semantic:caution-icon-on-white"
+            },
+            "Personas": {
+              "type": "VARIABLE_ALIAS",
+              "id": "body-icons-on-white:semantic:caution-icon-on-white"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

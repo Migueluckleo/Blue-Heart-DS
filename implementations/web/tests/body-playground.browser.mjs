@@ -17,11 +17,11 @@ for(const source of config.token_sources){
     }
   }
 }
-assert.equal(bodyTokens.length,61);
+assert.equal(bodyTokens.length,63);
 const bodyByName=new Map(bodyTokens.map(token=>[token.name,token]));
 const manifest=JSON.parse(await readFile(resolve(repo,'implementations/web/src/generated/tokens.manifest.json'),'utf8'));
 const policy=JSON.parse(await readFile(resolve(repo,'specs/tokens/visibility.body-only.correction.json'),'utf8')).selectorVisibilityPolicy;
-assert.equal(policy.bodyTokens.length,61);
+assert.equal(policy.bodyTokens.length,63);
 for(const token of manifest.tokens){
   const declared=token.collection==='component'&&token.name.startsWith('body/')?policy.bodyTokens.find(row=>row.name===token.name):null;
   assert.deepEqual(token.scopes,declared?.scopes??[],token.name);
@@ -32,6 +32,20 @@ function luminance(v){return ['r','g','b'].map(k=>v[k]<=.04045?v[k]/12.92:((v[k]
 function contrast(a,b){const [lo,hi]=[luminance(a),luminance(b)].sort((a,b)=>a-b);return (hi+.05)/(lo+.05);}
 const inverseToken=bodyByName.get('body/color/shape/inverse');
 assert.deepEqual(inverseToken.scopes,['SHAPE_FILL']);
+const iconsOnWhite=[
+  {role:'warning-on-white',semantic:'warning-default',primitive:'amber/600'},
+  {role:'caution-on-white',semantic:'caution-icon-on-white',primitive:'caution-orange/600'},
+];
+for(const {role,semantic,primitive} of iconsOnWhite){
+  const token=bodyByName.get('body/color/shape/'+role);
+  assert.deepEqual(token.scopes,['SHAPE_FILL']);
+  for(const mode of config.modes){
+    const alias=byId.get(token.values[mode].id);
+    assert.equal(alias.name,semantic);
+    assert.deepEqual(alias.scopes,[]);
+    assert.equal(byId.get((alias.values[mode]??alias.values.Value).id).name,primitive);
+  }
+}
 for(const mode of config.modes){
   const alias=inverseToken.values[mode];assert.equal(alias.type,'VARIABLE_ALIAS');
   const semantic=byId.get(alias.id);assert.equal(semantic.name,'neutral-base');
@@ -58,6 +72,46 @@ try{
   assert.equal(await cards.count(),5);
   assert.equal(await canvas.evaluate(el=>getComputedStyle(el).gap),'32px');
   for(const row of await page.locator('.bh-body-demo-row').all())assert.equal(await row.evaluate(el=>getComputedStyle(el).gap),'32px');
+  const composition=await page.locator('.bh-body-playground-shell').evaluate(el=>{
+    const padding=node=>{
+      const style=getComputedStyle(node);
+      return [style.paddingTop,style.paddingRight,style.paddingBottom,style.paddingLeft].map(parseFloat);
+    };
+    const rect=selector=>el.querySelector(selector).getBoundingClientRect();
+    const rows=[...el.querySelectorAll('.bh-body-demo-row')];
+    return {
+      headerPadding:padding(el.querySelector('.bh-header')),
+      headerToMain:rect('.bh-app-shell-main').top-rect('.bh-header').bottom,
+      canvasPadding:padding(el.querySelector('.bh-body-content')),
+      betweenRows:rows[1].getBoundingClientRect().top-rows[0].getBoundingClientRect().bottom,
+      betweenBlocks:rect('.bh-tabs-list').top-rows[1].getBoundingClientRect().bottom,
+      cardPadding:[...el.querySelectorAll('.bh-body-demo-card')].map(node=>({
+        padding:padding(node),stroke:getComputedStyle(node).borderTopStyle,weight:getComputedStyle(node).borderTopWidth,
+      })),
+      widgetPadding:[...el.querySelectorAll('.bh-body-widget')].map(padding),
+    };
+  });
+  assert.deepEqual(composition.headerPadding,[24,24,24,24]);
+  assert.equal(composition.headerToMain,32);
+  assert.deepEqual(composition.canvasPadding,[0,0,0,0]);
+  assert.equal(composition.betweenRows,32);
+  assert.equal(composition.betweenBlocks,32);
+  assert.deepEqual(composition.cardPadding,Array.from({length:5},()=>({padding:[24,24,24,24],stroke:'solid',weight:'1px'})));
+  assert.deepEqual(composition.widgetPadding,[[24,24,24,24],[24,24,24,24]]);
+  const tablist=page.getByRole('tablist',{name:'Estado de comprobantes'});
+  const tabGap=async ()=>{
+    const bar=await tablist.boundingBox();
+    const table=await page.getByRole('tabpanel').locator('[data-blueheart="table"]').boundingBox();
+    return table.y-bar.y-bar.height;
+  };
+  assert.equal(await tabGap(),16);
+  assert.equal(await page.getByRole('tabpanel').getByRole('row').count(),3);
+  await tablist.getByRole('tab',{name:'Por revisar'}).focus();
+  await page.keyboard.press('ArrowRight');
+  await page.keyboard.press('Enter');
+  assert.equal(await tabGap(),16);
+  assert.equal(await page.getByRole('tabpanel').getByRole('row').count(),2);
+  composition.tabsToTable=16;
   assert.deepEqual(await cards.evaluateAll(nodes=>nodes.map(n=>n.dataset.demoKind)),['summary','receivables','channels','reconciliation','review']);
   assert.equal(await page.getByRole('progressbar').count(),5);
   assert.equal(await page.locator('.bh-body-demo-card [data-blueheart=button]').count(),7);
@@ -75,6 +129,26 @@ try{
   const themes=[];
   for(const mode of ['Contable','Administrativo','Servicios','Personas']){
     await page.getByRole('combobox',{name:'Tema del Playground'}).selectOption(mode);
+    const surfaces=await page.locator('.bh-body-playground-shell').evaluate(el=>{
+      const header=getComputedStyle(el.querySelector('.bh-header'));
+      const section=getComputedStyle(el.querySelector('.bh-section-header'));
+      return {header:header.backgroundColor,body:getComputedStyle(el).backgroundColor,sectionPadding:section.padding};
+    });
+    assert.equal(surfaces.header,rgb(value(bodyByName.get('body/color/bg/emphasis'),mode)));
+    assert.notEqual(surfaces.header,surfaces.body);
+    assert.equal(surfaces.sectionPadding,'24px');
+    for(const {role} of iconsOnWhite){
+      const token=bodyByName.get('body/color/shape/'+role);
+      const icon=page.locator(`[data-color-role="${role}"] > svg`);
+      const measured=await icon.evaluate(el=>({
+        foreground:getComputedStyle(el).color,
+        background:getComputedStyle(el.closest('.bh-body-color-specimen')).backgroundColor,
+      }));
+      const white=value(bodyByName.get('body/color/bg/primary'),mode);
+      assert.deepEqual(white,{r:1,g:1,b:1,a:1});
+      assert.deepEqual(measured,{foreground:rgb(value(token,mode)),background:rgb(white)});
+      assert.ok(contrast(value(token,mode),white)>=3);
+    }
     const actual=await page.locator('main').evaluate(el=>{
       const s=getComputedStyle(el),read=token=>s.getPropertyValue('--'+token.replaceAll('/','-')).trim();
       return Object.fromEntries(['primary','secondary','brand','warning','caution','success','danger','information'].map(role=>[role,read('body/color/text/'+role)]));
@@ -151,6 +225,6 @@ try{
   assert.equal(await inverseSample.evaluate(el=>el.scrollWidth<=el.clientWidth),true);
   assert.ok(await page.locator('.bh-body-color-scroll').evaluate(el=>el.scrollWidth>el.clientWidth));
   assert.deepEqual(errors,[]);
-  const result={status:'PASS',cards:5,tokens:bodyTokens.length,colorTokens:bodyTokens.filter(t=>t.resolvedType==='COLOR').length,newColorTokens:28,visibleScopes:policy.bodyTokens.length,shapeRoles:bodyTokens.filter(t=>t.name.startsWith('body/color/shape/')).length,disabledPropertyChecks:themes.length*4,inverseAliasChain:true,metrics,themes,shellBodyWidths:widths,keyboard:true,narrowSpecimenScroll:true};
+  const result={status:'PASS',cards:5,tokens:bodyTokens.length,colorTokens:bodyTokens.filter(t=>t.resolvedType==='COLOR').length,newColorTokens:30,visibleScopes:policy.bodyTokens.length,shapeRoles:bodyTokens.filter(t=>t.name.startsWith('body/color/shape/')).length,disabledPropertyChecks:themes.length*4,onWhiteChecks:themes.length*iconsOnWhite.length,inverseAliasChain:true,metrics,composition,themes,shellBodyWidths:widths,keyboard:true,narrowSpecimenScroll:true};
   await writeFile(resolve(out,'chrome.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
 }finally{await browser?.close();server.close();}

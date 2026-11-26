@@ -1,0 +1,570 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-26",
+  "fileKey": "yZsIpXywybsPDytjolwcP4",
+  "rule": "BODY-COMPOSITION-SPACING-001",
+  "status": "PASS",
+  "headerPadding": {
+    "before": {
+      "height": 112,
+      "padding": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "aliases": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:257"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:257"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:257"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:257"
+        }
+      }
+    },
+    "planned": [
+      "90:439"
+    ],
+    "changedVariables": [
+      "VariableID:653:191",
+      "VariableID:653:192"
+    ],
+    "after": {
+      "height": 96,
+      "padding": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "aliases": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:256"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:256"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:256"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:256"
+        }
+      },
+      "scopes": [
+        [],
+        []
+      ],
+      "codeSyntax": [
+        {
+          "WEB": "var(--header-spacing-container-padding)"
+        },
+        {
+          "WEB": "var(--app-shell-spacing-none)"
+        }
+      ]
+    }
+  },
+  "headerSurface": {
+    "changedVariables": [
+      "VariableID:8:747"
+    ],
+    "affectedHeader": "90:439",
+    "before": {
+      "6:20": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:192"
+      },
+      "6:21": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:192"
+      },
+      "6:22": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:192"
+      },
+      "6:23": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:192"
+      }
+    },
+    "after": {
+      "6:20": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:193"
+      },
+      "6:21": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:193"
+      },
+      "6:22": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:193"
+      },
+      "6:23": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8:193"
+      }
+    },
+    "scopes": [],
+    "codeSyntax": {
+      "WEB": "var(--header-color-bg-default)"
+    },
+    "paint": {
+      "type": "SOLID",
+      "visible": true,
+      "opacity": 1,
+      "blendMode": "NORMAL",
+      "color": {
+        "r": 0.9450980424880981,
+        "g": 0.9607843160629272,
+        "b": 0.9764705896377563
+      },
+      "boundVariables": {
+        "color": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:747"
+        }
+      }
+    },
+    "padding": 24,
+    "height": 96
+  },
+  "appShell": {
+    "changed": [
+      "105:267",
+      "105:837",
+      "105:1265",
+      "105:1609",
+      "299:1325",
+      "299:2113",
+      "453:5308",
+      "453:5432"
+    ],
+    "rows": [
+      {
+        "id": "105:3",
+        "name": "menu=collapsed, body layout=grid",
+        "header": "105:8",
+        "headerPadding": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "headerHeight": 96,
+        "headerPaddingIds": [
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191"
+        ],
+        "content": "105:267",
+        "contentTop": 32,
+        "contentToken": "VariableID:227:65",
+        "rootGap": 0,
+        "effective": 32,
+        "main": "105:425"
+      },
+      {
+        "id": "105:4",
+        "name": "menu=expanded, body layout=grid",
+        "header": "105:717",
+        "headerPadding": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "headerHeight": 96,
+        "headerPaddingIds": [
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191"
+        ],
+        "content": "105:837",
+        "contentTop": 32,
+        "contentToken": "VariableID:227:65",
+        "rootGap": 0,
+        "effective": 32,
+        "main": "105:993"
+      },
+      {
+        "id": "105:5",
+        "name": "menu=collapsed, body layout=flex",
+        "header": "105:1145",
+        "headerPadding": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "headerHeight": 96,
+        "headerPaddingIds": [
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191"
+        ],
+        "content": "105:1265",
+        "contentTop": 32,
+        "contentToken": "VariableID:227:65",
+        "rootGap": 0,
+        "effective": 32,
+        "main": "105:1343"
+      },
+      {
+        "id": "105:6",
+        "name": "menu=expanded, body layout=flex",
+        "header": "105:1489",
+        "headerPadding": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "headerHeight": 96,
+        "headerPaddingIds": [
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191"
+        ],
+        "content": "105:1609",
+        "contentTop": 32,
+        "contentToken": "VariableID:227:65",
+        "rootGap": 0,
+        "effective": 32,
+        "main": "105:1692"
+      },
+      {
+        "id": "299:1332",
+        "name": "menu=collapsed, body layout=conversation",
+        "header": "299:1324",
+        "headerPadding": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "headerHeight": 96,
+        "headerPaddingIds": [
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191"
+        ],
+        "content": "299:1325",
+        "contentTop": 32,
+        "contentToken": "VariableID:227:65",
+        "rootGap": 0,
+        "effective": 32,
+        "main": "299:1327"
+      },
+      {
+        "id": "299:2120",
+        "name": "menu=expanded, body layout=conversation",
+        "header": "299:2112",
+        "headerPadding": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "headerHeight": 96,
+        "headerPaddingIds": [
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191"
+        ],
+        "content": "299:2113",
+        "contentTop": 32,
+        "contentToken": "VariableID:227:65",
+        "rootGap": 0,
+        "effective": 32,
+        "main": "299:2115"
+      },
+      {
+        "id": "453:5306",
+        "name": "menu=collapsed, body layout=conversation-preview",
+        "header": "453:5307",
+        "headerPadding": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "headerHeight": 96,
+        "headerPaddingIds": [
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191"
+        ],
+        "content": "453:5308",
+        "contentTop": 32,
+        "contentToken": "VariableID:227:65",
+        "rootGap": 0,
+        "effective": 32,
+        "main": "453:5310"
+      },
+      {
+        "id": "453:5430",
+        "name": "menu=expanded, body layout=conversation-preview",
+        "header": "453:5431",
+        "headerPadding": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "headerHeight": 96,
+        "headerPaddingIds": [
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191",
+          "VariableID:653:191"
+        ],
+        "content": "453:5432",
+        "contentTop": 32,
+        "contentToken": "VariableID:227:65",
+        "rootGap": 0,
+        "effective": 32,
+        "main": "453:5434"
+      }
+    ]
+  },
+  "body": {
+    "changed": [
+      "I347:2597;105:1484;356:3711",
+      "I347:2597;105:1484;356:3713",
+      "I347:2597;105:1484;356:3730",
+      "I347:2597;105:1484;356:3760",
+      "I347:2597;105:1484;356:3771",
+      "I347:2597;105:1484;356:3783",
+      "I347:2597;105:1484;356:3724",
+      "I347:2597;105:1484;356:3787"
+    ],
+    "canvas": {
+      "id": "I347:2597;105:1484;356:3711",
+      "name": "Body content · five different demos",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "gap": 32,
+      "paddingId": "VariableID:344:31",
+      "stroke": 0,
+      "fillToken": "VariableID:344:10"
+    },
+    "betweenRows": 32,
+    "rows": [
+      {
+        "frame": {
+          "id": "I347:2597;105:1484;356:3712",
+          "name": "First row",
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": 32,
+          "paddingId": "VariableID:344:31",
+          "stroke": 0
+        },
+        "gaps": [
+          32
+        ]
+      },
+      {
+        "frame": {
+          "id": "I347:2597;105:1484;356:3759",
+          "name": "Second row",
+          "pad": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gap": 32,
+          "paddingId": "VariableID:344:31",
+          "stroke": 0
+        },
+        "gaps": [
+          32,
+          32.000030517578125
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "id": "I347:2597;105:1484;356:3713",
+        "name": "Demo · Resumen operativo",
+        "pad": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "gap": 16,
+        "paddingId": "VariableID:344:27",
+        "stroke": 1,
+        "strokeToken": "VariableID:502:8",
+        "fillToken": "VariableID:344:10"
+      },
+      {
+        "id": "I347:2597;105:1484;356:3730",
+        "name": "Demo · Cobranza",
+        "pad": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "gap": 16,
+        "paddingId": "VariableID:344:27",
+        "stroke": 1,
+        "strokeToken": "VariableID:502:8",
+        "fillToken": "VariableID:344:10"
+      },
+      {
+        "id": "I347:2597;105:1484;356:3760",
+        "name": "Demo · Ventas",
+        "pad": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "gap": 16,
+        "paddingId": "VariableID:344:27",
+        "stroke": 1,
+        "strokeToken": "VariableID:502:8",
+        "fillToken": "VariableID:344:10"
+      },
+      {
+        "id": "I347:2597;105:1484;356:3771",
+        "name": "Demo · Conciliación",
+        "pad": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "gap": 16,
+        "paddingId": "VariableID:344:27",
+        "stroke": 1,
+        "strokeToken": "VariableID:502:8",
+        "fillToken": "VariableID:344:10"
+      },
+      {
+        "id": "I347:2597;105:1484;356:3783",
+        "name": "Demo · Revisión",
+        "pad": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "gap": 16,
+        "paddingId": "VariableID:344:27",
+        "stroke": 1,
+        "strokeToken": "VariableID:502:8",
+        "fillToken": "VariableID:344:10"
+      }
+    ],
+    "widgets": [
+      {
+        "id": "I347:2597;105:1484;356:3724",
+        "name": "Goal widget",
+        "pad": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "gap": 8,
+        "paddingId": "VariableID:344:27",
+        "stroke": 0,
+        "fillToken": "VariableID:344:11"
+      },
+      {
+        "id": "I347:2597;105:1484;356:3787",
+        "name": "Attention widget",
+        "pad": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "gap": 8,
+        "paddingId": "VariableID:344:27",
+        "stroke": 0,
+        "fillToken": "VariableID:344:11"
+      }
+    ],
+    "shell": {
+      "id": "347:2597",
+      "x": 6710,
+      "y": 34,
+      "width": 1440,
+      "contentTop": 32,
+      "headerPadding": 24
+    }
+  },
+  "tabsAndTable": {
+    "changed": [
+      "347:2597",
+      "I347:2597;105:1484;356:3711"
+    ],
+    "created": [
+      "834:10169",
+      "834:10171",
+      "834:10553"
+    ],
+    "width": 1272,
+    "bodyWidth": 1272,
+    "tableWidth": 1272,
+    "height": 252,
+    "instanceHeight": 1336,
+    "groupPadding": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "groupGap": 16,
+    "gapToken": "VariableID:344:28",
+    "outerGap": 32,
+    "mainComponents": [
+      [
+        "834:10171",
+        "113:204"
+      ],
+      [
+        "834:10553",
+        "142:92"
+      ]
+    ],
+    "bottom": 32
+  }
+}

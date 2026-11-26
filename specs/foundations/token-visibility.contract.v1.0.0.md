@@ -9,7 +9,7 @@ target_file_key: yZsIpXywybsPDytjolwcP4
 user_audit: NOT_REQUIRED
 human_review_policy: OPTIONAL_NON_BLOCKING
 source_data_ref: specs/tokens/visibility.body-only.correction.json
-source_data_digest_sha256: 5195b867541467cf9207f5ef307a415b88c2d69915fad4cb847f5c28372e50a5
+source_data_digest_sha256: 6540fa3b6bb794cc5b265fc20c3ffbcba0bef54becf7c80e4f4ce881da1e2c41
 data_refs: [specs/tokens/visibility.body-only.correction.json]
 dependencies: [FOUNDATIONS-BLUEHEART-VARIABLES-001, FOUNDATIONS-BODY-001]
 ---
@@ -76,4 +76,8 @@ La [enmienda Caution](caution.amendment.v1.0.0.md) amplía la política delegada
 
 ## Body disabled · 2026-11-23
 
-La [ampliación disabled](body.disabled.amendment.v1.0.0.md) agrega text/disabled, bg/disabled, stroke/disabled y shape/disabled con TEXT_FILL, FRAME_FILL/SHAPE_FILL, STROKE_COLOR y SHAPE_FILL respectivamente. Body suma 61 nombres visibles; los demás tokens siguen ocultos. Focus significa scopes por propiedad, según aclaración explícita del usuario; no introduce un foco de teclado.
+La [ampliación disabled](body.disabled.amendment.v1.0.0.md) agrega text/disabled, bg/disabled, stroke/disabled y shape/disabled con TEXT_FILL, FRAME_FILL/SHAPE_FILL, STROKE_COLOR y SHAPE_FILL respectivamente. Ese corte sumó 61 nombres visibles de Body. Focus significa scopes por propiedad, según aclaración explícita del usuario; no introduce un foco de teclado.
+
+## Iconos sobre blanco · 2026-11-26
+
+[Warning y Caution para iconos sobre blanco](body.icons-on-white.amendment.v1.0.0.md) añade dos roles exclusivamente SHAPE_FILL. Body suma 63 nombres visibles. El semántico de Caution conserva scopes vacíos.

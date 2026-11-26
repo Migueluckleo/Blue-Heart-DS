@@ -211,7 +211,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 - [input.contract.v1.0.0.md](../../../../specs/components/input.contract.v1.0.0.md) · SHA-256 `38943f5018664f4353163bc990d049e08fbbd247cf9d858a35ca2666681bddaa`.
 - [input.contextual-usage.amendment.v1.0.1.md](../../../../specs/components/input.contextual-usage.amendment.v1.0.1.md) · SHA-256 `aff1f6c99b555acb2962c04badd878776f3a3642f34dcd648b01841c90b27fdc`.
 - [inputs-dropdowns.forms.amendment.v1.0.0.md](../../../../specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md) · SHA-256 `5523f57bfd8ea56fc98cb79bd6afb257a89010935eba879bf94d112f7bcc150b`.
-- [forms.app-shell.amendment.v1.0.0.md](../../../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) · SHA-256 `0e4c9655879b4847db021522fe49bc86f8dcac095a01c63fb3d75d03b5db8b8b`.
+- [forms.app-shell.amendment.v1.0.0.md](../../../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) · SHA-256 `0981d971c7e675b226c79a31f7f64b4ed434c7133d5af86ad347a1f11177bda9`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

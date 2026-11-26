@@ -3,7 +3,7 @@
   "kind": "DELEGATED_COMPONENT_AMENDMENT",
   "contract": "INLINE-NOTIFICATION-001-LAYOUT-ISOTIPO",
   "version": "1.0.0",
-  "source": "Solicitud explícita: CTA a la derecha del Body, referencia 589:81, y reemplazo de ícono por Logos Isotipo con máximo 32×32 y proporción preservada.",
+  "source": "Solicitud explícita: CTA a la derecha del Body, referencia 589:81, y reemplazo de ícono por Logos Isotipo con máximo 32×32 y proporción preservada. Corrección del 26 de noviembre: CTA en la fila principal entre Content y Dismiss, con visibilidad opcional.",
   "target": {
     "file_key": "yZsIpXywybsPDytjolwcP4",
     "page_id": "122:49",
@@ -25,17 +25,24 @@
   "layout": {
     "body_layout": "HORIZONTAL",
     "primary_align": "MIN",
-    "counter_align": "MAX",
+    "counter_align": "CENTER",
     "gap_token": "inline-notification/spacing/content",
     "gap": 16,
     "text_width": "FILL",
     "text_height": "HUG",
     "cta_width": "HUG",
-    "cta_position": "right of body text, bottom aligned",
+    "cta_position": "between Content and Dismiss target, vertically centered in the same row",
     "wrap": "NO_WRAP",
     "min_width": 320,
     "default_cta": false,
-    "reason": "Text absorbs free space while the component gap remains 16 px. Reference Space between is retained as observed evidence, not a fixed-width requirement."
+    "reason": "Content fills the available width while the CTA and Dismiss keep their intrinsic width. The root gap only separates visible siblings.",
+    "root_layout": "HORIZONTAL",
+    "root_order": [
+      "Content",
+      "CTA",
+      "Dismiss target"
+    ],
+    "content_counter_align": "CENTER"
   },
   "indicator": {
     "default_source": "icon",

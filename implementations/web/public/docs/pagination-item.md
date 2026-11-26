@@ -100,7 +100,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 - [pagination-item.contract.v1.0.0.md](../../../../specs/components/pagination-item.contract.v1.0.0.md) · SHA-256 `3a8eff67b8f00d435faae568c0181afb267691611b845515ad19d4cf56913e85`.
 - [pagination-item.contextual-usage.amendment.v1.0.0.md](../../../../specs/components/pagination-item.contextual-usage.amendment.v1.0.0.md) · SHA-256 `68dba12802fd371d31ff6dbb247229bc33a25d76bc3570b6c8f82fdcbd171d86`.
-- [tables-pagination-selection.amendment.v1.0.0.md](../../../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) · SHA-256 `b4f3057e9a09e7f7651275e1a47afcba00a364bb8ffd02c562a440073d29955b`.
+- [tables-pagination-selection.amendment.v1.0.0.md](../../../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) · SHA-256 `581fa2d5311abea2a85ff738e0beeeb606f73d45689eaa030f0530c0c833c287`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

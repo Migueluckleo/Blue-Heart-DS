@@ -26,7 +26,7 @@ P-SLOTS REQUIRED. La raíz oficial actual comparte una propiedad Body entre las 
 
 La referencia Figma mide 1440 × 1024 y usa separaciones de 8 y 32, con las capas propias del Shell observadas como valores locales. El ancho de Main es 1272 con Sidebar de 72 o 1110 con Sidebar de 234. Figma y web consumen tokens App Shell para superficie, separación de Header e inset de Content. Los aliases conservan la superficie neutral base y las medidas de referencia. El contenido web puede crecer en el flujo del anfitrión y mantiene orden lógico de lectura. El anfitrión define desbordamiento, datos, permisos, rutas y mínimo de la pantalla.
 
-Ese espaciado corresponde al corte inicial. La [enmienda del 24 de noviembre](header-app-shell.spacing.amendment.v1.0.0.md) documenta el layout actual: Header–Content sin gap, Content con padding superior 0 e inferior/lateral 32 y filas de conversación separadas 32. Los bindings propios consumen Header/App Shell; el contenido específico de producto mantiene Body. Se conservan los valores de los tokens anteriores.
+Ese espaciado corresponde al corte inicial. La [enmienda del 24 de noviembre](header-app-shell.spacing.amendment.v1.0.0.md) rige el layout vigente: gap raíz 0, Content con 32 px superiores entre Header y el cuerpo, insets laterales e inferior de 32 y filas de conversación separadas 32. Los bindings propios consumen Header/App Shell; el contenido específico de producto mantiene Body. El inset superior es el único aporte al tramo vertical Header–cuerpo.
 
 
 El Header expuesto permite elegir Logotipo y Altura. [Selección y proporciones de marca](header.logo-sizing.amendment.v1.0.0.md).

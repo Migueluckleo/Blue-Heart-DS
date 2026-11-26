@@ -134,8 +134,8 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [header.contract.v1.0.0.md](../../../../specs/components/header.contract.v1.0.0.md) · SHA-256 `8312cd25f3c1e1e35fe88ecc649236938fd40a0f250e44541bc9ae3fb61b4c2b`.
-- [header-app-shell.spacing.amendment.v1.0.0.md](../../../../specs/components/header-app-shell.spacing.amendment.v1.0.0.md) · SHA-256 `ae33ac4bc80963d491ea867ade3b4fc0ac930be62d9f0f6d4ecb5b90fd58e818`.
+- [header.contract.v1.0.0.md](../../../../specs/components/header.contract.v1.0.0.md) · SHA-256 `14735581d7dfb335407daa7cd1ceffe38dbb4bae67ace0b1d280414ec30021e8`.
+- [header-app-shell.spacing.amendment.v1.0.0.md](../../../../specs/components/header-app-shell.spacing.amendment.v1.0.0.md) · SHA-256 `005b70afe7c6de84b7add91f908e91f77e90c58d64d0d81489c0e3d240724578`.
 - [header.logo-sizing.amendment.v1.0.0.md](../../../../specs/components/header.logo-sizing.amendment.v1.0.0.md) · SHA-256 `b90452a3f6bc89f2be79d1c42e10cd34f0a6dd5026e856abc5c5ec66d56cffe1`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.

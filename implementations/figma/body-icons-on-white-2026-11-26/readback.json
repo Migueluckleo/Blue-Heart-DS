@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-26",
+  "fileKey": "yZsIpXywybsPDytjolwcP4",
+  "status": "PASS",
+  "createdVariables": [
+    {
+      "id": "VariableID:838:2",
+      "name": "caution-icon-on-white",
+      "collection": "VariableCollectionId:6:21",
+      "modes": {
+        "6:19": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:573:7"
+        }
+      },
+      "description": "Caution · Icono sobre blanco. Alias a caution-orange/600 para un contraste gráfico de 4.30:1.",
+      "scopes": [],
+      "codeSyntax": {
+        "WEB": "var(--caution-icon-on-white)"
+      },
+      "hiddenFromPublishing": false
+    },
+    {
+      "id": "VariableID:838:3",
+      "name": "body/color/shape/warning-on-white",
+      "collection": "VariableCollectionId:6:22",
+      "modes": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:176"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:176"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:176"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:8:176"
+        }
+      },
+      "description": "Body · Icono de Warning sobre blanco o bg/primary. Consume warning-default → amber/600; contraste gráfico 3.32:1.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "codeSyntax": {
+        "WEB": "var(--body-color-shape-warning-on-white)"
+      },
+      "hiddenFromPublishing": false
+    },
+    {
+      "id": "VariableID:838:4",
+      "name": "body/color/shape/caution-on-white",
+      "collection": "VariableCollectionId:6:22",
+      "modes": {
+        "6:20": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:838:2"
+        },
+        "6:21": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:838:2"
+        },
+        "6:22": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:838:2"
+        },
+        "6:23": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:838:2"
+        }
+      },
+      "description": "Body · Icono de Caution sobre blanco o bg/primary. Consume caution-icon-on-white → caution-orange/600; contraste gráfico 4.30:1.",
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "codeSyntax": {
+        "WEB": "var(--body-color-shape-caution-on-white)"
+      },
+      "hiddenFromPublishing": false
+    }
+  ],
+  "palette": [
+    {
+      "id": "VariableID:11:4",
+      "name": "amber/600",
+      "collection": "VariableCollectionId:10:2",
+      "modes": {
+        "10:0": {
+          "r": 0.7882353067398071,
+          "g": 0.48235294222831726,
+          "b": 0,
+          "a": 1
+        }
+      },
+      "description": "Primitiva normalizada; valor y tipo preservados del inventario de origen.",
+      "scopes": [],
+      "codeSyntax": {
+        "WEB": "var(--primitive-amber-600)"
+      },
+      "hiddenFromPublishing": false
+    },
+    {
+      "id": "VariableID:573:7",
+      "name": "caution-orange/600",
+      "collection": "VariableCollectionId:10:2",
+      "modes": {
+        "10:0": {
+          "r": 0.7686274647712708,
+          "g": 0.3607843220233917,
+          "b": 0.03921568766236305,
+          "a": 1
+        }
+      },
+      "description": "Caution · Primitiva naranja 600, #C45C0A. Gama independiente de orange y la marca Servicios; escala aprobada en el chat.",
+      "scopes": [],
+      "codeSyntax": {
+        "WEB": "var(--primitive-caution-orange-600)"
+      },
+      "hiddenFromPublishing": false
+    }
+  ],
+  "bodyCount": 63,
+  "total": 1616,
+  "sample": {
+    "created": [
+      "839:10552",
+      "839:10553",
+      "839:10554",
+      "839:10555",
+      "839:10556",
+      "839:10557",
+      "839:10558"
+    ],
+    "parent": "504:9685",
+    "specimenHeight": 926,
+    "group": {
+      "id": "839:10552",
+      "name": "Iconos sobre blanco",
+      "width": 974,
+      "height": 24,
+      "gap": 32
+    },
+    "background": {
+      "type": "SOLID",
+      "visible": true,
+      "opacity": 1,
+      "blendMode": "NORMAL",
+      "color": {
+        "r": 1,
+        "g": 1,
+        "b": 1
+      },
+      "boundVariables": {
+        "color": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:344:10"
+        }
+      }
+    },
+    "shapes": [
+      {
+        "id": "839:10554",
+        "name": "Shape · Warning sobre blanco",
+        "paint": {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.7882353067398071,
+            "g": 0.48235294222831726,
+            "b": 0
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:838:3"
+            }
+          }
+        },
+        "token": "VariableID:838:3"
+      },
+      {
+        "id": "839:10557",
+        "name": "Shape · Caution sobre blanco",
+        "paint": {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.7686274647712708,
+            "g": 0.3607843220233917,
+            "b": 0.03921568766236305
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:838:4"
+            }
+          }
+        },
+        "token": "VariableID:838:4"
+      }
+    ]
+  },
+  "inventory": {
+    "cards": [
+      {
+        "id": "I347:2597;105:1484;356:3713",
+        "radius": 16,
+        "radiusToken": "VariableID:344:32",
+        "padding": 24,
+        "background": "VariableID:344:10",
+        "stroke": true,
+        "dropShadow": true
+      },
+      {
+        "id": "I347:2597;105:1484;356:3730",
+        "radius": 16,
+        "radiusToken": "VariableID:344:32",
+        "padding": 24,
+        "background": "VariableID:344:10",
+        "stroke": true,
+        "dropShadow": true
+      },
+      {
+        "id": "I347:2597;105:1484;356:3760",
+        "radius": 16,
+        "radiusToken": "VariableID:344:32",
+        "padding": 24,
+        "background": "VariableID:344:10",
+        "stroke": true,
+        "dropShadow": true
+      },
+      {
+        "id": "I347:2597;105:1484;356:3771",
+        "radius": 16,
+        "radiusToken": "VariableID:344:32",
+        "padding": 24,
+        "background": "VariableID:344:10",
+        "stroke": true,
+        "dropShadow": true
+      },
+      {
+        "id": "I347:2597;105:1484;356:3783",
+        "radius": 16,
+        "radiusToken": "VariableID:344:32",
+        "padding": 24,
+        "background": "VariableID:344:10",
+        "stroke": true,
+        "dropShadow": true
+      }
+    ],
+    "variableCount": 1616,
+    "visibleBody": 63,
+    "visibleOutsideBody": []
+  }
+}

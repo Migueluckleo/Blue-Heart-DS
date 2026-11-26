@@ -17,13 +17,66 @@
       "specs/tokens/body.v1.0.0.json",
       "specs/tokens/body.semantic-colors.v1.0.0.json",
       "specs/tokens/caution.v1.0.0.json",
-      "specs/tokens/body.disabled.v1.0.0.json"
+      "specs/tokens/body.disabled.v1.0.0.json",
+      "specs/tokens/body.icons-on-white.v1.0.0.json"
     ],
     "amendments": [
       "specs/foundations/body.semantic-colors.amendment.v1.0.0.md",
       "specs/foundations/caution.amendment.v1.0.0.md",
-      "specs/foundations/body.disabled.amendment.v1.0.0.md"
-    ]
+      "specs/foundations/body.disabled.amendment.v1.0.0.md",
+      "specs/foundations/body.icons-on-white.amendment.v1.0.0.md"
+    ],
+    "composition_spacing": {
+      "rule": "BODY-COMPOSITION-SPACING-001",
+      "contract": "specs/foundations/body.contract.v1.0.0.md",
+      "padding": {
+        "delimited_surface": {
+          "token": "body/spacing/lg",
+          "px": 24
+        },
+        "undelimited_surface": {
+          "token": "body/spacing/null",
+          "px": 0
+        },
+        "primary_card": {
+          "corner_radius_px": 16,
+          "visible_shadow_qualifies": true,
+          "qualifier": "corner_radius_or_visible_shadow",
+          "token": "body/spacing/lg",
+          "px": 24
+        }
+      },
+      "gap": {
+        "independent": {
+          "token": "body/spacing/xl",
+          "px": 32
+        },
+        "control_and_content": {
+          "token": "body/spacing/md",
+          "px": 16
+        },
+        "maximum_visible_px": 32,
+        "allow_touching": false
+      },
+      "app_shell_content_top": {
+        "token": "app-shell/spacing/content",
+        "px": 32
+      },
+      "header_interior": {
+        "token": "header/spacing/container-padding",
+        "px": 24
+      },
+      "header_surface": {
+        "token": "header/color/bg/default",
+        "semantic": "neutral-subtle"
+      }
+    },
+    "icons_on_white": {
+      "warning": "body/color/shape/warning-on-white",
+      "caution": "body/color/shape/caution-on-white",
+      "surface": "body/color/bg/primary",
+      "scope": "SHAPE_FILL"
+    }
   },
   "controls": "OFFICIAL_DS_ONLY",
   "component_tokens": "PRESERVE_INTERNAL",

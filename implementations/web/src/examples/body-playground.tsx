@@ -2,6 +2,8 @@
 
 import { useState, type CSSProperties } from 'react';
 import { EyeIcon } from '@phosphor-icons/react/dist/csr/Eye';
+import { WarningIcon } from '@phosphor-icons/react/dist/csr/Warning';
+import { WarningCircleIcon } from '@phosphor-icons/react/dist/csr/WarningCircle';
 import { AppShell } from '../components/app-shell';
 import { MenuItem } from '../components/menu-item';
 import { Button } from '../components/button';
@@ -9,10 +11,19 @@ import { IconButton } from '../components/icon-button';
 import { Badge } from '../components/badge';
 import { Checkbox } from '../components/checkbox';
 import { LinearProgress } from '../components/linear-progress';
+import { Tabs } from '../components/tabs';
+import { Table } from '../components/table';
+import { TableCell } from '../components/table-cell';
+
+const ledgerViews = [
+  {id:'pending',label:'Por revisar',records:[{folio:'FAC-001',status:'Pendiente'},{folio:'FAC-002',status:'Pendiente'}]},
+  {id:'reviewed',label:'Revisados',records:[{folio:'FAC-003',status:'Conciliado'}]},
+] as const;
 
 export function BodyPlayground() {
   const [theme,setTheme] = useState('Contable');
   const [collapsed,setCollapsed] = useState(true);
+  const [ledgerView,setLedgerView] = useState<string>('pending');
   const [matches,setMatches] = useState(true);
   const [pending,setPending] = useState(false);
   const [notice,setNotice] = useState('');
@@ -78,6 +89,13 @@ export function BodyPlayground() {
               <div className="bh-body-toolbar"><Button size="small" label="Revisar casos" onClick={()=>demo('casos pendientes')}/><Button variant="text" size="small" label="Ver todos" onClick={()=>demo('todos los casos')}/></div>
             </article>
           </div>
+          <Tabs label="Estado de comprobantes" selectedId={ledgerView} onSelectionChange={setLedgerView}
+            items={ledgerViews.map(({id,label,records})=>({id,label,
+              panel:<Table label={`Comprobantes · ${label}`}>
+                <thead><tr><TableCell item="header" label="Folio"/><TableCell item="header" label="Estado"/></tr></thead>
+                <tbody>{records.map(({folio,status})=><tr key={folio}><TableCell label={folio}/><TableCell label={status}/></tr>)}</tbody>
+              </Table>,
+            }))}/>
           {notice && <p role="status" className="bh-body-caption" id="body-demo-feedback">{notice}</p>}
         </div>
       </AppShell>
@@ -119,6 +137,16 @@ export function BodyPlayground() {
           <circle cx="40" cy="24" r="12" />
         </svg>
         <p className="bh-body-caption">Blanco para formas e iconos sobre superficies gráficas oscuras o intensas. Consume neutral-base → neutral/100 (#FFFFFF); solo SHAPE_FILL.</p>
+      </div>
+      <div className="bh-body-on-white-icons" aria-label="Iconos sobre blanco">
+        <span className="bh-body-toolbar" data-color-role="warning-on-white">
+          <WarningIcon aria-hidden size={24} weight="fill"/>
+          <span className="bh-body-caption">Shape / Warning on white</span>
+        </span>
+        <span className="bh-body-toolbar" data-color-role="caution-on-white">
+          <WarningCircleIcon aria-hidden size={24} weight="fill"/>
+          <span className="bh-body-caption">Shape / Caution on white</span>
+        </span>
       </div>
       <p className="bh-body-caption">Borde secondary es un separador decorativo. Figma comparte SHAPE_FILL para formas e iconos; los fondos de shapes también aparecen en ese selector.</p>
     </section>
