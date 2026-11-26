@@ -6,15 +6,21 @@ Familia `PAGINATION-ITEM-001` · API local 0.1.0 · categoría navegación.
 
 ## Guía semántica normativa
 
-Fuente: [guía del contrato](../../../../specs/components/pagination-item.contract.v1.0.0.md#guía-semántica-normativa).
+Fuente: [guía del contrato](../../../../specs/components/pagination-item.contextual-usage.amendment.v1.0.0.md#guía-semántica-normativa).
 
-Usa Page para navegar a un número, Icon para un extremo o movimiento adyacente y Ellipsis para indicar una secuencia omitida. GOV.UK identifica la página actual con aria-current y da nombres a los controles de dirección. El anfitrión aporta disponibilidad, nombres y destino. [GOV.UK Pagination](https://design-system.service.gov.uk/components/pagination/)
-
-| Situación | Haz | Evita |
+| Tipo | Intención | Estados fuente |
 |---|---|---|
-| Página activa | Identifica la actual con Selected y aria-current. | Marcar varias páginas como actuales. |
-| Extremo de la lista | Deshabilita solo las flechas que no tienen destino y dales un nombre. | Usar color como única explicación del extremo. |
-| Secuencia omitida | Usa Ellipsis como separador sin foco. | Convertir los puntos en un botón ambiguo. |
+| Page | Navegar a un número. | default, hover, selected, focus |
+| Icon | Primera, anterior, siguiente o última. | default, hover, focus, disabled |
+| Ellipsis | Secuencia omitida. | default |
+
+**PAGITEM-CURRENT-01.** Una sola página actual con selected y aria-current=page. Selected comunica posición, Focus comunica navegación de teclado y no se confunden. El anillo web puede acompañar a la página actual; no crea una décima variante Figma. No inventar Page disabled, Icon selected, pressed, loading o error.
+
+**PAGITEM-NAME-01.** Cada flecha nombra su dirección y el anfitrión aporta destino/disponibilidad. Deshabilitar solo destinos imposibles: primera/anterior al inicio, siguiente/última al final. Ellipsis es texto no interactivo, sin foco ni clic; no abrir un menú de páginas por inferencia de los puntos.
+
+**PAGITEM-GEOMETRY-01.** Page crece para números largos, con mínimo y alto 32 px. Icon/Ellipsis conservan 32 × 32; carets Phosphor Outline Light de 16. El foco tiene anillo exterior de 2 px con separación visible; no recortarlo al cambiar Label ni copiar el stroke interior de Table Cell. El anfitrión/touchTargets puede ampliar el objetivo táctil a 44 conservando receta visual. No prometer comodidad táctil universal por la superficie de muestra.
+
+**PAGITEM-KEYBOARD-01.** Usar Tab/Shift+Tab y Enter/Espacio de botón; no roving focus de Tabs ni selección con flechas. No atribuir una carga completada al clic. Conservar nombres, extremos y foco al cambiar lote.
 
 ## Uso sin backend
 
@@ -30,7 +36,7 @@ import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
 import { EyeIcon } from '@phosphor-icons/react/dist/csr/Eye';
 import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
 import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
-import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
+import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
 
 const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];
 
@@ -93,6 +99,8 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 ## Fuentes y límites
 
 - [pagination-item.contract.v1.0.0.md](../../../../specs/components/pagination-item.contract.v1.0.0.md) · SHA-256 `3a8eff67b8f00d435faae568c0181afb267691611b845515ad19d4cf56913e85`.
+- [pagination-item.contextual-usage.amendment.v1.0.0.md](../../../../specs/components/pagination-item.contextual-usage.amendment.v1.0.0.md) · SHA-256 `68dba12802fd371d31ff6dbb247229bc33a25d76bc3570b6c8f82fdcbd171d86`.
+- [tables-pagination-selection.amendment.v1.0.0.md](../../../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) · SHA-256 `b4f3057e9a09e7f7651275e1a47afcba00a364bb8ffd02c562a440073d29955b`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

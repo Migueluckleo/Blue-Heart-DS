@@ -20,7 +20,7 @@ Los aliases temáticos y estados se conservan. BETA mantiene su gradiente origin
 
 ## Uso sin backend
 
-Navega al destino o despliega la rama por teclado.
+Navega al destino o despliega la rama por teclado. Los ítems verticales expandidos conservan el padding propio de Figma: 24 px al inicio, 16 px al final y 12 px arriba/abajo, con gap de 16 px entre sus partes; aplica igual en default, hover y focus, activos o inactivos. Consumir menu-item/spacing/leading, content y medium sin sustituirlos por Body ni corregir el espacio con padding del Sidebar.
 
 ```tsx
 'use client';
@@ -32,7 +32,7 @@ import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
 import { EyeIcon } from '@phosphor-icons/react/dist/csr/Eye';
 import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
 import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
-import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
+import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
 
 const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];
 

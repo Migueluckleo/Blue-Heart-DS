@@ -12,6 +12,7 @@ import { verifyChatRailItem, verifyChatSidebar, verifyChatSidebarV1 } from './ch
 import { verifyStickyTable } from './table-sticky-actions.browser.mjs';
 import { verifyFloatingSelection } from './floating-selection.browser.mjs';
 import { verifyHeaderLogos } from './header-logo.browser.mjs';
+import { verifyMenuItemSpacing } from './menu-item-spacing.browser.mjs';
 
 const root = resolve('out');
 const types = {'.html':'text/html', '.js':'text/javascript', '.css':'text/css', '.woff2':'font/woff2', '.svg':'image/svg+xml'};
@@ -249,6 +250,7 @@ try {
   await page.keyboard.press('Escape');
   await demoMenu.getByRole('tooltip').waitFor({state:'hidden'});
   const documents = demoMenu.getByRole('button',{name:/Documentos/});
+  const menuItemSpacing = await verifyMenuItemSpacing(page);
   await documents.focus();
   await page.keyboard.press('Space');
   assert.equal(await documents.getAttribute('aria-expanded'),'true');
@@ -797,7 +799,7 @@ try {
     reset:true,disabled:true,navigation:true,loaderWidth:24,reducedMotion:'1.6s',
     dotGeometry:true,toggleSpace:true,toggleFocus:true,radioArrowSelection:true,radioGroupAria:true,tooltipDismissal:true,
     linearProgressRatios:true,linearProgressReducedMotion:true,checkboxMixed:true,fileUploadKeyboardAndDrop:true,
-    searchKeyboardAndClear:true,breadcrumbNavigation:true,sidebarSlotsAndKeyboard:true,sidebarSecondary:true,iconButtonPressed:true,warningContrast,
+    searchKeyboardAndClear:true,breadcrumbNavigation:true,menuItemSpacing,sidebarSlotsAndKeyboard:true,sidebarSecondary:true,iconButtonPressed:true,warningContrast,
     localAvatarImage:true,avatarOverflow:true,headerKeyboard:true,headerLogos,inputMatrix:42,inputEmptyBorderContrast,sectionHeader:true,appShell:true,pagination:true,tabs:true,tabContrasts:tabContrasts[0],
     textArea:true,textAreaBorderContrast,dropdown:true,dropdownContrasts,floatingSelection,inlineWarningContrast,
     chip:true,chipContrasts:chipContrasts[0],table:true,tableLinkHoverContrast,stickyTable,characters,conversationComposer,conversationResponse,userMessage,chat,chatSidebar,chatRailItem}));

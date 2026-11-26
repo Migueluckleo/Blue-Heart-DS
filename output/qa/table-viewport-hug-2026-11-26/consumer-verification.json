@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "ds_digest": "e02e9e6143540f70c51e95b636829143885837da97ac3bf72b10606b78afad90",
+  "catalog_manifest_sha256": "e85618456b8ebabd12e837452d4ae7e7b55ec41eee2550cf38e546e1b6ffd3f8",
+  "packages": [
+    {
+      "package": "po-prototypes-autocontenida-1.1.1.zip",
+      "version": "1.1.1",
+      "revision": "table-viewport-hug-2026-11-26",
+      "sha256": "a6c209614950ec6995d834aea6f4a5306e8b567d7976a8de22c624a69f804953",
+      "graph_sha256": "b7590cb3f1a5c21af5f0a6a39e722cab0a182230b0eff40202249e967b9c92d4",
+      "graph_nodes": 7609,
+      "graph_edges": 15905,
+      "sources": 1524,
+      "table_sha256": {
+        "specs/components/table.contract.v1.0.0.md": "2e3cb5ac310f42b0bfce7719f7d3e9db6d694bae089b901c8a5bcdcfde017fef",
+        "specs/components/table.contextual-usage.amendment.v1.0.0.md": "7c318281649129074f42ea7502124696becb7dd4d5cfbbba1b1c1604c5b28368",
+        "specs/data/table.v1.0.0.json": "849f090505bf34268e1a614e79bb80a5487f41c79ac14d405d88ff9a725f5285",
+        "specs/data/table.sticky-actions.v1.0.0.json": "36b0e5ce795f72ab16425181dffc751a0defc3b93a28952f04a45fd1ba069873",
+        "implementations/figma/table-viewport-hug-2026-11-26/readback.json": "dd9df06a017c71c57c1b67a67747c7c71007e496f6e0d89f97d6720fe73ed169"
+      }
+    },
+    {
+      "package": "Blueheart-figma-portable-1.1.0.zip",
+      "version": "1.1.0",
+      "revision": "table-viewport-hug-2026-11-26",
+      "sha256": "7d0c00c7ea0d6b2ba23f16ab24238e2083881dad4705fdd7110db82d07a19f2d",
+      "graph_sha256": "8bc57307fec32cb3924c9e966bace0698c16a47c58ca364ee681d911d257b30f",
+      "graph_nodes": 4558,
+      "graph_edges": 13727,
+      "sources": 1418,
+      "table_sha256": {
+        "specs/components/table.contract.v1.0.0.md": "2e3cb5ac310f42b0bfce7719f7d3e9db6d694bae089b901c8a5bcdcfde017fef",
+        "specs/components/table.contextual-usage.amendment.v1.0.0.md": "7c318281649129074f42ea7502124696becb7dd4d5cfbbba1b1c1604c5b28368",
+        "specs/data/table.v1.0.0.json": "849f090505bf34268e1a614e79bb80a5487f41c79ac14d405d88ff9a725f5285",
+        "specs/data/table.sticky-actions.v1.0.0.json": "36b0e5ce795f72ab16425181dffc751a0defc3b93a28952f04a45fd1ba069873",
+        "implementations/figma/table-viewport-hug-2026-11-26/readback.json": "dd9df06a017c71c57c1b67a67747c7c71007e496f6e0d89f97d6720fe73ed169"
+      }
+    }
+  ],
+  "canonical_graph": {
+    "status": "CURRENT",
+    "run": "2026-11-26-table-viewport-hug",
+    "files": 1567,
+    "nodes": 7315,
+    "edges": 14733,
+    "output_sha256": {
+      "graph.json": "1cf079bf035aa89f971b47a9c19e6ae4eada81559ac650cd241cd7067b1615d7",
+      "graph.html": "da498efd0d9070f044cdcb35edef36e489f21d2f2fed29b0fa941306ef5cddb1",
+      "GRAPH_REPORT.md": "1a2487288db3c3f31eb70ef2dff3b8447030fe701b01db112294c378ae8a3990",
+      "manifest.json": "9e9c387a27a8daabee60334cc532741d1d9e586a3764a24fc70747ca80e7d0c4",
+      ".graphify_health.json": "966ae5bdcd9c1acea2b36f3a5690efe60338e2ed9d29e6387b8e119e42739a12",
+      ".graphify_labels.json": "b79138fa3f704650d307728886595ee8556c6b393ea6472678056119b845b129",
+      ".graphify_labels.json.sig": "a7ba7e27881ea9c4eac6223de39ca9ccdd90f1bc46837f33300e5d2a66d92e3c",
+      "cost.json": "ed191eb57bd28cf44220d40bdcfd7fe366e859100ec076dd638df0e4f9636f6b"
+    }
+  },
+  "catalog_consumption_graph_status": "CURRENT",
+  "final_handoff": {
+    "status": "PASS",
+    "portable_reader_status": "PREPARED",
+    "source_checks": 83,
+    "manifest": "05-HISTORICO/ENTREGAS/po-table-viewport-hug-2026-11-26/validation/table/final/manifest.json",
+    "manifest_sha256": "743fe7cd40f94c11eb63d2373125e4033ecc5c3f6d2024bf590586a702255791",
+    "html_sha256": "0256b289592a4bc85617fcbb65f1d08e082f0164185a8ffb32550323374ee697",
+    "handoff_sha256": "6c7894852aa0c1652c93c44f088d213d2f7ce97fd903de2cc24a8353fe7fa3c6",
+    "po_qa": {
+      "integrity": "PASS",
+      "generation": "PASS",
+      "ds_structure": "STRUCTURAL_MATCH",
+      "semantic": "REVIEWED_WITH_LIMITS",
+      "functionality": "PASS",
+      "visual": "REVIEWED_WITH_LIMITS",
+      "accessibility": "PARTIAL_TESTED",
+      "genspark_live": "NOT_EXECUTED"
+    }
+  },
+  "distribution_access_verified": true,
+  "installed_package_manifests_preserved": true
+}

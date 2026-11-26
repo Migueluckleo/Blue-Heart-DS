@@ -6,15 +6,36 @@ Familia `TABLE-CELL-001` · API local 0.1.0 · categoría data.
 
 ## Guía semántica normativa
 
-Fuente: [guía del contrato](../../../../specs/components/table-cell.contract.v1.0.0.md#guía-semántica-normativa).
+Fuente: [guía del contrato](../../../../specs/components/table-cell.contextual-usage.amendment.v1.0.0.md#guía-semántica-normativa).
 
-Usa una celda de encabezado para nombrar su columna y una celda de datos para el valor de la fila. Nombra los controles por su efecto y contexto. La guía WAI reserva el patrón de tabla para datos tabulares y recomienda el elemento HTML nativo. Carbon mantiene la densidad consistente entre encabezado y cuerpo. [W3C WAI Table](https://www.w3.org/WAI/ARIA/apg/patterns/table/) · [Carbon Data table](https://www.carbondesignsystem.com/building-blocks/core/components/data-table/guidelines)
-
-| Situación | Haz | Evita |
+| Tipo o hijo | Cuándo usar | Evita |
 |---|---|---|
-| Encabezado de columna | Usa un título breve y scope col. | Dar a la celda un título visual sin relación semántica. |
-| Una acción de fila | Da a PencilSimple un nombre que incluya el elemento afectado. | Usar un glyph sin nombre o atribuir la acción a toda la fila. |
-| Valor de captura | Muestra el texto y el estado del campo junto al control real del anfitrión. | Atribuir validación o persistencia al estado visual. |
+| Cabecera | Nombre de columna, unidad y scope=col; default, Checkbox o Toggle según intención. | Título visual sin relación semántica; Toggle como Seleccionar todo. |
+| Default | Valor de consulta. Avatar solo si ayuda a reconocer identidad. | Avatar decorativo en folios/importes. |
+| Link | Identificador con destino real, por ejemplo Abrir F-1041. | Texto azul sin destino o clic sobre toda la fila. |
+| Checkbox | Incluir el registro en una operación posterior; nombre por ID. | Interpretar selección como preferencia persistida. |
+| Action | Ver, Editar o Eliminar ese registro. | Extender la acción de una celda a toda la selección. |
+| Toggle | Configuración o disponibilidad de efecto inmediato soportado. | Selección de registros o simular persistencia con color. |
+| Badge | Estado o atributo confirmado y consultable. | Foco, selección o edición inferida del Pencil decorativo. |
+| Capture | Representación del valor/estado visual de captura. | Considerarla Input/Dropdown operativo, validación o grid. |
+
+**CELL-LAYOUT-01.** Cabecera y cuerpo conservan 40 px, Manrope 14/20, cuerpo Regular y cabecera SemiBold. No hay eje size/small/medium/large. Label es una línea con elipsis; el anfitrión decide anchos y acceso al valor completo. Hijos oficiales mantienen receta/tamaño propios. Para números, usar contenido compuesto a la derecha desde el anfitrión; no existe prop align. No sobreescribir internos .bh-* ni cambiar tokens para fabricar otra densidad.
+
+**CELL-CONTENT-01.** Cero es un valor real; Sin dato expresa ausencia. Fechas, separadores, moneda y unidades conservan el contexto del producto. Label del padre no renombra Badge, Checkbox, Toggle o Avatar: sus propiedades pertenecen al hijo. La horizontal está visible por defecto en web y la vertical oculta; los separadores facilitan comparación, no añaden jerarquías o estados.
+
+**CELL-ICON-01.** Los iconos izquierdo/derecho de acompañamiento son decorativos de 20 px; default oculta ambos. Mostrar solo los que aportan significado. CaretDown no abre un menú ni ordena por sí solo. El enlace web kind=link necesita href; sin él queda texto. El subrayado web y la evidencia Figma conservan sus alcances.
+
+**CELL-STATE-01.** El estado visual del padre y el valor del control hijo son independientes. Selected de Cell no selecciona una casilla ni añade un ID. Hover no reemplaza Focus. El stroke interior de Focus es de 2 px; `state=focus` no vuelve enfocada ni tabulable una celda. Cuando se compone un control real, su foco conserva la receta oficial. No inventar disabled, error, loading o success del padre.
+
+| Matriz existente | Estados permitidos |
+|---|---|
+| Cuerpo default/link/checkbox/action/toggle/badge | default, selected, hover, focus |
+| Cabecera default/checkbox/toggle | default, focus |
+| Capture off/on | default, selected, hover, focus |
+
+**CELL-CAPTURE-01.** Capture off presenta texto/placeholder; on presenta un valor capturado. La superficie actual no es input/select ni editor de celda: no hay búsqueda, validación, captura numérica/fecha ni confirmación por Enter implícitas. Para edición real, el anfitrión compone controles oficiales y define activación, confirmar/cancelar, errores, ancho/alto y recuperación; no sustituir su anatomía por un Dropdown sin esa decisión.
+
+**CELL-ACTION-01.** Dar nombres accesibles con verbo y objeto: Ver F-1041, Editar F-1041. Las acciones siguen afectando solo esa fila aunque haya multiselección. El auxiliar histórico usa glyphs Phosphor de 20 px y swaps acotados; DotsThree no crea menú automático ni acredita objetivo táctil de 44 px. Sticky usa otra composición: superficie Cell más Icon Button ghost/small oficial de 32 px. Confirmaciones y recuperación pertenecen al flujo.
 
 ## Uso sin backend
 
@@ -30,7 +51,7 @@ import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
 import { EyeIcon } from '@phosphor-icons/react/dist/csr/Eye';
 import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
 import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
-import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
+import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
 
 const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];
 
@@ -39,7 +60,7 @@ export function TableCellExample() {
   const [edited, setEdited] = useState(false);
   const [enabled, setEnabled] = useState(true);
   return <div className="grid gap-3">
-    <Table label="Ejemplos de celdas de comprobantes" viewportHeight={88} columnWidths={[64,154,190,100,110,100]}>
+    <Table label="Ejemplos de celdas de comprobantes" columnWidths={[64,154,190,100,110,100]}>
       <thead><tr>
         <TableCell item="header" label="Selección"/>
         <TableCell item="header" label="Comprobante"/>
@@ -125,6 +146,8 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 ## Fuentes y límites
 
 - [table-cell.contract.v1.0.0.md](../../../../specs/components/table-cell.contract.v1.0.0.md) · SHA-256 `9c8ff9ef9633413c2addd283b4022c88a0014db013a71f00828036660b595d99`.
+- [table-cell.contextual-usage.amendment.v1.0.0.md](../../../../specs/components/table-cell.contextual-usage.amendment.v1.0.0.md) · SHA-256 `899845f109996db007bc92f664e2cf1e40b494dc02798c7c73af6a5702e3b35d`.
+- [tables-pagination-selection.amendment.v1.0.0.md](../../../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) · SHA-256 `b4f3057e9a09e7f7651275e1a47afcba00a364bb8ffd02c562a440073d29955b`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

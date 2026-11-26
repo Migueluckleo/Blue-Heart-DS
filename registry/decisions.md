@@ -108,3 +108,7 @@ Logotipo y Altura son selecciones independientes en Header y App Shell. Se permi
 ## DEC-FLOATING-ACTIONS-SELECTION-SCOPE-001 · 2026-11-25
 
 La página actual y el histórico activo son alcances distintos. El módulo aporta disponibilidad, conteo y contexto y aplica la selección. El DS aporta botón, menú y Dot proporcional al texto con 8 px a cada lado para dos o más cifras. [Enmienda](../specs/components/floating-actions.selection-scope.amendment.v1.0.0.md).
+
+## Tablas, paginación y Floating Actions · Uso contextual · 2026-11-25
+
+DEC-TABLES-CONTEXTUAL-USAGE-001 · Adopta el PDF vigente: comparación por ID, Default con contador a la derecha explícito, Floating Actions 2+/centro de pantalla/32 px, selector página-histórico y X como Limpiar selección. Conserva anatomía, API y tokens; no instala ni publica.

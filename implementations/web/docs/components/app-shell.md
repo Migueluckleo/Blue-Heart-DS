@@ -187,6 +187,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 - [tabs.local-navigation.amendment.v1.0.0.md](../../../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) · SHA-256 `b297a1444e4ffcb17456d8ebcbba6bcb58b8349dad25038010b852b724ab39c0`.
 - [header-app-shell.spacing.amendment.v1.0.0.md](../../../../specs/components/header-app-shell.spacing.amendment.v1.0.0.md) · SHA-256 `ae33ac4bc80963d491ea867ade3b4fc0ac930be62d9f0f6d4ecb5b90fd58e818`.
 - [header.logo-sizing.amendment.v1.0.0.md](../../../../specs/components/header.logo-sizing.amendment.v1.0.0.md) · SHA-256 `b90452a3f6bc89f2be79d1c42e10cd34f0a6dd5026e856abc5c5ec66d56cffe1`.
+- [tables-pagination-selection.amendment.v1.0.0.md](../../../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) · SHA-256 `b4f3057e9a09e7f7651275e1a47afcba00a364bb8ffd02c562a440073d29955b`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

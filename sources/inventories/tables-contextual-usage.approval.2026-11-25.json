@@ -1,0 +1,34 @@
+{
+  "source_id": "SRC-TABLES-CONTEXTUAL-USAGE-2026-11-25",
+  "status": "APPROVED",
+  "date": "2026-11-25",
+  "user_decision": "Bien hazlo MD",
+  "context": "Approval follows regenerated 29-page PDF with current selection-scope menu and wide Dot. Earlier delivery instruction preserves same PDF filename/version.",
+  "explicit_rules": [
+    "Default record count right of pagination",
+    "Floating Actions from 2 selected records, viewport-centered and 32px from bottom"
+  ],
+  "adopted_review_proposals": [
+    "X clears selection and restores stable table focus in this pattern",
+    "Local fixture preserves selection across pages in same context; page command replaces selection with current page IDs"
+  ],
+  "pdf": {
+    "workspace_path": "02-DOCUMENTACION/GENERADOS/pdf/blueheart-tablas-paginacion-guia-contextual-propuesta-v0.1.pdf",
+    "sha256": "9c4dfda1e2bd93284d9beabd4b85fdac1adf2d3c9cfda54524a74ce67e79489d",
+    "pages": 29
+  },
+  "documents": {
+    "specs/components/table.contextual-usage.amendment.v1.0.0.md": "c2ec9c0b45fc717c3b6e48556f978edffe6bcc81a3c9df1cafada676b50d750f",
+    "specs/components/table-cell.contextual-usage.amendment.v1.0.0.md": "899845f109996db007bc92f664e2cf1e40b494dc02798c7c73af6a5702e3b35d",
+    "specs/components/pagination.contextual-usage.amendment.v1.0.0.md": "834c79f14065070f6c3beb361c92ccf91450bda3f57800e5d8fa2f9be20dfa2b",
+    "specs/components/pagination-item.contextual-usage.amendment.v1.0.0.md": "68dba12802fd371d31ff6dbb247229bc33a25d76bc3570b6c8f82fdcbd171d86",
+    "specs/components/floating-actions.contextual-usage.amendment.v1.0.0.md": "83e467d077e3a39994d0ecabb080d60339fcc42dd3ca191bf0c47da42cd410e5",
+    "specs/patterns/tables-pagination-selection.amendment.v1.0.0.md": "b4f3057e9a09e7f7651275e1a47afcba00a364bb8ffd02c562a440073d29955b"
+  },
+  "review_evidence": {
+    "workspace_path": "06-SOPORTE/TEMPORALES/pdfs/tables-pagination-v0.1/qa-final.json",
+    "sha256": "590f7a87f162e92c4b28b563301c67700cf4d20edb2c13a46932f7415abb3cb6",
+    "scope": "57 local fixture checks and five geometry cases from PDF production; not a new execution in this Markdown task"
+  },
+  "scope": "Contextual Markdown and consumption integration. No new tokens, variants, API, Figma write, installation or publication."
+}

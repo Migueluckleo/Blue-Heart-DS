@@ -79,7 +79,7 @@ v1.0.0 · DELEGATED_FOR_BUILD. [Contrato](../specs/components/chat.contract.v1.0
 
 ## Table · Sticky Actions · 2026-11-17
 
-[Table](../specs/components/table.contract.v1.0.0.md) añade actions=sticky y stickyActions=true, con Ghost oficiales y sombra lateral. Conserva el contrato 1.0.0 y Default predeterminado.
+[Table](../specs/components/table.contract.v1.0.0.md) añade actions=sticky y stickyActions=true, con Ghost oficiales y sombra lateral. Conserva el contrato 1.0.0 y Default predeterminado. En ambas variantes, Viewport ajusta su altura a la cabecera y las filas. En web, `viewportHeight` es un máximo opcional.
 
 ## Body · Contenido de producto · 2026-11-17
 
@@ -186,3 +186,7 @@ La [política vigente](../specs/foundations/token-visibility.contract.v1.0.0.md)
 ## Floating Actions y Dot · Alcance de selección · 2026-11-25
 
 [FLOATING-ACTIONS-001-SELECTION-SCOPE](../specs/components/floating-actions.selection-scope.amendment.v1.0.0.md) y [DOT-001-COUNT-MULTI](../specs/components/dot.count-multi.amendment.v1.0.0.md), v1.0.0 DELEGATED_FOR_BUILD. El menú elige la página actual o todo el histórico seleccionado. Dot admite ocho combinaciones de ancho expandido y conserva las de presencia. [Datos](../specs/data/floating-actions.selection-scope.v1.0.0.json) · [QA documental](../qa/contracts/floating-actions.selection-scope.v1.0.0.review.md).
+
+## Tablas, paginación y Floating Actions · Uso contextual · 2026-11-25
+
+Cinco guías APPROVED de [Table](../specs/components/table.contextual-usage.amendment.v1.0.0.md), [Cell/Capture](../specs/components/table-cell.contextual-usage.amendment.v1.0.0.md), [Pagination](../specs/components/pagination.contextual-usage.amendment.v1.0.0.md), [item](../specs/components/pagination-item.contextual-usage.amendment.v1.0.0.md) y [Floating Actions](../specs/components/floating-actions.contextual-usage.amendment.v1.0.0.md), con [siete patrones](../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md). El contador Default se prescribe a la derecha sin cambiar la API implícita; X adopta limpieza de selección en este patrón.

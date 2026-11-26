@@ -707,7 +707,7 @@ export function TableCellExample() {
   const [edited, setEdited] = useState(false);
   const [enabled, setEnabled] = useState(true);
   return <div className="grid gap-3">
-    <Table label="Ejemplos de celdas de comprobantes" viewportHeight={88} columnWidths={[64,154,190,100,110,100]}>
+    <Table label="Ejemplos de celdas de comprobantes" columnWidths={[64,154,190,100,110,100]}>
       <thead><tr>
         <TableCell item="header" label="Selección"/>
         <TableCell item="header" label="Comprobante"/>

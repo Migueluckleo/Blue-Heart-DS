@@ -91,7 +91,7 @@ import { PencilSimpleIcon } from '@phosphor-icons/react/dist/csr/PencilSimple';
 import { EyeIcon } from '@phosphor-icons/react/dist/csr/Eye';
 import { QuestionIcon } from '@phosphor-icons/react/dist/csr/Question';
 import { CheckCircleIcon } from '@phosphor-icons/react/dist/csr/CheckCircle';
-import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, FloatingActions, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
+import { Button, buttonSizes, buttonVariants, Dot, Radio, RadioGroup, Toggle, Tooltip, LinearProgress, Checkbox, FileUpload, Search, BreadcrumbItem, Breadcrumb, MenuItem, TopBar, IconButton, Sidebar, Badge, Avatar, AvatarGroup, CompanySelector, UserSelector, HeaderActions, Header, Input, SectionHeader, AppShell, AppShellGridItem, Chat, ChatSidebar, ChatSidebarSection, ChatHistoryItem, UserMessage, type ChatSidebarProps, Pagination, PaginationItem, Tabs, TextArea, DropdownField, InlineNotification, Chip, Table, TableCell, TableCaptureCell, Stepper, type StepperOrientation, type DropdownEntry, type AppShellBodyLayout, type InputSize, type InputStatus, type CheckboxSelection, type FileUploadState, Loader, loaderColors, loaderSizes, type ButtonState } from '@/index';
 
 const states: ButtonState[] = ['default', 'hover', 'pressed', 'focus', 'loading', 'disabled'];
 
@@ -162,6 +162,7 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 - [checkbox.contextual-usage.amendment.v1.0.1.md](../../../../specs/components/checkbox.contextual-usage.amendment.v1.0.1.md) · SHA-256 `25f0ae5152cb7fe3496b5720521d1408537af4e77817ead61aad2c30bdd11019`.
 - [selection-controls.decisions.amendment.v1.0.0.md](../../../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md) · SHA-256 `475cbf939a69291170f79eece14cf88848d0fd4bec4268de9c7f5b9a6486dcbc`.
 - [forms.app-shell.amendment.v1.0.0.md](../../../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) · SHA-256 `0e4c9655879b4847db021522fe49bc86f8dcac095a01c63fb3d75d03b5db8b8b`.
+- [tables-pagination-selection.amendment.v1.0.0.md](../../../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) · SHA-256 `b4f3057e9a09e7f7651275e1a47afcba00a364bb8ffd02c562a440073d29955b`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

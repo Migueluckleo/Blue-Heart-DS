@@ -79,5 +79,46 @@ export async function verifyStickyTable(page) {
   assert.equal(await root.getAttribute('data-sticky-actions'),'false');
   assert.equal(await table.getByRole('columnheader').count(),4);
   assert.equal(await table.getByRole('button').count(),0);
-  return {positions:3,verticalAlignment:true,mobileWidth:320,ghostButtons:actionCount,keyboard:true,themes};
+  const uncappedTable = page.getByRole('table',{name:'Ejemplos de celdas de comprobantes'});
+  const uncapped = await uncappedTable.evaluate(el=>{
+    const viewport = el.parentElement;
+    return {height:viewport.clientHeight,contentHeight:el.offsetHeight,maxHeight:getComputedStyle(viewport).maxHeight};
+  });
+  assert.equal(uncapped.maxHeight,'none');
+  assert.equal(uncapped.height,uncapped.contentHeight);
+
+  const measureHeight = () => table.evaluate(el=>{
+    const viewport = el.parentElement;
+    const pagination = viewport.nextElementSibling;
+    return {
+      rows:el.tBodies[0].rows.length,
+      height:viewport.clientHeight,
+      scrollHeight:viewport.scrollHeight,
+      contentHeight:el.offsetHeight,
+      paginationGap:pagination.getBoundingClientRect().top-viewport.getBoundingClientRect().bottom,
+    };
+  });
+  const capped = await measureHeight();
+  assert.ok(capped.height<capped.contentHeight);
+  const remove = page.getByRole('button',{name:'Retirar primera fila'});
+  for (let index = 0; index < 12; index++) await remove.click();
+  assert.equal(await remove.isDisabled(),true);
+  const empty = await measureHeight();
+  assert.equal(empty.rows,0);
+  assert.equal(empty.height,empty.contentHeight);
+  assert.equal(empty.height,empty.scrollHeight);
+  assert.equal(empty.paginationGap,0);
+
+  await page.getByRole('button',{name:'Agregar fila de muestra'}).click();
+  await toggle.focus();
+  await page.keyboard.press('Space');
+  const single = await measureHeight();
+  assert.equal(single.rows,1);
+  assert.equal(single.height,single.contentHeight);
+  assert.equal(single.height,single.scrollHeight);
+  assert.ok(single.height>empty.height && single.height<capped.height);
+  assert.equal(single.paginationGap,0);
+  assert.equal(await table.getByRole('button').count(),2);
+  return {positions:3,verticalAlignment:true,mobileWidth:320,ghostButtons:actionCount,keyboard:true,themes,
+    viewportHeight:{uncapped,capped,empty,single}};
 }

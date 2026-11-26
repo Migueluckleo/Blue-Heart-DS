@@ -20,7 +20,7 @@ Los aliases temáticos y estados se conservan. BETA mantiene su gradiente origin
 
 ## Uso sin backend
 
-Navega al destino o despliega la rama por teclado.
+Navega al destino o despliega la rama por teclado. Los ítems verticales expandidos conservan el padding propio de Figma: 24 px al inicio, 16 px al final y 12 px arriba/abajo, con gap de 16 px entre sus partes; aplica igual en default, hover y focus, activos o inactivos. Consumir menu-item/spacing/leading, content y medium sin sustituirlos por Body ni corregir el espacio con padding del Sidebar.
 
 ```tsx
 'use client';

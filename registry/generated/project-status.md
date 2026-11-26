@@ -6,56 +6,57 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 
 | Familia | Base | Estado documental | Enmiendas | Evidencia de implementación |
 |---|---|---|---|---|
-| APP-SHELL-001 | [1.0.0](../../specs/components/app-shell.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 2 | 1 registros por alcance |
+| APP-SHELL-001 | [1.0.0](../../specs/components/app-shell.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 6 | 1 registros por alcance |
 | AVATAR-001 | [1.0.0](../../specs/components/avatar.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | AVATAR-GROUP-001 | [1.0.0](../../specs/components/avatar-group.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | BADGE-001 | [1.0.0](../../specs/components/badge.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 2 | 0 registros por alcance |
 | BREADCRUMB-001 | [1.0.0](../../specs/components/breadcrumb.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | BREADCRUMB-ITEM-001 | [1.0.0](../../specs/components/breadcrumb-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| BUTTON-001 | [1.0.0](../../specs/components/buttons.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 4 | 1 registros por alcance |
+| BUTTON-001 | [1.0.0](../../specs/components/buttons.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 6 | 1 registros por alcance |
 | CHARACTERS-001 | [1.0.0](../../specs/components/characters.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | CHAT-001 | [1.0.0](../../specs/components/chat.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | CHAT-DOCUMENT-VIEWER-001 | [1.0.0](../../specs/components/chat-document-viewer.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 3 registros por alcance |
-| CHAT-HISTORY-ITEM-001 | [1.0.0](../../specs/components/chat-history-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| CHAT-HISTORY-ITEM-001 | [1.0.0](../../specs/components/chat-history-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 0 registros por alcance |
 | CHAT-PLAN-USAGE-001 | [1.0.0](../../specs/components/chat-plan-usage.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| CHAT-SIDEBAR-001 | [1.0.0](../../specs/components/chat-sidebar.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
+| CHAT-RAIL-ITEM-001 | [1.0.0](../../specs/components/chat-rail-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| CHAT-SIDEBAR-001 | [1.0.0](../../specs/components/chat-sidebar.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 2 | 0 registros por alcance |
 | CHAT-SIDEBAR-SECTION-001 | [1.0.0](../../specs/components/chat-sidebar-section.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | CHAT-TOOL-ITEM-001 | [1.0.0](../../specs/components/chat-tool-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| CHECKBOX-001 | [1.0.0](../../specs/components/checkbox.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 3 | 1 registros por alcance |
-| CHIP-001 | [1.0.0](../../specs/components/chip.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 2 | 0 registros por alcance |
+| CHECKBOX-001 | [1.0.0](../../specs/components/checkbox.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 4 | 1 registros por alcance |
+| CHIP-001 | [1.0.0](../../specs/components/chip.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 4 | 0 registros por alcance |
 | COMPANY-SELECTOR-001 | [1.0.0](../../specs/components/company-selector.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | CONVERSATION-001 | [1.0.0](../../specs/components/conversation-composer.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| CONVERSATION-RESPONSE-001 | [1.0.0](../../specs/components/conversation-response.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| DOT-001 | [1.0.0](../../specs/components/dot.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| CONVERSATION-RESPONSE-001 | [1.0.0](../../specs/components/conversation-response.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 0 registros por alcance |
+| DOT-001 | [1.0.0](../../specs/components/dot.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 3 | 0 registros por alcance |
 | DROPDOWN-ITEM-001 | [1.0.0](../../specs/components/dropdown-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 3 | 0 registros por alcance |
-| DROPDOWN-MENU-001 | [1.0.0](../../specs/components/dropdown-menu.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 3 | 0 registros por alcance |
+| DROPDOWN-MENU-001 | [1.0.0](../../specs/components/dropdown-menu.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 4 | 0 registros por alcance |
 | FILE-UPLOAD-001 | [1.0.0](../../specs/components/file-upload.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| FLOATING-ACTIONS-001 | [1.0.0](../../specs/components/floating-actions.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| FLOATING-ACTIONS-001 | [1.0.0](../../specs/components/floating-actions.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 3 | 0 registros por alcance |
 | FOUNDATIONS-BLUEHEART-VARIABLES-001 | [0.1.2](../../specs/foundations/blueheart-variables.contract.v0.1.2.md) | DELEGATED_FOR_BUILD | 1 | 3 registros por alcance |
 | FOUNDATIONS-BODY-001 | [1.0.0](../../specs/foundations/body.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
 | FOUNDATIONS-PRODUCT-CONSUMPTION-001 | [1.0.0](../../specs/foundations/product-consumption.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | FOUNDATIONS-TOKEN-VISIBILITY-001 | [1.0.0](../../specs/foundations/token-visibility.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| HEADER-001 | [1.0.0](../../specs/components/header.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| HEADER-001 | [1.0.0](../../specs/components/header.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 2 | 0 registros por alcance |
 | HEADER-ACTIONS-001 | [1.0.0](../../specs/components/header-actions.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| ICON-BUTTON-001 | [1.0.0](../../specs/components/icon-button.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| ICON-BUTTON-001 | [1.0.0](../../specs/components/icon-button.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 0 registros por alcance |
 | INLINE-NOTIFICATION-001 | [1.0.0](../../specs/components/inline-notification.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 0 registros por alcance |
 | INPUT-001 | [1.0.0](../../specs/components/input.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 3 | 0 registros por alcance |
 | LINEAR-PROGRESS-001 | [1.0.0](../../specs/components/linear-progress.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
 | LOADER-001 | [1.0.0](../../specs/components/loader.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 1 registros por alcance |
-| LOGOS-001 | [1.0.0](../../specs/components/logos.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
+| LOGOS-001 | [1.0.0](../../specs/components/logos.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 1 registros por alcance |
 | MENU-ITEM-001 | [1.0.0](../../specs/components/menu-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| PAGINATION-001 | [1.0.0](../../specs/components/pagination.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 2 registros por alcance |
-| PAGINATION-ITEM-001 | [1.0.0](../../specs/components/pagination-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| RADIO-001 | [1.0.0](../../specs/components/radio.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 3 | 0 registros por alcance |
-| RADIO-GROUP-001 | [1.0.0](../../specs/components/radio-group.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 3 | 0 registros por alcance |
+| PAGINATION-001 | [1.0.0](../../specs/components/pagination.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 2 | 2 registros por alcance |
+| PAGINATION-ITEM-001 | [1.0.0](../../specs/components/pagination-item.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 2 | 0 registros por alcance |
+| RADIO-001 | [1.0.0](../../specs/components/radio.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 4 | 0 registros por alcance |
+| RADIO-GROUP-001 | [1.0.0](../../specs/components/radio-group.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 4 | 0 registros por alcance |
 | SEARCH-001 | [1.0.0](../../specs/components/search.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| SECTION-HEADER-001 | [1.0.0](../../specs/components/section-header.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 1 registros por alcance |
+| SECTION-HEADER-001 | [1.0.0](../../specs/components/section-header.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 3 | 1 registros por alcance |
 | SIDEBAR-001 | [1.0.0](../../specs/components/sidebar.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 2 registros por alcance |
-| STEPPER-001 | [1.0.0](../../specs/components/stepper.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 0 registros por alcance |
-| TAB-001 | [1.0.0](../../specs/components/tab.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| TABLE-001 | [1.0.0](../../specs/components/table.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 1 registros por alcance |
-| TABLE-CELL-001 | [1.0.0](../../specs/components/table-cell.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
-| TABS-001 | [1.0.0](../../specs/components/tabs.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
+| STEPPER-001 | [1.0.0](../../specs/components/stepper.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 2 | 0 registros por alcance |
+| TAB-001 | [1.0.0](../../specs/components/tab.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 2 | 0 registros por alcance |
+| TABLE-001 | [1.0.0](../../specs/components/table.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 2 | 1 registros por alcance |
+| TABLE-CELL-001 | [1.0.0](../../specs/components/table-cell.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 2 | 0 registros por alcance |
+| TABS-001 | [1.0.0](../../specs/components/tabs.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 3 | 0 registros por alcance |
 | TEXT-AREA-001 | [1.0.0](../../specs/components/text-area.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 1 | 0 registros por alcance |
 | TOGGLE-001 | [1.0.0](../../specs/components/toggle.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 3 | 0 registros por alcance |
 | TOOLTIP-001 | [1.0.0](../../specs/components/tooltip.contract.v1.0.0.md) | DELEGATED_FOR_BUILD | 0 | 0 registros por alcance |
@@ -68,14 +69,19 @@ Los estados de QA son evidencia declarada por documento, sin nueva lectura Figma
 Base: [specs/components/app-shell.contract.v1.0.0.md](../../specs/components/app-shell.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/app-shell.contract.v1.0.0.md](../../specs/components/app-shell.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/app-shell.document-preview.amendment.v1.0.0.md](../../specs/components/app-shell.document-preview.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/app-shell.contract.v1.0.0.md](../../specs/components/app-shell.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/app-shell.document-preview.amendment.v1.0.0.md](../../specs/components/app-shell.document-preview.amendment.v1.0.0.md); NOT_REQUIRED en [specs/components/header-app-shell.spacing.amendment.v1.0.0.md](../../specs/components/header-app-shell.spacing.amendment.v1.0.0.md); NOT_REQUIRED en [specs/components/header.logo-sizing.amendment.v1.0.0.md](../../specs/components/header.logo-sizing.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Página declarada: App Shell en [specs/components/app-shell.contract.v1.0.0.md](../../specs/components/app-shell.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: REQUIRED en [specs/components/app-shell.contract.v1.0.0.md](../../specs/components/app-shell.contract.v1.0.0.md); REQUIRED en [specs/components/app-shell.document-preview.amendment.v1.0.0.md](../../specs/components/app-shell.document-preview.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md).
+- Slots: REQUIRED en [specs/components/app-shell.contract.v1.0.0.md](../../specs/components/app-shell.contract.v1.0.0.md); REQUIRED en [specs/components/app-shell.document-preview.amendment.v1.0.0.md](../../specs/components/app-shell.document-preview.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/components/header-app-shell.spacing.amendment.v1.0.0.md](../../specs/components/header-app-shell.spacing.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/components/header.logo-sizing.amendment.v1.0.0.md](../../specs/components/header.logo-sizing.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
 - Enmienda: [specs/components/app-shell.document-preview.amendment.v1.0.0.md](../../specs/components/app-shell.document-preview.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
+- Enmienda: [specs/components/header-app-shell.spacing.amendment.v1.0.0.md](../../specs/components/header-app-shell.spacing.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
+- Enmienda: [specs/components/header.logo-sizing.amendment.v1.0.0.md](../../specs/components/header.logo-sizing.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
 - Enmienda: [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) — APPROVED; Añade composición y comportamiento contextual de formularios; conserva contratos, guías y patrones previos, datos, variantes, Slots, tokens y API.
+- Enmienda: [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) — APPROVED; Añade patrones del PDF aprobado; no crea componentes, tokens, variantes, API o Slots.
+- Enmienda: [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) — APPROVED; Añade selección semántica entre Tabs y Chips y composición local; conserva los patrones previos, componentes, datos, tokens y API.
 - Implementación: [implementations/figma/app-shell-conversation/readback.json](../../implementations/figma/app-shell-conversation/readback.json) — {}.
+- QA por alcance: [qa/implementations/header-app-shell.spacing.v1.0.0.review.md](../../qa/implementations/header-app-shell.spacing.v1.0.0.review.md).
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -151,15 +157,17 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/buttons.contract.v1.0.0.md](../../specs/components/buttons.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/buttons.contract.v1.0.0.md](../../specs/components/buttons.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/buttons.contextual-usage.amendment.v1.0.2.md](../../specs/components/buttons.contextual-usage.amendment.v1.0.2.md); NOT_REQUIRED en [specs/components/buttons.usage.amendment.v1.0.1.md](../../specs/components/buttons.usage.amendment.v1.0.1.md); NOT_REQUIRED en [specs/patterns/buttons.actions.amendment.v1.0.0.md](../../specs/patterns/buttons.actions.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/buttons.contract.v1.0.0.md](../../specs/components/buttons.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/buttons.contextual-usage.amendment.v1.0.2.md](../../specs/components/buttons.contextual-usage.amendment.v1.0.2.md); NOT_REQUIRED en [specs/components/buttons.usage.amendment.v1.0.1.md](../../specs/components/buttons.usage.amendment.v1.0.1.md); NOT_REQUIRED en [specs/patterns/buttons.actions.amendment.v1.0.0.md](../../specs/patterns/buttons.actions.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Página declarada: Buttons en [specs/components/buttons.contract.v1.0.0.md](../../specs/components/buttons.contract.v1.0.0.md).
 - Preparación: {'figma': 'READY', 'web': 'READY'} en [specs/components/buttons.contract.v1.0.0.md](../../specs/components/buttons.contract.v1.0.0.md).
-- Slots: NOT_APPLICABLE en [specs/components/buttons.contract.v1.0.0.md](../../specs/components/buttons.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/buttons.contextual-usage.amendment.v1.0.2.md](../../specs/components/buttons.contextual-usage.amendment.v1.0.2.md); NOT_APPLICABLE en [specs/patterns/buttons.actions.amendment.v1.0.0.md](../../specs/patterns/buttons.actions.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md).
+- Slots: NOT_APPLICABLE en [specs/components/buttons.contract.v1.0.0.md](../../specs/components/buttons.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/buttons.contextual-usage.amendment.v1.0.2.md](../../specs/components/buttons.contextual-usage.amendment.v1.0.2.md); NOT_APPLICABLE en [specs/patterns/buttons.actions.amendment.v1.0.0.md](../../specs/patterns/buttons.actions.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
 - Enmienda: [specs/components/buttons.contextual-usage.amendment.v1.0.2.md](../../specs/components/buttons.contextual-usage.amendment.v1.0.2.md) — APPROVED; Guía de uso y Description de buttons.usage.amendment.v1.0.1.md; conserva la base visual, los datos, las variantes y el API.
 - Enmienda: [specs/components/buttons.usage.amendment.v1.0.1.md](../../specs/components/buttons.usage.amendment.v1.0.1.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
 - Enmienda: [specs/patterns/buttons.actions.amendment.v1.0.0.md](../../specs/patterns/buttons.actions.amendment.v1.0.0.md) — APPROVED; Consultar alcance en la enmienda.
 - Enmienda: [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) — APPROVED; Añade composición y comportamiento contextual de formularios; conserva contratos, guías y patrones previos, datos, variantes, Slots, tokens y API.
+- Enmienda: [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) — APPROVED; Añade patrones del PDF aprobado; no crea componentes, tokens, variantes, API o Slots.
+- Enmienda: [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) — APPROVED; Añade selección semántica entre Tabs y Chips y composición local; conserva los patrones previos, componentes, datos, tokens y API.
 - Implementación: [implementations/figma/buttons-loader-2026-11-11/buttons.state.json](../../implementations/figma/buttons-loader-2026-11-11/buttons.state.json) — {"status": "VALIDATED", "scope": "Figma structural, binding and stored prototype QA", "user_audit": "OPTIONAL_PENDING", "publication": "HOLD", "qa": "qa/implementations/buttons-loader.v1.0.0.review.md"}.
 - QA por alcance: [qa/implementations/buttons-loader.v1.0.0.review.md](../../qa/implementations/buttons-loader.v1.0.0.review.md).
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
@@ -214,11 +222,13 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/chat-history-item.contract.v1.0.0.md](../../specs/components/chat-history-item.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/chat-history-item.contract.v1.0.0.md](../../specs/components/chat-history-item.contract.v1.0.0.md).
-- Página declarada: Chat History Item en [specs/components/chat-history-item.contract.v1.0.0.md](../../specs/components/chat-history-item.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/chat-history-item.contract.v1.0.0.md](../../specs/components/chat-history-item.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/chat-history-item.notification.amendment.v1.0.0.md](../../specs/components/chat-history-item.notification.amendment.v1.0.0.md).
+- Página declarada: Chat History Item en [specs/components/chat-history-item.contract.v1.0.0.md](../../specs/components/chat-history-item.contract.v1.0.0.md); Chat History Item en [specs/components/chat-history-item.notification.amendment.v1.0.0.md](../../specs/components/chat-history-item.notification.amendment.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: REQUIRED en [specs/components/chat-history-item.contract.v1.0.0.md](../../specs/components/chat-history-item.contract.v1.0.0.md).
+- Slots: REQUIRED en [specs/components/chat-history-item.contract.v1.0.0.md](../../specs/components/chat-history-item.contract.v1.0.0.md); REQUIRED en [specs/components/chat-history-item.notification.amendment.v1.0.0.md](../../specs/components/chat-history-item.notification.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/components/chat-history-item.notification.amendment.v1.0.0.md](../../specs/components/chat-history-item.notification.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
+- QA por alcance: [qa/contracts/chat-history-item.notification.v1.0.0.review.md](../../qa/contracts/chat-history-item.notification.v1.0.0.review.md).
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -235,17 +245,32 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
+## CHAT-RAIL-ITEM-001
+
+Base: [specs/components/chat-rail-item.contract.v1.0.0.md](../../specs/components/chat-rail-item.contract.v1.0.0.md).
+Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
+
+- Auditoría humana: NOT_REQUIRED en [specs/components/chat-rail-item.contract.v1.0.0.md](../../specs/components/chat-rail-item.contract.v1.0.0.md).
+- Página declarada: Chat Rail Item en [specs/components/chat-rail-item.contract.v1.0.0.md](../../specs/components/chat-rail-item.contract.v1.0.0.md).
+- Preparación: UNKNOWN.
+- Slots: NOT_APPLICABLE en [specs/components/chat-rail-item.contract.v1.0.0.md](../../specs/components/chat-rail-item.contract.v1.0.0.md).
+- Revisión de implementación declarada: UNKNOWN.
+- Preparación no declarada: UNKNOWN; no se deduce del estado documental.
+- Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
+
 ## CHAT-SIDEBAR-001
 
 Base: [specs/components/chat-sidebar.contract.v1.0.0.md](../../specs/components/chat-sidebar.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/chat-sidebar.contract.v1.0.0.md](../../specs/components/chat-sidebar.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/chat-sidebar.contract.v1.0.0.md](../../specs/components/chat-sidebar.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md](../../specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md); NOT_REQUIRED en [specs/components/chat-sidebar.v1-rail-panel.amendment.v1.0.0.md](../../specs/components/chat-sidebar.v1-rail-panel.amendment.v1.0.0.md).
 - Página declarada: Chat Sidebar en [specs/components/chat-sidebar.contract.v1.0.0.md](../../specs/components/chat-sidebar.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: REQUIRED en [specs/components/chat-sidebar.contract.v1.0.0.md](../../specs/components/chat-sidebar.contract.v1.0.0.md).
+- Slots: REQUIRED en [specs/components/chat-sidebar.contract.v1.0.0.md](../../specs/components/chat-sidebar.contract.v1.0.0.md); REQUIRED en [specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md](../../specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md); REQUIRED en [specs/components/chat-sidebar.v1-rail-panel.amendment.v1.0.0.md](../../specs/components/chat-sidebar.v1-rail-panel.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
-- Implementación: [implementations/figma/chat-sidebar-rail-parity/readback.json](../../implementations/figma/chat-sidebar-rail-parity/readback.json) — {"status": "PASS"}.
+- Enmienda: [specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md](../../specs/components/chat-sidebar.rail-item.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
+- Enmienda: [specs/components/chat-sidebar.v1-rail-panel.amendment.v1.0.0.md](../../specs/components/chat-sidebar.v1-rail-panel.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
+- QA por alcance: [qa/implementations/chat-rail-item.v1.0.0.review.md](../../qa/implementations/chat-rail-item.v1.0.0.review.md).
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -280,14 +305,15 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/checkbox.contract.v1.0.0.md](../../specs/components/checkbox.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/checkbox.contract.v1.0.0.md](../../specs/components/checkbox.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/checkbox.contextual-usage.amendment.v1.0.1.md](../../specs/components/checkbox.contextual-usage.amendment.v1.0.1.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/checkbox.contract.v1.0.0.md](../../specs/components/checkbox.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/checkbox.contextual-usage.amendment.v1.0.1.md](../../specs/components/checkbox.contextual-usage.amendment.v1.0.1.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md).
 - Página declarada: Checkbox en [specs/components/checkbox.contract.v1.0.0.md](../../specs/components/checkbox.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: NOT_APPLICABLE en [specs/components/checkbox.contract.v1.0.0.md](../../specs/components/checkbox.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/checkbox.contextual-usage.amendment.v1.0.1.md](../../specs/components/checkbox.contextual-usage.amendment.v1.0.1.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md).
+- Slots: NOT_APPLICABLE en [specs/components/checkbox.contract.v1.0.0.md](../../specs/components/checkbox.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/checkbox.contextual-usage.amendment.v1.0.1.md](../../specs/components/checkbox.contextual-usage.amendment.v1.0.1.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
 - Enmienda: [specs/components/checkbox.contextual-usage.amendment.v1.0.1.md](../../specs/components/checkbox.contextual-usage.amendment.v1.0.1.md) — APPROVED; Amplía semántica y sustituye Description; conserva base, geometría, variantes, datos, tokens, API y defaults.
 - Enmienda: [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) — APPROVED; Añade composición y comportamiento contextual de formularios; conserva contratos, guías y patrones previos, datos, variantes, Slots, tokens y API.
 - Enmienda: [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md) — APPROVED; Consultar alcance en la enmienda.
+- Enmienda: [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) — APPROVED; Añade patrones del PDF aprobado; no crea componentes, tokens, variantes, API o Slots.
 - Implementación: [implementations/figma/checkbox-label-position-2026-11-17/readback.json](../../implementations/figma/checkbox-label-position-2026-11-17/readback.json) — {"status": "PASS"}.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
@@ -297,13 +323,15 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/chip.contract.v1.0.0.md](../../specs/components/chip.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/chip.contract.v1.0.0.md](../../specs/components/chip.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/chip.contextual-usage.amendment.v1.0.1.md](../../specs/components/chip.contextual-usage.amendment.v1.0.1.md); NOT_REQUIRED en [specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md](../../specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/chip.contract.v1.0.0.md](../../specs/components/chip.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/chip.contextual-usage.amendment.v1.0.1.md](../../specs/components/chip.contextual-usage.amendment.v1.0.1.md); NOT_REQUIRED en [specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md](../../specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Página declarada: Chips en [specs/components/chip.contract.v1.0.0.md](../../specs/components/chip.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: NOT_APPLICABLE en [specs/components/chip.contract.v1.0.0.md](../../specs/components/chip.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/chip.contextual-usage.amendment.v1.0.1.md](../../specs/components/chip.contextual-usage.amendment.v1.0.1.md); NOT_APPLICABLE en [specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md](../../specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md).
+- Slots: NOT_APPLICABLE en [specs/components/chip.contract.v1.0.0.md](../../specs/components/chip.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/chip.contextual-usage.amendment.v1.0.1.md](../../specs/components/chip.contextual-usage.amendment.v1.0.1.md); NOT_APPLICABLE en [specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md](../../specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
 - Enmienda: [specs/components/chip.contextual-usage.amendment.v1.0.1.md](../../specs/components/chip.contextual-usage.amendment.v1.0.1.md) — APPROVED; Amplía semántica y sustituye Description de cuatro sets; conserva 40 variantes, anatomía, datos, API y defaults.
 - Enmienda: [specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md](../../specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md) — APPROVED; Consultar alcance en la enmienda.
+- Enmienda: [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) — APPROVED; Añade patrones del PDF aprobado; no crea componentes, tokens, variantes, API o Slots.
+- Enmienda: [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) — APPROVED; Añade selección semántica entre Tabs y Chips y composición local; conserva los patrones previos, componentes, datos, tokens y API.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -338,11 +366,13 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/conversation-response.contract.v1.0.0.md](../../specs/components/conversation-response.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/conversation-response.contract.v1.0.0.md](../../specs/components/conversation-response.contract.v1.0.0.md).
-- Página declarada: Conversation Response en [specs/components/conversation-response.contract.v1.0.0.md](../../specs/components/conversation-response.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/conversation-response.contract.v1.0.0.md](../../specs/components/conversation-response.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/conversation-response.preview-layout.amendment.v1.0.0.md](../../specs/components/conversation-response.preview-layout.amendment.v1.0.0.md).
+- Página declarada: Conversation Response en [specs/components/conversation-response.contract.v1.0.0.md](../../specs/components/conversation-response.contract.v1.0.0.md); Conversation Response en [specs/components/conversation-response.preview-layout.amendment.v1.0.0.md](../../specs/components/conversation-response.preview-layout.amendment.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: REQUIRED en [specs/components/conversation-response.contract.v1.0.0.md](../../specs/components/conversation-response.contract.v1.0.0.md).
+- Slots: REQUIRED en [specs/components/conversation-response.contract.v1.0.0.md](../../specs/components/conversation-response.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/conversation-response.preview-layout.amendment.v1.0.0.md](../../specs/components/conversation-response.preview-layout.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/components/conversation-response.preview-layout.amendment.v1.0.0.md](../../specs/components/conversation-response.preview-layout.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
+- QA por alcance: [qa/contracts/conversation-response.preview-layout.v1.0.0.review.md](../../qa/contracts/conversation-response.preview-layout.v1.0.0.review.md).
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -351,11 +381,14 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/dot.contract.v1.0.0.md](../../specs/components/dot.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/dot.contract.v1.0.0.md](../../specs/components/dot.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/dot.contract.v1.0.0.md](../../specs/components/dot.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/dot.count-multi.amendment.v1.0.0.md](../../specs/components/dot.count-multi.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Página declarada: Dot en [specs/components/dot.contract.v1.0.0.md](../../specs/components/dot.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: NOT_APPLICABLE en [specs/components/dot.contract.v1.0.0.md](../../specs/components/dot.contract.v1.0.0.md).
+- Slots: NOT_APPLICABLE en [specs/components/dot.contract.v1.0.0.md](../../specs/components/dot.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/dot.count-multi.amendment.v1.0.0.md](../../specs/components/dot.count-multi.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/components/dot.count-multi.amendment.v1.0.0.md](../../specs/components/dot.count-multi.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
+- Enmienda: [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) — APPROVED; Añade patrones del PDF aprobado; no crea componentes, tokens, variantes, API o Slots.
+- Enmienda: [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) — APPROVED; Añade selección semántica entre Tabs y Chips y composición local; conserva los patrones previos, componentes, datos, tokens y API.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -380,14 +413,15 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/dropdown-menu.contract.v1.0.0.md](../../specs/components/dropdown-menu.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/dropdown-menu.contract.v1.0.0.md](../../specs/components/dropdown-menu.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md](../../specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md](../../specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/dropdown-menu.contract.v1.0.0.md](../../specs/components/dropdown-menu.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md](../../specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md](../../specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Página declarada: Dropdown en [specs/components/dropdown-menu.contract.v1.0.0.md](../../specs/components/dropdown-menu.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: REQUIRED en [specs/components/dropdown-menu.contract.v1.0.0.md](../../specs/components/dropdown-menu.contract.v1.0.0.md); REQUIRED en [specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md](../../specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md](../../specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md).
+- Slots: REQUIRED en [specs/components/dropdown-menu.contract.v1.0.0.md](../../specs/components/dropdown-menu.contract.v1.0.0.md); REQUIRED en [specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md](../../specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md](../../specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
 - Enmienda: [specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md](../../specs/components/dropdown-menu.contextual-usage.amendment.v1.0.1.md) — APPROVED; Amplía la guía semántica y sustituye Description; conserva el contrato base y todas las reglas de búsqueda opcional DM-S01 a DM-S08.
 - Enmienda: [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) — APPROVED; Añade composición y comportamiento contextual de formularios; conserva contratos, guías y patrones previos, datos, variantes, Slots, tokens y API.
 - Enmienda: [specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md](../../specs/patterns/inputs-dropdowns.forms.amendment.v1.0.0.md) — APPROVED; Consultar alcance en la enmienda.
+- Enmienda: [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) — APPROVED; Añade selección semántica entre Tabs y Chips y composición local; conserva los patrones previos, componentes, datos, tokens y API.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -409,11 +443,14 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/floating-actions.contract.v1.0.0.md](../../specs/components/floating-actions.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/floating-actions.contract.v1.0.0.md](../../specs/components/floating-actions.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/floating-actions.contract.v1.0.0.md](../../specs/components/floating-actions.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/floating-actions.contextual-usage.amendment.v1.0.0.md](../../specs/components/floating-actions.contextual-usage.amendment.v1.0.0.md); NOT_REQUIRED en [specs/components/floating-actions.selection-scope.amendment.v1.0.0.md](../../specs/components/floating-actions.selection-scope.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md).
 - Página declarada: Floating Actions en [specs/components/floating-actions.contract.v1.0.0.md](../../specs/components/floating-actions.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: REQUIRED en [specs/components/floating-actions.contract.v1.0.0.md](../../specs/components/floating-actions.contract.v1.0.0.md).
+- Slots: REQUIRED en [specs/components/floating-actions.contract.v1.0.0.md](../../specs/components/floating-actions.contract.v1.0.0.md); REQUIRED en [specs/components/floating-actions.contextual-usage.amendment.v1.0.0.md](../../specs/components/floating-actions.contextual-usage.amendment.v1.0.0.md); REQUIRED en [specs/components/floating-actions.selection-scope.amendment.v1.0.0.md](../../specs/components/floating-actions.selection-scope.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/components/floating-actions.contextual-usage.amendment.v1.0.0.md](../../specs/components/floating-actions.contextual-usage.amendment.v1.0.0.md) — APPROVED; Añade uso en tablas con umbral 2+, anclaje y cierre adoptado del PDF; conserva selector de alcance vigente, Slot, datos, tokens y API.
+- Enmienda: [specs/components/floating-actions.selection-scope.amendment.v1.0.0.md](../../specs/components/floating-actions.selection-scope.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
+- Enmienda: [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) — APPROVED; Añade patrones del PDF aprobado; no crea componentes, tokens, variantes, API o Slots.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -482,11 +519,14 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/header.contract.v1.0.0.md](../../specs/components/header.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/header.contract.v1.0.0.md](../../specs/components/header.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/header.contract.v1.0.0.md](../../specs/components/header.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/header-app-shell.spacing.amendment.v1.0.0.md](../../specs/components/header-app-shell.spacing.amendment.v1.0.0.md); NOT_REQUIRED en [specs/components/header.logo-sizing.amendment.v1.0.0.md](../../specs/components/header.logo-sizing.amendment.v1.0.0.md).
 - Página declarada: Header en [specs/components/header.contract.v1.0.0.md](../../specs/components/header.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: NOT_APPLICABLE en [specs/components/header.contract.v1.0.0.md](../../specs/components/header.contract.v1.0.0.md).
+- Slots: NOT_APPLICABLE en [specs/components/header.contract.v1.0.0.md](../../specs/components/header.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/header-app-shell.spacing.amendment.v1.0.0.md](../../specs/components/header-app-shell.spacing.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/components/header.logo-sizing.amendment.v1.0.0.md](../../specs/components/header.logo-sizing.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/components/header-app-shell.spacing.amendment.v1.0.0.md](../../specs/components/header-app-shell.spacing.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
+- Enmienda: [specs/components/header.logo-sizing.amendment.v1.0.0.md](../../specs/components/header.logo-sizing.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
+- QA por alcance: [qa/implementations/header-app-shell.spacing.v1.0.0.review.md](../../qa/implementations/header-app-shell.spacing.v1.0.0.review.md).
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -508,11 +548,12 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/icon-button.contract.v1.0.0.md](../../specs/components/icon-button.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/icon-button.contract.v1.0.0.md](../../specs/components/icon-button.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/icon-button.contract.v1.0.0.md](../../specs/components/icon-button.contract.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md).
 - Página declarada: Icon Buttons en [specs/components/icon-button.contract.v1.0.0.md](../../specs/components/icon-button.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: NOT_APPLICABLE en [specs/components/icon-button.contract.v1.0.0.md](../../specs/components/icon-button.contract.v1.0.0.md).
+- Slots: NOT_APPLICABLE en [specs/components/icon-button.contract.v1.0.0.md](../../specs/components/icon-button.contract.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) — APPROVED; Añade patrones del PDF aprobado; no crea componentes, tokens, variantes, API o Slots.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -580,11 +621,12 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/logos.contract.v1.0.0.md](../../specs/components/logos.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/logos.contract.v1.0.0.md](../../specs/components/logos.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/logos.contract.v1.0.0.md](../../specs/components/logos.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/logos.corporate-svg.amendment.v1.0.0.md](../../specs/components/logos.corporate-svg.amendment.v1.0.0.md).
 - Página declarada: Logos en [specs/components/logos.contract.v1.0.0.md](../../specs/components/logos.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: NOT_APPLICABLE en [specs/components/logos.contract.v1.0.0.md](../../specs/components/logos.contract.v1.0.0.md).
+- Slots: NOT_APPLICABLE en [specs/components/logos.contract.v1.0.0.md](../../specs/components/logos.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/logos.corporate-svg.amendment.v1.0.0.md](../../specs/components/logos.corporate-svg.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/components/logos.corporate-svg.amendment.v1.0.0.md](../../specs/components/logos.corporate-svg.amendment.v1.0.0.md) — DELEGATED_FOR_BUILD; Consultar alcance en la enmienda.
 - Implementación: [implementations/figma/logos-beni-navi-2026-11-13/readback.json](../../implementations/figma/logos-beni-navi-2026-11-13/readback.json) — {"qa": {"status": "PASS", "page": "170:2", "set": "277:76", "totalSets": 6, "totalVariants": 72, "results": [{"source": "273:7910", "variant": "277:2", "name": "product=Beni, Firma=Sin firma", "dimensions": [421.2406921386719, 155.3499755859375], "vectorCount": 7, "delta": 6.103515625e-05, "linked": 0}, {"source": "273:7945", "variant": "277:12", "name": "product=Navi, Firma=Sin firma", "dimensions": [416.900146484375, 182.82000732421875], "vectorCount": 14, "delta": 6.103515625e-05, "linked": 0}, {"source": "273:7890", "variant": "277:28", "name": "product=Beni, Firma=CONTPAQi", "dimensions": [430.330078125, 197.94012451171875], "vectorCount": 18, "delta": 6.103515625e-05, "linked": 0}, {"source": "273:7919", "variant": "277:49", "name": "product=Navi, Firma=CONTPAQi", "dimensions": [417.22998046875, 183.42999267578125], "vectorCount": 25, "delta": 6.103515625e-05, "linked": 0}], "instance_selection": {"status": "PASS", "deletedNodeIds": ["279:2"], "rows": [{"product": "Beni", "Firma": "Sin firma", "main": "277:2"}, {"product": "Beni", "Firma": "CONTPAQi", "main": "277:28"}, {"product": "Navi", "Firma": "CONTPAQi", "main": "277:49"}, {"product": "Navi", "Firma": "Sin firma", "main": "277:12"}]}}}.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
@@ -607,11 +649,13 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/pagination.contract.v1.0.0.md](../../specs/components/pagination.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/pagination.contract.v1.0.0.md](../../specs/components/pagination.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/pagination.contract.v1.0.0.md](../../specs/components/pagination.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/pagination.contextual-usage.amendment.v1.0.0.md](../../specs/components/pagination.contextual-usage.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md).
 - Página declarada: Pagination en [specs/components/pagination.contract.v1.0.0.md](../../specs/components/pagination.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: REQUIRED en [specs/components/pagination.contract.v1.0.0.md](../../specs/components/pagination.contract.v1.0.0.md).
+- Slots: REQUIRED en [specs/components/pagination.contract.v1.0.0.md](../../specs/components/pagination.contract.v1.0.0.md); REQUIRED en [specs/components/pagination.contextual-usage.amendment.v1.0.0.md](../../specs/components/pagination.contextual-usage.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/components/pagination.contextual-usage.amendment.v1.0.0.md](../../specs/components/pagination.contextual-usage.amendment.v1.0.0.md) — APPROVED; Para la composición Default documentada exige contador a la derecha; conserva opciones left/right y default implícito del código como evidencia, sin cambiar API o Figma.
+- Enmienda: [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) — APPROVED; Añade patrones del PDF aprobado; no crea componentes, tokens, variantes, API o Slots.
 - Implementación: [implementations/figma/pagination-range-position-2026-11-17/readback.json](../../implementations/figma/pagination-range-position-2026-11-17/readback.json) — {"publication": "NOT_REQUESTED"}.
 - Implementación: [implementations/figma/pagination-record-count-2026-11-17/readback.json](../../implementations/figma/pagination-record-count-2026-11-17/readback.json) — {"status": "PASS"}.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
@@ -622,11 +666,13 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/pagination-item.contract.v1.0.0.md](../../specs/components/pagination-item.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/pagination-item.contract.v1.0.0.md](../../specs/components/pagination-item.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/pagination-item.contract.v1.0.0.md](../../specs/components/pagination-item.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/pagination-item.contextual-usage.amendment.v1.0.0.md](../../specs/components/pagination-item.contextual-usage.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md).
 - Página declarada: Pagination en [specs/components/pagination-item.contract.v1.0.0.md](../../specs/components/pagination-item.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: NOT_APPLICABLE en [specs/components/pagination-item.contract.v1.0.0.md](../../specs/components/pagination-item.contract.v1.0.0.md).
+- Slots: NOT_APPLICABLE en [specs/components/pagination-item.contract.v1.0.0.md](../../specs/components/pagination-item.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/pagination-item.contextual-usage.amendment.v1.0.0.md](../../specs/components/pagination-item.contextual-usage.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/components/pagination-item.contextual-usage.amendment.v1.0.0.md](../../specs/components/pagination-item.contextual-usage.amendment.v1.0.0.md) — APPROVED; Añade contexto y teclado; conserva nueve variantes, geometría y API.
+- Enmienda: [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) — APPROVED; Añade patrones del PDF aprobado; no crea componentes, tokens, variantes, API o Slots.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -635,14 +681,15 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/radio.contract.v1.0.0.md](../../specs/components/radio.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/radio.contract.v1.0.0.md](../../specs/components/radio.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/radio.contextual-usage.amendment.v1.0.1.md](../../specs/components/radio.contextual-usage.amendment.v1.0.1.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/radio.contract.v1.0.0.md](../../specs/components/radio.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/radio.contextual-usage.amendment.v1.0.1.md](../../specs/components/radio.contextual-usage.amendment.v1.0.1.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Página declarada: Radio Buttons en [specs/components/radio.contract.v1.0.0.md](../../specs/components/radio.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: NOT_APPLICABLE en [specs/components/radio.contract.v1.0.0.md](../../specs/components/radio.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/radio.contextual-usage.amendment.v1.0.1.md](../../specs/components/radio.contextual-usage.amendment.v1.0.1.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md).
+- Slots: NOT_APPLICABLE en [specs/components/radio.contract.v1.0.0.md](../../specs/components/radio.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/radio.contextual-usage.amendment.v1.0.1.md](../../specs/components/radio.contextual-usage.amendment.v1.0.1.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
 - Enmienda: [specs/components/radio.contextual-usage.amendment.v1.0.1.md](../../specs/components/radio.contextual-usage.amendment.v1.0.1.md) — APPROVED; Amplía semántica y sustituye Description; preserva receta y registra diferencia web de alineación sin adoptarla como regla.
 - Enmienda: [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) — APPROVED; Añade composición y comportamiento contextual de formularios; conserva contratos, guías y patrones previos, datos, variantes, Slots, tokens y API.
 - Enmienda: [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md) — APPROVED; Consultar alcance en la enmienda.
+- Enmienda: [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) — APPROVED; Añade selección semántica entre Tabs y Chips y composición local; conserva los patrones previos, componentes, datos, tokens y API.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -651,14 +698,15 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/radio-group.contract.v1.0.0.md](../../specs/components/radio-group.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/radio-group.contract.v1.0.0.md](../../specs/components/radio-group.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/radio-group.contextual-usage.amendment.v1.0.1.md](../../specs/components/radio-group.contextual-usage.amendment.v1.0.1.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/radio-group.contract.v1.0.0.md](../../specs/components/radio-group.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/radio-group.contextual-usage.amendment.v1.0.1.md](../../specs/components/radio-group.contextual-usage.amendment.v1.0.1.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Página declarada: Radio Buttons en [specs/components/radio-group.contract.v1.0.0.md](../../specs/components/radio-group.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: REQUIRED en [specs/components/radio-group.contract.v1.0.0.md](../../specs/components/radio-group.contract.v1.0.0.md); REQUIRED en [specs/components/radio-group.contextual-usage.amendment.v1.0.1.md](../../specs/components/radio-group.contextual-usage.amendment.v1.0.1.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md).
+- Slots: REQUIRED en [specs/components/radio-group.contract.v1.0.0.md](../../specs/components/radio-group.contract.v1.0.0.md); REQUIRED en [specs/components/radio-group.contextual-usage.amendment.v1.0.1.md](../../specs/components/radio-group.contextual-usage.amendment.v1.0.1.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
 - Enmienda: [specs/components/radio-group.contextual-usage.amendment.v1.0.1.md](../../specs/components/radio-group.contextual-usage.amendment.v1.0.1.md) — APPROVED; Amplía semántica y sustituye Description; conserva Options, cardinalidades, ayuda fija, cuatro variantes y API.
 - Enmienda: [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) — APPROVED; Añade composición y comportamiento contextual de formularios; conserva contratos, guías y patrones previos, datos, variantes, Slots, tokens y API.
 - Enmienda: [specs/patterns/selection-controls.decisions.amendment.v1.0.0.md](../../specs/patterns/selection-controls.decisions.amendment.v1.0.0.md) — APPROVED; Consultar alcance en la enmienda.
+- Enmienda: [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) — APPROVED; Añade selección semántica entre Tabs y Chips y composición local; conserva los patrones previos, componentes, datos, tokens y API.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -680,12 +728,14 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/section-header.contract.v1.0.0.md](../../specs/components/section-header.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/section-header.contract.v1.0.0.md](../../specs/components/section-header.contract.v1.0.0.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/section-header.contract.v1.0.0.md](../../specs/components/section-header.contract.v1.0.0.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Página declarada: Section Header en [specs/components/section-header.contract.v1.0.0.md](../../specs/components/section-header.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: REQUIRED en [specs/components/section-header.contract.v1.0.0.md](../../specs/components/section-header.contract.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md).
+- Slots: REQUIRED en [specs/components/section-header.contract.v1.0.0.md](../../specs/components/section-header.contract.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
 - Enmienda: [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) — APPROVED; Añade composición y comportamiento contextual de formularios; conserva contratos, guías y patrones previos, datos, variantes, Slots, tokens y API.
+- Enmienda: [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) — APPROVED; Añade patrones del PDF aprobado; no crea componentes, tokens, variantes, API o Slots.
+- Enmienda: [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) — APPROVED; Añade selección semántica entre Tabs y Chips y composición local; conserva los patrones previos, componentes, datos, tokens y API.
 - Implementación: [implementations/figma/section-header-logo-replacement/readback.json](../../implementations/figma/section-header-logo-replacement/readback.json) — {"status": "PASS"}.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
@@ -711,12 +761,13 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/stepper.contract.v1.0.0.md](../../specs/components/stepper.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/stepper.contract.v1.0.0.md](../../specs/components/stepper.contract.v1.0.0.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/stepper.contract.v1.0.0.md](../../specs/components/stepper.contract.v1.0.0.md); NOT_REQUIRED en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Página declarada: Steppers en [specs/components/stepper.contract.v1.0.0.md](../../specs/components/stepper.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: NOT_APPLICABLE en [specs/components/stepper.contract.v1.0.0.md](../../specs/components/stepper.contract.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md).
+- Slots: NOT_APPLICABLE en [specs/components/stepper.contract.v1.0.0.md](../../specs/components/stepper.contract.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
 - Enmienda: [specs/patterns/forms.app-shell.amendment.v1.0.0.md](../../specs/patterns/forms.app-shell.amendment.v1.0.0.md) — APPROVED; Añade composición y comportamiento contextual de formularios; conserva contratos, guías y patrones previos, datos, variantes, Slots, tokens y API.
+- Enmienda: [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) — APPROVED; Añade selección semántica entre Tabs y Chips y composición local; conserva los patrones previos, componentes, datos, tokens y API.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -725,11 +776,13 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/tab.contract.v1.0.0.md](../../specs/components/tab.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/tab.contract.v1.0.0.md](../../specs/components/tab.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/tab.contract.v1.0.0.md](../../specs/components/tab.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/tab.contextual-usage.amendment.v1.0.0.md](../../specs/components/tab.contextual-usage.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Página declarada: Tabs en [specs/components/tab.contract.v1.0.0.md](../../specs/components/tab.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: NOT_APPLICABLE en [specs/components/tab.contract.v1.0.0.md](../../specs/components/tab.contract.v1.0.0.md).
+- Slots: NOT_APPLICABLE en [specs/components/tab.contract.v1.0.0.md](../../specs/components/tab.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/tab.contextual-usage.amendment.v1.0.0.md](../../specs/components/tab.contextual-usage.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/components/tab.contextual-usage.amendment.v1.0.0.md](../../specs/components/tab.contextual-usage.amendment.v1.0.0.md) — APPROVED; Amplía uso contextual y Description; conserva anatomía fija, 24 variantes, datos, tokens y API.
+- Enmienda: [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) — APPROVED; Añade selección semántica entre Tabs y Chips y composición local; conserva los patrones previos, componentes, datos, tokens y API.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -738,11 +791,13 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/table.contract.v1.0.0.md](../../specs/components/table.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/table.contract.v1.0.0.md](../../specs/components/table.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/table.contract.v1.0.0.md](../../specs/components/table.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/table.contextual-usage.amendment.v1.0.0.md](../../specs/components/table.contextual-usage.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md).
 - Página declarada: Table en [specs/components/table.contract.v1.0.0.md](../../specs/components/table.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: REQUIRED en [specs/components/table.contract.v1.0.0.md](../../specs/components/table.contract.v1.0.0.md).
+- Slots: REQUIRED en [specs/components/table.contract.v1.0.0.md](../../specs/components/table.contract.v1.0.0.md); REQUIRED en [specs/components/table.contextual-usage.amendment.v1.0.0.md](../../specs/components/table.contextual-usage.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/components/table.contextual-usage.amendment.v1.0.0.md](../../specs/components/table.contextual-usage.amendment.v1.0.0.md) — APPROVED; Añade uso contextual aprobado; conserva anatomía, Slots, datos, tokens y API base.
+- Enmienda: [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) — APPROVED; Añade patrones del PDF aprobado; no crea componentes, tokens, variantes, API o Slots.
 - Implementación: [implementations/figma/table-sticky-actions-2026-11-17/readback.json](../../implementations/figma/table-sticky-actions-2026-11-17/readback.json) — {"publication": "NOT_RUN"}.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
@@ -752,11 +807,13 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/table-cell.contract.v1.0.0.md](../../specs/components/table-cell.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/table-cell.contract.v1.0.0.md](../../specs/components/table-cell.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/table-cell.contract.v1.0.0.md](../../specs/components/table-cell.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/table-cell.contextual-usage.amendment.v1.0.0.md](../../specs/components/table-cell.contextual-usage.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md).
 - Página declarada: Table en [specs/components/table-cell.contract.v1.0.0.md](../../specs/components/table-cell.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: NOT_APPLICABLE en [specs/components/table-cell.contract.v1.0.0.md](../../specs/components/table-cell.contract.v1.0.0.md).
+- Slots: NOT_APPLICABLE en [specs/components/table-cell.contract.v1.0.0.md](../../specs/components/table-cell.contract.v1.0.0.md); NOT_APPLICABLE en [specs/components/table-cell.contextual-usage.amendment.v1.0.0.md](../../specs/components/table-cell.contextual-usage.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/components/table-cell.contextual-usage.amendment.v1.0.0.md](../../specs/components/table-cell.contextual-usage.amendment.v1.0.0.md) — APPROVED; Añade criterios de celdas, captura y acciones; conserva matrices, geometría, tokens y API existentes.
+- Enmienda: [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) — APPROVED; Añade patrones del PDF aprobado; no crea componentes, tokens, variantes, API o Slots.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 
@@ -765,11 +822,14 @@ Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 Base: [specs/components/tabs.contract.v1.0.0.md](../../specs/components/tabs.contract.v1.0.0.md).
 Resolución: RESOLVED. Auditoría, preparación y QA permanecen separados.
 
-- Auditoría humana: NOT_REQUIRED en [specs/components/tabs.contract.v1.0.0.md](../../specs/components/tabs.contract.v1.0.0.md).
+- Auditoría humana: NOT_REQUIRED en [specs/components/tabs.contract.v1.0.0.md](../../specs/components/tabs.contract.v1.0.0.md); NOT_REQUIRED en [specs/components/tabs.contextual-usage.amendment.v1.0.0.md](../../specs/components/tabs.contextual-usage.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md); NOT_REQUIRED en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Página declarada: Tabs en [specs/components/tabs.contract.v1.0.0.md](../../specs/components/tabs.contract.v1.0.0.md).
 - Preparación: UNKNOWN.
-- Slots: REQUIRED en [specs/components/tabs.contract.v1.0.0.md](../../specs/components/tabs.contract.v1.0.0.md).
+- Slots: REQUIRED en [specs/components/tabs.contract.v1.0.0.md](../../specs/components/tabs.contract.v1.0.0.md); REQUIRED en [specs/components/tabs.contextual-usage.amendment.v1.0.0.md](../../specs/components/tabs.contextual-usage.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md); NOT_APPLICABLE en [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md).
 - Revisión de implementación declarada: UNKNOWN.
+- Enmienda: [specs/components/tabs.contextual-usage.amendment.v1.0.0.md](../../specs/components/tabs.contextual-usage.amendment.v1.0.0.md) — APPROVED; Amplía uso contextual y Description; conserva tres tipos, Slot, datos, tokens, API y activación manual existentes.
+- Enmienda: [specs/patterns/tables-pagination-selection.amendment.v1.0.0.md](../../specs/patterns/tables-pagination-selection.amendment.v1.0.0.md) — APPROVED; Añade patrones del PDF aprobado; no crea componentes, tokens, variantes, API o Slots.
+- Enmienda: [specs/patterns/tabs.local-navigation.amendment.v1.0.0.md](../../specs/patterns/tabs.local-navigation.amendment.v1.0.0.md) — APPROVED; Añade selección semántica entre Tabs y Chips y composición local; conserva los patrones previos, componentes, datos, tokens y API.
 - Preparación no declarada: UNKNOWN; no se deduce del estado documental.
 - Pendientes/excepciones: [auditoría](../../specs/MIGRATION-AUDIT.md) y [trazabilidad vigente](../../specs/MIGRATION-TRACEABILITY-STATUS.md).
 

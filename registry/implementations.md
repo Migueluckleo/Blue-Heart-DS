@@ -58,6 +58,8 @@ App Shell, Conversation Composer, Conversation Response y Stepper consumen los a
 
 [Table 331:2664](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=331-2664) conserva Default 142:92 y añade Sticky 331:1238. [Lectura y QA](../implementations/figma/table-sticky-actions-2026-11-17/readback.json) · [API web](../implementations/web/docs/components/table.md).
 
+El 26 de noviembre de 2026 se ajustó Viewport a Hug vertical en Default y Sticky Actions, con altura intrínseca en React. [Lectura Figma](../implementations/figma/table-viewport-hug-2026-11-26/readback.json) · [QA](../qa/implementations/table-chain.v1.0.0.review.md#viewport-hug-2026-11-26).
+
 ## Body · Contenido de producto · 2026-11-17
 
 [Playground Body](https://www.figma.com/design/yZsIpXywybsPDytjolwcP4/AI-Blueheart-DS?node-id=347-2597) usa el App Shell oficial y cinco frames con controles vinculados. [Lectura](../implementations/figma/body-tokens-2026-11-17/readback.json) · [Tokens](../specs/tokens/body.v1.0.0.json).

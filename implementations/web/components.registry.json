@@ -16,7 +16,8 @@
       "specs/patterns/forms.app-shell.amendment.v1.0.0.md",
       "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md",
       "specs/components/header-app-shell.spacing.amendment.v1.0.0.md",
-      "specs/components/header.logo-sizing.amendment.v1.0.0.md"
+      "specs/components/header.logo-sizing.amendment.v1.0.0.md",
+      "specs/patterns/tables-pagination-selection.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "REQUIRED",
@@ -136,7 +137,8 @@
       "specs/components/buttons.contextual-usage.amendment.v1.0.2.md",
       "specs/patterns/buttons.actions.amendment.v1.0.0.md",
       "specs/patterns/forms.app-shell.amendment.v1.0.0.md",
-      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md",
+      "specs/patterns/tables-pagination-selection.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "NOT_APPLICABLE",
@@ -338,7 +340,8 @@
     "amendments": [
       "specs/components/checkbox.contextual-usage.amendment.v1.0.1.md",
       "specs/patterns/selection-controls.decisions.amendment.v1.0.0.md",
-      "specs/patterns/forms.app-shell.amendment.v1.0.0.md"
+      "specs/patterns/forms.app-shell.amendment.v1.0.0.md",
+      "specs/patterns/tables-pagination-selection.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "NOT_APPLICABLE",
@@ -361,7 +364,8 @@
     "amendments": [
       "specs/components/chip.contextual-usage.amendment.v1.0.1.md",
       "specs/patterns/badges-chips.status-filters.amendment.v1.0.0.md",
-      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md",
+      "specs/patterns/tables-pagination-selection.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "NOT_APPLICABLE",
@@ -443,7 +447,8 @@
     "base": "specs/components/dot.contract.v1.0.0.md",
     "amendments": [
       "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md",
-      "specs/components/dot.count-multi.amendment.v1.0.0.md"
+      "specs/components/dot.count-multi.amendment.v1.0.0.md",
+      "specs/patterns/tables-pagination-selection.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "NOT_APPLICABLE",
@@ -530,14 +535,17 @@
     "notes": "El menú Seleccionar ofrece la página actual y todo el histórico seleccionado. El anfitrión proporciona conteos, contexto, disponibilidad y callbacks. General actions conserva su composición abierta.",
     "base": "specs/components/floating-actions.contract.v1.0.0.md",
     "amendments": [
-      "specs/components/floating-actions.selection-scope.amendment.v1.0.0.md"
+      "specs/components/floating-actions.selection-scope.amendment.v1.0.0.md",
+      "specs/components/floating-actions.contextual-usage.amendment.v1.0.0.md",
+      "specs/patterns/tables-pagination-selection.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "REQUIRED",
       "reason": "General actions admite reemplazar y reordenar controles"
     },
     "qa": "qa/implementations/floating-actions.selection-scope.v1.0.0.review.md",
-    "example_source": "separate"
+    "example_source": "separate",
+    "usage_guide": "specs/components/floating-actions.contextual-usage.amendment.v1.0.0.md"
   },
   {
     "id": "HEADER-001",
@@ -589,7 +597,9 @@
     "category": "acción",
     "notes": "Alterna notificaciones con teclado y comprueba el nombre accesible.",
     "base": "specs/components/icon-button.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/patterns/tables-pagination-selection.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Glyph intercambiable y Dot son partes fijas"
@@ -691,7 +701,7 @@
       "MenuItem"
     ],
     "category": "navegación",
-    "notes": "Navega al destino o despliega la rama por teclado.",
+    "notes": "Navega al destino o despliega la rama por teclado. Los ítems verticales expandidos conservan el padding propio de Figma: 24 px al inicio, 16 px al final y 12 px arriba/abajo, con gap de 16 px entre sus partes; aplica igual en default, hover y focus, activos o inactivos. Consumir menu-item/spacing/leading, content y medium sin sustituirlos por Body ni corregir el espacio con padding del Sidebar.",
     "base": "specs/components/menu-item.contract.v1.0.0.md",
     "amendments": [],
     "slots": {
@@ -711,12 +721,16 @@
     "category": "navegación",
     "notes": "Pasa totalRecords para mostrar el rango y el total, por ejemplo 1-20 de 25 registros. El tamaño usa rows.value o pageSize, con default 20. El resumen permanece visible con cero o una sola página. rangePosition left/right ubica el resumen antes o después de todos los controles; default left, en Default y Compact.",
     "base": "specs/components/pagination.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/pagination.contextual-usage.amendment.v1.0.0.md",
+      "specs/patterns/tables-pagination-selection.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "REQUIRED",
       "reason": "Pages admite inserción, retiro y orden de ítems"
     },
-    "qa": "qa/implementations/pagination-chain.v1.0.0.review.md"
+    "qa": "qa/implementations/pagination-chain.v1.0.0.review.md",
+    "usage_guide": "specs/components/pagination.contextual-usage.amendment.v1.0.0.md"
   },
   {
     "id": "PAGINATION-ITEM-001",
@@ -729,12 +743,16 @@
     "category": "navegación",
     "notes": "Distingue número, flecha y elipsis. Usa un nombre accesible para las flechas.",
     "base": "specs/components/pagination-item.contract.v1.0.0.md",
-    "amendments": [],
+    "amendments": [
+      "specs/components/pagination-item.contextual-usage.amendment.v1.0.0.md",
+      "specs/patterns/tables-pagination-selection.amendment.v1.0.0.md"
+    ],
     "slots": {
       "status": "NOT_APPLICABLE",
       "reason": "Número, icono y elipsis son alternativas de anatomía fija"
     },
-    "qa": "qa/implementations/pagination-chain.v1.0.0.review.md"
+    "qa": "qa/implementations/pagination-chain.v1.0.0.review.md",
+    "usage_guide": "specs/components/pagination-item.contextual-usage.amendment.v1.0.0.md"
   },
   {
     "id": "RADIO-001",
@@ -815,7 +833,8 @@
     "base": "specs/components/section-header.contract.v1.0.0.md",
     "amendments": [
       "specs/patterns/forms.app-shell.amendment.v1.0.0.md",
-      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md",
+      "specs/patterns/tables-pagination-selection.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "REQUIRED",
@@ -903,8 +922,12 @@
     },
     "category": "data",
     "base": "specs/components/table.contract.v1.0.0.md",
-    "amendments": [],
-    "qa": "qa/implementations/table-chain.v1.0.0.review.md"
+    "amendments": [
+      "specs/components/table.contextual-usage.amendment.v1.0.0.md",
+      "specs/patterns/tables-pagination-selection.amendment.v1.0.0.md"
+    ],
+    "qa": "qa/implementations/table-chain.v1.0.0.review.md",
+    "usage_guide": "specs/components/table.contextual-usage.amendment.v1.0.0.md"
   },
   {
     "id": "TABLE-CELL-001",
@@ -922,8 +945,12 @@
     },
     "category": "data",
     "base": "specs/components/table-cell.contract.v1.0.0.md",
-    "amendments": [],
-    "qa": "qa/implementations/table-chain.v1.0.0.review.md"
+    "amendments": [
+      "specs/components/table-cell.contextual-usage.amendment.v1.0.0.md",
+      "specs/patterns/tables-pagination-selection.amendment.v1.0.0.md"
+    ],
+    "qa": "qa/implementations/table-chain.v1.0.0.review.md",
+    "usage_guide": "specs/components/table-cell.contextual-usage.amendment.v1.0.0.md"
   },
   {
     "id": "TABS-001",
@@ -938,7 +965,8 @@
     "base": "specs/components/tabs.contract.v1.0.0.md",
     "amendments": [
       "specs/components/tabs.contextual-usage.amendment.v1.0.0.md",
-      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md"
+      "specs/patterns/tabs.local-navigation.amendment.v1.0.0.md",
+      "specs/patterns/tables-pagination-selection.amendment.v1.0.0.md"
     ],
     "slots": {
       "status": "REQUIRED",

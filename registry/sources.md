@@ -166,3 +166,7 @@ El usuario pidió que las marcas conserven su proporción en Header y App Shell 
 ## SRC-FLOATING-ACTIONS-SELECTION-SCOPE · 2026-11-25
 
 El usuario entregó [Anticipa · selección](https://www.figma.com/design/9joCtnaaFn4M9SUabOjdBz/Anticipa-%7C-Blue-heart?node-id=324-37409) para agregar los alcances de página activa e histórico activo. La [captura estructurada](../sources/figma-snapshots/floating-selection-2026-11-25/selection.json) identifica el botón, las fichas de contexto, la superficie y las filas. Se solicitó además padding lateral de 8 px para Dot de dos o más dígitos.
+
+## Tablas, paginación y Floating Actions · Uso contextual · 2026-11-25
+
+SRC-TABLES-CONTEXTUAL-USAGE-2026-11-25 · «Bien hazlo MD» aprueba el PDF actual de 29 páginas. [Decisión y hashes](../sources/inventories/tables-contextual-usage.approval.2026-11-25.json).

@@ -19,7 +19,7 @@ Usa Conversation Response para la respuesta de un agente en el historial. Usa Co
 
 ## Uso sin backend
 
-Alterna BENI y NAVI, muestra u oculta regiones y acciona los controles de resultado y valoración.
+Alterna BENI y NAVI, muestra u oculta regiones y acciona los controles de resultado y valoración. Revisión Figma 2026-11-24: Preview details coloca título y Badge en una fila (Title Fill, Badge Hug). La web conserva la disposición vertical; sincronización de ese layout pendiente, documentada en la enmienda.
 
 ```tsx
 'use client';
@@ -130,7 +130,8 @@ Los ejemplos que usan estado/eventos requieren `'use client'`. Los datos seriali
 
 ## Fuentes y límites
 
-- [conversation-response.contract.v1.0.0.md](../../../../specs/components/conversation-response.contract.v1.0.0.md) · SHA-256 `2dc6dddaf2e1682a4a43be2684b832a9f2ff39bf98be6ba7405299be1e9442a0`.
+- [conversation-response.contract.v1.0.0.md](../../../../specs/components/conversation-response.contract.v1.0.0.md) · SHA-256 `3555c152c8048b25b9b4f7699b1653d89f207dd60aeecf14e9cb0bc5b47d126e`.
+- [conversation-response.preview-layout.amendment.v1.0.0.md](../../../../specs/components/conversation-response.preview-layout.amendment.v1.0.0.md) · SHA-256 `db7b913e4e9d6865dcde0ff2bc792ed5ed834755307fe21bd7fff1c14d443ed7`.
 
 Las enmiendas sustituyen solo su alcance explícito. Los estados de aprobación, auditoría y excepciones visuales permanecen en esas fuentes. La API web inicial no certifica identidad pixel a pixel ni conformidad WCAG completa.
 

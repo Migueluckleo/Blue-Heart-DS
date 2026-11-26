@@ -90,6 +90,8 @@ TOKEN-QA-01 se probó en seis maestros y auxiliares corregidos. Leyó 1.326 bind
 
 [QA de Sticky Actions](../qa/implementations/table-chain.v1.0.0.review.md) pasó para tokens, Slots, Ghost, scroll en el presentador nativo, cuatro temas, teclado y ancho 320 en Chrome.
 
+[QA de Viewport Hug](../qa/implementations/table-chain.v1.0.0.review.md#viewport-hug-2026-11-26) pasó en instancias nuevas de ambas variantes en Figma y en la prueba Table dirigida de Chrome.
+
 ## Body · Contenido de producto · 2026-11-17
 
 [QA de Body](../qa/implementations/body.v1.0.0.review.md) pasó para tokens, cinco estilos, contraste, medidas y demos en Figma y Chrome; sin componentes de Card consumibles.
@@ -157,3 +159,7 @@ Figma PASS en 225 cambios de Header, 48 de App Shell y 75 bloqueos de proporció
 ## QA-FLOATING-ACTIONS-SELECTION-SCOPE · 2026-11-25
 
 [Documental](../qa/contracts/floating-actions.selection-scope.v1.0.0.review.md) · [Implementación](../qa/implementations/floating-actions.selection-scope.v1.0.0.review.md). Comprueba menú, ambos alcances, ruta de foco, conservación del Slot y padding condicional de Dot.
+
+## Tablas, paginación y Floating Actions · Uso contextual · 2026-11-25
+
+[QA documental de tablas/paginación/selección](../qa/contracts/tables.contextual-usage.v1.0.0.review.md). El PDF conserva su evidencia local; los comprobantes de consumo corresponden a la nueva entrega.
